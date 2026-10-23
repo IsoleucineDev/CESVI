@@ -950,16 +950,25 @@ kbd {
   position: absolute;
   width: 24px;
   height: 24px;
+<<<<<<< HEAD
   border: 3px solid #ff2b3d;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   background: rgba(255, 43, 61, 0.3);
   box-shadow: 0 0 14px rgba(255, 43, 61, 0.7);
+=======
+  border: 3px solid #ff5c69;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 92, 105, 0.25);
+  box-shadow: 0 0 12px rgba(255, 92, 105, 0.65);
+>>>>>>> 2e1ca0f (feat(frontend): actualizar interfaz, overlays de mapa e integracion de IA)
   cursor: grab;
   pointer-events: auto;
   touch-action: none;
   z-index: 505;
   padding: 0;
+<<<<<<< HEAD
   animation: impactPulse 1.8s infinite ease-in-out;
 }
 
@@ -976,11 +985,16 @@ kbd {
     box-shadow: 0 0 0 0 rgba(255, 43, 61, 0), 0 0 10px rgba(255, 43, 61, 0.5);
     transform: translate(-50%, -50%) scale(0.95);
   }
+=======
+>>>>>>> 2e1ca0f (feat(frontend): actualizar interfaz, overlays de mapa e integracion de IA)
 }
 
 .geo-impact-marker:active {
   cursor: grabbing;
+<<<<<<< HEAD
   animation: none;
+=======
+>>>>>>> 2e1ca0f (feat(frontend): actualizar interfaz, overlays de mapa e integracion de IA)
 }
 
 .geo-impact-marker span {
@@ -989,7 +1003,11 @@ kbd {
   left: 50%;
   width: 6px;
   height: 6px;
+<<<<<<< HEAD
   background: #ff2b3d;
+=======
+  background: #ff5c69;
+>>>>>>> 2e1ca0f (feat(frontend): actualizar interfaz, overlays de mapa e integracion de IA)
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1033,6 +1051,7 @@ kbd {
 }
 
 .leaflet-map .leaflet-control-attribution {
+<<<<<<< HEAD
   font-size: 10px;
   background: rgba(15, 23, 42, 0.88);
   color: #94a3b8;
@@ -1046,6 +1065,9 @@ kbd {
 .leaflet-map .leaflet-control-attribution a {
   color: #38bdf8;
   text-decoration: underline;
+=======
+  font-size: 9px;
+>>>>>>> 2e1ca0f (feat(frontend): actualizar interfaz, overlays de mapa e integracion de IA)
 }
 
 
