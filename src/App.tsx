@@ -1,6 +1,12 @@
 import { Fragment, useEffect, useRef, useState } from "react"
 import { api, type CaseContext, type Scene } from "./lib/api"
-import { MapContainer, TileLayer, useMap, useMapEvents } from "react-leaflet"
+import {
+  MapContainer,
+  TileLayer,
+  ZoomControl,
+  useMap,
+  useMapEvents,
+} from "react-leaflet"
 import type { LatLngExpression, Map as LeafletMap } from "leaflet"
 import "leaflet/dist/leaflet.css"
 
@@ -36,6 +42,8 @@ function metersPerPixel(map: LeafletMap, position: LatLngExpression): number {
 }
 
 function GeoMapOverlay({
+  mode,
+  mapCenter,
   droppedItems,
   mapVehicles,
   selectedDroppedId,
@@ -48,6 +56,8 @@ function GeoMapOverlay({
   onRotateDropped,
   onRotateVehicle,
 }: {
+  mode: "location" | "scenario"
+  mapCenter: [number, number]
   droppedItems: (DroppedItem & GeoPosition)[]
   mapVehicles: Record<"V1" | "V2", GeoVehicle>
   selectedDroppedId: string | null
@@ -130,6 +140,20 @@ function GeoMapOverlay({
     const point = map.latLngToContainerPoint(position)
     const size = METERS_PER_PIXEL_REFERENCE / metersPerPixel(map, position)
     return { left: point.x, top: point.y, size: Math.max(12, size) }
+  }
+
+  if (mode === "location") {
+    const pin = renderPosition({ lat: mapCenter[0], lng: mapCenter[1] })
+    return (
+      <div className="geo-overlay-layer" aria-label="Ubicación seleccionada">
+        <div
+          className="geo-location-pin"
+          style={{ left: pin.left, top: pin.top }}
+        >
+          <span />
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -222,12 +246,18 @@ function GeoMapOverlay({
   )
 }
 
-function MapViewport({ center }: { center: [number, number] }) {
+function MapViewport({
+  center,
+  zoom,
+}: {
+  center: [number, number]
+  zoom: number
+}) {
   const map = useMap()
 
   useEffect(() => {
-    map.flyTo(center, Math.max(map.getZoom(), 13), { duration: 0.7 })
-  }, [center, map])
+    map.flyTo(center, zoom, { duration: 0.7 })
+  }, [center, map, zoom])
 
   return null
 }
@@ -1216,6 +1246,10 @@ function App() {
   const fileInputRef = useRef<HTMLInputElement>(null)
   const locationQueryInitialized = useRef(false)
   const activeTools = ribbonGroups[ribbon]
+  const mapViewMode = selectedFrame === 0 ? "location" : "scenario"
+  const mapViewCenter =
+    mapViewMode === "location" ? mapCenter : [IMPACT_POSITION.lat, IMPACT_POSITION.lng]
+  const mapViewZoom = mapViewMode === "location" ? 15 : 19
 
   useEffect(() => {
     if (!locationQueryInitialized.current) {
@@ -2074,16 +2108,19 @@ function App() {
             <MapContainer
               className="leaflet-map"
               center={DEFAULT_MAP_CENTER}
-              zoom={13}
-              zoomControl
+              zoom={15}
+              zoomControl={false}
               attributionControl
             >
+              <ZoomControl position="bottomright" />
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <MapViewport center={mapCenter} />
+              <MapViewport center={mapViewCenter} zoom={mapViewZoom} />
               <GeoMapOverlay
+                mode={mapViewMode}
+                mapCenter={mapCenter}
                 droppedItems={droppedItems}
                 mapVehicles={mapVehicles}
                 onDropItem={(item, position) => {

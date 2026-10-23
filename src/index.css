@@ -751,6 +751,29 @@ kbd {
   pointer-events: none;
 }
 
+.geo-location-pin {
+  position: absolute;
+  width: 28px;
+  height: 36px;
+  border: 3px solid #ffffff;
+  border-radius: 50% 50% 50% 0;
+  background: #ef5362;
+  box-shadow: 0 4px 12px rgba(30, 40, 50, 0.35);
+  transform: translate(-50%, -100%) rotate(-45deg);
+  pointer-events: none;
+}
+
+.geo-location-pin span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
 .geo-vehicle,
 .geo-dropped-item {
   position: absolute;
