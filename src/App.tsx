@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { api, type CaseContext, type Scene } from "./lib/api";
 
 type Theme = "light" | "dark";
 
@@ -397,6 +398,10 @@ function App() {
   const [selectedTool, setSelectedTool] = useState("Infraestructura vial fija");
   const [selectedFrame, setSelectedFrame] = useState(2);
   const [frames, setFrames] = useState(frameNames);
+  const [sceneRecords, setSceneRecords] = useState<Scene[]>([]);
+  const [caseContext, setCaseContext] = useState<CaseContext | null>(null);
+  const [dataError, setDataError] = useState<string | null>(null);
+  const [assistantLoading, setAssistantLoading] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [showDashboard, setShowDashboard] = useState(false);
   const [chatText, setChatText] = useState("");
@@ -431,6 +436,35 @@ function App() {
       /* sin almacenamiento disponible */
     }
   }, [theme]);
+
+  useEffect(() => {
+    let active = true;
+    Promise.allSettled([api.getCase(), api.getScenes()]).then(([caseResult, scenesResult]) => {
+      if (!active) return;
+      if (caseResult.status === "fulfilled") {
+        setCaseContext(caseResult.value);
+      }
+      if (scenesResult.status === "fulfilled" && scenesResult.value.length > 0) {
+        const orderedScenes = [...scenesResult.value].sort(
+          (a, b) => (a.order ?? 0) - (b.order ?? 0),
+        );
+        setSceneRecords(orderedScenes);
+        setFrames(orderedScenes.map((scene) => scene.name));
+        setSelectedFrame((current) => Math.min(current, orderedScenes.length - 1));
+      }
+      const failedResult = [caseResult, scenesResult].find((result) => result.status === "rejected");
+      setDataError(
+        failedResult?.status === "rejected"
+          ? failedResult.reason instanceof Error
+            ? failedResult.reason.message
+            : "No se pudo cargar toda la información del expediente"
+          : null,
+      );
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   // Avanza una escena por segundo mientras está reproduciendo
   useEffect(() => {
@@ -471,30 +505,80 @@ function App() {
     const name = draftName.trim();
     if (name) {
       setFrames((current) => current.map((frame, i) => (i === editingIndex ? name : frame)));
+      const scene = sceneRecords[editingIndex];
+      if (scene?.id) {
+        void api.updateScene(scene.id, name).catch((error: unknown) => {
+          setDataError(error instanceof Error ? error.message : "No se pudo guardar la escena");
+        });
+      }
     }
     setEditingIndex(null);
   };
 
   const addFrame = () => {
     const name = `Escena ${frames.length + 1}`;
+    const order = frames.length;
     setFrames((current) => [...current, name]);
+    setSceneRecords((current) => [...current, { name, order }]);
     setSelectedFrame(frames.length);
     skipCommit.current = false;
     setDraftName(name);
     setEditingIndex(frames.length); // abre el campo para nombrarla de inmediato
+    void api
+      .createScene(name, order)
+      .then((scene) => {
+        setSceneRecords((current) =>
+          current.map((item, index) => (index === order ? scene : item)),
+        );
+      })
+      .catch((error: unknown) => {
+        setDataError(error instanceof Error ? error.message : "No se pudo crear la escena");
+      });
   };
 
   const deleteFrame = () => {
     if (frames.length <= 1) return;
+    const scene = sceneRecords[selectedFrame];
     setEditingIndex(null);
     setFrames((current) => current.filter((_, index) => index !== selectedFrame));
+    setSceneRecords((current) => current.filter((_, index) => index !== selectedFrame));
     setSelectedFrame((current) => Math.max(0, current - 1));
+    if (scene?.id) {
+      void api.deleteScene(scene.id).catch((error: unknown) => {
+        setDataError(error instanceof Error ? error.message : "No se pudo eliminar la escena");
+      });
+    }
   };
 
-  const sendMessage = () => {
-    if (!chatText.trim()) return;
-    setMessages((current) => [...current, chatText.trim()]);
+  const sendMessage = async () => {
+    if (!chatText.trim() || assistantLoading) return;
+    const message = chatText.trim();
     setChatText("");
+    setMessages((current) => [...current, message, ""]);
+    setAssistantLoading(true);
+    try {
+      await api.sendAssistantMessage(
+        message,
+        {
+          case: caseContext,
+          scene: frames[selectedFrame],
+          selectedTool,
+          selectedFrame,
+        },
+        (token) => {
+          setMessages((current) => {
+            const next = [...current];
+            next[next.length - 1] = `${next[next.length - 1]}${token}`;
+            return next;
+          });
+        },
+      );
+    } catch (error: unknown) {
+      setMessages((current) => current.slice(0, -1));
+      setDataError(error instanceof Error ? error.message : "No se pudo contactar al asistente");
+    } finally {
+      setAssistantLoading(false);
+    }
   };
 
   return (
