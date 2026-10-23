@@ -74,12 +74,393 @@ export default function App() {
   const [isPlacingOnMap, setIsPlacingOnMap] = useState(false)
   const [isDrawingTrajectory, setIsDrawingTrajectory] = useState(false)
 
+<<<<<<< HEAD
   const handleDeleteSelected = useCallback(() => {
     if (scenario.selectedDroppedId) {
       scenario.setDroppedItems((current) => {
         const found = current.find((item) => item.id === scenario.selectedDroppedId) ?? null
         if (found) scenario.undoLastItem()
         return current.filter((item) => item.id !== scenario.selectedDroppedId)
+=======
+const frameNames = ["Inicio", "Aproximación", "Impacto", "Posición final"];
+
+function Dashboard({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="dashboard-panel">
+      <div className="dashboard-head">
+        <div>
+          <div className="eyebrow">CENTRO DE CASOS</div>
+          <div className="dashboard-title">Expedientes recientes</div>
+        </div>
+        <Button className="icon-button" onClick={onClose} title="Cerrar">
+          <Icon name="close" />
+        </Button>
+      </div>
+      <div className="dashboard-metrics">
+        <div className="metric">
+          <span>Casos activos</span>
+          <strong>12</strong>
+          <small>3 requieren revisión</small>
+        </div>
+        <div className="metric">
+          <span>Reconstrucciones</span>
+          <strong>28</strong>
+          <small>Durante este mes</small>
+        </div>
+        <div className="metric">
+          <span>Tiempo promedio</span>
+          <strong>4.2 h</strong>
+          <small>−18% vs. mes anterior</small>
+        </div>
+      </div>
+      <div className="case-list">
+        {[
+          ["EXP-0248", "Colisión en Av. Reforma", "Editado hace 12 min", "En curso"],
+          ["EXP-0245", "Alcance en Insurgentes Sur", "Ayer, 18:42", "Revisión"],
+          ["EXP-0239", "Cruce de Calz. de Tlalpan", "12 jun, 10:16", "Completado"],
+        ].map(([id, name, date, status]) => (
+          <Button className="case-row" key={id} onClick={onClose}>
+            <span className="case-icon">
+              <Icon name="map" />
+            </span>
+            <span className="case-main">
+              <b>{name}</b>
+              <small>
+                {id} · {date}
+              </small>
+            </span>
+            <span className={`status status-${status.toLowerCase().replace("ó", "o")}`}>{status}</span>
+            <Icon name="arrow" />
+          </Button>
+        ))}
+      </div>
+      <Button className="primary-button">
+        <Icon name="plus" />
+        Nuevo expediente
+      </Button>
+    </div>
+  );
+}
+
+type VehiclePosition = { lat: number; lng: number };
+
+type VehicleOverlayProps = {
+  id: string;
+  label: string;
+  position: VehiclePosition;
+  color: string;
+  rotation: number;
+  selected?: boolean;
+  onPositionChange: (position: VehiclePosition) => void;
+  onRotationChange: (rotation: number) => void;
+};
+
+function VehicleOverlay({
+  id,
+  label,
+  position,
+  color,
+  rotation,
+  selected = false,
+  onPositionChange,
+  onRotationChange,
+}: VehicleOverlayProps) {
+  const map = useMap();
+  const [revision, setRevision] = useState(0);
+  const dragRef = useRef<
+    | { mode: "move"; offsetX: number; offsetY: number }
+    | { mode: "rotate"; centerX: number; centerY: number }
+    | null
+  >(null);
+
+  useEffect(() => {
+    const redraw = () => setRevision((value) => value + 1);
+    map.on("zoom move resize", redraw);
+    return () => {
+      map.off("zoom move resize", redraw);
+    };
+  }, [map]);
+
+  useEffect(() => {
+    const handlePointerMove = (event: PointerEvent) => {
+      if (!dragRef.current) return;
+      const rect = map.getContainer().getBoundingClientRect();
+      if (dragRef.current.mode === "move") {
+        // A screen-pixel drag is converted back through Leaflet's current CRS.
+        const correctedPoint = [
+          event.clientX - rect.left - dragRef.current.offsetX,
+          event.clientY - rect.top - dragRef.current.offsetY,
+        ] as [number, number];
+        const nextLatLng = map.containerPointToLatLng(correctedPoint);
+        onPositionChange({ lat: nextLatLng.lat, lng: nextLatLng.lng });
+      } else {
+        const angle = (Math.atan2(event.clientY - dragRef.current.centerY, event.clientX - dragRef.current.centerX) * 180) / Math.PI;
+        onRotationChange(angle + 90);
+      }
+    };
+    const handlePointerUp = () => {
+      dragRef.current = null;
+    };
+    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("pointerup", handlePointerUp);
+    return () => {
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("pointerup", handlePointerUp);
+    };
+  }, [map, onPositionChange, onRotationChange, position]);
+
+  const pane = map.getPanes().overlayPane;
+  if (!pane) return null;
+
+  const zoom = map.getZoom();
+  const anchor = map.latLngToLayerPoint(position);
+  const projected = map.project(position, zoom);
+  const latitudeMeters = 111_320;
+  const longitudeMeters = latitudeMeters * Math.cos((position.lat * Math.PI) / 180);
+  const lengthEndpoint = map.project(
+    [position.lat, position.lng + 4.5 / longitudeMeters],
+    zoom,
+  );
+  const widthEndpoint = map.project([position.lat + 1.8 / latitudeMeters, position.lng], zoom);
+  // Leaflet's projected world scale is pixels per CRS unit. Projecting a point
+  // displaced by the real-world dimensions yields the exact screen footprint
+  // at the active latitude and zoom, including Web Mercator scale distortion.
+  const lengthPixels = Math.max(24, Math.abs(lengthEndpoint.x - projected.x));
+  const widthPixels = Math.max(14, Math.abs(widthEndpoint.y - projected.y));
+  const rect = map.getContainer().getBoundingClientRect();
+  const center = map.latLngToContainerPoint(position);
+
+  return createPortal(
+    <div
+      className={`leaflet-vehicle ${selected ? "selected-object" : ""}`}
+      data-vehicle-id={id}
+      data-map-revision={revision}
+      onPointerDown={(event) => {
+        event.stopPropagation();
+        const target = event.target as HTMLElement;
+        if (target.classList.contains("rotation-handle")) {
+          dragRef.current = {
+            mode: "rotate",
+            centerX: rect.left + center.x,
+            centerY: rect.top + center.y,
+          };
+          return;
+        }
+        const point = map.latLngToContainerPoint(position);
+        const pointerPoint = [event.clientX - rect.left, event.clientY - rect.top];
+        dragRef.current = {
+          mode: "move",
+          offsetX: pointerPoint[0] - point.x,
+          offsetY: pointerPoint[1] - point.y,
+        };
+      }}
+      style={{
+        height: `${lengthPixels}px`,
+        left: `${anchor.x}px`,
+        top: `${anchor.y}px`,
+        transform: `translate(-50%, -50%) rotate(${rotation}deg)`,
+        width: `${widthPixels}px`,
+        background: color,
+      }}
+    >
+      <Icon name="car" size={Math.max(18, Math.min(30, widthPixels * 0.7))} />
+      <b>{label}</b>
+      {selected && <span className="rotation-handle" title="Arrastrar para rotar" />}
+    </div>,
+    pane,
+  );
+}
+
+function MapZoomControls() {
+  const map = useMap();
+  const [zoom, setZoom] = useState(map.getZoom());
+
+  useEffect(() => {
+    const update = () => setZoom(map.getZoom());
+    map.on("zoomend", update);
+    return () => {
+      map.off("zoomend", update);
+    };
+  }, [map]);
+
+  return (
+    <div className="zoom-controls">
+      <Button className="map-tool" onClick={() => map.zoomIn()} title="Acercar">
+        <Icon name="plus" size={16} />
+      </Button>
+      <span>{zoom}</span>
+      <Button className="map-tool" onClick={() => map.zoomOut()} title="Alejar">
+        <Icon name="minus" size={16} />
+      </Button>
+    </div>
+  );
+}
+
+function MapToolbar() {
+  const map = useMap();
+  return (
+    <>
+      <div className="map-toolbar">
+        <Button className="map-tool is-active" title="Seleccionar">
+          <span className="cursor-arrow">↖</span>
+        </Button>
+        <Button className="map-tool" onClick={() => map.dragging.enable()} title="Mover mapa">
+          <Icon name="map" size={17} />
+        </Button>
+        <Button className="map-tool" title="Medir">
+          <span className="ruler-icon">⌁</span>
+        </Button>
+      </div>
+      <MapZoomControls />
+      <div className="north-indicator">
+        <span>N</span>
+        <i />
+      </div>
+    </>
+  );
+}
+
+function App() {
+  const [ribbon, setRibbon] = useState<string>("Elementos");
+  const [selectedTool, setSelectedTool] = useState("Infraestructura vial fija");
+  const [selectedFrame, setSelectedFrame] = useState(2);
+  const [frames, setFrames] = useState(frameNames);
+  const [sceneRecords, setSceneRecords] = useState<Scene[]>([]);
+  const [caseContext, setCaseContext] = useState<CaseContext | null>(null);
+  const [dataError, setDataError] = useState<string | null>(null);
+  const [assistantLoading, setAssistantLoading] = useState(false);
+  const [playing, setPlaying] = useState(false);
+  const [showDashboard, setShowDashboard] = useState(false);
+  const [chatText, setChatText] = useState("");
+  const [messages, setMessages] = useState<string[]>([]);
+  const [vehicleOne, setVehicleOne] = useState<VehiclePosition>({ lat: 19.427, lng: -99.167 });
+  const [vehicleTwo, setVehicleTwo] = useState<VehiclePosition>({ lat: 19.429, lng: -99.164 });
+  const [vehicleOneRotation, setVehicleOneRotation] = useState(38);
+  const [vehicleTwoRotation, setVehicleTwoRotation] = useState(-61);
+  const [editingIndex, setEditingIndex] = useState<number | null>(null);
+  const [draftName, setDraftName] = useState("");
+  const skipCommit = useRef(false);
+  const [theme, setTheme] = useState<Theme>(() => {
+    try {
+      return localStorage.getItem("theme") === "dark" ? "dark" : "light";
+    } catch {
+      return "light";
+    }
+  });
+
+  const activeSections = ribbonGroups[ribbon] ?? [];
+  const stepLabel = useMemo(() => `${selectedFrame + 1} / ${frames.length}`, [selectedFrame, frames]);
+
+  /* ---------- Valores del reproductor ---------- */
+  const lastIndex = frames.length - 1;
+  const positionOf = (index: number) => (lastIndex > 0 ? (index / lastIndex) * 100 : 0);
+  const progress = positionOf(selectedFrame);
+  const currentTime = selectedFrame * STEP_SECONDS;
+  const totalTime = Math.max(lastIndex, 0) * STEP_SECONDS;
+
+  /* ---------- Efectos ---------- */
+  useEffect(() => {
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {
+      /* sin almacenamiento disponible */
+    }
+  }, [theme]);
+
+  useEffect(() => {
+    let active = true;
+    Promise.allSettled([api.getCase(), api.getScenes()]).then(([caseResult, scenesResult]) => {
+      if (!active) return;
+      if (caseResult.status === "fulfilled") {
+        setCaseContext(caseResult.value);
+      }
+      if (scenesResult.status === "fulfilled" && scenesResult.value.length > 0) {
+        const orderedScenes = [...scenesResult.value].sort(
+          (a, b) => (a.order ?? 0) - (b.order ?? 0),
+        );
+        setSceneRecords(orderedScenes);
+        setFrames(orderedScenes.map((scene) => scene.name));
+        setSelectedFrame((current) => Math.min(current, orderedScenes.length - 1));
+      }
+      const failedResult = [caseResult, scenesResult].find((result) => result.status === "rejected");
+      setDataError(
+        failedResult?.status === "rejected"
+          ? failedResult.reason instanceof Error
+            ? failedResult.reason.message
+            : "No se pudo cargar toda la información del expediente"
+          : null,
+      );
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  // Avanza una escena por segundo mientras está reproduciendo
+  useEffect(() => {
+    if (!playing) return;
+    const id = window.setInterval(() => {
+      setSelectedFrame((current) => (current < frames.length - 1 ? current + 1 : current));
+    }, STEP_SECONDS * 1000);
+    return () => window.clearInterval(id);
+  }, [playing, frames.length]);
+
+  // Se detiene al llegar a la última escena
+  useEffect(() => {
+    if (playing && selectedFrame >= frames.length - 1) setPlaying(false);
+  }, [playing, selectedFrame, frames.length]);
+
+  /* ---------- Acciones ---------- */
+  const togglePlay = () => {
+    if (playing) {
+      setPlaying(false);
+      return;
+    }
+    if (selectedFrame >= frames.length - 1) setSelectedFrame(0);
+    setPlaying(true);
+  };
+
+  const startRename = (index: number) => {
+    skipCommit.current = false;
+    setDraftName(frames[index]);
+    setEditingIndex(index);
+  };
+
+  const commitRename = () => {
+    if (skipCommit.current) {
+      skipCommit.current = false;
+      return;
+    }
+    if (editingIndex === null) return;
+    const name = draftName.trim();
+    if (name) {
+      setFrames((current) => current.map((frame, i) => (i === editingIndex ? name : frame)));
+      const scene = sceneRecords[editingIndex];
+      if (scene?.id) {
+        void api.updateScene(scene.id, name).catch((error: unknown) => {
+          setDataError(error instanceof Error ? error.message : "No se pudo guardar la escena");
+        });
+      }
+    }
+    setEditingIndex(null);
+  };
+
+  const addFrame = () => {
+    const name = `Escena ${frames.length + 1}`;
+    const order = frames.length;
+    setFrames((current) => [...current, name]);
+    setSceneRecords((current) => [...current, { name, order }]);
+    setSelectedFrame(frames.length);
+    skipCommit.current = false;
+    setDraftName(name);
+    setEditingIndex(frames.length); // abre el campo para nombrarla de inmediato
+    void api
+      .createScene(name, order)
+      .then((scene) => {
+        setSceneRecords((current) =>
+          current.map((item, index) => (index === order ? scene : item)),
+        );
+>>>>>>> 10d39de (Add serverless backend for case scenes and assistant)
       })
       scenario.setSelectedDroppedId(null)
       setFeedback("Elemento eliminado · Puedes usar Rehacer")
