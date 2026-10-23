@@ -1,4 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import type { LatLngExpression } from "leaflet";
+import "leaflet/dist/leaflet.css";
 import { api, type CaseContext, type Scene } from "./lib/api";
 
 type Theme = "light" | "dark";
@@ -393,6 +397,182 @@ function Dashboard({ onClose }: { onClose: () => void }) {
   );
 }
 
+type VehiclePosition = { lat: number; lng: number };
+
+type VehicleOverlayProps = {
+  id: string;
+  label: string;
+  position: VehiclePosition;
+  color: string;
+  rotation: number;
+  selected?: boolean;
+  onPositionChange: (position: VehiclePosition) => void;
+  onRotationChange: (rotation: number) => void;
+};
+
+function VehicleOverlay({
+  id,
+  label,
+  position,
+  color,
+  rotation,
+  selected = false,
+  onPositionChange,
+  onRotationChange,
+}: VehicleOverlayProps) {
+  const map = useMap();
+  const [revision, setRevision] = useState(0);
+  const dragRef = useRef<
+    | { mode: "move"; offsetX: number; offsetY: number }
+    | { mode: "rotate"; centerX: number; centerY: number }
+    | null
+  >(null);
+
+  useEffect(() => {
+    const redraw = () => setRevision((value) => value + 1);
+    map.on("zoom move resize", redraw);
+    return () => {
+      map.off("zoom move resize", redraw);
+    };
+  }, [map]);
+
+  useEffect(() => {
+    const handlePointerMove = (event: PointerEvent) => {
+      if (!dragRef.current) return;
+      const rect = map.getContainer().getBoundingClientRect();
+      if (dragRef.current.mode === "move") {
+        // A screen-pixel drag is converted back through Leaflet's current CRS.
+        const correctedPoint = [
+          event.clientX - rect.left - dragRef.current.offsetX,
+          event.clientY - rect.top - dragRef.current.offsetY,
+        ] as [number, number];
+        const nextLatLng = map.containerPointToLatLng([correctedPoint.x, correctedPoint.y]);
+        onPositionChange({ lat: nextLatLng.lat, lng: nextLatLng.lng });
+      } else {
+        const angle = (Math.atan2(event.clientY - dragRef.current.centerY, event.clientX - dragRef.current.centerX) * 180) / Math.PI;
+        onRotationChange(angle + 90);
+      }
+    };
+    const handlePointerUp = () => {
+      dragRef.current = null;
+    };
+    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("pointerup", handlePointerUp);
+    return () => {
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("pointerup", handlePointerUp);
+    };
+  }, [map, onPositionChange, onRotationChange, position]);
+
+  const pane = map.getPanes().overlayPane;
+  if (!pane) return null;
+
+  const zoom = map.getZoom();
+  const anchor = map.latLngToLayerPoint(position);
+  const projected = map.project(position, zoom);
+  const latitudeMeters = 111_320;
+  const longitudeMeters = latitudeMeters * Math.cos((position.lat * Math.PI) / 180);
+  const lengthEndpoint = map.project(
+    [position.lat, position.lng + 4.5 / longitudeMeters],
+    zoom,
+  );
+  const widthEndpoint = map.project([position.lat + 1.8 / latitudeMeters, position.lng], zoom);
+  // Leaflet's projected world scale is pixels per CRS unit. Projecting a point
+  // displaced by the real-world dimensions yields the exact screen footprint
+  // at the active latitude and zoom, including Web Mercator scale distortion.
+  const lengthPixels = Math.max(24, Math.abs(lengthEndpoint.x - projected.x));
+  const widthPixels = Math.max(14, Math.abs(widthEndpoint.y - projected.y));
+  const rect = map.getContainer().getBoundingClientRect();
+  const center = map.latLngToContainerPoint(position);
+
+  return createPortal(
+    <div
+      className={`leaflet-vehicle ${selected ? "selected-object" : ""}`}
+      data-vehicle-id={id}
+      data-map-revision={revision}
+      onPointerDown={(event) => {
+        event.stopPropagation();
+        const target = event.target as HTMLElement;
+        if (target.classList.contains("rotation-handle")) {
+          dragRef.current = {
+            mode: "rotate",
+            centerX: rect.left + center.x,
+            centerY: rect.top + center.y,
+          };
+          return;
+        }
+        const point = map.latLngToContainerPoint(position);
+        const pointerPoint = [event.clientX - rect.left, event.clientY - rect.top];
+        dragRef.current = {
+          mode: "move",
+          offsetX: pointerPoint[0] - point.x,
+          offsetY: pointerPoint[1] - point.y,
+        };
+      }}
+      style={{
+        height: `${lengthPixels}px`,
+        left: `${anchor.x}px`,
+        top: `${anchor.y}px`,
+        transform: `translate(-50%, -50%) rotate(${rotation}deg)`,
+        width: `${widthPixels}px`,
+        background: color,
+      }}
+    >
+      <Icon name="car" size={Math.max(18, Math.min(30, widthPixels * 0.7))} />
+      <b>{label}</b>
+      {selected && <span className="rotation-handle" title="Arrastrar para rotar" />}
+    </div>,
+    pane,
+  );
+}
+
+function MapZoomControls() {
+  const map = useMap();
+  const [zoom, setZoom] = useState(map.getZoom());
+
+  useEffect(() => {
+    const update = () => setZoom(map.getZoom());
+    map.on("zoomend", update);
+    return () => map.off("zoomend", update);
+  }, [map]);
+
+  return (
+    <div className="zoom-controls">
+      <Button className="map-tool" onClick={() => map.zoomIn()} title="Acercar">
+        <Icon name="plus" size={16} />
+      </Button>
+      <span>{zoom}</span>
+      <Button className="map-tool" onClick={() => map.zoomOut()} title="Alejar">
+        <Icon name="minus" size={16} />
+      </Button>
+    </div>
+  );
+}
+
+function MapToolbar() {
+  const map = useMap();
+  return (
+    <>
+      <div className="map-toolbar">
+        <Button className="map-tool is-active" title="Seleccionar">
+          <span className="cursor-arrow">↖</span>
+        </Button>
+        <Button className="map-tool" onClick={() => map.dragging.enable()} title="Mover mapa">
+          <Icon name="map" size={17} />
+        </Button>
+        <Button className="map-tool" title="Medir">
+          <span className="ruler-icon">⌁</span>
+        </Button>
+      </div>
+      <MapZoomControls />
+      <div className="north-indicator">
+        <span>N</span>
+        <i />
+      </div>
+    </>
+  );
+}
+
 function App() {
   const [ribbon, setRibbon] = useState<string>("Elementos");
   const [selectedTool, setSelectedTool] = useState("Infraestructura vial fija");
@@ -406,7 +586,10 @@ function App() {
   const [showDashboard, setShowDashboard] = useState(false);
   const [chatText, setChatText] = useState("");
   const [messages, setMessages] = useState<string[]>([]);
-  const [zoom, setZoom] = useState(72);
+  const [vehicleOne, setVehicleOne] = useState<VehiclePosition>({ lat: 19.427, lng: -99.167 });
+  const [vehicleTwo, setVehicleTwo] = useState<VehiclePosition>({ lat: 19.429, lng: -99.164 });
+  const [vehicleOneRotation, setVehicleOneRotation] = useState(38);
+  const [vehicleTwoRotation, setVehicleTwoRotation] = useState(-61);
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [draftName, setDraftName] = useState("");
   const skipCommit = useRef(false);
@@ -721,77 +904,40 @@ function App() {
           </div>
 
           <div className="map-canvas">
-            <div className="map-block block-a" />
-            <div className="map-block block-b" />
-            <div className="map-block block-c" />
-            <div className="map-block block-d" />
-            <div className="map-park park-a">
-              <span />
-              <span />
-              <span />
-            </div>
-            <svg className="roads" preserveAspectRatio="none" viewBox="0 0 1000 560">
-              <path className="road-outer" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
-              <path className="road-inner" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
-              <path className="road-line" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
-              <path className="cross-road-outer" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
-              <path className="cross-road-inner" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
-              <path className="cross-road-line" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
-            </svg>
-            <div className="street-label street-one">PASEO DE LA REFORMA</div>
-            <div className="street-label street-two">AV. INSURGENTES</div>
-            <div className="poi poi-one">
-              <span>M</span>
-              Estación Reforma
-            </div>
-            <div className="poi poi-two">
-              <span>+</span>
-              Centro Médico
-            </div>
-            <div className="map-vehicle vehicle-a selected-object">
-              <Icon name="car" size={27} />
-              <span className="direction-line" />
-              <b>V1</b>
-            </div>
-            <div className="map-vehicle vehicle-b">
-              <Icon name="car" size={27} />
-              <b>V2</b>
-            </div>
-            <div className="impact-marker">
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-            <div className="evidence-marker evidence-one">E1</div>
-            <div className="evidence-marker evidence-two">E2</div>
+            <MapContainer
+              center={[19.428, -99.166] as LatLngExpression}
+              className="leaflet-map"
+              doubleClickZoom={false}
+              scrollWheelZoom
+              zoom={16}
+              zoomControl={false}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+              />
+              <VehicleOverlay
+                id="vehicle-1"
+                label="V1"
+                onPositionChange={setVehicleOne}
+                onRotationChange={setVehicleOneRotation}
+                position={vehicleOne}
+                rotation={vehicleOneRotation}
+                selected
+                color="#d8e0e3"
+              />
+              <VehicleOverlay
+                id="vehicle-2"
+                label="V2"
+                onPositionChange={setVehicleTwo}
+                onRotationChange={setVehicleTwoRotation}
+                position={vehicleTwo}
+                rotation={vehicleTwoRotation}
+                color="#d4965b"
+              />
+              <MapToolbar />
 
-            <div className="map-toolbar">
-              <Button className="map-tool is-active" title="Seleccionar">
-                <span className="cursor-arrow">↖</span>
-              </Button>
-              <Button className="map-tool" title="Mover mapa">
-                <Icon name="map" size={17} />
-              </Button>
-              <Button className="map-tool" title="Medir">
-                <span className="ruler-icon">⌁</span>
-              </Button>
-            </div>
-            <div className="zoom-controls">
-              <Button className="map-tool" onClick={() => setZoom((value) => Math.min(100, value + 8))}>
-                <Icon name="plus" size={16} />
-              </Button>
-              <span>{zoom}%</span>
-              <Button className="map-tool" onClick={() => setZoom((value) => Math.max(32, value - 8))}>
-                <Icon name="minus" size={16} />
-              </Button>
-            </div>
-            <div className="north-indicator">
-              <span>N</span>
-              <i />
-            </div>
-
-            <div className="object-inspector">
+              <div className="object-inspector">
               <div className="inspector-head">
                 <div>
                   <span className="object-tag">VEHÍCULO 01</span>
@@ -832,9 +978,10 @@ function App() {
                     <i>m</i>
                   </div>
                 </label>
+                </div>
               </div>
+              </MapContainer>
             </div>
-          </div>
 
           {/* Reproductor: recorre las escenas de Inicio a Posición final */}
           <div className="timeline">

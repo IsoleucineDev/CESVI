@@ -457,6 +457,91 @@ kbd {
   isolation: isolate;
 }
 
+.leaflet-map,
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #111921;
+  font: inherit;
+}
+
+.leaflet-container {
+  cursor: default;
+}
+
+.leaflet-control-attribution {
+  background: rgba(13, 17, 24, 0.78) !important;
+  color: var(--muted-2);
+  font-size: 8px;
+}
+
+.leaflet-control-attribution a {
+  color: var(--muted);
+}
+
+.leaflet-vehicle {
+  position: absolute;
+  z-index: 500;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  color: #17212a;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  cursor: grab;
+  transform-origin: center;
+  user-select: none;
+  touch-action: none;
+}
+
+.leaflet-vehicle:active {
+  cursor: grabbing;
+}
+
+.leaflet-vehicle b {
+  position: absolute;
+  top: -9px;
+  right: -11px;
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border: 2px solid #101820;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #071522;
+  font-size: 8px;
+  transform: rotate(0deg);
+}
+
+.leaflet-vehicle.selected-object {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.rotation-handle {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #09251d;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: crosshair;
+  transform: translateX(-50%);
+}
+
+.rotation-handle::after {
+  position: absolute;
+  top: 8px;
+  left: 3px;
+  width: 2px;
+  height: 20px;
+  background: var(--accent);
+  content: "";
+}
+
 .map-canvas::before {
   position: absolute;
   inset: 0;
@@ -637,51 +722,6 @@ kbd {
 
 .poi-two span {
   color: var(--danger);
-}
-
-.map-vehicle {
-  position: absolute;
-  display: grid;
-  width: 40px;
-  height: 57px;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 10px;
-  background: #d8e0e3;
-  color: #17212a;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-}
-
-.map-vehicle b {
-  position: absolute;
-  top: -9px;
-  right: -11px;
-  display: grid;
-  width: 20px;
-  height: 20px;
-  place-items: center;
-  border: 2px solid #101820;
-  border-radius: 50%;
-  background: var(--blue);
-  color: #071522;
-  font-size: 8px;
-}
-
-.vehicle-a {
-  top: 43%;
-  left: 43%;
-  transform: rotate(38deg);
-}
-
-.vehicle-b {
-  top: 49%;
-  left: 51%;
-  background: #d4965b;
-  transform: rotate(-61deg);
-}
-
-.vehicle-b b {
-  background: var(--orange);
 }
 
 .selected-object {
