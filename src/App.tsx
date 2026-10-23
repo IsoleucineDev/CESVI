@@ -1,5 +1,25 @@
 import { Fragment, useEffect, useRef, useState } from "react"
 import { api, type CaseContext, type Scene } from "./lib/api"
+import { MapContainer, TileLayer, useMap } from "react-leaflet"
+import "leaflet/dist/leaflet.css"
+
+type LocationSuggestion = {
+  display_name: string
+  lat: string
+  lon: string
+}
+
+const DEFAULT_MAP_CENTER: [number, number] = [19.4326, -99.1332]
+
+function MapViewport({ center }: { center: [number, number] }) {
+  const map = useMap()
+
+  useEffect(() => {
+    map.flyTo(center, Math.max(map.getZoom(), 13), { duration: 0.7 })
+  }, [center, map])
+
+  return null
+}
 
 type IconName = "arrow" | "car" | "chevron" | "clock" | "close" | "dashboard" | "delete" | "dog" | "download" | "layers" | "map" | "message" | "minus" | "more" | "motorcycle" | "pause" | "person" | "play" | "plus" | "redo" | "rock" | "search" | "send" | "settings" | "sheep" | "sign" | "sparkle" | "tire" | "tree" | "truck" | "undo" | "warning"
 
@@ -974,9 +994,63 @@ function App() {
     x: number | null
     y: number | null
   }>({ x: null, y: null })
+  const [locationQuery, setLocationQuery] = useState("Av. Paseo de la Reforma 222")
+  const [locationSuggestions, setLocationSuggestions] = useState<LocationSuggestion[]>([])
+  const [locationSearchLoading, setLocationSearchLoading] = useState(false)
+  const [mapCenter, setMapCenter] = useState<[number, number]>(DEFAULT_MAP_CENTER)
+  const [locationMenuOpen, setLocationMenuOpen] = useState(false)
   const panOrigin = useRef({ clientX: 0, clientY: 0, x: 0, y: 0 })
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const locationQueryInitialized = useRef(false)
   const activeTools = ribbonGroups[ribbon]
+
+  useEffect(() => {
+    if (!locationQueryInitialized.current) {
+      locationQueryInitialized.current = true
+      return
+    }
+    const query = locationQuery.trim()
+    if (query.length < 3) {
+      setLocationSuggestions([])
+      setLocationSearchLoading(false)
+      return
+    }
+
+    const controller = new AbortController()
+    const timer = window.setTimeout(async () => {
+      setLocationSearchLoading(true)
+      try {
+        const params = new URLSearchParams({
+          q: query,
+          format: "jsonv2",
+          addressdetails: "1",
+          limit: "5",
+          "accept-language": "es",
+        })
+        const response = await fetch(
+          `https://nominatim.openstreetmap.org/search?${params.toString()}`,
+          {
+            signal: controller.signal,
+            headers: { Accept: "application/json" },
+          },
+        )
+        if (!response.ok) throw new Error("No se pudieron buscar ubicaciones")
+        const results = (await response.json()) as LocationSuggestion[]
+        setLocationSuggestions(results)
+        setLocationMenuOpen(true)
+      } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") return
+        setLocationSuggestions([])
+      } finally {
+        if (!controller.signal.aborted) setLocationSearchLoading(false)
+      }
+    }, 300)
+
+    return () => {
+      controller.abort()
+      window.clearTimeout(timer)
+    }
+  }, [locationQuery])
 
   useEffect(() => {
     let active = true
@@ -1583,15 +1657,54 @@ function App() {
             <Icon name="search" size={17} />
             <input
               aria-label="Buscar ubicación"
-              defaultValue="Av. Paseo de la Reforma 222"
-              onKeyDown={(event) => {
-                if (event.key === "Enter")
-                  setFeedback(`Ubicación centrada: ${event.currentTarget.value}`)
+              autoComplete="off"
+              onBlur={() => window.setTimeout(() => setLocationMenuOpen(false), 120)}
+              onChange={(event) => {
+                setLocationQuery(event.target.value)
+                setLocationMenuOpen(true)
               }}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  const firstSuggestion = locationSuggestions[0]
+                  if (firstSuggestion) {
+                    setLocationQuery(firstSuggestion.display_name)
+                    setMapCenter([Number(firstSuggestion.lat), Number(firstSuggestion.lon)])
+                    setLocationSuggestions([])
+                    setLocationMenuOpen(false)
+                  } else {
+                    setFeedback(`Ubicación buscada: ${event.currentTarget.value}`)
+                  }
+                }
+              }}
+              value={locationQuery}
             />
             <kbd>↵</kbd>
           </label>
-          <span className="maps-note">Datos cartográficos</span>
+          {locationMenuOpen && (locationSuggestions.length > 0 || locationSearchLoading) && (
+            <div className="location-suggestions" role="listbox">
+              {locationSearchLoading && (
+                <div className="location-suggestion-status">Buscando...</div>
+              )}
+              {locationSuggestions.map((suggestion) => (
+                <button
+                  className="location-suggestion"
+                  key={`${suggestion.lat}-${suggestion.lon}-${suggestion.display_name}`}
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => {
+                    setLocationQuery(suggestion.display_name)
+                    setMapCenter([Number(suggestion.lat), Number(suggestion.lon)])
+                    setLocationSuggestions([])
+                    setLocationMenuOpen(false)
+                  }}
+                  role="option"
+                  type="button"
+                >
+                  {suggestion.display_name}
+                </button>
+              ))}
+            </div>
+          )}
+          <span className="maps-note">Datos cartográficos · © OpenStreetMap</span>
         </div>
         <div className="ribbon-separator" />
         <div className="ribbon-primary">
@@ -1736,10 +1849,24 @@ function App() {
               setSmartGuides({ x: null, y: null })
             }}
             onWheel={(event) => {
+              if ((event.target as HTMLElement).closest(".leaflet-container")) return
               event.preventDefault()
               changeZoom(event.deltaY < 0 ? 4 : -4)
             }}
           >
+            <MapContainer
+              className="leaflet-map"
+              center={DEFAULT_MAP_CENTER}
+              zoom={13}
+              zoomControl
+              attributionControl
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <MapViewport center={mapCenter} />
+            </MapContainer>
             <div
               className="canvas-infinite-grid"
               style={{

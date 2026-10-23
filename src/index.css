@@ -500,6 +500,7 @@ textarea:focus-visible {
 }
 
 .ribbon-block.location-block {
+  position: relative;
   width: 330px;
   min-width: 330px;
   padding-left: 16px;
@@ -521,6 +522,7 @@ textarea:focus-visible {
 }
 
 .search-field {
+  position: relative;
   display: flex;
   width: 280px;
   height: 30px;
@@ -530,6 +532,45 @@ textarea:focus-visible {
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--surface-2);
+  color: var(--muted);
+}
+
+.location-suggestions {
+  position: absolute;
+  z-index: 100;
+  top: 48px;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface-1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
+.location-suggestion,
+.location-suggestion-status {
+  display: block;
+  width: 100%;
+  padding: 9px 11px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 10px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.location-suggestion {
+  cursor: pointer;
+}
+
+.location-suggestion:hover {
+  background: var(--surface-3);
+  color: var(--accent);
+}
+
+.location-suggestion-status {
   color: var(--muted);
 }
 
@@ -695,10 +736,43 @@ kbd {
 .map-world {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 2;
+  pointer-events: none;
   transform-origin: center;
   transition: transform 120ms ease-out;
   will-change: transform;
+}
+
+.leaflet-map {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #dbe4e8;
+}
+
+.leaflet-map .leaflet-control-zoom {
+  margin: 12px;
+  border: 1px solid rgba(19, 32, 43, 0.55);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-map .leaflet-control-attribution {
+  font-size: 9px;
+}
+
+.map-world > .map-block,
+.map-world > .map-park,
+.map-world > .roads,
+.map-world > .street-label,
+.map-world > .poi {
+  display: none;
+}
+
+.map-world > .map-vehicle,
+.map-world > .dropped-map-item,
+.map-world > .rotation-handle,
+.map-world > .scale-handle {
+  pointer-events: auto;
 }
 
 .canvas-infinite-grid {
