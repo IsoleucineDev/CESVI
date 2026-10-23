@@ -446,7 +446,7 @@ function VehicleOverlay({
           event.clientX - rect.left - dragRef.current.offsetX,
           event.clientY - rect.top - dragRef.current.offsetY,
         ] as [number, number];
-        const nextLatLng = map.containerPointToLatLng([correctedPoint.x, correctedPoint.y]);
+        const nextLatLng = map.containerPointToLatLng(correctedPoint);
         onPositionChange({ lat: nextLatLng.lat, lng: nextLatLng.lng });
       } else {
         const angle = (Math.atan2(event.clientY - dragRef.current.centerY, event.clientX - dragRef.current.centerX) * 180) / Math.PI;
@@ -533,7 +533,9 @@ function MapZoomControls() {
   useEffect(() => {
     const update = () => setZoom(map.getZoom());
     map.on("zoomend", update);
-    return () => map.off("zoomend", update);
+    return () => {
+      map.off("zoomend", update);
+    };
   }, [map]);
 
   return (
