@@ -15,16 +15,25 @@ export type CaseContext = {
 type ApiError = Error & { status?: number };
 
 export type Action =
+  | { type: "set_location"; query: string }
+  | { type: "set_vehicle_type"; vehicleId: string; value: "Automóvil" | "Carga" | "Motocicleta" | "Otro" }
   | { type: "set_speed"; vehicleId: string; value: number }
   | { type: "set_braking"; vehicleId: string; value: number }
   | { type: "rotate_element"; vehicleId: string; heading: string }
   | { type: "move_vehicle"; vehicleId: string; lat: number; lng: number }
-  | { type: "focus_scene_area"; lat: number; lng: number; zoom: number };
+  | { type: "focus_scene_area"; lat: number; lng: number; zoom: number }
+  | { type: "set_impact_point"; lat?: number; lng?: number };
+
+export type AssistantTopic = { name: string; done: boolean };
 
 export type AssistantMessageResponse = {
   answer: string;
   actions: Action[];
   quickReplies: string[];
+  progress: number;
+  ready: boolean;
+  topics: AssistantTopic[];
+  missing: string[];
 };
 
 const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "/api").replace(/\/$/, "");
@@ -89,6 +98,10 @@ async function sendAssistantMessage(
       message?: string;
       actions?: Action[];
       quickReplies?: string[];
+      progress?: number;
+      ready?: boolean;
+      topics?: AssistantTopic[];
+      missing?: string[];
     };
     const answer = payload.answer || payload.message || "";
     if (answer) onToken(answer);
@@ -96,6 +109,10 @@ async function sendAssistantMessage(
       answer,
       actions: Array.isArray(payload.actions) ? payload.actions : [],
       quickReplies: Array.isArray(payload.quickReplies) ? payload.quickReplies : [],
+      progress: typeof payload.progress === "number" ? payload.progress : 0,
+      ready: payload.ready === true,
+      topics: Array.isArray(payload.topics) ? payload.topics : [],
+      missing: Array.isArray(payload.missing) ? payload.missing : [],
     };
     return includeMetadata ? result : result.answer;
   }
@@ -106,6 +123,10 @@ async function sendAssistantMessage(
   let answer = "";
   let actions: Action[] = [];
   let quickReplies: string[] = [];
+  let resultProgress = 0;
+  let resultReady = false;
+  let resultTopics: AssistantTopic[] = [];
+  let resultMissing: string[] = [];
 
   const consumeEvent = (event: string) => {
     const data = event
@@ -121,9 +142,17 @@ async function sendAssistantMessage(
         content?: string;
         actions?: Action[];
         quickReplies?: string[];
+        progress?: number;
+        ready?: boolean;
+        topics?: AssistantTopic[];
+        missing?: string[];
       };
       if (Array.isArray(parsed.actions)) actions = parsed.actions;
       if (Array.isArray(parsed.quickReplies)) quickReplies = parsed.quickReplies;
+      if (typeof parsed.progress === "number") resultProgress = parsed.progress;
+      if (typeof parsed.ready === "boolean") resultReady = parsed.ready;
+      if (Array.isArray(parsed.topics)) resultTopics = parsed.topics;
+      if (Array.isArray(parsed.missing)) resultMissing = parsed.missing;
       const token = parsed.token || parsed.content || parsed.answer || "";
       answer += token;
       if (token) onToken(token);
@@ -144,7 +173,15 @@ async function sendAssistantMessage(
   }
   consumeEvent(buffer);
 
-  const result = { answer, actions, quickReplies };
+  const result = {
+    answer,
+    actions,
+    quickReplies,
+    progress: resultProgress,
+    ready: resultReady,
+    topics: resultTopics,
+    missing: resultMissing,
+  };
   return includeMetadata ? result : result.answer;
 }
 
