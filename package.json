@@ -10,8 +10,12 @@
     "format": "oxfmt"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@vis.gl/react-google-maps": "^1.10.1",
     "lucide-react": "^1.61.0",
+=======
+    "pdf-lib": "^1.17.1",
+>>>>>>> 936b793 (feat: add elements and evidence catalog module with PDF dictamen export)
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

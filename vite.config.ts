@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => {
     plugins: [
 react(),
       tailwindcss(),
+      cesviApi(),
       figmaSiteConfiguration(siteConfiguration),
       figmaErrorOverlayReplay(),
       figmaReactRefreshBoundaryFallback(),
@@ -382,6 +383,24 @@ function figmaMakeKitPlugin(options: { storiesGlob: string | string[] }): Plugin
           res.end(await server.transformIndexHtml(url, HTML_BOOTSTRAP))
         } catch (err) {
           next(err as Error)
+        }
+      })
+    },
+  }
+}
+
+/** API local de desarrollo: sirve POST /api/dictamen igual que la función serverless de Vercel. */
+function cesviApi(): Plugin {
+  return {
+    name: 'cesvi-api',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use('/api/dictamen', async (req, res, next) => {
+        try {
+          const mod = await server.ssrLoadModule('/server/handler.ts')
+          await mod.handleDictamen(req, res)
+        } catch (error) {
+          next(error as Error)
         }
       })
     },

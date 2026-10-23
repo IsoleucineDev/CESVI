@@ -1,8 +1,16 @@
 {
   "rewrites": [
+<<<<<<< HEAD
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
 }
+=======
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
+EOF
+>>>>>>> 936b793 (feat: add elements and evidence catalog module with PDF dictamen export)

@@ -54,6 +54,10 @@ type IconName =
 
 /* Cada escena (pestaña) dura 1 segundo dentro del reproductor */
 const STEP_SECONDS = 1;
+const CASE_ID = "EXP-0248";
+const CASE_TITLE = "Reconstrucción vial";
+const VEHICLE_TYPE_LABEL: Record<string, string> = { sedan: "Sedán", suv: "SUV", truck: "Camión", motorcycle: "Motocicleta" };
+const HEADING_LABELS = ["Norte", "Noreste", "Este", "Sureste", "Sur", "Suroeste", "Oeste", "Noroeste"];
 
 const formatTime = (seconds: number) => {
   const m = String(Math.floor(seconds / 60)).padStart(2, "0");
@@ -635,6 +639,62 @@ function App() {
     setSelectedFrame((current) => Math.max(0, current - 1));
   };
 
+  const addSceneElement = (item: CatalogItem) => {
+    setSelectedTool(item.label);
+    setSelectedCatalogId(item.id);
+    setSceneElements((current) => [
+      ...current,
+      {
+        uid: `${item.id}-${Date.now()}-${current.length}`,
+        catalogId: item.id,
+        label: item.label,
+        group: item.group,
+        category: item.category,
+        tone: item.tone,
+        scene: frames[selectedFrame] ?? "Escena",
+        defaults: { ...item.defaults }, // propiedades base inyectadas y editables
+      },
+    ]);
+  };
+
+  const removeSceneElement = (uid: string) => setSceneElements((current) => current.filter((element) => element.uid !== uid));
+
+  const exportReport = async () => {
+    if (exportState.status === "loading") return;
+    setExportState({ status: "loading", message: "Generando dictamen…" });
+    try {
+      await downloadDictamen({
+        expediente: CASE_ID,
+        titulo: CASE_TITLE,
+        ubicacion: address,
+        perito: "",
+        escenas: frames,
+        vehiculos: vehicles.map((vehicle) => ({
+          etiqueta: vehicle.label,
+          modelo: vehicle.model,
+          tipo: VEHICLE_TYPE_LABEL[vehicle.type] ?? vehicle.type,
+          velocidadKmh: vehicle.speedKmh,
+          direccion: HEADING_LABELS[Math.round((vehicle.heading % 360) / 45) % 8],
+          frenadoM: vehicle.brakeM,
+        })),
+        elementos: sceneElements.map((element) => ({
+          etiqueta: element.label,
+          grupo: element.group,
+          clasificacion: CATEGORY_LABEL[element.category],
+          categoria: element.category,
+          tone: element.tone,
+          escena: element.scene,
+          propiedades: describeDefaults(element.defaults),
+        })),
+        observaciones: "",
+      });
+      setExportState({ status: "done", message: "Dictamen descargado." });
+      window.setTimeout(() => setExportState({ status: "idle", message: "" }), 3500);
+    } catch (error) {
+      setExportState({ status: "error", message: error instanceof Error ? error.message : "No se pudo generar el dictamen." });
+    }
+  };
+
   const sendMessage = () => {
     if (!chatText.trim()) return;
     setMessages((current) => [...current, chatText.trim()]);
@@ -705,9 +765,9 @@ function App() {
             <Icon name={theme === "light" ? "moon" : "sun"} />
           </Button>
           <span className="divider" />
-          <Button className="share-button">
+          <Button className="share-button" disabled={exportState.status === "loading"} onClick={exportReport} title="Descargar dictamen pericial en PDF">
             <Icon name="download" />
-            Exportar informe
+            {exportState.status === "loading" ? "Generando…" : "Exportar informe"}
           </Button>
           <div className="avatar">LM</div>
         </div>
