@@ -36,10 +36,10 @@ export type AssistantContext = {
 
     heading: string | null
 
-    position: { lat: number lng: number }
+    position: { lat: number; lng: number }
   }[]
 
-  impact: { lat: number lng: number } | null
+  impact: { lat: number; lng: number } | null
 }
 
 type AssistantPanelProps = {

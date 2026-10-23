@@ -210,7 +210,7 @@ const iconPaths: Record<IconName, React.ReactNode> = {
   ),
 }
 
-function Icon({ name, size = 18 }: { name: IconName size?: number }) {
+function Icon({ name, size = 18 }: { name: IconName; size?: number }) {
   return (
     <svg
       aria-hidden="true"
@@ -299,9 +299,9 @@ function ToolButton({
   )
 }
 
-type RibbonItem = { icon: IconName label: string title?: string }
+type RibbonItem = { icon: IconName; label: string; title?: string }
 
-type RibbonSection = { name: string items: RibbonItem[] }
+type RibbonSection = { name: string; items: RibbonItem[] }
 
 /* Cada pestaña = varios grupos; el nombre del grupo se muestra abajo (estilo Word) */
 
@@ -494,7 +494,7 @@ function Dashboard({ onClose }: { onClose: () => void }) {
   )
 }
 
-type VehiclePosition = { lat: number lng: number }
+type VehiclePosition = { lat: number; lng: number }
 
 const vehicleTypes = ["Automóvil", "Carga", "Motocicleta", "Otro"] as const
 
@@ -514,7 +514,7 @@ type VehicleState = {
   position: VehiclePosition
 }
 
-type SceneFocus = { lat: number lng: number zoom: number }
+type SceneFocus = { lat: number; lng: number; zoom: number }
 
 const headings = [
   "Norte",
@@ -617,11 +617,11 @@ function VehicleOverlay({
 
   const [revision, setRevision] = useState(0)
 
-  const dragRef = useRef<{ mode: "move" offsetX: number offsetY: number } | {
-    mode: "rotate"
-    centerX: number
-    centerY: number
-  } | null>(null)
+  const dragRef = useRef<
+    | { mode: "move"; offsetX: number; offsetY: number }
+    | { mode: "rotate"; centerX: number; centerY: number }
+    | null
+  >(null)
 
   useEffect(() => {
     const redraw = () => setRevision((value) => value + 1)
