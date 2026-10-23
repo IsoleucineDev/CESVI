@@ -379,8 +379,7 @@
 .app-shell[data-theme="light"] :is(.road-line, .cross-road-line) { stroke: #aab5c6; }
 .app-shell[data-theme="light"] :is(.street-label, .poi, .north-indicator, .zoom-controls span) { color: #7a8599; }
 .app-shell[data-theme="light"] .poi span { background: var(--accent-soft); color: var(--accent); }
-.app-shell[data-theme="light"] .map-vehicle { filter: drop-shadow(0 6px 10px rgba(28, 37, 54, 0.2)); }
-.app-shell[data-theme="light"] .direction-line { background: var(--accent); }
+.app-shell[data-theme="light"] .leaflet-vehicle { filter: drop-shadow(0 6px 10px rgba(28, 37, 54, 0.2)); }
 .app-shell[data-theme="light"] .map-tool { color: var(--muted); }
 .app-shell[data-theme="light"] .map-tool.is-active { background: var(--accent-soft); color: var(--accent); }
 .app-shell[data-theme="light"] .object-tag { color: var(--accent); }
