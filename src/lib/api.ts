@@ -21,7 +21,6 @@ type ApiPayload<T> = T | { data?: T; message?: string; success?: boolean };
 
 const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "/api/v1/rat").replace(/\/$/, "");
 const CASE_ID = import.meta.env.VITE_CASE_ID || "EXP-0248";
-const API_TOKEN = import.meta.env.VITE_API_TOKEN;
 const SCENES_API_BASE_URL = import.meta.env.VITE_SCENES_API_BASE_URL?.replace(/\/$/, "");
 const AI_API_URL = (import.meta.env.VITE_AI_API_URL || `${API_BASE_URL}/ai/chat`).replace(/\/$/, "");
 
@@ -48,7 +47,6 @@ const getErrorMessage = (payload: unknown, fallback: string) => {
 
 const getHeaders = (init?: RequestInit, accepts = "application/json") => ({
   Accept: accepts,
-  ...(API_TOKEN ? { Authorization: `Bearer ${API_TOKEN}` } : {}),
   ...(init?.body ? { "Content-Type": "application/json" } : {}),
   ...init?.headers,
 });
