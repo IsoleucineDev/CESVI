@@ -1,10 +1,18 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { ArrowRight, Search, Sparkles } from "lucide-react";
+import GoogleMapCanvas, {
+  GoogleMapsRuntime,
+  LocationAutocomplete,
+  type Vehicle,
+} from "./components/GoogleMapCanvas";
+import VehicleIcon from "./components/VehicleIcon";
 
 type Theme = "light" | "dark";
 
 type IconName =
   | "arrow"
   | "back"
+  | "box"
   | "car"
   | "chevron"
   | "clock"
@@ -12,8 +20,10 @@ type IconName =
   | "dashboard"
   | "delete"
   | "download"
+  | "droplet"
   | "edit"
   | "first"
+  | "glass"
   | "last"
   | "layers"
   | "map"
@@ -28,6 +38,7 @@ type IconName =
   | "play"
   | "plus"
   | "redo"
+  | "route"
   | "search"
   | "send"
   | "settings"
@@ -36,12 +47,17 @@ type IconName =
   | "sun"
   | "tree"
   | "truck"
+  | "tractor"
   | "undo"
   | "wall"
   | "warning";
 
 /* Cada escena (pestaña) dura 1 segundo dentro del reproductor */
 const STEP_SECONDS = 1;
+const CASE_ID = "EXP-0248";
+const CASE_TITLE = "Reconstrucción vial";
+const VEHICLE_TYPE_LABEL: Record<string, string> = { sedan: "Sedán", suv: "SUV", truck: "Camión", motorcycle: "Motocicleta" };
+const HEADING_LABELS = ["Norte", "Noreste", "Este", "Sureste", "Sur", "Suroeste", "Oeste", "Noroeste"];
 
 const formatTime = (seconds: number) => {
   const m = String(Math.floor(seconds / 60)).padStart(2, "0");
@@ -52,6 +68,12 @@ const formatTime = (seconds: number) => {
 const iconPaths: Record<IconName, React.ReactNode> = {
   arrow: <path d="m9 18 6-6-6-6" />,
   back: <path d="m15 18-6-6 6-6" />,
+  box: (
+    <>
+      <path d="m4 7 8-4 8 4-8 4-8-4Z" />
+      <path d="M4 7v10l8 4 8-4V7M12 11v10" />
+    </>
+  ),
   car: (
     <>
       <path d="m5 17-1 2v1h2l1-2h10l1 2h2v-1l-1-2" />
@@ -84,8 +106,10 @@ const iconPaths: Record<IconName, React.ReactNode> = {
       <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16" />
     </>
   ),
+  droplet: <path d="M12 3s6 6.2 6 11a6 6 0 0 1-12 0c0-4.8 6-11 6-11Z" />,
   edit: <path d="M4 20h4L19 9l-4-4L4 16v4ZM13.5 6.5l4 4" />,
   first: <path d="M6 5v14M18 6l-8 6 8 6V6Z" />,
+  glass: <path d="M5 4h14M7 4l1 13a4 4 0 0 0 8 0l1-13M8 12h8M12 17v4M9 21h6" />,
   last: <path d="M18 5v14M6 6l8 6-8 6V6Z" />,
   layers: (
     <>
@@ -143,6 +167,7 @@ const iconPaths: Record<IconName, React.ReactNode> = {
   play: <path d="m9 7 9 5-9 5V7Z" />,
   plus: <path d="M12 5v14M5 12h14" />,
   redo: <path d="M20 8h-7a6 6 0 0 0-6 6v2m13-8-3-3m3 3-3 3" />,
+  route: <path d="M5 4h.01M19 20h.01M5 4c0 8 14 4 14 12M5 20c0-5 5-5 9-5h5" />,
   search: (
     <>
       <circle cx="10.5" cy="10.5" r="6.5" />
@@ -176,6 +201,13 @@ const iconPaths: Record<IconName, React.ReactNode> = {
       <circle cx="18" cy="18" r="2" />
     </>
   ),
+  tractor: (
+    <>
+      <path d="M4 15h10l2-6h3l2 6v3H4v-3ZM9 15V6h5l2 3" />
+      <circle cx="8" cy="18" r="3" />
+      <circle cx="19" cy="18" r="2" />
+    </>
+  ),
   undo: <path d="M4 8h7a6 6 0 0 1 6 6v2M4 8l3-3M4 8l3 3" />,
   wall: <path d="M3 6h18v4H3zM3 14h18v4H3zM9 6v4M15 14v4" />,
   warning: (
@@ -207,6 +239,7 @@ function Button({
   disabled,
   onClick,
   onDoubleClick,
+  role,
   title,
 }: {
   children: React.ReactNode;
@@ -214,6 +247,7 @@ function Button({
   disabled?: boolean;
   onClick?: () => void;
   onDoubleClick?: () => void;
+  role?: React.AriaRole;
   title?: string;
 }) {
   return (
@@ -222,6 +256,7 @@ function Button({
       disabled={disabled}
       onClick={onClick}
       onDoubleClick={onDoubleClick}
+      role={role}
       title={title}
       type="button"
     >
@@ -392,6 +427,106 @@ function Dashboard({ onClose }: { onClose: () => void }) {
   );
 }
 
+type CatalogTab = "objects" | "evidence" | "vehicles";
+type CatalogItem = {
+  id: string;
+  label: string;
+  group: string;
+  detail: string;
+  icon: IconName;
+  tone: "infrastructure" | "biological" | "physical" | "vehicle";
+  defaults: string;
+};
+
+const catalogItems: CatalogItem[] = [
+  { id: "road-infrastructure", label: "Infraestructura vial fija", group: "Objetos duros o rígidos", detail: "Muros, guardarraíles, barreras, señales, postes, pilares, perfiles, hitos, bordillos y edificios.", icon: "wall", tone: "infrastructure", defaults: "Material: acero · μ: 0,60" },
+  { id: "natural-object", label: "Naturales y desprendidos", group: "Objetos duros o rígidos", detail: "Árboles, rocas, vigas, troncos y neumáticos abandonados.", icon: "tree", tone: "infrastructure", defaults: "Masa: 80 kg · μ: 0,70" },
+  { id: "static-vehicle", label: "Vehículos estáticos", group: "Objetos duros o rígidos", detail: "Vehículos estacionados, detenidos o abandonados en calzada o arcén.", icon: "car", tone: "vehicle", defaults: "Masa: 1.400 kg · μ: 0,75" },
+  { id: "human-body", label: "Cuerpos humanos", group: "Objetos o cuerpos blandos", detail: "Peatones, ciclistas, motociclistas u ocupantes de vehículos.", icon: "person", tone: "biological", defaults: "Masa: 75 kg · μ: 0,50" },
+  { id: "animal-body", label: "Cuerpos animales", group: "Objetos o cuerpos blandos", detail: "Fauna silvestre o ganado.", icon: "paw", tone: "biological", defaults: "Masa: 60 kg · μ: 0,45" },
+  { id: "blood", label: "Sangre", group: "Evidencia biológica", detail: "Manchas, proyecciones y patrones de sangre.", icon: "droplet", tone: "biological", defaults: "Estado: líquido · Registro fotográfico" },
+  { id: "tissues", label: "Tejidos y restos corporales", group: "Evidencia biológica", detail: "Restos orgánicos y tejidos separados del cuerpo.", icon: "person", tone: "biological", defaults: "Estado: sólido · Muestra etiquetada" },
+  { id: "tire-tracks", label: "Huellas de neumático", group: "Evidencia física", detail: "Marcas de frenado, arrastre, derrape, aceleración o rodadura.", icon: "route", tone: "physical", defaults: "μ: 0,70 · Longitud: 8 m" },
+  { id: "pavement-traces", label: "Marcas y trazas de pavimento", group: "Evidencia física", detail: "Arañazos, rozaduras, surcos, excavaciones y baches.", icon: "warning", tone: "physical", defaults: "Profundidad: 0,02 m · Superficie" },
+  { id: "fragments", label: "Fragmentos y autopartes", group: "Evidencia física", detail: "Plásticos, fibras, molduras, parachoques y piezas mecánicas.", icon: "box", tone: "physical", defaults: "Masa: 2 kg · Origen: por identificar" },
+  { id: "glass", label: "Vidrios y restos de ventanas", group: "Evidencia física", detail: "Dispersión de vidrio laminado o templado de parabrisas, lunas o faros.", icon: "glass", tone: "physical", defaults: "Tipo: templado · Dispersión: 4 m" },
+  { id: "fluids", label: "Fluidos y aceites", group: "Evidencia física", detail: "Aceite motor, líquido de frenos, refrigerante o combustible.", icon: "droplet", tone: "physical", defaults: "Tipo: combustible · Área: 2,4 m²" },
+  { id: "sedan", label: "Sedán / Saloon", group: "Turismos y ligeros", detail: "Turismo de tres volúmenes.", icon: "car", tone: "vehicle", defaults: "Masa: 1.400 kg · Dim.: 4,5 × 1,8 m" },
+  { id: "coupe", label: "Coupé", group: "Turismos y ligeros", detail: "Turismo de dos puertas.", icon: "car", tone: "vehicle", defaults: "Masa: 1.350 kg · Dim.: 4,4 × 1,9 m" },
+  { id: "utility", label: "Utility / Micro", group: "Turismos y ligeros", detail: "Vehículo compacto y utilitario.", icon: "car", tone: "vehicle", defaults: "Masa: 950 kg · Dim.: 3,7 × 1,7 m" },
+  { id: "mpv-suv", label: "MPV / SUV / 4x4", group: "Turismos y ligeros", detail: "Monovolumen, todoterreno o SUV.", icon: "car", tone: "vehicle", defaults: "Masa: 1.900 kg · μ: 0,78" },
+  { id: "commercial", label: "Vans y pick-ups", group: "Comerciales, industriales y carga", detail: "Vehículos comerciales ligeros.", icon: "truck", tone: "vehicle", defaults: "Masa: 2.400 kg · Dim.: 5,4 × 2,0 m" },
+  { id: "truck", label: "Camiones rígidos", group: "Comerciales, industriales y carga", detail: "Configuraciones 4x2, 6x4, 8x4 y similares.", icon: "truck", tone: "vehicle", defaults: "Masa: 12.000 kg · μ: 0,65" },
+  { id: "trailer", label: "Tractora / Remolque", group: "Comerciales, industriales y carga", detail: "Tractocamiones, trenes de carretera, remolques y semirremolques.", icon: "truck", tone: "vehicle", defaults: "Masa: 32.000 kg · Dim.: 16,5 m" },
+  { id: "bus", label: "Minibús / Autobús", group: "Transporte de pasajeros", detail: "Autobús estándar, urbano, autocar o articulado.", icon: "truck", tone: "vehicle", defaults: "Masa: 11.000 kg · Ocupantes: 45" },
+  { id: "motorcycle", label: "Motocicleta / Ciclomotor", group: "Motocicletas y ciclomotores", detail: "Carretera (touring, sport, custom), off-road (motocross, enduro), trail, scooter y ciclomotor.", icon: "motorcycle", tone: "vehicle", defaults: "Masa: 210 kg · μ: 0,80" },
+  { id: "other-vehicle", label: "Maquinaria y otros vehículos", group: "Otros vehículos", detail: "Maquinaria agrícola o de obras, bicicletas y carros de tracción animal.", icon: "tractor", tone: "vehicle", defaults: "Masa: 500 kg · μ: 0,60" },
+];
+
+function CatalogPanel({
+  selectedTool,
+  onSelect,
+}: {
+  selectedTool: string;
+  onSelect: (item: CatalogItem) => void;
+}) {
+  const [tab, setTab] = useState<CatalogTab>("objects");
+  const [query, setQuery] = useState("");
+  const tabItems = catalogItems.filter((item) => {
+    if (tab === "objects") return item.id.includes("body") || item.id.includes("object") || item.id === "road-infrastructure" || item.id === "static-vehicle";
+    if (tab === "evidence") return item.group.startsWith("Evidencia");
+    return item.tone === "vehicle" && !["static-vehicle"].includes(item.id);
+  });
+  const filtered = tabItems.filter((item) => `${item.label} ${item.group} ${item.detail}`.toLowerCase().includes(query.toLowerCase()));
+  const groups = [...new Set(filtered.map((item) => item.group))];
+
+  return (
+    <aside className="catalog-pane">
+      <div className="catalog-header">
+        <div>
+          <span className="eyebrow">BIBLIOTECA DE ESCENA</span>
+          <h2>Elementos y evidencias</h2>
+          <p>Arrastra o selecciona una plantilla para inyectarla en la escena.</p>
+        </div>
+        <span className="catalog-count">{filtered.length}</span>
+      </div>
+      <div className="catalog-tabs" role="tablist" aria-label="Categorías del catálogo">
+        {([
+          ["objects", "Objetos", "wall"],
+          ["evidence", "Evidencia", "droplet"],
+          ["vehicles", "Vehículos", "car"],
+        ] as const).map(([value, label, icon]) => (
+          <Button className={`catalog-tab ${tab === value ? "is-active" : ""}`} key={value} onClick={() => setTab(value)} role="tab">
+            <Icon name={icon} size={16} />
+            {label}
+          </Button>
+        ))}
+      </div>
+      <label className="catalog-search">
+        <Search aria-hidden="true" className="icon" size={16} />
+        <input aria-label="Buscar en el catálogo" onChange={(event) => setQuery(event.target.value)} placeholder="Buscar elemento..." value={query} />
+        <kbd>⌘K</kbd>
+      </label>
+      <div className="catalog-list">
+        {groups.map((group) => (
+          <section className="catalog-group" key={group}>
+            <div className="catalog-group-title">{group}</div>
+            {filtered.filter((item) => item.group === group).map((item) => (
+              <Button className={`catalog-item ${selectedTool === item.label ? "is-selected" : ""}`} key={item.id} onClick={() => onSelect(item)}>
+                <span className={`catalog-icon tone-${item.tone}`}><Icon name={item.icon} size={19} /></span>
+                <span className="catalog-item-copy"><b>{item.label}</b><small>{item.detail}</small><em>{item.defaults}</em></span>
+                <ArrowRight aria-hidden="true" className="icon" size={15} />
+              </Button>
+            ))}
+          </section>
+        ))}
+        {filtered.length === 0 && <div className="catalog-empty"><Search aria-hidden="true" className="icon" size={22} /><b>Sin resultados</b><span>Prueba con otro término.</span></div>}
+      </div>
+      <div className="catalog-footer"><Sparkles aria-hidden="true" className="icon" size={15} /><span>Las propiedades base quedan listas para cálculo físico.</span></div>
+    </aside>
+  );
+}
+
 function App() {
   const [ribbon, setRibbon] = useState<string>("Elementos");
   const [selectedTool, setSelectedTool] = useState("Infraestructura vial fija");
@@ -402,6 +537,16 @@ function App() {
   const [chatText, setChatText] = useState("");
   const [messages, setMessages] = useState<string[]>([]);
   const [zoom, setZoom] = useState(72);
+  const [mapZoom, setMapZoom] = useState(19);
+  const [mapHeading, setMapHeading] = useState(0);
+  const [address, setAddress] = useState("Av. Paseo de la Reforma 222, Ciudad de México");
+  const [locationQuery, setLocationQuery] = useState("Av. Paseo de la Reforma 222, Ciudad de México");
+  const [interactionMode, setInteractionMode] = useState<"select" | "move">("select");
+  const [selectedVehicleId, setSelectedVehicleId] = useState("v1");
+  const [vehicles, setVehicles] = useState<Vehicle[]>([
+    { id: "v1", type: "sedan", color: "#72a7ff", label: "V1", lat: 19.4276, lng: -99.1672, heading: 45, speedKmh: 42, brakeM: 8.4, model: "Nissan Versa 2021" },
+    { id: "v2", type: "suv", color: "#f2a65a", label: "V2", lat: 19.4267, lng: -99.1663, heading: 270, speedKmh: 28, brakeM: 5.6, model: "Ford Escape 2020" },
+  ]);
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [draftName, setDraftName] = useState("");
   const skipCommit = useRef(false);
@@ -412,6 +557,9 @@ function App() {
       return "light";
     }
   });
+  const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? "";
+  const googleMapId = import.meta.env.VITE_GOOGLE_MAP_ID || "DEMO_MAP_ID";
+  const selectedVehicle = vehicles.find((vehicle) => vehicle.id === selectedVehicleId) ?? vehicles[0];
 
   const activeSections = ribbonGroups[ribbon] ?? [];
   const stepLabel = useMemo(() => `${selectedFrame + 1} / ${frames.length}`, [selectedFrame, frames]);
@@ -491,14 +639,87 @@ function App() {
     setSelectedFrame((current) => Math.max(0, current - 1));
   };
 
+  const addSceneElement = (item: CatalogItem) => {
+    setSelectedTool(item.label);
+    setSelectedCatalogId(item.id);
+    setSceneElements((current) => [
+      ...current,
+      {
+        uid: `${item.id}-${Date.now()}-${current.length}`,
+        catalogId: item.id,
+        label: item.label,
+        group: item.group,
+        category: item.category,
+        tone: item.tone,
+        scene: frames[selectedFrame] ?? "Escena",
+        defaults: { ...item.defaults }, // propiedades base inyectadas y editables
+      },
+    ]);
+  };
+
+  const removeSceneElement = (uid: string) => setSceneElements((current) => current.filter((element) => element.uid !== uid));
+
+  const exportReport = async () => {
+    if (exportState.status === "loading") return;
+    setExportState({ status: "loading", message: "Generando dictamen…" });
+    try {
+      await downloadDictamen({
+        expediente: CASE_ID,
+        titulo: CASE_TITLE,
+        ubicacion: address,
+        perito: "",
+        escenas: frames,
+        vehiculos: vehicles.map((vehicle) => ({
+          etiqueta: vehicle.label,
+          modelo: vehicle.model,
+          tipo: VEHICLE_TYPE_LABEL[vehicle.type] ?? vehicle.type,
+          velocidadKmh: vehicle.speedKmh,
+          direccion: HEADING_LABELS[Math.round((vehicle.heading % 360) / 45) % 8],
+          frenadoM: vehicle.brakeM,
+        })),
+        elementos: sceneElements.map((element) => ({
+          etiqueta: element.label,
+          grupo: element.group,
+          clasificacion: CATEGORY_LABEL[element.category],
+          categoria: element.category,
+          tone: element.tone,
+          escena: element.scene,
+          propiedades: describeDefaults(element.defaults),
+        })),
+        observaciones: "",
+      });
+      setExportState({ status: "done", message: "Dictamen descargado." });
+      window.setTimeout(() => setExportState({ status: "idle", message: "" }), 3500);
+    } catch (error) {
+      setExportState({ status: "error", message: error instanceof Error ? error.message : "No se pudo generar el dictamen." });
+    }
+  };
+
   const sendMessage = () => {
     if (!chatText.trim()) return;
     setMessages((current) => [...current, chatText.trim()]);
     setChatText("");
   };
 
+  const updateVehicle = (id: string, update: Partial<Vehicle>) => {
+    setVehicles((current) => current.map((vehicle) => (vehicle.id === id ? { ...vehicle, ...update } : vehicle)));
+  };
+
+  const headingLabel = (heading: number) => {
+    const labels = ["Norte", "Noreste", "Este", "Sureste", "Sur", "Suroeste", "Oeste", "Noroeste"];
+    return labels[Math.round((heading % 360) / 45) % 8];
+  };
+
+  const setHeadingFromLabel = (label: string) => {
+    const labels: Record<string, number> = { Norte: 0, Noreste: 45, Este: 90, Sureste: 135, Sur: 180, Suroeste: 225, Oeste: 270, Noroeste: 315 };
+    updateVehicle(selectedVehicle.id, { heading: labels[label] ?? 0 });
+  };
+
+  const mapZoomPercent = Math.round(Math.min(100, Math.max(0, ((mapZoom - 15) / 6) * 100)));
+
   return (
-    <main className="app-shell" data-theme={theme}>
+    <GoogleMapsRuntime apiKey={googleMapsApiKey}>
+      <main className="app-shell" data-theme={theme}>
       <header className="titlebar">
         <div className="brand-area">
           <Button
@@ -544,9 +765,9 @@ function App() {
             <Icon name={theme === "light" ? "moon" : "sun"} />
           </Button>
           <span className="divider" />
-          <Button className="share-button">
+          <Button className="share-button" disabled={exportState.status === "loading"} onClick={exportReport} title="Descargar dictamen pericial en PDF">
             <Icon name="download" />
-            Exportar informe
+            {exportState.status === "loading" ? "Generando…" : "Exportar informe"}
           </Button>
           <div className="avatar">LM</div>
         </div>
@@ -558,10 +779,30 @@ function App() {
           <div className="ribbon-group-body">
             <label className="search-field">
               <Icon name="search" size={17} />
-              <input aria-label="Buscar ubicación" defaultValue="Av. Paseo de la Reforma 222" />
+              {googleMapsApiKey ? (
+                <LocationAutocomplete
+                  apiKey={googleMapsApiKey}
+                  onChange={setLocationQuery}
+                  onPlaceSelect={(value) => {
+                    setLocationQuery(value);
+                    setAddress(value);
+                  }}
+                  value={locationQuery}
+                />
+              ) : (
+                <input
+                  aria-label="Buscar ubicación"
+                  onChange={(event) => setLocationQuery(event.target.value)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") setAddress(event.currentTarget.value);
+                  }}
+                  value={locationQuery}
+                />
+              )}
               <kbd>↵</kbd>
             </label>
             <span className="maps-note">Datos cartográficos</span>
+            {!googleMapsApiKey && <span className="maps-fallback-note">Configura VITE_GOOGLE_MAPS_API_KEY para usar Google Maps</span>}
           </div>
           <span className="ribbon-group-label">Ubicación</span>
         </div>
@@ -637,56 +878,72 @@ function App() {
           </div>
 
           <div className="map-canvas">
-            <div className="map-block block-a" />
-            <div className="map-block block-b" />
-            <div className="map-block block-c" />
-            <div className="map-block block-d" />
-            <div className="map-park park-a">
-              <span />
-              <span />
-              <span />
-            </div>
-            <svg className="roads" preserveAspectRatio="none" viewBox="0 0 1000 560">
-              <path className="road-outer" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
-              <path className="road-inner" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
-              <path className="road-line" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
-              <path className="cross-road-outer" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
-              <path className="cross-road-inner" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
-              <path className="cross-road-line" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
-            </svg>
-            <div className="street-label street-one">PASEO DE LA REFORMA</div>
-            <div className="street-label street-two">AV. INSURGENTES</div>
-            <div className="poi poi-one">
-              <span>M</span>
-              Estación Reforma
-            </div>
-            <div className="poi poi-two">
-              <span>+</span>
-              Centro Médico
-            </div>
-            <div className="map-vehicle vehicle-a selected-object">
-              <Icon name="car" size={27} />
-              <span className="direction-line" />
-              <b>V1</b>
-            </div>
-            <div className="map-vehicle vehicle-b">
-              <Icon name="car" size={27} />
-              <b>V2</b>
-            </div>
-            <div className="impact-marker">
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-            <div className="evidence-marker evidence-one">E1</div>
-            <div className="evidence-marker evidence-two">E2</div>
+            {googleMapsApiKey ? (
+              <GoogleMapCanvas
+                address={address}
+                apiKey={googleMapsApiKey}
+                interactionMode={interactionMode}
+                mapId={googleMapId}
+                onHeadingChange={setMapHeading}
+                onSelectVehicle={setSelectedVehicleId}
+                onVehicleMove={(id, lat, lng) => updateVehicle(id, { lat, lng })}
+                onZoomChange={setMapZoom}
+                selectedVehicleId={selectedVehicleId}
+                theme={theme}
+                vehicles={vehicles}
+                zoom={mapZoom}
+              />
+            ) : (
+              <>
+                <div className="map-block block-a" />
+                <div className="map-block block-b" />
+                <div className="map-block block-c" />
+                <div className="map-block block-d" />
+                <div className="map-park park-a">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <svg className="roads" preserveAspectRatio="none" viewBox="0 0 1000 560">
+                  <path className="road-outer" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
+                  <path className="road-inner" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
+                  <path className="road-line" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
+                  <path className="cross-road-outer" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
+                  <path className="cross-road-inner" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
+                  <path className="cross-road-line" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
+                </svg>
+                <div className="street-label street-one">PASEO DE LA REFORMA</div>
+                <div className="street-label street-two">AV. INSURGENTES</div>
+                <div className="poi poi-one">
+                  <span>M</span>
+                  Estación Reforma
+                </div>
+                <div className="poi poi-two">
+                  <span>+</span>
+                  Centro Médico
+                </div>
+                <div className="map-vehicle vehicle-a selected-object" onClick={() => setSelectedVehicleId("v1")}>
+                  <VehicleIcon color={vehicles[0].color} heading={vehicles[0].heading} label="V1" lengthPx={90} selected={selectedVehicleId === "v1"} type={vehicles[0].type} />
+                </div>
+                <div className="map-vehicle vehicle-b" onClick={() => setSelectedVehicleId("v2")}>
+                  <VehicleIcon color={vehicles[1].color} heading={vehicles[1].heading} label="V2" lengthPx={84} selected={selectedVehicleId === "v2"} type={vehicles[1].type} />
+                </div>
+                <div className="impact-marker">
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="evidence-marker evidence-one">E1</div>
+                <div className="evidence-marker evidence-two">E2</div>
+              </>
+            )}
 
             <div className="map-toolbar">
-              <Button className="map-tool is-active" title="Seleccionar">
+              <Button className={`map-tool ${interactionMode === "select" ? "is-active" : ""}`} onClick={() => setInteractionMode("select")} title="Seleccionar">
                 <span className="cursor-arrow">↖</span>
               </Button>
-              <Button className="map-tool" title="Mover mapa">
+              <Button className={`map-tool ${interactionMode === "move" ? "is-active" : ""}`} onClick={() => setInteractionMode("move")} title="Mover mapa">
                 <Icon name="map" size={17} />
               </Button>
               <Button className="map-tool" title="Medir">
@@ -694,24 +951,30 @@ function App() {
               </Button>
             </div>
             <div className="zoom-controls">
-              <Button className="map-tool" onClick={() => setZoom((value) => Math.min(100, value + 8))}>
+              <Button className="map-tool" onClick={() => {
+                if (googleMapsApiKey) setMapZoom((value) => Math.min(21, value + 1));
+                setZoom((value) => Math.min(100, value + 8));
+              }}>
                 <Icon name="plus" size={16} />
               </Button>
-              <span>{zoom}%</span>
-              <Button className="map-tool" onClick={() => setZoom((value) => Math.max(32, value - 8))}>
+              <span>{googleMapsApiKey ? mapZoomPercent : zoom}%</span>
+              <Button className="map-tool" onClick={() => {
+                if (googleMapsApiKey) setMapZoom((value) => Math.max(15, value - 1));
+                setZoom((value) => Math.max(32, value - 8));
+              }}>
                 <Icon name="minus" size={16} />
               </Button>
             </div>
             <div className="north-indicator">
               <span>N</span>
-              <i />
+              <i style={{ transform: `rotate(${mapHeading}deg)` }} />
             </div>
 
             <div className="object-inspector">
               <div className="inspector-head">
                 <div>
                   <span className="object-tag">VEHÍCULO 01</span>
-                  <b>Nissan Versa 2021</b>
+                  <b>{selectedVehicle.model}</b>
                 </div>
                 <Button className="icon-button subtle" title="Más opciones">
                   <Icon name="more" />
@@ -720,7 +983,7 @@ function App() {
               <div className="inspector-grid">
                 <label>
                   <span>Tipo</span>
-                  <select defaultValue="Automóvil">
+                  <select value={selectedVehicle.type === "truck" ? "Camión" : selectedVehicle.type === "motorcycle" ? "Motocicleta" : "Automóvil"} onChange={(event) => updateVehicle(selectedVehicle.id, { type: event.target.value === "Camión" ? "truck" : event.target.value === "Motocicleta" ? "motorcycle" : "sedan" })}>
                     <option>Automóvil</option>
                     <option>Camión</option>
                     <option>Motocicleta</option>
@@ -729,13 +992,13 @@ function App() {
                 <label>
                   <span>Velocidad</span>
                   <div className="field-with-unit">
-                    <input defaultValue="42" />
+                    <input value={selectedVehicle.speedKmh} onChange={(event) => updateVehicle(selectedVehicle.id, { speedKmh: Number(event.target.value) })} />
                     <i>km/h</i>
                   </div>
                 </label>
                 <label>
                   <span>Dirección</span>
-                  <select defaultValue="Noreste">
+                  <select value={headingLabel(selectedVehicle.heading)} onChange={(event) => setHeadingFromLabel(event.target.value)}>
                     <option>Noreste</option>
                     <option>Norte</option>
                     <option>Este</option>
@@ -744,7 +1007,7 @@ function App() {
                 <label>
                   <span>Frenado</span>
                   <div className="field-with-unit">
-                    <input defaultValue="8.4" />
+                    <input value={selectedVehicle.brakeM} onChange={(event) => updateVehicle(selectedVehicle.id, { brakeM: Number(event.target.value) })} />
                     <i>m</i>
                   </div>
                 </label>
@@ -858,6 +1121,12 @@ function App() {
           </div>
         </section>
 
+        {ribbon === "Elementos" ? (
+          <CatalogPanel
+            onSelect={(item) => setSelectedTool(item.label)}
+            selectedTool={selectedTool}
+          />
+        ) : (
         <aside className="assistant-pane">
           <div className="assistant-header">
             <div className="assistant-identity">
@@ -979,6 +1248,7 @@ function App() {
             <span className="privacy-note">La información se guarda en el expediente EXP-0248</span>
           </div>
         </aside>
+        )}
       </div>
 
       {showDashboard && (
@@ -988,7 +1258,8 @@ function App() {
           </div>
         </div>
       )}
-    </main>
+      </main>
+    </GoogleMapsRuntime>
   );
 }
 
