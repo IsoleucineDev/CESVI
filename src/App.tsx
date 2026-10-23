@@ -229,6 +229,7 @@ function Button({
   disabled,
   onClick,
   onDoubleClick,
+  role,
   title,
 }: {
   children: React.ReactNode;
@@ -236,6 +237,7 @@ function Button({
   disabled?: boolean;
   onClick?: () => void;
   onDoubleClick?: () => void;
+  role?: React.AriaRole;
   title?: string;
 }) {
   return (
@@ -244,6 +246,7 @@ function Button({
       disabled={disabled}
       onClick={onClick}
       onDoubleClick={onDoubleClick}
+      role={role}
       title={title}
       type="button"
     >
