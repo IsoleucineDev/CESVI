@@ -3,6 +3,7 @@ dist/
 build/
 .cache/
 .env*
+*.local
 .vite/
 vite.config.*.timestamp-*
 *.tsbuildinfo
@@ -19,3 +20,7 @@ logs/
 # beside it.
 /.plugins/
 /.opencode-skills/
+
+
+server/.env
+server/node_modules

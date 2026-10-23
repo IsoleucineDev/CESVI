@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import type { LatLngExpression } from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { api, type CaseContext, type Scene } from "./lib/api";
+import { api, type Action, type CaseContext, type Scene } from "./lib/api";
 
 type Theme = "light" | "dark";
 
@@ -398,6 +398,60 @@ function Dashboard({ onClose }: { onClose: () => void }) {
 }
 
 type VehiclePosition = { lat: number; lng: number };
+type VehicleState = {
+  type: string;
+  speed: number;
+  braking: number;
+  position: VehiclePosition;
+  rotation: number;
+};
+type ChatMessage = {
+  role: "user" | "assistant";
+  text: string;
+  quickReplies?: string[];
+};
+type SceneFocus = { lat: number; lng: number; zoom: number };
+
+const headings = [
+  "Norte",
+  "Noreste",
+  "Este",
+  "Sureste",
+  "Sur",
+  "Suroeste",
+  "Oeste",
+  "Noroeste",
+] as const;
+type Heading = (typeof headings)[number];
+
+const headingToRotation: Record<Heading, number> = {
+  Norte: 0,
+  Noreste: 45,
+  Este: 90,
+  Sureste: 135,
+  Sur: 180,
+  Suroeste: 225,
+  Oeste: 270,
+  Noroeste: 315,
+};
+
+function rotationToHeading(rotation: number): Heading {
+  const normalized = ((rotation % 360) + 360) % 360;
+  return headings[Math.round(normalized / 45) % headings.length];
+}
+
+function headingToDegrees(heading: string): number | null {
+  const matchedHeading = headings.find((candidate) => candidate === heading);
+  return matchedHeading ? headingToRotation[matchedHeading] : null;
+}
+
+function MapFocusController({ focus }: { focus: SceneFocus | null }) {
+  const map = useMap();
+  useEffect(() => {
+    if (focus) map.flyTo([focus.lat, focus.lng], focus.zoom);
+  }, [focus, map]);
+  return null;
+}
 
 type VehicleOverlayProps = {
   id: string;
@@ -585,13 +639,25 @@ function App() {
   const [playing, setPlaying] = useState(false);
   const [showDashboard, setShowDashboard] = useState(false);
   const [chatText, setChatText] = useState("");
-  const [messages, setMessages] = useState<string[]>([]);
-  const [vehicleOne, setVehicleOne] = useState<VehiclePosition>({ lat: 19.427, lng: -99.167 });
-  const [vehicleTwo, setVehicleTwo] = useState<VehiclePosition>({ lat: 19.429, lng: -99.164 });
-  const [vehicleOneRotation, setVehicleOneRotation] = useState(38);
-  const [vehicleTwoRotation, setVehicleTwoRotation] = useState(-61);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [vehicleOne, setVehicleOne] = useState<VehicleState>({
+    type: "Automóvil",
+    speed: 42,
+    braking: 8.4,
+    position: { lat: 19.427, lng: -99.167 },
+    rotation: 38,
+  });
+  const [vehicleTwo, setVehicleTwo] = useState<VehicleState>({
+    type: "Camión",
+    speed: 35,
+    braking: 6,
+    position: { lat: 19.429, lng: -99.164 },
+    rotation: -61,
+  });
+  const [sceneFocus, setSceneFocus] = useState<SceneFocus | null>(null);
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [draftName, setDraftName] = useState("");
+  const conversationEndRef = useRef<HTMLDivElement>(null);
   const skipCommit = useRef(false);
   const [theme, setTheme] = useState<Theme>(() => {
     try {
@@ -612,6 +678,10 @@ function App() {
   const totalTime = Math.max(lastIndex, 0) * STEP_SECONDS;
 
   /* ---------- Efectos ---------- */
+  useEffect(() => {
+    conversationEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, assistantLoading]);
+
   useEffect(() => {
     try {
       localStorage.setItem("theme", theme);
@@ -733,32 +803,151 @@ function App() {
     }
   };
 
-  const sendMessage = async () => {
-    if (!chatText.trim() || assistantLoading) return;
-    const message = chatText.trim();
+  const applyActions = (actions: Action[]) => {
+    actions.forEach((action) => {
+      try {
+        switch (action.type) {
+          case "set_speed": {
+            if (!Number.isFinite(action.value) || action.value < 0 || action.value > 250) return;
+            if (action.vehicleId === "vehicle-1") {
+              setVehicleOne((current) => ({ ...current, speed: action.value }));
+            } else if (action.vehicleId === "vehicle-2") {
+              setVehicleTwo((current) => ({ ...current, speed: action.value }));
+            }
+            return;
+          }
+          case "set_braking": {
+            if (!Number.isFinite(action.value) || action.value < 0) return;
+            if (action.vehicleId === "vehicle-1") {
+              setVehicleOne((current) => ({ ...current, braking: action.value }));
+            } else if (action.vehicleId === "vehicle-2") {
+              setVehicleTwo((current) => ({ ...current, braking: action.value }));
+            }
+            return;
+          }
+          case "rotate_element": {
+            const rotation = headingToDegrees(action.heading);
+            if (rotation === null) return;
+            if (action.vehicleId === "vehicle-1") {
+              setVehicleOne((current) => ({ ...current, rotation }));
+            } else if (action.vehicleId === "vehicle-2") {
+              setVehicleTwo((current) => ({ ...current, rotation }));
+            }
+            return;
+          }
+          case "move_vehicle": {
+            if (
+              !Number.isFinite(action.lat) ||
+              !Number.isFinite(action.lng) ||
+              action.lat < -90 ||
+              action.lat > 90 ||
+              action.lng < -180 ||
+              action.lng > 180
+            ) {
+              return;
+            }
+            const position = { lat: action.lat, lng: action.lng };
+            if (action.vehicleId === "vehicle-1") {
+              setVehicleOne((current) => ({ ...current, position }));
+            } else if (action.vehicleId === "vehicle-2") {
+              setVehicleTwo((current) => ({ ...current, position }));
+            }
+            return;
+          }
+          case "focus_scene_area":
+            if (
+              Number.isFinite(action.lat) &&
+              Number.isFinite(action.lng) &&
+              Number.isFinite(action.zoom) &&
+              action.lat >= -90 &&
+              action.lat <= 90 &&
+              action.lng >= -180 &&
+              action.lng <= 180 &&
+              action.zoom >= 0 &&
+              action.zoom <= 22
+            ) {
+              setSceneFocus({ lat: action.lat, lng: action.lng, zoom: action.zoom });
+            }
+            return;
+        }
+      } catch {
+        // Una acción defectuosa no debe impedir aplicar las siguientes.
+      }
+    });
+  };
+
+  const sendMessage = async (text = chatText.trim()) => {
+    if (!text || assistantLoading) return;
     setChatText("");
-    setMessages((current) => [...current, message, ""]);
+    setMessages((current) => [
+      ...current,
+      { role: "user", text },
+      { role: "assistant", text: "" },
+    ]);
     setAssistantLoading(true);
     try {
-      await api.sendAssistantMessage(
-        message,
+      const response = await api.sendAssistantMessage(
+        text,
         {
           case: caseContext,
-          scene: frames[selectedFrame],
+          vehicles: [
+            {
+              id: "vehicle-1",
+              type: vehicleOne.type,
+              speed: vehicleOne.speed,
+              braking: vehicleOne.braking,
+              heading: rotationToHeading(vehicleOne.rotation),
+              position: vehicleOne.position,
+            },
+            {
+              id: "vehicle-2",
+              type: vehicleTwo.type,
+              speed: vehicleTwo.speed,
+              braking: vehicleTwo.braking,
+              heading: rotationToHeading(vehicleTwo.rotation),
+              position: vehicleTwo.position,
+            },
+          ],
+          frame: frames[selectedFrame],
           selectedTool,
           selectedFrame,
         },
         (token) => {
           setMessages((current) => {
             const next = [...current];
-            next[next.length - 1] = `${next[next.length - 1]}${token}`;
+            const lastMessage = next[next.length - 1];
+            if (lastMessage?.role === "assistant") {
+              next[next.length - 1] = { ...lastMessage, text: `${lastMessage.text}${token}` };
+            }
             return next;
           });
         },
+        true,
       );
+      applyActions(response.actions);
+      setMessages((current) => {
+        const next = [...current];
+        const lastMessage = next[next.length - 1];
+        if (lastMessage?.role === "assistant") {
+          next[next.length - 1] = {
+            ...lastMessage,
+            text: response.answer,
+            quickReplies: response.quickReplies,
+          };
+        }
+        return next;
+      });
     } catch (error: unknown) {
-      setMessages((current) => current.slice(0, -1));
-      setDataError(error instanceof Error ? error.message : "No se pudo contactar al asistente");
+      const errorMessage =
+        error instanceof Error ? error.message : "No se pudo contactar al asistente";
+      setMessages((current) => {
+        const next = [...current];
+        const lastMessage = next[next.length - 1];
+        if (lastMessage?.role === "assistant") {
+          next[next.length - 1] = { ...lastMessage, text: `Error: ${errorMessage}` };
+        }
+        return next;
+      });
     } finally {
       setAssistantLoading(false);
     }
@@ -914,27 +1103,36 @@ function App() {
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               <VehicleOverlay
                 id="vehicle-1"
                 label="V1"
-                onPositionChange={setVehicleOne}
-                onRotationChange={setVehicleOneRotation}
-                position={vehicleOne}
-                rotation={vehicleOneRotation}
+                onPositionChange={(position) =>
+                  setVehicleOne((current) => ({ ...current, position }))
+                }
+                onRotationChange={(rotation) =>
+                  setVehicleOne((current) => ({ ...current, rotation }))
+                }
+                position={vehicleOne.position}
+                rotation={vehicleOne.rotation}
                 selected
                 color="#d8e0e3"
               />
               <VehicleOverlay
                 id="vehicle-2"
                 label="V2"
-                onPositionChange={setVehicleTwo}
-                onRotationChange={setVehicleTwoRotation}
-                position={vehicleTwo}
-                rotation={vehicleTwoRotation}
+                onPositionChange={(position) =>
+                  setVehicleTwo((current) => ({ ...current, position }))
+                }
+                onRotationChange={(rotation) =>
+                  setVehicleTwo((current) => ({ ...current, rotation }))
+                }
+                position={vehicleTwo.position}
+                rotation={vehicleTwo.rotation}
                 color="#d4965b"
               />
+              <MapFocusController focus={sceneFocus} />
               <MapToolbar />
 
               <div className="object-inspector">
@@ -950,7 +1148,12 @@ function App() {
               <div className="inspector-grid">
                 <label>
                   <span>Tipo</span>
-                  <select defaultValue="Automóvil">
+                  <select
+                    onChange={(event) =>
+                      setVehicleOne((current) => ({ ...current, type: event.target.value }))
+                    }
+                    value={vehicleOne.type}
+                  >
                     <option>Automóvil</option>
                     <option>Camión</option>
                     <option>Motocicleta</option>
@@ -959,22 +1162,51 @@ function App() {
                 <label>
                   <span>Velocidad</span>
                   <div className="field-with-unit">
-                    <input defaultValue="42" />
+                    <input
+                      max="250"
+                      min="0"
+                      onChange={(event) =>
+                        setVehicleOne((current) => ({
+                          ...current,
+                          speed: Number(event.target.value),
+                        }))
+                      }
+                      type="number"
+                      value={vehicleOne.speed}
+                    />
                     <i>km/h</i>
                   </div>
                 </label>
                 <label>
                   <span>Dirección</span>
-                  <select defaultValue="Noreste">
-                    <option>Noreste</option>
-                    <option>Norte</option>
-                    <option>Este</option>
+                  <select
+                    onChange={(event) => {
+                      const rotation = headingToDegrees(event.target.value);
+                      if (rotation !== null) {
+                        setVehicleOne((current) => ({ ...current, rotation }));
+                      }
+                    }}
+                    value={rotationToHeading(vehicleOne.rotation)}
+                  >
+                    {headings.map((heading) => (
+                      <option key={heading}>{heading}</option>
+                    ))}
                   </select>
                 </label>
                 <label>
                   <span>Frenado</span>
                   <div className="field-with-unit">
-                    <input defaultValue="8.4" />
+                    <input
+                      min="0"
+                      onChange={(event) =>
+                        setVehicleOne((current) => ({
+                          ...current,
+                          braking: Number(event.target.value),
+                        }))
+                      }
+                      type="number"
+                      value={vehicleOne.braking}
+                    />
                     <i>m</i>
                   </div>
                 </label>
@@ -1129,33 +1361,6 @@ function App() {
               <b>DINÁMICA DEL SINIESTRO</b>
               <span />
             </div>
-            <div className="assistant-message">
-              <div className="message-avatar">
-                <Icon name="sparkle" size={15} />
-              </div>
-              <div className="message-bubble">
-                <p>
-                  Ya tenemos los dos vehículos ubicados. Ahora vamos a documentar el momento del
-                  impacto.
-                </p>
-                <p>
-                  ¿Cuál era la velocidad estimada del <b>Vehículo 01</b> antes de iniciar el frenado?
-                </p>
-                <span>10:42</span>
-              </div>
-            </div>
-            <div className="quick-options">
-              <Button onClick={() => setChatText("Entre 40 y 50 km/h")}>Entre 40 y 50 km/h</Button>
-              <Button onClick={() => setChatText("No se pudo determinar")}>No se pudo determinar</Button>
-            </div>
-            {messages.map((message, index) => (
-              <div className="user-message" key={`${message}-${index}`}>
-                <div className="message-bubble">
-                  <p>{message}</p>
-                  <span>Ahora</span>
-                </div>
-              </div>
-            ))}
             <div className="context-card">
               <div className="context-head">
                 <span>
@@ -1163,17 +1368,17 @@ function App() {
                 </span>
                 <div>
                   <b>Vehículo 01</b>
-                  <small>Elemento seleccionado en el mapa</small>
+                  <small>{vehicleOne.type} · Elemento seleccionado en el mapa</small>
                 </div>
               </div>
               <div className="context-stats">
                 <div>
                   <span>Velocidad</span>
-                  <b>42 km/h</b>
+                  <b>{vehicleOne.speed} km/h</b>
                 </div>
                 <div>
                   <span>Trayectoria</span>
-                  <b>Noreste</b>
+                  <b>{rotationToHeading(vehicleOne.rotation)}</b>
                 </div>
                 <div>
                   <span>Confianza</span>
@@ -1181,6 +1386,36 @@ function App() {
                 </div>
               </div>
             </div>
+            {messages.map((message, index) => (
+              <div key={`${message.role}-${index}`}>
+                <div className={message.role === "assistant" ? "assistant-message" : "user-message"}>
+                  {message.role === "assistant" && (
+                    <div className="message-avatar">
+                      <Icon name="sparkle" size={15} />
+                    </div>
+                  )}
+                  <div className="message-bubble">
+                    <p>
+                      {message.text ||
+                        (assistantLoading && index === messages.length - 1 ? "Escribiendo..." : "")}
+                    </p>
+                    <span>Ahora</span>
+                  </div>
+                </div>
+                {index === messages.length - 1 &&
+                  message.role === "assistant" &&
+                  Boolean(message.quickReplies?.length) && (
+                    <div className="quick-options">
+                      {message.quickReplies?.map((reply) => (
+                        <Button key={reply} onClick={() => void sendMessage(reply)}>
+                          {reply}
+                        </Button>
+                      ))}
+                    </div>
+                  )}
+              </div>
+            ))}
+            <div ref={conversationEndRef} />
           </div>
 
           <div className="chat-composer">
@@ -1191,7 +1426,7 @@ function App() {
                 onKeyDown={(event) => {
                   if (event.key === "Enter" && !event.shiftKey) {
                     event.preventDefault();
-                    sendMessage();
+                    void sendMessage();
                   }
                 }}
                 placeholder="Escribe un dato, observación o instrucción..."
@@ -1202,7 +1437,12 @@ function App() {
                   <Icon name="plus" size={17} />
                   Adjuntar evidencia
                 </Button>
-                <Button className="send-button" onClick={sendMessage} title="Enviar">
+                <Button
+                  className="send-button"
+                  disabled={assistantLoading || !chatText.trim()}
+                  onClick={() => void sendMessage()}
+                  title="Enviar"
+                >
                   <Icon name="send" size={17} />
                 </Button>
               </div>
