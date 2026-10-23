@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { ArrowRight, Search, Sparkles } from "lucide-react";
 
 type Theme = "light" | "dark";
 
 type IconName =
   | "arrow"
   | "back"
+  | "box"
   | "car"
   | "chevron"
   | "clock"
@@ -12,8 +14,10 @@ type IconName =
   | "dashboard"
   | "delete"
   | "download"
+  | "droplet"
   | "edit"
   | "first"
+  | "glass"
   | "last"
   | "layers"
   | "map"
@@ -28,6 +32,7 @@ type IconName =
   | "play"
   | "plus"
   | "redo"
+  | "route"
   | "search"
   | "send"
   | "settings"
@@ -36,6 +41,7 @@ type IconName =
   | "sun"
   | "tree"
   | "truck"
+  | "tractor"
   | "undo"
   | "wall"
   | "warning";
@@ -52,6 +58,12 @@ const formatTime = (seconds: number) => {
 const iconPaths: Record<IconName, React.ReactNode> = {
   arrow: <path d="m9 18 6-6-6-6" />,
   back: <path d="m15 18-6-6 6-6" />,
+  box: (
+    <>
+      <path d="m4 7 8-4 8 4-8 4-8-4Z" />
+      <path d="M4 7v10l8 4 8-4V7M12 11v10" />
+    </>
+  ),
   car: (
     <>
       <path d="m5 17-1 2v1h2l1-2h10l1 2h2v-1l-1-2" />
@@ -84,8 +96,10 @@ const iconPaths: Record<IconName, React.ReactNode> = {
       <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16" />
     </>
   ),
+  droplet: <path d="M12 3s6 6.2 6 11a6 6 0 0 1-12 0c0-4.8 6-11 6-11Z" />,
   edit: <path d="M4 20h4L19 9l-4-4L4 16v4ZM13.5 6.5l4 4" />,
   first: <path d="M6 5v14M18 6l-8 6 8 6V6Z" />,
+  glass: <path d="M5 4h14M7 4l1 13a4 4 0 0 0 8 0l1-13M8 12h8M12 17v4M9 21h6" />,
   last: <path d="M18 5v14M6 6l8 6-8 6V6Z" />,
   layers: (
     <>
@@ -143,6 +157,7 @@ const iconPaths: Record<IconName, React.ReactNode> = {
   play: <path d="m9 7 9 5-9 5V7Z" />,
   plus: <path d="M12 5v14M5 12h14" />,
   redo: <path d="M20 8h-7a6 6 0 0 0-6 6v2m13-8-3-3m3 3-3 3" />,
+  route: <path d="M5 4h.01M19 20h.01M5 4c0 8 14 4 14 12M5 20c0-5 5-5 9-5h5" />,
   search: (
     <>
       <circle cx="10.5" cy="10.5" r="6.5" />
@@ -174,6 +189,13 @@ const iconPaths: Record<IconName, React.ReactNode> = {
       <path d="M3 7h11v10H3zM14 11h4l3 3v3h-7z" />
       <circle cx="7" cy="18" r="2" />
       <circle cx="18" cy="18" r="2" />
+    </>
+  ),
+  tractor: (
+    <>
+      <path d="M4 15h10l2-6h3l2 6v3H4v-3ZM9 15V6h5l2 3" />
+      <circle cx="8" cy="18" r="3" />
+      <circle cx="19" cy="18" r="2" />
     </>
   ),
   undo: <path d="M4 8h7a6 6 0 0 1 6 6v2M4 8l3-3M4 8l3 3" />,
@@ -389,6 +411,106 @@ function Dashboard({ onClose }: { onClose: () => void }) {
         Nuevo expediente
       </Button>
     </div>
+  );
+}
+
+type CatalogTab = "objects" | "evidence" | "vehicles";
+type CatalogItem = {
+  id: string;
+  label: string;
+  group: string;
+  detail: string;
+  icon: IconName;
+  tone: "infrastructure" | "biological" | "physical" | "vehicle";
+  defaults: string;
+};
+
+const catalogItems: CatalogItem[] = [
+  { id: "road-infrastructure", label: "Infraestructura vial fija", group: "Objetos duros o rígidos", detail: "Muros, guardarraíles, barreras, señales, postes, pilares, perfiles, hitos, bordillos y edificios.", icon: "wall", tone: "infrastructure", defaults: "Material: acero · μ: 0,60" },
+  { id: "natural-object", label: "Naturales y desprendidos", group: "Objetos duros o rígidos", detail: "Árboles, rocas, vigas, troncos y neumáticos abandonados.", icon: "tree", tone: "infrastructure", defaults: "Masa: 80 kg · μ: 0,70" },
+  { id: "static-vehicle", label: "Vehículos estáticos", group: "Objetos duros o rígidos", detail: "Vehículos estacionados, detenidos o abandonados en calzada o arcén.", icon: "car", tone: "vehicle", defaults: "Masa: 1.400 kg · μ: 0,75" },
+  { id: "human-body", label: "Cuerpos humanos", group: "Objetos o cuerpos blandos", detail: "Peatones, ciclistas, motociclistas u ocupantes de vehículos.", icon: "person", tone: "biological", defaults: "Masa: 75 kg · μ: 0,50" },
+  { id: "animal-body", label: "Cuerpos animales", group: "Objetos o cuerpos blandos", detail: "Fauna silvestre o ganado.", icon: "paw", tone: "biological", defaults: "Masa: 60 kg · μ: 0,45" },
+  { id: "blood", label: "Sangre", group: "Evidencia biológica", detail: "Manchas, proyecciones y patrones de sangre.", icon: "droplet", tone: "biological", defaults: "Estado: líquido · Registro fotográfico" },
+  { id: "tissues", label: "Tejidos y restos corporales", group: "Evidencia biológica", detail: "Restos orgánicos y tejidos separados del cuerpo.", icon: "person", tone: "biological", defaults: "Estado: sólido · Muestra etiquetada" },
+  { id: "tire-tracks", label: "Huellas de neumático", group: "Evidencia física", detail: "Marcas de frenado, arrastre, derrape, aceleración o rodadura.", icon: "route", tone: "physical", defaults: "μ: 0,70 · Longitud: 8 m" },
+  { id: "pavement-traces", label: "Marcas y trazas de pavimento", group: "Evidencia física", detail: "Arañazos, rozaduras, surcos, excavaciones y baches.", icon: "warning", tone: "physical", defaults: "Profundidad: 0,02 m · Superficie" },
+  { id: "fragments", label: "Fragmentos y autopartes", group: "Evidencia física", detail: "Plásticos, fibras, molduras, parachoques y piezas mecánicas.", icon: "box", tone: "physical", defaults: "Masa: 2 kg · Origen: por identificar" },
+  { id: "glass", label: "Vidrios y restos de ventanas", group: "Evidencia física", detail: "Dispersión de vidrio laminado o templado de parabrisas, lunas o faros.", icon: "glass", tone: "physical", defaults: "Tipo: templado · Dispersión: 4 m" },
+  { id: "fluids", label: "Fluidos y aceites", group: "Evidencia física", detail: "Aceite motor, líquido de frenos, refrigerante o combustible.", icon: "droplet", tone: "physical", defaults: "Tipo: combustible · Área: 2,4 m²" },
+  { id: "sedan", label: "Sedán / Saloon", group: "Turismos y ligeros", detail: "Turismo de tres volúmenes.", icon: "car", tone: "vehicle", defaults: "Masa: 1.400 kg · Dim.: 4,5 × 1,8 m" },
+  { id: "coupe", label: "Coupé", group: "Turismos y ligeros", detail: "Turismo de dos puertas.", icon: "car", tone: "vehicle", defaults: "Masa: 1.350 kg · Dim.: 4,4 × 1,9 m" },
+  { id: "utility", label: "Utility / Micro", group: "Turismos y ligeros", detail: "Vehículo compacto y utilitario.", icon: "car", tone: "vehicle", defaults: "Masa: 950 kg · Dim.: 3,7 × 1,7 m" },
+  { id: "mpv-suv", label: "MPV / SUV / 4x4", group: "Turismos y ligeros", detail: "Monovolumen, todoterreno o SUV.", icon: "car", tone: "vehicle", defaults: "Masa: 1.900 kg · μ: 0,78" },
+  { id: "commercial", label: "Vans y pick-ups", group: "Comerciales, industriales y carga", detail: "Vehículos comerciales ligeros.", icon: "truck", tone: "vehicle", defaults: "Masa: 2.400 kg · Dim.: 5,4 × 2,0 m" },
+  { id: "truck", label: "Camiones rígidos", group: "Comerciales, industriales y carga", detail: "Configuraciones 4x2, 6x4, 8x4 y similares.", icon: "truck", tone: "vehicle", defaults: "Masa: 12.000 kg · μ: 0,65" },
+  { id: "trailer", label: "Tractora / Remolque", group: "Comerciales, industriales y carga", detail: "Tractocamiones, trenes de carretera, remolques y semirremolques.", icon: "truck", tone: "vehicle", defaults: "Masa: 32.000 kg · Dim.: 16,5 m" },
+  { id: "bus", label: "Minibús / Autobús", group: "Transporte de pasajeros", detail: "Autobús estándar, urbano, autocar o articulado.", icon: "truck", tone: "vehicle", defaults: "Masa: 11.000 kg · Ocupantes: 45" },
+  { id: "motorcycle", label: "Motocicleta / Ciclomotor", group: "Motocicletas y ciclomotores", detail: "Carretera (touring, sport, custom), off-road (motocross, enduro), trail, scooter y ciclomotor.", icon: "motorcycle", tone: "vehicle", defaults: "Masa: 210 kg · μ: 0,80" },
+  { id: "other-vehicle", label: "Maquinaria y otros vehículos", group: "Otros vehículos", detail: "Maquinaria agrícola o de obras, bicicletas y carros de tracción animal.", icon: "tractor", tone: "vehicle", defaults: "Masa: 500 kg · μ: 0,60" },
+];
+
+function CatalogPanel({
+  selectedTool,
+  onSelect,
+}: {
+  selectedTool: string;
+  onSelect: (item: CatalogItem) => void;
+}) {
+  const [tab, setTab] = useState<CatalogTab>("objects");
+  const [query, setQuery] = useState("");
+  const tabItems = catalogItems.filter((item) => {
+    if (tab === "objects") return item.id.includes("body") || item.id.includes("object") || item.id === "road-infrastructure" || item.id === "static-vehicle";
+    if (tab === "evidence") return item.group.startsWith("Evidencia");
+    return item.tone === "vehicle" && !["static-vehicle"].includes(item.id);
+  });
+  const filtered = tabItems.filter((item) => `${item.label} ${item.group} ${item.detail}`.toLowerCase().includes(query.toLowerCase()));
+  const groups = [...new Set(filtered.map((item) => item.group))];
+
+  return (
+    <aside className="catalog-pane">
+      <div className="catalog-header">
+        <div>
+          <span className="eyebrow">BIBLIOTECA DE ESCENA</span>
+          <h2>Elementos y evidencias</h2>
+          <p>Arrastra o selecciona una plantilla para inyectarla en la escena.</p>
+        </div>
+        <span className="catalog-count">{filtered.length}</span>
+      </div>
+      <div className="catalog-tabs" role="tablist" aria-label="Categorías del catálogo">
+        {([
+          ["objects", "Objetos", "wall"],
+          ["evidence", "Evidencia", "droplet"],
+          ["vehicles", "Vehículos", "car"],
+        ] as const).map(([value, label, icon]) => (
+          <Button className={`catalog-tab ${tab === value ? "is-active" : ""}`} key={value} onClick={() => setTab(value)} role="tab">
+            <Icon name={icon} size={16} />
+            {label}
+          </Button>
+        ))}
+      </div>
+      <label className="catalog-search">
+        <Search aria-hidden="true" className="icon" size={16} />
+        <input aria-label="Buscar en el catálogo" onChange={(event) => setQuery(event.target.value)} placeholder="Buscar elemento..." value={query} />
+        <kbd>⌘K</kbd>
+      </label>
+      <div className="catalog-list">
+        {groups.map((group) => (
+          <section className="catalog-group" key={group}>
+            <div className="catalog-group-title">{group}</div>
+            {filtered.filter((item) => item.group === group).map((item) => (
+              <Button className={`catalog-item ${selectedTool === item.label ? "is-selected" : ""}`} key={item.id} onClick={() => onSelect(item)}>
+                <span className={`catalog-icon tone-${item.tone}`}><Icon name={item.icon} size={19} /></span>
+                <span className="catalog-item-copy"><b>{item.label}</b><small>{item.detail}</small><em>{item.defaults}</em></span>
+                <ArrowRight aria-hidden="true" className="icon" size={15} />
+              </Button>
+            ))}
+          </section>
+        ))}
+        {filtered.length === 0 && <div className="catalog-empty"><Search aria-hidden="true" className="icon" size={22} /><b>Sin resultados</b><span>Prueba con otro término.</span></div>}
+      </div>
+      <div className="catalog-footer"><Sparkles aria-hidden="true" className="icon" size={15} /><span>Las propiedades base quedan listas para cálculo físico.</span></div>
+    </aside>
   );
 }
 
@@ -858,6 +980,12 @@ function App() {
           </div>
         </section>
 
+        {ribbon === "Elementos" ? (
+          <CatalogPanel
+            onSelect={(item) => setSelectedTool(item.label)}
+            selectedTool={selectedTool}
+          />
+        ) : (
         <aside className="assistant-pane">
           <div className="assistant-header">
             <div className="assistant-identity">
@@ -979,6 +1107,7 @@ function App() {
             <span className="privacy-note">La información se guarda en el expediente EXP-0248</span>
           </div>
         </aside>
+        )}
       </div>
 
       {showDashboard && (
