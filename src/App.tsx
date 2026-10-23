@@ -1,5 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, Search, Sparkles } from "lucide-react";
+import GoogleMapCanvas, {
+  GoogleMapsRuntime,
+  LocationAutocomplete,
+  type Vehicle,
+} from "./components/GoogleMapCanvas";
+import VehicleIcon from "./components/VehicleIcon";
 
 type Theme = "light" | "dark";
 
@@ -527,6 +533,16 @@ function App() {
   const [chatText, setChatText] = useState("");
   const [messages, setMessages] = useState<string[]>([]);
   const [zoom, setZoom] = useState(72);
+  const [mapZoom, setMapZoom] = useState(19);
+  const [mapHeading, setMapHeading] = useState(0);
+  const [address, setAddress] = useState("Av. Paseo de la Reforma 222, Ciudad de México");
+  const [locationQuery, setLocationQuery] = useState("Av. Paseo de la Reforma 222, Ciudad de México");
+  const [interactionMode, setInteractionMode] = useState<"select" | "move">("select");
+  const [selectedVehicleId, setSelectedVehicleId] = useState("v1");
+  const [vehicles, setVehicles] = useState<Vehicle[]>([
+    { id: "v1", type: "sedan", color: "#72a7ff", label: "V1", lat: 19.4276, lng: -99.1672, heading: 45, speedKmh: 42, brakeM: 8.4, model: "Nissan Versa 2021" },
+    { id: "v2", type: "suv", color: "#f2a65a", label: "V2", lat: 19.4267, lng: -99.1663, heading: 270, speedKmh: 28, brakeM: 5.6, model: "Ford Escape 2020" },
+  ]);
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [draftName, setDraftName] = useState("");
   const skipCommit = useRef(false);
@@ -537,6 +553,9 @@ function App() {
       return "light";
     }
   });
+  const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? "";
+  const googleMapId = import.meta.env.VITE_GOOGLE_MAP_ID || "DEMO_MAP_ID";
+  const selectedVehicle = vehicles.find((vehicle) => vehicle.id === selectedVehicleId) ?? vehicles[0];
 
   const activeSections = ribbonGroups[ribbon] ?? [];
   const stepLabel = useMemo(() => `${selectedFrame + 1} / ${frames.length}`, [selectedFrame, frames]);
@@ -622,8 +641,25 @@ function App() {
     setChatText("");
   };
 
+  const updateVehicle = (id: string, update: Partial<Vehicle>) => {
+    setVehicles((current) => current.map((vehicle) => (vehicle.id === id ? { ...vehicle, ...update } : vehicle)));
+  };
+
+  const headingLabel = (heading: number) => {
+    const labels = ["Norte", "Noreste", "Este", "Sureste", "Sur", "Suroeste", "Oeste", "Noroeste"];
+    return labels[Math.round((heading % 360) / 45) % 8];
+  };
+
+  const setHeadingFromLabel = (label: string) => {
+    const labels: Record<string, number> = { Norte: 0, Noreste: 45, Este: 90, Sureste: 135, Sur: 180, Suroeste: 225, Oeste: 270, Noroeste: 315 };
+    updateVehicle(selectedVehicle.id, { heading: labels[label] ?? 0 });
+  };
+
+  const mapZoomPercent = Math.round(Math.min(100, Math.max(0, ((mapZoom - 15) / 6) * 100)));
+
   return (
-    <main className="app-shell" data-theme={theme}>
+    <GoogleMapsRuntime apiKey={googleMapsApiKey}>
+      <main className="app-shell" data-theme={theme}>
       <header className="titlebar">
         <div className="brand-area">
           <Button
@@ -683,10 +719,30 @@ function App() {
           <div className="ribbon-group-body">
             <label className="search-field">
               <Icon name="search" size={17} />
-              <input aria-label="Buscar ubicación" defaultValue="Av. Paseo de la Reforma 222" />
+              {googleMapsApiKey ? (
+                <LocationAutocomplete
+                  apiKey={googleMapsApiKey}
+                  onChange={setLocationQuery}
+                  onPlaceSelect={(value) => {
+                    setLocationQuery(value);
+                    setAddress(value);
+                  }}
+                  value={locationQuery}
+                />
+              ) : (
+                <input
+                  aria-label="Buscar ubicación"
+                  onChange={(event) => setLocationQuery(event.target.value)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") setAddress(event.currentTarget.value);
+                  }}
+                  value={locationQuery}
+                />
+              )}
               <kbd>↵</kbd>
             </label>
             <span className="maps-note">Datos cartográficos</span>
+            {!googleMapsApiKey && <span className="maps-fallback-note">Configura VITE_GOOGLE_MAPS_API_KEY para usar Google Maps</span>}
           </div>
           <span className="ribbon-group-label">Ubicación</span>
         </div>
@@ -762,56 +818,72 @@ function App() {
           </div>
 
           <div className="map-canvas">
-            <div className="map-block block-a" />
-            <div className="map-block block-b" />
-            <div className="map-block block-c" />
-            <div className="map-block block-d" />
-            <div className="map-park park-a">
-              <span />
-              <span />
-              <span />
-            </div>
-            <svg className="roads" preserveAspectRatio="none" viewBox="0 0 1000 560">
-              <path className="road-outer" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
-              <path className="road-inner" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
-              <path className="road-line" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
-              <path className="cross-road-outer" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
-              <path className="cross-road-inner" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
-              <path className="cross-road-line" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
-            </svg>
-            <div className="street-label street-one">PASEO DE LA REFORMA</div>
-            <div className="street-label street-two">AV. INSURGENTES</div>
-            <div className="poi poi-one">
-              <span>M</span>
-              Estación Reforma
-            </div>
-            <div className="poi poi-two">
-              <span>+</span>
-              Centro Médico
-            </div>
-            <div className="map-vehicle vehicle-a selected-object">
-              <Icon name="car" size={27} />
-              <span className="direction-line" />
-              <b>V1</b>
-            </div>
-            <div className="map-vehicle vehicle-b">
-              <Icon name="car" size={27} />
-              <b>V2</b>
-            </div>
-            <div className="impact-marker">
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-            <div className="evidence-marker evidence-one">E1</div>
-            <div className="evidence-marker evidence-two">E2</div>
+            {googleMapsApiKey ? (
+              <GoogleMapCanvas
+                address={address}
+                apiKey={googleMapsApiKey}
+                interactionMode={interactionMode}
+                mapId={googleMapId}
+                onHeadingChange={setMapHeading}
+                onSelectVehicle={setSelectedVehicleId}
+                onVehicleMove={(id, lat, lng) => updateVehicle(id, { lat, lng })}
+                onZoomChange={setMapZoom}
+                selectedVehicleId={selectedVehicleId}
+                theme={theme}
+                vehicles={vehicles}
+                zoom={mapZoom}
+              />
+            ) : (
+              <>
+                <div className="map-block block-a" />
+                <div className="map-block block-b" />
+                <div className="map-block block-c" />
+                <div className="map-block block-d" />
+                <div className="map-park park-a">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <svg className="roads" preserveAspectRatio="none" viewBox="0 0 1000 560">
+                  <path className="road-outer" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
+                  <path className="road-inner" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
+                  <path className="road-line" d="M-30 470C160 390 240 300 408 260S660 230 1030 24" />
+                  <path className="cross-road-outer" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
+                  <path className="cross-road-inner" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
+                  <path className="cross-road-line" d="M245-30c-5 170 35 260 150 350s200 120 260 270" />
+                </svg>
+                <div className="street-label street-one">PASEO DE LA REFORMA</div>
+                <div className="street-label street-two">AV. INSURGENTES</div>
+                <div className="poi poi-one">
+                  <span>M</span>
+                  Estación Reforma
+                </div>
+                <div className="poi poi-two">
+                  <span>+</span>
+                  Centro Médico
+                </div>
+                <div className="map-vehicle vehicle-a selected-object" onClick={() => setSelectedVehicleId("v1")}>
+                  <VehicleIcon color={vehicles[0].color} heading={vehicles[0].heading} label="V1" lengthPx={90} selected={selectedVehicleId === "v1"} type={vehicles[0].type} />
+                </div>
+                <div className="map-vehicle vehicle-b" onClick={() => setSelectedVehicleId("v2")}>
+                  <VehicleIcon color={vehicles[1].color} heading={vehicles[1].heading} label="V2" lengthPx={84} selected={selectedVehicleId === "v2"} type={vehicles[1].type} />
+                </div>
+                <div className="impact-marker">
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="evidence-marker evidence-one">E1</div>
+                <div className="evidence-marker evidence-two">E2</div>
+              </>
+            )}
 
             <div className="map-toolbar">
-              <Button className="map-tool is-active" title="Seleccionar">
+              <Button className={`map-tool ${interactionMode === "select" ? "is-active" : ""}`} onClick={() => setInteractionMode("select")} title="Seleccionar">
                 <span className="cursor-arrow">↖</span>
               </Button>
-              <Button className="map-tool" title="Mover mapa">
+              <Button className={`map-tool ${interactionMode === "move" ? "is-active" : ""}`} onClick={() => setInteractionMode("move")} title="Mover mapa">
                 <Icon name="map" size={17} />
               </Button>
               <Button className="map-tool" title="Medir">
@@ -819,24 +891,30 @@ function App() {
               </Button>
             </div>
             <div className="zoom-controls">
-              <Button className="map-tool" onClick={() => setZoom((value) => Math.min(100, value + 8))}>
+              <Button className="map-tool" onClick={() => {
+                if (googleMapsApiKey) setMapZoom((value) => Math.min(21, value + 1));
+                setZoom((value) => Math.min(100, value + 8));
+              }}>
                 <Icon name="plus" size={16} />
               </Button>
-              <span>{zoom}%</span>
-              <Button className="map-tool" onClick={() => setZoom((value) => Math.max(32, value - 8))}>
+              <span>{googleMapsApiKey ? mapZoomPercent : zoom}%</span>
+              <Button className="map-tool" onClick={() => {
+                if (googleMapsApiKey) setMapZoom((value) => Math.max(15, value - 1));
+                setZoom((value) => Math.max(32, value - 8));
+              }}>
                 <Icon name="minus" size={16} />
               </Button>
             </div>
             <div className="north-indicator">
               <span>N</span>
-              <i />
+              <i style={{ transform: `rotate(${mapHeading}deg)` }} />
             </div>
 
             <div className="object-inspector">
               <div className="inspector-head">
                 <div>
                   <span className="object-tag">VEHÍCULO 01</span>
-                  <b>Nissan Versa 2021</b>
+                  <b>{selectedVehicle.model}</b>
                 </div>
                 <Button className="icon-button subtle" title="Más opciones">
                   <Icon name="more" />
@@ -845,7 +923,7 @@ function App() {
               <div className="inspector-grid">
                 <label>
                   <span>Tipo</span>
-                  <select defaultValue="Automóvil">
+                  <select value={selectedVehicle.type === "truck" ? "Camión" : selectedVehicle.type === "motorcycle" ? "Motocicleta" : "Automóvil"} onChange={(event) => updateVehicle(selectedVehicle.id, { type: event.target.value === "Camión" ? "truck" : event.target.value === "Motocicleta" ? "motorcycle" : "sedan" })}>
                     <option>Automóvil</option>
                     <option>Camión</option>
                     <option>Motocicleta</option>
@@ -854,13 +932,13 @@ function App() {
                 <label>
                   <span>Velocidad</span>
                   <div className="field-with-unit">
-                    <input defaultValue="42" />
+                    <input value={selectedVehicle.speedKmh} onChange={(event) => updateVehicle(selectedVehicle.id, { speedKmh: Number(event.target.value) })} />
                     <i>km/h</i>
                   </div>
                 </label>
                 <label>
                   <span>Dirección</span>
-                  <select defaultValue="Noreste">
+                  <select value={headingLabel(selectedVehicle.heading)} onChange={(event) => setHeadingFromLabel(event.target.value)}>
                     <option>Noreste</option>
                     <option>Norte</option>
                     <option>Este</option>
@@ -869,7 +947,7 @@ function App() {
                 <label>
                   <span>Frenado</span>
                   <div className="field-with-unit">
-                    <input defaultValue="8.4" />
+                    <input value={selectedVehicle.brakeM} onChange={(event) => updateVehicle(selectedVehicle.id, { brakeM: Number(event.target.value) })} />
                     <i>m</i>
                   </div>
                 </label>
@@ -1120,7 +1198,8 @@ function App() {
           </div>
         </div>
       )}
-    </main>
+      </main>
+    </GoogleMapsRuntime>
   );
 }
 
