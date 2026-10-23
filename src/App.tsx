@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useRef, useState } from "react"
 import { api, type CaseContext, type Scene } from "./lib/api"
-import { MapContainer, TileLayer, useMap } from "react-leaflet"
+import { MapContainer, TileLayer, useMap, useMapEvents } from "react-leaflet"
+import type { LatLngExpression, Map as LeafletMap } from "leaflet"
 import "leaflet/dist/leaflet.css"
 
 type LocationSuggestion = {
@@ -10,6 +11,216 @@ type LocationSuggestion = {
 }
 
 const DEFAULT_MAP_CENTER: [number, number] = [19.4326, -99.1332]
+const DEFAULT_VEHICLE_POSITIONS = {
+  V1: { lat: 19.43295, lng: -99.13355, rotation: 38 },
+  V2: { lat: 19.43235, lng: -99.13285, rotation: -61 },
+}
+const IMPACT_POSITION = { lat: 19.43262, lng: -99.13308 }
+const EVIDENCE_POSITIONS = [
+  { lat: 19.43325, lng: -99.13345, label: "E1" },
+  { lat: 19.43208, lng: -99.13265, label: "E2" },
+]
+
+type GeoPosition = { lat: number; lng: number }
+
+type GeoVehicle = GeoPosition & {
+  rotation: number
+}
+
+const METERS_PER_PIXEL_REFERENCE = 4.5
+
+function metersPerPixel(map: LeafletMap, position: LatLngExpression): number {
+  const point = map.latLngToContainerPoint(position)
+  const next = map.containerPointToLatLng(point.add([1, 0]))
+  return Math.max(0.01, map.distance(position, next))
+}
+
+function GeoMapOverlay({
+  droppedItems,
+  mapVehicles,
+  selectedDroppedId,
+  selectedVehicleId,
+  onDropItem,
+  onSelectDropped,
+  onSelectVehicle,
+  onMoveDropped,
+  onMoveVehicle,
+  onRotateDropped,
+  onRotateVehicle,
+}: {
+  droppedItems: (DroppedItem & GeoPosition)[]
+  mapVehicles: Record<"V1" | "V2", GeoVehicle>
+  selectedDroppedId: string | null
+  selectedVehicleId: string
+  onDropItem: (item: Pick<DroppedItem, "kind" | "label">, position: GeoPosition) => void
+  onSelectDropped: (id: string) => void
+  onSelectVehicle: (id: "V1" | "V2") => void
+  onMoveDropped: (id: string, position: GeoPosition) => void
+  onMoveVehicle: (id: "V1" | "V2", position: GeoPosition) => void
+  onRotateDropped: (id: string) => void
+  onRotateVehicle: (id: "V1" | "V2") => void
+}) {
+  const map = useMap()
+  const [, redraw] = useState(0)
+  const dragRef = useRef<{ type: "vehicle" | "dropped"; id: string } | null>(null)
+
+  useMapEvents({
+    move: () => redraw((value) => value + 1),
+    zoom: () => redraw((value) => value + 1),
+  })
+
+  useEffect(() => {
+    const container = map.getContainer()
+    const handleDragOver = (event: DragEvent) => {
+      if (event.dataTransfer?.types.includes("application/x-cesvi-item")) {
+        event.preventDefault()
+      }
+    }
+    const handleDrop = (event: DragEvent) => {
+      const payload = event.dataTransfer?.getData("application/x-cesvi-item")
+      if (!payload) return
+      event.preventDefault()
+      try {
+        const item = JSON.parse(payload) as Pick<DroppedItem, "kind" | "label">
+        const rect = container.getBoundingClientRect()
+        const point = map.containerPointToLatLng([
+          event.clientX - rect.left,
+          event.clientY - rect.top,
+        ])
+        onDropItem(item, { lat: point.lat, lng: point.lng })
+      } catch {
+        // Ignore malformed drag payloads.
+      }
+    }
+    container.addEventListener("dragover", handleDragOver)
+    container.addEventListener("drop", handleDrop)
+    return () => {
+      container.removeEventListener("dragover", handleDragOver)
+      container.removeEventListener("drop", handleDrop)
+    }
+  }, [map, onDropItem])
+
+  useEffect(() => {
+    const handlePointerMove = (event: PointerEvent) => {
+      if (!dragRef.current) return
+      const rect = map.getContainer().getBoundingClientRect()
+      const point = map.containerPointToLatLng([
+        event.clientX - rect.left,
+        event.clientY - rect.top,
+      ])
+      const position = { lat: point.lat, lng: point.lng }
+      if (dragRef.current.type === "vehicle") {
+        onMoveVehicle(dragRef.current.id as "V1" | "V2", position)
+      } else {
+        onMoveDropped(dragRef.current.id, position)
+      }
+    }
+    const handlePointerUp = () => {
+      dragRef.current = null
+    }
+    window.addEventListener("pointermove", handlePointerMove)
+    window.addEventListener("pointerup", handlePointerUp)
+    return () => {
+      window.removeEventListener("pointermove", handlePointerMove)
+      window.removeEventListener("pointerup", handlePointerUp)
+    }
+  }, [map, onMoveDropped, onMoveVehicle])
+
+  const renderPosition = (position: GeoPosition) => {
+    const point = map.latLngToContainerPoint(position)
+    const size = METERS_PER_PIXEL_REFERENCE / metersPerPixel(map, position)
+    return { left: point.x, top: point.y, size: Math.max(12, size) }
+  }
+
+  return (
+    <div className="geo-overlay-layer" aria-label="Elementos geográficos del mapa">
+      {(["V1", "V2"] as const).map((id) => {
+        const vehicle = mapVehicles[id]
+        const rendered = renderPosition(vehicle)
+        return (
+          <button
+            className={`geo-vehicle ${selectedVehicleId === id ? "is-selected" : ""}`}
+            key={id}
+            onClick={() => onSelectVehicle(id)}
+            onPointerDown={(event) => {
+              event.stopPropagation()
+              dragRef.current = { type: "vehicle", id }
+              onSelectVehicle(id)
+            }}
+            onDoubleClick={() => onRotateVehicle(id)}
+            style={{
+              left: rendered.left,
+              top: rendered.top,
+              width: rendered.size,
+              height: rendered.size * 0.4,
+              transform: `translate(-50%, -50%) rotate(${vehicle.rotation}deg)`,
+            }}
+            type="button"
+          >
+            <VehicleSprite />
+            <b>{id}</b>
+          </button>
+        )
+      })}
+      <div
+        className="geo-impact-marker"
+        style={{
+          left: renderPosition(IMPACT_POSITION).left,
+          top: renderPosition(IMPACT_POSITION).top,
+        }}
+      />
+      {EVIDENCE_POSITIONS.map((evidence) => {
+        const rendered = renderPosition(evidence)
+        return (
+          <div
+            className="geo-evidence-marker"
+            key={evidence.label}
+            style={{ left: rendered.left, top: rendered.top }}
+          >
+            {evidence.label}
+          </div>
+        )
+      })}
+      {droppedItems.map((item) => {
+        const rendered = renderPosition(item)
+        return (
+          <button
+            className={`geo-dropped-item ${selectedDroppedId === item.id ? "is-selected" : ""}`}
+            key={item.id}
+            onClick={() => onSelectDropped(item.id)}
+            onPointerDown={(event) => {
+              event.stopPropagation()
+              dragRef.current = { type: "dropped", id: item.id }
+              onSelectDropped(item.id)
+            }}
+            onDoubleClick={() => onRotateDropped(item.id)}
+            style={{
+              left: rendered.left,
+              top: rendered.top,
+              transform: `translate(-50%, -50%) rotate(${item.rotation}deg)`,
+            }}
+            type="button"
+          >
+            <span
+              className="geo-dropped-symbol"
+              style={{ transform: `scale(${Math.max(0.6, item.scale)})` }}
+            >
+              {item.kind === "vehicle" || item.kind === "static-vehicle" ? (
+                <VehicleSprite
+                  parked={item.kind === "static-vehicle"}
+                  variant={getVehicleVariant(item.label)}
+                />
+              ) : (
+                <Icon name={getDroppedItemIcon(item.kind, item.label)} size={18} />
+              )}
+            </span>
+            <span>{item.label}</span>
+          </button>
+        )
+      })}
+    </div>
+  )
+}
 
 function MapViewport({ center }: { center: [number, number] }) {
   const map = useMap()
@@ -685,6 +896,8 @@ type DroppedItem = {
   scale: number
   x: number
   y: number
+  lat: number
+  lng: number
 }
 
 type ActiveElementDrag = {
@@ -987,8 +1200,8 @@ function App() {
     useState<ActiveElementDrag | null>(null)
   const [selectedVehicleId, setSelectedVehicleId] = useState("V1")
   const [mapVehicles, setMapVehicles] = useState({
-    V1: { rotation: 38, scale: 1, x: 43, y: 43 },
-    V2: { rotation: -61, scale: 1, x: 51, y: 49 },
+    V1: { ...DEFAULT_VEHICLE_POSITIONS.V1, scale: 1, x: 43, y: 43 },
+    V2: { ...DEFAULT_VEHICLE_POSITIONS.V2, scale: 1, x: 51, y: 49 },
   })
   const [smartGuides, setSmartGuides] = useState<{
     x: number | null
@@ -1203,6 +1416,8 @@ function App() {
         scale: 1,
         x: 47 + offset,
         y: 44 + offset,
+        lat: DEFAULT_MAP_CENTER[0] + (offset - 2) * 0.0001,
+        lng: DEFAULT_MAP_CENTER[1] + (offset - 2) * 0.0001,
       },
     ])
     setSelectedDroppedId(id)
@@ -1261,6 +1476,8 @@ function App() {
         scale: 1,
         x,
         y,
+        lat: DEFAULT_MAP_CENTER[0] + y * 0.0001,
+        lng: DEFAULT_MAP_CENTER[1] + x * 0.0001,
       },
     ])
     setSelectedDroppedId(id)
@@ -1866,23 +2083,74 @@ function App() {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               <MapViewport center={mapCenter} />
+              <GeoMapOverlay
+                droppedItems={droppedItems}
+                mapVehicles={mapVehicles}
+                onDropItem={(item, position) => {
+                  const id = `${Date.now()}-${droppedItems.length}`
+                  setDroppedItems((current) => [
+                    ...current,
+                    {
+                      ...item,
+                      id,
+                      rotation: 0,
+                      scale: 1,
+                      x: 50,
+                      y: 50,
+                      ...position,
+                    },
+                  ])
+                  setSelectedDroppedId(id)
+                  setSelectedVehicleId("")
+                  setLastRemovedItem(null)
+                  setSelectedTool(item.label)
+                  setOpenMenu(null)
+                }}
+                onMoveDropped={(id, position) =>
+                  setDroppedItems((current) =>
+                    current.map((item) =>
+                      item.id === id ? { ...item, ...position } : item,
+                    ),
+                  )
+                }
+                onMoveVehicle={(id, position) =>
+                  setMapVehicles((current) => ({
+                    ...current,
+                    [id]: { ...current[id], ...position },
+                  }))
+                }
+                onRotateDropped={(id) =>
+                  setDroppedItems((current) =>
+                    current.map((item) =>
+                      item.id === id
+                        ? { ...item, rotation: (item.rotation + 15) % 360 }
+                        : item,
+                    ),
+                  )
+                }
+                onRotateVehicle={(id) =>
+                  setMapVehicles((current) => ({
+                    ...current,
+                    [id]: {
+                      ...current[id],
+                      rotation: (current[id].rotation + 15) % 360,
+                    },
+                  }))
+                }
+                onSelectDropped={(id) => {
+                  setSelectedDroppedId(id)
+                  setSelectedVehicleId("")
+                }}
+                onSelectVehicle={(id) => {
+                  setSelectedVehicleId(id)
+                  setSelectedDroppedId(null)
+                }}
+                selectedDroppedId={selectedDroppedId}
+                selectedVehicleId={selectedVehicleId}
+              />
             </MapContainer>
-            <div
-              className="canvas-infinite-grid"
-              style={{
-                transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${
-                  zoom / 72
-                })`,
-              }}
-            />
-            <div
-              className="map-world"
-              style={{
-                transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${
-                  zoom / 72
-                })`,
-              }}
-            >
+            <div className="canvas-infinite-grid" aria-hidden="true" />
+            <div className="map-world" aria-hidden="true">
               {smartGuides.x !== null && (
                 <div
                   className="smart-guide smart-guide-vertical"

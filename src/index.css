@@ -736,11 +736,106 @@ kbd {
 .map-world {
   position: absolute;
   inset: 0;
+  display: none;
   z-index: 2;
   pointer-events: none;
   transform-origin: center;
   transition: transform 120ms ease-out;
   will-change: transform;
+}
+
+.geo-overlay-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 500;
+  pointer-events: none;
+}
+
+.geo-vehicle,
+.geo-dropped-item {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #12202a;
+  cursor: grab;
+  pointer-events: auto;
+  transform-origin: center;
+}
+
+.geo-vehicle:active,
+.geo-dropped-item:active {
+  cursor: grabbing;
+}
+
+.geo-vehicle .vehicle-sprite {
+  width: 100%;
+  height: 100%;
+}
+
+.geo-vehicle b {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: #0b1118;
+  color: #ffffff;
+  font-size: 8px;
+  transform: translateX(-50%);
+}
+
+.geo-vehicle.is-selected {
+  filter: drop-shadow(0 0 0.3rem #35ddb2);
+}
+
+.geo-dropped-item {
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.geo-dropped-symbol {
+  display: grid;
+  place-items: center;
+}
+
+.geo-dropped-item > span:last-child {
+  position: absolute;
+  top: 100%;
+  white-space: nowrap;
+  color: #12202a;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.geo-dropped-item.is-selected .geo-dropped-symbol {
+  filter: drop-shadow(0 0 0.3rem #35ddb2);
+}
+
+.geo-impact-marker {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #ff5c69;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.geo-evidence-marker {
+  position: absolute;
+  min-width: 18px;
+  padding: 3px 4px;
+  border-radius: 50%;
+  background: #ffc857;
+  color: #17232d;
+  font-size: 8px;
+  font-weight: 800;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .leaflet-map {
@@ -1529,6 +1624,10 @@ kbd {
   background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 5px 20px rgba(31, 45, 61, 0.16);
   backdrop-filter: blur(10px);
+}
+
+.map-canvas > .zoom-controls {
+  display: none;
 }
 
 .map-toolbar {
