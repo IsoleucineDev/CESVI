@@ -400,6 +400,7 @@ function App() {
   const [frames, setFrames] = useState(frameNames);
   const [sceneRecords, setSceneRecords] = useState<Scene[]>([]);
   const [caseContext, setCaseContext] = useState<CaseContext | null>(null);
+  const [dataLoading, setDataLoading] = useState(true);
   const [dataError, setDataError] = useState<string | null>(null);
   const [assistantLoading, setAssistantLoading] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -439,28 +440,33 @@ function App() {
 
   useEffect(() => {
     let active = true;
-    Promise.allSettled([api.getCase(), api.getScenes()]).then(([caseResult, scenesResult]) => {
-      if (!active) return;
-      if (caseResult.status === "fulfilled") {
-        setCaseContext(caseResult.value);
-      }
-      if (scenesResult.status === "fulfilled" && scenesResult.value.length > 0) {
-        const orderedScenes = [...scenesResult.value].sort(
-          (a, b) => (a.order ?? 0) - (b.order ?? 0),
+    setDataLoading(true);
+    Promise.allSettled([api.getCase(), api.getScenes()])
+      .then(([caseResult, scenesResult]) => {
+        if (!active) return;
+        if (caseResult.status === "fulfilled") {
+          setCaseContext(caseResult.value);
+        }
+        if (scenesResult.status === "fulfilled" && scenesResult.value.length > 0) {
+          const orderedScenes = [...scenesResult.value].sort(
+            (a, b) => (a.order ?? 0) - (b.order ?? 0),
+          );
+          setSceneRecords(orderedScenes);
+          setFrames(orderedScenes.map((scene) => scene.name));
+          setSelectedFrame((current) => Math.min(current, orderedScenes.length - 1));
+        }
+        const failedResult = [caseResult, scenesResult].find((result) => result.status === "rejected");
+        setDataError(
+          failedResult?.status === "rejected"
+            ? failedResult.reason instanceof Error
+              ? failedResult.reason.message
+              : "No se pudo cargar toda la información del expediente"
+            : null,
         );
-        setSceneRecords(orderedScenes);
-        setFrames(orderedScenes.map((scene) => scene.name));
-        setSelectedFrame((current) => Math.min(current, orderedScenes.length - 1));
-      }
-      const failedResult = [caseResult, scenesResult].find((result) => result.status === "rejected");
-      setDataError(
-        failedResult?.status === "rejected"
-          ? failedResult.reason instanceof Error
-            ? failedResult.reason.message
-            : "No se pudo cargar toda la información del expediente"
-          : null,
-      );
-    });
+      })
+      .finally(() => {
+        if (active) setDataLoading(false);
+      });
     return () => {
       active = false;
     };
@@ -582,7 +588,12 @@ function App() {
   };
 
   return (
-    <main className="app-shell" data-theme={theme}>
+    <main
+      aria-busy={dataLoading || assistantLoading}
+      aria-label={dataError || undefined}
+      className="app-shell"
+      data-theme={theme}
+    >
       <header className="titlebar">
         <div className="brand-area">
           <Button
@@ -1055,7 +1066,7 @@ function App() {
                   <Icon name="plus" size={17} />
                   Adjuntar evidencia
                 </Button>
-                <Button className="send-button" onClick={sendMessage} title="Enviar">
+                <Button className="send-button" disabled={assistantLoading} onClick={sendMessage} title="Enviar">
                   <Icon name="send" size={17} />
                 </Button>
               </div>
