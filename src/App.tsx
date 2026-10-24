@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useRef, useState } from "react"
+import TopBar from "./components/layout/TopBar"
 import { api, type CaseContext, type Scene } from "./lib/api"
 import {
   MapContainer,
@@ -1857,77 +1858,15 @@ function App() {
 
   return (
     <main className="app-shell" aria-busy={dataLoading || assistantLoading}>
-      <header className="titlebar">
-        <div className="brand-area">
-          <Button
-            className="app-launcher"
-            onClick={() => setShowDashboard(true)}
-            title="Abrir centro de casos"
-          >
-            <Icon name="dashboard" size={20} />
-          </Button>
-          <div className="brand-mark">
-            <span />
-          </div>
-          <div className="document-name">
-            <b>CESVI · Reconstrucción vial</b>
-            <span>EXP-0248 · Guardado</span>
-          </div>
-        </div>
-        <nav className="ribbon-tabs" aria-label="Herramientas principales">
-          {[
-            "Archivo",
-            "Mapeo",
-            "Objetos",
-            "Indicios",
-            "Vehículos",
-            "Plantillas",
-            "Vista",
-          ].map((tab) => (
-            <Button
-              ariaControls={
-                tab === "Objetos" || tab === "Indicios" || tab === "Vehículos"
-                  ? "catalog-menu"
-                  : undefined
-              }
-              ariaExpanded={
-                tab === "Objetos" || tab === "Indicios" || tab === "Vehículos"
-                  ? openMenu === tab
-                  : undefined
-              }
-              className={ribbon === tab ? "tab-active" : ""}
-              key={tab}
-              onClick={() => selectRibbon(tab)}
-            >
-              {tab === "Vehículos" ? "Tipos de vehículos" : tab}
-              {(tab === "Objetos" ||
-                tab === "Indicios" ||
-                tab === "Vehículos") && <Icon name="chevron" size={12} />}
-            </Button>
-          ))}
-        </nav>
-        <div className="title-actions">
-          <Button
-            className="icon-button"
-            onClick={undoLastObject}
-            title="Deshacer último elemento"
-          >
-            <Icon name="undo" />
-          </Button>
-          <Button
-            className="icon-button"
-            onClick={redoLastObject}
-            title="Rehacer último elemento"
-          >
-            <Icon name="redo" />
-          </Button>
-          <span className="divider" />
-          <Button className="share-button" onClick={exportReport}>
-            <Icon name="download" />
-            Exportar informe
-          </Button>
-          <div className="avatar">LM</div>
-        </div>
+      <TopBar
+        onOpenDashboard={() => setShowDashboard(true)}
+        ribbon={ribbon}
+        openMenu={openMenu}
+        onSelectRibbon={selectRibbon}
+        onUndo={undoLastObject}
+        onRedo={redoLastObject}
+        onExportReport={exportReport}
+      >
         {openMenu && (
           <CatalogMenu
             menuKey={openMenu}
@@ -1935,7 +1874,7 @@ function App() {
             onSelect={selectCatalogItem}
           />
         )}
-      </header>
+      </TopBar>
 
       <section className="ribbon">
         <div className="ribbon-block location-block">
