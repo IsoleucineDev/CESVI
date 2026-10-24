@@ -9,14 +9,13 @@ const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-flash-latest";
 const GROQ_KEY = process.env.GROQ_API_KEY;
 const GROQ_MODEL = process.env.GROQ_MODEL || "openai/gpt-oss-120b";
 
-if (!GEMINI_KEY && !GROQ_KEY) {
-  console.error("Falta GEMINI_API_KEY o GROQ_API_KEY en server/.env");
-  process.exit(1);
-}
-
 const app = express();
-app.use(cors({ origin: FRONT_ORIGIN, credentials: true }));
-app.use(cors({ origin: true, credentials: true }));
+app.use(
+  cors({
+    origin: FRONT_ORIGIN === "*" ? true : FRONT_ORIGIN,
+    credentials: true,
+  }),
+);
 app.use(express.json({ limit: "1mb" }));
 
 /* ---------- Datos en memoria (se reinician al apagar el server) ---------- */
@@ -226,7 +225,7 @@ async function callGemini(messages) {
 async function callGroq(messages) {
   const r = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${GROQ_KEY}` },
+    headers: { "Content-Type": "application/json", Authorization: "Bearer " + GROQ_KEY },
     body: JSON.stringify({
       model: GROQ_MODEL,
       temperature: 0.3,
@@ -322,4 +321,8 @@ app.post("/api/ai/chat", async (req, res) => {
   res.status(502).json({ error: "Ningún proveedor de IA respondió" });
 });
 
-app.listen(PORT, () => console.log(`Servidor CESVI en http://localhost:${PORT}`));
+export default app;
+
+if (process.env.VERCEL !== "1") {
+  app.listen(PORT, () => console.log(`Servidor CESVI en http://localhost:${PORT}`));
+}
