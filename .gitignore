@@ -29,3 +29,5 @@ backend/.env
 uploads/
 *.sqlite3
 *.db
+.env.local
+*.bak

@@ -30,8 +30,10 @@ export type AssistantMessageResponse = {
   answer: string;
   actions: Action[];
   quickReplies: string[];
+  quick_replies?: string[];
   progress: number;
   ready: boolean;
   topics: AssistantTopic[];
   missing: string[];
+  fields?: Record<string, any>;
 };

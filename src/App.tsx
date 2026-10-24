@@ -1,5 +1,6 @@
-import { Fragment, useEffect, useRef, useState } from "react"
+import { Fragment, useEffect, useMemo, useRef, useState } from "react"
 import TopBar from "./components/layout/TopBar"
+import AssistantPanel from "./components/assistant/AssistantPanel"
 import { api, type CaseContext, type Scene } from "./lib/api"
 import {
   MapContainer,
@@ -1510,11 +1511,8 @@ function App() {
   const [caseContext, setCaseContext] = useState<CaseContext | null>(null)
   const [dataLoading, setDataLoading] = useState(true)
   const [dataError, setDataError] = useState<string | null>(null)
-  const [assistantLoading, setAssistantLoading] = useState(false)
   const [playing, setPlaying] = useState(false)
   const [showDashboard, setShowDashboard] = useState(false)
-  const [chatText, setChatText] = useState("")
-  const [messages, setMessages] = useState<string[]>([])
   const [currentZoom, setCurrentZoom] = useState(19)
   const [mapInstance, setMapInstance] = useState<LeafletMap | null>(null)
   const [droppedItems, setDroppedItems] = useState<DroppedItem[]>([])
@@ -1523,7 +1521,6 @@ function App() {
   const [mapMode, setMapMode] = useState<"select" | "pan" | "measure">("select")
   const [lastRemovedItem, setLastRemovedItem] = useState<DroppedItem | null>(null)
   const [mapTheme, setMapTheme] = useState<"base" | "technical">("base")
-  const [assistantOptionsOpen, setAssistantOptionsOpen] = useState(false)
   const [feedback, setFeedback] = useState("")
   const [selectedVehicleId, setSelectedVehicleId] = useState("V1")
   const [mapVehicles, setMapVehicles] = useState({
@@ -1537,13 +1534,24 @@ function App() {
   const [locationSearchLoading, setLocationSearchLoading] = useState(false)
   const [mapCenter, setMapCenter] = useState<[number, number]>(DEFAULT_MAP_CENTER)
   const [locationMenuOpen, setLocationMenuOpen] = useState(false)
-  const fileInputRef = useRef<HTMLInputElement>(null)
   const locationQueryInitialized = useRef(false)
   const activeTools = ribbonGroups[ribbon]
   const mapViewMode = selectedFrame === 0 ? "location" : "scenario"
   const mapViewCenter: [number, number] =
     mapViewMode === "location" ? mapCenter : [IMPACT_POSITION.lat, IMPACT_POSITION.lng]
   const mapViewZoom = mapViewMode === "location" ? 15 : 19
+
+  const assistantContext = useMemo(
+    () => ({
+      case: caseContext,
+      scene: frames[selectedFrame],
+      selectedTool,
+      selectedFrame,
+      droppedItems,
+      vehicles: mapVehicles,
+    }),
+    [caseContext, frames, selectedFrame, selectedTool, droppedItems, mapVehicles],
+  )
 
   useEffect(() => {
     if (!locationQueryInitialized.current) {
@@ -1823,41 +1831,8 @@ function App() {
     setSelectedFrame(frames.length)
   }
 
-  const sendMessage = async () => {
-    if (!chatText.trim() || assistantLoading) return
-    const message = chatText.trim()
-    setChatText("")
-    setMessages((current) => [...current, message, ""])
-    setAssistantLoading(true)
-    try {
-      await api.sendAssistantMessage(
-        message,
-        {
-          case: caseContext,
-          scene: frames[selectedFrame],
-          selectedTool,
-          selectedFrame,
-          droppedItems,
-          vehicles: mapVehicles,
-        },
-        (token) => {
-          setMessages((current) => {
-            const next = [...current]
-            next[next.length - 1] = `${next[next.length - 1]}${token}`
-            return next
-          })
-        },
-      )
-    } catch (error: unknown) {
-      setMessages((current) => current.slice(0, -1))
-      setDataError(error instanceof Error ? error.message : "No se pudo contactar al asistente")
-    } finally {
-      setAssistantLoading(false)
-    }
-  }
-
   return (
-    <main className="app-shell" aria-busy={dataLoading || assistantLoading}>
+    <main className="app-shell" aria-busy={dataLoading}>
       <TopBar
         onOpenDashboard={() => setShowDashboard(true)}
         ribbon={ribbon}
@@ -2330,189 +2305,11 @@ function App() {
           </div>
         </section>
 
-        <aside className="assistant-pane">
-          <div className="assistant-header">
-            <div className="assistant-identity">
-              <span className="assistant-logo">
-                <Icon name="sparkle" size={18} />
-              </span>
-              <div>
-                <b>Asistente pericial</b>
-                <span>Reconstrucción guiada</span>
-              </div>
-            </div>
-            <Button
-              ariaExpanded={assistantOptionsOpen}
-              className="icon-button"
-              onClick={() => setAssistantOptionsOpen((current) => !current)}
-              title="Opciones del asistente"
-            >
-              <Icon name="more" />
-            </Button>
-            {assistantOptionsOpen && (
-              <div className="assistant-options">
-                <Button
-                  onClick={() => {
-                    setMessages([])
-                    setAssistantOptionsOpen(false)
-                    setFeedback("Conversación limpiada")
-                  }}
-                >
-                  Limpiar conversación
-                </Button>
-                <Button
-                  onClick={() => {
-                    setInspectorOpen(true)
-                    setAssistantOptionsOpen(false)
-                    setFeedback("Propiedades del vehículo visibles")
-                  }}
-                >
-                  Mostrar propiedades
-                </Button>
-              </div>
-            )}
-          </div>
-
-          <div className="case-progress">
-            <div className="progress-copy">
-              <span>PROGRESO DEL EXPEDIENTE</span>
-              <b>62%</b>
-            </div>
-            <div className="progress-track">
-              <span />
-            </div>
-            <div className="steps">
-              {[
-                "Ubicación",
-                "Vehículos",
-                "Dinámica",
-                "Evidencia",
-                "Informe",
-              ].map((step, index) => (
-                <div
-                  className={index < 3 ? "done" : index === 3 ? "current" : ""}
-                  key={step}
-                >
-                  <span>{index < 3 ? "✓" : index + 1}</span>
-                  <small>{step}</small>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="conversation">
-            <div className="date-divider">
-              <span />
-              <b>DINÁMICA DEL SINIESTRO</b>
-              <span />
-            </div>
-            <div className="assistant-message">
-              <div className="message-avatar">
-                <Icon name="sparkle" size={15} />
-              </div>
-              <div className="message-bubble">
-                <p>
-                  Ya tenemos los dos vehículos ubicados. Ahora vamos a
-                  documentar el momento del impacto.
-                </p>
-                <p>
-                  ¿Cuál era la velocidad estimada del <b>Vehículo 01</b> antes
-                  de iniciar el frenado?
-                </p>
-                <span>10:42</span>
-              </div>
-            </div>
-            <div className="quick-options">
-              <Button onClick={() => setChatText("Entre 40 y 50 km/h")}>
-                Entre 40 y 50 km/h
-              </Button>
-              <Button onClick={() => setChatText("No se pudo determinar")}>
-                No se pudo determinar
-              </Button>
-            </div>
-            {messages.map((message, index) => (
-              <div className="user-message" key={`${message}-${index}`}>
-                <div className="message-bubble">
-                  <p>{message}</p>
-                  <span>Ahora</span>
-                </div>
-              </div>
-            ))}
-            <div className="context-card">
-              <div className="context-head">
-                <span>
-                  <Icon name="car" size={17} />
-                </span>
-                <div>
-                  <b>Vehículo 01</b>
-                  <small>Elemento seleccionado en el mapa</small>
-                </div>
-              </div>
-              <div className="context-stats">
-                <div>
-                  <span>Velocidad</span>
-                  <b>42 km/h</b>
-                </div>
-                <div>
-                  <span>Trayectoria</span>
-                  <b>Noreste</b>
-                </div>
-                <div>
-                  <span>Confianza</span>
-                  <b className="confidence">Media</b>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="chat-composer">
-            <div className="composer-box">
-              <textarea
-                aria-label="Responder al asistente"
-                onChange={(event) => setChatText(event.target.value)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" && !event.shiftKey) {
-                    event.preventDefault()
-                    sendMessage()
-                  }
-                }}
-                placeholder="Escribe un dato, observación o instrucción..."
-                value={chatText}
-              />
-              <div className="composer-actions">
-                <Button
-                  className="attach-button"
-                  onClick={() => fileInputRef.current?.click()}
-                >
-                  <Icon name="plus" size={17} />
-                  Adjuntar evidencia
-                </Button>
-                <input
-                  accept="image/*,.pdf"
-                  className="evidence-file-input"
-                  onChange={(event) => {
-                    const file = event.target.files?.[0]
-                    if (file) setFeedback(`${file.name} adjuntado al expediente`)
-                    event.target.value = ""
-                  }}
-                  ref={fileInputRef}
-                  type="file"
-                />
-                <Button
-                  className="send-button"
-                  disabled={assistantLoading}
-                  onClick={sendMessage}
-                  title="Enviar"
-                >
-                  <Icon name="send" size={17} />
-                </Button>
-              </div>
-            </div>
-            <span className="privacy-note">
-              La información se guarda en el expediente EXP-0248
-            </span>
-          </div>
-        </aside>
+        <AssistantPanel
+          context={assistantContext}
+          onShowProperties={() => setInspectorOpen(true)}
+          onAttachFile={(name) => setFeedback(`${name} adjuntado al expediente`)}
+        />
       </div>
 
       {showDashboard && (

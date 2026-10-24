@@ -16,6 +16,7 @@ if (!GEMINI_KEY && !GROQ_KEY) {
 
 const app = express();
 app.use(cors({ origin: FRONT_ORIGIN, credentials: true }));
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ limit: "1mb" }));
 
 /* ---------- Datos en memoria (se reinician al apagar el server) ---------- */
@@ -32,7 +33,7 @@ function ensureCase(id) {
     cases.set(id, {
       id,
       name: "Reconstrucción vial",
-      location: "Av. Paseo de la Reforma 222",
+      location: "",
       scenes: seedScenes(),
     });
   }
@@ -189,6 +190,18 @@ Usa solo ids de vehículo que existan en el estado. "quickReplies" es opcional, 
 
 const history = new Map(); // caseId -> [{role, content}]
 
+async function withRetry(fn, tries = 3) {
+  for (let i = 1; ; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      const transient = /respondió (429|500|502|503|504)|fetch failed/.test(err.message);
+      if (!transient || i >= tries) throw err;
+      await new Promise((r) => setTimeout(r, 1000 * i));
+    }
+  }
+}
+
 async function callGemini(messages) {
   const r = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
@@ -250,18 +263,6 @@ const progressInfo = (s) => ({
   topics: s.topics,
   missing: s.pending.map((i) => i.label),
 });
-
-async function withRetry(fn, tries = 3) {
-  for (let i = 1; ; i++) {
-    try {
-      return await fn();
-    } catch (err) {
-      const transient = /respondió (429|500|502|503|504)|fetch failed/.test(err.message);
-      if (!transient || i >= tries) throw err;
-      await new Promise((r) => setTimeout(r, 1000 * i));
-    }
-  }
-}
 
 app.post("/api/ai/chat", async (req, res) => {
   const { caseId = "EXP-0248", message, context = {} } = req.body ?? {};

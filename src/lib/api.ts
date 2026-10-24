@@ -16,11 +16,16 @@ export type {
   Scene,
 };
 
-const API_BASE_URL = (
+const RAW_API_URL = (
   import.meta.env.VITE_API_URL ||
   import.meta.env.VITE_API_BASE_URL ||
-  "http://localhost:8000/api/v1"
+  "http://localhost:8000"
 ).replace(/\/$/, "");
+
+const API_BASE_URL = RAW_API_URL.endsWith("/api/v1")
+  ? RAW_API_URL
+  : `${RAW_API_URL}/api/v1`;
+
 const CASE_ID = import.meta.env.VITE_CASE_ID || "EXP-0248";
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
@@ -35,7 +40,12 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   });
 
   if (!response.ok) {
-    const error: ApiError = new Error(`API request failed with status ${response.status}`);
+    let errorMessage = `API request failed with status ${response.status}`;
+    try {
+      const err = await response.json();
+      if (err?.message) errorMessage = err.message;
+    } catch {}
+    const error: ApiError = new Error(errorMessage);
     error.status = response.status;
     throw error;
   }
@@ -48,17 +58,20 @@ function sendAssistantMessage(
   message: string,
   context: Record<string, unknown>,
   onToken: (token: string) => void,
+  history?: { role: string; content?: string; text?: string }[],
 ): Promise<string>;
 function sendAssistantMessage(
   message: string,
   context: Record<string, unknown>,
   onToken: (token: string) => void,
-  includeMetadata: true,
+  history?: { role: string; content?: string; text?: string }[],
+  includeMetadata?: true,
 ): Promise<AssistantMessageResponse>;
 async function sendAssistantMessage(
   message: string,
   context: Record<string, unknown>,
   onToken: (token: string) => void,
+  history: { role: string; content?: string; text?: string }[] = [],
   includeMetadata = false,
 ): Promise<string | AssistantMessageResponse> {
   const response = await fetch(`${API_BASE_URL}/assistant/chat`, {
@@ -67,11 +80,25 @@ async function sendAssistantMessage(
       Accept: "text/event-stream, application/json",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ case_id: CASE_ID, caseId: CASE_ID, message, context, stream: true }),
+    body: JSON.stringify({
+      case_id: CASE_ID,
+      caseId: CASE_ID,
+      message,
+      context,
+      history,
+      stream: true,
+    }),
   });
 
   if (!response.ok) {
-    throw new Error(`AI request failed with status ${response.status}`);
+    let errorMsg = `Error en el asistente (${response.status})`;
+    try {
+      const errorJson = await response.json();
+      if (errorJson?.message) errorMsg = errorJson.message;
+    } catch {}
+    const err: ApiError = new Error(errorMsg);
+    err.status = response.status;
+    throw err;
   }
 
   const contentType = response.headers.get("content-type") || "";
@@ -79,23 +106,29 @@ async function sendAssistantMessage(
     const payload = (await response.json()) as {
       answer?: string;
       message?: string;
+      text?: string;
       actions?: Action[];
       quickReplies?: string[];
+      quick_replies?: string[];
       progress?: number;
       ready?: boolean;
       topics?: AssistantTopic[];
       missing?: string[];
+      fields?: Record<string, any>;
     };
-    const answer = payload.answer || payload.message || "";
+    const answer = payload.answer || payload.text || payload.message || "";
     if (answer) onToken(answer);
-    const result = {
+    const quickReplies = payload.quickReplies || payload.quick_replies || [];
+    const result: AssistantMessageResponse = {
       answer,
       actions: Array.isArray(payload.actions) ? payload.actions : [],
-      quickReplies: Array.isArray(payload.quickReplies) ? payload.quickReplies : [],
+      quickReplies,
+      quick_replies: quickReplies,
       progress: typeof payload.progress === "number" ? payload.progress : 0,
       ready: payload.ready === true,
       topics: Array.isArray(payload.topics) ? payload.topics : [],
       missing: Array.isArray(payload.missing) ? payload.missing : [],
+      fields: payload.fields,
     };
     return includeMetadata ? result : result.answer;
   }
@@ -110,6 +143,7 @@ async function sendAssistantMessage(
   let resultReady = false;
   let resultTopics: AssistantTopic[] = [];
   let resultMissing: string[] = [];
+  let fields: Record<string, any> | undefined = undefined;
 
   const consumeEvent = (event: string) => {
     const data = event
@@ -122,23 +156,30 @@ async function sendAssistantMessage(
       const parsed = JSON.parse(data) as {
         token?: string;
         answer?: string;
+        text?: string;
         content?: string;
         actions?: Action[];
         quickReplies?: string[];
+        quick_replies?: string[];
         progress?: number;
         ready?: boolean;
         topics?: AssistantTopic[];
         missing?: string[];
+        fields?: Record<string, any>;
       };
       if (Array.isArray(parsed.actions)) actions = parsed.actions;
       if (Array.isArray(parsed.quickReplies)) quickReplies = parsed.quickReplies;
+      if (Array.isArray(parsed.quick_replies)) quickReplies = parsed.quick_replies;
       if (typeof parsed.progress === "number") resultProgress = parsed.progress;
       if (typeof parsed.ready === "boolean") resultReady = parsed.ready;
       if (Array.isArray(parsed.topics)) resultTopics = parsed.topics;
       if (Array.isArray(parsed.missing)) resultMissing = parsed.missing;
-      const token = parsed.token || parsed.content || parsed.answer || "";
-      answer += token;
-      if (token) onToken(token);
+      if (parsed.fields) fields = parsed.fields;
+      const token = parsed.token || "";
+      if (token) {
+        answer += token;
+        onToken(token);
+      }
     } catch {
       answer += data;
       onToken(data);
@@ -156,14 +197,16 @@ async function sendAssistantMessage(
   }
   consumeEvent(buffer);
 
-  const result = {
+  const result: AssistantMessageResponse = {
     answer,
     actions,
     quickReplies,
+    quick_replies: quickReplies,
     progress: resultProgress,
     ready: resultReady,
     topics: resultTopics,
     missing: resultMissing,
+    fields,
   };
   return includeMetadata ? result : result.answer;
 }
