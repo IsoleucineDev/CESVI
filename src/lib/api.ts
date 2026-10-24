@@ -1,42 +1,26 @@
-export type Scene = {
-  id?: string;
-  name: string;
-  order?: number;
+import type {
+  Action,
+  ApiError,
+  AssistantMessageResponse,
+  AssistantTopic,
+  CaseContext,
+  Scene,
+} from "../types/api";
+
+export type {
+  Action,
+  ApiError,
+  AssistantMessageResponse,
+  AssistantTopic,
+  CaseContext,
+  Scene,
 };
 
-export type CaseContext = {
-  id: string;
-  name?: string;
-  location?: string;
-  scenes?: Scene[];
-  [key: string]: unknown;
-};
-
-type ApiError = Error & { status?: number };
-
-export type Action =
-  | { type: "set_location"; query: string }
-  | { type: "set_vehicle_type"; vehicleId: string; value: "Automóvil" | "Carga" | "Motocicleta" | "Otro" }
-  | { type: "set_speed"; vehicleId: string; value: number }
-  | { type: "set_braking"; vehicleId: string; value: number }
-  | { type: "rotate_element"; vehicleId: string; heading: string }
-  | { type: "move_vehicle"; vehicleId: string; lat: number; lng: number }
-  | { type: "focus_scene_area"; lat: number; lng: number; zoom: number }
-  | { type: "set_impact_point"; lat?: number; lng?: number };
-
-export type AssistantTopic = { name: string; done: boolean };
-
-export type AssistantMessageResponse = {
-  answer: string;
-  actions: Action[];
-  quickReplies: string[];
-  progress: number;
-  ready: boolean;
-  topics: AssistantTopic[];
-  missing: string[];
-};
-
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "/api").replace(/\/$/, "");
+const API_BASE_URL = (
+  import.meta.env.VITE_API_URL ||
+  import.meta.env.VITE_API_BASE_URL ||
+  "http://localhost:8000/api/v1"
+).replace(/\/$/, "");
 const CASE_ID = import.meta.env.VITE_CASE_ID || "EXP-0248";
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
@@ -77,14 +61,13 @@ async function sendAssistantMessage(
   onToken: (token: string) => void,
   includeMetadata = false,
 ): Promise<string | AssistantMessageResponse> {
-  const response = await fetch(`${API_BASE_URL}/ai/chat`, {
+  const response = await fetch(`${API_BASE_URL}/assistant/chat`, {
     method: "POST",
-    credentials: "include",
     headers: {
       Accept: "text/event-stream, application/json",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ caseId: CASE_ID, message, context, stream: true }),
+    body: JSON.stringify({ case_id: CASE_ID, caseId: CASE_ID, message, context, stream: true }),
   });
 
   if (!response.ok) {

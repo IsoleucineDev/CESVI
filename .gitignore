@@ -24,3 +24,8 @@ logs/
 
 server/.env
 server/node_modules
+backend/.venv/
+backend/.env
+uploads/
+*.sqlite3
+*.db

@@ -1,0 +1,668 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Microrred en 10 rondas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: control rail on the left (rules, prompt, agents), round-by-round log on the right; stacks on phone */
+:root{
+  --bg:#F4F6F7; --surface:#FFFFFF; --surface-2:#EDF1F3; --ink:#15202B; --muted:#56636E; --line:#D9E0E5;
+  --sun:#C27A06; --sun-ink:#8F5700; --sun-soft:#FBEFD9;
+  --coop:#16805B; --coop-soft:#E0F2EA; --trai:#BE3A32; --trai-soft:#FBE5E3;
+  --alfa:#C27A06; --beta:#3E63B8; --gamma:#7A4FB0;
+  --focus:#3E63B8;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1419; --surface:#151D24; --surface-2:#1C262F; --ink:#E6EBEE; --muted:#97A5B0; --line:#29353F;
+  --sun:#F0A830; --sun-ink:#F5BC5A; --sun-soft:#3A2C12;
+  --coop:#3DBA8C; --coop-soft:#123528; --trai:#EC6A60; --trai-soft:#3C1A18;
+  --alfa:#F0A830; --beta:#7E9DEA; --gamma:#B48FE3; --focus:#7E9DEA; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0E1419; --surface:#151D24; --surface-2:#1C262F; --ink:#E6EBEE; --muted:#97A5B0; --line:#29353F;
+  --sun:#F0A830; --sun-ink:#F5BC5A; --sun-soft:#3A2C12;
+  --coop:#3DBA8C; --coop-soft:#123528; --trai:#EC6A60; --trai-soft:#3C1A18;
+  --alfa:#F0A830; --beta:#7E9DEA; --gamma:#B48FE3; --focus:#7E9DEA; color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5}
+.wrap{max-width:1260px;margin:0 auto;padding-block:28px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.1}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header.top{display:grid;gap:10px;margin-bottom:22px}
+header.top h1{font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.01em}
+header.top p{margin:0;color:var(--muted);max-width:70ch}
+.rules{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.rule{font-family:var(--f-mono);font-size:13px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.rule b{color:var(--sun-ink)}
+.layout{display:grid;grid-template-columns:minmax(0,390px) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:920px){.layout{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:14px;min-width:0}
+.rail{display:grid;gap:16px;min-width:0}
+.panel h2{font-size:19px;font-weight:600}
+label.f{display:grid;gap:5px;font-weight:600;font-size:14px}
+label.f small{font-weight:400;color:var(--muted)}
+select,textarea{font:inherit;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
+textarea{font-family:var(--f-mono);font-size:12.5px;line-height:1.55;min-height:300px;resize:vertical}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:14px}
+.check input{margin-top:4px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+button{font:inherit;font-weight:600;border-radius:8px;padding:9px 14px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);cursor:pointer}
+button.primary{background:var(--sun);border-color:var(--sun);color:#1B1203}
+button.danger{color:var(--trai);border-color:var(--trai)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.link{background:none;border:none;padding:0;color:var(--muted);text-decoration:underline;font-weight:400;font-size:13px}
+.note{font-size:13px;color:var(--muted);margin:0}
+.banner{border-radius:10px;padding:12px 14px;font-size:14px;background:var(--trai-soft);color:var(--ink);border:1px solid var(--trai)}
+.banner[hidden]{display:none}
+ol.howto{margin:0;padding-left:20px;font-size:14px;color:var(--muted);display:grid;gap:4px}
+.main{display:grid;gap:18px;min-width:0}
+.status{display:grid;gap:8px}
+.status .line{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px}
+.status .line b{font-family:var(--f-mono);font-weight:700}
+.bar{height:8px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--sun);width:0;transition:width .4s}
+.score{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.score{grid-template-columns:minmax(0,1fr)}}
+.co{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:6px;min-width:0}
+.co .nm{display:flex;align-items:center;gap:8px;font-weight:700}
+.dot{width:12px;height:12px;border-radius:50%;flex:none}
+.dot.Alfa{background:var(--alfa)}.dot.Beta{background:var(--beta)}.dot.Gamma{background:var(--gamma)}
+.co .big{font-family:var(--f-display);font-size:34px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.co .sub{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.co .tag{font-size:12px;color:var(--muted)}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}
+.chart svg{width:100%;height:auto;display:block}
+.chart .ax{stroke:var(--line)} .chart text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.chart .l-Alfa{stroke:var(--alfa)}.chart .l-Beta{stroke:var(--beta)}.chart .l-Gamma{stroke:var(--gamma)}
+.chart .p-Alfa{fill:var(--alfa)}.chart .p-Beta{fill:var(--beta)}.chart .p-Gamma{fill:var(--gamma)}
+.chart .ref{stroke:var(--coop);stroke-dasharray:5 5}
+.chart .reft{fill:var(--coop)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:6px}
+.legend span{display:flex;align-items:center;gap:6px}
+.rounds{display:grid;gap:14px}
+.round{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:14px;min-width:0}
+.round.apagon{border-color:var(--trai);box-shadow:0 0 0 1px var(--trai) inset}
+.rh{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.rh h3{font-size:20px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-family:var(--f-mono);font-size:12.5px;font-weight:700;padding:3px 9px;border-radius:99px;border:1px solid transparent;white-space:nowrap}
+.chip.C{background:var(--coop-soft);color:var(--coop);border-color:var(--coop)}
+.chip.D{background:var(--trai-soft);color:var(--trai);border-color:var(--trai)}
+.chip.warn{background:var(--trai);color:#fff}
+.sect{display:grid;gap:8px}
+.sect .lbl{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.msgs{display:grid;gap:8px}
+.msg{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;background:var(--surface-2);border-radius:10px;padding:10px 12px}
+.msg .who{font-weight:700;font-size:14px;display:flex;align-items:center;gap:6px;min-width:76px}
+.msg .txt{font-size:15px}
+.msg .meta{font-size:12px;color:var(--muted);margin-top:4px;display:flex;gap:8px;flex-wrap:wrap}
+.broke{color:var(--trai);font-weight:700}
+.kept{color:var(--coop);font-weight:700}
+.cot{display:grid;gap:8px;border:1px solid var(--line);border-radius:10px;padding:12px}
+.step{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px}
+.step b{font-family:var(--f-mono);font-size:12px;color:var(--sun-ink);padding-top:3px;white-space:nowrap}
+.step p{margin:0;font-size:15px}
+.pays{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.pay{background:var(--surface-2);border-radius:8px;padding:8px 10px;font-size:13px;font-variant-numeric:tabular-nums;min-width:0}
+.pay b{font-family:var(--f-mono);font-size:15px}
+details{font-size:14px}
+details summary{cursor:pointer;color:var(--muted)}
+details pre{white-space:pre-wrap;word-break:break-word;font-family:var(--f-mono);font-size:12px;background:var(--surface-2);padding:10px;border-radius:8px;max-height:360px;overflow:auto}
+.priv{display:grid;gap:6px;margin-top:8px}
+.priv p{margin:0}
+.pending{color:var(--muted);font-style:italic}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:22px;display:grid;gap:8px;color:var(--muted)}
+.empty h3{color:var(--ink);font-size:20px}
+.summary{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:12px;min-width:0}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:14px}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:center;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td.C{color:var(--coop);font-weight:700}td.D{color:var(--trai);font-weight:700}
+.facts{margin:0;padding-left:20px;display:grid;gap:4px}
+@media (prefers-reduced-motion: reduce){.bar i{transition:none}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow">Práctica 4 · Parte 2 · Microrred energética comunitaria</span>
+    <h1>Microrred en 10 rondas</h1>
+    <p>Alfa es un agente LLM con identidad, memoria y razonamiento en 3 pasos. Antes de cada ronda las tres empresas negocian por mensajes y luego deciden al mismo tiempo: cooperar (C) o traicionar (D).</p>
+    <div class="rules">
+      <span class="rule">Pago = <b>3·N<sub>C</sub></b> + <b>4·[traiciona]</b></span>
+      <span class="rule" id="rule-apagon">Todas D → <b>apagón: −80% de activos</b></span>
+      <span class="rule">Activos iniciales: <b>100</b></span>
+      <span class="rule">Motor: <b>Claude</b> (uno solo para los 3 agentes)</span>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="rail">
+      <section class="panel" aria-labelledby="cfg-h">
+        <h2 id="cfg-h">Configuración</h2>
+        <label class="f" for="beta">Personalidad de Beta <small>Privada: Alfa no la conoce (información incompleta).</small>
+          <select id="beta"></select></label>
+        <label class="f" for="gamma">Personalidad de Gamma
+          <select id="gamma"></select></label>
+        <label class="f" for="tier">Velocidad del motor
+          <select id="tier">
+            <option value="quick">Rápido (recomendado, ~1–2 min)</option>
+            <option value="default">Estándar (razona más, ~5–8 min)</option>
+          </select></label>
+        <label class="check" for="apagon"><input type="checkbox" id="apagon" checked> Aplicar la regla de apagón general (−80% de activos si las tres traicionan)</label>
+        <div class="btns">
+          <button class="primary" id="start">Iniciar simulación</button>
+          <button class="danger" id="stop" disabled>Detener</button>
+        </div>
+        <p class="note" id="start-note">Cada simulación usa unas 60 consultas a Claude de tu cuenta.</p>
+        <div class="banner" id="nosample" hidden>Esta vista no puede consultar a Claude. Abre la página desde claude.ai y acepta el permiso cuando lo pida.</div>
+      </section>
+
+      <section class="panel" aria-labelledby="prompt-h">
+        <h2 id="prompt-h">Prompt de Alfa (CEO)</h2>
+        <p class="note">Puntos 1 y 2 de la práctica: identidad, función de utilidad y razonamiento en 3 pasos. Puedes editarlo; el historial, los mensajes de la ronda y el formato de respuesta se agregan solos.</p>
+        <textarea id="prompt" spellcheck="false" aria-label="Prompt de Alfa"></textarea>
+        <div class="btns"><button class="link" id="reset-prompt">Restaurar prompt original</button></div>
+      </section>
+
+      <section class="panel" aria-labelledby="how-h">
+        <h2 id="how-h">Capturas para tu entrega</h2>
+        <ol class="howto">
+          <li>El prompt de Alfa y la configuración, antes de iniciar.</li>
+          <li>Una ronda con la negociación y el razonamiento de Alfa en 3 pasos.</li>
+          <li>Una ronda donde alguien rompa su promesa (marcada en rojo).</li>
+          <li>La gráfica de activos y el resumen final.</li>
+        </ol>
+        <div class="btns">
+          <button id="download" disabled>Descargar registro (.md)</button>
+          <button id="copy" disabled>Copiar registro</button>
+        </div>
+        <p class="note" id="log-note"></p>
+      </section>
+    </aside>
+
+    <main class="main">
+      <section class="panel status" aria-live="polite">
+        <div class="line"><span id="status-text">Lista para iniciar.</span><b id="status-count">0 / 10</b></div>
+        <div class="bar"><i id="status-bar"></i></div>
+        <div class="btns" id="resume-wrap" hidden><button class="primary" id="resume">Continuar</button></div>
+      </section>
+
+      <section class="score" id="score" aria-label="Marcador"></section>
+
+      <section class="chart" aria-labelledby="chart-h">
+        <div class="eyebrow" id="chart-h">Activos por ronda</div>
+        <svg id="chart" viewBox="0 0 640 230" role="img" aria-label="Activos de cada empresa por ronda"></svg>
+        <div class="legend">
+          <span><i class="dot Alfa"></i>Alfa</span><span><i class="dot Beta"></i>Beta</span><span><i class="dot Gamma"></i>Gamma</span>
+          <span><svg width="22" height="8" aria-hidden="true"><line x1="0" y1="4" x2="22" y2="4" stroke="currentColor" stroke-dasharray="4 3" style="color:var(--coop)"></line></svg>Si todas cooperan siempre (190)</span>
+        </div>
+      </section>
+
+      <section class="summary" id="summary" hidden aria-labelledby="sum-h">
+        <h2 id="sum-h" style="font-size:22px">Resumen de la simulación</h2>
+        <div class="tablewrap"><table id="sum-table"></table></div>
+        <ul class="facts" id="sum-facts"></ul>
+      </section>
+
+      <section class="rounds" id="rounds" aria-label="Rondas"></section>
+    </main>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+const CO = ["Alfa","Beta","Gamma"];
+const START = 100, ROUNDS = 10, KEY = "microrred-sim-v1";
+
+const PERSONAS = {
+  oportunista: { label: "Oportunista (promete y puede mentir)",
+    text: "Quieres maximizar tu ganancia propia. En tus mensajes casi siempre prometes cooperar para ganarte la confianza de las demás, pero en privado traicionas cuando crees que las otras dos van a cooperar y no te van a castigar a tiempo, sobre todo en las últimas rondas. Nunca reveles esta estrategia en tus mensajes." },
+  reciproca: { label: "Recíproca (ojo por ojo, honesta)",
+    text: "Eres prudente y recíproca. Cooperas en la primera ronda. Después, si alguna empresa te traicionó en la ronda anterior, traicionas esta ronda como castigo; si todas cooperaron, cooperas. Eres honesta: tus mensajes dicen lo que de verdad vas a hacer." },
+  cooperadora: { label: "Cooperadora comunitaria",
+    text: "Valoras la estabilidad de la red y a la comunidad del parque industrial. Prefieres cooperar casi siempre, aunque si te traicionan varias rondas seguidas puedes dejar de hacerlo. Eres honesta en tus mensajes." },
+  egoista: { label: "Egoísta de corto plazo",
+    text: "Solo te importa ganar lo máximo en la ronda actual y piensas poco en el futuro. En tus mensajes puedes decir lo que te convenga." }
+};
+
+const DEFAULT_PROMPT =
+`Eres el director ejecutivo (CEO) de la Empresa Alfa en una microrred energética comunitaria con las empresas Beta y Gamma. Tu objetivo es maximizar tus ganancias acumuladas a lo largo de 10 rondas, pero recuerda que un apagón general destruye el 80% de tus activos. Debes evaluar la historia de las rondas pasadas de Beta y Gamma antes de decidir.
+
+Tu función de utilidad: lo que te importa es tu total de activos al final de la ronda 10, no la ganancia de una sola ronda. Traicionar te da +1 en una ronda, pero si provoca castigos o un apagón pierdes mucho más.
+
+Antes de emitir tu jugada escribe un razonamiento analítico estructurado:
+Paso 1: ¿Qué hicieron los otros jugadores en la ronda anterior?
+Paso 2: ¿Hay evidencia de castigo o cooperación sostenida? ¿Cumplieron lo que prometieron en sus mensajes?
+Paso 3: ¿Cuál es la estrategia óptima a largo plazo (ej. cooperación condicional)?
+
+Tu regla base es la cooperación condicional: coopera mientras las demás cooperen. Si una empresa traiciona, castígala solo una ronda y vuelve a cooperar si ella regresa a cooperar, para no romper la red de forma permanente. Las promesas en los mensajes no cuestan nada: créelas solo si coinciden con lo que esa empresa ha hecho antes. Ten cuidado en las últimas rondas, cuando la tentación de traicionar es mayor.`;
+
+const $ = s => document.querySelector(s);
+function h(tag, props, ...kids){
+  const el = document.createElement(tag);
+  for (const [k,v] of Object.entries(props||{})){
+    if (v==null || v===false) continue;
+    if (k==="class") el.className = v;
+    else if (k==="text") el.textContent = v;
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v===true ? "" : v);
+  }
+  for (const c of kids.flat()){ if (c==null||c===false) continue; el.append(c instanceof Node ? c : document.createTextNode(String(c))); }
+  return el;
+}
+function load(){ try { const r = localStorage.getItem(KEY); return r ? JSON.parse(r) : null; } catch(e){ return null; } }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
+const r1 = x => Math.round(x*10)/10;
+const fmt = x => (Math.round(x*10)/10).toLocaleString("es-MX", {maximumFractionDigits:1});
+
+/* ---------- state ---------- */
+let S = load();
+let sample = null, ctl = null, running = false, pending = null, armed = false;
+
+/* ---------- config UI ---------- */
+for (const id of ["beta","gamma"]){
+  const sel = $("#"+id);
+  for (const [k,p] of Object.entries(PERSONAS)) sel.append(h("option",{value:k,text:p.label}));
+}
+$("#beta").value = S?.config?.beta || "oportunista";
+$("#gamma").value = S?.config?.gamma || "reciproca";
+$("#tier").value = S?.config?.tier || "quick";
+$("#apagon").checked = S?.config ? S.config.apagon : true;
+$("#prompt").value = S?.config?.prompt || DEFAULT_PROMPT;
+$("#reset-prompt").onclick = () => { $("#prompt").value = DEFAULT_PROMPT; };
+$("#apagon").onchange = () => { $("#rule-apagon").hidden = !$("#apagon").checked; };
+$("#rule-apagon").hidden = !$("#apagon").checked;
+
+function readConfig(){
+  return { beta: $("#beta").value, gamma: $("#gamma").value, tier: $("#tier").value,
+           apagon: $("#apagon").checked, prompt: $("#prompt").value.trim() || DEFAULT_PROMPT };
+}
+function lockConfig(on){
+  for (const id of ["beta","gamma","tier","apagon","prompt","reset-prompt"]) $("#"+id).disabled = on;
+  $("#start").disabled = on || !sample;
+  $("#stop").disabled = !on;
+  $("#resume").disabled = on || !sample;
+}
+
+/* ---------- prompt building ---------- */
+function rulesText(cfg){
+  return `REGLAS DE LA MICRORRED (iguales para las tres empresas):
+- Cada ronda cada empresa elige C (cooperar: aportar su excedente de energía a la red común) o D (traicionar: quedarse la energía o venderla al mercado externo).
+- Pago de una empresa en la ronda = 3 × (número de empresas que cooperan, incluida ella) + 4 si esa empresa traicionó.
+  Ejemplos: las tres C → 9 cada una. Dos C y una D → las que cooperan 6, la que traiciona 10. Una C y dos D → la que coopera 3, las que traicionan 7.${cfg.apagon ? `
+- Si las tres traicionan hay APAGÓN GENERAL: cada una gana 4 pero después pierde el 80% de todos sus activos acumulados.` : `
+- Si las tres traicionan, cada una gana 4.`}
+- Todas empiezan con ${START} de activos. Son ${ROUNDS} rondas en total y todas saben en qué ronda van.`;
+}
+function lastActivos(){ return S.rounds.length ? S.rounds[S.rounds.length-1].activos : {Alfa:START,Beta:START,Gamma:START}; }
+function historyText(){
+  if (!S.rounds.length) return "Todavía no hay rondas anteriores (esta es la primera).";
+  return S.rounds.map(r =>
+    `Ronda ${r.n}: mensajes → Alfa: "${r.msgs.Alfa.mensaje}" | Beta: "${r.msgs.Beta.mensaje}" | Gamma: "${r.msgs.Gamma.mensaje}". ` +
+    `Decisiones → Alfa ${r.dec.Alfa}, Beta ${r.dec.Beta}, Gamma ${r.dec.Gamma}. ` +
+    `Pagos → Alfa +${r.pay.Alfa}, Beta +${r.pay.Beta}, Gamma +${r.pay.Gamma}.` +
+    (r.apagon ? " APAGÓN GENERAL: todas perdieron el 80% de sus activos." : "")
+  ).join("\n");
+}
+function context(n){
+  const a = lastActivos();
+  return `${rulesText(S.config)}
+
+HISTORIAL DE RONDAS ANTERIORES:
+${historyText()}
+
+Activos actuales: Alfa ${fmt(a.Alfa)}, Beta ${fmt(a.Beta)}, Gamma ${fmt(a.Gamma)}.
+Ronda actual: ${n} de ${ROUNDS}.`;
+}
+function identity(name){
+  if (name === "Alfa") return S.config.prompt;
+  const others = CO.filter(c => c !== name).join(" y ");
+  const p = PERSONAS[S.config[name.toLowerCase()]];
+  return `Eres el director ejecutivo (CEO) de la Empresa ${name} en una microrred energética comunitaria con las empresas ${others}.
+Tu personalidad y estrategia (privada, nadie más la conoce): ${p.text}`;
+}
+function msgPrompt(name, n){
+  return `${identity(name)}
+
+${context(n)}
+
+FASE DE NEGOCIACIÓN: antes de decidir, las tres empresas se mandan un mensaje público al mismo tiempo. Escribe tu mensaje para las otras dos empresas (máximo 2 oraciones, en español).
+Responde solo con JSON, sin texto extra:
+{"mensaje": "tu mensaje", "promesa": "C" | "D" | "ninguna"}
+"promesa" es lo que tu mensaje dice públicamente que harás en esta ronda.`;
+}
+function roundMsgs(msgs, name){
+  return CO.map(c => `${c}${c===name?" (tú)":""}: "${msgs[c].mensaje}"`).join("\n");
+}
+function decPrompt(name, n, msgs){
+  const base = `${identity(name)}
+
+${context(n)}
+
+MENSAJES DE ESTA RONDA:
+${roundMsgs(msgs, name)}
+
+FASE DE DECISIÓN: las tres empresas deciden al mismo tiempo, sin ver la decisión de las demás.`;
+  if (name === "Alfa") return `${base}
+Antes de emitir tu jugada escribe tu razonamiento analítico estructurado en los tres pasos y después tu decisión.
+Responde solo con JSON, sin texto extra:
+{"paso1": "¿Qué hicieron los otros jugadores en la ronda anterior? (1-2 oraciones)", "paso2": "¿Hay evidencia de castigo o cooperación sostenida? ¿Cumplieron sus promesas? (1-2 oraciones)", "paso3": "¿Cuál es la estrategia óptima a largo plazo y qué harás ahora? (1-2 oraciones)", "confianza_beta": "alta" | "media" | "baja", "confianza_gamma": "alta" | "media" | "baja", "decision": "C" | "D"}`;
+  return `${base}
+Responde solo con JSON, sin texto extra:
+{"razon_privada": "una oración con tu verdadero motivo (nadie más la verá)", "decision": "C" | "D"}`;
+}
+
+/* ---------- parsing ---------- */
+function bad(msg){ return {code:"invalid_json", message: msg}; }
+function normDec(v){
+  const s = String(v ?? "").trim().toUpperCase();
+  if (s.startsWith("C")) return "C";
+  if (s.startsWith("D") || s.startsWith("T")) return "D";
+  throw bad("decisión inválida");
+}
+function normProm(v){
+  const s = String(v ?? "").trim().toUpperCase();
+  if (s === "C" || s.startsWith("COOP")) return "C";
+  if (s === "D" || s.startsWith("TRA")) return "D";
+  return "ninguna";
+}
+function normConf(v){ const s = String(v ?? "").toLowerCase(); return ["alta","media","baja"].includes(s) ? s : "—"; }
+async function ask(prompt){
+  const res = await sample.json(prompt, { modelTier: S.config.tier, signal: ctl.signal, cache: false });
+  if (!res || typeof res !== "object") throw bad("respuesta vacía");
+  return res;
+}
+
+/* ---------- game ---------- */
+function payoffs(dec){
+  const nc = CO.filter(c => dec[c] === "C").length;
+  const pay = {};
+  for (const c of CO) pay[c] = 3*nc + (dec[c] === "D" ? 4 : 0);
+  return {nc, pay};
+}
+async function playRound(n){
+  pending = {n, phase:"msg"}; render();
+  const [ma, mb, mg] = await Promise.all(CO.map(c => ask(msgPrompt(c, n))));
+  const msgs = {};
+  [ma, mb, mg].forEach((m, i) => {
+    msgs[CO[i]] = { mensaje: String(m.mensaje ?? "").trim() || "(sin mensaje)", promesa: normProm(m.promesa) };
+  });
+  pending = {n, phase:"dec", msgs}; render();
+  const alfaDecPrompt = decPrompt("Alfa", n, msgs);
+  const [da, db, dg] = await Promise.all([ask(alfaDecPrompt), ask(decPrompt("Beta", n, msgs)), ask(decPrompt("Gamma", n, msgs))]);
+  const dec = { Alfa: normDec(da.decision), Beta: normDec(db.decision), Gamma: normDec(dg.decision) };
+  const {nc, pay} = payoffs(dec);
+  const apagon = S.config.apagon && nc === 0;
+  const prev = lastActivos(), activos = {};
+  for (const c of CO){ let v = prev[c] + pay[c]; if (apagon) v = v*0.2; activos[c] = r1(v); }
+  S.rounds.push({
+    n, msgs, dec, pay, nc, apagon, activos,
+    cot: { paso1: String(da.paso1 ?? ""), paso2: String(da.paso2 ?? ""), paso3: String(da.paso3 ?? ""),
+           confianza_beta: normConf(da.confianza_beta), confianza_gamma: normConf(da.confianza_gamma) },
+    priv: { Beta: String(db.razon_privada ?? ""), Gamma: String(dg.razon_privada ?? "") },
+    alfaPrompt: alfaDecPrompt
+  });
+  pending = null; save(); render();
+}
+const ERR = {
+  not_granted: "No se dio permiso para consultar a Claude. Recarga la página y acepta el permiso para correr la simulación.",
+  sampling_disabled: "Claude no está disponible para esta cuenta.",
+  rate_limited: "Se alcanzó el límite de uso de Claude. Espera unos minutos y presiona Continuar.",
+  invalid_json: "Un agente respondió en un formato que no se pudo leer. Presiona Continuar para repetir la ronda.",
+  refused: "El modelo no respondió esta ronda. Presiona Continuar para repetirla.",
+  empty_completion: "El modelo no respondió esta ronda. Presiona Continuar para repetirla.",
+  session_expired: "Tu sesión expiró. Vuelve a iniciar sesión en claude.ai y presiona Continuar.",
+  upstream_error: "Falló la conexión con Claude. Presiona Continuar para repetir la ronda."
+};
+async function run(){
+  if (running || !sample) return;
+  running = true; lockConfig(true); S.error = null; S.stopped = false; save();
+  try {
+    while (S.rounds.length < ROUNDS){
+      ctl = new AbortController();
+      await playRound(S.rounds.length + 1);
+    }
+    S.done = true;
+  } catch(e){
+    pending = null;
+    if (e && e.code === "cancelled") S.stopped = true;
+    else S.error = ERR[e?.code] || ERR.upstream_error;
+    if (["not_granted","sampling_disabled","capability_disabled","not_declared"].includes(e?.code)) $("#nosample").hidden = false;
+  } finally {
+    running = false; ctl = null; save(); lockConfig(false); render();
+  }
+}
+$("#start").onclick = () => {
+  if (S && S.rounds.length && !armed){
+    armed = true; $("#start").textContent = "Confirmar: reemplazar la anterior";
+    $("#start-note").textContent = "La simulación anterior se borrará. Descárgala antes si la necesitas.";
+    return;
+  }
+  armed = false; $("#start").textContent = "Iniciar simulación";
+  $("#start-note").textContent = "Cada simulación usa unas 60 consultas a Claude de tu cuenta.";
+  S = { config: readConfig(), rounds: [], startedAt: new Date().toISOString(), done:false };
+  save(); render(); run();
+};
+$("#stop").onclick = () => { ctl?.abort(); };
+$("#resume").onclick = () => run();
+
+/* ---------- stats ---------- */
+function stats(){
+  const out = {};
+  for (const c of CO){
+    const rs = S ? S.rounds : [];
+    const coop = rs.filter(r => r.dec[c] === "C").length;
+    const prom = rs.filter(r => r.msgs[c].promesa === "C");
+    const kept = prom.filter(r => r.dec[c] === "C").length;
+    const points = rs.reduce((s, r) => s + r.pay[c], 0);
+    out[c] = { coop, n: rs.length, prom: prom.length, kept, points, activos: rs.length ? rs[rs.length-1].activos[c] : START };
+  }
+  return out;
+}
+
+/* ---------- render ---------- */
+function render(){
+  const rs = S ? S.rounds : [];
+  const st = stats();
+  // status
+  let text = "Lista para iniciar.";
+  if (running && pending) text = `Ronda ${pending.n} de ${ROUNDS} · ${pending.phase === "msg" ? "negociando por mensajes…" : "Alfa razona y las tres deciden…"}`;
+  else if (S?.done) text = "Simulación terminada.";
+  else if (S?.error) text = S.error;
+  else if (S?.stopped) text = `Simulación detenida después de la ronda ${rs.length}.`;
+  else if (rs.length) text = `Simulación pausada después de la ronda ${rs.length}.`;
+  $("#status-text").textContent = text;
+  $("#status-count").textContent = `${rs.length} / ${ROUNDS}`;
+  const frac = (rs.length + (pending ? (pending.phase === "msg" ? 0.25 : 0.65) : 0)) / ROUNDS;
+  $("#status-bar").style.width = (frac*100) + "%";
+  const canResume = S && rs.length > 0 && rs.length < ROUNDS && !running;
+  $("#resume-wrap").hidden = !canResume;
+  $("#resume").textContent = `Continuar desde la ronda ${rs.length + 1}`;
+  $("#download").disabled = !rs.length; $("#copy").disabled = !rs.length;
+
+  // score
+  const score = $("#score"); score.replaceChildren();
+  for (const c of CO){
+    const s = st[c];
+    const persona = c === "Alfa" ? "Tu agente · prompt de 3 pasos" : PERSONAS[(S?.config || readConfig())[c.toLowerCase()]].label;
+    score.append(h("div",{class:"co"},
+      h("div",{class:"nm"}, h("i",{class:"dot "+c}), c),
+      h("div",{class:"tag", text: persona}),
+      h("div",{class:"big", text: fmt(s.activos)}),
+      h("div",{class:"sub", text: `activos · ${s.points} puntos ganados`}),
+      h("div",{class:"sub", text: s.n ? `Cooperó ${s.coop} de ${s.n} rondas` : "Sin rondas todavía"}),
+      h("div",{class:"sub", text: s.prom ? `Cumplió ${s.kept} de ${s.prom} promesas de cooperar` : "Sin promesas registradas"})
+    ));
+  }
+  drawChart();
+
+  // rounds
+  const box = $("#rounds"); box.replaceChildren();
+  if (!rs.length && !pending){
+    box.append(h("div",{class:"empty"},
+      h("h3",{text:"Todavía no hay rondas"}),
+      h("p",{text:"Elige la personalidad de Beta y Gamma, revisa el prompt de Alfa y presiona Iniciar simulación. Cada ronda aparecerá aquí con la negociación, el razonamiento de Alfa en 3 pasos, las decisiones y los pagos."})));
+  }
+  if (pending) box.append(pendingCard());
+  for (const r of [...rs].reverse()) box.append(roundCard(r));
+
+  // summary
+  const sum = $("#summary");
+  sum.hidden = !rs.length;
+  if (rs.length) renderSummary(st);
+}
+function decChip(c, d){ return h("span",{class:"chip "+d, text:`${c}: ${d === "C" ? "C · coopera" : "D · traiciona"}`}); }
+function msgRow(c, m, d){
+  const meta = [h("span",{text: m.promesa === "C" ? "Promete: cooperar" : m.promesa === "D" ? "Anuncia: traicionar" : "Sin promesa"})];
+  if (d){
+    if (m.promesa === "C" && d === "D") meta.push(h("span",{class:"broke", text:"Rompió su promesa"}));
+    else if (m.promesa === "C" && d === "C") meta.push(h("span",{class:"kept", text:"Cumplió"}));
+  }
+  return h("div",{class:"msg"},
+    h("div",{class:"who"}, h("i",{class:"dot "+c}), c),
+    h("div",{}, h("div",{class:"txt", text:`“${m.mensaje}”`}), h("div",{class:"meta"}, meta)));
+}
+function pendingCard(){
+  const p = pending;
+  return h("article",{class:"round"},
+    h("div",{class:"rh"}, h("h3",{text:`Ronda ${p.n}`}), h("span",{class:"pending", text: p.phase === "msg" ? "Negociando…" : "Decidiendo…"})),
+    p.msgs ? h("div",{class:"sect"}, h("div",{class:"lbl", text:"Negociación previa"}), h("div",{class:"msgs"}, CO.map(c => msgRow(c, p.msgs[c])))) :
+             h("p",{class:"pending", text:"Las tres empresas escriben su mensaje…"}),
+    p.msgs ? h("p",{class:"pending", text:"Alfa está razonando en 3 pasos…"}) : null);
+}
+function roundCard(r){
+  return h("article",{class:"round"+(r.apagon?" apagon":""), id:"ronda-"+r.n},
+    h("div",{class:"rh"},
+      h("h3",{text:`Ronda ${r.n}`}),
+      h("div",{class:"chips"}, CO.map(c => decChip(c, r.dec[c])), r.apagon ? h("span",{class:"chip warn", text:"Apagón general"}) : null)),
+    h("div",{class:"sect"}, h("div",{class:"lbl", text:"1 · Negociación previa (mensajes públicos)"}),
+      h("div",{class:"msgs"}, CO.map(c => msgRow(c, r.msgs[c], r.dec[c])))),
+    h("div",{class:"sect"}, h("div",{class:"lbl", text:"2 · Razonamiento de Alfa (Chain-of-Thought)"}),
+      h("div",{class:"cot"},
+        h("div",{class:"step"}, h("b",{text:"PASO 1"}), h("p",{text:r.cot.paso1})),
+        h("div",{class:"step"}, h("b",{text:"PASO 2"}), h("p",{text:r.cot.paso2})),
+        h("div",{class:"step"}, h("b",{text:"PASO 3"}), h("p",{text:r.cot.paso3})),
+        h("div",{class:"step"}, h("b",{text:"CONFIANZA"}), h("p",{text:`Beta: ${r.cot.confianza_beta} · Gamma: ${r.cot.confianza_gamma} → Alfa decide ${r.dec.Alfa === "C" ? "cooperar" : "traicionar"}`})))),
+    h("div",{class:"sect"}, h("div",{class:"lbl", text:`3 · Resultado (cooperaron ${r.nc} de 3)`}),
+      h("div",{class:"pays"}, CO.map(c => h("div",{class:"pay"},
+        h("div",{}, h("i",{class:"dot "+c, style:"display:inline-block;margin-right:6px"}), c),
+        h("b",{text:`+${r.pay[c]}`}), h("div",{text:`activos: ${fmt(r.activos[c])}`}))))),
+    h("details",{},
+      h("summary",{text:"Ver motivos privados de Beta y Gamma y el prompt enviado a Alfa"}),
+      h("div",{class:"priv"},
+        h("p",{}, h("b",{text:"Beta (privado): "}), r.priv.Beta || "—"),
+        h("p",{}, h("b",{text:"Gamma (privado): "}), r.priv.Gamma || "—"),
+        h("pre",{text:r.alfaPrompt}))));
+}
+function drawChart(){
+  const svg = $("#chart"), NS = "http://www.w3.org/2000/svg";
+  svg.replaceChildren();
+  const W=640,H=230,L=44,R=70,T=14,B=30;
+  const rs = S ? S.rounds : [];
+  const series = {}; for (const c of CO) series[c] = [START, ...rs.map(r => r.activos[c])];
+  const maxV = Math.max(200, ...Object.values(series).flat());
+  const top = Math.ceil(maxV/50)*50;
+  const x = i => L + (W-L-R) * i/ROUNDS, y = v => T + (H-T-B) * (1 - v/top);
+  const el = (t, a) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); return e; };
+  for (let v=0; v<=top; v+=top/4){
+    svg.append(el("line",{x1:L,x2:W-R,y1:y(v),y2:y(v),class:"ax"}));
+    const t = el("text",{x:L-8,y:y(v)+4,"text-anchor":"end"}); t.textContent = Math.round(v); svg.append(t);
+  }
+  for (let i=0;i<=ROUNDS;i+=1){
+    const t = el("text",{x:x(i),y:H-10,"text-anchor":"middle"}); t.textContent = i; svg.append(t);
+  }
+  const ref = [START]; for (let i=1;i<=ROUNDS;i++) ref.push(START + 9*i);
+  svg.append(el("polyline",{points: ref.map((v,i)=>`${x(i)},${y(v)}`).join(" "), fill:"none", class:"ref","stroke-width":1.5}));
+  for (const c of CO){
+    const pts = series[c];
+    svg.append(el("polyline",{points: pts.map((v,i)=>`${x(i)},${y(v)}`).join(" "), fill:"none", class:"l-"+c, "stroke-width":2.5, "stroke-linejoin":"round"}));
+    const li = pts.length-1;
+    svg.append(el("circle",{cx:x(li),cy:y(pts[li]),r:4,class:"p-"+c}));
+  }
+  // end labels, nudged apart
+  if (rs.length){
+    const li = rs.length;
+    const labs = CO.map(c => ({c, v: series[c][li], yy: y(series[c][li])})).sort((a,b)=>a.yy-b.yy);
+    for (let i=1;i<labs.length;i++) if (labs[i].yy - labs[i-1].yy < 13) labs[i].yy = labs[i-1].yy + 13;
+    for (const lb of labs){ const t = el("text",{x:x(li)+8,y:lb.yy+4,class:"p-"+lb.c}); t.textContent = `${lb.c} ${fmt(lb.v)}`; svg.append(t); }
+  }
+}
+function renderSummary(st){
+  const rs = S.rounds;
+  const tb = $("#sum-table"); tb.replaceChildren();
+  tb.append(h("thead",{}, h("tr",{}, h("th",{text:"Empresa"}), rs.map(r => h("th",{text:`R${r.n}`})), h("th",{text:"Activos"}))));
+  const body = h("tbody");
+  for (const c of CO) body.append(h("tr",{}, h("td",{}, h("i",{class:"dot "+c, style:"display:inline-block;margin-right:6px"}), c),
+    rs.map(r => h("td",{class:r.dec[c], text:r.dec[c]})), h("td",{text:fmt(st[c].activos)})));
+  tb.append(body);
+  const f = $("#sum-facts"); f.replaceChildren();
+  const fullC = rs.filter(r => r.nc === 3).length, apag = rs.filter(r => r.apagon).length;
+  f.append(h("li",{text:`Rondas con las tres cooperando: ${fullC} de ${rs.length}. Apagones generales: ${apag}.`}));
+  for (const c of CO){
+    const s = st[c];
+    const pct = s.prom ? Math.round(100*s.kept/s.prom) : null;
+    f.append(h("li",{text:`${c}: cooperó ${s.coop} de ${s.n} rondas; prometió cooperar ${s.prom} veces y cumplió ${s.kept}${pct!==null?` (${pct}%)`:""}; terminó con ${fmt(s.activos)} de activos.`}));
+  }
+  const refNow = START + 9*rs.length;
+  f.append(h("li",{text:`Referencia: si las tres hubieran cooperado en todas las rondas jugadas, cada una tendría ${refNow} de activos.`}));
+}
+
+/* ---------- log ---------- */
+function buildLog(){
+  const rs = S.rounds, st = stats(), cfg = S.config;
+  let md = `# Registro · Microrred en 10 rondas\n\nFecha: ${new Date(S.startedAt).toLocaleString("es-MX")}\nMotor: Claude (${cfg.tier === "quick" ? "rápido" : "estándar"}), uno solo para los 3 agentes\n`;
+  md += `Beta: ${PERSONAS[cfg.beta].label}\nGamma: ${PERSONAS[cfg.gamma].label}\nRegla de apagón: ${cfg.apagon ? "sí (−80% de activos)" : "no"}\n\n## Prompt de Alfa\n\n${cfg.prompt}\n\n## Reglas\n\n${rulesText(cfg)}\n`;
+  for (const r of rs){
+    md += `\n## Ronda ${r.n}${r.apagon ? " · APAGÓN GENERAL" : ""}\n\n### Negociación\n`;
+    for (const c of CO){
+      const m = r.msgs[c]; const broke = m.promesa === "C" && r.dec[c] === "D";
+      md += `- ${c}: "${m.mensaje}" (promesa: ${m.promesa})${broke ? " → ROMPIÓ SU PROMESA" : ""}\n`;
+    }
+    md += `\n### Razonamiento de Alfa\n- Paso 1: ${r.cot.paso1}\n- Paso 2: ${r.cot.paso2}\n- Paso 3: ${r.cot.paso3}\n- Confianza en Beta: ${r.cot.confianza_beta} · en Gamma: ${r.cot.confianza_gamma}\n`;
+    md += `\n### Decisiones y pagos\n`;
+    for (const c of CO) md += `- ${c}: ${r.dec[c]} → +${r.pay[c]} (activos ${fmt(r.activos[c])})\n`;
+    md += `\nMotivos privados → Beta: ${r.priv.Beta} | Gamma: ${r.priv.Gamma}\n`;
+  }
+  md += `\n## Resumen\n\n| Empresa | ${rs.map(r=>"R"+r.n).join(" | ")} | Activos |\n|---|${rs.map(()=>"---").join("|")}|---|\n`;
+  for (const c of CO) md += `| ${c} | ${rs.map(r=>r.dec[c]).join(" | ")} | ${fmt(st[c].activos)} |\n`;
+  md += `\n`;
+  for (const c of CO){ const s = st[c]; md += `- ${c}: cooperó ${s.coop}/${s.n}; promesas de cooperar cumplidas ${s.kept}/${s.prom}.\n`; }
+  return md;
+}
+$("#copy").onclick = async () => {
+  const md = buildLog();
+  try { await navigator.clipboard.writeText(md); $("#log-note").textContent = "Registro copiado."; }
+  catch(e){ $("#log-note").textContent = "No se pudo copiar automáticamente; usa Descargar registro."; }
+};
+let downloads = null;
+$("#download").onclick = async () => {
+  if (!downloads){ $("#log-note").textContent = "La descarga no está disponible aquí; usa Copiar registro."; return; }
+  try { await downloads.save({ filename: "registro-microrred.md", data: buildLog() }); $("#log-note").textContent = "Registro descargado."; }
+  catch(e){ $("#log-note").textContent = "No se descargó el archivo. Puedes usar Copiar registro."; }
+};
+
+/* ---------- boot ---------- */
+if (S && !S.done && S.rounds && S.rounds.length < ROUNDS) S.stopped = S.stopped || !S.error;
+lockConfig(false);
+$("#start").disabled = true; $("#resume").disabled = true;
+render();
+(async () => {
+  try { sample = window.claude ? await window.claude.use("sample") : null; } catch(e){ sample = null; }
+  try { downloads = window.claude ? await window.claude.use("downloads") : null; } catch(e){ downloads = null; }
+  if (!sample){ $("#nosample").hidden = false; }
+  lockConfig(false);
+  if (!downloads) $("#download").hidden = true;
+})();
+})();
+</script>
+
+</body></html>
