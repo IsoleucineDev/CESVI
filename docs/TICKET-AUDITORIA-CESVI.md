@@ -154,7 +154,7 @@ Decisiones clave:
 - [ ] `DECISIONES.md` (nuevo): registrar la elección de **backend único** (FastAPI recomendado), unidades (SI: m, s, m/s, grados) y sistema de coordenadas.
 - [ ] `goose-x86_64-unknown-linux-gnu.tar.bz2`: eliminar del repo (≈76 MB) y purgar del historial si procede.
 - [ ] `Microrred en 10 rondas.html`: eliminar (no pertenece al proyecto).
-- [ ] `.gitignore`: añadir `__pycache__/`, `*.pyc`, `.pytest_cache/`; quitar los `.pyc` ya versionados.
+- [x] `.gitignore`: añadir `__pycache__/`, `*.pyc`, `.pytest_cache/`; quitar los `.pyc` ya versionados.
 - [ ] `package-lock.json` **o** `pnpm-lock.yaml`: dejar solo el del gestor declarado en `packageManager` (pnpm).
 - [ ] `setup.sh`: retirar o convertir en documentación; hoy sobrescribe archivos del código fuente.
 - [ ] `.github/agents/my-agent.agent.md`: revisar/eliminar; contiene un prompt genérico ajeno al proyecto.

@@ -31,3 +31,6 @@ uploads/
 *.db
 .env.local
 *.bak
+__pycache__/
+*.pyc
+.pytest_cache/
