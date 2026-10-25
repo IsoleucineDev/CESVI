@@ -30,6 +30,8 @@ uploads/
 *.sqlite3
 *.db
 .env.local
+!.env.example
+!server/.env.example
 *.bak
 __pycache__/
 *.pyc

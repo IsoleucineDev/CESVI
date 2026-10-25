@@ -12,7 +12,7 @@ export type AssistantReply = {
   missing: string[]
 }
 
-const BASE = (import.meta.env.VITE_API_BASE_URL || "http://localhost:3001/api").replace(/\/$/, "")
+const BASE = (import.meta.env.VITE_API_BASE_URL || "/api").replace(/\/$/, "")
 const CASE_ID = import.meta.env.VITE_CASE_ID || "EXP-0248"
 
 export async function sendToAssistant(
