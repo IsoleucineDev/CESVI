@@ -155,7 +155,7 @@ Decisiones clave:
 - [ ] `goose-x86_64-unknown-linux-gnu.tar.bz2`: eliminar del repo (≈76 MB) y purgar del historial si procede.
 - [ ] `Microrred en 10 rondas.html`: eliminar (no pertenece al proyecto).
 - [x] `.gitignore`: añadir `__pycache__/`, `*.pyc`, `.pytest_cache/`; quitar los `.pyc` ya versionados.
-- [ ] `package-lock.json` **o** `pnpm-lock.yaml`: dejar solo el del gestor declarado en `packageManager` (pnpm).
+- [x] `package-lock.json` **o** `pnpm-lock.yaml`: dejar solo el del gestor declarado en `packageManager` (pnpm).
 - [ ] `setup.sh`: retirar o convertir en documentación; hoy sobrescribe archivos del código fuente.
 - [ ] `.github/agents/my-agent.agent.md`: revisar/eliminar; contiene un prompt genérico ajeno al proyecto.
 - [ ] `README.md`: documentar arranque local (puertos, variables, cómo correr tests).
