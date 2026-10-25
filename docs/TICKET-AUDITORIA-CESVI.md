@@ -157,7 +157,7 @@ Decisiones clave:
 - [x] `.gitignore`: añadir `__pycache__/`, `*.pyc`, `.pytest_cache/`; quitar los `.pyc` ya versionados.
 - [x] `package-lock.json` **o** `pnpm-lock.yaml`: dejar solo el del gestor declarado en `packageManager` (pnpm).
 - [x] `setup.sh`: retirar o convertir en documentación; hoy sobrescribe archivos del código fuente.
-- [ ] `.github/agents/my-agent.agent.md`: revisar/eliminar; contiene un prompt genérico ajeno al proyecto.
+- [x] `.github/agents/my-agent.agent.md`: revisar/eliminar; contiene un prompt genérico ajeno al proyecto.
 - [ ] `README.md`: documentar arranque local (puertos, variables, cómo correr tests).
 - [x] `package.json`: añadir scripts `typecheck` (`tsc --noEmit`) y `test`.
 
