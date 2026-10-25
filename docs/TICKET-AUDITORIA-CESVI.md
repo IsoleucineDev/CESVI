@@ -152,7 +152,7 @@ Decisiones clave:
 ### Fase 0 — Higiene y decisiones (medio día)
 
 - [ ] `DECISIONES.md` (nuevo): registrar la elección de **backend único** (FastAPI recomendado), unidades (SI: m, s, m/s, grados) y sistema de coordenadas.
-- [ ] `goose-x86_64-unknown-linux-gnu.tar.bz2`: eliminar del repo (≈76 MB) y purgar del historial si procede.
+- [x] `goose-x86_64-unknown-linux-gnu.tar.bz2`: eliminar del repo (≈76 MB) y purgar del historial si procede.
 - [ ] `Microrred en 10 rondas.html`: eliminar (no pertenece al proyecto).
 - [x] `.gitignore`: añadir `__pycache__/`, `*.pyc`, `.pytest_cache/`; quitar los `.pyc` ya versionados.
 - [x] `package-lock.json` **o** `pnpm-lock.yaml`: dejar solo el del gestor declarado en `packageManager` (pnpm).
