@@ -156,7 +156,7 @@ Decisiones clave:
 - [x] `Microrred en 10 rondas.html`: eliminar (no pertenece al proyecto).
 - [x] `.gitignore`: añadir `__pycache__/`, `*.pyc`, `.pytest_cache/`; quitar los `.pyc` ya versionados.
 - [x] `package-lock.json` **o** `pnpm-lock.yaml`: dejar solo el del gestor declarado en `packageManager` (pnpm).
-- [ ] `setup.sh`: retirar o convertir en documentación; hoy sobrescribe archivos del código fuente.
+- [x] `setup.sh`: retirar o convertir en documentación; hoy sobrescribe archivos del código fuente.
 - [ ] `.github/agents/my-agent.agent.md`: revisar/eliminar; contiene un prompt genérico ajeno al proyecto.
 - [ ] `README.md`: documentar arranque local (puertos, variables, cómo correr tests).
 - [x] `package.json`: añadir scripts `typecheck` (`tsc --noEmit`) y `test`.
