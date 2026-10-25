@@ -158,7 +158,7 @@ Decisiones clave:
 - [x] `package-lock.json` **o** `pnpm-lock.yaml`: dejar solo el del gestor declarado en `packageManager` (pnpm).
 - [x] `setup.sh`: retirar o convertir en documentación; hoy sobrescribe archivos del código fuente.
 - [x] `.github/agents/my-agent.agent.md`: revisar/eliminar; contiene un prompt genérico ajeno al proyecto.
-- [ ] `README.md`: documentar arranque local (puertos, variables, cómo correr tests).
+- [x] `README.md`: documentar arranque local (puertos, variables, cómo correr tests).
 - [x] `package.json`: añadir scripts `typecheck` (`tsc --noEmit`) y `test`.
 
 ### Fase 1 — Desbloquear el flujo existente (1–2 días)
