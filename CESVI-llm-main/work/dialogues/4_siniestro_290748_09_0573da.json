@@ -1,0 +1,162 @@
+{
+ "id": "4_siniestro_290748_09_0573da",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Nissan Altima 2004 plata",
+  "V2": "GMC Envoy 2006 plata"
+ },
+ "form": {},
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Al acudir a Officce Max a comprar un artículo de oficina y en el lugar que me estacionaria había un modulo que me impedía hacerlo por lo que decidir buscar otro lugar, me eche de reversa, sentí un golpe y no se que paso hasta que estuve en el hospital."
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "estacionado"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "estacionado"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "maniobra en reversa"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "valor": "el conductor del vehículo “A” decide realizar la maniobra en reversa y siente el impacto"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo “A” impacta con el vértice posterior izquierdo al vehículo “B” sobre su costado medio izquierdo"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Alhelies"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "el vehículo A impacta con el vértice posterior izquierdo al vehículo B sobre su costado medio izquierdo"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "el vehículo B impacta con el costado medio izquierdo al vehículo A en su vértice posterior izquierdo"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "vehículo V1 presenta restos de la primera capa de pintura (barniz transparente) en dirección de atrás hacia adelante sobre el vértice trasero izquierdo a una altura de un rango entre 0.45 y 0.86 metros; vehículo V2 presenta restos de la primera capa de pintura (barniz transparente), sobre la parte inferior media del costado izquierdo abarcando una superficie entre 0.44 y 0.99 metros"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfaltado en buenas condiciones"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "start": 0,
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías contarme brevemente cómo el conductor del Nissan Altima 2004 describió el suceso?",
+   "respuesta": "Al estacionarse en el lugar, el conductor sentía que el módulo le impedía estacionarse correctamente, decidió realizar una maniobra de reversa y sintió un golpe.",
+   "valor": "Al acudir a Officce Max a comprar un artículo de oficina y en el lugar que me estacionaria había un modulo que me impedía hacerlo por lo que decidir buscar otro lugar, me eche de reversa, sentí un golpe y no se que paso hasta que estuve en el hospital."
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué nos dice el conductor del GMC Envoy 2006 acerca de cómo ocurrió el accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Podrías decirme en qué dirección y carril se encontraba el Nissan Altima 2004 antes del impacto?",
+   "respuesta": "El Nissan Altima 2004 estaba estacionado.",
+   "valor": "estacionado"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y qué podemos decir acerca del GMC Envoy 2006 en cuanto a su posición antes del accidente?",
+   "respuesta": "El GMC Envoy 2006 también estaba estacionado en el lugar de estacionamiento.",
+   "valor": "estacionado"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el Nissan Altima 2004 antes del impacto?",
+   "respuesta": "Creo que realizó una maniobra en reversa.",
+   "valor": "maniobra en reversa"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué podemos decir acerca de las acciones del GMC Envoy 2006 antes del impacto?",
+   "respuesta": "desconozco",
+   "valor": "__saltado__"
+  }
+ ]
+}

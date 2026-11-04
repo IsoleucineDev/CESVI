@@ -1,0 +1,21 @@
+{
+ "motivo": "valor no concuerda con su evidencia en secuencia_eventos",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Sur a Norte"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo tipo Mondeo pierde el control y impacta al vehículo tipo D-150, luego impacta al vehículo tipo Suburban y finalmente impacta al vehículo tipo Tsuru."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Mondeo 2003 negro",
+  "V2": "Dodge D-150 1978 amarillo con gris",
+  "V3": "Chevrolet Suburban 1994 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Ford Mondeo?\",\n  \"respuesta\": \"El Mondeo iba sur a norte, además luego pierde el control y choca al D-150, luego al Suburban y finalmente al Tsuru.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"sur_a_norte\",\n      \"evidencia\": \"El Mondeo iba sur a norte\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"Mondeo_D-150_Suburban_Tsuru\",\n      \"evidencia\": \"pierde el control y choca al D-150, luego al Suburban y finalmente al Tsuru\"\n    }\n  ]\n}"
+}

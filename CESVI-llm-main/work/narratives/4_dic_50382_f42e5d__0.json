@@ -1,0 +1,123 @@
+{
+ "id": "4_dic_50382_f42e5d",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan X Trail 2004 arena",
+  "V2": "Jeep Liberty 2002 azul"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Circulaba por la calle de Camelia y al querer cruzar el eje salio una camioneta y no alcanza a detenerse y me impacte con ella, la camioneta con la que me impacte viene por el eje Guerrero"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Este a Oeste"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "cruzando el eje"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo A impacta al vehículo B con su parte frontal contra el costado delantero y medio derecho del vehículo B"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Camelia y Guerrero (Eje 1 Poniente)"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "el vehículo V1 presenta restos de pintura color azul y el vehículo V2 no presenta impregnación de pintura color arena"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto en buenas condiciones de circulación"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "del lado del conductor y del acompañante"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 7,
+ "asked": "secuencia_eventos",
+ "pregunta": "¿Cuál es la secuencia de eventos que ocurrieron en el accidente?",
+ "respuesta": "EL NISSAN X TRAIL IMPACTÓ AL JEEP LIBERTY CON SU PARTE FRENTE CONTRA EL COSTADO DELANTERO Y MEDIO DERECHO DEL JEEP LIBERTY. ADÉMÁS, EL NISSAN X TRAIL PRESENTA RESTOS DE PINTURA COLOR AZUL Y EL JEEP LIBERTY NO PRESENTA IMPREGNACIÓN DE PINTURA COLOR ARENA. LUEGO, LA SUPERFICIE DE RODAMIENTO ERA ASFALTO EN BUENAS CONDICIONES DE CIRCULACIÓN. Y, POR ÚLTIMO, EN EL NISSAN X TRAIL SE ACTIVARON LAS BOLSAS DE AIRE DEL LADO DEL CONDUCTOR Y DEL ACOMPAÑANTE.",
+ "gold": {
+  "secuencia_eventos": {
+   "valor": "el Nissan X Trail impacta al Jeep Liberty con su parte frontal contra el costado delantero y medio derecho del Jeep Liberty",
+   "evidencia": "EL NISSAN X TRAIL IMPACTÓ AL JEEP LIBERTY CON SU PARTE FRENTE CONTRA EL COSTADO DELANTERO Y MEDIO DERECHO DEL JEEP LIBERTY"
+  },
+  "evidencias_sitio": {
+   "valor": "el Nissan X Trail presenta restos de pintura color azul y el Jeep Liberty no presenta impregnación de pintura color arena",
+   "evidencia": "EL NISSAN X TRAIL PRESENTA RESTOS DE PINTURA COLOR AZUL Y EL JEEP LIBERTY NO PRESENTA IMPREGNACIÓN DE PINTURA COLOR ARENA"
+  },
+  "superficie": {
+   "valor": "asfalto en buenas condiciones de circulación",
+   "evidencia": "LA SUPERFICIE DE RODAMIENTO ERA ASFALTO EN BUENAS CONDICIONES DE CIRCULACIÓN"
+  },
+  "airbags_V1": {
+   "valor": "del lado del conductor y del acompañante",
+   "evidencia": "EN EL NISSAN X TRAIL SE ACTIVARON LAS BOLSAS DE AIRE DEL LADO DEL CONDUCTOR Y DEL ACOMPAÑANTE"
+  }
+ }
+}

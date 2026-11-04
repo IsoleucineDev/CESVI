@@ -1,0 +1,20 @@
+{
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "General Motors Corsa 2004 azul LXH 9678"
+ },
+ "valores": {
+  "causa_perdida_control": "exceso de velocidad",
+  "senalizacion_preferencia": "curva doble",
+  "vueltas_volcadura": "1/2",
+  "punto_impacto_via": "cuneta",
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "restos del vehículo en la cuneta",
+  "huellas_frenado_m": null,
+  "airbags_V1": "sin activación",
+  "posicion_final_V1": "lado derecho sobre la cuneta",
+  "declaracion_V1": "perdió el control al pasar un tronco de árbol en la carretera"
+ },
+ "id": "12_dictamen_con_no_de_siniestro_6509_2595_3_2_5d5991",
+ "split": "train"
+}

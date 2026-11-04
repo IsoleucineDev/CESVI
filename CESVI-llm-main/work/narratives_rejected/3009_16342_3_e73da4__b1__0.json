@@ -1,0 +1,27 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "El conductor del vehículo Dodge Neon viene circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en sentido de circulación de Sur a Norte aproximadamente a las 6:30 de la mañana, cuando un vehículo desconocido golpea por el costado izquierdo lo que provoca que pierda el control de su vehículo y se proyecte contra la “división entre carriles centrales y lateral” (camellón), supuestamente provocando los daños que presenta."
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Dodge Neon 2003 negro",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Dodge Neon sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor del Dodge Neon 2003 negro declaró que venía circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en dirección de Sur a Norte aproximadamente a las 6:30 de la mañana, cuando un vehículo desconocido lo golpeó por el costado izquierdo, lo que provocó que perdiera el control de su vehículo y se proyectara contra la división entre carriles centrales y lateral, además dejó huellas de frenado de 8 metros.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"El conductor del vehículo Dodge Neon viene circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en sentido de circulación de Sur a Norte aproximadamente a las 6:30 de la mañana, cuando un vehículo desconocido golpea por el costado izquierdo lo que provoca que pierda el control de su vehículo y se proyecte contra la “división entre carriles centrales y lateral” (camellón), supuestamente provocando los daños que presenta.\",\n      \"evidencia\": \"El conductor del Dodge Neon 2003 negro declaró que venía circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en dirección de Sur a Norte aproximadamente a las 6:30 de la mañana, cuando un vehículo desconocido lo golpeó por el costado izquierdo, lo que provocó que perdiera el control de su vehículo y se proyectara contra la división entre carriles centrales y lateral\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": 8,\n      \"evidencia\": \"dejó huellas de frenado de 8 metros\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": 90,\n      \"evidencia\": \"aproximadamente a las 6:30 de la mañana\"\n    }\n  ]\n}"
+}

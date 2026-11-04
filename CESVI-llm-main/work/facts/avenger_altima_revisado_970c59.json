@@ -1,0 +1,46 @@
+{
+ "id": "avenger_altima_revisado_970c59",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Dodge Avenger 2009 negro",
+  "V2": "Nissan Altima 1998 plata"
+ },
+ "valores": {
+  "declaracion_V1": "circulava de norte a Sur a Nte por el 8 (Bld Tamaulipas) iba a tomar la lateral y viendo el semáforo en verde procedi a continuar y de pronto un automóvil que venia x Berriosabal me envistió chocandome x la parte derecha de mi automobil",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "circulava de norte a Sur a Nte por el 8 (Bld Tamaulipas) iba a tomar la lateral",
+  "sentido_carril_V2": "venia x Berriosabal",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "senalizacion_preferencia": "semáforo en verde",
+  "secuencia_eventos": "el vehículo tipo Altima impactó al vehículo tipo Avenger por la parte derecha",
+  "punto_impacto_via": "en la calle 8 Berrizabal",
+  "angulo_impacto": null,
+  "evidencias_sitio": "no existe un intercambio de materiales en las superficies de los vehículos bajo estudio que supuestamente tuvieron contacto entre si al momento del impacto",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "circulava de norte a Sur a Nte por el 8 (Bld Tamaulipas) iba a tomar la lateral y viendo el semáforo en verde procedi a continuar y de pronto un automóvil que venia x Berriosabal me envistió chocandome x la parte derecha de mi automobil",
+  "sentido_carril_V1": "circulava de norte a Sur a Nte por el 8 (Bld Tamaulipas) iba a tomar la lateral",
+  "sentido_carril_V2": "venia x Berriosabal",
+  "senalizacion_preferencia": "viendo el semáforo en verde procedi a continuar",
+  "secuencia_eventos": "de pronto un automóvil que venia x Berriosabal me envistió chocandome x la parte derecha de mi automobil",
+  "punto_impacto_via": "en 8 Berrizabal en Ciudad Victoria en el estado de Tamaulipas",
+  "evidencias_sitio": "no existe un intercambio de materiales en las superficies de los vehículos bajo estudio que supuestamente tuvieron contacto entre si al momento del impacto"
+ },
+ "descartados": {
+  "posicion_final_V1": "detenido en el lugar del impacto",
+  "posicion_final_V2": "detenido en el lugar del impacto"
+ }
+}

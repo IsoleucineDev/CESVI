@@ -1,0 +1,24 @@
+{
+ "motivo": "valor no concuerda con su evidencia en vueltas_volcadura",
+ "principal": {
+  "id": "causa_perdida_control",
+  "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+  "valor": "exceso de velocidad"
+ },
+ "otros": [
+  {
+   "id": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "valor": "1/2"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo A tipo corsa, circulaba en sentido de Toluca a Tejupilco a exceso de velocidad, antes de llegar al lugar de los hechos le precede una sección de curva doble, tal y como se muestra a continuación: Sección de curvas en forma de “S” [...]"
+  }
+ ],
+ "vehiculos": {
+  "V1": "General Motors Corsa 2004 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la causa de la pérdida de control del Chevy?\",\n  \"respuesta\": \"El Chevy circulaba a exceso de velocidad antes de entrar a la sección de curvas en forma de “S”. Además, al entrar a la primera curva, el vehículo perdió el control debido a este exceso de velocidad.\",\n  \"extracciones\": [\n    {\"tema\": \"causa_perdida_control\", \"valor\": \"exceso de velocidad\", \"evidencia\": \"El Chevy circulaba a exceso de velocidad antes de entrar a la sección de curvas en forma de “S”.\"},\n    {\"tema\": \"vueltas_volcadura\", \"valor\": \"1/2\", \"evidencia\": \"al entrar a la primera curva, el vehículo perdió el control debido a este exceso de velocidad\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"Sección de curvas en forma de “S”\", \"evidencia\": \"antes de entrar a la sección de curvas en forma de “S”\"}\n  ]\n}"
+}

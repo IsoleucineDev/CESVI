@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'El impacto ocurrió en el camellón de la calle de Darwin, además las ma'",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "camellón de la calle de Darwin"
+ },
+ "otros": [
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": 65,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Hyundai Atos 2009 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde en la vía ocurrió el impacto del Hyundai Atos 2009 rojo?\",\n  \"respuesta\": \"El impacto ocurrió en el camellón de la calle de Darwin, además las marcas del impacto en el objeto fijo miden 65 cm.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"camellón de la calle de Darwin\",\n      \"evidencia\": \"camellón de la calle de Darwin\"\n    },\n    {\n      \"tema\": \"altura_marca_objeto_cm\",\n      \"valor\": \"65\",\n      \"evidencia\": \"65 cm\"\n    }\n  ]\n}"
+}

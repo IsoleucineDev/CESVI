@@ -1,0 +1,48 @@
+{
+ "id": "13_dictamen_15091291_c05156",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Ford Edge 2009 gris",
+  "V2": "Ford F-350 desconocido desconocido"
+ },
+ "valores": {
+  "declaracion_V1": "al ir circulando sobre primavera al dar vuelta a la derecha un camión se estaba echando de reversa me golpeo y al sentir el golpe se fue y no lo pude alcanzar porque me reventó la llanta y rin con el golpe",
+  "declaracion_V2": null,
+  "superficie": "asfaltado",
+  "iluminacion": null,
+  "sentido_carril_V1": "circulación normal",
+  "sentido_carril_V2": "reversa",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "giro",
+  "maniobra_previa_V2": "reversa",
+  "secuencia_eventos": "vehículo V1 girando a la derecha es impactado por vehículo V2 que realiza maniobra en reversa",
+  "punto_impacto_via": "carril derecho",
+  "evidencias_sitio": "pintura blanca en el faro derecho a una altura de 85cm, pintura roja en la fascia con dirección de adelante hacia atrás",
+  "danos_V1": "daños tipo tallón con dirección de adelante hacia atrás en la fascia y salpicadera derecha a alturas de 87cm y 82cm con residuos de pintura blanca",
+  "danos_V2": null,
+  "posicion_final_V1": "parado con dirección de adelante hacia atrás",
+  "posicion_final_V2": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "huellas_frenado_m": null,
+  "maniobra_reversa": null
+ },
+ "citas": {
+  "declaracion_V1": "al ir circulando sobre primavera al dar vuelta a la derecha un camión se estaba echando de reversa me golpeo y al sentir el golpe se fue y no lo pude alcanzar porque me reventó la llanta y rin con el golpe",
+  "superficie": "La calle primavera, cuenta con un arroyo vehicular asfaltado con un ancho de 8.4m",
+  "sentido_carril_V1": "al ir circulando sobre primavera al dar vuelta a la derecha un camión se estaba echando de reversa me golpeo",
+  "sentido_carril_V2": "era un vehículo tipo F-350 con caja seca se echa en reversa por lo que el no lo ve y lo impacta",
+  "maniobra_previa_V1": "al dar vuelta a la derecha un camión se estaba echando de reversa me golpeo",
+  "maniobra_previa_V2": "era un vehículo tipo F-350 con caja seca se echa en reversa por lo que el no lo ve y lo impacta",
+  "secuencia_eventos": "al dar vuelta a la derecha un camión se estaba echando de reversa me golpeo",
+  "punto_impacto_via": "al dar vuelta a la derecha un camión se estaba echando de reversa me golpeo",
+  "evidencias_sitio": "se observan daños tipo tallón con restos de lo que al parecer es pintura color blanca en el faro derecho a una altura de 85cm. mismo que muestra un desacoplamiento de su posición original, así como un desacoplamiento de la fascia de su posición original del lado derecho",
+  "danos_V1": "se observan daños tipo tallón con dirección de adelante hacia atrás con restos de material con características de pintura color blanco",
+  "posicion_final_V1": "el conjunto rín neumático original de la unidad tipo Edge muestra daños tipo estructural, y desgarramiento en el neumático en distintas zonas los cuales muestran daños que no pudieron haberse generado por un impacto al realizar una maniobra en reversa propinado por el conductor del vehículo tipo F-350"
+ },
+ "descartados": {
+  "iluminacion": "día"
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "motivo": "evidencia no literal en velocidad_V2_kmh",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "Norte a Sur en el carril del extremo izquierdo"
+ },
+ "otros": [
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Navistar Autobús 2009 amarillo",
+  "V2": "Toyota Hilux 2009 gris plata"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Toyota Hilux?\",\n  \"respuesta\": \"El Toyota Hilux se desplazaba en dirección Norte a Sur en el carril del extremo izquierdo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"Norte a Sur en el carril del extremo izquierdo\",\n      \"evidencia\": \"El Toyota Hilux se desplazaba en dirección Norte a Sur en el carril del extremo izquierdo.\"\n    },\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"80\",\n      \"evidencia\": \"80\"\n    }\n  ]\n}"
+}

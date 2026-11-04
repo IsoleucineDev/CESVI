@@ -1,0 +1,119 @@
+{
+ "id": "axa_sin_cl134429_b4b3a8",
+ "split": "test",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Kenworth T-600 2008 blanco",
+  "V2": "Pailemex Tanque -"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Poniente - Oriente"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "velocidad excesiva"
+  },
+  {
+   "id": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "valor": "1/1 a la derecha"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "Daños en el asfalto y huellas de frenado."
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto seco"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "al amanecer con poca luz",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 78.1
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 11,
+ "asked": "huellas_frenado_m",
+ "sintetico": true,
+ "pregunta": "¿Cuál es la longitud de las huellas de frenado, si las hay?",
+ "respuesta": "SE OBSERVA UNA HUELLA DE FRENADO DE 8 METROS ANTES DE LA VOLCADURA DEL KENWORTH T-600 2008 BLANCO. ADÉMÁS, LA VELOCIDAD ESTIMADA DE ESTE VEHÍCULO ANTES DEL EVENTO ES DE 78.1 KM/H.",
+ "gold": {
+  "huellas_frenado_m": {
+   "valor": "8",
+   "evidencia": "SE OBSERVA UNA HUELLA DE FRENADO DE 8 METROS ANTES DE LA VOLCADURA DEL KENWORTH T-600 2008 BLANCO"
+  },
+  "velocidad_V1_kmh": {
+   "valor": "78.1",
+   "evidencia": "LA VELOCIDAD ESTIMADA DE ESTE VEHÍCULO ANTES DEL EVENTO ES DE 78.1 KM/H"
+  }
+ }
+}

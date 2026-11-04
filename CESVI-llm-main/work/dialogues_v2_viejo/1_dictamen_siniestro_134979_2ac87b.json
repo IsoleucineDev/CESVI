@@ -1,0 +1,138 @@
+{
+ "id": "1_dictamen_siniestro_134979_2ac87b",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan Tsuru 2008 blanco y rojo",
+  "V2": "Ford Fiesta 2007 rojo"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías contarme brevemente cómo el conductor del Nissan Tsuru 2008 blanco y rojo describió el accidente?",
+   "respuesta": "Al tratar de incorporarme a la ruta de circulación no me percate que venia un vehículo impactándolo y provocando el accidente",
+   "valor": "Al tratar de incorporarme a la ruta de circulación no me percate que venia un vehículo impactándolo y provocando el accidente"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y el conductor del Ford Fiesta 2007 rojo, ¿cómo describió el accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Qué tipo de superficie tenían las vías donde ocurrió el accidente y en qué condiciones se encontraban?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación y el carril por el que iba el Nissan Tsuru 2008 blanco y rojo?",
+   "respuesta": "Iba en dirección a la carretera Minatitlán-Coatzacoalcos para incorporarse a ella",
+   "valor": "incorporación a la carretera Minatitlán-Coatzacoalcos"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el Ford Fiesta rojo, ¿cómo circulaba?",
+   "respuesta": "El Ford Fiesta 2007 rojo circulaba por la carretera Minatitlán-Coatzacoalcos",
+   "valor": "circulación por la carretera Minatitlán-Coatzacoalcos"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad estimada del Nissan Tsuru 2008 blanco y rojo antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "Y la velocidad del Ford Fiesta rojo?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Nissan Tsuru 2008 blanco y rojo antes del impacto?",
+   "respuesta": "El Nissan Tsuru 2008 blanco y rojo realizaba la maniobra de incorporación",
+   "valor": "incorporación"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "Y el Ford Fiesta rojo, ¿qué maniobra realizaba?",
+   "respuesta": "El Ford Fiesta 2007 rojo circulaba normalmente",
+   "valor": "circulación"
+  },
+  {
+   "tema": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "pregunta": "¿Cuál era la señalización de tráfico en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describirme el orden de los eventos y los impactos?",
+   "respuesta": "El vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos encontrándose en la incorporación al vehículo “B” colisionándose entre si",
+   "valor": "El vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos encontrándose en la incorporación al vehículo “B” colisionándose entre si"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "pregunta": "¿Cuál es el ángulo aproximado entre los vehículos al momento del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el lugar del accidente?",
+   "respuesta": "creo que hay pintura roja en el vértice izquierdo de la defensa del vehículo V1, sin impregnación de pintura roja en el vehículo V2",
+   "valor": "pintura roja en el vértice izquierdo de la defensa del vehículo V1, sin impregnación de pintura roja en el vehículo V2"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Nissan Tsuru 2008 blanco y rojo?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "Y en el Ford Fiesta rojo, ¿cuáles bolsas de aire se activaron?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  }
+ ]
+}

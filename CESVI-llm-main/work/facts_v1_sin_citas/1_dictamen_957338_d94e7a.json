@@ -1,0 +1,26 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "FORD FIESTA 2001 NEGRO 604-RAC",
+  "V2": "vehículo desconocido"
+ },
+ "valores": {
+  "superficie": "asfalto seco",
+  "iluminacion": "día",
+  "sentido_carril_V1": "sur a norte",
+  "sentido_carril_V2": "poniente a oriente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "senalizacion_preferencia": "semaforo en verde para V1",
+  "secuencia_eventos": "V2 impacta lateralmente a V1",
+  "punto_impacto_via": "calle 22, intersección con calle 13",
+  "angulo_impacto": "90 grados",
+  "evidencias_sitio": "huellas de pintura blanca en el lado derecho de V1",
+  "airbags_V1": "ninguno",
+  "posicion_final_V1": "V1 se detuvo en la calle 22",
+  "posicion_final_V2": null,
+  "declaracion_V1": "circulaba por calle 13 y fue impactado por un vehículo blanco que circulaba por calle 22"
+ },
+ "id": "1_dictamen_957338_d94e7a",
+ "split": "train"
+}

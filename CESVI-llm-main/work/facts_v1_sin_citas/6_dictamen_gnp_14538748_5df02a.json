@@ -1,0 +1,26 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volvo S-40 2002 ARENA LTY-25-15",
+  "V2": "Volkswagen Passat 2000 GRIS 811-SDU"
+ },
+ "valores": {
+  "superficie": "asfáltica en buen estado",
+  "iluminacion": "noche con semáforos",
+  "sentido_carril_V1": "circulación hacia el Oeste",
+  "sentido_carril_V2": "circulación hacia el Oeste",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "circulando",
+  "maniobra_previa_V2": "frenado",
+  "distancia_previa": "no especificada",
+  "senalizacion_preferencia": "semáforo",
+  "secuencia_eventos": "V2 frenó, V1 no alcanzó a frenar y lo impactó",
+  "punto_impacto_via": "arroyo Norte, cerca del crucero con la calle Prolongación González",
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura no evidente",
+  "airbags_V1": "activado conductor, no activado acompañante",
+  "airbags_V2": null
+ },
+ "id": "6_dictamen_gnp_14538748_5df02a",
+ "split": "train"
+}

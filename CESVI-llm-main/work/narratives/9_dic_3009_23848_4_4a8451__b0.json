@@ -1,0 +1,126 @@
+{
+ "id": "9_dic_3009_23848_4_4a8451",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "VW Jetta 2002 azul",
+  "V2": "GM Camaro 1995 rojo"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Saliendo de a calle Azucena para salir a Av. Reforma a un costado del reclusorio doy vuelta a la derecha y trato de frenar pero le pego a un Camaro rojo que vienen sobre la calle Reforma."
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Sureste a Noroeste"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "Sur a Norte"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "giro"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "semáforo en rojo para uno de los vehículos",
+   "sintetico": true
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V1 impacta sobre el costado posterior derecho del vehículo V2."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Azucena esquina con Av. Reforma"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "aproximadamente 90 grados",
+   "sintetico": true
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta pintura roja del V2 en el costado izquierdo frontal; el vehículo V2 no presenta pintura azul del V1."
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con alumbrado público",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 60,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa de aire del conductor y del copiloto"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 7,
+ "asked": "secuencia_eventos",
+ "sintetico": true,
+ "pregunta": "Describe la secuencia de eventos que ocurrieron durante el accidente entre el VW Jetta azul y el Chevy Camaro rojo.",
+ "respuesta": "EL VEHÍCULO VW JETTA AZUL IMPACTA SOBRE EL COSTADO POSTERIOR DERECHO DEL CHEVY CAMARO ROJO. ADYACENTEMENTE, LOS VEHÍCULOS SE ENCUENTRAN EN UN ÁNGULO APROXIMADO DE 90 GRADOS. LUEGO, ES DE NOTAR QUE EL ACCIDENTE OCURRIÓ DE NOCHE CON ALUMBRADO PÚBLICO.",
+ "gold": {
+  "secuencia_eventos": {
+   "valor": "impacto_costado_posterior_derecho",
+   "evidencia": "EL VEHÍCULO VW JETTA AZUL IMPACTA SOBRE EL COSTADO POSTERIOR DERECHO DEL CHEVY CAMARO ROJO"
+  },
+  "angulo_impacto": {
+   "valor": "90",
+   "evidencia": "LOS VEHÍCULOS SE ENCUENTRAN EN UN ÁNGULO APROXIMADO DE 90 GRADOS"
+  },
+  "iluminacion": {
+   "valor": "noche_alumbrado_publico",
+   "evidencia": "EL ACCIDENTE OCURRIÓ DE NOCHE CON ALUMBRADO PÚBLICO"
+  }
+ }
+}

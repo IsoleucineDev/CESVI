@@ -1,0 +1,162 @@
+{
+ "id": "40100_7067063_inbursa_1_a56ae8",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Ford Fiesta 2003 blanco",
+  "V2": "Ford Pick Up 2008 negro"
+ },
+ "form": {},
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "start": 0,
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías resumirme la declaración del conductor del Ford Fiesta blanco sobre cómo ocurrió el hecho?",
+   "respuesta": "sin información",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y la declaración del conductor del Ford Pick Up negro, ¿cómo la describes brevemente?",
+   "respuesta": "sin información",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál fue el sentido de circulación y el carril por el que iba el Ford Fiesta blanco?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el Ford Pick Up negro, ¿en qué sentido y carril circulaba?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el Ford Fiesta blanco antes del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobra realizó el Ford Pick Up negro antes del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

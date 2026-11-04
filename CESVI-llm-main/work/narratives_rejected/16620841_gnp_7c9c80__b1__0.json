@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'Además, la dirección de la fuerza apuntó hacia este sector del vehícul'",
+ "principal": {
+  "id": "danos_V1",
+  "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "deformación en el costado derecho a 55 cm de altura",
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Chevrolet Astra 2002 gris",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños de la zona afectada del Chevy Astra 2002 gris?\",\n  \"respuesta\": \"El Chevy Astra 2002 gris presentó daños evidentes en el costado derecho, específicamente a 55 cm de altura, donde se observó una deformación claramente visible. Además, la dirección de la fuerza apuntó hacia este sector del vehículo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V1\",\n      \"valor\": \"deformación en el costado derecho a 55 cm de altura\",\n      \"evidencia\": \"El Chevy Astra 2002 gris presentó daños evidentes en el costado derecho, específicamente a 55 cm de altura, donde se observó una deformación claramente visible.\"\n    }\n  ]\n}"
+}

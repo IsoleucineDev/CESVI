@@ -1,0 +1,22 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Dodge Neon 2003 negro circulaba a una velocidad estimada de 90 km/h'",
+ "principal": {
+  "id": "velocidad_V1_kmh",
+  "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+  "valor": 90,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Dodge Neon 2003 negro",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada del Dodge Neon 2003 negro antes del evento?\",\n  \"respuesta\": \"El Dodge Neon 2003 negro circulaba a una velocidad estimada de 90 km/h antes del evento, además la velocidad estimada del vehículo desconocido era de 80 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"80\",\n      \"evidencia\": \"la velocidad estimada del vehículo desconocido era de 80 km/h\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"una velocidad estimada de 90 km/h\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en sentido_carril_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "AL QUERER INCORPRARME A PERIFERICO Frena el maxima Freno yo se me barre el pedal del Freno y lo Impacto"
+ },
+ "otros": [
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "circulando por el carril de alta en Avenida 1º de Mayo en dirección de Poniente a Oriente"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "desprendimiento de pintura en la fascia frontal del lado derecho del V1 y en la fascia posterior del lado izquierdo del V2"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chrysler Voyager LX 2005 azul",
+  "V2": "Nissan Altima 2000 arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor de la Chrysler Voyager LX 2005 azul sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor de la Chrysler Voyager LX 2005 azul declaró que al querer incorporarse a Periférico frenó al máximo, pero el pedal de freno se le barrió y lo impactó.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"al querer incorporarse a Periférico frenó al máximo pero el pedal de freno se le barrió y lo impactó\",\n      \"evidencia\": \"El conductor de la Chrysler Voyager LX 2005 azul declaró que al querer incorporarse a Periférico frenó al máximo, pero el pedal de freno se le barrió y lo impactó.\"\n    },\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"circulando por el carril de alta en Avenida 1º de Mayo en dirección de Poniente a Oriente\",\n      \"evidencia\": \"circulando por el carril de alta en Avenida 1º de Mayo en dirección de Poniente a Oriente\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"desprendimiento de pintura en la fascia frontal del lado derecho del V1 y en la fascia posterior del lado izquierdo del V2\",\n      \"evidencia\": \"desprendimiento de pintura en la fascia frontal del lado derecho del V1 y en la fascia posterior del lado izquierdo del V2\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico\",\n      \"evidencia\": \"malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico\"\n    }\n  ]\n}"
+}

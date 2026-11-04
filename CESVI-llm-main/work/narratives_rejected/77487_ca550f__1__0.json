@@ -1,0 +1,19 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "CIRCULANDO PASE BACHE QUE NO VI POR AGUA DE LLUVIA."
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "Momento en el cual se genera el choque de fuerzas que da origen a la deformación de la ceja exterior del rin. Al continuar su movimiento lineal el vehículo en estudio, el neumático y rin entran en contacto directo contra el borde final del bache, lo cual origina un fuerte impacto en esta zona, ocasionando la deformación en la ceja del rin delantero izquierdo."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz C-280 2007 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Mercedes Benz C-280 2007 blanco sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor declaró que circulaba pasando un bache que no había visto debido a la lluvia. Además, mencionó que al continuar su movimiento lineal, el vehículo en estudio, el neumático y rin entraron en contacto directo contra el borde final del bache, lo cual origina un fuerte impacto en esta zona, ocasionando la deformación en la ceja del rin delantero izquierdo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"CIRCULANDO PASE BACHE QUE NO VI POR AGUA DE LLUVIA.\",\n      \"evidencia\": \"El conductor declaró que circulaba pasando un bache que no había visto debido a la lluvia.\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"Momento en el cual se genera el choque de fuerzas que da origen a la deformación de la ceja exterior del rin. Al continuar su movimiento lineal el vehículo en estudio, el neumático y rin entran en contacto directo contra el borde final del bache, lo cual origina un fuerte impacto en esta zona, ocasionando la deformación en la ceja del rin delantero izquierdo.\",\n      \"evidencia\": \"al continuar su movimiento lineal, el vehículo en estudio, el neumático y rin entraron en contacto directo contra el borde final del bache, lo cual origina un fuerte impacto en esta zona, ocasionando la deformación en la ceja del rin delantero izquierdo.\"\n    }\n  ]\n}"
+}

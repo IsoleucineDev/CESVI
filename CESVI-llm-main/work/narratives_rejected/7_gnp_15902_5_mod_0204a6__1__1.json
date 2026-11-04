@@ -1,0 +1,19 @@
+{
+ "motivo": "evidencia no literal en superficie",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "sobre la avenida Gustavo Baz casi esquina con la calle Lázaro Cárdenas"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan X-Trail 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde en la avenida ocurrió el impacto del Nissan X-Trail 2008 gris?\",\n  \"respuesta\": \"El impacto del Nissan X-Trail ocurrió sobre la avenida Gustavo Baz casi esquina con la calle Lázaro Cárdenas, además, la superficie de rodamiento era asfalto.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"avenida Gustavo Baz casi esquina con la calle Lázaro Cárdenas\",\n      \"evidencia\": \"sobre la avenida Gustavo Baz casi esquina con la calle Lázaro Cárdenas\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfalto\",\n      \"evidencia\": \"asfalto\"\n    }\n  ]\n}"
+}

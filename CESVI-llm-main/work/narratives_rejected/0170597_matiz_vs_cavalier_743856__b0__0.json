@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Chevy andaba a unos 50 km/h antes de lo que pasó.'",
+ "principal": {
+  "id": "velocidad_V2_kmh",
+  "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+  "valor": 50,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Pontiac Matiz 2006 blanco con rojo",
+  "V2": "Chevrolet Cavalier 1993 gris con azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada del Chevy antes del evento?\",\n  \"respuesta\": \"El Chevy andaba a unos 50 km/h antes de lo que pasó.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"50\",\n      \"evidencia\": \"unos 50 km/h antes de lo que pasó\"\n    }\n  ]\n}"
+}

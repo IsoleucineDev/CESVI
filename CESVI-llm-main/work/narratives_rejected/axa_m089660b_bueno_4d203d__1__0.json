@@ -1,0 +1,21 @@
+{
+ "motivo": "oración con contenido no extraído: 'V3 realizó una maniobra descuidada antes del impacto, lo que contribuy'",
+ "principal": {
+  "id": "maniobra_previa_V3",
+  "desc": "Maniobra de V3 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "descuidado"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V3 presenta impregnación de pintura color verde en la parte posterior del vehículo V2"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volvo Tractocamión 2008 azul con franjas de colores",
+  "V2": "Hyundai Semirremolque S/D blanco",
+  "V3": "Ford Expedition 2003 verde"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V3 antes del impacto?\",\n  \"respuesta\": \"V3 realizó una maniobra descuidada antes del impacto, lo que contribuyó a la proximidad del vehículo. Además, el vehículo V3 presenta impregnación de pintura color verde en la parte posterior del vehículo V2.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V3\",\n      \"valor\": \"descuidado\",\n      \"evidencia\": \"V3 realizó una maniobra descuidada antes del impacto\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"El vehículo V3 presenta impregnación de pintura color verde en la parte posterior del vehículo V2\",\n      \"evidencia\": \"el vehículo V3 presenta impregnación de pintura color verde en la parte posterior del vehículo V2\"\n    }\n  ]\n}"
+}

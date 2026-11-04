@@ -1,0 +1,53 @@
+{
+ "id": "40100_7067063_inbursa_1_a56ae8",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Ford Fiesta 2003 blanco",
+  "V2": "Ford Pick Up 2008 negro"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "secuencia_eventos": null,
+  "punto_impacto_via": null,
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {},
+ "descartados": {
+  "declaracion_V1": "\"Yo me paraba en la camioneta negra y no me pasaba el alto\"",
+  "superficie": "asfalto",
+  "iluminacion": "no se menciona",
+  "sentido_carril_V1": "Norte a Sur",
+  "sentido_carril_V2": "Poniente a Oriente",
+  "velocidad_V1_kmh": "nula",
+  "velocidad_V2_kmh": "nula",
+  "maniobra_previa_V1": "nula",
+  "maniobra_previa_V2": "nula",
+  "distancia_previa": "25 mts",
+  "secuencia_eventos": "primer contacto entre el vehículo A y el vehículo B",
+  "punto_impacto_via": "Avenida Alta Tensión y Avenida Rosal",
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura",
+  "huellas_frenado_m": "nula",
+  "airbags_V1": "nula",
+  "airbags_V2": "nula",
+  "posicion_final_V1": "lugar de los hechos: Avenida Alta Tensión y Avenida Rosal",
+  "posicion_final_V2": "lugar de los hechos: Avenida Alta Tensión y Avenida Rosal"
+ }
+}

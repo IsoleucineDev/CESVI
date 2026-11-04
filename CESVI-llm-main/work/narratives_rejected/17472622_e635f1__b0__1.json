@@ -1,0 +1,26 @@
+{
+ "motivo": "oración con contenido no extraído: 'SECUEMANCIA DE EVENTOS: El vehículo JEEP realiza maniobra en reversa y'",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El vehículo V1 realiza maniobra en reversa y colisiona con el vehículo V2 que se encuentra detrás"
+ },
+ "otros": [
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "Daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jeep Grand Cherokee 1998 blanco",
+  "V2": "Nissan Sentra 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrió en este accidente?\",\n  \"respuesta\": \"DAÑOS DE V1: Daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia. SECUEMANCIA DE EVENTOS: El vehículo JEEP realiza maniobra en reversa y colisiona con el vehículo SENTRA que se encuentra detrás. VELOCIDAD DE V1 ANTES DEL EVENTO: 50\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V1\",\n      \"valor\": \"hundimiento baja magnitud atrás adelante pérdida pintura topes fascia\",\n      \"evidencia\": \"Daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"Jeep realiza maniobra reversa colisiona Sentra\",\n      \"evidencia\": \"El vehículo JEEP realiza maniobra en reversa y colisiona con el vehículo SENTRA que se encuentra detrás\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"50\",\n      \"evidencia\": \"50\"\n    }\n  ]\n}"
+}

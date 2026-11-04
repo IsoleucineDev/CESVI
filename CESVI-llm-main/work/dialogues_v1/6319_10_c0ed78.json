@@ -1,0 +1,131 @@
+{
+ "id": "6319_10_c0ed78",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Ford F-350 1986 naranja/blanco XR-90-717",
+  "V2": "Mazda CX7 2008 vino YFM-76-32"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías resumirme la declaración del conductor de la Ford F-350?",
+   "respuesta": "Al echarme de reversa no me fije y le pegue a una camioneta",
+   "valor": "Al echarme de reversa no me fije y le pegue a una camioneta"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y qué nos dice el conductor del Mazda CX7?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo era la condición de la superficie de rodamiento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación y visibilidad había?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Por qué carril circulaba la Ford F-350?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el Mazda CX7, ¿cómo iba?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada de la Ford F-350 antes del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué velocidad llevaba el Mazda CX7?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba la Ford F-350 antes del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "Y el Mazda CX7, ¿qué maniobra realizaba?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "pregunta": "¿Podrías describirme la maniobra de reversa que realizó la Ford F-350?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue el orden de los eventos y los impactos?",
+   "respuesta": "V1 realiza maniobra en reversa y golpea a V2",
+   "valor": "V1 realiza maniobra en reversa y golpea a V2"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto exactamente?",
+   "respuesta": "Parachoques y plafonera del lado derecho del vehículo V1 impacta la parte frontal central y frontal derecha del vehículo V2",
+   "valor": "Parachoques y plafonera del lado derecho del vehículo V1 impacta la parte frontal central y frontal derecha del vehículo V2"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Restos de concreto y tabique rojo en la orilla derecha de la calle uno con una altura de 35 centímetros",
+   "valor": "Restos de concreto y tabique rojo en la orilla derecha de la calle uno con una altura de 35 centímetros"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Viste huellas de frenado en el lugar?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en la Ford F-350?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "Y en el Mazda CX7, ¿cuáles se activaron?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

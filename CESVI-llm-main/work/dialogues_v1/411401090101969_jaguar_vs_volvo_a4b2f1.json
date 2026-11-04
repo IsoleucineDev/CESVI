@@ -1,0 +1,131 @@
+{
+ "id": "411401090101969_jaguar_vs_volvo_a4b2f1",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "JAGUAR STYPE 2004 BLANCO",
+  "V2": "VOLVO S60 2001 GRIS"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías resumirme la declaración del conductor del Jaguar?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y la del conductor del Volvo S60?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "asfalto seco",
+   "valor": "asfalto seco"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación había en el momento del accidente?",
+   "respuesta": "noche",
+   "valor": "noche"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿En qué dirección y carril circulaba el Jaguar?",
+   "respuesta": "Poniente a Oriente",
+   "valor": "Poniente a Oriente"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el Volvo S60, ¿en qué dirección y carril estaba?",
+   "respuesta": "El Volvo S60 estaba estacionado en el borde derecho de la calle, en el carril de estacionamiento.",
+   "valor": "estacionado"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Jaguar antes del accidente?",
+   "respuesta": "60",
+   "valor": "60"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "Y el Volvo S60, ¿cuál era su velocidad?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Jaguar antes del accidente?",
+   "respuesta": "circulación",
+   "valor": "circulación"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "Y el Volvo S60, ¿qué maniobra realizaba?",
+   "respuesta": "estacionado",
+   "valor": "estacionado"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuál era la distancia o el tiempo de separación entre los vehículos antes del accidente?",
+   "respuesta": "Creo que la distancia era más o menos de unos 20 metros.",
+   "valor": "no especificada"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describirme la secuencia de los eventos y los impactos?",
+   "respuesta": "Creo que el impacto fue frontal derecho del Jaguar contra la parte trasera izquierda del Volvo.",
+   "valor": "impacto frontal derecha Jaguar contra parte posterior izquierda Volvo"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "El accidente ocurrió en la calle 18, cerca de la esquina.",
+   "valor": "calle 18"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "impregnaciones de pintura blanca en Volvo",
+   "valor": "impregnaciones de pintura blanca en Volvo"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál era la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Jaguar?",
+   "respuesta": "activados",
+   "valor": "activados"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "Y en el Volvo S60, ¿cuáles se activaron?",
+   "respuesta": "No se especificó si las bolsas de aire se activaron en el Volvo S60.",
+   "valor": "no especificado"
+  }
+ ]
+}

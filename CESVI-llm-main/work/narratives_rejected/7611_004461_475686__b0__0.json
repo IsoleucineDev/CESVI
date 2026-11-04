@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "Declaración del asegurado, extraído de la declaración para la atención de daños de la compañía de seguros."
+ },
+ "otros": [
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "derrape por pavimento mojado",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Ecosport 2009 arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Ford Ecosport 2009 arena sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor declaró que estaba manejando normalmente cuando perdió el control del vehículo debido a un derrape por pavimento mojado.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"Declaración del asegurado, extraído de la declaración para la atención de daños de la compañía de seguros.\",\n      \"evidencia\": \"El conductor declaró que estaba manejando normalmente cuando perdió el control del vehículo debido a un derrape por pavimento mojado.\"\n    },\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"derrape por pavimento mojado\",\n      \"evidencia\": \"debido a un derrape por pavimento mojado\"\n    }\n  ]\n}"
+}

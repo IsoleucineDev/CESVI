@@ -1,0 +1,19 @@
+{
+ "motivo": "valor no concuerda con su evidencia en airbags_V1",
+ "principal": {
+  "id": "superficie",
+  "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+  "valor": "pavimento mojado"
+ },
+ "otros": [
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "frontal y lateral del asiento del conductor"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Mustang 2011 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la condición de la superficie de rodamiento en el momento del accidente?\",\n  \"respuesta\": \"SUPERFICIE DE RODAMIENTO: PAVIMENTO MOJADO. ADÉMÁS, BOLSAS DE AIRE DEL FORD MUSTANG 2011 BLANCO SE ACTIVARON EN EL ASIENTO DEL CONDUCTOR Y EN EL LATERAL.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"pavimento mojado\",\n      \"evidencia\": \"PAVIMENTO MOJADO\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"frontal y lateral del asiento del conductor\",\n      \"evidencia\": \"BOLSAS DE AIRE DEL FORD MUSTANG 2011 BLANCO SE ACTIVARON EN EL ASIENTO DEL CONDUCTOR Y EN EL LATERAL\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,111 @@
+{
+ "id": "2_siniestro_15492804_d7a186",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "HYUNDAI ATOS 2009 ROJO 398-WKH"
+ },
+ "form": {
+  "posicion_final_V1": "en el camellón de Darwin"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías contarme cómo el conductor del Atos describió el incidente?",
+   "respuesta": "El tipo mencionó que estaba transitando por Darwin del lado derecho cuando otro vehículo se le cruzó, lo que lo hizo perder el control del Atos y subirse al camellón, estrellándose contra un árbol.",
+   "valor": "transitando por Darwin del lado derecho se me cierra otro vehículo el cual me hace perder el control del Atos y me subí a un camellón y me estrelle con un árbol"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "La superficie era de asfalto, sin irregularidades significativas y en buen estado de conservación.",
+   "valor": "asfalto"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cuáles eran las condiciones de iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "El día estaba claro, sin lluvia ni niebla.",
+   "valor": "día"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Podrías detallar el sentido de circulación y el carril por el que transitaba el Atos?",
+   "respuesta": "El Atos circulaba en dirección Este a Oeste, en el carril derecho de la vía.",
+   "valor": "Este a Oeste"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál fue la velocidad aproximada del Atos antes del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Atos antes del impacto?",
+   "respuesta": "El Atos circulaba en dirección Este a Oeste, en el carril derecho de la vía, sin realizar ninguna maniobra especial.",
+   "valor": "circulación normal"
+  },
+  {
+   "tema": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "pregunta": "¿Qué tipo de objeto impactó el Atos?",
+   "respuesta": "El Atos impactó contra un árbol.",
+   "valor": "árbol"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál fue la causa de la pérdida de control del Atos?",
+   "respuesta": "El conductor mencionó que la pérdida de control se debió a un corte de circulación.",
+   "valor": "corte de circulación"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describir la secuencia de los eventos y los impactos?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto del Atos en la vía?",
+   "respuesta": "El impacto ocurrió en el camellón de Darwin.",
+   "valor": "camellón de Darwin"
+  },
+  {
+   "tema": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "pregunta": "¿Cuál es la altura de las marcas de impacto en el árbol?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "No se encontraron huellas de frenado ni intercambio de pintura en el sitio.",
+   "valor": "sin huellas de frenado, sin intercambio de pintura"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Atos?",
+   "respuesta": "Ninguna bolsa de aire se activó en el Atos.",
+   "valor": "ninguno"
+  }
+ ]
+}

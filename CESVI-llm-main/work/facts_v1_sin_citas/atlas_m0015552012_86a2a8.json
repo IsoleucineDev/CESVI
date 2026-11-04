@@ -1,0 +1,42 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión Blanco Modelo 2001",
+  "V2": "Great Dane Semirremolque Blanco",
+  "V3": "White Tractocamión Rojo Modelo 1989"
+ },
+ "valores": {
+  "sentido_carril_V1": "Circulación de Durango a Chihuahua",
+  "sentido_carril_V2": "Circulación de Chihuahua a Durango",
+  "sentido_carril_V3": "Circulación de Chihuahua a Durango",
+  "velocidad_V3_kmh": "62.92",
+  "velocidad_V1_kmh": "58.28",
+  "senalizacion_preferencia": "Sin preferencia de paso",
+  "secuencia_eventos": "El vehículo V3 impactó el lado derecho del vehículo V2, seccionándolo en dos partes",
+  "punto_impacto_via": "Carril derecho, dirección Durango a Chihuahua",
+  "angulo_impacto": "Oblicuo",
+  "evidencias_sitio": "Huellas de frenado, huellas de derrape, intercambio de pintura",
+  "airbags_V3": "Sin información",
+  "airbags_V1": "Sin información",
+  "posicion_final_V3": "Fuera del camino en dirección opuesta",
+  "posicion_final_V1": "Seccionado y lanzado en dirección a Durango",
+  "posicion_final_V2": "Sin información",
+  "superficie": "En condiciones aceptables",
+  "iluminacion": "Sin información",
+  "velocidad_V2_kmh": "Sin información",
+  "distancia_previa": "Sin información",
+  "altura_marca_objeto_cm": "Sin información",
+  "huellas_frenado_m": "12 metros",
+  "causa_perdida_control": "Sin información",
+  "maniobra_reversa": "Sin información",
+  "vueltas_volcadura": "Sin información",
+  "maniobra_previa_V1": "Sin información",
+  "maniobra_previa_V2": "Sin información",
+  "maniobra_previa_V3": "Sin información",
+  "declaracion_V1": "Sin información",
+  "declaracion_V2": "Sin información",
+  "declaracion_V3": "Sin información"
+ },
+ "id": "atlas_m0015552012_86a2a8",
+ "split": "train"
+}

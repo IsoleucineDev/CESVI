@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en punto_impacto_via",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "el vehiculó tipo Autobús colisionó con el vehiculó tipo Ambulancia"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "abandono la unidad en riveras del Atoya"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz Autobús 2001 blanco con franjas rojas y azul marino",
+  "V2": "Chevrolet Van Ambulancia 2004 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrieron durante la colisión?\",\n  \"respuesta\": \"el Mercedes Benz Autobús colisionó con el Chevrolet Van Ambulancia, luego el autobús abandonó la unidad en riveras del Atoya\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"el Mercedes Benz Autobús colisionó con el Chevrolet Van Ambulancia\",\n      \"evidencia\": \"el Mercedes Benz Autobús colisionó con el Chevrolet Van Ambulancia\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado\",\n      \"evidencia\": \"\"\n    },\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"riveras del Atoya\",\n      \"evidencia\": \"abandono la unidad en riveras del Atoya\"\n    }\n  ]\n}"
+}

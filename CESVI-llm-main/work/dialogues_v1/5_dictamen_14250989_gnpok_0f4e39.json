@@ -1,0 +1,138 @@
+{
+ "id": "5_dictamen_14250989_gnpok_0f4e39",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan Tsuru 2000 rojo LRJ-4064",
+  "V2": "Italika motocicleta 2006 negro 7322N"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías resumirme la declaración del conductor del Nissan Tsuru 2000 rojo?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y la declaración del motociclista de la Italika 2006?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Qué carril y dirección tomaba el Nissan Tsuru rojo?",
+   "respuesta": "El Nissan Tsuru rojo circulaba por el carril derecho en dirección noroeste.",
+   "valor": "Noroeste"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el Italika negro, ¿cómo era su dirección y carril?",
+   "respuesta": "Creo que el Italika negro circulaba en dirección más o menos noreste.",
+   "valor": "Noreste"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Podrías estimar la velocidad del Nissan Tsuru rojo antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y la velocidad de la Italika?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Nissan Tsuru antes del choque?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "Y la Italika, ¿qué maniobra realizaba?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "pregunta": "¿Qué semáforo o señal de tráfico estaba en funcionamiento?",
+   "respuesta": "La señal de tráfico era un semáforo.",
+   "valor": "semáforo"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue el orden de los impactos?",
+   "respuesta": "El impacto fue frontal izquierdo del Nissan Tsuru rojo contra el frontal derecho de la Italika.",
+   "valor": "impacto frontal izquierdo V1 contra frontal derecho V2"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "El impacto ocurrió en el cruce de Avenida 661 con calle 606.",
+   "valor": "cruce Avenida 661 y calle 606"
+  },
+  {
+   "tema": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "pregunta": "¿Qué ángulo aproximado tenían los vehículos al momento del impacto?",
+   "respuesta": "Los vehículos impactaron prácticamente perpendicularmente.",
+   "valor": "perpendicular"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el lugar del accidente?",
+   "respuesta": "En el lugar del accidente se observaron huellas de cuerpo duro tipo restregón con restos plásticos color rojo.",
+   "valor": "huellas de cuerpo duro tipo restregón con restos plásticos color rojo"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuánta longitud tuvieron las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Nissan Tsuru?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "Y en la Italika, ¿cuáles bolsas de aire se activaron?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

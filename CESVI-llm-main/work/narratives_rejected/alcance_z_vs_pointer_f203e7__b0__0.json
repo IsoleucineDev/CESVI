@@ -1,0 +1,27 @@
+{
+ "motivo": "valor no concuerda con su evidencia en huellas_frenado_m",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 8,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche sin alumbrado",
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activados"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volkswagen Pointer 2003 azul",
+  "V2": "Nissan 350Z 2003 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado del Volkswagen Pointer 2003 azul?\",\n  \"respuesta\": \"Las bolsas de aire del Volkswagen Pointer 2003 azul se activaron, además, el accidente ocurrió de noche sin alumbrado, luego no se observaron huellas de frenado.\",\n  \"extracciones\": [\n    {\"tema\": \"airbags_V1\", \"valor\": \"activados\", \"evidencia\": \"Las bolsas de aire del Volkswagen Pointer 2003 azul se activaron\"},\n    {\"tema\": \"iluminacion\", \"valor\": \"de noche sin alumbrado\", \"evidencia\": \"el accidente ocurrió de noche sin alumbrado\"},\n    {\"tema\": \"huellas_frenado_m\", \"valor\": \"0\", \"evidencia\": \"no se observaron huellas de frenado\"}\n  ]\n}"
+}

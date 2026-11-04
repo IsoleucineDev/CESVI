@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'El camión realizó una vuelta de 1/1 a la derecha antes de volcarse, ad'",
+ "principal": {
+  "id": "causa_perdida_control",
+  "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+  "valor": "velocidad excesiva"
+ },
+ "otros": [
+  {
+   "id": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "valor": "1/1 a la derecha"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Kenworth T-600 2008 blanco",
+  "V2": "Pailemex Tanque -"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la causa de la pérdida de control del camión Kenworth T-600 2008 blanco que provocó la volcadura?\",\n  \"respuesta\": \"El camión realizó una vuelta de 1/1 a la derecha antes de volcarse, además, la pérdida de control se debió a la velocidad excesiva.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"vueltas_volcadura\",\n      \"valor\": \"1/1 a la derecha\",\n      \"evidencia\": \"una vuelta de 1/1 a la derecha\"\n    },\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"velocidad excesiva\",\n      \"evidencia\": \"la velocidad excesiva\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,21 @@
+{
+ "motivo": "evidencia no literal en huellas_frenado_m",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "reversa"
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "General Motors MC-36 2003 rojo",
+  "V2": "Ford F-350 2008 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Chevy?\",\n  \"respuesta\": \"EL CHEVY REALIZABA MANIOBRAS DE REVERSA EN EL CARRIL DERECHO.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"reversa\",\n      \"evidencia\": \"EL CHEVY REALIZABA MANIOBRAS DE REVERSA\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"8\",\n      \"evidencia\": \"NO SE OBSERVARON HUELLAS DE FRENADO\"\n    }\n  ]\n}"
+}

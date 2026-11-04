@@ -1,0 +1,51 @@
+{
+ "id": "cd_juarez_70a5d3",
+ "split": "train",
+ "modalidad": "colision_frontal",
+ "vehiculos": {
+  "V1": "Plymouth Freeze 1996 blanco",
+  "V2": "Ford Escort 1998 rojo"
+ },
+ "valores": {
+  "declaracion_V1": "CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE POR EL CARRIL DERECHO CUANDO DE REPENTE SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO IMPACTANDO MI VEHÍCULO POR ENFRENTE",
+  "declaracion_V2": null,
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": "Pte a Ote",
+  "sentido_carril_V2": "Ote a Pte",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "senalizacion_preferencia": "ninguno",
+  "secuencia_eventos": "V2 invadiendo carril de V1 y chocando frontalmente",
+  "punto_impacto_via": "calle Fuente de Dalila",
+  "angulo_impacto": null,
+  "evidencias_sitio": "ninguna",
+  "airbags_V1": "ambas bolsas de aire",
+  "airbags_V2": "ambas bolsas de aire",
+  "posicion_final_V1": "lado derecho de la calle Fuente de Dalila",
+  "posicion_final_V2": "lado izquierdo de la calle Fuente de Dalila",
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": null,
+  "huellas_frenado_m": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE POR EL CARRIL DERECHO CUANDO DE REPENTE SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO IMPACTANDO MI VEHÍCULO POR ENFRENTE",
+  "superficie": "La calle Fuente de Dalila tiene un arroyo vehicular construido con material de asfalto",
+  "sentido_carril_V1": "CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE POR EL CARRIL DERECHO",
+  "sentido_carril_V2": "El vehículo marca Ford (b) circula en el carril derecho y en sentido contrario",
+  "senalizacion_preferencia": "carecer de señales horizontales o líneas divisorias sobre la carpeta asfáltica",
+  "secuencia_eventos": "El vehículo marca Ford (b) circula en el carril derecho y en sentido contrario y se genera el impacto",
+  "punto_impacto_via": "El lugar de los hechos se ubica en la calle de Fuente de Dalila",
+  "evidencias_sitio": "no existen cuerpos que generen el daño mencionado en la parte frontal del vehículo marca Plymouth, además en la parte frontal del vehículo marca Ford no muestra daños y/o indicios de haber estado en contacto con algún vehículo",
+  "airbags_V1": "En el habitáculo del vehículo tipo Freezer se pueden observar en las fotografías por la compañía de seguros la activación de las dos bolsas de aire la del conductor y la del copiloto",
+  "airbags_V2": "En el habitáculo del vehículo tipo Escort se observa que se encuentran activadas las dos bolsas tanto la del conductor como la del copiloto",
+  "posicion_final_V1": "El vehículo marca Ford (b) circula en el carril derecho y en sentido contrario y se genera el impacto",
+  "posicion_final_V2": "El vehículo marca Ford (b) circula en el carril derecho y en sentido contrario y se genera el impacto"
+ },
+ "descartados": {
+  "iluminacion": "noche",
+  "angulo_impacto": "frontal"
+ }
+}

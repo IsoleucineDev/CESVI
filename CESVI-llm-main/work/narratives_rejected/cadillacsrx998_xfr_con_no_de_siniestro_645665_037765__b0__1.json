@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El incidente ocurrió de noche con alumbrado público, lo que afectó la '",
+ "principal": {
+  "id": "iluminacion",
+  "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+  "valor": "de noche con alumbrado público",
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Cadillac SRX 2005 blanco",
+  "V2": "FreightLiner M2 2009 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles fueron las condiciones de iluminación en el momento del incidente?\",\n  \"respuesta\": \"El incidente ocurrió de noche con alumbrado público, lo que afectó la visibilidad de los conductores involucrados. Además, la iluminación del lugar proporcionaba suficiente luz para observar las condiciones inmediatas del entorno.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de noche con alumbrado público\",\n      \"evidencia\": \"El incidente ocurrió de noche con alumbrado público\"\n    }\n  ]\n}"
+}

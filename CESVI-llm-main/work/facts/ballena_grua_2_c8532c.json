@@ -1,0 +1,54 @@
+{
+ "id": "ballena_grua_2_c8532c",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "International FAMSA 1964 azul",
+  "V2": "Liever GRUA 2010 gris amarillo"
+ },
+ "valores": {
+  "declaracion_V1": "Al circular sobre anillo periférico se le pego a la cabina de una grúa con la carga que transportaba Se me explica el deslinde acepto mi responsabilidad solicito el pago de daños a terceros",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "carriles centrales",
+  "sentido_carril_V2": "estacionada en los carriles centrales",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "circular",
+  "maniobra_previa_V2": "estacionado",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "El vehículo tipo Famsa con la ballena que transportaba impactó la cabina de la grúa estacionada en los carriles centrales del periférico",
+  "punto_impacto_via": "carriles centrales del periférico",
+  "angulo_impacto": null,
+  "evidencias_sitio": "huellas de impacto en la ballena y la grúa",
+  "danos_V1": "ballena impactada en su sección media sin grandes daños",
+  "danos_V2": "corrimiento de leves magnitudes en el brazo izquierdo y en los mecanismos de movimiento",
+  "posicion_final_V1": "detenido después del impacto",
+  "posicion_final_V2": "detenido después del impacto",
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "huellas_frenado_m": null
+ },
+ "citas": {
+  "declaracion_V1": "Al circular sobre anillo periférico se le pego a la cabina de una grúa con la carga que transportaba Se me explica el deslinde acepto mi responsabilidad solicito el pago de daños a terceros",
+  "sentido_carril_V1": "el vehículo tipo Famsa con la ballena que transportaba, la cual contaba con un ancho total de 7 metros, teniendo a los lados un metro de tolerancia para que pudiera pasar",
+  "sentido_carril_V2": "la grúa estaba invadiendo este espacio en la parte superior motivo por el cual ambos están excedidos de dimensiones",
+  "maniobra_previa_V1": "Al circular sobre anillo periférico se le pego a la cabina de una grúa con la carga que transportaba",
+  "maniobra_previa_V2": "el vehículo tipo Grúa se encontraba estacionada en los carriles centrales del periférico y sin funcionar",
+  "secuencia_eventos": "el vehículo tipo Famsa con la ballena que transportaba, la cual contaba con un ancho total de 7 metros, teniendo a los lados un metro de tolerancia para que pudiera pasar",
+  "punto_impacto_via": "el ancho de vía de 9 metros de los carriles centrales del periférico era suficiente para que pasara sin problemas el vehículo tipo Famsa con la ballena que transportaba",
+  "evidencias_sitio": "los daños en el vehículo tipo grúa presentan una dirección de izquierda a derecha, lo cual indica que esta permanecía detenida mientras que el vehículo que le generó el daño (tipo tracto camión con la ballena) se encontraba en movimiento",
+  "danos_V1": "la viga de concreto (ballena) la cual se aprecia impactada en su sección media por la parte superior sin generarle grandes daños",
+  "danos_V2": "el vehículo tipo Grúa, presenta daños tipo corrimiento de leves magnitudes, las cuales se presentan en una sola dirección sobre el brazo izquierdo",
+  "posicion_final_V1": "el vehículo tipo Famsa con la ballena que transportaba, la cual contaba con un ancho total de 7 metros, teniendo a los lados un metro de tolerancia para que pudiera pasar",
+  "posicion_final_V2": "el vehículo tipo Grúa se encontraba estacionada en los carriles centrales del periférico y sin funcionar"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "noche",
+  "velocidad_V2_kmh": "detenido",
+  "senalizacion_preferencia": "ninguno",
+  "angulo_impacto": "lateral"
+ }
+}

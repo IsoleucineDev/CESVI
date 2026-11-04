@@ -1,0 +1,48 @@
+{
+ "id": "axa_sin_cl134429_b4b3a8",
+ "split": "test",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Kenworth T-600 2008 blanco",
+  "V2": "Pailemex Tanque -"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "superficie": "asfalto seco",
+  "iluminacion": null,
+  "sentido_carril_V1": "Poniente - Oriente",
+  "velocidad_V1_kmh": 78.1,
+  "maniobra_previa_V1": null,
+  "causa_perdida_control": "velocidad excesiva",
+  "vueltas_volcadura": "1/1 a la derecha",
+  "punto_impacto_via": null,
+  "secuencia_eventos": null,
+  "posicion_final_V1": "volcado sobre su costado derecho",
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "evidencias_sitio": "Daños en el asfalto y huellas de frenado.",
+  "huellas_frenado_m": null,
+  "declaracion_V2": null,
+  "sentido_carril_V2": null,
+  "maniobra_previa_V2": null,
+  "posicion_final_V2": null,
+  "velocidad_V2_kmh": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "superficie": "de superar este umbral es mas factible que el vehículo pierda contacto con el asfalto",
+  "sentido_carril_V1": "el vehículo bajo estudio venia circulando por una pendiente ascendente en sentido de circulación de Oriente a Poniente.",
+  "velocidad_V1_kmh": "el vehículo bajo estudio circulaba a una velocidad mayor a los 78.1Km/h, lo que ocasiona la volcadura.",
+  "causa_perdida_control": "el vehículo bajo estudio circulaba a una velocidad mayor a los 78.1Km/h, lo que ocasiona la volcadura.",
+  "vueltas_volcadura": "VOLCADURA EN TONEL 1/1 A LA DERECHA",
+  "posicion_final_V1": "el tanque pierda contacto con el asfalto y jala al tractocamión obligándolo a volcarse sobre su costado derecho.",
+  "evidencias_sitio": "El lugar donde ocurre la volcadura esta ubicado justo frente al señalamiento que marca el kilómetro 139+000 justo a la mitad de la curva."
+ },
+ "descartados": {
+  "declaracion_V1": "El vehículo venía circulando en la curva cuando perdió el control y volcó.",
+  "maniobra_previa_V1": "circulando",
+  "punto_impacto_via": "curva a la izquierda",
+  "secuencia_eventos": "El vehículo circulaba en la curva cuando perdió el control y volcó."
+ }
+}

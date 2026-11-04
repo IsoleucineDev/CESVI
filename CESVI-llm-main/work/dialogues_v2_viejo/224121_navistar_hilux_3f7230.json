@@ -1,0 +1,138 @@
+{
+ "id": "224121_navistar_hilux_3f7230",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Navistar Autobús 2009 amarillo",
+  "V2": "Toyota Hilux 2009 gris plata"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías describir brevemente la versión del conductor del autobús amarillo sobre cómo ocurrió la colisión?",
+   "respuesta": "El conductor del autobús amarillo declaró que venía circulando por el carril derecho de la Avenida Maestros Campechanos y realizó una vuelta a la izquierda en el retorno justo antes del impacto.",
+   "valor": "El conductor del vehículo marca Navistar, tipo Autobús, modelo 2009, color amarillo, placas de circulación 200347-B, viene circulando en sentido N a S en el carril del extremo derecho de la Avenida Maestros Campechanos, justo al cruce con la calle Servidor Agrario, da vuelta a la izquierda en el retorno, momentos antes el conductor del vehículo marca Toyota, tipo Hilux, modelo 2009, color gris plata, con placas de circulación CN-41970, viene circulando por la misma avenida pero en el carril del extremo izquierdo, el cual se impacta contra la parte posterior del faldón izquierdo del vehículo tipo autobús."
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y la versión del conductor de la Hilux gris plata, ¿cómo la describes?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Cómo describirías la condición de la superficie de rodamiento en el lugar del accidente?",
+   "respuesta": "La superficie de rodamiento es de asfalto en buen estado para la circulación.",
+   "valor": "pavimento es estado aceptable para la circulación"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación y visibilidad había en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Podrías decirme en qué dirección y carril circulaba el autobús amarillo?",
+   "respuesta": "El autobús amarillo circulaba en sentido Norte a Sur en el carril del extremo derecho.",
+   "valor": "Norte a Sur en el carril del extremo derecho"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el Toyota Hilux gris plata, ¿en qué dirección y carril circulaba?",
+   "respuesta": "El Hilux circulaba en sentido Norte a Sur en el carril del extremo izquierdo, aprox.",
+   "valor": "Norte a Sur en el carril del extremo izquierdo"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del autobús amarillo antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "Y la velocidad del Hilux gris plata, ¿cómo la estimas?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el autobús amarillo antes del impacto?",
+   "respuesta": "El autobús amarillo realizó una maniobra de vuelta a la izquierda en el retorno justo antes del impacto.",
+   "valor": "da vuelta a la izquierda en el retorno"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "Y la Hilux gris plata, ¿qué maniobra realizaba?",
+   "respuesta": "La Hilux circulaba en dirección Norte a Sur sin realizar maniobras específicas.",
+   "valor": "circulando"
+  },
+  {
+   "tema": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "pregunta": "¿Qué semáforos o señales de tráfico estaban presentes en el lugar del accidente y quién tenía preferencia de paso?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describir la secuencia de los impactos y el orden en que ocurrieron?",
+   "respuesta": "Creo que el Hilux impactó primero contra la parte posterior del faldón izquierdo del autobús amarillo.",
+   "valor": "el vehículo V2 impacta contra la parte posterior del faldón izquierdo del vehículo V1"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde exactamente ocurrió el impacto en la Avenida Maestros Campechanos?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "pregunta": "¿Podrías describir el ángulo aproximado entre los vehículos al momento del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias físicas dejaron los vehículos en el lugar del accidente?",
+   "respuesta": "Se observaron intercambios de pintura color gris y desprendimientos de pintura color amarillo en el sitio.",
+   "valor": "intercambio de pintura color gris y desprendimientos de pintura color amarillo"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado, si las hay?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el autobús amarillo?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "Y en la Hilux gris plata, ¿cuáles bolsas de aire se activaron?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

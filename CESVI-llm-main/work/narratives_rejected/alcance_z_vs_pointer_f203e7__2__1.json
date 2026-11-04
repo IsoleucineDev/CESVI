@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_previa_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "al venir circulando sobre la avenida estaba lloviendo quise frenar en un tope y el coche se patino chocando contra un Pointer que se encontraba delante de mi"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "reducción de velocidad"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura azul en el cofre de V2, pintura negra en la tapa cajuela de V1"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volkswagen Pointer 2003 azul",
+  "V2": "Nissan 350Z 2003 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Volkswagen Pointer 2003 sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"el conductor del Volkswagen Pointer 2003 declaró que al venir circulando sobre la avenida estaba lloviendo y quiso frenar en un tope, lo que hizo que el coche se patinara chocando contra un Nissan 350Z negro que se encontraba delante de él, además redujo la velocidad antes del impacto y luego se observó pintura azul en el cofre del Nissan 350Z y pintura negra en la tapa cajuela del Volkswagen Pointer 2003\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"al venir circulando sobre la avenida estaba lloviendo quise frenar en un tope y el coche se patino chocando contra un Nissan 350Z que se encontraba delante de mi\",\n      \"evidencia\": \"el conductor del Volkswagen Pointer 2003 declaró que al venir circulando sobre la avenida estaba lloviendo y quiso frenar en un tope, lo que hizo que el coche se patinara chocando contra un Nissan 350Z negro que se encontraba delante de él\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"reducción de velocidad\",\n      \"evidencia\": \"redujo la velocidad antes del impacto\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"pintura azul en el cofre de V2, pintura negra en la tapa cajuela de V1\",\n      \"evidencia\": \"se observó pintura azul en el cofre del Nissan 350Z y pintura negra en la tapa cajuela del Volkswagen Pointer 2003\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,29 @@
+{
+ "motivo": "valor no concuerda con su evidencia en airbags_V1",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "impacto frontal contra el muro de contención, seguido de impacto posterior derecho"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "restos de partes plásticas de diferentes características y colores, las cuales destacan partes plásticas de color negro, con el logotipo de Ford, partes de color ámbar con forma trapezoidal, reflectores de color plata y un hule protector de color negro con forma circular"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "pavimento mojado"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "frontal y lateral del asiento del conductor"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Mustang 2011 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"Cuál es la secuencia de eventos que ocurrió con el Ford Mustang 2011 blanco?\",\n  \"respuesta\": \"El Ford Mustang impactó primero contra el muro de contención, seguido de un impacto posterior derecho, además en el sitio se observaron restos de partes plásticas de diferentes características y colores, las cuales destacan partes plásticas de color negro, con el logotipo de Ford, partes de color ámbar con forma trapezoidal, reflectores de color plata y un hule protector de color negro con forma circular, además la superficie era pavimento mojado, y las bolsas de aire delanteras y laterales del conductor se activaron.\",\n  \"extracciones\": [\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"impacto frontal contra el muro de contención, seguido de impacto posterior derecho\", \"evidencia\": \"El Ford Mustang impactó primero contra el muro de contención, seguido de un impacto posterior derecho\"},\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"restos de partes plásticas de diferentes características y colores, las cuales destacan partes plásticas de color negro, con el logotipo de Ford, partes de color ámbar con forma trapezoidal, reflectores de color plata y un hule protector de color negro con forma circular\", \"evidencia\": \"en el sitio se observaron restos de partes plásticas de diferentes características y colores, las cuales destacan partes plásticas de color negro, con el logotipo de Ford, partes de color ámbar con forma trapezoidal, reflectores de color plata y un hule protector de color negro con forma circular\"},\n    {\"tema\": \"superficie\", \"valor\": \"pavimento mojado\", \"evidencia\": \"la superficie era pavimento mojado\"},\n    {\"tema\": \"airbags_V1\", \"valor\": \"frontal y lateral del asiento del conductor\", \"evidencia\": \"las bolsas de aire delanteras y laterales del conductor se activaron\"}\n  ]\n}"
+}

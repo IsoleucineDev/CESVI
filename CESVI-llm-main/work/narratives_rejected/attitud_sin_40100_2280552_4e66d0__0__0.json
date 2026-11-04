@@ -1,0 +1,19 @@
+{
+ "motivo": "oración con contenido no extraído: 'Además, en el sitio del accidente, se observaron daños tipo rayón en l'",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El vehículo tipo Attitud presentó daños tipo rayón en dirección de adelante hacia atrás en las puertas de lado izquierdo."
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "daños tipo rayón en las puertas de lado izquierdo"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Dodge Attitud 2006 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos en la colisión lateral angular entre el Dodge Attitud 2006 azul y el vehículo involucrado?\",\n  \"respuesta\": \"El Dodge Attitud presentó daños tipo rayón en dirección de adelante hacia atrás en las puertas de lado izquierdo. Además, en el sitio del accidente, se observaron daños tipo rayón en las puertas de lado izquierdo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"daños tipo rayón en dirección de adelante hacia atrás en las puertas de lado izquierdo\",\n      \"evidencia\": \"El Dodge Attitud presentó daños tipo rayón en dirección de adelante hacia atrás en las puertas de lado izquierdo.\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"daños tipo rayón en las puertas de lado izquierdo\",\n      \"evidencia\": \"se observaron daños tipo rayón en las puertas de lado izquierdo\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,166 @@
+{
+ "id": "3_siniestro_288254_09_c79b40",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Mercedes Benz, Autobús, 2001, Blanco con franjas rojas y azul marino, 354-297-S",
+  "V2": "Chevrolet, Van Ambulancia, 2004, Blanco, OAX-045"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué nos dice el conductor del Mercedes Benz sobre cómo ocurrió el accidente?",
+   "respuesta": "Iba sobre el periférico entre 20 de Noviembre y Nuño Del Mercado con dirección hacia la central cuando vi una ambulancia venia en el carril de en medio cuando me sale una persona y lo trato de esquivar y le pego a la Ambulancia y me doy a la fuga sobre Nuño Del Mercado y abandono la unidad en riveras del Atoya",
+   "valor": "Iba sobre periférico entre 20 de Noviembre y Nuño Del Mercado con dirección hacia la central cuando vi una ambulancia venia en el carril de en medio cuando me sale una persona y lo trato de esquivar y le pego a la Ambulancia y me doy a la fuga sobre Nuño Del Mercado y abandono la unidad en riveras del Atoya"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y qué nos dice el conductor de la ambulancia?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación y visibilidad había en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación y carril por el que iba el Mercedes Benz?",
+   "respuesta": "Sur a norte",
+   "valor": "Sur a norte"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y el carril en el que circulaba la ambulancia?",
+   "respuesta": "Carril de en medio",
+   "valor": "Carril de en medio"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Mercedes Benz antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y la velocidad de la ambulancia?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Mercedes Benz antes del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y la ambulancia?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "pregunta": "¿Qué señalización había para el control vehicular en el momento del accidente?",
+   "respuesta": "Sin señalamiento para el control vehicular",
+   "valor": "Sin señalamiento para el control vehicular"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue el orden y tipo de los impactos?",
+   "respuesta": "Vehículo V1 impacta lateralmente a V2",
+   "valor": "Vehículo V1 impacta lateralmente a V2"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "Avenida Periférico entre 20 de Noviembre y Nuño Del Mercado",
+   "valor": "Avenida Periférico entre 20 de Noviembre y Nuño Del Mercado"
+  },
+  {
+   "tema": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "pregunta": "¿Cuál fue el ángulo aproximado entre los vehículos al momento del impacto?",
+   "respuesta": "Lateral",
+   "valor": "Lateral"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "creo que hubo intercambio de pintura negra entre vehículos",
+   "valor": "Intercambio de pintura negra entre vehículos"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál era la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Mercedes Benz?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en la ambulancia?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Cuáles fueron los daños en el Mercedes Benz?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Y en la ambulancia?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Posición final de V1: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Cuál fue la posición final del Mercedes Benz?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Posición final de V2: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Y la ambulancia?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

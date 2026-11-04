@@ -1,0 +1,20 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "huellas de frenado no observadas, restos de pintura color azul en el vehículo V2"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto en buenas condiciones de circulación"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford F350 1994 blanco y azul",
+  "V2": "Chevrolet Monza 2009 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles fueron las evidencias en el sitio del accidente?\",\n  \"respuesta\": \"EVIDENCIAS EN EL SITIO: NO OBSERVADAS HUELLAS DE FRENADO. ADJUNTAR RESTOS DE PINTURA COLOR AZUL EN EL VEHÍCULO CHEVY. SUPERFICIE DE RODAMIENTO: ASFALTO EN BUENAS CONDICIONES DE CIRCULACIÓN.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"huellas de frenado no observadas, restos de pintura color azul\",\n      \"evidencia\": \"EVIDENCIAS EN EL SITIO: NO OBSERVADAS HUELLAS DE FRENADO. ADJUNTAR RESTOS DE PINTURA COLOR AZUL EN EL VEHÍCULO CHEVY.\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfalto en buenas condiciones\",\n      \"evidencia\": \"SUPERFICIE DE RODAMIENTO: ASFALTO EN BUENAS CONDICIONES DE CIRCULACIÓN.\"\n    }\n  ]\n}"
+}

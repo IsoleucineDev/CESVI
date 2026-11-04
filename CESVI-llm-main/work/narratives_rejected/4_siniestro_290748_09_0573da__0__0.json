@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en sentido_carril_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "Al acudir a Officce Max a comprar un artículo de oficina y en el lugar que me estacionaria había un modulo que me impedía hacerlo por lo que decidir buscar otro lugar, me eche de reversa, sentí un golpe y no se que paso hasta que estuve en el hospital."
+ },
+ "otros": [
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "estacionado"
+  },
+  {
+   "id": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "valor": "el conductor del vehículo “A” decide realizar la maniobra en reversa y siente el impacto"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfaltado en buenas condiciones"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Altima 2004 plata",
+  "V2": "GMC Envoy 2006 plata"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor de Nissan Altima sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"Al acudir a Officce Max a comprar un artículo de oficina y en el lugar que me estacionaria había un modulo que me impedía hacerlo por lo que decidir buscar otro lugar, me eche de reversa, sentí un golpe y no se que paso hasta que estuve en el hospital. Además, estaba estacionado. Luego, el conductor del vehículo “A” decide realizar la maniobra en reversa y siente el impacto. Y la superficie de rodamiento era asfaltado en buenas condiciones.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"Al acudir a Officce Max a comprar un artículo de oficina y en el lugar que me estacionaria había un modulo que me impedía hacerlo por lo que decidir buscar otro lugar, me eche de reversa, sentí un golpe y no se que paso hasta que estuve en el hospital.\",\n      \"evidencia\": \"Al acudir a Officce Max a comprar un artículo de oficina y en el lugar que me estacionaria había un modulo que me impedía hacerlo por lo que decidir buscar otro lugar, me eche de reversa, sentí un golpe y no se que paso hasta que estuve en el hospital.\"\n    },\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"estacionado\",\n      \"evidencia\": \"estacionado\"\n    },\n    {\n      \"tema\": \"maniobra_reversa\",\n      \"valor\": \"el conductor del vehículo “A” decide realizar la maniobra en reversa y siente el impacto\",\n      \"evidencia\": \"el conductor del vehículo “A” decide realizar la maniobra en reversa y siente el impacto\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfaltado en buenas condiciones\",\n      \"evidencia\": \"asfaltado en buenas condiciones\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,22 @@
+{
+ "motivo": "oración con contenido no extraído: 'La International FAMSA 1964 azul dejó una huella de frenado de 25 metr'",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 25,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 70,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "International FAMSA 1964 azul",
+  "V2": "Liever GRUA 2010 gris amarillo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado de la International FAMSA 1964 azul?\",\n  \"respuesta\": \"La International FAMSA 1964 azul dejó una huella de frenado de 25 metros, además, la velocidad estimada de este vehículo antes del evento fue de 70 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"25\",\n      \"evidencia\": \"25 metros\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"70\",\n      \"evidencia\": \"70 km/h\"\n    }\n  ]\n}"
+}

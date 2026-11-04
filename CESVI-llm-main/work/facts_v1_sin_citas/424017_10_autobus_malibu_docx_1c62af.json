@@ -1,0 +1,28 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "DINA autobus 1992 blanco con franjas amarillas y negras 517-821-V",
+  "V2": "Chevrolet Malibu 2007 negro WPA-63-95"
+ },
+ "valores": {
+  "superficie": "seca",
+  "iluminacion": "día",
+  "sentido_carril_V1": "Poniente a Oriente",
+  "sentido_carril_V2": "Norte a Sur",
+  "velocidad_V1_kmh": "0",
+  "velocidad_V2_kmh": "43.26",
+  "maniobra_previa_V1": "parada de pronto",
+  "maniobra_previa_V2": "avance",
+  "distancia_previa": "no especificada",
+  "secuencia_eventos": "V2 impacta la parte posterior izquierda de V1",
+  "punto_impacto_via": "carril de Oriente a Poniente",
+  "evidencias_sitio": "huellas de pintura intercambiada",
+  "huellas_frenado_m": "no especificadas",
+  "airbags_V1": "no activados",
+  "airbags_V2": "no activados",
+  "posicion_final_V1": "estático",
+  "posicion_final_V2": "desplazado hacia adelante"
+ },
+ "id": "424017_10_autobus_malibu_docx_1c62af",
+ "split": "train"
+}

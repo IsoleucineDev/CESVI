@@ -1,0 +1,20 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "GM, tipo Chevy, modelo 2006, color negro y placas de circulación 814-TSA",
+  "V2": "Pontiac, tipo G5, modelo 2008, color rojo Victoria y placas de circulación 859-VTZ"
+ },
+ "valores": {
+  "sentido_carril_V1": "Norte - Sur",
+  "sentido_carril_V2": "Norte - Sur",
+  "senalizacion_preferencia": "Vehículo A quería incorporarse al carril de extrema derecha",
+  "secuencia_eventos": "Vehículo A impacta de lado izquierdo al vehículo B",
+  "punto_impacto_via": "Vértice delantero derecho de V1 al costado posterior izquierdo de V2",
+  "angulo_impacto": "Lateral",
+  "declaracion_V1": "Venía circulando sobre la Av. Central Hank González al querer incorporarse un Pontiac G-5 se me atraviesa no me cede el paso y le pego de lado izquierdo",
+  "declaracion_V2": "null",
+  "evidencias_sitio": "No se observan impregnaciones de material color rojo de V2 en V1"
+ },
+ "id": "10_dictamens_14802862_5362bf",
+ "split": "train"
+}

@@ -1,0 +1,21 @@
+{
+ "motivo": "evidencia no literal en punto_impacto_via",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El vehículo tipo Mondeo pierde el control y impacta al vehículo tipo D-150, luego impacta al vehículo tipo Suburban y finalmente impacta al vehículo tipo Tsuru."
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Avenida 8 frente a la calle 2-A"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Mondeo 2003 negro",
+  "V2": "Dodge D-150 1978 amarillo con gris",
+  "V3": "Chevrolet Suburban 1994 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la secuencia de los impactos en el accidente?\",\n  \"respuesta\": \"El Ford Mondeo negro perdió el control y primero impactó al Dodge D-150 amarillo con gris, luego siguió su trayectoria y golpeó al Chevrolet Suburban negro, y finalmente impactó a un vehículo tipo Tsuru.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"Avenida 8 frente a la calle 2-A\",\n      \"evidencia\": \"Avenida 8 frente a la calle 2-A\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"Ford Mondeo impacta Dodge D-150, luego Chevrolet Suburban y finalmente Tsuru\",\n      \"evidencia\": \"El Ford Mondeo negro perdió el control y primero impactó al Dodge D-150 amarillo con gris, luego siguió su trayectoria y golpeó al Chevrolet Suburban negro, y finalmente impactó a un vehículo tipo Tsuru\"\n    }\n  ]\n}"
+}

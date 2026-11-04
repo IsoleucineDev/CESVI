@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en evidencias_sitio",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "autopista Peñon – Texcoco en el kilómetro 4"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "En la parte posterior del vehículo tipo Tsuru, en la tapa cajuela, muestra impregnación de pintura de color vino, mismo color que se encuentra en la carrocería del vehículo tipo Platina. Además, en la parte interna de la fascia de dicho vehículo se encontraron restos de esquirlas y de plástico de color rojo, pertenecientes a las cubiertas del faro posterior del lado izquierdo del vehículo tipo Tsuru."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Platina 2004 vino",
+  "V2": "Nissan Tsuru S/D arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde en la vía ocurrió el impacto?\",\n  \"respuesta\": \"En la autopista Peñon – Texcoco en el kilómetro 4, se encontró evidencia del impacto. Además, en la parte posterior del vehículo tipo Tsuru, en la tapa cajuela, muestra impregnación de pintura de color vino, mismo color que se encuentra en la carrocería del vehículo tipo Platina.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"En la parte posterior del vehículo tipo Tsuru, en la tapa cajuela, muestra impregnación de pintura de color vino, mismo color que se encuentra en la carrocería del vehículo tipo Platina. Además, en la parte interna de la fascia de dicho vehículo se encontraron restos de esquirlas y de plástico de color rojo, pertenecientes a las cubiertas del faro posterior del lado izquierdo del vehículo tipo Tsuru.\",\n      \"evidencia\": \"En la parte posterior del vehículo tipo Tsuru, en la tapa cajuela, muestra impregnación de pintura de color vino, mismo color que se encuentra en la carrocería del vehículo tipo Platina.\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"autopista Peñon – Texcoco en el kilómetro 4\",\n      \"evidencia\": \"En la autopista Peñon – Texcoco en el kilómetro 4, se encontró evidencia del impacto.\"\n    }\n  ]\n}"
+}

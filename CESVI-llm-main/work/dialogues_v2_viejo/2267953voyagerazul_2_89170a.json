@@ -1,0 +1,159 @@
+{
+ "id": "2267953voyagerazul_2_89170a",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chrysler Voyager LX 2005 azul",
+  "V2": "Nissan Altima 2000 arena"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías contarme en detalle cómo el conductor del Chrysler Voyager LX 2005 azul describió lo que ocurrió?",
+   "respuesta": "AL QUERER INCORPRARME A PERIFERICo Frena el maxima Freno yo se me barre el pedal del Freno y lo Impacto",
+   "valor": "AL QUERER INCORPRARME A PERIFERICO Frena el maxima Freno yo se me barre el pedal del Freno y lo Impacto"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y cómo describió el conductor del Nissan Altima 2000 arena lo que sucedió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Qué condiciones presentaba la superficie de rodamiento en el momento del accidente?",
+   "respuesta": "malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico",
+   "valor": "malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Podrías describir las condiciones de iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Qué carril y dirección llevaba el Chrysler Voyager LX 2005 azul?",
+   "respuesta": "circulando por el carril de alta en Avenida 1º de Mayo en dirección de Poniente a Oriente",
+   "valor": "circulando por el carril de alta en Avenida 1º de Mayo en dirección de Poniente a Oriente"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y el Nissan Altima 2000 arena, en qué carril y dirección circulaba?",
+   "respuesta": "circulando por el mismo carril enfrente del vehículo tipo Voyager(A) en dirección de Poniente a Oriente",
+   "valor": "circulando por el mismo carril enfrente del vehículo tipo Voyager(A) en dirección de Poniente a Oriente"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Chrysler Voyager LX 2005 azul antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y la velocidad del Nissan Altima 2000 arena?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Chrysler Voyager LX 2005 azul antes del impacto?",
+   "respuesta": "frenado",
+   "valor": "frenado"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y el Nissan Altima 2000 arena, qué maniobra realizaba?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuánta distancia o tiempo había entre ambos vehículos antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describir la secuencia de eventos que ocurrieron al momento del accidente?",
+   "respuesta": "creo que el vehículo tipo Voyager (A) frena, pero al conductor se le barre el pie del freno e impacta al vehículo tipo Altima (B)",
+   "valor": "el vehículo tipo Voyager (A) frena, pero al conductor se le barre el pie del freno e impacta al vehículo tipo Altima (B)"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde exactamente ocurrió el impacto en la vía?",
+   "respuesta": "en la Avenida 1º de Mayo antes de llegar a Periférico",
+   "valor": "en la Avenida 1º de Mayo antes de llegar a Periférico"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el lugar del accidente?",
+   "respuesta": "desprendimiento de pintura en la fascia frontal del lado derecho del V1 y en la fascia posterior del lado izquierdo del V2",
+   "valor": "desprendimiento de pintura en la fascia frontal del lado derecho del V1 y en la fascia posterior del lado izquierdo del V2"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál era la longitud de las huellas de frenado dejadas por los vehículos?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Chrysler Voyager LX 2005 azul?",
+   "respuesta": "la del conductor, acompañante, y la bolsa de aire para las rodillas del conductor",
+   "valor": "la del conductor, acompañante, y la bolsa de aire para las rodillas del conductor"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en el Nissan Altima 2000 arena?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Qué daños presentaba el Chrysler Voyager LX 2005 azul?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Y el Nissan Altima 2000 arena, qué daños tenía?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "pregunta": "¿Dónde quedó el Chrysler Voyager LX 2005 azul después del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "pregunta": "¿Y el Nissan Altima 2000 arena, dónde quedó?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

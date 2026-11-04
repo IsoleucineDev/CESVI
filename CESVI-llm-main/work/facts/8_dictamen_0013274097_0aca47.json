@@ -1,0 +1,49 @@
+{
+ "id": "8_dictamen_0013274097_0aca47",
+ "split": "valid",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Renault Megane 2004 cafe",
+  "V2": "Ford Ecosport 2005 gris"
+ },
+ "valores": {
+  "declaracion_V1": "Venia circulando sobre la carretera Mex-Cuernavaca cuando de repente se detienen los vehículos de adelante no alcanzando a frenar pegándole al coche de adelante aventándolo contra otro, el cuál se va del lugar inmediatamente",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "sur",
+  "sentido_carril_V2": "sur",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "frenado",
+  "maniobra_previa_V2": "detenido",
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo V1 colisionó en la parte posterior al vehículo V2, provocando una proyección de V2 que impactó a un vehículo desconocido",
+  "punto_impacto_via": "carretera federal Cuernavaca-Distrito Federal en el kilómetro 45 con dirección a Cuernavaca",
+  "evidencias_sitio": "El vehículo V1 presenta pintura gris en la parte frontal, el vehículo V2 no presenta pintura café en la parte posterior",
+  "huellas_frenado_m": null,
+  "airbags_V1": "activado",
+  "airbags_V2": null,
+  "posicion_final_V1": "Detenido en la carretera federal Cuernavaca-Distrito Federal en el kilómetro 45 con dirección a Cuernavaca",
+  "posicion_final_V2": "Proyectado hacia un vehículo desconocido",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Venia circulando sobre la carretera Mex-Cuernavaca cuando de repente se detienen los vehículos de adelante no alcanzando a frenar pegándole al coche de adelante aventándolo contra otro, el cuál se va del lugar inmediatamente",
+  "sentido_carril_V1": "El lugar de los hechos de tránsito (Carretera Federal Cuernavaca- Distrito Federal) cuenta con un arroyo vehicular con dos sentidos de circulación divido por una doble línea central continua de color amarillo, cada sentido de circulación consta de 1 carril con sentido de Norte a Sur y el otro de Sur a Norte",
+  "sentido_carril_V2": "El lugar de los hechos de tránsito (Carretera Federal Cuernavaca- Distrito Federal) cuenta con un arroyo vehicular con dos sentidos de circulación divido por una doble línea central continua de color amarillo, cada sentido de circulación consta de 1 carril con sentido de Norte a Sur y el otro de Sur a Norte",
+  "maniobra_previa_V1": "de repente se detienen los vehículos de adelante no alcanzando a frenar pegándole al coche de adelante aventándolo contra otro",
+  "maniobra_previa_V2": "de repente se detienen los vehículos de adelante no alcanzando a frenar pegándole al coche de adelante aventándolo contra otro",
+  "secuencia_eventos": "Se muestra el momento en el cuál el vehículo tipo Megane colisiona en la parte posterior al vehículo tipo Ecosport, provocando una proyección",
+  "punto_impacto_via": "El lugar de los hechos se ubica en la Carretera Federal Cuernavaca-Distrito Federal en el kilómetro 45 con dirección hacia Cuernavaca, Morelos",
+  "evidencias_sitio": "En la parte posterior del vehículo tipo Ecosport no se observa ningún tipo de impregnación de pintura color café correspondiente del vehículo tipo Megane",
+  "airbags_V1": "El panel de instrumentos y de control sin daños a simple vista. No se observa detonación de la Bolsa de Aire del copiloto. Bolsa de aire activada del lado del conductor",
+  "posicion_final_V1": "Se muestra la posición final de los vehículos posterior al siniestro en estudio y se observa que el vehículo desconocido se retira del lugar de los hechos",
+  "posicion_final_V2": "Se observa el momento en el cuál el vehículo tipo Ecosport frena al percibir que un vehículo desconocido delante de él, se detiene intempestivamente"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día"
+ }
+}

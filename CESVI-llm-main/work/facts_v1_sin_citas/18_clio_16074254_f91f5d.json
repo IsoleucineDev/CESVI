@@ -1,0 +1,20 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Renault Clio 2002 blanco 331-RJL",
+  "V2": "Renault Megane 2005 negro 430-VGG"
+ },
+ "valores": {
+  "sentido_carril_V1": "Izquierda a Papalotla",
+  "sentido_carril_V2": "Chinconcuac a Texcoco",
+  "senalizacion_preferencia": "Sin preferencia explícita",
+  "secuencia_eventos": "Impacto lateral derecho de V2 a V1",
+  "punto_impacto_via": "Costado derecho de V1",
+  "angulo_impacto": "90 grados",
+  "evidencias_sitio": "Restos de pintura intercambiada",
+  "declaracion_V1": "Daba vuelta a la izquierda cuando fue impactado por un vehículo que circulaba de Chinconcuac a Texcoco",
+  "declaracion_V2": "No especificado"
+ },
+ "id": "18_clio_16074254_f91f5d",
+ "split": "train"
+}

@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en maniobra_previa_V2",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "circulación de suroeste a noreste"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "desacoplamiento de la fascia"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "desacoplamiento del costado"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Toyota Camry 2002 gris plata",
+  "V2": "Saab 9-3 2004 gris Oxford"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Saab 9-3 2004 gris Oxford?\",\n  \"respuesta\": \"EL SAAB 9-3 2004 GRIS OXFORD CIRCULABA EN SENTIDO DE SUROESTE A NORESTE. ADÉMÁS, EL TOYOTA CAMRY 2002 GRIS PLATA REALIZABA UN DESACOPLAMIENTO DE LA FASCIA. LUEGO, EL SAAB 9-3 2004 GRIS OXFORD REALIZABA UN DESACOPLAMIENTO DEL COSTADO.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"suroeste_a_noreste\",\n      \"evidencia\": \"EL SAAB 9-3 2004 GRIS OXFORD CIRCULABA EN SENTIDO DE SUROESTE A NORESTE\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"desacoplamiento_fascia\",\n      \"evidencia\": \"EL TOYOTA CAMRY 2002 GRIS PLATA REALIZABA UN DESACOPLAMIENTO DE LA FASCIA\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"desacoplamiento_costado\",\n      \"evidencia\": \"EL SAAB 9-3 2004 GRIS OXFORD REALIZABA UN DESACOPLIAMIENTO DEL COSTADO\"\n    }\n  ]\n}"
+}

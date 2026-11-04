@@ -1,0 +1,216 @@
+{
+ "id": "2064970_inbursa_tijuana_1bf065",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Freightliner, tipo Tractocamión FLD 120 modelo 2002, color blanco, placas de circulación 863-DU-1",
+  "V2": "Watson & Chalin, tipo Tanque, color blanco, placas de circulación 038-WA-2",
+  "V3": "Watson & Chalin, tipo Tanque, color blanco, placas de circulación 039-WA-2"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías contarme cómo el conductor de V1 describió el incidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y el conductor de V2, ¿cómo explicó lo que ocurrió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "declaracion_V3",
+   "desc": "Declaración del conductor de V3 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y qué nos dice el conductor de V3 sobre el suceso?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Qué condiciones encontraste en la superficie de rodamiento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Por qué carril y sentido circulaba el Freightliner?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el Watson & Chalin con placas 038-WA-2, ¿cómo iba?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V3",
+   "desc": "Sentido de circulación y carril por el que iba V3",
+   "pregunta": "¿Y el otro Watson & Chalin con placas 039-WA-2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad estimada del Freightliner antes del accidente?",
+   "respuesta": "La velocidad estimada de V1 (Freightliner) era de aprox. 118 km/h.",
+   "valor": "118.2"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué velocidad llevaba el Watson & Chalin con placas 038-WA-2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V3_kmh",
+   "desc": "Velocidad estimada de V3 antes del evento (km/h)",
+   "pregunta": "¿Y el Watson & Chalin con placas 039-WA-2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Freightliner antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobra realizaba el Watson & Chalin con placas 038-WA-2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V3",
+   "desc": "Maniobra de V3 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y el Watson & Chalin con placas 039-WA-2?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál crees que fue la causa de la pérdida de control del Freightliner?",
+   "respuesta": "La pérdida de control se produjo debido a un derrape en la curva.",
+   "valor": "Derrape"
+  },
+  {
+   "tema": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "pregunta": "¿Cuántas vueltas dio el Freightliner y en qué sentido?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describir la secuencia de los eventos que ocurrieron?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "creo que el punto de impacto fue justo al salir de la curva.",
+   "valor": "Justo al salir de la curva"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el lugar del accidente?",
+   "respuesta": "En el sitio del accidente se observaron daños en el pavimento tipo tallón con pérdida de material y restos de reflejante impregnado.",
+   "valor": "Daños en el pavimento tipo tallón con pérdida de material y restos de reflejante impregnado"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuánta longitud de huellas de frenado encontraste?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Freightliner?",
+   "respuesta": "Sin especificar",
+   "valor": "Sin especificar"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en el Watson & Chalin con placas 038-WA-2?",
+   "respuesta": "Sin especificar",
+   "valor": "Sin especificar"
+  },
+  {
+   "tema": "airbags_V3",
+   "desc": "Bolsas de aire de V3: cuáles se activaron",
+   "pregunta": "¿Y en el Watson & Chalin con placas 039-WA-2?",
+   "respuesta": "Sin especificar",
+   "valor": "Sin especificar"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Qué daños tuvo el Freightliner?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Y el Watson & Chalin con placas 038-WA-2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V3",
+   "desc": "Daños de V3: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Y el Watson & Chalin con placas 039-WA-2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Posición final de V1: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Dónde quedó el Freightliner después del accidente?",
+   "respuesta": "creo que el Freightliner quedó volcado en tonel más o menos.",
+   "valor": "Volcado en tonel"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Posición final de V2: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Y el Watson & Chalin con placas 038-WA-2?",
+   "respuesta": "V2 (Watson & Chalin) quedó detenido en la carretera.",
+   "valor": "Detenido"
+  },
+  {
+   "tema": "posicion_final_V3",
+   "desc": "Posición final de V3: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Y el Watson & Chalin con placas 039-WA-2?",
+   "respuesta": "V3 (Watson & Chalin) quedó detenido en la carretera, sin haber realizado ningún tipo de barrido.",
+   "valor": "Detenido"
+  }
+ ]
+}

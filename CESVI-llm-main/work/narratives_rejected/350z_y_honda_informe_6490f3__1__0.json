@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "ESTANDO EN LA LATERAL DE VIADUCTO SALE EL SIGAY UN VEHICULO ME IMPACTA TENIENDO LA LUZ ROJA"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfáltico"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan 350Z 2004 plata",
+  "V2": "Honda Accord 2006 dorado"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Nissan 350Z sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor del Nissan 350Z 2004 plata declaró que estaba en la lateral de viaducto cuando un vehículo le impacta, teniendo la luz roja. Además, la superficie de rodamiento era asfáltico.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"ESTANDO EN LA LATERAL DE VIADUCTO SALE EL SIGAY UN VEHICULO ME IMPACTA TENIENDO LA LUZ ROJA\",\n      \"evidencia\": \"El conductor del Nissan 350Z 2004 plata declaró que estaba en la lateral de viaducto cuando un vehículo le impacta, teniendo la luz roja\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfáltico\",\n      \"evidencia\": \"la superficie de rodamiento era asfáltico\"\n    }\n  ]\n}"
+}

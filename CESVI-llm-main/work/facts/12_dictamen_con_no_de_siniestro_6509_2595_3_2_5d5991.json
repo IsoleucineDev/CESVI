@@ -1,0 +1,38 @@
+{
+ "id": "12_dictamen_con_no_de_siniestro_6509_2595_3_2_5d5991",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "General Motors Corsa 2004 azul"
+ },
+ "valores": {
+  "causa_perdida_control": "exceso de velocidad",
+  "declaracion_V1": "TRANSITABA DE LA CARRETERA TEJUPILCO A TOLUCA cuando pasando temascaltepec estaba un arbol tirado en la carretera perdiendo la estabilidad el auto el cual se pego en la cuneta y dio 3 vueltas quedando bastante averiado",
+  "sentido_carril_V1": "Toluca a Tejupilco",
+  "maniobra_previa_V1": "exceso de velocidad",
+  "vueltas_volcadura": "1/2",
+  "punto_impacto_via": null,
+  "secuencia_eventos": "El vehículo A tipo corsa, circulaba en sentido de Toluca a Tejupilco a exceso de velocidad, antes de llegar al lugar de los hechos le precede una sección de curva doble, tal y como se muestra a continuación: Sección de curvas en forma de “S” [...]",
+  "posicion_final_V1": "sobre la cuneta",
+  "danos_V1": "En la parte frontal del vehículo tipo corsa presenta daños tipo tallón en el poste superior derecho con dirección de abajo hacia arriba en forma diagonal; también se observan daños tipo tallón en el poste superior izquierdo con dirección de abajo hacia arriba en forma diagonal; se observa inexistencia de parabrisas, en el cofre se observa un daño tipo tallón en su parte superior derecha con desprendimiento de material",
+  "velocidad_V1_kmh": null,
+  "superficie": null,
+  "iluminacion": null,
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null
+ },
+ "citas": {
+  "causa_perdida_control": "antes de llegar al lugar de los hechos le precede una sección de curva doble, tal y como se muestra a continuación:",
+  "declaracion_V1": "TRANSITABA DE LA CARRETERA TEJUPILCO A TOLUCA cuando pasando temascaltepec estaba un arbol tirado en la carretera perdiendo la estabilidad el auto el cual se pego en la cuneta y dio 3 vueltas quedando bastante averiado",
+  "sentido_carril_V1": "el vehículo A tipo corsa, circulaba en sentido de Toluca a Tejupilco a exceso de velocidad",
+  "maniobra_previa_V1": "el vehículo A tipo corsa, circulaba en sentido de Toluca a Tejupilco a exceso de velocidad",
+  "vueltas_volcadura": "corresponde a una volcadura tipo tonel ½ debido a que no puede un vehículo alcanzar una gran velocidad en el sentido de Tejupilco a Toluca",
+  "secuencia_eventos": "el vehículo A tipo corsa, empieza a sufrir un deslizamiento debido al exceso de velocidad al que circulaba. Después de presentar el vehículo A tipo corsa la volcadura hacia lado derecho tipo tonel 1/1 se completó la volcadura tipo tonel ½, quedando el lado derecho del vehículo A tipo corsa sobre la cuneta que se encuentra en el carril derecho en sentido de Tejupilco a Toluca",
+  "posicion_final_V1": "el vehículo A tipo corsa, empieza a sufrir un deslizamiento debido al exceso de velocidad al que circulaba. Después de presentar el vehículo A tipo corsa la volcadura hacia lado derecho tipo tonel 1/1 se completó la volcadura tipo tonel ½, quedando el lado derecho del vehículo A tipo corsa sobre la cuneta que se encuentra en el carril derecho en sentido de Tejupilco a Toluca",
+  "danos_V1": "En la parte frontal del vehículo tipo corsa presenta daños tipo tallón en el poste superior derecho con dirección de abajo hacia arriba en forma diagonal; también se observan daños tipo tallón en el poste superior izquierdo con dirección de abajo hacia arriba en forma diagonal; se observa inexistencia de parabrisas, en el cofre se observa un daño tipo tallón en su parte superior derecha con desprendimiento de material"
+ },
+ "descartados": {
+  "punto_impacto_via": "cuneta"
+ }
+}

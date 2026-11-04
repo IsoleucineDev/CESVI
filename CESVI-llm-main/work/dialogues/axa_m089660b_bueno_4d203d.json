@@ -1,0 +1,198 @@
+{
+ "id": "axa_m089660b_bueno_4d203d",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volvo Tractocamión 2008 azul con franjas de colores",
+  "V2": "Hyundai Semirremolque S/D blanco",
+  "V3": "Ford Expedition 2003 verde"
+ },
+ "form": {},
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Circulaba sobre la avenida R. Dominguez y me detuve en el semáforo cuando sentí el impacto por la parte trasera del remolque"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Circulaba sobre la avenida Roblez Dominguez me descuide y le pegue por detrás al trailer"
+  },
+  {
+   "id": "declaracion_V3",
+   "desc": "Declaración del conductor de V3 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V3",
+   "desc": "Sentido de circulación y carril por el que iba V3",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "detenido"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V3",
+   "desc": "Maniobra de V3 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "descuidado"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V3",
+   "desc": "Dónde quedó detenido V3 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V3",
+   "desc": "Daños de V3: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V3 presenta impregnación de pintura color verde en la parte posterior del vehículo V2"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V3_kmh",
+   "desc": "Velocidad estimada de V3 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V3",
+   "desc": "Bolsas de aire de V3: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "start": 22,
+ "turns": [
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Podrías estimar la velocidad a la que iba el Volvo Tractocamión antes del impacto?",
+   "respuesta": "desconozco",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Cuál crees que fue la velocidad del Hyundai Semirremolque antes del choque?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V3_kmh",
+   "desc": "Velocidad estimada de V3 antes del evento (km/h)",
+   "pregunta": "¿Podrías darme una idea de la velocidad a la que iba el Ford Expedition antes del accidente?",
+   "respuesta": "desconozco",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Volvo Tractocamión?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Podrías detallar cuáles bolsas de aire se activaron en el Hyundai Semirremolque?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V3",
+   "desc": "Bolsas de aire de V3: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Ford Expedition?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

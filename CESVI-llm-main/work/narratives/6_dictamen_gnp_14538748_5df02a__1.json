@@ -1,0 +1,114 @@
+{
+ "id": "6_dictamen_gnp_14538748_5df02a",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volvo S-40 2002 arena",
+  "V2": "Volkswagen Passat 2000 gris"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "hiva circulando sobre la carretera cuando llegando al semáforo que estaba en luz ambar parpadeado, el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "no se aprecian restos de pintura color gris que haya quedado del contacto que supuestamente se generó entre ambos vehículos"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa de aire del conductor se encuentra activada"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "bolsa de aire del copiloto no se ha activado pero la cubierta de su compartimiento se encuentra rota"
+  }
+ ],
+ "g": 0,
+ "asked": "declaracion_V1",
+ "pregunta": "¿Cuál es la declaración del conductor del Volvo S-40 2002 arena sobre cómo ocurrió el hecho?",
+ "respuesta": "el Chevy circulaba sobre la carretera cuando llegando al semáforo que estaba en luz ambar parpadeado, el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el. Además, la superficie de rodamiento era asfalto.",
+ "gold": {
+  "secuencia_eventos": {
+   "valor": "el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el",
+   "evidencia": "el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el"
+  },
+  "superficie": {
+   "valor": "asfalto",
+   "evidencia": "la superficie de rodamiento era asfalto"
+  },
+  "declaracion_V1": {
+   "valor": "el Chevy circulaba sobre la carretera cuando llegando al semáforo que estaba en luz ambar parpadeado, el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el",
+   "evidencia": "el Chevy circulaba sobre la carretera cuando llegando al semáforo que estaba en luz ambar parpadeado, el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el"
+  }
+ }
+}

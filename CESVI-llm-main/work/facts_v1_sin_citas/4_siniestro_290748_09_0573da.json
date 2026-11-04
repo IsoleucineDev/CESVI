@@ -1,0 +1,22 @@
+{
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "NISSAN ALTIMA 2004 PLATA PLACAS FRY-204",
+  "V2": "GMC ENVOY 2006 PLATA PLACAS 19GUQ3"
+ },
+ "valores": {
+  "declaracion_V1": "Al acudir a Officce Max a comprar un artículo de oficina y en el lugar que me estacionaria había un módulo que me impedía hacerlo por lo que decidí buscar otro lugar, me eché de reversa, sentí un golpe y no sé que pasó hasta que estuve en el hospital.",
+  "sentido_carril_V1": "Estacionado, maniobra en reversa",
+  "sentido_carril_V2": "Estacionado",
+  "maniobra_previa_V1": "Maniobra en reversa",
+  "maniobra_previa_V2": "Estacionado",
+  "punto_impacto_via": "vértice posterior izquierdo al vehículo V2 sobre su costado medio izquierdo",
+  "evidencias_sitio": "huellas de frenado no observadas, intercambio de pintura (barniz transparente) en los vehículos",
+  "danos_V1": "vértice trasero izquierdo con características tipo hundimiento en dirección de atrás hacia adelante con restos de la primera capa de pintura (barniz transparente) a una altura de un rango entre 0.45 y 0.86 metros",
+  "danos_V2": "costado izquierdo con características tipo hundimiento en dirección de atrás hacia adelante con restos de la primera capa de pintura (barniz transparente) a una altura de un rango entre 0.44 y 0.99 metros",
+  "iluminacion": "Noche",
+  "superficie": "Asfalto en buenas condiciones"
+ },
+ "id": "4_siniestro_290748_09_0573da",
+ "split": "train"
+}

@@ -1,0 +1,123 @@
+{
+ "id": "11991817_364c47",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Nissan Micra 2005 blanco"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías contarme cómo el conductor del Nissan Micra 2005 blanco describió el incidente?",
+   "respuesta": "El conductor mencionó que un coche lo envistió, lo que lo forzó a dar un volantazo y chocar contra el muro de contención.",
+   "valor": "Un coche me envistió, forzándome a dar un volantazo pegando con el muro de contención."
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Cuál es la condición de la superficie de rodamiento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación y visibilidad en el momento del incidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación del Nissan Micra y en qué carril iba?",
+   "respuesta": "El Micra circulaba en dirección S-N, aproximadamente en el carril derecho.",
+   "valor": "circulación en dirección Sur – Norte"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad estimada del Nissan Micra antes del evento?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Nissan Micra antes del impacto?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "pregunta": "¿Podrías describir el objeto fijo que impactó el Nissan Micra?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál crees que fue la causa de la pérdida de control del Nissan Micra?",
+   "respuesta": "Creo que la pérdida de control se debió a un corte de circulación inesperado.",
+   "valor": "corte de circulación"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue la secuencia de los impactos?",
+   "respuesta": "El vehículo “A” chocó contra el muro de contención lateral derecho.",
+   "valor": "el vehículo “A” choque contra el muro de contención lateral derecho"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde en la vía ocurrió el impacto?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "pregunta": "¿Cuál es la altura de las marcas del impacto en el objeto fijo?",
+   "respuesta": "Las marcas del impacto en el muro de contención miden aproximadamente 30 cm de altura.",
+   "valor": 30
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Nissan Micra?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Qué daños presentó el Nissan Micra?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "pregunta": "¿Dónde quedó detenido el Nissan Micra tras el evento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

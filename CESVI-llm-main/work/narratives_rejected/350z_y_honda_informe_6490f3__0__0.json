@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en sentido_carril_V2",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "Sur a Norte"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfáltico"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "Activación de las bolsas de aire tipo cortina y lateral del lado derecho"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan 350Z 2004 plata",
+  "V2": "Honda Accord 2006 dorado"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Honda Accord dorado?\",\n  \"respuesta\": \"El Honda Accord dorado circulaba en el sentido Sur a Norte, además, la superficie de rodamiento era asfáltica, y luego, las bolsas de aire tipo cortina y lateral del lado derecho se activaron en el Nissan 350Z plata.\",\n  \"extracciones\": [\n    {\"tema\": \"sentido_carril_V2\", \"valor\": \"Sur a Norte\", \"evidencia\": \"el sentido de circulación y el carril por el que iba el Honda Accord dorado era en el sentido Sur a Norte\"},\n    {\"tema\": \"superficie\", \"valor\": \"asfáltico\", \"evidencia\": \"la superficie de rodamiento era asfáltica\"},\n    {\"tema\": \"airbags_V1\", \"valor\": \"cortina y lateral del lado derecho\", \"evidencia\": \"las bolsas de aire tipo cortina y lateral del lado derecho se activaron en el Nissan 350Z plata\"}\n  ]\n}"
+}

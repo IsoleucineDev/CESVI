@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_previa_V1",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "girando hacia la derecha"
+ },
+ "otros": [
+  {
+   "id": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "valor": "dos vueltas completas",
+   "sintetico": true
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "en la isleta de la avenida Estadio Azteca"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Audi A1 2011 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Audi A1 antes del impacto?\",\n  \"respuesta\": \"El Audi A1 azul giraba hacia la derecha, además dio dos vueltas completas y el punto de impacto ocurrió en la isleta de la avenida Estadio Azteca.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"girando hacia la derecha\",\n      \"evidencia\": \"El Audi A1 azul giraba hacia la derecha\"\n    },\n    {\n      \"tema\": \"vueltas_volcadura\",\n      \"valor\": \"2\",\n      \"evidencia\": \"dio dos vueltas completas\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"isleta de la avenida Estadio Azteca\",\n      \"evidencia\": \"el punto de impacto ocurrió en la isleta de la avenida Estadio Azteca\"\n    }\n  ]\n}"
+}

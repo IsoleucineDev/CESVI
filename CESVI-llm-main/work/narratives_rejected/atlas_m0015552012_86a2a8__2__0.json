@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en posicion_final_V2",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "sur a norte"
+ },
+ "otros": [
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "fuera del camino en dirección a Chihuahua"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión 2001 blanco",
+  "V2": "White Tractocamión 1989 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Freightliner Tractocamión 2001 blanco?\",\n  \"respuesta\": \"El Freightliner Tractocamión 2001 blanco circulaba en sentido sur a norte, además quedó fuera del camino en dirección a Chihuahua el White Tractocamión 1989 rojo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"sur a norte\",\n      \"evidencia\": \"el Freightliner Tractocamión 2001 blanco circulaba en sentido sur a norte\"\n    },\n    {\n      \"tema\": \"posicion_final_V2\",\n      \"valor\": \"fuera del camino en dirección a Chihuahua\",\n      \"evidencia\": \"el White Tractocamión 1989 rojo quedó fuera del camino en dirección a Chihuahua\"\n    }\n  ]\n}"
+}

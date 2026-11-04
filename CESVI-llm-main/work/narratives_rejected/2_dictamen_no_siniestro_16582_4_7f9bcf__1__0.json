@@ -1,0 +1,24 @@
+{
+ "motivo": "evidencia no literal en superficie",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "intercambio de pintura color amarillo sobre el tapón"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activadas"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Honda Accord 1999 violeta"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son las evidencias en el sitio del accidente?\",\n  \"respuesta\": \"El Honda Accord 1999 violeta dejó evidencias en el sitio del accidente, como un intercambio de pintura color amarillo sobre el tapón; además, las bolsas de aire del vehículo se activaron.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"intercambio de pintura color amarillo sobre el tapón\",\n      \"evidencia\": \"un intercambio de pintura color amarillo sobre el tapón\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfalto\",\n      \"evidencia\": \"asfalto\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"activadas\",\n      \"evidencia\": \"se activaron\"\n    }\n  ]\n}"
+}

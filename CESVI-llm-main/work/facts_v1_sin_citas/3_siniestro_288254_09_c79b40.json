@@ -1,0 +1,19 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Mercedes Benz, Autobús, 2001, Blanco con franjas rojas y azul marino, 354-297-S",
+  "V2": "Chevrolet, Van Ambulancia, 2004, Blanco, OAX-045"
+ },
+ "valores": {
+  "sentido_carril_V1": "Sur a norte",
+  "sentido_carril_V2": "Carril de en medio",
+  "senalizacion_preferencia": "Sin señalamiento para el control vehicular",
+  "secuencia_eventos": "Vehículo V1 impacta lateralmente a V2",
+  "punto_impacto_via": "Avenida Periférico entre 20 de Noviembre y Nuño Del Mercado",
+  "angulo_impacto": "Lateral",
+  "declaracion_V1": "Iba sobre periférico entre 20 de Noviembre y Nuño Del Mercado con dirección hacia la central cuando vi una ambulancia venia en el carril de en medio cuando me sale una persona y lo trato de esquivar y le pego a la Ambulancia y me doy a la fuga sobre Nuño Del Mercado y abandono la unidad en riveras del Atoya",
+  "evidencias_sitio": "Intercambio de pintura negra entre vehículos"
+ },
+ "id": "3_siniestro_288254_09_c79b40",
+ "split": "train"
+}

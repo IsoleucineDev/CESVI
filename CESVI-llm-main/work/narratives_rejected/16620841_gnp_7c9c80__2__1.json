@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras, por la altura de la banqueta de mampostería también debe impactar contra esta, el vehículo desconocido sigue su camino sin detenerse, dándose a la fuga."
+ },
+ "otros": [
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra [...]"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Astra 2002 gris",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Chevy Astra sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor del Chevrolet Astra declaró que venía circulando por el carril del extremo izquierdo cuando fue impactado por detrás por un vehículo desconocido, lo que le hizo girar 90 grados y salirse de la carpeta asfáltica, tomando la cuneta y finalmente impactando contra un montículo de tierra y piedras.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras\",\n      \"evidencia\": \"El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras\"\n    },\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"el carril del extremo izquierdo\",\n      \"evidencia\": \"El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"huellas de frenado, restos, intercambio de pintura, marcas\",\n      \"evidencia\": \"El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en secuencia_eventos",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "el vehiculó tipo Autobús colisionó con el vehiculó tipo Ambulancia"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "abandono la unidad en riveras del Atoya"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz Autobús 2001 blanco con franjas rojas y azul marino",
+  "V2": "Chevrolet Van Ambulancia 2004 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la secuencia de eventos que llevó a la colisión entre el Mercedes Autobús y el Chevy Ambulancia?\",\n  \"respuesta\": \"el Mercedes Autobús abandonó la unidad en riveras del Atoya además chocó con el Chevy Ambulancia luego el impacto ocurrió en avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado\",\n  \"extracciones\": [\n    {\"tema\": \"posicion_final_V1\", \"valor\": \"riveras del Atoya\", \"evidencia\": \"el Mercedes Autobús abandonó la unidad en riveras del Atoya\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"el Mercedes Autobús chocó con el Chevy Ambulancia\", \"evidencia\": \"el Mercedes Autobús chocó con el Chevy Ambulancia\"},\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado\", \"evidencia\": \"el impacto ocurrió en avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado\"}\n  ]\n}"
+}

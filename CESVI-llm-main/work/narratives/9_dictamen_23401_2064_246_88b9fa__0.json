@@ -1,0 +1,139 @@
+{
+ "id": "9_dictamen_23401_2064_246_88b9fa",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Ford Eco sport 2005 rojo",
+  "V2": "Kenworth Volteo T 300 2008 blanco"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Benia en el tramo Jaltipa acayucan km 43 cuando de repente se me atraviesa un camión y lo esquibe y me encontre con la camioneta de frente y la impacte"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Norte a Sur"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "Oriente a Poniente"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "marcha"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "marcha"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "el vehículo V2 tenía preferencia"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V2 impacta con su parte frontal del lado derecho contra el lado izquierdo delantero del vehículo V1"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "línea de división de carriles"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "termina en el carril en sentido de Poniente a Oriente"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "termina en el carril en sentido de Oriente a Poniente"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "huella de tipo hendidura con el rin delantero del lado izquierdo del vehículo tipo Eco-sport"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 0,
+ "asked": "declaracion_V1",
+ "pregunta": "¿Cuál es la declaración del conductor de la Ford Eco sport sobre cómo ocurrió el hecho?",
+ "respuesta": "termina en el carril en sentido de Poniente a Oriente además Benia en el tramo Jaltipa acayucan km 43 cuando de repente se me atraviesa un camión y lo esquibe y me encontre con la camioneta de frente y la impacte además el vehículo V2 tenía preferencia",
+ "gold": {
+  "declaracion_V1": {
+   "valor": "Benia en el tramo Jaltipa acayucan km 43 cuando de repente se me atraviesa un camión y lo esquibe y me encontre con la camioneta de frente y la impacte",
+   "evidencia": "Benia en el tramo Jaltipa acayucan km 43 cuando de repente se me atraviesa un camión y lo esquibe y me encontre con la camioneta de frente y la impacte"
+  },
+  "posicion_final_V1": {
+   "valor": "carril en sentido de Poniente a Oriente",
+   "evidencia": "termina en el carril en sentido de Poniente a Oriente"
+  },
+  "senalizacion_preferencia": {
+   "valor": "el vehículo V2 tenía preferencia",
+   "evidencia": "el vehículo V2 tenía preferencia"
+  }
+ }
+}

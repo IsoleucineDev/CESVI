@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en secuencia_eventos",
+ "principal": {
+  "id": "tipo_objeto",
+  "desc": "Tipo de objeto impactado, su material y su altura",
+  "valor": "bache"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo circulaba y cayó sobre un bache, lo que generó la ruptura del rin"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz C-280 2007 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es el tipo de objeto impactado, su material y su altura?\",\n  \"respuesta\": \"El vehículo circulaba de día con buena visibilidad y cayó sobre un bache, lo que generó la ruptura del rin.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de dia con buena visibilidad\",\n      \"evidencia\": \"de día con buena visibilidad\"\n    },\n    {\n      \"tema\": \"tipo_objeto\",\n      \"valor\": \"bache\",\n      \"evidencia\": \"sobre un bache\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El vehículo circulaba y cayó sobre un bache, lo que generó la ruptura del rin\",\n      \"evidencia\": \"El vehículo circulaba y cayó sobre un bache, lo que generó la ruptura del rin\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,30 @@
+{
+ "motivo": "valor no concuerda con su evidencia en senalizacion_preferencia",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "Iba sobre periférico entre 20 de Noviembre y Nuño Del Mercado con dirección hacia la central cuando vi una ambulancia venia en el carril de en medio cuando me sale una persona y lo trato de esquivar y le pego a la Ambulancia y me doy a la fuga sobre Nuño Del Mercado y abandono la unidad en riveras del Atoya"
+ },
+ "otros": [
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "carril de en medio"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "ninguno"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz Autobús 2001 blanco con franjas rojas y azul marino",
+  "V2": "Chevrolet Van Ambulancia 2004 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Mercedes Benz Autobús sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"Iba sobre el periférico entre 20 de Noviembre y Nuño Del Mercado con dirección hacia la central cuando vi una ambulancia venia en el carril de en medio cuando me sale una persona y lo trato de esquivar y le pego a la Ambulancia y me doy a la fuga sobre Nuño Del Mercado y abandono la unidad en riveras del Atoya. Además, no había semáforo ni señal de alto/ceda el paso o quién tenía preferencia de paso. Luego, el impacto ocurrió en avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado. Y la ambulancia venía en el carril de en medio.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"senalizacion_preferencia\",\n      \"valor\": \"ninguno\",\n      \"evidencia\": \"no había semáforo ni señal de alto/ceda el paso o quién tenía preferencia de paso\"\n    },\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"Iba sobre el periférico entre 20 de Noviembre y Nuño Del Mercado con dirección hacia la central cuando vi una ambulancia venia en el carril de en medio cuando me sale una persona y lo trato de esquivar y le pego a la Ambulancia y me doy a la fuga sobre Nuño Del Mercado y abandono la unidad en riveras del Atoya\",\n      \"evidencia\": \"Iba sobre el periférico entre 20 de Noviembre y Nuño Del Mercado con dirección hacia la central cuando vi una ambulancia venia en el carril de en medio cuando me sale una persona y lo trato de esquivar y le pego a la Ambulancia y me doy a la fuga sobre Nuño Del Mercado y abandono la unidad en riveras del Atoya\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado\",\n      \"evidencia\": \"el impacto ocurrió en avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado\"\n    },\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"carril de en medio\",\n      \"evidencia\": \"la ambulancia venía en el carril de en medio\"\n    }\n  ]\n}"
+}

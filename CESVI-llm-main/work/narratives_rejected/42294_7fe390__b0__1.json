@@ -1,0 +1,26 @@
+{
+ "motivo": "oración con contenido no extraído: 'DE DÍA CON BUENA VISIBILIDAD, LUEGO EL OBJETO FICTICIO MARCÓ UN IMPACT'",
+ "principal": {
+  "id": "causa_perdida_control",
+  "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+  "valor": "bache"
+ },
+ "otros": [
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": 45,
+   "sintetico": true
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz C-280 2007 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la causa de la pérdida de control del Mercedes Benz C-280 2007 blanco?\",\n  \"respuesta\": \"DE DÍA CON BUENA VISIBILIDAD, LUEGO EL OBJETO FICTICIO MARCÓ UN IMPACTO DE 45 CM DE ALTURA, LUEGO EL CONDUCTOR PERDIÓ CONTROL POR BACHE.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de dia con buena visibilidad\",\n      \"evidencia\": \"DE DÍA CON BUENA VISIBILIDAD\"\n    },\n    {\n      \"tema\": \"altura_marca_objeto_cm\",\n      \"valor\": \"45\",\n      \"evidencia\": \"45 CM DE ALTURA\"\n    },\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"bache\",\n      \"evidencia\": \"POR BACHE\"\n    }\n  ]\n}"
+}

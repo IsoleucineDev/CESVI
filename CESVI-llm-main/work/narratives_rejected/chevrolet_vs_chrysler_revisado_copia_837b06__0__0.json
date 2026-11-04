@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en airbags_V2",
+ "principal": {
+  "id": "posicion_final_V1",
+  "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+  "valor": "desplazado hacia la derecha"
+ },
+ "otros": [
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "desplazado hacia la izquierda"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activados"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "activados"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Chevy 2006 blanco",
+  "V2": "Chrysler 300 M 2000 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde quedó detenido el Chevy tras el evento?\",\n  \"respuesta\": \"El Chevy quedó desplazado hacia la derecha, además el Chrysler quedó desplazado hacia la izquierda, luego las bolsas de aire del Chevy se activaron, y las del Chrysler también.\",\n  \"extracciones\": [\n    {\"tema\": \"posicion_final_V1\", \"valor\": \"desplazado hacia la derecha\", \"evidencia\": \"El Chevy quedó desplazado hacia la derecha\"},\n    {\"tema\": \"posicion_final_V2\", \"valor\": \"desplazado hacia la izquierda\", \"evidencia\": \"el Chrysler quedó desplazado hacia la izquierda\"},\n    {\"tema\": \"airbags_V1\", \"valor\": \"activados\", \"evidencia\": \"las bolsas de aire del Chevy se activaron\"},\n    {\"tema\": \"airbags_V2\", \"valor\": \"activados\", \"evidencia\": \"las bolsas de aire del Chrysler también\"}\n  ]\n}"
+}

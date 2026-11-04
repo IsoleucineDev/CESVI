@@ -1,0 +1,96 @@
+{
+ "id": "2no_de_siniestro124529_0_81b352",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Ford Mondeo 2003 negro",
+  "V2": "Dodge D-150 1978 amarillo con gris",
+  "V3": "Chevrolet Suburban 1994 negro"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "El conductor del vehículo tipo Mondeo circulaba de Sur a Norte sobre la Avenida 8, el cual pierde el control impactando al vehículo marca Doge tipo D-150 el cual se encontraba parado sobre el lado derecho de la Avenida 8, el vehículo tipo Mondeo sale volando e impacta al vehículo tipo Suburban que también se encontraba detenido así mismo pasa el vehículo tipo Tsuru y lo impacta sobre el lado derecho."
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Sur a Norte"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "pierde el control"
+  },
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "vehículo tipo D-150"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "pierde el control"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo tipo Mondeo pierde el control y impacta al vehículo tipo D-150, luego impacta al vehículo tipo Suburban y finalmente impacta al vehículo tipo Tsuru."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Avenida 8 frente a la calle 2-A"
+  },
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 1,
+ "asked": "sentido_carril_V1",
+ "pregunta": "¿Cuál era el sentido de circulación y el carril por el que iba el Ford Mondeo?",
+ "respuesta": "El Ford Mondeo, de color negro, circulaba en sentido sur a norte. Además, el vehículo tipo Mondeo pierde el control y impacta al vehículo tipo D-150, luego impacta al vehículo tipo Suburban y finalmente impacta al vehículo tipo Tsuru.",
+ "gold": {
+  "sentido_carril_V1": {
+   "valor": "sur a norte",
+   "evidencia": "El Ford Mondeo, de color negro, circulaba en sentido sur a norte"
+  },
+  "secuencia_eventos": {
+   "valor": "El vehículo tipo Mondeo pierde el control y impacta al vehículo tipo D-150, luego impacta al vehículo tipo Suburban y finalmente impacta al vehículo tipo Tsuru",
+   "evidencia": "el vehículo tipo Mondeo pierde el control y impacta al vehículo tipo D-150, luego impacta al vehículo tipo Suburban y finalmente impacta al vehículo tipo Tsuru"
+  }
+ }
+}

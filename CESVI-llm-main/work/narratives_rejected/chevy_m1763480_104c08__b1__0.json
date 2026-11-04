@@ -1,0 +1,27 @@
+{
+ "motivo": "evidencia no literal en huellas_frenado_m",
+ "principal": {
+  "id": "danos_V2",
+  "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "tallones laterales izquierdos de adelante hacia atrás",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 15,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto regular sin líneas divisorias entre carriles"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Chevy C2 2011 dorado",
+  "V2": "Astra azul desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños específicos en el Astra azul y en qué dirección fueron aplicadas las fuerzas?\",\n  \"respuesta\": \"El Astra azul presentó daños significativos en los tallones laterales izquierdos, que se extendieron desde adelante hacia atrás. Además, la superficie de rodamiento era asfalto regular sin líneas divisorias entre carriles.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"tallones laterales izquierdos de adelante hacia atrás\",\n      \"evidencia\": \"El Astra azul presentó daños significativos en los tallones laterales izquierdos, que se extendieron desde adelante hacia atrás.\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfalto regular sin líneas divisorias entre carriles\",\n      \"evidencia\": \"la superficie de rodamiento era asfalto regular sin líneas divisorias entre carriles\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": 15,\n      \"evidencia\": \"Longitud (m) de las huellas de frenado, si las hay\"\n    }\n  ]\n}"
+}

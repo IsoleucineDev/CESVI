@@ -1,0 +1,19 @@
+{
+ "motivo": "evidencia no literal en causa_perdida_control",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "Circulaba por Revolución casi esquina Bayoneta y un peatón se atraviesa, gire el volante a la derecha, me impacte en la banqueta por no arrollar a la señora, un Optra me rozo la parte de atrás izquierda es el quien me ayuda a salir del vehículo luego se fue"
+ },
+ "otros": [
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "evasión"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Honda Accord 1999 violeta"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Honda Accord 1999 sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"EVAZION. ADemás, CIRCULABA POR REVOLUCIÓN Casi esquina Bayoneta y un peatón se atraviesa, GIRE el volante a la derecha, me impacte en la banqueta por no arrollar a la señora, un Optra me rozo la parte de atrás izquierda es el quien me ayuda a salir del vehículo LUEGO SE FUE.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"evasion\",\n      \"evidencia\": \"EVAZION\"\n    },\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"Circulaba por Revolución casi esquina Bayoneta y un peatón se atraviesa, gire el volante a la derecha, me impacte en la banqueta por no arrollar a la señora, un Optra me rozo la parte de atrás izquierda es el quien me ayuda a salir del vehículo luego se fue\",\n      \"evidencia\": \"CIRCULABA POR REVOLUCIÓN Casi esquina Bayoneta y un peatón se atraviesa, GIRE el volante a la derecha, me impacte en la banqueta por no arrollar a la señora, un Optra me rozo la parte de atrás izquierda es el quien me ayuda a salir del vehículo LUEGO SE FUE\"\n    }\n  ]\n}"
+}

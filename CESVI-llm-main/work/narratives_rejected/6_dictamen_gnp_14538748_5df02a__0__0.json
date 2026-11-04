@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en airbags_V1",
+ "principal": {
+  "id": "airbags_V1",
+  "desc": "Bolsas de aire de V1: cuáles se activaron",
+  "valor": "bolsa de aire del conductor se encuentra activada"
+ },
+ "otros": [
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "bolsa de aire del copiloto no se ha activado pero la cubierta de su compartimiento se encuentra rota"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volvo S-40 2002 arena",
+  "V2": "Volkswagen Passat 2000 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles se activaron las bolsas de aire del conductor del Volvo S-40 2002 arena?\",\n  \"respuesta\": \"Las bolsas de aire del conductor del Volvo S-40 2002 arena se encontraron activadas, además, la bolsa de aire del copiloto no se ha activado pero la cubierta de su compartimiento se encuentra rota en el Volkswagen Passat 2000 gris.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"activada\",\n      \"evidencia\": \"Las bolsas de aire del conductor se encontraron activadas\"\n    },\n    {\n      \"tema\": \"airbags_V2\",\n      \"valor\": \"no activada\",\n      \"evidencia\": \"la bolsa de aire del copiloto no se ha activado\"\n    }\n  ]\n}"
+}

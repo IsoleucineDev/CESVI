@@ -1,0 +1,43 @@
+{
+ "id": "2_dictamen_20872500_4a1b98",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión Quinta Rueda 2001 blanco",
+  "V2": "Chevrolet Optra LS 2007 rojo"
+ },
+ "valores": {
+  "declaracion_V1": "Llegue temprano para encerrar mi camión pero por andar a las carreras y porque tenia que lavarlo rápido no me fije que estaba el carro atrás de mi camión y le pegue en la parte trasera del coche y le pegue con el eje trasero del lado derecho",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "maniobra en reversa",
+  "maniobra_previa_V2": null,
+  "secuencia_eventos": null,
+  "punto_impacto_via": "en la calle Fuye y Hurrondas",
+  "evidencias_sitio": "daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante",
+  "danos_V1": null,
+  "danos_V2": "daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante",
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "maniobra_reversa": "el conductor de V1 realizó una maniobra en reversa en la que impactó al vehículo V2",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Llegue temprano para encerrar mi camión pero por andar a las carreras y porque tenia que lavarlo rápido no me fije que estaba el carro atrás de mi camión y le pegue en la parte trasera del coche y le pegue con el eje trasero del lado derecho",
+  "maniobra_previa_V1": "Llegue temprano para encerrar mi camión pero por andar a las carreras y porque tenia que lavarlo rápido no me fije que estaba el carro atrás de mi camión y le pegue en la parte trasera del coche y le pegue con el eje trasero del lado derecho",
+  "punto_impacto_via": "en la calle Fuye y Hurrondas",
+  "evidencias_sitio": "Se aprecia en la parte posterior del vehículo el medallón en condiciones óptimas a simple vista así como el conjunto de luces direccionales. La tapa cajuela presenta un daño tipo hundimiento en el lado derecho con desprendimiento de pintura; así como del lado izquierdo. En la parte inferior, debajo de la placa de circulación trasera, se muestran daños tipo hundimiento que están comprendidos dentro de la longitud de la placa de circulación en forma rectangular, generados por cuerpo duro. La fascia muestra un daño tipo hundimiento generado de atrás hacia delante por cuerpo duro.",
+  "danos_V2": "Se aprecia en la parte posterior del vehículo el medallón en condiciones óptimas a simple vista así como el conjunto de luces direccionales. La tapa cajuela presenta un daño tipo hundimiento en el lado derecho con desprendimiento de pintura; así como del lado izquierdo. En la parte inferior, debajo de la placa de circulación trasera, se muestran daños tipo hundimiento que están comprendidos dentro de la longitud de la placa de circulación en forma rectangular, generados por cuerpo duro. La fascia muestra un daño tipo hundimiento generado de atrás hacia delante por cuerpo duro.",
+  "maniobra_reversa": "Llegue temprano para encerrar mi camión pero por andar a las carreras y porque tenia que lavarlo rápido no me fije que estaba el carro atrás de mi camión y le pegue en la parte trasera del coche y le pegue con el eje trasero del lado derecho"
+ },
+ "descartados": {
+  "secuencia_eventos": "el vehículo V1 impacta en la parte trasera del vehículo V2"
+ }
+}

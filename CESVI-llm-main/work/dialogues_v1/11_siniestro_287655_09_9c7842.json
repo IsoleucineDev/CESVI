@@ -1,0 +1,95 @@
+{
+ "id": "11_siniestro_287655_09_9c7842",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "LAND ROVER LR2 HSE PREMIUM 2008 NEGRO UPG-44-88"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías contarme cómo el conductor del Land Rover LR2 HSE Premium 2008 negro UPG-44-88 describió el incidente?",
+   "respuesta": "Circulava hacia el cerrillo, de pronto se atraviesa un perro disminuyo mi velocidad es cuando un camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño",
+   "valor": "Circulava hacia el cerrillo, de pronto se atraviesa un perro disminuyo mi velocidad es cuando un camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento en el momento del accidente?",
+   "respuesta": "seca",
+   "valor": "seca"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación había en el momento del accidente?",
+   "respuesta": "noche",
+   "valor": "noche"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Qué dirección y carril llevaba el Land Rover?",
+   "respuesta": "Boulevard Aeropuerto a El Cerrillo",
+   "valor": "Boulevard Aeropuerto a El Cerrillo"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Land Rover antes del accidente?",
+   "respuesta": "Estimamos que el vehículo circulaba a unos 25 km/h",
+   "valor": "25"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Land Rover antes del impacto?",
+   "respuesta": "frenado",
+   "valor": "frenado"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuál era la distancia aproximada entre el Land Rover y el vehículo que lo impactó?",
+   "respuesta": "No se especificó una distancia exacta, pero el conductor mencionó que frenó cuando se le atravesó un perro",
+   "valor": "no especificada"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describir la secuencia de eventos que ocurrieron durante el accidente?",
+   "respuesta": "alcance en la parte trasera del Land Rover seguido de salida de la vialidad y caida en una zanja",
+   "valor": "alcance en la parte trasera del Land Rover seguido de salida de la vialidad y caida en una zanja"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "carril derecho Boulevard Aeropuerto a El Cerrillo",
+   "valor": "carril derecho Boulevard Aeropuerto a El Cerrillo"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "huellas de frenado, restos de lodo y esquirlas de vidrio en el habitáculo",
+   "valor": "huellas de frenado, restos de lodo y esquirlas de vidrio en el habitáculo"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Land Rover?",
+   "respuesta": "bolsas de aire frontales y laterales activadas",
+   "valor": "bolsas de aire frontales y laterales activadas"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "NISSAN TSURU 2008 BLANCO Y ROJO 8148-XCP",
+  "V2": "FORD FIESTA 2007 ROJO YAJ2806"
+ },
+ "valores": {
+  "sentido_carril_V1": "incorporación a la carretera Minatitlán-Coatzacoalcos",
+  "sentido_carril_V2": "circulación por la carretera Minatitlán-Coatzacoalcos",
+  "senalizacion_preferencia": "vehículo V2 tenía preferencia",
+  "secuencia_eventos": "vehículo V1 intenta incorporarse a la carretera y colisiona con vehículo V2",
+  "punto_impacto_via": "carril derecho de la carretera Minatitlán-Coatzacoalcos",
+  "angulo_impacto": "vehículo V1 impacta lateralmente a vehículo V2",
+  "evidencias_sitio": "restos de pintura roja en vehículo V1 y negro/blanco en vehículo V2",
+  "declaracion_V1": "intentaba incorporarse a la carretera sin percatarse del vehículo V2",
+  "declaracion_V2": "null"
+ },
+ "id": "1_dictamen_siniestro_134979_2ac87b",
+ "split": "train"
+}

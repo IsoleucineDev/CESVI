@@ -1,0 +1,98 @@
+{
+ "id": "2_siniestro_15492804_d7a186",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Hyundai Atos 2009 rojo"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "transitando por Darwin del lado derecho se me cierra otro vehículo el cual me hace perder el control del Atos y me subí a un camellón y me estrelle con un árbol"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Este a Oeste"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "corte de circulación"
+  },
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "árbol"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "corte de circulación"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "corte de circulación -> pérdida de control -> impacto contra árbol"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "camellón de la calle de Darwin"
+  },
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "no se encontraron indicios de pintura entre el árbol y el vehículo marca Hyundai tipo Atos"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 6,
+ "asked": "punto_impacto_via",
+ "pregunta": "¿Dónde en la calle ocurrió el impacto del Hyundai Atos 2009 rojo?",
+ "respuesta": "El impacto ocurrió en el camellón de la calle de Darwin. Además, no se encontraron indicios de pintura entre el árbol y el vehículo marca Hyundai tipo Atos. Luego, la superficie de rodamiento era asfalto.",
+ "gold": {
+  "punto_impacto_via": {
+   "valor": "camellón de la calle de Darwin",
+   "evidencia": "El impacto ocurrió en el camellón de la calle de Darwin."
+  },
+  "evidencias_sitio": {
+   "valor": "no se encontraron indicios de pintura entre el árbol y el vehículo marca Hyundai tipo Atos",
+   "evidencia": "no se encontraron indicios de pintura entre el árbol y el vehículo marca Hyundai tipo Atos"
+  },
+  "superficie": {
+   "valor": "asfalto",
+   "evidencia": "la superficie de rodamiento era asfalto"
+  }
+ }
+}

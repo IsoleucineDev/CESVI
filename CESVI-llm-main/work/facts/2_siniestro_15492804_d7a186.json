@@ -1,0 +1,39 @@
+{
+ "id": "2_siniestro_15492804_d7a186",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Hyundai Atos 2009 rojo"
+ },
+ "valores": {
+  "declaracion_V1": "transitando por Darwin del lado derecho se me cierra otro vehículo el cual me hace perder el control del Atos y me subí a un camellón y me estrelle con un árbol",
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": "Este a Oeste",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "corte de circulación",
+  "tipo_objeto": "árbol",
+  "causa_perdida_control": "corte de circulación",
+  "secuencia_eventos": "corte de circulación -> pérdida de control -> impacto contra árbol",
+  "punto_impacto_via": "camellón de la calle de Darwin",
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "no se encontraron indicios de pintura entre el árbol y el vehículo marca Hyundai tipo Atos",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "ubicado en el camellón de la calle de Darwin",
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "transitando por Darwin del lado derecho se me cierra otro vehículo el cual me hace perder el control del Atos y me subí a un camellón y me estrelle con un árbol",
+  "superficie": "La calle de Darwin tiene dos calzadas de circulación construidas en asfalto cada una tiene un ancho de vía de 8.30 metros",
+  "sentido_carril_V1": "El conductor del vehículo tipo Atos circula en sentido de Este a Oeste al igual que otros conductores con sus vehículos",
+  "maniobra_previa_V1": "el conductor de un vehículo desconocido le corta la circulación al vehículo tipo Atos y a consecuencia de esa maniobra hace que pierde el control el conductor del vehículo tipo Atos",
+  "tipo_objeto": "el vehículo tipo Atos se colisiona en contra de un árbol encontrado en medio del camellón de la calle de Darwin",
+  "causa_perdida_control": "el conductor de un vehículo desconocido le corta la circulación al vehículo tipo Atos y a consecuencia de esa maniobra hace que pierda el control el conductor del vehículo tipo Atos",
+  "secuencia_eventos": "el conductor de un vehículo desconocido le corta la circulación al vehículo tipo Atos y a consecuencia de esa maniobra hace que pierde el control el conductor del vehículo tipo Atos",
+  "punto_impacto_via": "el vehículo tipo Atos se colisiona en contra de un árbol encontrado en medio del camellón de la calle de Darwin",
+  "evidencias_sitio": "no se encontraron indicios de pintura entre el árbol y el vehículo marca Hyundai tipo Atos además de no encontrar indicios de marcas en la guarnición del camellón central",
+  "posicion_final_V1": "el vehículo tipo Atos se colisiona en contra de un árbol encontrado en medio del camellón de la calle de Darwin"
+ },
+ "descartados": {}
+}

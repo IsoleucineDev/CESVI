@@ -1,0 +1,89 @@
+{
+ "id": "17_siniestro_283290_09_1cc313",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Hyundai Semirremolque Caja Seca 2005 blanco"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "retorno vehicular ubicado en la Av. Vallarta casi esquina con la calle Rafael Sanzio"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "id": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "valor": "reversa de unos 5 metros con poca visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "impregnación de caucho sobre la guarnición del camellón central"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 12,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 40,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 7,
+ "asked": "huellas_frenado_m",
+ "sintetico": true,
+ "pregunta": "¿Cuál es la longitud de las huellas de frenado del Hyundai Semirremolque Caja Seca 2005 blanco?",
+ "respuesta": "Las huellas de frenado del Hyundai Semirremolque Caja Seca 2005 blanco midieron 12 metros. Además, la velocidad estimada del vehículo antes del evento fue de 40 km/h.",
+ "gold": {
+  "huellas_frenado_m": {
+   "valor": "12",
+   "evidencia": "Las huellas de frenado del Hyundai Semirremolque Caja Seca 2005 blanco midieron 12 metros"
+  },
+  "velocidad_V1_kmh": {
+   "valor": "40",
+   "evidencia": "la velocidad estimada del vehículo antes del evento fue de 40 km/h"
+  }
+ }
+}

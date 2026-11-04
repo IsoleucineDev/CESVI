@@ -1,0 +1,147 @@
+{
+ "id": "1_siniestro_231278_09_0570f6",
+ "split": "test",
+ "modalidad": "colision_frontal",
+ "vehiculos": {
+  "V1": "Plymouth Freeze 1996 blanco",
+  "V2": "Ford Escort 1998 rojo"
+ },
+ "form": {},
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE POR EL CARRIL DERECHO CUANDO DE REPENTE SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO IMPACTANDO MI VEHÍCULO POR ENFRENTE"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Poniente a Oriente"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "circulando"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "invadiendo carril"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "sin preferencia"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "vehículo V2 invadiendo carril de V1 y provocando impacto frontal"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Fuente de Dalila"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "ninguna evidencia de intercambio de pintura"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "ambas bolsas de aire activadas"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "ambas bolsas de aire activadas"
+  }
+ ],
+ "start": 12,
+ "turns": [
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Podrías describirnos la superficie de rodamiento en la calle Fuente de Dalila donde ocurrió el accidente?",
+   "respuesta": "La superficie de rodamiento es asfalto. No presentaba baches ni grietas significativas, lo que indica una condición generalmente adecuada para la circulación.",
+   "valor": "asfalto"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cuál era la iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "no hay ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál es tu estimación de la velocidad a la que circulaba el Plymouth Freeze 1996 blanco antes del accidente?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Podrías estimar la velocidad del Ford Escort 1998 rojo antes del choque?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles de las bolsas de aire del Plymouth Freeze 1996 blanco se activaron durante el accidente?",
+   "respuesta": "Ambas bolsas de aire del vehículo se activaron, tanto la frontal como la lateral del conductor.",
+   "valor": "ambas bolsas de aire activadas"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Cuáles de las bolsas de aire del Ford Escort 1998 rojo se activaron durante el accidente?",
+   "respuesta": "Ambas bolsas de aire se activaron.",
+   "valor": "ambas bolsas de aire activadas"
+  }
+ ]
+}

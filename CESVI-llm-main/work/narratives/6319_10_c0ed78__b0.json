@@ -1,0 +1,115 @@
+{
+ "id": "6319_10_c0ed78",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Ford F-350 1986 naranja/blanco",
+  "V2": "Mazda CX7 2008 vino"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Al echarme de reversa no me fije y le pegue a una camioneta"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "maniobra en reversa"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "valor": "incorporarse a la calle Heriberto Jara (Constituyentes)"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El conductor del vehículo marca Ford, tipo F-350, realiza maniobra en reversa para incorporarse a la calle Heriberto Jara (Constituyentes) y golpea con la plafonera posterior la fascia delantera del vehículo Mazda, tipo CX-7"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Heriberto Jara (Constituyentes)"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "intercambio de material tipo masilla de resane impregnada en la fascia"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 15,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "concreto"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche sin alumbrado",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 70,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 10,
+ "asked": "huellas_frenado_m",
+ "sintetico": true,
+ "pregunta": "¿Cuál es la longitud de las huellas de frenado del Mazda CX7 2008?",
+ "respuesta": "HAY HUELLAS DE FRENADO CON UNA LONGITUD DE 15 METROS. ADÉMÁS, EL ACCIDENTE OCURRIÓ DE NOCHE SIN ALUMBRADO.",
+ "gold": {
+  "huellas_frenado_m": {
+   "valor": "15",
+   "evidencia": "HAY HUELLAS DE FRENADO CON UNA LONGITUD DE 15 METROS"
+  },
+  "iluminacion": {
+   "valor": "de noche sin alumbrado",
+   "evidencia": "EL ACCIDENTE OCURRIÓ DE NOCHE SIN ALUMBRADO"
+  }
+ }
+}

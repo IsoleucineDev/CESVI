@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'La velocidad estimada del Chevrolet Chevy 2006 blanco antes del evento'",
+ "principal": {
+  "id": "velocidad_V1_kmh",
+  "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+  "valor": 60,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Chevrolet Chevy 2006 blanco",
+  "V2": "Chrysler 300 M 2000 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la velocidad estimada del Chevy antes del evento?\",\n  \"respuesta\": \"La velocidad estimada del Chevrolet Chevy 2006 blanco antes del evento era de 60 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"60\",\n      \"evidencia\": \"60 km/h\"\n    }\n  ]\n}"
+}

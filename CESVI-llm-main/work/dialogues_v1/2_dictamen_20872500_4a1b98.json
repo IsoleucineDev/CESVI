@@ -1,0 +1,159 @@
+{
+ "id": "2_dictamen_20872500_4a1b98",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Freightliner, tipo tractocamión quinta rueda, color blanco, modelo 2001, con placas de circulación 930 CV2",
+  "V2": "Chevrolet, tipo Optra LS, color rojo, modelo 2007 y placas de circulación PGY-4349"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías resumirme la declaración del conductor de V1 sobre cómo ocurrió el hecho?",
+   "respuesta": "Llegué temprano para encerrar mi camión pero por andar a las carreras y porque tenía que lavarlo rápido no me fijé que estaba el carro atrás de mi camión y le pegué en la parte trasera del coche y le pegué con el eje trasero del lado derecho",
+   "valor": "Llegue temprano para encerrar mi camión pero por andar a las carreras y porque tenia que lavarlo rápido no me fije que estaba el carro atrás de mi camión y le pegue en la parte trasera del coche y le pegue con el eje trasero del lado derecho"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y qué dice el conductor de V2 sobre lo que ocurrió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación y visibilidad había en el momento del incidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Qué carril y sentido de circulación tenía V1?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y qué carril y sentido de circulación tenía V2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada de V1 antes del evento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué velocidad llevaba V2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba V1 antes del impacto?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobra realizaba V2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "pregunta": "¿Podrías describirme la maniobra de reversa que realizaba el Freightliner?",
+   "respuesta": "Conducía el Freightliner en reversa",
+   "valor": "Conducía el Freightliner en reversa"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue la secuencia de los impactos?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuánto miden las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Freightliner?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en el Optra LS?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Qué daños presentaba el Freightliner?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Y qué daños tenía el Optra LS?",
+   "respuesta": "creo que el daño tipo tallón en el vértice delantero izquierdo de la fascia con desprendimiento de pintura generado de derecha a izquierda. Tapas cajuela con daños tipo hundimiento en el lado derecho e izquierdo con desprendimiento de pintura. Fascia con daño tipo hundimiento generado de atrás hacia delante",
+   "valor": "Daño tipo tallón en el vértice delantero izquierdo de la fascia con desprendimiento de pintura generado de derecha a izquierda. Tapas cajuela con daños tipo hundimiento en el lado derecho e izquierdo con desprendimiento de pintura. Fascia con daño tipo hundimiento generado de atrás hacia delante"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Posición final de V1: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Dónde quedó el Freightliner al final del accidente?",
+   "respuesta": "Encerrado",
+   "valor": "Encerrado"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Posición final de V2: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Y el Optra LS?",
+   "respuesta": "Detenido atrás del Freightliner",
+   "valor": "Detenido atrás del Freightliner"
+  }
+ ]
+}

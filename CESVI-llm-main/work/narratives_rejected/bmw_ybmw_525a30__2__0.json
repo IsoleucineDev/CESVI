@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en senalizacion_preferencia",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "detenido"
+ },
+ "otros": [
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "semáforo"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "después de impactar con V2, gira hacia su derecha e impacta con el vehículo C"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "restos de caucho negro en V1 y restos de pintura negra en V2"
+  }
+ ],
+ "vehiculos": {
+  "V1": "BMW 325IA 2008 blanco",
+  "V2": "BMW 550I 2004 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V2 antes del impacto?\",\n  \"respuesta\": \"Después de impactar con V2, el BMW 325IA 2008 blanco gira hacia su derecha e impacta con el vehículo C, además, el BMW 550I 2004 azul se encontraba detenido en el momento del impacto.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"después de impactar con V2, gira hacia su derecha e impacta con el vehículo C\",\n      \"evidencia\": \"Después de impactar con V2, el BMW 325IA 2008 blanco gira hacia su derecha e impacta con el vehículo C\"\n    },\n    {\n      \"tema\": \"senalizacion_preferencia\",\n      \"valor\": \"semáforo\",\n      \"evidencia\": \"semáforo\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"restos de caucho negro en V1 y restos de pintura negra en V2\",\n      \"evidencia\": \"restos de caucho negro en V1 y restos de pintura negra en V2\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"detenido\",\n      \"evidencia\": \"el BMW 550I 2004 azul se encontraba detenido en el momento del impacto\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,46 @@
+{
+ "id": "4_siniestro_290748_09_0573da",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Nissan Altima 2004 plata",
+  "V2": "GMC Envoy 2006 plata"
+ },
+ "valores": {
+  "declaracion_V1": "Al acudir a Officce Max a comprar un artículo de oficina y en el lugar que me estacionaria había un modulo que me impedía hacerlo por lo que decidir buscar otro lugar, me eche de reversa, sentí un golpe y no se que paso hasta que estuve en el hospital.",
+  "declaracion_V2": null,
+  "superficie": "asfaltado en buenas condiciones",
+  "iluminacion": null,
+  "sentido_carril_V1": "estacionado",
+  "sentido_carril_V2": "estacionado",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "maniobra en reversa",
+  "maniobra_previa_V2": null,
+  "maniobra_reversa": "el conductor del vehículo “A” decide realizar la maniobra en reversa y siente el impacto",
+  "secuencia_eventos": "el vehículo “A” impacta con el vértice posterior izquierdo al vehículo “B” sobre su costado medio izquierdo",
+  "punto_impacto_via": "calle Alhelies",
+  "evidencias_sitio": "vehículo V1 presenta restos de la primera capa de pintura (barniz transparente) en dirección de atrás hacia adelante sobre el vértice trasero izquierdo a una altura de un rango entre 0.45 y 0.86 metros; vehículo V2 presenta restos de la primera capa de pintura (barniz transparente), sobre la parte inferior media del costado izquierdo abarcando una superficie entre 0.44 y 0.99 metros",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "el vehículo A impacta con el vértice posterior izquierdo al vehículo B sobre su costado medio izquierdo",
+  "posicion_final_V2": "el vehículo B impacta con el costado medio izquierdo al vehículo A en su vértice posterior izquierdo",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Al acudir a Officce Max a comprar un artículo de oficina y en el lugar que me estacionaria había un modulo que me impedía hacerlo por lo que decidir buscar otro lugar, me eche de reversa, sentí un golpe y no se que paso hasta que estuve en el hospital.",
+  "superficie": "La calle Alhelies consta de un arroyo vehicular de dos carriles asfaltados en buenas condiciones los cuales circulan de Norte a Sur y viceversa",
+  "sentido_carril_V1": "El conductor del vehículo “A” llega al estacionamiento y el vehículo B se encuentra estacionado.",
+  "sentido_carril_V2": "El conductor del vehículo “A” llega al estacionamiento y el vehículo B se encuentra estacionado.",
+  "maniobra_previa_V1": "El conductor del vehículo “A” decide realizar la maniobra en reversa y siente el impacto.",
+  "maniobra_reversa": "El conductor del vehículo “A” decide realizar la maniobra en reversa y siente el impacto.",
+  "secuencia_eventos": "En esta imagen se muestra cuando el vehículo “A” impacta con el vértice posterior izquierdo al vehículo “B” sobre su costado medio izquierdo.",
+  "punto_impacto_via": "El lugar de los hechos de tránsito se localiza en la calle Alhelies No. 4, colonia Villa Florida en Manzanillo Colima.",
+  "evidencias_sitio": "el vehículo tipo Altima presenta restos de la primera capa de pintura (barniz transparente) en dirección de atrás hacia adelante sobre el vértice trasero izquierdo a una altura de un rango entre 0.45 y 0.86 metros; el vehículo tipo Envoy presenta restos de la primera capa de pintura (barniz transparente), sobre la parte inferior media del costado izquierdo abarcando una superficie entre 0.44 y 0.99 metros",
+  "posicion_final_V1": "En esta imagen se muestra cuando el vehículo “A” impacta con el vértice posterior izquierdo al vehículo “B” sobre su costado medio izquierdo.",
+  "posicion_final_V2": "En esta imagen se muestra cuando el vehículo “A” impacta con el vértice posterior izquierdo al vehículo “B” sobre su costado medio izquierdo."
+ },
+ "descartados": {}
+}

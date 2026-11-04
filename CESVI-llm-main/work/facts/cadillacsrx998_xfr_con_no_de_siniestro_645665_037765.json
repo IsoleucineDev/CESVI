@@ -1,0 +1,48 @@
+{
+ "id": "cadillacsrx998_xfr_con_no_de_siniestro_645665_037765",
+ "split": "valid",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Cadillac SRX 2005 blanco",
+  "V2": "FreightLiner M2 2009 blanco"
+ },
+ "valores": {
+  "declaracion_V2": "Al incorporarme a la Av. de los maestros me percato que Venia el otro Vehículo y es cuando lo impacto",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Poniente a Oriente",
+  "sentido_carril_V2": "Poniente a Oriente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": "incorporarse a la Avenida de los maestros",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "El vehículo “B” impacta con el vértice frontal izquierdo al vehículo “A” en la parte de la salpicadera derecha",
+  "punto_impacto_via": null,
+  "angulo_impacto": null,
+  "evidencias_sitio": "Se observa impregnación de pintura de color rojo a una altura de 1.06m en la salpicadera derecha del vehículo V1 y una línea roja sobre la defensa a una altura de 0.70m en el vehículo V2",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "lado derecho de la Avenida de los maestros",
+  "posicion_final_V2": "lado derecho de la Avenida de los maestros",
+  "declaracion_V1": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V2": "Al incorporarme a la Av. de los maestros me percato que Venia el otro Vehículo y es cuando lo impacto",
+  "sentido_carril_V1": "El vehículo “A” circula por la Avenida de los maestros en dirección de Poniente a Oriente",
+  "sentido_carril_V2": "el vehículo “B” circula por la calle Ponciano Arriaga en dirección de Poniente a Oriente",
+  "maniobra_previa_V2": "Al incorporarme a la Av. de los maestros me percato que Venia el otro Vehículo y es cuando lo impacto",
+  "secuencia_eventos": "el vehículo “B” impacta con el vértice frontal izquierdo al vehículo “A” en la parte de la salpicadera derecha",
+  "evidencias_sitio": "la impregnación de pintura de color rojo que se ubica en la salpicadera derecha del vehículo marca Cadillac no fue ocasionada por la línea de pintura de color rojo que presenta el vehículo tipo M2 sobre la defensa del lado izquierdo ya que existe una diferencia de 0.36m",
+  "posicion_final_V1": "el vehículo “A” circula por la Avenida de los maestros en dirección de Poniente a Oriente",
+  "posicion_final_V2": "el vehículo “B” circula por la calle Ponciano Arriaga en dirección de Poniente a Oriente"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día",
+  "punto_impacto_via": "calle Ponciano Arriaga con la lateral izquierda de la Avenida de los maestros"
+ }
+}

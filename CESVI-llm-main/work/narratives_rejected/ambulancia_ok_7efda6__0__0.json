@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en superficie",
+ "principal": {
+  "id": "danos_V2",
+  "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "hundimiento con dirección de adelante hacia atrás en el costado delantero derecho a 48cm de altura"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "restos de pintura negra en el costado delantero izquierdo de V1 y pintura blanca en el costado delantero derecho de V2"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz Autobús 2001 blanco con franjas rojas y azul marino",
+  "V2": "Chevrolet Van Ambulancia 2004 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños de la ambulancia y en qué dirección fue impactada la fuerza?\",\n  \"respuesta\": \"La ambulancia presentó un hundimiento con dirección de adelante hacia atrás en el costado delantero derecho a 48cm de altura además en el sitio se encontraron restos de pintura negra en el costado delantero izquierdo de la unidad del autobús y pintura blanca en el costado delantero derecho de la ambulancia.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"hundimiento con dirección de adelante hacia atrás en el costado delantero derecho a 48cm de altura\",\n      \"evidencia\": \"hundimiento con dirección de adelante hacia atrás en el costado delantero derecho a 48cm de altura\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"restos de pintura negra en el costado delantero izquierdo de V1 y pintura blanca en el costado delantero derecho de V2\",\n      \"evidencia\": \"restos de pintura negra en el costado delantero izquierdo de la unidad del autobús y pintura blanca en el costado delantero derecho de la ambulancia\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfalto\",\n      \"evidencia\": \"asfalto\"\n    }\n  ]\n}"
+}

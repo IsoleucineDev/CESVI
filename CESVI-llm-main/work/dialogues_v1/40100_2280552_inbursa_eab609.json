@@ -1,0 +1,105 @@
+{
+ "id": "40100_2280552_inbursa_eab609",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "DODGE ATTITUDE 2006 AZUL PLACAS 510-UAJ"
+ },
+ "form": {
+  "danos_V1": "Daños tipo rayón en dirección de adelante hacia atrás en las puertas del lado izquierdo",
+  "posicion_final_V1": "No especificado en el informe"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías contarme cómo el conductor de la Dodge Attitude 2006 describió lo que sucedió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Qué condiciones presentaba la superficie de rodamiento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación había en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Podrías decirme en qué carril circulaba la Dodge Attitude 2006?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada de la Dodge Attitude 2006 antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba la Dodge Attitude 2006 antes del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "pregunta": "¿Qué mencionaste sobre las señales de tráfico y quién tenía preferencia de paso?",
+   "respuesta": "No especificado en el informe",
+   "valor": "No especificado en el informe"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cómo describiste la secuencia de los impactos?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde exactamente ocurrió el impacto en relación con la vía y la posición del vehículo?",
+   "respuesta": "El punto de impacto se ubicó en el lateral izquierdo del vehículo V1",
+   "valor": "Lateral izquierdo del vehículo V1"
+  },
+  {
+   "tema": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "pregunta": "¿Podrías estimar el ángulo entre los vehículos al momento del impacto?",
+   "respuesta": "No especificado en el informe",
+   "valor": "No especificado en el informe"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el lugar del accidente?",
+   "respuesta": "Creo que había daños tipo rayón en dirección de adelante hacia atrás en las puertas del lado izquierdo",
+   "valor": "Daños tipo rayón en dirección de adelante hacia atrás en las puertas del lado izquierdo"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado de la Dodge Attitude 2006?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en la Dodge Attitude 2006?",
+   "respuesta": "No especificado en el informe",
+   "valor": "No especificado en el informe"
+  }
+ ]
+}

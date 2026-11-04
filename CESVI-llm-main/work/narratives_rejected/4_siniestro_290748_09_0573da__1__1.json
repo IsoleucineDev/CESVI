@@ -1,0 +1,20 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "vehículo V1 presenta restos de la primera capa de pintura (barniz transparente) en dirección de atrás hacia adelante sobre el vértice trasero izquierdo a una altura de un rango entre 0.45 y 0.86 metros; vehículo V2 presenta restos de la primera capa de pintura (barniz transparente), sobre la parte inferior media del costado izquierdo abarcando una superficie entre 0.44 y 0.99 metros"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfaltado en buenas condiciones"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Altima 2004 plata",
+  "V2": "GMC Envoy 2006 plata"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son las evidencias en el sitio que indican el intercambio de pintura entre los vehículos implicados?\",\n  \"respuesta\": \"VEHÍCULO NISSAN ALTIMA PRESENTA RESTOS DE LA PRIMERA CAPA DE PINTURA (BARNIZ TRANSPARENTE) EN DIRECCIÓN DE ATRÁS HACIA ADELANTE SOBRE EL VÉRTICE TRASERO IZQUIERDO A UNA ALTURA DE UN RANGOS ENTRE 0.45 Y 0.86 METROS. ADemás, VEHÍCULO GMC ENVOY PRESENTE RESTOS DE LA PRIMERA CAPA DE PINTURA (BARNIZ TRANSPARENTE), SOBRE LA PARTE INFERIOR MEDIA DEL COSTADO IZQUIERDO ABRACANDO UNA SUPERFICIE ENTRE 0.44 Y 0.99 METROS. LUEGO, LA SUPERFICIE DE RODAMIENTO ES ASFALTADO EN BUENAS CONDICIONES.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"restos de la primera capa de pintura (barniz transparente) en dirección de atrás hacia adelante sobre el vértice trasero izquierdo a una altura de un rango entre 0.45 y 0.86 metros; restos de la primera capa de pintura (barniz transparente), sobre la parte inferior media del costado izquierdo abarcando una superficie entre 0.44 y 0.99 metros\",\n      \"evidencia\": \"VEHÍCULO NISSAN ALTIMA PRESENTA RESTOS DE LA PRIMERA CAPA DE PINTURA (BARNIZ TRANSPARENTE) EN DIRECCIÓN DE ATRÁS HACIA ADELANTE SOBRE EL VÉRTICE TRASERO IZQUIERDO A UNA ALTURA DE UN RANGOS ENTRE 0.45 Y 0.86 METROS. ADemás, VEHÍCULO GMC ENVOY PRESENTE RESTOS DE LA PRIMERA CAPA DE PINTURA (BARNIZ TRANSPARENTE), SOBRE LA PARTE INFERIOR MEDIA DEL COSTADO IZQUIERDO ABRACANDO UNA SUPERFICIE ENTRE 0.44 Y 0.99 METROS\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfaltado en buenas condiciones\",\n      \"evidencia\": \"LA SUPERFICIE DE RODAMIENTO ES ASFALTADO EN BUENAS CONDICIONES\"\n    }\n  ]\n}"
+}

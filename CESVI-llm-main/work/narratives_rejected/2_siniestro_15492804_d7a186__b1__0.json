@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'El conductor perdió el control del vehículo al intentar esquivar un co'",
+ "principal": {
+  "id": "causa_perdida_control",
+  "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+  "valor": "corte de circulación"
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con alumbrado público",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Hyundai Atos 2009 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la causa de la pérdida de control del Hyundai Atos 2009 rojo?\",\n  \"respuesta\": \"El conductor perdió el control del vehículo al intentar esquivar un corte de circulación, además de que la maniobra se realizó de noche con alumbrado público.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"corte de circulación\",\n      \"evidencia\": \"al intentar esquivar un corte de circulación\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de noche con alumbrado público\",\n      \"evidencia\": \"de noche con alumbrado público\"\n    }\n  ]\n}"
+}

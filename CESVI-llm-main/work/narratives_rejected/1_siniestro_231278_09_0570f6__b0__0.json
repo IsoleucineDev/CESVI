@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'EL ÁNGULO APROXIMADO ENTRE LOS VEHÍCULOS AL MOMENTO DEL IMPACTO ERA DE'",
+ "principal": {
+  "id": "angulo_impacto",
+  "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+  "valor": "unos 30 grados",
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Plymouth Freeze 1996 blanco",
+  "V2": "Ford Escort 1998 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el ángulo aproximado entre los vehículos al momento del impacto?\",\n  \"respuesta\": \"EL ÁNGULO APROXIMADO ENTRE LOS VEHÍCULOS AL MOMENTO DEL IMPACTO ERA DE UNOS 30 GRADOS.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"angulo_impacto\",\n      \"valor\": \"30\",\n      \"evidencia\": \"UNOS 30 GRADOS\"\n    }\n  ]\n}"
+}

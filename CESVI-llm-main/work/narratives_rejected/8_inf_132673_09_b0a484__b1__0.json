@@ -1,0 +1,27 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "Km. 21+000 de la carretera México-Veracruz"
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 40,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 60,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volvo Tractocamión Madrina 2001 blanco",
+  "V2": "Kenworth Tractocamión 2009 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde en la carretera México-Veracruz ocurrió el impacto?\",\n  \"respuesta\": \"El impacto ocurrió en el Km. 21+000 de la carretera México-Veracruz, además, la velocidad estimada de el Volvo Tractocamión Madrina 2001 blanco antes del evento fue de 40 km/h, y luego la velocidad estimada de el Kenworth Tractocamión 2009 blanco antes del evento fue de 60 km/h.\",\n  \"extracciones\": [\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"Km. 21+000\", \"evidencia\": \"El impacto ocurrió en el Km. 21+000 de la carretera México-Veracruz\"},\n    {\"tema\": \"velocidad_V1_kmh\", \"valor\": \"40\", \"evidencia\": \"la velocidad estimada de el Volvo Tractocamión Madrina 2001 blanco antes del evento fue de 40 km/h\"},\n    {\"tema\": \"velocidad_V2_kmh\", \"valor\": \"60\", \"evidencia\": \"la velocidad estimada de el Kenworth Tractocamión 2009 blanco antes del evento fue de 60 km/h\"}\n  ]\n}"
+}

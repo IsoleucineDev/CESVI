@@ -1,0 +1,22 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Ford Lobo 2006 realizó un virar a su derecha antes del impacto, ade'",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "virar a su derecha"
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche sin alumbrado",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Lobo 2006 vino",
+  "V2": "Volkswagen Pointer 2004 gris",
+  "V3": "Nissan Tsuru 2010 beige"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Ford Lobo antes del impacto?\",\n  \"respuesta\": \"El Ford Lobo 2006 realizó un virar a su derecha antes del impacto, además de la situación ocurriendo de noche sin alumbrado.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"virar a su derecha\",\n      \"evidencia\": \"El Ford Lobo 2006 realizó un virar a su derecha antes del impacto\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de noche sin alumbrado\",\n      \"evidencia\": \"de noche sin alumbrado\"\n    }\n  ]\n}"
+}

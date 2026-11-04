@@ -1,0 +1,47 @@
+{
+ "id": "10_dictamens_14802862_5362bf",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "GM Chevy 2006 negro",
+  "V2": "Pontiac G5 2008 rojo Victoria"
+ },
+ "valores": {
+  "declaracion_V1": "Venía circulando sobre la Av. Central Hank González al querer incorporarse un Pontiac G-5 se me atraviesa no me cede el paso y le pego de lado izquierdo",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Norte - Sur",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "incorporarse al carril de extrema derecha",
+  "maniobra_previa_V2": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "el vehículo A impacta con su vértice delantero derecho al vehículo B en su costado posterior izquierdo",
+  "punto_impacto_via": null,
+  "angulo_impacto": null,
+  "evidencias_sitio": "no se observan impregnaciones de material color rojo del vehículo V2 en el vehículo V1",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "declaracion_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Venía circulando sobre la Av. Central Hank González al querer incorporarse un Pontiac G-5 se me atraviesa no me cede el paso y le pego de lado izquierdo",
+  "sentido_carril_V1": "El vehículo “A” circula sobre la Av. Central en dirección de Suroeste a Noreste",
+  "maniobra_previa_V1": "al quererse incorporar le pega de su lado izquierdo al vehículo B",
+  "secuencia_eventos": "el conductor del vehículo “A” impacta con su vértice delantero derecho al vehículo “B” en su costado posterior izquierdo",
+  "evidencias_sitio": "no se observan impregnaciones de material color rojo del o vehículo marca Pontiac, tipo G-5, modelo 2008, color rojo victoria y placas de circulación 859-VTZ, en el vehículo marca  GM, tipo Chevy, modelo 2006, color negro con placas de circulación 814-TSA"
+ },
+ "descartados": {
+  "senalizacion_preferencia": "no se observa que el vehículo B ceda el paso",
+  "punto_impacto_via": "carril de extrema derecha",
+  "posicion_final_V1": "ubicación final no especificada",
+  "posicion_final_V2": "ubicación final no especificada",
+  "declaracion_V2": "no se observa declaración del conductor de V2"
+ }
+}

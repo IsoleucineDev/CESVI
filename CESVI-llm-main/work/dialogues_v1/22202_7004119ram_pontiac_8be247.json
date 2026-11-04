@@ -1,0 +1,159 @@
+{
+ "id": "22202_7004119ram_pontiac_8be247",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Dodge RAM 1500 1996 NEGRO XN-55038",
+  "V2": "Pontiac GRAN AM 1998 ROJO YER-7387"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Cuál fue la versión del conductor de V1 sobre lo que ocurrió?",
+   "respuesta": "hice maniobra de reversa y no me di cuenta que había un vehículo estacionado",
+   "valor": "hice maniobra de reversa y no me di cuenta que había un vehículo estacionado"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y qué dijo el conductor de V2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaba la superficie de rodamiento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación había en el momento del accidente?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación de V1?",
+   "respuesta": "creo que iba hacia atrás",
+   "valor": "hacia atrás"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y el de V2?",
+   "respuesta": "hacia adelante",
+   "valor": "hacia adelante"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál fue la velocidad de V1 antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y cuál fue la velocidad de V2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó V1 antes del impacto?",
+   "respuesta": "en reversa",
+   "valor": "en reversa"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobra realizó V2?",
+   "respuesta": "detenido",
+   "valor": "detenido"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuánta distancia había entre los vehículos antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue la secuencia de los impactos?",
+   "respuesta": "creo que el vehículo V2 (Pontiac) estaba estacionado y el vehículo V1 (Dodge) lo impactó por detrás",
+   "valor": "vehículo V2 (Pontiac) estacionado, vehículo V1 (Dodge) impacta por detrás"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "la parte frontal del vehículo V2 y la parte trasera del vehículo V1",
+   "valor": "parte frontal del vehículo V2, parte trasera del vehículo V1"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "huellas de frenado no presentes, intercambio de pintura",
+   "valor": "huellas de frenado no presentes, intercambio de pintura"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál fue la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en V1?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en V2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Cuáles fueron los daños en V1?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Y en V2?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Posición final de V1: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Dónde quedó detenido V1 después del accidente?",
+   "respuesta": "detenido en el lugar del impacto",
+   "valor": "detenido en el lugar del impacto"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Posición final de V2: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Y V2?",
+   "respuesta": "detenido en el lugar del impacto",
+   "valor": "detenido en el lugar del impacto"
+  }
+ ]
+}

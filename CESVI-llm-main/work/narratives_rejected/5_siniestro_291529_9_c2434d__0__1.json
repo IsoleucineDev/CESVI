@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en sentido_carril_V2",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Poniente a Oriente"
+ },
+ "otros": [
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "Poniente a Oriente"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El conductor del vehículo tipo Platina (a) circula de Poniente a Oriente a “velocidad constante”, sin guardar la distancia de seguimiento. Al momento de frenar su vehículo se desplaza, de tal manera que genera un alcance e impacta en la parte posterior del vehículo tipo Tsuru, que se encontraba en la vialidad."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Platina 2004 vino",
+  "V2": "Nissan Tsuru S/D arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Nissan Platina 2004 vino?\",\n  \"respuesta\": \"El Nissan Platina 2004 circulaba de Poniente a Oriente, además impactó en la parte posterior del vehículo tipo Tsuru que se encontraba en la vialidad.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"Poniente a Oriente\",\n      \"evidencia\": \"El Nissan Platina 2004 circulaba de Poniente a Oriente\"\n    },\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"Poniente a Oriente\",\n      \"evidencia\": \"El conductor del vehículo tipo Platina (a) circula de Poniente a Oriente\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El conductor del vehículo tipo Platina circulaba sin guardar la distancia de seguimiento y al momento de frenar impacta en el vehículo tipo Tsuru\",\n      \"evidencia\": \"El conductor del vehículo tipo Platina (a) circula de Poniente a Oriente a “velocidad constante”, sin guardar la distancia de seguimiento. Al momento de frenar su vehículo se desplaza, de tal manera que genera un alcance e impacta en la parte posterior del vehículo tipo Tsuru\"\n    }\n  ]\n}"
+}

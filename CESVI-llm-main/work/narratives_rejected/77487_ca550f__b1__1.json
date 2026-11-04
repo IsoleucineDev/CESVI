@@ -1,0 +1,14 @@
+{
+ "motivo": "oración con contenido no extraído: 'La velocidad del Mercedes Benz C-280 2007 blanco antes del evento era '",
+ "principal": {
+  "id": "velocidad_V1_kmh",
+  "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+  "valor": 90,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Mercedes Benz C-280 2007 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la velocidad estimada del Mercedes Benz C-280 2007 blanco antes del evento?\",\n  \"respuesta\": \"La velocidad del Mercedes Benz C-280 2007 blanco antes del evento era de 90 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"90 km/h\"\n    }\n  ]\n}"
+}

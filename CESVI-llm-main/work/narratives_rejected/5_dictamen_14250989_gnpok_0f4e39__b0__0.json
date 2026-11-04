@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'ADVERTENCIA: LA MOTOCICLETA DEJÓ HUELLAS DE FRENADO CON UMA LONGITUD D'",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 25,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Nissan Tsuru 2000 rojo",
+  "V2": "Italika motocicleta 2006 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado de la motocicleta?\",\n  \"respuesta\": \"ADVERTENCIA: LA MOTOCICLETA DEJÓ HUELLAS DE FRENADO CON UMA LONGITUD DE 25 METROS.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"25\",\n      \"evidencia\": \"25 METROS\"\n    }\n  ]\n}"
+}

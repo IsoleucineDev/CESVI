@@ -1,0 +1,43 @@
+{
+ "id": "301034060_murano_5a3928",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Nissan Murano 2004 negro"
+ },
+ "valores": {
+  "declaracion_V1": "al venir circulando por la Avenida Central en los carriles de alta velocidad a la altura de un tienda fester se encontraba un vehículo detenido sin luces en el carril pegado al muro de contención y que el al percatarse de esto vira hacia la derecha pero la camioneta se le hizo muy feo y al tratar de controlarla viro de nueva cuenta a la izquierda, pero perdió el control impactándose de frente con el muro de contención que divide la vialidad con el metro de la línea B",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Norte a Sur",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "giro",
+  "causa_perdida_control": "distracción",
+  "tipo_objeto": "muro de contención de concreto",
+  "altura_marca_objeto_cm": "30-70",
+  "secuencia_eventos": "el vehículo gira hacia la derecha y luego hacia la izquierda, perdiendo el control y impactándose de frente con el muro de contención",
+  "punto_impacto_via": "carriles centrales de Avenida Central",
+  "evidencias_sitio": "impregnación de pintura color blanco en el muro de contención",
+  "airbags_V1": "bolsa de aire del conductor y del pasajero",
+  "posicion_final_V1": "impactado contra el muro de contención",
+  "huellas_frenado_m": null,
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "al venir circulando por la Avenida Central en los carriles de alta velocidad a la altura de un tienda fester se encontraba un vehículo detenido sin luces en el carril pegado al muro de contención y que el al percatarse de esto vira hacia la derecha pero la camioneta se le hizo muy feo y al tratar de controlarla viro de nueva cuenta a la izquierda, pero perdió el control impactándose de frente con el muro de contención que divide la vialidad con el metro de la línea B",
+  "sentido_carril_V1": "El hecho de tránsito en estudio se suscita en los carriles centrales del arroyo de circulación en sentido de Norte a Sur",
+  "maniobra_previa_V1": "el al percatarse de esto vira hacia la derecha pero la camioneta se le hizo muy feo y al tratar de controlarla viro de nueva cuenta a la izquierda, pero perdió el control impactándose de frente con el muro de contención que divide la vialidad con el metro de la línea B",
+  "causa_perdida_control": "el al percatarse de esto vira hacia la derecha pero la camioneta se le hizo muy feo y al tratar de controlarla viro de nueva cuenta a la izquierda, pero perdió el control impactándose de frente con el muro de contención que divide la vialidad con el metro de la línea B",
+  "tipo_objeto": "el muro de central se ubica al lado Oriente del arroyo de circulación, tiene una altura de 80 centímetros y una forma trapezoidal",
+  "altura_marca_objeto_cm": "en el muro de central se ubica al lado Oriente del arroyo de circulación, tiene una altura de 80 centímetros y una forma trapezoidal, donde se localizaron daño tipo tallón en que dirección a atrás hacia delante en sentido de la circulación, a una altura de 30 a 70 centímetros con respecto al nivel del piso",
+  "secuencia_eventos": "el al percatarse de esto vira hacia la derecha pero la camioneta se le hizo muy feo y al tratar de controlarla viro de nueva cuenta a la izquierda, pero perdió el control impactándose de frente con el muro de contención que divide la vialidad con el metro de la línea B",
+  "punto_impacto_via": "El hecho de tránsito en estudio se suscita en los carriles centrales del arroyo de circulación en sentido de Norte a Sur",
+  "evidencias_sitio": "en la defensa central de concreto, existen daños tipo tallón de atrás hacia delante en dirección de la circulación, con impregnación de un material gris oscuro, ubicados a una altura de 30 centímetros a 80 centímetros, con respecto al nivel del piso, mientras que en el vehículo marca Nissan, tipo Murano, modelo 2004, color negra y placas de circulación 257 WJX presenta en su parte frontal daños tipo tallón con desprendimiento de pintura color negro e impregnación de un polvo fino color blanco",
+  "airbags_V1": "En el interior del vehículo se observan las bolsas de aire activadas tanto la del conductor como la del pasajero",
+  "posicion_final_V1": "el vehículo impacta contra el muro de contención y debido a la velocidad a la que circulaba y por la mecánica de colisión, continúa su carrera por la vía hasta detenerse"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "noche"
+ }
+}

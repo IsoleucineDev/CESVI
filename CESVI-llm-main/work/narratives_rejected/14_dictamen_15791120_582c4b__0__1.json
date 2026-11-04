@@ -1,0 +1,30 @@
+{
+ "motivo": "oración con contenido no extraído: 'el Mitsubishi Lancer 2006 blanco no realizaba ninguna maniobra antes d'",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "ninguna"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo V2 impacta el costado derecho del vehículo V1"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "mitad de la calle con Brúcelas"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura de color negro impregnada sobre la parte frontal media del cofre del vehículo V2"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jaguar S-Type 2005 negro",
+  "V2": "Mitsubishi Lancer 2006 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V2 antes del impacto?\",\n  \"respuesta\": \"el Mitsubishi Lancer 2006 blanco no realizaba ninguna maniobra antes del impacto, simplemente avanzaba en línea recta; además, el vehículo impacta el costado derecho del Jaguar S-Type 2005 negro, luego de que la colisión ocurra en mitad de la calle con Brúcelas, y además, se observa pintura de color negro impregnada sobre la parte frontal media del cofre del vehículo V2.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"ninguna\",\n      \"evidencia\": \"el Mitsubishi Lancer 2006 blanco no realizaba ninguna maniobra antes del impacto\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"el vehículo V2 impacta el costado derecho del vehículo V1\",\n      \"evidencia\": \"el vehículo impacta el costado derecho del Jaguar S-Type 2005 negro\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"mitad de la calle con Brúcelas\",\n      \"evidencia\": \"la colisión ocurra en mitad de la calle con Brúcelas\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"pintura de color negro impregnada sobre la parte frontal media del cofre del vehículo V2\",\n      \"evidencia\": \"pintura de color negro impregnada sobre la parte frontal media del cofre del vehículo V2\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,23 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan XTRAIL 2004 ARENA UNJ-5947",
+  "V2": "Jeep Liberty 2002 AZUL 858-WDL"
+ },
+ "valores": {
+  "declaracion_V1": "Circulaba por la calle de Camelia y al querer cruzar el eje salio una camioneta y no alcanza a detenerse y me impacte con ella, la camioneta con la que me impacte viene por el eje Guerrero",
+  "sentido_carril_V1": "Este a Oeste",
+  "sentido_carril_V2": "Norte a Sur",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "senalizacion_preferencia": "Ninguno",
+  "secuencia_eventos": "El vehículo V1 impacta al vehículo V2 en su costado delantero derecho",
+  "punto_impacto_via": "Calle Guerrero y Camelia",
+  "angulo_impacto": "Perpendicular",
+  "evidencias_sitio": "Restos de pintura y barniz en los vehículos",
+  "airbags_V1": "Activados",
+  "airbags_V2": "No mencionado"
+ },
+ "id": "4_dic_50382_f42e5d",
+ "split": "train"
+}

@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en evidencias_sitio",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "autopista Peñon – Texcoco en el kilómetro 4"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "En la parte posterior del vehículo tipo Tsuru, en la tapa cajuela, muestra impregnación de pintura de color vino, mismo color que se encuentra en la carrocería del vehículo tipo Platina. Además, en la parte interna de la fascia de dicho vehículo se encontraron restos de esquirlas y de plástico de color rojo, pertenecientes a las cubiertas del faro posterior del lado izquierdo del vehículo tipo Tsuru."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Platina 2004 vino",
+  "V2": "Nissan Tsuru S/D arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde en la VÍA ocurrió el impacto?\",\n  \"respuesta\": \"En el sitio del accidente, en la autopista Peñon – Texcoco en el kilómetro 4, se encontraron evidencias en el sitio como huellas de pintura vino en la tapa cajuela del Tsuru y restos de plástico rojo en la fascia interna del mismo vehículo. Además, el impacto ocurrió en la misma zona de la autopista.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"huellas de pintura vino en la tapa cajuela del Tsuru y restos de plástico rojo en la fascia interna del mismo vehículo\",\n      \"evidencia\": \"En la parte posterior del vehículo tipo Tsuru, en la tapa cajuela, muestra impregnación de pintura de color vino, mismo color que se encuentra en la carrocería del vehículo tipo Platina. Además, en la parte interna de la fascia de dicho vehículo se encontraron restos de esquirlas y de plástico de color rojo, pertenecientes a las cubiertas del faro posterior del lado izquierdo del vehículo tipo Tsuru.\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"autopista Peñon – Texcoco en el kilómetro 4\",\n      \"evidencia\": \"el impacto ocurrió en la misma zona de la autopista.\"\n    }\n  ]\n}"
+}

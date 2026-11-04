@@ -1,0 +1,29 @@
+{
+ "motivo": "evidencia no literal en secuencia_eventos",
+ "principal": {
+  "id": "causa_perdida_control",
+  "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+  "valor": "distracción"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo gira hacia la derecha y luego hacia la izquierda, perdiendo el control y impactándose de frente con el muro de contención"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "carriles centrales de Avenida Central"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa de aire del conductor y del pasajero"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Murano 2004 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la causa de la pérdida de control del Nissan Murano 2004?\",\n  \"respuesta\": \"El conductor del Nissan Murano 2004 perdió el control debido a una distracción, lo que provocó que el vehículo girara hacia la derecha y luego hacia la izquierda, impactándose de frente con el muro de contención en los carriles centrales de Avenida Central. Además, las bolsas de aire del conductor y del pasajero se activaron durante el incidente.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"distracción\",\n      \"evidencia\": \"perdió el control debido a una distracción\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"el vehículo gira hacia la derecha y luego hacia la izquierda, perdiendo el control y impactándose de frente con el muro de contención\",\n      \"evidencia\": \"el vehículo girara hacia la derecha y luego hacia la izquierda, perdiendo el control y impactándose de frente con el muro de contención\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"carriles centrales de Avenida Central\",\n      \"evidencia\": \"en los carriles centrales de Avenida Central\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"bolsa de aire del conductor y del pasajero\",\n      \"evidencia\": \"las bolsas de aire del conductor y del pasajero se activaron\"\n    }\n  ]\n}"
+}

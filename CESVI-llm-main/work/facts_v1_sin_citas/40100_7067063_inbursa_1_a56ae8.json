@@ -1,0 +1,31 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Ford Fiesta modelo 2003, color blanco, placas 147 VXG",
+  "V2": "Ford Pick Up modelo 2008, color negro, placas 824 UFF"
+ },
+ "valores": {
+  "declaracion_V1": "El conductor de la Fiesta declaró que no vio el semáforo y pasó el alto cuando se encontraba circulando por la Avenida Rosal.",
+  "declaracion_V2": "No especificado en el dictamen.",
+  "superficie": "Seca",
+  "iluminacion": "Día",
+  "sentido_carril_V1": "Norte a Sur",
+  "sentido_carril_V2": "Poniente a Oriente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "Circulando",
+  "maniobra_previa_V2": "Circulando",
+  "distancia_previa": "6 mts",
+  "senalizacion_preferencia": "Semáforo en rojo",
+  "secuencia_eventos": "Primer contacto entre el vehículo V1 y V2",
+  "punto_impacto_via": "Avenida Alta Tensión y Avenida Rosal",
+  "evidencias_sitio": "Huellas de impacto, intercambio de pintura",
+  "huellas_frenado_m": null,
+  "airbags_V1": "No especificado en el dictamen",
+  "airbags_V2": "No especificado en el dictamen",
+  "posicion_final_V1": "Desplazamiento hacia adelante",
+  "posicion_final_V2": "Desplazamiento hacia adelante"
+ },
+ "id": "40100_7067063_inbursa_1_a56ae8",
+ "split": "train"
+}

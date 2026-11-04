@@ -1,0 +1,23 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chevrolet Astra 2002 gris Plata",
+  "V2": "Desconocido"
+ },
+ "valores": {
+  "superficie": "Seca",
+  "iluminacion": "Día",
+  "sentido_carril_V1": "Circulando en el carril del extremo izquierdo",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "Ninguna",
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "Vehículo V2 impacta la parte posterior de V1 con mayor intensidad en el lado izquierdo",
+  "punto_impacto_via": "Entre el señalamiento de curva a la izquierda y el de desviación al ININ",
+  "evidencias_sitio": "No se encontraron huellas de frenado, restos de vehículos o intercambio de pintura",
+  "airbags_V1": "Ninguno",
+  "posicion_final_V1": "Impactado contra un montículo de tierra y piedras"
+ },
+ "id": "16620841_gnp_7c9c80",
+ "split": "train"
+}

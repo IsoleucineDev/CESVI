@@ -1,0 +1,98 @@
+{
+ "id": "0028401057_mustang_2011_48acce",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Ford Mustang 2011 blanco"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "circulaba de sur a norte por la carretera en mencion sobre el carril derecho con pavimento mojado y al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contencion con el vértice delantero y posteriormente con el costado derecho por el efecto de proyeccion"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "sur a norte en carril derecho"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "aceleración"
+  },
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "muro de concreto con malla metálica"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "derrape"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "impacto frontal contra el muro de contención, seguido de impacto posterior derecho"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": 65
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "restos de partes plásticas de diferentes características y colores, las cuales destacan partes plásticas de color negro, con el logotipo de Ford, partes de color ámbar con forma trapezoidal, reflectores de color plata y un hule protector de color negro con forma circular"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 20,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "pavimento mojado"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "al amanecer con poca luz",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "frontal y lateral del asiento del conductor"
+  }
+ ],
+ "g": 2,
+ "asked": "maniobra_previa_V1",
+ "sintetico": true,
+ "pregunta": "¿Cuál fue la maniobra previa del Ford Mustang 2011 blanco antes del impacto?",
+ "respuesta": "El Ford Mustang 2011 blanco aceleró antes del impacto, además luego experimentó un derrape que le causó la pérdida de control.",
+ "gold": {
+  "maniobra_previa_V1": {
+   "valor": "aceleración",
+   "evidencia": "El Ford Mustang 2011 blanco aceleró antes del impacto"
+  },
+  "causa_perdida_control": {
+   "valor": "derrape",
+   "evidencia": "luego experimentó un derrape que le causó la pérdida de control"
+  }
+ }
+}

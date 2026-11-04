@@ -1,0 +1,22 @@
+{
+ "motivo": "oración con contenido no extraído: 'El VW Jetta azul circulaba a una velocidad estimada de 60 km/h antes d'",
+ "principal": {
+  "id": "velocidad_V1_kmh",
+  "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+  "valor": 60,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "VW Jetta 2002 azul",
+  "V2": "GM Camaro 1995 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la velocidad estimada del VW Jetta antes del evento?\",\n  \"respuesta\": \"El VW Jetta azul circulaba a una velocidad estimada de 60 km/h antes del evento, además el Chevy Camaro rojo viajaba a unos 50 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"60\",\n      \"evidencia\": \"60 km/h\"\n    },\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"50\",\n      \"evidencia\": \"50 km/h\"\n    }\n  ]\n}"
+}

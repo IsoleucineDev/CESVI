@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en evidencias_sitio",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "El vehículo V1 presenta pintura gris en la parte frontal, el vehículo V2 no presenta pintura café en la parte posterior"
+ },
+ "otros": [
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activado"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Renault Megane 2004 cafe",
+  "V2": "Ford Ecosport 2005 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son las evidencias en el sitio?\",\n  \"respuesta\": \"El vehículo Renault Megane 2004 cafe presenta pintura gris en la parte frontal, lo que indica un intercambio de pintura con el vehículo Ford Ecosport 2005 gris. Además, el Ford Ecosport 2005 gris no presenta pintura café en la parte posterior, lo que sugiere que no hubo un intercambio de pintura en esa zona del vehículo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"pintura gris en la parte frontal del Renault Megane cafe; no hay pintura café en la parte posterior del Ford Ecosport gris\",\n      \"evidencia\": \"El vehículo Renault Megane 2004 cafe presenta pintura gris en la parte frontal, el vehículo Ford Ecosport 2005 gris no presenta pintura café en la parte posterior\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"activado\",\n      \"evidencia\": \"Bolsas de aire de V1: cuáles se activaron\"\n    }\n  ]\n}"
+}

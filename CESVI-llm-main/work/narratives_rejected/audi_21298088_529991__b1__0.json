@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "VENIA sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol"
+ },
+ "otros": [
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "exceso de velocidad en curva",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Audi A-4 2001 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"Cuéntame, ¿cómo ocurrió el hecho según el conductor del Audi A-4 2001 negro?\",\n  \"respuesta\": \"El conductor del Audi A-4 2001 negro venía sobre la carretera y una camioneta se dio vuelta en U, por no pegarle, viró hacia la banqueta y pegó con un árbol. Además, esto sucedió debido a un exceso de velocidad en curva.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"Venia sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol\",\n      \"evidencia\": \"El conductor del Audi A-4 2001 negro venía sobre la carretera y una camioneta se dio vuelta en U, por no pegarle, viró hacia la banqueta y pegó con un árbol.\"\n    },\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"exceso de velocidad en curva\",\n      \"evidencia\": \"esto sucedió debido a un exceso de velocidad en curva\"\n    }\n  ]\n}"
+}

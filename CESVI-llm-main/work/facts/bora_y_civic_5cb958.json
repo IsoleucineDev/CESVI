@@ -1,0 +1,53 @@
+{
+ "id": "bora_y_civic_5cb958",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Volkswagen Bora 2006 gris",
+  "V2": "Honda Civic 2007 vino"
+ },
+ "valores": {
+  "declaracion_V1": "AL IR CIRCULANDO POR LA CALLE ROBLE HICE ALTO AL QUEDAR ATORADO POR EL ALTO DE LOS CARROS AL FRENTE Y ME IMPACTO UN VEHÍCULO POR EL LADO IZQUIERDO EL CUAL CIRCULABA POR LA CALLE NOGAL",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Norte a Sur",
+  "sentido_carril_V2": "Oriente a Poniente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "senalizacion_preferencia": "señal de alto",
+  "secuencia_eventos": "El vehículo V2 circulaba por la calle Nogal en dirección Oriente a Poniente y el vehículo V1 circulaba por la calle Roble en dirección Norte a Sur. El vehículo V2 impacta al vehículo V1 por su lado izquierdo.",
+  "punto_impacto_via": "calle Roble y calle Nogal",
+  "angulo_impacto": "perpendicular",
+  "evidencias_sitio": "El vehículo V1 presenta impregnación de pintura color vino en la parte frontal y el vehículo V2 presenta impregnación de pintura color gris en el lado derecho.",
+  "huellas_frenado_m": null,
+  "airbags_V1": "activados (conductor y acompañante)",
+  "airbags_V2": "activados (conductor, acompañante y de cortina del lado derecho)",
+  "posicion_final_V1": "El vehículo V1 quedó detenido en la calle Roble con dirección de Norte a Sur.",
+  "posicion_final_V2": "El vehículo V2 se proyectó e impactó contra una barda.",
+  "maniobra_previa_V1": "detenido",
+  "maniobra_previa_V2": "cambio de carril",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "AL IR CIRCULANDO POR LA CALLE ROBLE HICE ALTO AL QUEDAR ATORADO POR EL ALTO DE LOS CARROS AL FRENTE Y ME IMPACTO UN VEHÍCULO POR EL LADO IZQUIERDO EL CUAL CIRCULABA POR LA CALLE NOGAL",
+  "sentido_carril_V1": "El vehículo “A” circula por Roble, en dirección de Norte a Sur",
+  "sentido_carril_V2": "el vehículo “B” circula por Nogal, en dirección de Oriente a Poniente",
+  "senalizacion_preferencia": "Se observa señalamiento Restrictivo de alto.",
+  "secuencia_eventos": "El vehículo “B” circula por Nogal, en dirección de Oriente a Poniente, mientras que el vehículo “A” circula por Roble, en dirección de Norte a Sur",
+  "punto_impacto_via": "El lugar de los hechos se localiza en la intersección de las calles Roble y calle Nogal, en la Colonia Chapultepec, en Poza Rica Veracruz.",
+  "angulo_impacto": "Dictamen técnico del hecho de tránsito en su modalidad de colisión perpendicular anterior",
+  "evidencias_sitio": "El vehículo marca Volkswagen, tipo Bora, presenta impregnación de pintura de color vino en partes como: cofre, salpicadera, faro, fascia y larguero izquierdo. El vehículo marca Honda, tipo Civic presenta en el lado derecho impregnación de pintura color gris característico al vehículo tipo Bora en las partes como: salpicadera, conjunto rin-neumático derecho, puerta derecha y costado derecho.",
+  "airbags_V1": "En el habitáculo del vehículo marca Volkswagen, tipo Bora, se observa la activación de las bolsas de aire frontales, tanto la del conductor como la del acompañante",
+  "airbags_V2": "En el habitáculo del vehículo en estudio se observa activación de las bolsas de aire como: conductor, acompañante y de cortina del lado derecho",
+  "posicion_final_V1": "Imagen 5.- Se observa el momento en que el vehículo “B” sigue impactando al vehículo “A”.",
+  "posicion_final_V2": "Imagen 6.- Se observa posición final de los vehículos, el vehículo “B” se proyecta e impactándose con una barda.",
+  "maniobra_previa_V1": "AL IR CIRCULANDO POR LA CALLE ROBLE HICE ALTO AL QUEDAR ATORADO POR EL ALTO DE LOS CARROS AL FRENTE Y ME IMPACTO UN VEHÍCULO POR EL LADO IZQUIERDO EL CUAL CIRCULABA POR LA CALLE NOGAL",
+  "maniobra_previa_V2": "Vehículo “B” circula por Nogal, en dirección de Oriente a Poniente, tal y como se ilustra a continuación:"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día"
+ }
+}

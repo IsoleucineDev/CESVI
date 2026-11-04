@@ -1,0 +1,28 @@
+{
+ "motivo": "evidencia no literal en danos_V2",
+ "principal": {
+  "id": "danos_V1",
+  "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "tallones laterales izquierdos de adelante hacia atrás",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "ruptura de la fascia posterior",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 60,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión 2001 blanco",
+  "V2": "White Tractocamión 1989 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños en el Freightliner Tractocamión 2001 blanco?\",\n  \"respuesta\": \"Los tallones laterales izquierdos de adelante hacia atrás estaban dañados, además la fuerza fue desde atrás hacia adelante con una altura de 100 cm, y luego el White Tractocamión 1989 rojo tuvo una ruptura de la fascia posterior, y la velocidad estimada del Freightliner antes del evento era de 60 km/h.\",\n  \"extracciones\": [\n    {\"tema\": \"danos_V1\", \"valor\": \"tallones laterales izquierdos dañados, fuerza desde atrás hacia adelante, altura 100 cm\", \"evidencia\": \"Los tallones laterales izquierdos de adelante hacia atrás estaban dañados, además la fuerza fue desde atrás hacia adelante con una altura de 100 cm\"},\n    {\"tema\": \"danos_V2\", \"valor\": \"ruptura de la fascia posterior\", \"evidencia\": \"la ruptura de la fascia posterior\"},\n    {\"tema\": \"velocidad_V1_kmh\", \"valor\": \"60\", \"evidencia\": \"era de 60 km/h\"}\n  ]\n}"
+}

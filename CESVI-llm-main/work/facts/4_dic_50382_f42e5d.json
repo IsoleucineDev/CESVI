@@ -1,0 +1,48 @@
+{
+ "id": "4_dic_50382_f42e5d",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan X Trail 2004 arena",
+  "V2": "Jeep Liberty 2002 azul"
+ },
+ "valores": {
+  "declaracion_V1": "Circulaba por la calle de Camelia y al querer cruzar el eje salio una camioneta y no alcanza a detenerse y me impacte con ella, la camioneta con la que me impacte viene por el eje Guerrero",
+  "declaracion_V2": null,
+  "superficie": "asfalto en buenas condiciones de circulación",
+  "iluminacion": null,
+  "sentido_carril_V1": "Este a Oeste",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "cruzando el eje",
+  "maniobra_previa_V2": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "el vehículo A impacta al vehículo B con su parte frontal contra el costado delantero y medio derecho del vehículo B",
+  "punto_impacto_via": "calle Camelia y Guerrero (Eje 1 Poniente)",
+  "angulo_impacto": null,
+  "evidencias_sitio": "el vehículo V1 presenta restos de pintura color azul y el vehículo V2 no presenta impregnación de pintura color arena",
+  "huellas_frenado_m": null,
+  "airbags_V1": "del lado del conductor y del acompañante",
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Circulaba por la calle de Camelia y al querer cruzar el eje salio una camioneta y no alcanza a detenerse y me impacte con ella, la camioneta con la que me impacte viene por el eje Guerrero",
+  "superficie": "la calle Guerrero cuenta con un arroyo de circulación con cuatro carriles asfaltados en buenas condiciones",
+  "sentido_carril_V1": "El vehículo “A” circula sobre la calle Camelia en dirección de Este a Oeste",
+  "maniobra_previa_V1": "al querer cruzar el eje salio una camioneta y no alcanza a detenerse y me impacte con ella",
+  "secuencia_eventos": "el vehículo “A” circula sobre la calle Camelia en dirección de Este a Oeste, al llegar al crucero con la calle Guerrero impacta al vehículo “B” que va circulando sobre la calle Guerrero en sentido Norte a Sur",
+  "punto_impacto_via": "El lugar de los hechos se localiza en el crucero de la calle Camelia y Guerrero (Eje 1 Poniente)",
+  "evidencias_sitio": "el vehículo tipo X Trail presenta restos de pintura color azul e impregnación de barniz transparente en los vértices delanteros donde se observan cubriendo una superpie entre 0.38 metros y 0.52 metros y de lado derecho a una altura de 0.53 metros y en la parte media a una altura de 0.62 metros",
+  "airbags_V1": "En el habitáculo del vehículo marca Nissan, tipo X Trail se observan las bolsas de aire activadas del lado del conductor y del acompañante"
+ },
+ "descartados": {
+  "sentido_carril_V2": "Norte a Sur",
+  "posicion_final_V1": "detenido en la calle Camelia",
+  "posicion_final_V2": "detenido en la calle Guerrero"
+ }
+}

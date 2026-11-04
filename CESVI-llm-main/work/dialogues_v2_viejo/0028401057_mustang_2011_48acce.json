@@ -1,0 +1,111 @@
+{
+ "id": "0028401057_mustang_2011_48acce",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Ford Mustang 2011 blanco"
+ },
+ "form": {
+  "posicion_final_V1": "impactado contra el muro de contención"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías resumirme la declaración del conductor del Mustang sobre cómo ocurrió el accidente?",
+   "respuesta": "circulaba de sur a norte por la carretera en mencion sobre el carril derecho con pavimento mojado y al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contencion con el vértice delantero y posteriormente con el costado derecho por el efecto de proyeccion",
+   "valor": "circulaba de sur a norte por la carretera en mencion sobre el carril derecho con pavimento mojado y al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contencion con el vértice delantero y posteriormente con el costado derecho por el efecto de proyeccion"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Cuál era el estado de la superficie de rodamiento en el momento del accidente?",
+   "respuesta": "pavimento mojado",
+   "valor": "pavimento mojado"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación y visibilidad había en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Por cuál carril circulaba el Mustang y en qué dirección?",
+   "respuesta": "sur a norte en carril derecho",
+   "valor": "sur a norte en carril derecho"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Mustang antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Mustang antes de impactar contra el muro de contención?",
+   "respuesta": "creo que estaba acelerando, lo que provocó el derrape que llevó al accidente",
+   "valor": "aceleración"
+  },
+  {
+   "tema": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "pregunta": "¿Podrías describir el tipo de objeto fijo contra el que chocó el Mustang?",
+   "respuesta": "creo que era un muro de concreto con malla metálica",
+   "valor": "muro de concreto con malla metálica"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál crees que fue la causa principal de la pérdida de control del Mustang?",
+   "respuesta": "más o menos, fue un derrape debido a la aceleración en pavimento mojado",
+   "valor": "derrape"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describir la secuencia de eventos que ocurrieron al impactar contra el muro de contención?",
+   "respuesta": "impacto frontal contra el muro de contencion, seguido de impacto posterior derecho",
+   "valor": "impacto frontal contra el muro de contención, seguido de impacto posterior derecho"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde ocurrió el impacto en la carretera?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "pregunta": "¿Cuál es la altura de las marcas de impacto en el muro de contención?",
+   "respuesta": "las marcas de impacto en el muro de contención miden más o menos 65 cm",
+   "valor": 65
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "encontré restos de partes plásticas de diferentes características y colores, las cuales destacan partes plásticas de color negro, con el logotipo de Ford, partes de color ámbar con forma trapezoidal, reflectores de color plata y un hule protector de color negro con forma circular",
+   "valor": "restos de partes plásticas de diferentes características y colores, las cuales destacan partes plásticas de color negro, con el logotipo de Ford, partes de color ámbar con forma trapezoidal, reflectores de color plata y un hule protector de color negro con forma circular"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál era la longitud de las huellas de frenado antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Mustang?",
+   "respuesta": "se activaron las bolsas de aire frontal y lateral del asiento del conductor",
+   "valor": "frontal y lateral del asiento del conductor"
+  }
+ ]
+}

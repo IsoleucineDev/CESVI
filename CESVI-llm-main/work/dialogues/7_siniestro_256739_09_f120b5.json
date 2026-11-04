@@ -1,0 +1,147 @@
+{
+ "id": "7_siniestro_256739_09_f120b5",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "General Motors MC-36 2003 rojo",
+  "V2": "Ford F-350 2008 rojo"
+ },
+ "form": {
+  "posicion_final_V1": "detenido tras el impacto",
+  "posicion_final_V2": "detenido tras el impacto",
+  "danos_V1": "indicios de pintura color rojo en el vértice trasero derecho",
+  "danos_V2": "daños tipo ruptura en la parrilla del lado izquierdo, defensa desplazada de izquierda a derecha"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "había mucho trafico y se me paro un carro delante y entonces yo me eche de reversa lo mas rápido que pude espejeando de mi lado pero no alcance a ver por el lado derecho en una curva solo sentí el trancazo"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "reversa"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "reversa"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "valor": "el vehículo V1 realiza una maniobra en reversa"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo V1 realiza una maniobra en reversa y colisiona con el vehículo V2"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura color rojo en el vértice trasero derecho del vehículo V1"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "start": 0,
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías describirme brevemente cómo el conductor del GM MC-36 2003 rojo recuerda que ocurrió el accidente?",
+   "respuesta": "Creo que el conductor mencionó que había mucho tráfico y que un vehículo se detuvo frente a él, entonces él comenzó a retroceder lo más rápido que pudo, espejeando pero no pudo ver bien por el espejo derecho en una curva y solo sintió el choque.",
+   "valor": "había mucho trafico y se me paro un carro delante y entonces yo me eche de reversa lo mas rápido que pude espejeando de mi lado pero no alcance a ver por el lado derecho en una curva solo sentí el trancazo"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y el conductor del Ford F-350 2008 rojo, ¿cómo describió el accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Podrías detallar el sentido de circulación y el carril por el que iba el GM MC-36 2003 rojo antes del impacto?",
+   "respuesta": "El vehículo estaba circulando en reversa en el carril derecho, ya que el conductor mencionó que estaba maniobrando para evitar un vehículo que se había detenido frente a él.",
+   "valor": "reversa"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y el Ford F-350 2008 rojo, en qué carril y sentido circulaba?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el GM MC-36 2003 rojo antes del impacto?",
+   "respuesta": "El GM MC-36 estaba realizando una maniobra de reversa.",
+   "valor": "reversa"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "Y el Ford F-350 2008 rojo, ¿qué maniobra realizaba antes del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

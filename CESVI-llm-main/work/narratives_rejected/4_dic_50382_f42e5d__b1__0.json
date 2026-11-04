@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Nissan X Trail y el Jeep Liberty chocaron de manera bastante perpen'",
+ "principal": {
+  "id": "angulo_impacto",
+  "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+  "valor": "perpendicular",
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Nissan X Trail 2004 arena",
+  "V2": "Jeep Liberty 2002 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es el ángulo aproximado entre los vehículos al momento del impacto?\",\n  \"respuesta\": \"El Nissan X Trail y el Jeep Liberty chocaron de manera bastante perpendicular.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"angulo_impacto\",\n      \"valor\": \"perpendicular\",\n      \"evidencia\": \"de manera bastante perpendicular\"\n    }\n  ]\n}"
+}

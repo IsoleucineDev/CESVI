@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'Además, no se observaron evidencias de frenado en la zona del accident'",
+ "principal": {
+  "id": "velocidad_V2_kmh",
+  "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+  "valor": 90,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "GM Chevy 2006 negro",
+  "V2": "Pontiac G5 2008 rojo Victoria"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la velocidad estimada del Pontiac G5 rojo antes del evento?\",\n  \"respuesta\": \"La velocidad estimada del Pontiac G5 rojo antes del evento fue de 90 km/h. Además, no se observaron evidencias de frenado en la zona del accidente.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"La velocidad estimada del Pontiac G5 rojo antes del evento fue de 90 km/h\"\n    }\n  ]\n}"
+}

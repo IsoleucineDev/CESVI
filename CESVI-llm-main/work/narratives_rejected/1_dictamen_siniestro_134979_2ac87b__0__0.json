@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_previa_V2",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "circulación"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos encontrándose en la incorporación al vehículo “B” colisionándose entre si"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura roja en el vértice izquierdo de la defensa del vehículo V1, sin impregnación de pintura roja en el vehículo V2"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Tsuru 2008 blanco y rojo",
+  "V2": "Ford Fiesta 2007 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V2 antes del impacto?\",\n  \"respuesta\": \"pintura roja en el vértice izquierdo de la defensa del vehículo Nissan Tsuru 2008 blanco y rojo, además, el vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos encontrándose en la incorporación al vehículo “B” colisionándose entre si.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"circulación\",\n      \"evidencia\": \"el vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos encontrándose en la incorporación al vehículo “B” colisionándose entre si\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos encontrándose en la incorporación al vehículo “B” colisionándose entre si\",\n      \"evidencia\": \"el vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos encontrándose en la incorporación al vehículo “B” colisionándose entre si\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"pintura roja en el vértice izquierdo de la defensa del vehículo Nissan Tsuru 2008 blanco y rojo\",\n      \"evidencia\": \"pintura roja en el vértice izquierdo de la defensa del vehículo Nissan Tsuru 2008 blanco y rojo\"\n    }\n  ]\n}"
+}

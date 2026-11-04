@@ -1,0 +1,53 @@
+{
+ "id": "5_dictamen_14250989_gnpok_0f4e39",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan Tsuru 2000 rojo",
+  "V2": "Italika motocicleta 2006 negro"
+ },
+ "valores": {
+  "declaracion_V1": "CIRCULANDO SOBRE LA AVENIDA 661 CRUZABA LA 606 Y POR LA HORA ME PASE EL CRUCE NO VI UNA MOTO QUE IBA PASANDO NO VI LA LUZ EN ROJO Y LE DI UN LLEGUE CON EL AUTO FRENE INMEDIATO PERO COMO IBA EN MOTO SE DESCONTROLO Y CAYO",
+  "declaracion_V2": null,
+  "superficie": "asfalto normal y se encuentra en buen estado",
+  "iluminacion": "iluminación aceptable en la madrugada",
+  "sentido_carril_V1": "circulaba sobre la Av. 661 con rumbo al Noroeste",
+  "sentido_carril_V2": "circulaba con rumbo al Noreste",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": "circulaba sobre la calle 606",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "el conductor del vehículo tipo Tsuru circulaba sobre la Av. 661 y cruzaba la calle 606; el conductor de la motocicleta circulaba sobre la calle 606; los vehículos impactaron en un ángulo perpendicular",
+  "punto_impacto_via": null,
+  "angulo_impacto": null,
+  "evidencias_sitio": "huellas por cuerpo duro tipo restregón sobre la carpeta asfáltica y restos plásticos de color rojo al parecer provenientes del conjunto de luces posterior de la unidad tipo motocicleta",
+  "danos_V1": "daños por impacto contra cuerpo ubicados sobre el vértice izquierdo, desprendimiento de pintura color rojo y material plástico, orificio en la fascia",
+  "danos_V2": "rótula del carenado rota, rin delantero deformado con dirección al centro de la circunferencia, depósito de combustible con daños tipo hundimiento, faros traseros rotos, rueda trasera desalineada",
+  "posicion_final_V1": "detenido en el lugar del impacto",
+  "posicion_final_V2": "caída y arrastre sobre el lado izquierdo",
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "huellas_frenado_m": null
+ },
+ "citas": {
+  "declaracion_V1": "CIRCULANDO SOBRE LA AVENIDA 661 CRUZABA LA 606 Y POR LA HORA ME PASE EL CRUCE NO VI UNA MOTO QUE IBA PASANDO NO VI LA LUZ EN ROJO Y LE DI UN LLEGUE CON EL AUTO FRENE INMEDIATO PERO COMO IBA EN MOTO SE DESCONTROLO Y CAYO",
+  "superficie": "La carpeta es de asfalto normal y se encuentra en buen estado",
+  "iluminacion": "La ocurrencia del siniestro se registró aproximadamente a las 04:00 horas, pero el lugar presenta iluminación aceptable en la madrugada",
+  "sentido_carril_V1": "el conductor del vehículo tipo Tsuru circulaba sobre la Av. 661 con rumbo al Noroeste",
+  "sentido_carril_V2": "el conductor de la motocicleta lo hacía con rumbo al Noreste",
+  "maniobra_previa_V2": "el conductor de la motocicleta lo hacía con rumbo al Noreste",
+  "secuencia_eventos": "el conductor del vehículo tipo Tsuru circulaba sobre la Av. 661 con rumbo al Noroeste, mientras que el conductor de la motocicleta lo hacía con rumbo al Noreste",
+  "evidencias_sitio": "se observan algunas huellas por cuerpo duro tipo restregón sobre la carpeta asfáltica así como restos plásticos de color rojo al parecer provenientes del conjunto de luces posterior de la unidad tipo motocicleta",
+  "danos_V1": "existe desprendimiento de pintura color rojo, y desprendimiento de material plástico con el que esta fabricado este elemento y muestra que fue desprendido de adelante hacía atrás, por lo que se genera un orificio",
+  "danos_V2": "el carenado o feiring se encuentra roto de la parte inferior, el rin delantero presenta deformación con dirección al centro de la circunferencia generado por impacto contra cuerpo duro, el depósito de combustible posee daños tipo hundimiento los cuales fueron provocados por impacto contra cuerpo duro con dirección de izquierda a derecha",
+  "posicion_final_V1": "el conductor de la unidad tipo motocicleta pierde el control y la unidad cae sobre el lado izquierdo friccionando contra el piso",
+  "posicion_final_V2": "el conductor de la unidad tipo motocicleta pierde el control y la unidad cae sobre el lado izquierdo friccionando contra el piso"
+ },
+ "descartados": {
+  "maniobra_previa_V1": "cruzaba la calle 606",
+  "senalizacion_preferencia": "semáforos funcionando correctamente",
+  "punto_impacto_via": "en el crucero de la Avenida 661 y la calle 606",
+  "angulo_impacto": "perpendicular"
+ }
+}

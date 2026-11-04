@@ -1,0 +1,129 @@
+{
+ "id": "atos_contra_arbol_6fc764",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Hyundai Atos 2009 rojo"
+ },
+ "form": {
+  "posicion_final_V1": "ubicado en el camellón de la calle de Darwin",
+  "danos_V1": "daños tipo hundimiento generadas por impacto contra cuerpo duro con dirección de adelante hacia atrás dañando la defensa de lado izquierdo encontrados desde una altura máxima de 0.80 metros y el cofre"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "transitando por Darwin del lado derecho se me cierra otro vehículo el cual me hace perder el control del Atos y me subí a un camellón y me estrelle con un árbol"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Este a Oeste"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "cambio de carril"
+  },
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "árbol"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "cambio de carril"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el conductor de un vehículo desconocido le corta la circulación al vehículo tipo Atos y a consecuencia de esa maniobra hace que pierda el control el conductor del vehículo tipo Atos"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "camellón de la calle de Darwin"
+  },
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "no se encontraron indicios de pintura entre el árbol y el vehículo marca Hyundai tipo Atos además de no encontrar indicios de marcas en la guarnición del camellón central"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "start": 1,
+ "turns": [
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación y el carril por el que transitaba el Atos rojo antes del accidente?",
+   "respuesta": "Este a Oeste",
+   "valor": "Este a Oeste"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el Atos rojo antes del impacto?",
+   "respuesta": "cambio de carril",
+   "valor": "cambio de carril"
+  },
+  {
+   "tema": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "pregunta": "¿Qué tipo de objeto impactó el Atos rojo?",
+   "respuesta": "árbol",
+   "valor": "árbol"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál fue la causa de la pérdida de control del Atos rojo?",
+   "respuesta": "cambio de carril",
+   "valor": "cambio de carril"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Qué sucedió primero y qué impactos ocurrieron en secuencia?",
+   "respuesta": "el conductor de un vehículo desconocido le corta la circulación al vehículo tipo Atos y a consecuencia de esa maniobra hace que pierda el control el conductor del vehículo tipo Atos",
+   "valor": "el conductor de un vehículo desconocido le corta la circulación al vehículo tipo Atos y a consecuencia de esa maniobra hace que pierda el control el conductor del vehículo tipo Atos"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde en la calle de Darwin ocurrió el impacto?",
+   "respuesta": "camellón de la calle de Darwin",
+   "valor": "camellón de la calle de Darwin"
+  }
+ ]
+}

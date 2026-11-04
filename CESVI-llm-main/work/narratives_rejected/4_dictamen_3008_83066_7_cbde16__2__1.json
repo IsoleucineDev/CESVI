@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en airbags_V1",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "avenida Aztecas"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto en buenas condiciones"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activada la bolsa de aire frontal del conductor"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chrysler Jeep 1994 negro",
+  "V2": "vehículo desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde en la avenida Aztecas ocurrió el impacto del Chrysler Jeep 1994 negro?\",\n  \"respuesta\": \"El airbag frontal del conductor del Jeep se activó además la superficie era asfalto en buenas condiciones luego el impacto ocurrió en la avenida Aztecas\",\n  \"extracciones\": [\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"activada la bolsa de aire frontal del conductor\",\n      \"evidencia\": \"El airbag frontal del conductor del Jeep se activó\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfalto en buenas condiciones\",\n      \"evidencia\": \"la superficie era asfalto en buenas condiciones\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"avenida Aztecas\",\n      \"evidencia\": \"el impacto ocurrió en la avenida Aztecas\"\n    }\n  ]\n}"
+}

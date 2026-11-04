@@ -1,0 +1,40 @@
+{
+ "id": "6_siniestro_15477698_ec10cd",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Volkswagen Passat 2006 gris"
+ },
+ "valores": {
+  "declaracion_V1": "BAJANDO POR EL CERRILLO ME CERRO UN CAMION Y CHOQUE CON EL CAMELLON ,ARBOL",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "sentido hacia el Norte",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": null,
+  "tipo_objeto": "montículo de grava roja con arbustos",
+  "causa_perdida_control": null,
+  "secuencia_eventos": "El vehículo marca Volkswagen tipo Passat pierde el control y se colisiona contra un cuerpo duro (árbol).",
+  "punto_impacto_via": "camino Presa Mandin, cerca del montículo de grava roja",
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "no se observan huellas de frenado, ni marcas",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "detenido cerca del montículo de grava roja",
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "BAJANDO POR EL CERRILLO ME CERRO UN CAMION Y CHOQUE CON EL CAMELLON ,ARBOL",
+  "sentido_carril_V1": "El Camino Presa Mandin, muestra un sentido con un solo carril para el flujo vehicular con sentido hacia el Norte.",
+  "tipo_objeto": "Se observa al Este, un montículo de grava roja ya compactada con arbustos y sobre el mismo hay un poste de metal cortado",
+  "secuencia_eventos": "Se observa cuando el vehículo Marca Volkswagen Tipo Passat supuestamente pierde el control y se colisiona contra un cuerpo duro (árbol).",
+  "punto_impacto_via": "El supuesto lugar de los hechos se localiza en el Camino Presa Mandin, en la Colonia Calacoaya en el municipio de Atizapan en el Estado de México",
+  "evidencias_sitio": "En el lugar de los hechos no se presentan huellas de frenado, ni marcas y tampoco existe ningún árbol como lo indican en la declaración.",
+  "posicion_final_V1": "En el lugar de los hechos no se observan, huellas de frenado, ni marcas y tampoco existe ningún árbol como lo indican en la declaración."
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día",
+  "maniobra_previa_V1": "desconocida"
+ }
+}

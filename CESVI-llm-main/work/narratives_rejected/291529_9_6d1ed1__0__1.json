@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en secuencia_eventos",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "frenado"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo tipo Platina (a) circula de Poniente a Oriente a “velocidad constante”, sin guardar la distancia de seguimiento. Al momento de frenar su vehículo se desplaza, de tal manera que genera un alcance e impacta en la parte posterior del vehículo tipo Tsuru (b), que se encontraba en la vialidad."
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo tipo Tsuru muestra una impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera. La fascia del vehículo tipo Tsuru muestra ranuras en forma horizontal a lo largo de la misma con un ancho de 3.5 centímetros [...]"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Platina 2004 vino",
+  "V2": "Nissan Tsuru S/D arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Nissan Platina antes del impacto?\",\n  \"respuesta\": \"El Nissan Platina (a) realizó un frenado antes de impactar al Nissan Tsuru (b) que se encontraba adelante.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"frenado\",\n      \"evidencia\": \"El Nissan Platina (a) realizó un frenado antes de impactar al Nissan Tsuru (b)\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"alcance\",\n      \"evidencia\": \"El Nissan Platina (a) circula de Poniente a Oriente a velocidad constante, sin guardar la distancia de seguimiento. Al momento de frenar su vehículo se desplaza, de tal manera que genera un alcance e impacta en la parte posterior del vehículo tipo Tsuru (b)\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"impregnacion_pintura\",\n      \"evidencia\": \"El vehículo tipo Tsuru muestra una impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera\"\n    }\n  ]\n}"
+}

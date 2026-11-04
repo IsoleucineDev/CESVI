@@ -1,0 +1,16 @@
+{
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Freightliner, tipo tractocamión quinta rueda, color blanco, modelo 2001, con placas de circulación 930 CV2",
+  "V2": "Chevrolet, tipo Optra LS, color rojo, modelo 2007 y placas de circulación PGY-4349"
+ },
+ "valores": {
+  "maniobra_reversa": "Conducía el Freightliner en reversa",
+  "declaracion_V1": "Llegue temprano para encerrar mi camión pero por andar a las carreras y porque tenia que lavarlo rápido no me fije que estaba el carro atrás de mi camión y le pegue en la parte trasera del coche y le pegue con el eje trasero del lado derecho",
+  "danos_V2": "Daño tipo tallón en el vértice delantero izquierdo de la fascia con desprendimiento de pintura generado de derecha a izquierda. Tapas cajuela con daños tipo hundimiento en el lado derecho e izquierdo con desprendimiento de pintura. Fascia con daño tipo hundimiento generado de atrás hacia delante",
+  "posicion_final_V1": "Encerrado",
+  "posicion_final_V2": "Detenido atrás del Freightliner"
+ },
+ "id": "2_dictamen_20872500_4a1b98",
+ "split": "train"
+}

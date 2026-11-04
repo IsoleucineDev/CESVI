@@ -1,0 +1,44 @@
+{
+ "id": "4_dictamen_3008_83066_7_cbde16",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chrysler Jeep 1994 negro",
+  "V2": "vehículo desconocido"
+ },
+ "valores": {
+  "declaracion_V1": "venia circulando sobre la avenida aztecas aproximadamente como a las 23:30 hrs. del día viernes 7 de noviembre del presente año cuando impacte un vehículo en la parte posterior por lo que me di a la fuga ya que tenia aliento alcohólico y pensando que no procedía el siniestro por eso me día a la fuga. Desconozco datos y estado del vehículo que impacte",
+  "superficie": "asfalto en buenas condiciones",
+  "iluminacion": null,
+  "sentido_carril_V1": "circulación de Nor-Este hacia Sur-Oeste",
+  "velocidad_V1_kmh": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo V1 impacta con su parte frontal izquierda en la parte posterior del vehículo V2",
+  "punto_impacto_via": "avenida Aztecas",
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": "activada la bolsa de aire frontal del conductor",
+  "posicion_final_V1": null,
+  "declaracion_V2": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V2": null,
+  "posicion_final_V2": null,
+  "sentido_carril_V2": null,
+  "maniobra_previa_V1": null,
+  "airbags_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "venia circulando sobre la avenida aztecas aproximadamente como a las 23:30 hrs. del día viernes 7 de noviembre del presente año cuando impacte un vehículo en la parte posterior por lo que me di a la fuga ya que tenia aliento alcohólico y pensando que no procedía el siniestro por eso me día a la fuga. Desconozco datos y estado del vehículo que impacte",
+  "superficie": "La avenida Aztecas tiene dos arroyos vehiculares, con una carpeta asfáltica en buenas condiciones",
+  "sentido_carril_V1": "cinco carriles están confinados para la circulación de Nor-Este hacia Sur-Oeste",
+  "secuencia_eventos": "El vehículo Jeep impacta con su parte frontal izquierda en la parte posterior del vehículo al cual se desconocen sus características",
+  "punto_impacto_via": "El lugar de hechos de tránsito se localiza en la avenida de Aztecas en la colonia Ajusco delegación Coyoacán",
+  "airbags_V1": "Se observan activada la bolsa de aire frontal del conductor"
+ },
+ "descartados": {
+  "evidencias_sitio": "huellas de pintura azul en el parachoques izquierdo y rojo en el costado derecho",
+  "posicion_final_V1": "desconocida"
+ }
+}

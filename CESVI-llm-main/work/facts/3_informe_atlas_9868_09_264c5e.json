@@ -1,0 +1,42 @@
+{
+ "id": "3_informe_atlas_9868_09_264c5e",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Renault Clío 2006 gris",
+  "V2": "Ford Ikon 2005 rojo"
+ },
+ "valores": {
+  "declaracion_V1": "Al señor se le alcanza y golpea por detrás y se golpea a su cajuela e manera que queda afectado su vehículo y el cofre mío, esto fue a una velocidad mia de 60 km/hr cuando el señor transitaba a 20 km/hr.",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": 60,
+  "velocidad_V2_kmh": 20,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo V2 golpea a la parte trasera del vehículo V1.",
+  "punto_impacto_via": null,
+  "evidencias_sitio": "El vehículo V1 presenta pintura roja en la parte delantera del cofre, mientras que el vehículo V2 no presenta pintura gris en la parte trasera.",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "El vehículo V1 quedó detenido en su posición inicial.",
+  "posicion_final_V2": "El vehículo V2 quedó detenido en su posición inicial.",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Al señor se le alcanza y golpea por detrás y se golpea a su cajuela e manera que queda afectado su vehículo y el cofre mío, esto fue a una velocidad mia de 60 km/hr cuando el señor transitaba a 20 km/hr.",
+  "velocidad_V1_kmh": "esto fue a una velocidad mia de 60 km/hr cuando el señor transitaba a 20 km/hr.",
+  "velocidad_V2_kmh": "esto fue a una velocidad mia de 60 km/hr cuando el señor transitaba a 20 km/hr.",
+  "secuencia_eventos": "Al señor se le alcanza y golpea por detrás y se golpea a su cajuela e manera que queda afectado su vehículo y el cofre mío",
+  "evidencias_sitio": "El vehiculo debió de haber descendido 25 cms.",
+  "posicion_final_V1": "El vehiculo debió de haber descendido 25 cms.",
+  "posicion_final_V2": "El vehiculo debió de haber descendido 25 cms."
+ },
+ "descartados": {}
+}

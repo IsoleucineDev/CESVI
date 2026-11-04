@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en sentido_carril_V2",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Suroeste a Noreste"
+ },
+ "otros": [
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "carril central con sentido de circulación Suroeste a Noreste"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volkswagen Beetle 2005 gris",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Volkswagen Beetle 2005 gris?\",\n  \"respuesta\": \"El vehículo Volkswagen Beetle 2005 gris circulaba en el carril con sentido de circulación de Suroeste a Noreste. Además, el vehículo desconocido circulaba en el carril central con el mismo sentido de circulación.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"carril central con sentido de circulación Suroeste a Noreste\",\n      \"evidencia\": \"el vehículo desconocido circulaba en el carril central con el mismo sentido de circulación\"\n    },\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"Suroeste a Noreste\",\n      \"evidencia\": \"circulaba en el carril con sentido de circulación de Suroeste a Noreste\"\n    }\n  ]\n}"
+}

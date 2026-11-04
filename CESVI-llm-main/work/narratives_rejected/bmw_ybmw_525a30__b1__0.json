@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El BMW 325IA 2008 blanco dejó una huella de frenado de 8 metros, lo qu'",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 8,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "BMW 325IA 2008 blanco",
+  "V2": "BMW 550I 2004 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado dejadas por el BMW 325IA 2008 blanco?\",\n  \"respuesta\": \"El BMW 325IA 2008 blanco dejó una huella de frenado de 8 metros, lo que indica una aplicación significativa de los frenos antes del impacto.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"8\",\n      \"evidencia\": \"una huella de frenado de 8 metros\"\n    }\n  ]\n}"
+}

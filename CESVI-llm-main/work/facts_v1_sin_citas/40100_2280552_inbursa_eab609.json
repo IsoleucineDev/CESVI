@@ -1,0 +1,17 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "DODGE ATTITUDE 2006 AZUL PLACAS 510-UAJ"
+ },
+ "valores": {
+  "senalizacion_preferencia": "No especificado en el informe",
+  "angulo_impacto": "No especificado en el informe",
+  "punto_impacto_via": "Lateral izquierdo del vehículo V1",
+  "evidencias_sitio": "Daños tipo rayón en dirección de adelante hacia atrás en las puertas del lado izquierdo",
+  "danos_V1": "Daños tipo rayón en dirección de adelante hacia atrás en las puertas del lado izquierdo",
+  "posicion_final_V1": "No especificado en el informe",
+  "airbags_V1": "No especificado en el informe"
+ },
+ "id": "40100_2280552_inbursa_eab609",
+ "split": "train"
+}

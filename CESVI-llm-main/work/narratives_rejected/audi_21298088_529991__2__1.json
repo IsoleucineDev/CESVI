@@ -1,0 +1,29 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "el vehículo “A” cambia su trayectoria y se proyecta contra un árbol"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Km. 35+000 de la carretera libre Cuernavaca-Cuautla"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "desprendimiento de corteza en el árbol y pequeñas esquirlas de pintura color negro incrustadas en la corteza del árbol"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfáltico en buenas condiciones"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Audi A-4 2001 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que llevó a que el Audi A-4 negro impactara contra el árbol?\",\n  \"respuesta\": \"el Audi A-4 negro cambia su trayectoria y se proyecta contra un árbol, además, el impacto ocurrió en el Km. 35+000 de la carretera libre Cuernavaca-Cuautla, y además, se encontraron desprendimientos de corteza en el árbol y pequeñas esquirlas de pintura color negro incrustadas en la corteza del árbol, además, la superficie de rodamiento era asfáltico en buenas condiciones\",\n  \"extracciones\": [\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"el Audi A-4 negro cambia su trayectoria y se proyecta contra un árbol\", \"evidencia\": \"el Audi A-4 negro cambia su trayectoria y se proyecta contra un árbol\"},\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"Km. 35+000\", \"evidencia\": \"el impacto ocurrió en el Km. 35+000 de la carretera libre Cuernavaca-Cuautla\"},\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"desprendimientos de corteza y esquirlas de pintura color negro incrustadas en la corteza del árbol\", \"evidencia\": \"se encontraron desprendimientos de corteza en el árbol y pequeñas esquirlas de pintura color negro incrustadas en la corteza del árbol\"},\n    {\"tema\": \"superficie\", \"valor\": \"asfáltico en buenas condiciones\", \"evidencia\": \"la superficie de rodamiento era asfáltico en buenas condiciones\"}\n  ]\n}"
+}

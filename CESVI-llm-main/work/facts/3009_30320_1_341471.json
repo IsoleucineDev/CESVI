@@ -1,0 +1,48 @@
+{
+ "id": "3009_30320_1_341471",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volkswagen Beetle 2005 gris",
+  "V2": "Desconocido"
+ },
+ "valores": {
+  "declaracion_V1": "El conductor del vehículo Beetle viene circulando por el carril central de la Avenida Oceanía con sentido de circulación Suroeste a Noreste, aproximadamente a las 03:00 de la mañana, cuando un vehículo desconocido, lo impacta en el vértice trasero derecho y supuestamente provoca los daños que presenta en la salpicadera trasera derecha y facia trasera, por cual se cambia al carril izquierdo sin percatarse que por este carril venia circulando un camión tipo Torton, provocando supuestamente que se impacte en la parte posterior del camión. El vehículo desconocido y el Torton se retiran del lugar, conductor del vehículo Beetle se retira a su casa.",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Suroeste a Noreste",
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo desconocido impacta en el vértice trasero derecho del Volkswagen Beetle, provocando que se cambie al carril izquierdo. Luego, el Volkswagen Beetle impacta en la parte posterior del camión tipo Torton.",
+  "punto_impacto_via": "carril central de la Avenida Oceanía",
+  "evidencias_sitio": "No se observa evidencia de intercambio de materiales debido al impacto.",
+  "danos_V1": "Parte frontal: parrilla de la facia delantera desprendida del lado izquierdo, faro de niebla roto y fuera de lugar, cuarto delantero del lado izquierdo roto, cofre con daños tipo hundimiento de adelante hacia atrás en el lado derecho. Costado derecho: daños tipo hundimiento en la esquina posterior derecha del cofre y en la parte central del montante de toldo. Costado izquierdo: rueda delantera izquierda con corrimiento de adelante hacia atrás.",
+  "posicion_final_V1": "El vehículo queda aprisionado entre el poste de señalamiento y el camión tipo Torton.",
+  "declaracion_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "circulando",
+  "maniobra_previa_V2": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "sentido_carril_V2": "carril central con sentido de circulación Suroeste a Noreste",
+  "posicion_final_V2": "carril izquierdo, sin especificar orientación o barrido",
+  "huellas_frenado_m": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "El conductor del vehículo Beetle viene circulando por el carril central de la Avenida Oceanía con sentido de circulación Suroeste a Noreste, aproximadamente a las 03:00 de la mañana, cuando un vehículo desconocido, lo impacta en el vértice trasero derecho y supuestamente provoca los daños que presenta en la salpicadera trasera derecha y facia trasera, por cual se cambia al carril izquierdo sin percatarse que por este carril venia circulando un camión tipo Torton, provocando supuestamente que se impacte en la parte posterior del camión. El vehículo desconocido y el Torton se retiran del lugar, conductor del vehículo Beetle se retira a su casa.",
+  "sentido_carril_V1": "El conductor del vehículo Beetle viene circulando por el carril central de la Avenida Oceanía con sentido de circulación Suroeste a Noreste",
+  "secuencia_eventos": "El conductor del vehículo Beetle viene circulando por el carril central de la Avenida Oceanía con sentido de circulación Suroeste a Noreste, aproximadamente a las 03:00 de la mañana, cuando un vehículo desconocido, lo impacta en el vértice trasero derecho y supuestamente provoca los daños que presenta en la salpicadera trasera derecha y facia trasera, por cual se cambia al carril izquierdo sin percatarse que por este carril venia circulando un camión tipo Torton, provocando supuestamente que se impacte en la parte posterior del camión. El vehículo desconocido y el Torton se retiran del lugar, conductor del vehículo Beetle se retira a su casa.",
+  "punto_impacto_via": "El conductor del vehículo Beetle viene circulando por el carril central de la Avenida Oceanía con sentido de circulación Suroeste a Noreste",
+  "evidencias_sitio": "No se observa evidencia de intercambio de materiales debido al impacto.",
+  "danos_V1": "El vehículo en cuestión presenta la parrilla de la facia delantera desprendida del lado izquierdo; la facia esta rota de su parte inferior del lado izquierdo, también se presentan daños tipo hundimiento de adelante hacia atrás con pérdida de pintura en la facia delantera del lado izquierdo; el faro de niebla esta roto y fuera de su lugar; el cuarto delantero del lado izquierdo esta roto; el cofre presenta en el lado izquierdo daños tipo hundimiento de arriba hacia abajo en forma angular de gran magnitud en todo lo largo del mismo, también se encuentra descuadrado en el lado derecho como consecuencia del daño tipo hundimiento descrito con anterioridad; el parabrisas presenta dos impactos fuertes como con secuencia de un golpe contra un cuerpo duro, uno en la parte superior izquierda y otro en la parte inferior derecha lo que ocasiona una resquebrajadura en la totalidad del parabrisas; se presenta un daño tipo hundimiento de arriba hacia debajo de magnitud fuerte en el todo, entre el quemacocos y el parabrisas; se presentan daños tipo tallón en partes bajas como consecuencia de un impacto contra cuerpo duro.",
+  "posicion_final_V1": "Como consecuencia del dobles que sufre el poste generado por el impacto, el vehículo marca Volkswagen, tipo Beetle queda aprisionado con este y al retirar el vehículo del lugar, el poste golpea y talla el poste delantero del vehículo, desprendiendo pintura, golpea la parte baja del parabrisas provocando una resquebrajadura en la parte baja de su lado derecho y provoca un daño tipo hundimiento en la esquina posterior derecha del cofre.",
+  "maniobra_previa_V1": "El conductor del vehículo Beetle viene circulando por el carril central de la Avenida Oceanía con sentido de circulación Suroeste a Noreste",
+  "sentido_carril_V2": "El conductor del vehículo desconocido impacta en la parte posterior al vehículo Volkswagen Beetle, provocando que se cambie al carril de la izquierda.",
+  "posicion_final_V2": "El conductor del vehículo desconocido impacta en la parte posterior al vehículo Volkswagen Beetle, provocando que se cambie al carril de la izquierda."
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "noche"
+ }
+}

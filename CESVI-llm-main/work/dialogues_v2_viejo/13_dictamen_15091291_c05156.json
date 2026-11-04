@@ -1,0 +1,134 @@
+{
+ "id": "13_dictamen_15091291_c05156",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Ford Edge 2009 gris",
+  "V2": "Ford F-350 desconocido desconocido"
+ },
+ "form": {
+  "danos_V1": "daños tipo tallón con dirección de adelante hacia atrás en la fascia y salpicadera derecha a alturas de 87cm y 82cm con residuos de pintura blanca",
+  "posicion_final_V1": "parado con dirección de adelante hacia atrás"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué mencionó el conductor del Ford Edge al describir cómo ocurrió el accidente?",
+   "respuesta": "Al ir circulando sobre primavera al dar vuelta a la derecha un camión se estaba echando de reversa me golpeo y al sentir el golpe se fue y no lo pude alcanzar porque me reventó la llanta y rin con el golpe",
+   "valor": "al ir circulando sobre primavera al dar vuelta a la derecha un camión se estaba echando de reversa me golpeo y al sentir el golpe se fue y no lo pude alcanzar porque me reventó la llanta y rin con el golpe"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y qué dijo el conductor del camión acerca de lo que ocurrió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Cuál es la condición de la superficie de rodamiento?",
+   "respuesta": "asfaltado",
+   "valor": "asfaltado"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cuáles fueron las condiciones de iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿En qué dirección y carril circulaba el Ford Edge?",
+   "respuesta": "circulación normal",
+   "valor": "circulación normal"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y el camión, en qué dirección y carril circulaba?",
+   "respuesta": "reversa",
+   "valor": "reversa"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál es la velocidad estimada del Ford Edge antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué velocidad estimas que tenía el camión antes del impacto?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Ford Edge antes del impacto?",
+   "respuesta": "giro",
+   "valor": "giro"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobra realizaba el camión antes del impacto?",
+   "respuesta": "reversa",
+   "valor": "reversa"
+  },
+  {
+   "tema": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "pregunta": "¿Podrías describir la dirección y tramo recorrido en reversa por el camión y la visibilidad del conductor?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías detallar la secuencia de los eventos que ocurrieron?",
+   "respuesta": "vehículo V1 girando a la derecha es impactado por vehículo V2 que realiza maniobra en reversa",
+   "valor": "vehículo V1 girando a la derecha es impactado por vehículo V2 que realiza maniobra en reversa"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "El impacto ocurrió en el carril derecho de la calle Primavera",
+   "valor": "carril derecho"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "pintura blanca en el faro derecho a una altura de 85cm, pintura roja en la fascia con dirección de adelante hacia atrás",
+   "valor": "pintura blanca en el faro derecho a una altura de 85cm, pintura roja en la fascia con dirección de adelante hacia atrás"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado, si las hay?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Ford Edge?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en el camión, cuáles bolsas de aire se activaron?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  }
+ ]
+}

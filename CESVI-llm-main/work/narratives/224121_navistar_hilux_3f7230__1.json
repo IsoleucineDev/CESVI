@@ -1,0 +1,115 @@
+{
+ "id": "224121_navistar_hilux_3f7230",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Navistar Autobús 2009 amarillo",
+  "V2": "Toyota Hilux 2009 gris plata"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "El conductor del vehículo marca Navistar, tipo Autobús, modelo 2009, color amarillo, placas de circulación 200347-B, viene circulando en sentido N a S en el carril del extremo derecho de la Avenida Maestros Campechanos, justo al cruce con la calle Servidor Agrario, da vuelta a la izquierda en el retorno, momentos antes el conductor del vehículo marca Toyota, tipo Hilux, modelo 2009, color gris plata, con placas de circulación CN-41970, viene circulando por la misma avenida pero en el carril del extremo izquierdo, el cual se impacta contra la parte posterior del faldón izquierdo del vehículo tipo autobús."
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Norte a Sur en el carril del extremo derecho"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "Norte a Sur en el carril del extremo izquierdo"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "da vuelta a la izquierda en el retorno"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "circulando"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo V2 impacta contra la parte posterior del faldón izquierdo del vehículo V1"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "intercambio de pintura color gris y desprendimientos de pintura color amarillo"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "pavimento es estado aceptable para la circulación"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 5,
+ "asked": "maniobra_previa_V2",
+ "pregunta": "¿Cuál fue la maniobra previa de la Hilux antes del impacto?",
+ "respuesta": "En el sitio se observó un intercambio de pintura color gris y desprendimientos de pintura color amarillo, además la Hilux estaba circulando.",
+ "gold": {
+  "evidencias_sitio": {
+   "valor": "intercambio de pintura color gris y desprendimientos de pintura color amarillo",
+   "evidencia": "En el sitio se observó un intercambio de pintura color gris y desprendimientos de pintura color amarillo"
+  },
+  "maniobra_previa_V2": {
+   "valor": "circulando",
+   "evidencia": "la Hilux estaba circulando"
+  }
+ }
+}

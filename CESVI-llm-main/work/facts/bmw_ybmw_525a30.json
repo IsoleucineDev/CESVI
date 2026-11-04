@@ -1,0 +1,50 @@
+{
+ "id": "bmw_ybmw_525a30",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "BMW 325IA 2008 blanco",
+  "V2": "BMW 550I 2004 azul"
+ },
+ "valores": {
+  "declaracion_V1": "circulaba por pino Suárez rumbo a las torres iba algo distraído perdí el control del coche y choque se paso el verde por no pegarle a un taxi me impacté con el coche dañado en el crucero le pegue",
+  "declaracion_V2": null,
+  "superficie": "asfalto en buenas condiciones",
+  "iluminacion": null,
+  "sentido_carril_V1": "circulaba en sentido Nor-Oeste",
+  "sentido_carril_V2": "detenido en la misma avenida",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "circulaba",
+  "maniobra_previa_V2": "detenido",
+  "senalizacion_preferencia": "semáforo",
+  "secuencia_eventos": "V1 impacta a V2 con su lado derecho al costado izquierdo de V2",
+  "punto_impacto_via": "avenida José Maria Pino Suárez",
+  "angulo_impacto": null,
+  "evidencias_sitio": "restos de caucho negro en V1 y restos de pintura negra en V2",
+  "airbags_V1": "bolsa de aire del conductor activada",
+  "airbags_V2": "bolsas de aire laterales de lado izquierdo activadas",
+  "posicion_final_V1": "después de impactar con V2, gira hacia su derecha e impacta con el vehículo C",
+  "posicion_final_V2": "detenido en su posición inicial",
+  "huellas_frenado_m": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "circulaba por pino Suárez rumbo a las torres iba algo distraído perdí el control del coche y choque se paso el verde por no pegarle a un taxi me impacté con el coche dañado en el crucero le pegue",
+  "superficie": "el asfalto se encuentra en buenas condiciones y sin restregones sobre su superficie",
+  "sentido_carril_V1": "El vehículo A circula sobre la avenida José Maria Pino Suárez en sentido Nor-Oeste",
+  "sentido_carril_V2": "el vehículo B permanecía detenido en la misma avenida supuestamente esperando la luz verde para poder avanzar",
+  "maniobra_previa_V1": "El vehículo A circula sobre la avenida José Maria Pino Suárez en sentido Nor-Oeste",
+  "maniobra_previa_V2": "el vehículo B permanecía detenido en la misma avenida supuestamente esperando la luz verde para poder avanzar",
+  "senalizacion_preferencia": "en el cruce con el Plan de Apatzingan se encuentra semáforos ubicados en el camellón central",
+  "secuencia_eventos": "el vehículo A colisiona su lado derecho al vehículo B en el costado izquierdo",
+  "punto_impacto_via": "El lugar de los hechos se localiza en la avenida de José Maria Pino Suárez en la colonia Magdalena en el municipio de Toluca Estado de Mexico",
+  "evidencias_sitio": "en el vehículo marca BMW de color blanco en sus laterales, se presentan restos de caucho de color negro, mientras que en el vehículo BMW de color azul presenta restos de pintura color negro",
+  "airbags_V1": "En el habitáculo del vehículo tipo 325IA se observa que la bolsa de aire del conductor se encuentra activada",
+  "airbags_V2": "En el habitáculo del vehículo tipo 550I se observa que las bolsas de aire laterales de lado izquierdo se encuentran activadas",
+  "posicion_final_V1": "el vehículo A colisiona su lado derecho al vehículo B en el costado izquierdo, para posteriormente dirigirse hacia el lado izquierdo supuestamente colisionando con el vehículo C",
+  "posicion_final_V2": "el vehículo B permanecía detenido en la misma avenida supuestamente esperando la luz verde para poder avanzar"
+ },
+ "descartados": {}
+}

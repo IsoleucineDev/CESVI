@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en punto_impacto_via",
+ "principal": {
+  "id": "causa_perdida_control",
+  "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+  "valor": "exceso de velocidad"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "al salir de la curva"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner FLD 120 2002 blanco",
+  "V2": "Watson & Chalin Tanque 2002 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la causa de la pérdida de control que llevó a la volcadura?\",\n  \"respuesta\": \"El conductor de la Freightliner FLD 120 2002 blanco perdió el control debido a un exceso de velocidad al salir de una curva. Además, esto ocurrió en el punto donde la carretera se estrechaba, lo que contribuyó a la pérdida de control del vehículo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"exceso de velocidad\",\n      \"evidencia\": \"perdió el control debido a un exceso de velocidad al salir de una curva\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"al salir de la curva\",\n      \"evidencia\": \"esto ocurrió en el punto donde la carretera se estrechaba, lo que contribuyó a la pérdida de control del vehículo\"\n    }\n  ]\n}"
+}

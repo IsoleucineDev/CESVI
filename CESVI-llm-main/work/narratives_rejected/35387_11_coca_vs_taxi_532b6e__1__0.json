@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_previa_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "Circulava por la avenida tome el carril de desaceleracion al dar vuelta en U me percate por la ventanilla que venia dos taxis a exeso de velocidad atrás; uno de ello alcanso apasar y el otro se impacto con la parte tracera del camion"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "giro"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "detenido en el carril de desaceleración"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner Palett 2009 rojo",
+  "V2": "Nissan Tsuru 2010 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor de Freightliner sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor de Freightliner declaró que circulaba por la avenida y tomó el carril de desaceleración al dar vuelta en U. Además, mencionó que al dar vuelta, notó que venía un taxi a exceso de velocidad por detrás, que alcanzó a pasar y otro taxi que impactó con la parte trasera del camión. Luego, el camión quedó detenido en el carril de desaceleración.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"giro\",\n      \"evidencia\": \"tomó el carril de desaceleración al dar vuelta en U\"\n    },\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"carril de desaceleración\",\n      \"evidencia\": \"el camión quedó detenido en el carril de desaceleración\"\n    },\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"circulaba por la avenida tome el carril de desaceleracion al dar vuelta en U me percate por la ventanilla que venia dos taxis a exeso de velocidad atrás; uno de ello alcanso apasar y el otro se impacto con la parte tracera del camion\",\n      \"evidencia\": \"El conductor de Freightliner declaró que circulaba por la avenida y tomó el carril de desaceleración al dar vuelta en U. Además, mencionó que al dar vuelta, notó que venía un taxi a exceso de velocidad por detrás, que alcanzó a pasar y otro taxi que impactó con la parte trasera del camión.\"\n    }\n  ]\n}"
+}

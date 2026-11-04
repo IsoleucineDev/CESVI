@@ -1,0 +1,24 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Nissan Micra 2005 Blanco 248-VCM"
+ },
+ "valores": {
+  "tipo_objeto": "camellón y muro de contención de concreto con barras metálicas amarillas",
+  "superficie": "asfalto seco",
+  "iluminacion": "no especificado",
+  "senalizacion_preferencia": null,
+  "distancia_previa": null,
+  "velocidad_V1_kmh": null,
+  "altura_marca_objeto_cm": "0.30",
+  "causa_perdida_control": "evasiva",
+  "secuencia_eventos": "vehículo A impacta contra el muro de contención luego de una evasiva",
+  "punto_impacto_via": "muro de contención en el lado derecho de la vía",
+  "evidencias_sitio": "huellas de pintura amarilla en el vehículo",
+  "declaracion_V1": "un coche me envistió, forzándome a dar un volantazo pegando con el muro de contención",
+  "airbags_V1": null,
+  "posicion_final_V1": "impactado contra el muro de contención con el vehículo en un ángulo de aproximadamente 90 grados"
+ },
+ "id": "11991817_364c47",
+ "split": "train"
+}

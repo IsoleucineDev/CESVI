@@ -1,0 +1,24 @@
+{
+ "motivo": "valor no concuerda con su evidencia en punto_impacto_via",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "sentido hacia el Norte"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "camino Presa Mandin, cerca del montículo de grava roja"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "detenido cerca del montículo de grava roja"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volkswagen Passat 2006 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Passat gris?\",\n  \"respuesta\": \"El Passat gris impactó cerca del montículo de grava roja, circulaba hacia el Norte y luego quedó detenido cerca del mismo montículo.\",\n  \"extracciones\": [\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"camino Presa Mandin, cerca del montículo de grava roja\", \"evidencia\": \"El Passat gris impactó cerca del montículo de grava roja\"},\n    {\"tema\": \"sentido_carril_V1\", \"valor\": \"sentido hacia el Norte\", \"evidencia\": \"circulaba hacia el Norte\"},\n    {\"tema\": \"posicion_final_V1\", \"valor\": \"cerca del montículo de grava roja\", \"evidencia\": \"quedó detenido cerca del mismo montículo\"}\n  ]\n}"
+}

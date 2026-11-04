@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'El impacto ocurrió en la avenida José Maria Pino Suárez, específicamen'",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "avenida José Maria Pino Suárez"
+ },
+ "otros": [
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa de aire del conductor activada"
+  }
+ ],
+ "vehiculos": {
+  "V1": "BMW 325IA 2008 blanco",
+  "V2": "BMW 550I 2004 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde en la avenida José Maria Pino Suárez ocurrió el impacto entre el BMW 325IA 2008 blanco y el BMW 550I 2004 azul?\",\n  \"respuesta\": \"El impacto ocurrió en la avenida José Maria Pino Suárez, específicamente en el carril derecho de dicha avenida. Además, la bolsa de aire del conductor del BMW 325IA 2008 blanco se activó durante el incidente.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"avenida José Maria Pino Suárez\",\n      \"evidencia\": \"El impacto ocurrió en la avenida José Maria Pino Suárez\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"bolsa de aire del conductor\",\n      \"evidencia\": \"la bolsa de aire del conductor del BMW 325IA 2008 blanco se activó durante el incidente\"\n    }\n  ]\n}"
+}

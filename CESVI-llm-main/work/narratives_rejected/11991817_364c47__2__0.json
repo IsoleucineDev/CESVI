@@ -1,0 +1,24 @@
+{
+ "motivo": "valor no concuerda con su evidencia en causa_perdida_control",
+ "principal": {
+  "id": "causa_perdida_control",
+  "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+  "valor": "corte de circulación"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo “A” choque contra el muro de contención lateral derecho"
+  },
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": 30
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Micra 2005 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la causa de la pérdida de control del Nissan Micra 2005 blanco?\",\n  \"respuesta\": \"EL CONDUCTOR PERDIÓ EL CONTROL DEL VEHÍCULO AL EFECTUAR UN CORTO DE CIRCULACIÓN. ADÉMÁS, EL VEHÍCULO CHOCÓ CONTRA EL MURALLA DE CONTENCIÓN LATERAL DERECHO. LUEGO, LA MARCA DEL IMPACTO EN EL OBJETO FIJO TENÍA UNA ALTURA DE 30 CM.\",\n  \"extracciones\": [\n    {\"tema\": \"causa_perdida_control\", \"valor\": \"corte de circulación\", \"evidencia\": \"EL CONDUCTOR PERDIÓ EL CONTROL DEL VEHÍCULO AL EFECTUAR UN CORTO DE CIRCULACIÓN\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"el vehículo “A” choque contra el muro de contención lateral derecho\", \"evidencia\": \"EL VEHÍCULO CHOCÓ CONTRA EL MURALLA DE CONTENCIÓN LATERAL DERECHO\"},\n    {\"tema\": \"altura_marca_objeto_cm\", \"valor\": 30, \"evidencia\": \"LA MARCA DEL IMPACTO EN EL OBJETO FIJO TENÍA UNA ALTURA DE 30 CM\"}\n  ]\n}"
+}

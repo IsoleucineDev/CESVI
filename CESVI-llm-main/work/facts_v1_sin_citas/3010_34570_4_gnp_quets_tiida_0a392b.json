@@ -1,0 +1,18 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan Quest 2007 gris plata",
+  "V2": "Nissan Tiida 2007 rojo"
+ },
+ "valores": {
+  "sentido_carril_V1": "Sureste a Noroeste",
+  "sentido_carril_V2": "Noroeste a Sureste",
+  "senalizacion_preferencia": "Ninguno",
+  "secuencia_eventos": "Vehículo V1 impacta contra el vehículo V2",
+  "punto_impacto_via": "Carril derecho de la Avenida Lindavista",
+  "angulo_impacto": "Oblicuo",
+  "evidencias_sitio": "Intercambio de pintura y hule en las ruedas"
+ },
+ "id": "3010_34570_4_gnp_quets_tiida_0a392b",
+ "split": "train"
+}

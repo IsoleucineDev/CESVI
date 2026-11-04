@@ -1,0 +1,51 @@
+{
+ "id": "betlle_altima_be19b9",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "VW Beetle 2002 gris",
+  "V2": "Nissan Altima 2006 negro"
+ },
+ "valores": {
+  "declaracion_V1": "Circulaba sobre la calle Tokio y me distraje u al llegar a Municipio Libre no pe pude detener e impacte a un coche negro Nissan",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Norte a Sur",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "el vehículo V1 impacta al vehículo V2 sobre su costado trasero izquierdo",
+  "punto_impacto_via": "calle Tokio y Municipio Libre",
+  "angulo_impacto": "oblicuo",
+  "evidencias_sitio": "restos de pintura color blanco sobre la salpicadera delantera izquierda del vehículo V1 y sobre la puerta trasera izquierda del vehículo V2",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": "bolsas de suplementarias delantera y bolsas de aire de cortina montadas en el techo",
+  "posicion_final_V1": "detenido en el lugar del impacto",
+  "posicion_final_V2": "detenido en el lugar del impacto",
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Circulaba sobre la calle Tokio y me distraje u al llegar a Municipio Libre no pe pude detener e impacte a un coche negro Nissan",
+  "sentido_carril_V1": "El vehículo “A” circula sobre la calle Tokio en dirección Norte a Sur",
+  "secuencia_eventos": "al llegar al cruce con Municipio Libre golpea al vehículo “B” sobre su costado trasero izquierdo",
+  "punto_impacto_via": "En lugar de los hechos se localiza en el crucero que hace la calle de Tokio y Municipio Libre en la colina Portales en la delegación Benito Juárez.",
+  "angulo_impacto": "el vehículo tipo Beetle tubo que haber pegado en forma oblicua para generar la forma de ese daño",
+  "evidencias_sitio": "Los daños tipo tallón con restos de pintura color blanco observados en la fascia delantera izquierda del vehículo tipo Beetle se encuentra a una altura de 0.77 metros y los daños tallón observados en la puerta trasera izquierda del vehículo tipo Altima se encuentra a una altura de 0.62 metros",
+  "airbags_V2": "En el habitáculo del vehículo tipo Altima se muestran activadas la bolsa de suplementarias delantera que se encuentra en el asiento, así como la bolsas de aire de cortina montadas en el techo para la protección de la cabeza de los ocupantes",
+  "posicion_final_V1": "el vehículo “A” impacta con la parte frontal al vehículo B sobre costado medio y trasero derecho",
+  "posicion_final_V2": "el vehículo “A” impacta con la parte frontal al vehículo B sobre costado medio y trasero derecho"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "noche",
+  "sentido_carril_V2": "no especificado",
+  "senalizacion_preferencia": "Ninguno",
+  "airbags_V1": "ninguno"
+ }
+}

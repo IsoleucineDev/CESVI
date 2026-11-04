@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'En el sitio del accidente, se encontró un intercambio de material tipo'",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "intercambio de material tipo masilla de resane impregnada en la fascia"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "concreto"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford F-350 1986 naranja/blanco",
+  "V2": "Mazda CX7 2008 vino"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles fueron las evidencias en el sitio del accidente?\",\n  \"respuesta\": \"En el sitio del accidente, se encontró un intercambio de material tipo masilla de resane impregnada en la fascia, además, la superficie de rodamiento era de concreto.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"intercambio de material tipo masilla de resane impregnada en la fascia\",\n      \"evidencia\": \"un intercambio de material tipo masilla de resane impregnada en la fascia\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"concreto\",\n      \"evidencia\": \"la superficie de rodamiento era de concreto\"\n    }\n  ]\n}"
+}

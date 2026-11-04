@@ -1,0 +1,24 @@
+{
+ "motivo": "valor no concuerda con su evidencia en secuencia_eventos",
+ "principal": {
+  "id": "causa_perdida_control",
+  "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+  "valor": "derrape"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo circulaba por la terracería, pierde el control y se despista hacia el lado derecho, internándose entre la vegetación"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "terracería entre Benito Juárez y Pescador"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2006 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la causa de la pérdida de control del Mitsubishi Outlander 2006 negro?\",\n  \"respuesta\": \"El vehículo circulaba por la terracería entre Benito Juárez y Pescador cuando de repente el conductor pierde el control del vehículo debido a un derrape.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"terracería entre Benito Juárez y Pescador\",\n      \"evidencia\": \"El vehículo circulaba por la terracería entre Benito Juárez y Pescador\"\n    },\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"derrape\",\n      \"evidencia\": \"pierde el control del vehículo debido a un derrape\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El vehículo circulaba por la terracería, pierde el control y se despista hacia el lado derecho, internándose entre la vegetación\",\n      \"evidencia\": \"cuando de repente el conductor pierde el control del vehículo debido a un derrape\"\n    }\n  ]\n}"
+}

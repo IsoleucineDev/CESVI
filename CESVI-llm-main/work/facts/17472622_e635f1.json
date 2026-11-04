@@ -1,0 +1,48 @@
+{
+ "id": "17472622_e635f1",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Jeep Grand Cherokee 1998 blanco",
+  "V2": "Nissan Sentra 2008 gris"
+ },
+ "valores": {
+  "declaracion_V1": "El conductor del vehículo Grand Cherokee viene circulando por la carretera Yecapixtla-Agua Hedionda en dirección Sur a Norte y al llegar al cruce con el Libramiento Yecapixtla-Tetela se adelanta un poco para ver si puede pasar, al percatarse de que viene otro vehículo en dirección Oriente a Poniente, pone en marcha hacia atrás su vehículo sin percatarse que el vehículo Sentra se encuentra detrás de el, generándole los supuestos daños que se presentan.",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Sur a Norte",
+  "sentido_carril_V2": "Oriente a Poniente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "Avance para ver si puede pasar",
+  "maniobra_previa_V2": null,
+  "maniobra_reversa": "Maniobra en reversa sin percatarse que el vehículo Sentra se encuentra detrás de el",
+  "secuencia_eventos": "El vehículo V1 realiza maniobra en reversa y colisiona con el vehículo V2 que se encuentra detrás",
+  "punto_impacto_via": "En el cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela",
+  "evidencias_sitio": "El vehículo V1 presenta intercambio de pintura color blanco en la parte frontal derecha; el vehículo V2 no presenta intercambio de pintura",
+  "danos_V1": "Daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia",
+  "danos_V2": "Daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento",
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "El conductor del vehículo Grand Cherokee viene circulando por la carretera Yecapixtla-Agua Hedionda en dirección Sur a Norte y al llegar al cruce con el Libramiento Yecapixtla-Tetela se adelanta un poco para ver si puede pasar, al percatarse de que viene otro vehículo en dirección Oriente a Poniente, pone en marcha hacia atrás su vehículo sin percatarse que el vehículo Sentra se encuentra detrás de el, generándole los supuestos daños que se presentan.",
+  "sentido_carril_V1": "El conductor del vehículo Grand Cherokee viene circulando por la carretera Yecapixtla-Agua Hedionda en dirección Sur a Norte",
+  "sentido_carril_V2": "al percatarse de que viene otro vehículo en dirección Oriente a Poniente",
+  "maniobra_previa_V1": "se adelanta un poco para ver si puede pasar",
+  "maniobra_reversa": "pone en marcha hacia atrás su vehículo sin percatarse que el vehículo Sentra se encuentra detrás de el",
+  "secuencia_eventos": "pone en marcha hacia atrás su vehículo sin percatarse que el vehículo Sentra se encuentra detrás de el, generándole los supuestos daños que se presentan",
+  "punto_impacto_via": "al llegar al cruce con el Libramiento Yecapixtla-Tetela",
+  "evidencias_sitio": "La parte frontal del vehículo Sentra presenta daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de lo que parece ser pintura color blanco en la parte frontal derecha y pérdida de pintura en la parte frontal media",
+  "danos_V1": "La parte posterior del vehículo Grand Cherokee presenta daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia",
+  "danos_V2": "La parte frontal del vehículo Sentra presenta daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de lo que parece ser pintura color blanco en la parte frontal derecha y pérdida de pintura en la parte frontal media; como consecuencia del impacto frontal la fascia se encuentra desprendida de la sujeción superior izquierda y rota de la sujeción superior derecha; el cofre presenta un daño tipo hundimiento de adelante hacia atrás de magnitud media lo que ocasiona el abombamiento del mismo en su parte central; el faro derecho se observa desprendido de su lugar; la parrilla frontal se encuentra desprendida y fuera de su lugar, la placa se encuentra desprendida y fuera de su lugar."
+ },
+ "descartados": {
+  "posicion_final_V1": "Posición final no especificada",
+  "posicion_final_V2": "Posición final no especificada"
+ }
+}

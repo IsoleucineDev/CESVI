@@ -1,0 +1,13 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "DODGE ATTITUD 2006 AZUL PLACAS 510-UAJ"
+ },
+ "valores": {
+  "senalizacion_preferencia": "Ninguna señal de preferencia mencionada",
+  "angulo_impacto": "Lateral derecho",
+  "evidencias_sitio": "Fugas de aceite en el cárter del motor con un espesor de 5 milímetros"
+ },
+ "id": "attitud_sin_40100_2280552_1_18dd17",
+ "split": "train"
+}

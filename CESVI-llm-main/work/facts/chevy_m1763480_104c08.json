@@ -1,0 +1,49 @@
+{
+ "id": "chevy_m1763480_104c08",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Chevrolet Chevy C2 2011 dorado",
+  "V2": "Astra azul desconocido"
+ },
+ "valores": {
+  "declaracion_V1": "sirculandosobre el eje 3 Norte meinpacta un automovil aztra azul pego en la vanqueta y acon secuencia del golpe ahiquedo mi unidad",
+  "superficie": "asfalto regular sin líneas divisorias entre carriles",
+  "iluminacion": null,
+  "sentido_carril_V1": "Poniente a Oriente",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "incorporación",
+  "senalizacion_preferencia": "semáforos",
+  "secuencia_eventos": "el vehículo tipo Astra color azul impacta con su vértice delantero derecho al lado delantero izquierdo del vehículo marca tipo Chevy, modelo 2011, color dorado",
+  "punto_impacto_via": "Calzada de las Armas, casi esquina con el Eje 3 Norte",
+  "angulo_impacto": null,
+  "evidencias_sitio": "pintura color azul en el vértice delantero izquierdo (conjunto de luces), así como daños tipo tallón con impregnación de pintura color blanco en la fascia",
+  "posicion_final_V1": "proyectado hacia su costado derecho, impactando contra la guarnición",
+  "declaracion_V2": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V2": null,
+  "posicion_final_V2": "se da a la fuga",
+  "sentido_carril_V2": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "sirculandosobre el eje 3 Norte meinpacta un automovil aztra azul pego en la vanqueta y acon secuencia del golpe ahiquedo mi unidad",
+  "superficie": "el estado de la superficie es regular, sin líneas divisorias entre carriles",
+  "sentido_carril_V1": "el vehículo marca tipo Chevy, modelo 2011, color dorado, procede de Calzada Echegaray en dirección de Poniente a Oriente",
+  "maniobra_previa_V1": "el vehículo marca tipo Chevy, modelo 2011, color dorado, procede de Calzada Echegaray en dirección de Poniente a Oriente, y se incorpora a Calzada de las Armas en dirección de Norte a Sur",
+  "senalizacion_preferencia": "el flujo vehicular se encuentra regulado por semáforos",
+  "secuencia_eventos": "el vehículo tipo Astra color azul, presuntamente impacta con su vértice delantero derecho al lado delantero izquierdo del vehículo marca tipo Chevy, modelo 2011, color dorado",
+  "punto_impacto_via": "Calzada de las Armas, casi esquina con el Eje 3 Norte, Fraccionamiento Echegaray",
+  "evidencias_sitio": "existe pintura color azul en el vértice delantero izquierdo (conjunto de luces), así como daños tipo tallón con impregnación de pintura color blanco en la fascia",
+  "posicion_final_V1": "el vehículo marca tipo Chevy, modelo 2011, color dorado, es proyectado hacia su costado derecho, impactando contra la guarnición",
+  "posicion_final_V2": "el vehículo tipo Astra presuntamente se da a la fuga"
+ },
+ "descartados": {
+  "iluminacion": "día",
+  "angulo_impacto": "derecha a izquierda"
+ }
+}

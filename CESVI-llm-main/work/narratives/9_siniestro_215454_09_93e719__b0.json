@@ -1,0 +1,115 @@
+{
+ "id": "9_siniestro_215454_09_93e719",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Ford KA 2005 rojo",
+  "V2": "Marcopolo Viaggio 1995 azul marino"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Estaba cargando diasel y al acabar me eche de reversa estaba atrás de mi estaba un coche y no me percate que estaba atrás y le pegue en el cofre y parrilla y parte del motor"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "maniobra en reversa"
+  },
+  {
+   "id": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "valor": "avance del autobús en su maniobra en reversa"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "autobús realizó maniobra en reversa y golpeó al vehículo tipo KA"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Basilio Rojas numero 101. esquina Eduardo Vasconcelos Colonia del Maestro"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura color azul en el cofre, condensador y marco de radiador del Ford KA"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con lluvia y poca visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 70,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 8,
+ "asked": "punto_impacto_via",
+ "sintetico": true,
+ "pregunta": "¿Dónde en la calle ocurrió el impacto?",
+ "respuesta": "El impacto sucedió en la calle Basilio Rojas número 101, esquina Eduardo Vasconcelos Colonia del Maestro, además la velocidad estimada del Marcopolo Viaggio 1995 azul marino antes del evento fue de 70 km/h.",
+ "gold": {
+  "punto_impacto_via": {
+   "valor": "calle Basilio Rojas numero 101. esquina Eduardo Vasconcelos Colonia del Maestro",
+   "evidencia": "El impacto sucedió en la calle Basilio Rojas número 101, esquina Eduardo Vasconcelos Colonia del Maestro"
+  },
+  "velocidad_V2_kmh": {
+   "valor": "70",
+   "evidencia": "la velocidad estimada del Marcopolo Viaggio 1995 azul marino antes del evento fue de 70 km/h"
+  }
+ }
+}

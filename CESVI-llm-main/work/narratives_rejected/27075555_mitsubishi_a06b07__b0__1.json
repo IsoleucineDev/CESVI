@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en huellas_frenado_m",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 8,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "terracería con tierra suelta de color rojo"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2006 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado del Mitsubishi Outlander negro, si las hay?\",\n  \"respuesta\": \"No se observaron huellas de frenado antes de la volcadura del Mitsubishi Outlander negro, además, la superficie de rodamiento era una terracería con tierra suelta de color rojo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"0\",\n      \"evidencia\": \"No se observaron huellas de frenado antes de la volcadura del Mitsubishi Outlander negro\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"terracería con tierra suelta de color rojo\",\n      \"evidencia\": \"la superficie de rodamiento era una terracería con tierra suelta de color rojo\"\n    }\n  ]\n}"
+}

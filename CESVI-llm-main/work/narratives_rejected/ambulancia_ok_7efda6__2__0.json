@@ -1,0 +1,30 @@
+{
+ "motivo": "valor no concuerda con su evidencia en secuencia_eventos",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "circulación en el carril de en medio"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehiculó tipo Autobús colisionó con el vehículo tipo ambulancia"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "abandona la unidad en riveras del Atoya"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "parrilla con ruptura y desprendimiento de material en la defensa del lado izquierdo con dirección de arriba hacia abajo y de atrás hacia delante"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz Autobús 2001 blanco con franjas rojas y azul marino",
+  "V2": "Chevrolet Van Ambulancia 2004 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Chevy?\",\n  \"respuesta\": \"El Chevy iba en el carril de en medio además colisionó con el vehiculó tipo Autobús luego abandona la unidad en riveras del Atoya y parrilla con ruptura y desprendimiento de material en la defensa del lado izquierdo con dirección de arriba hacia abajo y de atrás hacia delante\",\n  \"extracciones\": [\n    {\"tema\": \"sentido_carril_V2\", \"valor\": \"carril de en medio\", \"evidencia\": \"El Chevy iba en el carril de en medio\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"el vehiculó tipo Autobús colisionó con el vehículo tipo ambulancia\", \"evidencia\": \"colisionó con el vehiculó tipo Autobús\"},\n    {\"tema\": \"posicion_final_V1\", \"valor\": \"riveras del Atoya\", \"evidencia\": \"abandona la unidad en riveras del Atoya\"},\n    {\"tema\": \"danos_V1\", \"valor\": \"parrilla con ruptura y desprendimiento de material en la defensa del lado izquierdo con dirección de arriba hacia abajo y de atrás hacia delante\", \"evidencia\": \"parrilla con ruptura y desprendimiento de material en la defensa del lado izquierdo con dirección de arriba hacia abajo y de atrás hacia delante\"}\n  ]\n}"
+}

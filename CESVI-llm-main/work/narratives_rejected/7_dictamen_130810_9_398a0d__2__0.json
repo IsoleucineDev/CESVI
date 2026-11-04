@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en secuencia_eventos",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "se frena"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V1 impacta con su parte frontal la parte trasera del vehículo V2"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa del conductor y acompañante detonadas"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2004 azul",
+  "V2": "Chrysler 300C 2005 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V2 antes del impacto?\",\n  \"respuesta\": \"se frena el Chrysler luego el Outlander lo impacta por atrás y las bolsas del conductor y acompañante se detonan\",\n  \"extracciones\": [\n    {\"tema\": \"maniobra_previa_V2\", \"valor\": \"se frena\", \"evidencia\": \"se frena\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"El vehículo Outlander impacta con su parte frontal la parte trasera del vehículo Chrysler\", \"evidencia\": \"el Outlander lo impacta por atrás\"},\n    {\"tema\": \"airbags_V1\", \"valor\": \"bolsa del conductor y acompañante\", \"evidencia\": \"bolsas del conductor y acompañante se detonan\"}\n  ]\n}"
+}

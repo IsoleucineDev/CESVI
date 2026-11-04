@@ -1,0 +1,26 @@
+{
+ "motivo": "evidencia no literal en velocidad_V1_kmh",
+ "principal": {
+  "id": "maniobra_reversa",
+  "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+  "valor": "el vehículo V1 realiza una maniobra en reversa"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo V1 realiza una maniobra en reversa y colisiona con el vehículo V2"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "General Motors MC-36 2003 rojo",
+  "V2": "Ford F-350 2008 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la maniobra realizada en reversa por el Chevy?\",\n  \"respuesta\": \"El Chevy realizó una maniobra en reversa y luego impactó con el Ford que estaba estacionado detrás de él.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"80\",\n      \"evidencia\": \"el Chevy realiza una maniobra en reversa\"\n    },\n    {\n      \"tema\": \"maniobra_reversa\",\n      \"valor\": \"el Chevy realiza una maniobra en reversa\",\n      \"evidencia\": \"el Chevy realiza una maniobra en reversa\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"el Chevy realiza una maniobra en reversa y luego impacta con el Ford\",\n      \"evidencia\": \"luego impactó con el Ford que estaba estacionado detrás de él\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,20 @@
+{
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "FORD EDGE 2009 GRIS 8-YP-71",
+  "V2": "FORD F-350 DESCONOCIDO DESCONOCIDO DESCONOCIDAS"
+ },
+ "valores": {
+  "sentido_carril_V1": "Circulando sobre Primavera al dar vuelta a la derecha",
+  "maniobra_previa_V1": "Ninguna",
+  "sentido_carril_V2": "Echando reversa",
+  "maniobra_previa_V2": "Maniobra en reversa",
+  "declaracion_V1": "Un camión se estaba echando de reversa me golpeo y al sentir el golpe se fue y no lo pude alcanzar porque me reventó la llanta y rin con el golpe",
+  "declaracion_V2": "Ninguna",
+  "evidencias_sitio": "Intercambio de pintura blanca en la salpicadera derecha y pintura roja en la fascia del lado derecho",
+  "punto_impacto_via": "En la zona del ángulo delantero derecho",
+  "altura_marca_objeto_cm": "46cm (estribo) y 67cm (plafonera)"
+ },
+ "id": "13_dictamen_15091291_c05156",
+ "split": "train"
+}

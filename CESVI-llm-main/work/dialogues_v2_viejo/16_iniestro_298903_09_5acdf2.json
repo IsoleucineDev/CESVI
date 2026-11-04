@@ -1,0 +1,159 @@
+{
+ "id": "16_iniestro_298903_09_5acdf2",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Kenworth T-800 2007 blanco",
+  "V2": "Nissan Estaquitas 2008 rojo"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué mencionó el conductor del Kenworth T-800 sobre cómo ocurrió el accidente?",
+   "respuesta": "ACIENDO MANEOBRA DE REVERZA NO VI LA CAMIONETA ESTACIONADA PEGANDOLE EN EL FRENTE",
+   "valor": "ACIENDO MANEOBRA DE REVERZA NO VI LA CAMIONETA ESTACIONADA PEGANDOLE EN EL FRENTE"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y qué nos contó el conductor del Nissan Estequitas?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Podrías describirnos la superficie de rodamiento y sus condiciones?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación y la visibilidad en el momento del accidente?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Por qué carril y sentido circulaba el Kenworth T-800?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y el Nissan Estequitas?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Podrías estimar la velocidad del Kenworth T-800 antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué velocidad llevaba el Nissan Estequitas?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Kenworth T-800 antes del impacto?",
+   "respuesta": "reversa",
+   "valor": "reversa"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y el Nissan Estequitas?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "pregunta": "¿Podrías describirme la dirección y tramo recorrido en reversa del Kenworth T-800 y la visibilidad del conductor?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describirnos la secuencia de los impactos?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "El vehículo A tipo T-800 con semirremolque tipo Jaula presenta daños tipo tallón con dirección de arriba hacia abajo en parte del estribo a una altura de 1.06 metros con respecto al piso y en la parte inferior derecha de la defensa daños tipo tallón con dirección de izquierda a derecha a una altura de 0.76 metros con respecto al piso",
+   "valor": "El vehículo A tipo T-800 con semirremolque tipo Jaula presenta daños tipo tallón con dirección de arriba hacia abajo en parte del estribo a una altura de 1.06 metros con respecto al piso y en la parte inferior derecha de la defensa daños tipo tallón con dirección de izquierda a derecha a una altura de 0.76 metros con respecto al piso"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuánta longitud de huellas de frenado encontraste?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Kenworth T-800?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en el Nissan Estequitas?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Qué daños presentaba el Kenworth T-800?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Y el Nissan Estequitas?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "pregunta": "¿Dónde quedó detenido el Kenworth T-800 tras el accidente?",
+   "respuesta": "El vehículo A tipo T-800 con semirremolque tipo Jaula, después de terminada la maniobra de reversa",
+   "valor": "El vehículo A tipo T-800 con semirremolque tipo Jaula, después de terminada la maniobra de reversa"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "pregunta": "¿Y el Nissan Estequitas?",
+   "respuesta": "El vehículo tipo Chasis cabina, después de terminada la maniobra de reversa",
+   "valor": "El vehículo tipo Chasis cabina, después de terminada la maniobra de reversa"
+  }
+ ]
+}

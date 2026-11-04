@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Chevrolet Malibu 2008 plata dejó una huella de frenado de 8 metros.'",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 8,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Chevrolet Malibu 2008 plata",
+  "V2": "Dodge Dakota 2008 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado del Chevrolet Malibu 2008 plata?\",\n  \"respuesta\": \"El Chevrolet Malibu 2008 plata dejó una huella de frenado de 8 metros.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"8\",\n      \"evidencia\": \"8 metros\"\n    }\n  ]\n}"
+}

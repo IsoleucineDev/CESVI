@@ -1,0 +1,25 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "carril derecho"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "sin frenar"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Km. 21+000 de la carretera México-Veracruz"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volvo Tractocamión Madrina 2001 blanco",
+  "V2": "Kenworth Tractocamión 2009 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Kenworth antes del impacto?\",\n  \"respuesta\": \"El Kenworth Tractocamión 2009 circulaba en el carril derecho además sin realizar ninguna maniobra de frenado antes del impacto, luego el choque ocurrió en el Km. 21+000 de la carretera México-Veracruz.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"carril derecho\",\n      \"evidencia\": \"el carril derecho\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"sin frenar\",\n      \"evidencia\": \"sin realizar ninguna maniobra de frenado\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"21+000\",\n      \"evidencia\": \"Km. 21+000 de la carretera México-Veracruz\"\n    }\n  ]\n}"
+}

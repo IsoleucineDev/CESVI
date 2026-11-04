@@ -1,0 +1,34 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "NISSAN PLATINA 2004 VINO LYL 6315",
+  "V2": "NISSAN TSURU S/D ARENA 193 SZA"
+ },
+ "valores": {
+  "declaracion_V1": "El accidente fue en la vía Lago (autopista Méx - Texcoco) a unos 100 m de una obra de construcción a la altura de la desviación a Querétaro una grúa paro x completo el tránsito en la autopista sin poner señalamiento alguno esto lo realizaron al bajar un bado de un puente x lo que no pude frenar a tiempo ya que venia a una velocidad constante (autopista) impactando un vehículo JETTA",
+  "superficie": "seca",
+  "iluminacion": "día",
+  "sentido_carril_V1": "Texcoco",
+  "sentido_carril_V2": "Texcoco",
+  "velocidad_V1_kmh": "constante",
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "frenado",
+  "maniobra_previa_V2": null,
+  "distancia_previa": "100 m",
+  "senalizacion_preferencia": null,
+  "tipo_objeto": null,
+  "causa_perdida_control": null,
+  "maniobra_reversa": null,
+  "vueltas_volcadura": null,
+  "secuencia_eventos": "vértice frontal del lado derecho del vehículo tipo Platina hace contacto con la parte posterior del lado derecho y la parte frontal del lado izquierdo del vehículo tipo Platina hace contacto con la parte posterior de lado izquierdo",
+  "punto_impacto_via": "autopista Peñon – Texcoco en el kilómetro 4",
+  "angulo_impacto": null,
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "restos de material con características de cubierta de faro de color rojo y esquirlas con características de medallón",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null
+ },
+ "id": "291529_9_6d1ed1",
+ "split": "train"
+}

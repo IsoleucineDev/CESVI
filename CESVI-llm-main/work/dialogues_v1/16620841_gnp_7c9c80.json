@@ -1,0 +1,159 @@
+{
+ "id": "16620841_gnp_7c9c80",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chevrolet Astra 2002 gris Plata",
+  "V2": "Desconocido"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué nos puedes contar sobre lo que dijo el conductor del Chevrolet Astra 2002 gris plata sobre lo que ocurrió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y el conductor del vehículo desconocido, ¿nos dio alguna información relevante sobre lo que sucedió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "Seca",
+   "valor": "Seca"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "Era pleno día, con buena visibilidad y sin lluvia ni niebla",
+   "valor": "Día"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Qué carril llevaba el Chevrolet Astra 2002 gris plata?",
+   "respuesta": "El Chevrolet Astra 2002 gris plata circulaba en el carril del extremo izquierdo",
+   "valor": "Circulando en el carril del extremo izquierdo"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el vehículo desconocido, ¿cómo se movía?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Chevrolet Astra 2002 gris plata?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué tal la velocidad del vehículo desconocido?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el Chevrolet Astra 2002 gris plata antes del accidente?",
+   "respuesta": "Ninguna maniobra, el Chevrolet Astra 2002 gris plata seguía recto",
+   "valor": "Ninguna"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y el vehículo desconocido, qué hizo antes del choque?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuánta distancia había entre los dos vehículos antes del choque?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cómo fue la secuencia de los impactos?",
+   "respuesta": "El vehículo desconocido impacta la parte trasera del Chevrolet Astra 2002 gris plata con mayor intensidad en el lado izquierdo",
+   "valor": "Vehículo V2 impacta la parte posterior de V1 con mayor intensidad en el lado izquierdo"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "Creo que fue entre el señalamiento de curva a la izquierda y el de desviación al ININ",
+   "valor": "Entre el señalamiento de curva a la izquierda y el de desviación al ININ"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el lugar del accidente?",
+   "respuesta": "No se encontraron huellas de frenado, restos de vehículos o intercambio de pintura",
+   "valor": "No se encontraron huellas de frenado, restos de vehículos o intercambio de pintura"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuánto medían las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Chevrolet Astra 2002 gris plata?",
+   "respuesta": "Creo que ninguna bolsa de aire se activó",
+   "valor": "Ninguno"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en el vehículo desconocido?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Qué daños presentó el Chevrolet Astra 2002 gris plata?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Y el vehículo desconocido, qué daños tuvo?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Posición final de V1: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Dónde quedó finalmente el Chevrolet Astra 2002 gris plata?",
+   "respuesta": "Impactado contra un montículo de tierra y piedras",
+   "valor": "Impactado contra un montículo de tierra y piedras"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Posición final de V2: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Y el vehículo desconocido, dónde quedó?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

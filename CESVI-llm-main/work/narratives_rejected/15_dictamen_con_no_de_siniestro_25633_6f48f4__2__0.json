@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en secuencia_eventos",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "VENIA YO CIRCULANDO DE OTE A PTE AL ALTURA DEL CINE XTREME PERO EN LA RETONDA QUE HAY PERDI EL CONTROL POR ESQUIVAR UN BACHE Y LE PEGUE A UNA CAMIONETA A UN COSTADO Y LO LANCE CONTRA EL MURO Y DESPUES LLAME A MI AJUSTADOR"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "esquivar bache"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo A tipo Chasis Cabina esquivando el bache, golpeando el lado derecho del vehículo B"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "no se observan huellas de frenado, restos o intercambio de pintura"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Chasis Cabina 2009 blanco",
+  "V2": "Honda Acura 2006 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"Cuál es la declaración del conductor de la Nissan Chasis Cabina sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"VENIA YO CIRCULANDO DE OTE A PTE AL ALTURA DEL CINE XTREME PERO EN LA RETONDA QUE HAY PERDI EL CONTROL POR ESQUIVAR UN BACHE Y LE PEGUE A UNA CAMIONETA A UN COSTADO Y LO LANCE CONTRA EL MURO Y DESPUES LLAME A MI AJUSTADOR. Además, esquivaba un bache antes del impacto.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"VENIA YO CIRCULANDO DE OTE A PTE AL ALTURA DEL CINE XTREME PERO EN LA RETONDA QUE HAY PERDI EL CONTROL POR ESQUIVAR UN BACHE Y LE PEGUE A UNA CAMIONETA A UN COSTADO Y LO LANCE CONTRA EL MURO Y DESPUES LLAME A MI AJUSTADOR\",\n      \"evidencia\": \"VENIA YO CIRCULANDO DE OTE A PTE AL ALTURA DEL CINE XTREME PERO EN LA RETONDA QUE HAY PERDI EL CONTROL POR ESQUIVAR UN BACHE Y LE PEGUE A UNA CAMIONETA A UN COSTADO Y LO LANCE CONTRA EL MURO Y DESPUES LLAME A MI AJUSTADOR\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"esquivar bache\",\n      \"evidencia\": \"esquivaba un bache antes del impacto\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"el vehículo A tipo Chasis Cabina esquivando el bache, golpeando el lado derecho del vehículo B\",\n      \"evidencia\": \"el vehículo A tipo Chasis Cabina esquivando el bache, golpeando el lado derecho del vehículo B\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"no se observan huellas de frenado, restos o intercambio de pintura\",\n      \"evidencia\": \"no se observan huellas de frenado, restos o intercambio de pintura\"\n    }\n  ]\n}"
+}

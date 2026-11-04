@@ -1,0 +1,20 @@
+{
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "HYUNDAI SEMIRREMOLQUE CAJA SECA 2005 BLANCO 703 YD8"
+ },
+ "valores": {
+  "declaracion_V1": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO",
+  "superficie": "asfalto",
+  "iluminacion": "luz de calle",
+  "sentido_carril_V1": "retorno vehicular",
+  "velocidad_V1_kmh": "baja",
+  "maniobra_previa_V1": "giro",
+  "secuencia_eventos": "el semirremolque dio vuelta en el retorno vehicular y se produjo una fractura en la caja de carga",
+  "punto_impacto_via": "banqueta",
+  "evidencias_sitio": "impregnación de caucho en la guarnición del camellón central",
+  "posicion_final_V1": "parcialmente incorporado a la Avenida Vallarta"
+ },
+ "id": "17_siniestro_283290_09_1cc313",
+ "split": "train"
+}

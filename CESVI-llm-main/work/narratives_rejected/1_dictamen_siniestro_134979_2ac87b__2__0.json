@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en evidencias_sitio",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "incorporación a la carretera Minatitlán-Coatzacoalcos"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "circulación"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura roja en el vértice izquierdo de la defensa del vehículo V1, sin impregnación de pintura roja en el vehículo V2"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Tsuru 2008 blanco y rojo",
+  "V2": "Ford Fiesta 2007 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Nissan Tsuru 2008 blanco y rojo?\",\n  \"respuesta\": \"El Nissan Tsuru 2008 blanco y rojo se incorporaba a la carretera Minatitlán-Coatzacoalcos, además, el Ford Fiesta 2007 rojo circulaba por su carril.\",\n  \"extracciones\": [\n    {\"tema\": \"sentido_carril_V1\", \"valor\": \"incorporación a la carretera Minatitlán-Coatzacoalcos\", \"evidencia\": \"el Nissan Tsuru 2008 blanco y rojo se incorporaba a la carretera Minatitlán-Coatzacoalcos\"},\n    {\"tema\": \"maniobra_previa_V2\", \"valor\": \"circulación\", \"evidencia\": \"el Ford Fiesta 2007 rojo circulaba por su carril\"},\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"pintura roja en el vértice izquierdo de la defensa del vehículo V1\", \"evidencia\": \"pintura roja en el vértice izquierdo de la defensa del vehículo V1, sin impregnación de pintura roja en el vehículo V2\"}\n  ]\n}"
+}

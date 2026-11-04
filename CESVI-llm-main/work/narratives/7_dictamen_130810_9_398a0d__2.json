@@ -1,0 +1,114 @@
+{
+ "id": "7_dictamen_130810_9_398a0d",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2004 azul",
+  "V2": "Chrysler 300C 2005 negro"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Circulaba sobre Circuito Interior cuando al bajar del puente de Calzada de los Gallos, se me frena un carro tipo Chrysler 300 y sin poder frenar le pego en la parte trasera."
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Norte - Sur"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "Norte - Sur"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "descendiendo del puente"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "se frena"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V1 impacta con su parte frontal la parte trasera del vehículo V2"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Circuito Interior, al bajar del puente de Calzada de los Gallos"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta pintura negra del V2, el V2 no presenta pintura azul del V1"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "concreto hidráulico"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa del conductor y acompañante detonadas"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 5,
+ "asked": "maniobra_previa_V2",
+ "pregunta": "¿Cuál fue la maniobra previa de V2 antes del impacto?",
+ "respuesta": "SE FRENABA. ADemás, EL VEHÍCULO V1 IMPACTA CON SU PARTE FRONTAL LA PARTE TRASERA DEL VEHÍCULO V2. LUEGO, LA BOLSA DEL CONDUCTOR Y ACOMPAÑANTE DETONARON.",
+ "gold": {
+  "maniobra_previa_V2": {
+   "valor": "se frena",
+   "evidencia": "SE FRENABA"
+  },
+  "secuencia_eventos": {
+   "valor": "El vehículo V1 impacta con su parte frontal la parte trasera del vehículo V2",
+   "evidencia": "EL VEHÍCULO V1 IMPACTA CON SU PARTE FRONTAL LA PARTE TRASERA DEL VEHÍCULO V2"
+  },
+  "airbags_V1": {
+   "valor": "bolsa del conductor y acompañante detonadas",
+   "evidencia": "LA BOLSA DEL CONDUCTOR Y ACOMPAÑANTE DETONARON"
+  }
+ }
+}

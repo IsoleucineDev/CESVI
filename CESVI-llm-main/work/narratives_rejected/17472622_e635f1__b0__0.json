@@ -1,0 +1,26 @@
+{
+ "motivo": "extracciones no coinciden con los temas pedidos",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El vehículo V1 realiza maniobra en reversa y colisiona con el vehículo V2 que se encuentra detrás"
+ },
+ "otros": [
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "Daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jeep Grand Cherokee 1998 blanco",
+  "V2": "Nissan Sentra 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrieron en este accidente?\",\n  \"respuesta\": \"El Jeep realiza maniobra en reversa y colisiona con el Sentra que se encuentra detrás. Además, el daño tipo hundimiento de muy baja magnitud que va de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia. Y luego, la velocidad estimada de V1 antes del evento es de 50 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"damos_V1\",\n      \"valor\": \"hundimiento_baja_magnitud_atras_adelante_pintura_topes_fascia\",\n      \"evidencia\": \"el daño tipo hundimiento de muy baja magnitud que va de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"Jeep_reversa_colisiona_Sentra_atras\",\n      \"evidencia\": \"el Jeep realiza maniobra en reversa y colisiona con el Sentra que se encuentra detrás\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"50\",\n      \"evidencia\": \"la velocidad estimada de V1 antes del evento es de 50 km/h\"\n    }\n  ]\n}"
+}

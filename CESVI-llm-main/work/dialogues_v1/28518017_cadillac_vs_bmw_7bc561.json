@@ -1,0 +1,141 @@
+{
+ "id": "28518017_cadillac_vs_bmw_7bc561",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "GM, tipo Cadillac Deville, modelo 1998, color oro",
+  "V2": "BMW, tipo 528i, modelo 2000, color blanco"
+ },
+ "form": {
+  "posicion_final_V1": "ubicación desconocida",
+  "posicion_final_V2": "ubicación desconocida"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías resumirme la declaración del conductor del Cadillac Deville sobre cómo ocurrió el accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y qué nos dice el conductor del BMW 528i sobre el suceso?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban la superficie de rodamiento y las condiciones del asfalto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación y visibilidad había en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Podrías decirme por dónde circulaba el Cadillac Deville?",
+   "respuesta": "creo que iba de sur a norte más o menos",
+   "valor": "de SUR a NORTE por la calle Gregorio Salinas Varona"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el BMW 528i, ¿cómo era su dirección y carril?",
+   "respuesta": "aprox. de poniente a oriente c/ la calle Santiago Roel",
+   "valor": "de PONIENTE a ORIENTE por la calle Santiago Roel"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Cadillac Deville antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "Y qué velocidad llevaba el BMW 528i?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Cadillac Deville antes del impacto?",
+   "respuesta": "no respeta la señal restrictiva de Alto",
+   "valor": "no respeta la señal restrictiva de Alto"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "Y el BMW 528i, ¿qué maniobra realizaba?",
+   "respuesta": "creo que estaba estacionado o en posición estática más o menos",
+   "valor": "estacionado o en posición estática"
+  },
+  {
+   "tema": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "pregunta": "¿Cuál era la señalización de tráfico y quién tenía preferencia de paso?",
+   "respuesta": "había una señal restrictiva de Alto en la calle Gregorio Salinas Varona",
+   "valor": "señal restrictiva de Alto"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cómo fue la secuencia de los impactos?",
+   "respuesta": "el Cadillac Deville impacta con su parte frontal el costado medio derecho del BMW 528i",
+   "valor": "el vehículo V1 impacta con su parte frontal el costado medio derecho del vehículo V2"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "en la intersección de las calles Gregorio Salinas Varona y Santiago Roel",
+   "valor": "en la intersección de las calles Gregorio Salinas Varona y Santiago Roel"
+  },
+  {
+   "tema": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "pregunta": "¿Cuál era el ángulo de impacto entre los vehículos?",
+   "respuesta": "el ángulo era perpendicular",
+   "valor": "perpendicular"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "había huellas de pintura intercambiada",
+   "valor": "huellas de pintura intercambiada"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuánta longitud tenían las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Qué bolsas de aire se activaron en el Cadillac Deville?",
+   "respuesta": "se activaron la bolsa de aire del conductor y del acompañante",
+   "valor": "bolsa de aire del conductor y del acompañante activadas"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "Y en el BMW 528i, ¿qué bolsas de aire se activaron?",
+   "respuesta": "activadas la bolsa de aire del acompañante y la cortina lateral del mismo lado",
+   "valor": "bolsa de aire del acompañante y la cortina lateral del mismo lado activadas"
+  }
+ ]
+}

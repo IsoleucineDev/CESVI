@@ -1,0 +1,97 @@
+{
+ "id": "17_siniestro_283290_09_1cc313",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "HYUNDAI SEMIRREMOLQUE CAJA SECA 2005 BLANCO 703 YD8"
+ },
+ "form": {
+  "posicion_final_V1": "parcialmente incorporado a la Avenida Vallarta"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías resumirme la declaración del conductor del semirremolque sobre lo que ocurrió?",
+   "respuesta": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO",
+   "valor": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "asfalto",
+   "valor": "asfalto"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación en el lugar del accidente?",
+   "respuesta": "luz de calle",
+   "valor": "luz de calle"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación y carril por el que iba el semirremolque?",
+   "respuesta": "El semirremolque estaba realizando un retorno vehicular en la Avenida Vallarta",
+   "valor": "retorno vehicular"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del semirremolque antes del accidente?",
+   "respuesta": "baja",
+   "valor": "baja"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el semirremolque antes del impacto?",
+   "respuesta": "giro",
+   "valor": "giro"
+  },
+  {
+   "tema": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "pregunta": "¿Qué dirección tomó el semirremolque en reversa y cuál era su visibilidad?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describirme en orden los eventos que ocurrieron?",
+   "respuesta": "El semirremolque dio vuelta en el retorno vehicular y se produjo una fractura en la caja de carga",
+   "valor": "el semirremolque dio vuelta en el retorno vehicular y se produjo una fractura en la caja de carga"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "El impacto ocurrió en la banqueta",
+   "valor": "banqueta"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el lugar del accidente?",
+   "respuesta": "impregnación de caucho en la guarnición del camellón central",
+   "valor": "impregnación de caucho en la guarnición del camellón central"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el semirremolque?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

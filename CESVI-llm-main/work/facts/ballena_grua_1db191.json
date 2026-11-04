@@ -1,0 +1,40 @@
+{
+ "id": "ballena_grua_1db191",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "International FAMSA 1964 azul",
+  "V2": "Liever GRUA 2010 gris amarillo"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "detenido",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "detenido",
+  "tipo_objeto": "ballena",
+  "causa_perdida_control": null,
+  "secuencia_eventos": "el vehículo tipo International impactó la ballena",
+  "punto_impacto_via": "periférico Sur en la delegación Tlalpan",
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "tallones leves en el vehículo tipo grúa",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "impactado con la ballena",
+  "danos_V1": null
+ },
+ "citas": {
+  "sentido_carril_V1": "el vehículo tipo Grúa, presenta daños tipo tallones leves los cuales solo presenta una sola dirección",
+  "maniobra_previa_V1": "el vehículo tipo Grúa, presenta daños tipo tallones leves los cuales solo presenta una sola dirección",
+  "tipo_objeto": "el vehículo tipo International en su parte frontal, no presenta daños a simple vista pero la carga que transporta es una viga la cual se aprecia impactada por la parte superior sin generarle grandes daños",
+  "secuencia_eventos": "el vehículo tipo International en su parte frontal, no presenta daños a simple vista pero la carga que transporta es una viga la cual se aprecia impactada por la parte superior sin generarle grandes daños",
+  "punto_impacto_via": "suscitado el día 20 de Mayo de 2012 a las 00:00 hrs. en el periférico Sur en el la delegación Tlalpan en el distrito federal",
+  "evidencias_sitio": "el vehículo tipo Grúa, presenta daños tipo tallones leves los cuales solo presenta una sola dirección",
+  "posicion_final_V1": "el vehículo tipo International en su parte frontal, no presenta daños a simple vista pero la carga que transporta es una viga la cual se aprecia impactada por la parte superior sin generarle grandes daños"
+ },
+ "descartados": {
+  "superficie": "asfalto seco",
+  "iluminacion": "noche"
+ }
+}

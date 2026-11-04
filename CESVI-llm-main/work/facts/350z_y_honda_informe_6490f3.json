@@ -1,0 +1,48 @@
+{
+ "id": "350z_y_honda_informe_6490f3",
+ "split": "valid",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan 350Z 2004 plata",
+  "V2": "Honda Accord 2006 dorado"
+ },
+ "valores": {
+  "superficie": "asfáltico",
+  "iluminacion": null,
+  "sentido_carril_V1": "Poniente a Oriente",
+  "sentido_carril_V2": "Sur a Norte",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "El vehículo V2 impacta con su ángulo delantero izquierdo al costado medio derecho del vehículo V1",
+  "punto_impacto_via": "lateral de Viaducto Miguel Alemán, esquina con Avenida Patriotismo",
+  "evidencias_sitio": "vehículo V1 presenta pintura dorada del costado medio derecho; vehículo V2 presenta desprendimiento de pintura dorada en dirección de izquierda a derecha",
+  "declaracion_V1": "ESTANDO EN LA LATERAL DE VIADUCTO SALE EL SIGAY UN VEHICULO ME IMPACTA TENIENDO LA LUZ ROJA",
+  "declaracion_V2": null,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": null,
+  "angulo_impacto": null,
+  "posicion_final_V1": "Proyectado contra la guarnición derecha de la lateral de Viaducto",
+  "posicion_final_V2": null,
+  "huellas_frenado_m": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "airbags_V1": "Activación de las bolsas de aire tipo cortina y lateral del lado derecho",
+  "airbags_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "superficie": "La lateral del Viaducto Miguel Alemán, se compone de dos carriles para la circulación, en sentido de Poniente a Oriente, construido con material asfáltico",
+  "sentido_carril_V1": "La lateral del Viaducto Miguel Alemán, se compone de dos carriles para la circulación, en sentido de Poniente a Oriente",
+  "sentido_carril_V2": "La Avenida Patriotismo se compone de seis carriles para la circulación, en sentido de Sur a Norte",
+  "secuencia_eventos": "Dinámica 2.- Momento en que el vehículo “B” impacta con su ángulo delantero izquierdo al costado medio derecho del vehículo “A”",
+  "punto_impacto_via": "El lugar de los hechos se ubica sobre la lateral de Viaducto Miguel Alemán, esquina con Avenida Patriotismo, en la Colonia Nápoles, en México, DF",
+  "evidencias_sitio": "el vehículo marca Nissan, tipo 350Z, modelo 2004, color plata, presenta impregnaciones de pintura color dorado en el costado medio derecho",
+  "declaracion_V1": "El conductor del vehículo marca Nissan, tipo 350Z, modelo 2004, color plata, con placas de circulación LZX-15-56, redacta en la declaración de accidente, de la compañía de seguros lo siguiente: “ESTANDO EN LA LATERAL DE VIADUCTO SALE EL SIGAY UN VEHICULO ME IMPACTA TENIENDO LA LUZ ROJA”",
+  "posicion_final_V1": "Debido a la colisión oblicua que sufre el vehículo “A” se proyecta contra la guarnición derecha de la lateral de Viaducto.",
+  "airbags_V1": "En el interior del vehículo en estudio se observa la activación de las bolsas de aire tipo cortina y lateral del lado derecho"
+ },
+ "descartados": {
+  "iluminacion": "noche",
+  "senalizacion_preferencia": "semaforizado"
+ }
+}

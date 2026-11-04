@@ -1,0 +1,22 @@
+{
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Jeep Grand Cherokee 1998 blanco",
+  "V2": "Nissan Sentra 2008 gris"
+ },
+ "valores": {
+  "declaracion_V1": "Conductor adelanta un poco para ver si puede pasar y realiza maniobra de reversa sin percatarse de Nissan detrás.",
+  "declaracion_V2": null,
+  "sentido_carril_V1": "Norte a Sur",
+  "sentido_carril_V2": "Oriente a Poniente",
+  "maniobra_previa_V1": "Reversa",
+  "maniobra_previa_V2": null,
+  "evidencias_sitio": "Sin huellas de frenado, sin intercambio de pintura en la parte posterior de V1",
+  "posicion_final_V1": "Sin cambios significativos",
+  "posicion_final_V2": "Sin cambios significativos",
+  "airbags_V1": null,
+  "airbags_V2": null
+ },
+ "id": "17472622_e635f1",
+ "split": "train"
+}

@@ -1,0 +1,89 @@
+{
+ "id": "40100_2280552_inbursa_eab609",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Dodge Attitude 2006 azul"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "impacto lateral en el lado izquierdo del vehículo"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "daños tipo rayón en dirección de adelante hacia atrás encontrado en la parte media de las puertas"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 4,
+ "asked": "secuencia_eventos",
+ "pregunta": "¿Cuál es la secuencia de eventos que ocurrió durante la colisión?",
+ "respuesta": "En el sitio del accidente, se encontraron evidencias de un daño tipo rayón en dirección de adelante hacia atrás en la parte media de las puertas del Dodge Attitude 2006 azul. Además, el impacto fue lateral en el lado izquierdo del vehículo.",
+ "gold": {
+  "evidencias_sitio": {
+   "valor": "daños tipo rayón en dirección de adelante hacia atrás encontrado en la parte media de las puertas",
+   "evidencia": "se encontraron evidencias de un daño tipo rayón en dirección de adelante hacia atrás en la parte media de las puertas del Dodge Attitude 2006 azul"
+  },
+  "secuencia_eventos": {
+   "valor": "impacto lateral en el lado izquierdo del vehículo",
+   "evidencia": "el impacto fue lateral en el lado izquierdo del vehículo"
+  }
+ }
+}

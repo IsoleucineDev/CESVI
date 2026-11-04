@@ -1,0 +1,110 @@
+{
+ "id": "7_siniestro_256739_09_f120b5",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "General Motors MC-36 2003 rojo",
+  "V2": "Ford F-350 2008 rojo"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "había mucho trafico y se me paro un carro delante y entonces yo me eche de reversa lo mas rápido que pude espejeando de mi lado pero no alcance a ver por el lado derecho en una curva solo sentí el trancazo"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "reversa"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "reversa"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "valor": "el vehículo V1 realiza una maniobra en reversa"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo V1 realiza una maniobra en reversa y colisiona con el vehículo V2"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura color rojo en el vértice trasero derecho del vehículo V1"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 6,
+ "asked": "maniobra_reversa",
+ "pregunta": "¿Cuál es la descripción de la maniobra de reversa realizada por el Chevy MC-36 2003 rojo?",
+ "respuesta": "El Chevy MC-36 2003 rojo realiza una maniobra en reversa y, además, se observa pintura color rojo en el vértice trasero derecho del vehículo.",
+ "gold": {
+  "maniobra_reversa": {
+   "valor": "el Chevy realiza una maniobra en reversa",
+   "evidencia": "el Chevy MC-36 2003 rojo realiza una maniobra en reversa"
+  },
+  "evidencias_sitio": {
+   "valor": "pintura color rojo en el vértice trasero derecho del vehículo",
+   "evidencia": "se observa pintura color rojo en el vértice trasero derecho del vehículo"
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "6319_10_c0ed78",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Ford F-350 1986 naranja/blanco",
+  "V2": "Mazda CX7 2008 vino"
+ },
+ "valores": {
+  "declaracion_V1": "Al echarme de reversa no me fije y le pegue a una camioneta",
+  "superficie": "concreto",
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "maniobra en reversa",
+  "maniobra_previa_V2": null,
+  "maniobra_reversa": "incorporarse a la calle Heriberto Jara (Constituyentes)",
+  "secuencia_eventos": "El conductor del vehículo marca Ford, tipo F-350, realiza maniobra en reversa para incorporarse a la calle Heriberto Jara (Constituyentes) y golpea con la plafonera posterior la fascia delantera del vehículo Mazda, tipo CX-7",
+  "punto_impacto_via": "calle Heriberto Jara (Constituyentes)",
+  "evidencias_sitio": "intercambio de material tipo masilla de resane impregnada en la fascia",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "declaracion_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Al echarme de reversa no me fije y le pegue a una camioneta",
+  "superficie": "pavimentada con concreto",
+  "maniobra_previa_V1": "El conductor del vehículo marca Ford, tipo F-350, realiza maniobra en reversa para incorporarse a la calle Heriberto Jara (Constituyentes)",
+  "maniobra_reversa": "El conductor del vehículo marca Ford, tipo F-350, realiza maniobra en reversa para incorporarse a la calle Heriberto Jara (Constituyentes)",
+  "secuencia_eventos": "El conductor del vehículo marca Ford, tipo F-350, realiza maniobra en reversa para incorporarse a la calle Heriberto Jara (Constituyentes) y golpea con la plafonera posterior la fascia delantera del vehículo Mazda, tipo CX-7",
+  "punto_impacto_via": "El conductor del vehículo marca Ford, tipo F-350, realiza maniobra en reversa para incorporarse a la calle Heriberto Jara (Constituyentes)",
+  "evidencias_sitio": "observarse un intercambio de material tipo masilla de resane impregnada en la fascia"
+ },
+ "descartados": {
+  "posicion_final_V1": "estacionado",
+  "posicion_final_V2": "estacionado"
+ }
+}

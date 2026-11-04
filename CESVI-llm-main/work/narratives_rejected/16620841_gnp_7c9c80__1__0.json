@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en punto_impacto_via",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra [...]"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "El impacto sucede con mas intensidad del lado izquierdo de la parte posterior"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "El vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Astra 2002 gris",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrieron en el accidente?\",\n  \"respuesta\": \"El Chevy Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo. Luego, el Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo. Luego, el Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra\",\n      \"evidencia\": \"El Chevy Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo. Luego, el Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra\"\n    },\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"impacta contra un montículo de tierra\",\n      \"evidencia\": \"impacta contra un montículo de tierra\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"lado izquierdo de la parte posterior\",\n      \"evidencia\": \"lado izquierdo de la parte posterior\"\n    }\n  ]\n}"
+}

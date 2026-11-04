@@ -1,0 +1,22 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Ford Ecosport 2009 arena"
+ },
+ "valores": {
+  "tipo_objeto": "poste de concreto",
+  "senalizacion_preferencia": "ninguna",
+  "superficie": "concreto hidráulico",
+  "iluminacion": "día",
+  "sentido_carril_V1": "descendiendo por pendiente de calle 13",
+  "maniobra_previa_V1": "descendiendo",
+  "velocidad_V1_kmh": "desconocida",
+  "causa_perdida_control": "pendiente de calle",
+  "punto_impacto_via": "vértice posterior derecho contra poste",
+  "secuencia_eventos": "impacto posterior derecha, giro de 135º y impacto frontal",
+  "evidencias_sitio": "huellas de impacto en concreto, intercambio de pintura",
+  "posicion_final_V1": "detenido contra poste en banqueta"
+ },
+ "id": "7611_004461_475686",
+ "split": "train"
+}

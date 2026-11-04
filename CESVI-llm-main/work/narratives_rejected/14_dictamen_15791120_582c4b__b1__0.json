@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Mitsubishi Lancer 2006 blanco se movía a una velocidad estimada de '",
+ "principal": {
+  "id": "velocidad_V2_kmh",
+  "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+  "valor": 90,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Jaguar S-Type 2005 negro",
+  "V2": "Mitsubishi Lancer 2006 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada de V2 antes del evento?\",\n  \"respuesta\": \"El Mitsubishi Lancer 2006 blanco se movía a una velocidad estimada de 90 km/h antes del evento.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"90 km/h\"\n    }\n  ]\n}"
+}

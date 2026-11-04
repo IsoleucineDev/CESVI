@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en evidencias_sitio",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "restos de esquirlas de vidrio en el habitáculo"
+ },
+ "otros": [
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsas de aire tanto frontales como laterales activadas"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Land Rover LR2 HSE Premium 2008 negro",
+  "V2": "camión desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son las evidencias en el sitio del accidente?\",\n  \"respuesta\": \"En el habitáculo del Land Rover LR2 HSE Premium 2008 negro encontramos restos de esquirlas de vidrio. Además, tanto las bolsas de aire frontales como las laterales del Land Rover estaban activadas.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"restos de esquirlas de vidrio\",\n      \"evidencia\": \"restos de esquirlas de vidrio en el habitáculo\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"bolsas de aire tanto frontales como laterales\",\n      \"evidencia\": \"bolsas de aire tanto frontales como laterales activadas\"\n    }\n  ]\n}"
+}

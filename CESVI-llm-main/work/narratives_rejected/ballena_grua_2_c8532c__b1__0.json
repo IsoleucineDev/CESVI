@@ -1,0 +1,27 @@
+{
+ "motivo": "oración con contenido no extraído: 'El accidente ocurrió cuando el International FAMSA 1964 azul no cedió '",
+ "principal": {
+  "id": "senalizacion_preferencia",
+  "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+  "valor": "señal de ceda el paso",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "carriles centrales del periférico"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "International FAMSA 1964 azul",
+  "V2": "Liever GRUA 2010 gris amarillo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la señalización de preferencia en el momento del accidente?\",\n  \"respuesta\": \"El accidente ocurrió cuando el International FAMSA 1964 azul no cedió el paso, incumpliendo la señal de ceda el paso. Además, el impacto se produjo en los carriles centrales del periférico, y la velocidad estimada del International FAMSA antes del evento fue de 50 km/h.\",\n  \"extracciones\": [\n    {\"tema\": \"senalizacion_preferencia\", \"valor\": \"ceda el paso\", \"evidencia\": \"no cedió el paso, incumpliendo la señal de ceda el paso\"},\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"carriles centrales del periférico\", \"evidencia\": \"el impacto se produjo en los carriles centrales del periférico\"},\n    {\"tema\": \"velocidad_V1_kmh\", \"valor\": \"50\", \"evidencia\": \"la velocidad estimada del International FAMSA antes del evento fue de 50 km/h\"}\n  ]\n}"
+}

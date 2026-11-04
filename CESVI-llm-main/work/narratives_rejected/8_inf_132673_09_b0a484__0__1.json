@@ -1,0 +1,20 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "Km. 21+000 de la carretera México-Veracruz"
+ },
+ "otros": [
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "volcado hacia el lado izquierdo, atravesado en la carretera"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volvo Tractocamión Madrina 2001 blanco",
+  "V2": "Kenworth Tractocamión 2009 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde en la vía ocurrió el impacto?\",\n  \"respuesta\": \"El impacto ocurrió en el Km. 21+000 de la carretera México-Veracruz, además, luego de esto, el Kenworth Tractocamión 2009 blanco quedó volcado hacia el lado izquierdo, atravesado en la carretera.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"21+000\",\n      \"evidencia\": \"Km. 21+000 de la carretera México-Veracruz\"\n    },\n    {\n      \"tema\": \"posicion_final_V2\",\n      \"valor\": \"volcado hacia el lado izquierdo, atravesado en la carretera\",\n      \"evidencia\": \"volcado hacia el lado izquierdo, atravesado en la carretera\"\n    }\n  ]\n}"
+}

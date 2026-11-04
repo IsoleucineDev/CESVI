@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'Además, en el sitio del accidente se encontraron restos de pintura col'",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "desacoplamiento del costado"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "restos de pintura color verde en el Saab"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Toyota Camry 2002 gris plata",
+  "V2": "Saab 9-3 2004 gris Oxford"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Saab antes del impacto?\",\n  \"respuesta\": \"El Saab 9-3 2004 gris Oxford realizó un desacoplamiento del costado antes del impacto. Además, en el sitio del accidente se encontraron restos de pintura color verde en el Saab.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"desacoplamiento del costado\",\n      \"evidencia\": \"El Saab 9-3 2004 gris Oxford realizó un desacoplamiento del costado antes del impacto.\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"restos de pintura color verde en el Saab\",\n      \"evidencia\": \"se encontraron restos de pintura color verde en el Saab\"\n    }\n  ]\n}"
+}

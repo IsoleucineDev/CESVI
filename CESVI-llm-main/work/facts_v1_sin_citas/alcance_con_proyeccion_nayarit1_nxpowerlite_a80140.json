@@ -1,0 +1,29 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Ford Estacas 1998 rojo PC-65681",
+  "V2": "Nissan Estacas 1992 blanco PC-28684",
+  "V3": "Nissan Tsuru 2012 amarillo 7437-MDB"
+ },
+ "valores": {
+  "superficie": "asfalto en buenas condiciones",
+  "sentido_carril_V1": "Oriente a Poniente",
+  "sentido_carril_V2": "Oriente a Poniente",
+  "sentido_carril_V3": "Oriente a Poniente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "velocidad_V3_kmh": null,
+  "distancia_previa": null,
+  "maniobra_previa_V1": "circulando",
+  "maniobra_previa_V2": "circulando",
+  "maniobra_previa_V3": "circulando",
+  "secuencia_eventos": "V1 impacta a V2, V2 impacta a V3, V3 impacta a V4",
+  "punto_impacto_via": "frente al hotel Nekie",
+  "evidencias_sitio": "huellas de pintura en vehículos",
+  "declaracion_V1": "circulaba de Oriente a Poniente y chocó a una pick up Nissan",
+  "declaracion_V2": null,
+  "declaracion_V3": null
+ },
+ "id": "alcance_con_proyeccion_nayarit1_nxpowerlite_a80140",
+ "split": "train"
+}

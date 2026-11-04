@@ -1,0 +1,14 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Chevrolet Malibu 2007 negro se movía a una velocidad estimada de 43'",
+ "principal": {
+  "id": "velocidad_V2_kmh",
+  "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+  "valor": 43.3
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "DINA Autobus 1992 blanco con franjas amarillas y negras",
+  "V2": "Chevrolet Malibu 2007 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada del Chevy antes del evento?\",\n  \"respuesta\": \"El Chevrolet Malibu 2007 negro se movía a una velocidad estimada de 43 km/h antes del evento.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"43\",\n      \"evidencia\": \"43 km/h\"\n    }\n  ]\n}"
+}

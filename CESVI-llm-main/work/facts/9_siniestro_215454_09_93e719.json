@@ -1,0 +1,43 @@
+{
+ "id": "9_siniestro_215454_09_93e719",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Ford KA 2005 rojo",
+  "V2": "Marcopolo Viaggio 1995 azul marino"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "declaracion_V2": "Estaba cargando diasel y al acabar me eche de reversa estaba atrás de mi estaba un coche y no me percate que estaba atrás y le pegue en el cofre y parrilla y parte del motor",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": "maniobra en reversa",
+  "maniobra_reversa": "avance del autobús en su maniobra en reversa",
+  "secuencia_eventos": "autobús realizó maniobra en reversa y golpeó al vehículo tipo KA",
+  "punto_impacto_via": "calle Basilio Rojas numero 101. esquina Eduardo Vasconcelos Colonia del Maestro",
+  "evidencias_sitio": "pintura color azul en el cofre, condensador y marco de radiador del Ford KA",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "detenido el vehículo tipo KA tras el evento",
+  "posicion_final_V2": "detenido el autobús tras el evento",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V2": "Estaba cargando diasel y al acabar me eche de reversa estaba atrás de mi estaba un coche y no me percate que estaba atrás y le pegue en el cofre y parrilla y parte del motor",
+  "maniobra_previa_V2": "Estaba cargando diasel y al acabar me eche de reversa estaba atrás de mi estaba un coche y no me percate que estaba atrás y le pegue en el cofre y parrilla y parte del motor",
+  "maniobra_reversa": "Estaba cargando diasel y al acabar me eche de reversa estaba atrás de mi estaba un coche y no me percate que estaba atrás y le pegue en el cofre y parrilla y parte del motor",
+  "secuencia_eventos": "Estaba cargando diasel y al acabar me eche de reversa estaba atrás de mi estaba un coche y no me percate que estaba atrás y le pegue en el cofre y parrilla y parte del motor",
+  "punto_impacto_via": "Se observa el lugar de los hechos en estudio localizado en la calle Basilio Rojas numero 101. esquina Eduardo Vasconcelos Colonia del Maestro en Oaxaca, Oaxaca.",
+  "evidencias_sitio": "Se puede observar que el rin delantero izquierdo presenta un desplazamiento de adentro hacia fuera de su forma original, así como un resquebrajamiento del lado derecho en la tolva de los limpiaparabrisas",
+  "posicion_final_V1": "En la figura se muestra el momento del impacto como lo menciona el operador del autobús tipo VAGGIO",
+  "posicion_final_V2": "En la figura se muestra el momento del impacto como lo menciona el operador del autobús tipo VAGGIO"
+ },
+ "descartados": {}
+}

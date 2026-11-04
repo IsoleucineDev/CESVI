@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en airbags_V2",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "vehículo V2 impacta a V1 en maniobra en reversa"
+ },
+ "otros": [
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 63.15
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "activado"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Silverado 2007 arena",
+  "V2": "Toyota Tacoma 1997 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la secuencia de eventos del impacto?\",\n  \"respuesta\": \"El Toyota impactó al Chevy en maniobra en reversa, además luego el Toyota detuvo su movimiento.\",\n  \"extracciones\": [\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"Toyota impacta a Chevy en maniobra en reversa\", \"evidencia\": \"El Toyota impactó al Chevy en maniobra en reversa\"},\n    {\"tema\": \"airbags_V2\", \"valor\": \"activado\", \"evidencia\": \"el Toyota\"},\n    {\"tema\": \"velocidad_V2_kmh\", \"valor\": \"63\", \"evidencia\": \"el Toyota\"}\n  ]\n}"
+}

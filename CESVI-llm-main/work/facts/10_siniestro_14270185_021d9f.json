@@ -1,0 +1,46 @@
+{
+ "id": "10_siniestro_14270185_021d9f",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Jeep Liberty 2006 gris",
+  "V2": "GMC Acadia 2008 blanco"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "circulando en dirección Sur",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "realiza una maniobra de viraje hacia su izquierda",
+  "maniobra_previa_V2": null,
+  "senalizacion_preferencia": "señal de tipo restrictiva ubicada en el carril Oeste la cual dice que esta prohibida la vuelta",
+  "secuencia_eventos": "el vehículo tipo Acadia impacta al vehículo tipo Liberty en el costado derecho",
+  "punto_impacto_via": null,
+  "angulo_impacto": null,
+  "evidencias_sitio": "no se observan intercambios de pintura",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": "activadas las bolsas de aire la del conductor y las laterales de cortina",
+  "posicion_final_V1": "proyectado hacia la guarnición",
+  "posicion_final_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "sentido_carril_V1": "El conductor del vehículo tipo Liberty circula en dirección Sur sobre la avenida de las Torres",
+  "maniobra_previa_V1": "el conductor del vehículo tipo Liberty supuestamente realiza una maniobra de viraje hacia su izquierda rodeando la guarnición que protege la torre de alta tensión",
+  "senalizacion_preferencia": "cuenta con una señal de tipo restrictiva ubicada en el carril Oeste la cual dice que esta prohibida la vuelta",
+  "secuencia_eventos": "el conductor del vehículo tipo Liberty supuestamente realiza una maniobra de viraje hacia su izquierda rodeando la guarnición que protege la torre de alta tensión tal y como se muestra a continuación: Momentos después es supuestamente impactado por un vehículo tipo Acadia en el costado derecho",
+  "evidencias_sitio": "la observación de los daños encontrados en los vehículos en estudio, permite establecer que en ninguna de las dos superficies de contacto existe intercambio de pintura ni de color gris ni color blanco",
+  "airbags_V2": "En el habitáculo del vehículo tipo Acadia se observa que se activaron las bolsas de aire la del conductor y las laterales de cortina",
+  "posicion_final_V1": "Momentos después es supuestamente impactado por un vehículo tipo Acadia en el costado derecho y supuestamente proyectado hacia la guarnición"
+ },
+ "descartados": {
+  "iluminacion": "20:45 horas",
+  "punto_impacto_via": "costado derecho del vehículo tipo Liberty"
+ }
+}

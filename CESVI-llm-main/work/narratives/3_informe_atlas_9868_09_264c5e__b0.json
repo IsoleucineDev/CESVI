@@ -1,0 +1,113 @@
+{
+ "id": "3_informe_atlas_9868_09_264c5e",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Renault Clío 2006 gris",
+  "V2": "Ford Ikon 2005 rojo"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Al señor se le alcanza y golpea por detrás y se golpea a su cajuela e manera que queda afectado su vehículo y el cofre mío, esto fue a una velocidad mia de 60 km/hr cuando el señor transitaba a 20 km/hr."
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V2 golpea a la parte trasera del vehículo V1."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta pintura roja en la parte delantera del cofre, mientras que el vehículo V2 no presenta pintura gris en la parte trasera."
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con alumbrado público",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 60
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 20
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 7,
+ "asked": "secuencia_eventos",
+ "sintetico": true,
+ "pregunta": "¿Cuál es la secuencia de eventos que ocurrieron en este accidente?",
+ "respuesta": "EL VEHÍCULO FORD IKON ROJO GOLPEA A LA PARTE TRASERA DEL VEHÍCULO RENAULT CLÍO GRIS. ADemás, LA VELOCIDAD ESTIMADA DEL RENAULT CLÍO ANTES DEL EVENTO ERA DE 60 KM/H.",
+ "gold": {
+  "secuencia_eventos": {
+   "valor": "Ford Ikon rojo golpea Renault Clío gris",
+   "evidencia": "EL VEHÍCULO FORD IKON ROJO GOLPEA A LA PARTE TRASERA DEL VEHÍCULO RENAULT CLÍO GRIS"
+  },
+  "velocidad_V1_kmh": {
+   "valor": "60",
+   "evidencia": "LA VELOCIDAD ESTIMADA DEL RENAULT CLÍO ANTES DEL EVENTO ERA DE 60 KM/H"
+  }
+ }
+}

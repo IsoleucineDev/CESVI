@@ -1,0 +1,38 @@
+{
+ "id": "audi_a1_1_d1719f",
+ "split": "test",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Audi A1 2011 azul"
+ },
+ "valores": {
+  "declaracion_V1": "venia sobre periferico al querer salir para circuito azteca el coche se me patino y me subi a la banqueta",
+  "superficie": "asfalto de color negro",
+  "iluminacion": null,
+  "sentido_carril_V1": "circulaba sobre el periférico para incorporarse a la avenida Estadio Azteca girando hacia la derecha",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "girando hacia la derecha",
+  "causa_perdida_control": "el coche se me patino",
+  "vueltas_volcadura": null,
+  "secuencia_eventos": "El vehículo circulaba sobre el periférico para incorporarse a la avenida Estadio Azteca girando hacia la derecha. Luego, el coche se patinó y subió a la banqueta.",
+  "punto_impacto_via": "en la isleta de la avenida Estadio Azteca",
+  "evidencias_sitio": "restos de piezas plásticas de color negro y algunas de color azul con el logotipo de la marca Audi",
+  "huellas_frenado_m": null,
+  "airbags_V1": "sistema de bolsas de aire frontales se encuentra activado",
+  "posicion_final_V1": "el vehículo quedó detenido en la isleta de la avenida Estadio Azteca",
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "venia sobre periferico al querer salir para circuito azteca el coche se me patino y me subi a la banqueta",
+  "superficie": "La avenida Estadio Azteca consta de un arroyo vehicular con dos carriles de circulación construidos de asfalto de color negro, el cual esta en buenas condiciones",
+  "sentido_carril_V1": "El conductor del vehículo circula sobre periférico para incorporarse a la avenida Estadio Azteca girando hacia la derecha",
+  "maniobra_previa_V1": "El conductor del vehículo circula sobre periférico para incorporarse a la avenida Estadio Azteca girando hacia la derecha",
+  "causa_perdida_control": "el coche se me patino y me subi a la banqueta",
+  "secuencia_eventos": "El conductor del vehículo circula sobre periférico para incorporarse a la avenida Estadio Azteca girando hacia la derecha. Imagen 3.- Se muestra como el vehículo tipo Audi A1 se impacta contra la banqueta de la isleta de la avenida Estadio Azteca.",
+  "punto_impacto_via": "Imagen 3.- Se muestra como el vehículo tipo Audi A1 se impacta contra la banqueta de la isleta de la avenida Estadio Azteca.",
+  "evidencias_sitio": "sobre la banqueta resquebrajada de este lado se encontraron tallones sobre su superficie; así como en el interior se aprecian arbustos tipo palmera y árboles sembrados de igual forma se encontraron restos de piezas plásticas de color negro y algunas de color azul con el logotipo de la marca Audi",
+  "airbags_V1": "En el interior del habitáculo, vehículo tipo Audi A1 se observa que el sistema de bolsas de aire frontales se encuentra activado",
+  "posicion_final_V1": "Imagen 4.- Se muestra como el vehículo tipo Audi A1 queda detenido en la isleta de la avenida Estadio Azteca."
+ },
+ "descartados": {}
+}

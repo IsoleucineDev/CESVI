@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en secuencia_eventos",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "el camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "restos de esquirlas de vidrio en el habitáculo"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsas de aire tanto frontales como laterales activadas"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Land Rover LR2 HSE Premium 2008 negro",
+  "V2": "camión desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la secuencia de eventos que llevó al accidente?\",\n  \"respuesta\": \"El camión de carga me impactó en la parte trasera de mi Land Rover LR2 HSE Premium 2008 negro, perdiendo el control y cayendo a un caño. Además, en el habitáculo se encontraron restos de esquirlas de vidrio, y tanto las bolsas de aire frontales como las laterales se activaron.\",\n  \"extracciones\": [\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"camión impacto trasero Land Rover, pérdida de control, caída a caño\", \"evidencia\": \"el camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño\"},\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"restos de esquirlas de vidrio\", \"evidencia\": \"restos de esquirlas de vidrio en el habitáculo\"},\n    {\"tema\": \"airbags_V1\", \"valor\": \"frontales y laterales\", \"evidencia\": \"bolsas de aire tanto frontales como laterales activadas\"}\n  ]\n}"
+}

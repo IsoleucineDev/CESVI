@@ -1,0 +1,20 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "danos_V2",
+  "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "Daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta intercambio de pintura color blanco en la parte frontal derecha; el vehículo V2 no presenta intercambio de pintura"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jeep Grand Cherokee 1998 blanco",
+  "V2": "Nissan Sentra 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños específicos del Nissan Sentra 2008 gris?\",\n  \"respuesta\": \"El Nissan Sentra 2008 gris presenta daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; además, el faro derecho desprendido; la parrilla frontal desprendida; la placa desprendida; la salpicadera abombada; la fascia desprendida de la sujeción con la salpicadera; y el cofre con daño tipo abombamiento.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento\",\n      \"evidencia\": \"El Nissan Sentra 2008 gris presenta daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; además, el faro derecho desprendido; la parrilla frontal desprendida; la placa desprendida; la salpicadera abombada; la fascia desprendida de la sujeción con la salpicadera; y el cofre con daño tipo abombamiento.\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"intercambio de pintura color blanco en la parte frontal derecha\",\n      \"evidencia\": \"el Nissan Sentra 2008 gris presenta daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha\"\n    }\n  ]\n}"
+}

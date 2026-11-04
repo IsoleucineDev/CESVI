@@ -1,0 +1,17 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Mercedes Benz C-280 2007 blanco MAV-1144"
+ },
+ "valores": {
+  "tipo_objeto": "Coladera o bache en malas condiciones",
+  "causa_perdida_control": "Contacto con objeto fijo",
+  "punto_impacto_via": "Sobre una coladera o bache en malas condiciones",
+  "evidencias_sitio": "Vestigios de impacto en el rin delantero izquierdo",
+  "altura_marca_objeto_cm": "No especificado",
+  "danos_V1": "Deformación de la ceja del rin delantero izquierdo",
+  "declaracion_V1": "Circulando por Periférico y salir a Reforma caí en bache destrozó la llanta, cambie el rin refacción, acudí a Star Haus."
+ },
+ "id": "5502_a6337c",
+ "split": "train"
+}

@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Renault Clío 2006 gris circulaba a una velocidad estimada de 60 km/'",
+ "principal": {
+  "id": "velocidad_V1_kmh",
+  "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+  "valor": 60
+ },
+ "otros": [
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 20
+  }
+ ],
+ "vehiculos": {
+  "V1": "Renault Clío 2006 gris",
+  "V2": "Ford Ikon 2005 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la velocidad estimada del Renault Clío antes del evento?\",\n  \"respuesta\": \"El Renault Clío 2006 gris circulaba a una velocidad estimada de 60 km/h antes del evento, además el Ford Ikon rojo se movía a 20 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"20\",\n      \"evidencia\": \"el Ford Ikon rojo se movía a 20 km/h\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"60\",\n      \"evidencia\": \"El Renault Clío 2006 gris circulaba a una velocidad estimada de 60 km/h\"\n    }\n  ]\n}"
+}

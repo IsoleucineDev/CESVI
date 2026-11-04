@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en airbags_V2",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE POR EL CARRIL DERECHO CUANDO DE REPENTE SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO IMPACTANDO MI VEHÍCULO POR ENFRENTE"
+ },
+ "otros": [
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "ambas bolsas de aire"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Plymouth Freeze 1996 blanco",
+  "V2": "Ford Escort 1998 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Plymouth Freeze 1996 blanco sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor del Plymouth declaró que circulaba por la calle Fuente de Dalila de poniente a oriente por el carril derecho cuando de repente salió un vehículo invadiendo su carril por sentido contrario, impactándolo por enfrente; además, en relación a este hecho, se observó que ambas bolsas de aire del Ford Escort rojo se activaron.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE POR EL CARRIL DERECHO CUANDO DE REPENTE SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO IMPACTANDO MI VEHÍCULO POR ENFRENTE\",\n      \"evidencia\": \"El conductor del Plymouth declaró que circulaba por la calle Fuente de Dalila de poniente a oriente por el carril derecho cuando de repente salió un vehículo invadiendo su carril por sentido contrario, impactándolo por enfrente\"\n    },\n    {\n      \"tema\": \"airbags_V2\",\n      \"valor\": \"ambas bolsas de aire\",\n      \"evidencia\": \"ambas bolsas de aire se activaron\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,24 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "VW Jetta 2002 azul 970-WEJ",
+  "V2": "GM Camaro 1995 rojo PERMISO"
+ },
+ "valores": {
+  "sentido_carril_V1": "Sureste a Noroeste",
+  "sentido_carril_V2": "Sur a Norte",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "senalizacion_preferencia": "Sin señal de preferencia",
+  "punto_impacto_via": "Costado posterior derecho V2 y costado frontal izquierdo V1",
+  "angulo_impacto": "Perpendicular",
+  "evidencias_sitio": "Sin huellas de frenado, intercambio de pintura",
+  "airbags_V1": "Bolsa de aire del conductor y copiloto activadas",
+  "airbags_V2": null,
+  "secuencia_eventos": "V1 impacta a V2",
+  "declaracion_V1": "Saliendo de calle Azucena para salir a Av. Reforma da vuelta a la derecha y trato de frenar pero le pego a un Camaro rojo que viene sobre la calle Reforma",
+  "declaracion_V2": null
+ },
+ "id": "9_dic_3009_23848_4_4a8451",
+ "split": "train"
+}

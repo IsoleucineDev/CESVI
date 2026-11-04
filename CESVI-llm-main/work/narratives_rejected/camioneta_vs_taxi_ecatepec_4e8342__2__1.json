@@ -1,0 +1,20 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "da vuelta hacia la derecha en la Av. Chapultepec"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto en buenas condiciones de circulación"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford F350 1994 blanco y azul",
+  "V2": "Chevrolet Monza 2009 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Ford F350 antes del impacto?\",\n  \"respuesta\": \"El Ford F350 da vuelta hacia la derecha en la Av. Chapultepec, además la superficie es asfalto en buenas condiciones de circulación.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"da vuelta hacia la derecha\",\n      \"evidencia\": \"El Ford F350 da vuelta hacia la derecha en la Av. Chapultepec\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfalto\",\n      \"evidencia\": \"la superficie es asfalto en buenas condiciones de circulación\"\n    }\n  ]\n}"
+}

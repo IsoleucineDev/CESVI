@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en maniobra_previa_V1",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "estacionado"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo marca Kenworth impactó la parte posterior del lado izquierdo del semirremolque del vehículo marca Freigthliner"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión 2008 blanco",
+  "V2": "Kenworth Tractocamión 1992 verde"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Freightliner Tractocamión 2008 blanco antes del impacto?\",\n  \"respuesta\": \"El Freightliner Tractocamión 2008 blanco estaba estacionado, además el vehículo marca Kenworth impactó la parte posterior del lado izquierdo del semirremolque del vehículo marca Freigthliner.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"estacionado\",\n      \"evidencia\": \"estacionado\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El vehículo marca Kenworth impactó la parte posterior del lado izquierdo del semirremolque del vehículo marca Freigthliner\",\n      \"evidencia\": \"el vehículo marca Kenworth impactó la parte posterior del lado izquierdo del semirremolque del vehículo marca Freigthliner\"\n    }\n  ]\n}"
+}

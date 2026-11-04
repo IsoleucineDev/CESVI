@@ -1,0 +1,22 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Mitsubishi Lancer dejó una huella de frenado de 20 metros.'",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 20,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mitsubishi Lancer 2006 plata",
+  "V2": "Nissan Tsuru 2004 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado del Mitsubishi Lancer?\",\n  \"respuesta\": \"El Mitsubishi Lancer dejó una huella de frenado de 20 metros. Además, la velocidad estimada del Mitsubishi Lancer antes del evento era de 90 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"20\",\n      \"evidencia\": \"una huella de frenado de 20 metros\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"velocidad estimada del Mitsubishi Lancer antes del evento era de 90 km/h\"\n    }\n  ]\n}"
+}

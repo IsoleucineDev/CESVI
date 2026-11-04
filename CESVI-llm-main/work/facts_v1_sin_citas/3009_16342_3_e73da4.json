@@ -1,0 +1,18 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Dodge Neon 2003 negro 774-SZU",
+  "V2": "Desconocido"
+ },
+ "valores": {
+  "superficie": "seca",
+  "sentido_carril_V1": "Sur a Norte carril lateral",
+  "maniobra_previa_V1": "circulación",
+  "declaracion_V1": "impactado en costado izquierdo, proyectado contra camellón",
+  "punto_impacto_via": "camellón",
+  "evidencias_sitio": "sin huellas de frenado, sin intercambio de pintura",
+  "posicion_final_V1": "sobre el camellón"
+ },
+ "id": "3009_16342_3_e73da4",
+ "split": "train"
+}

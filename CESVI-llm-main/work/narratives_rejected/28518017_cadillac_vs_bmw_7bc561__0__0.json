@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Chevy Cadillac Deville 1998 oro no respetó la señal restrictiva de '",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "no respeta la señal restrictiva de Alto"
+ },
+ "otros": [
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "señal restrictiva de Alto"
+  }
+ ],
+ "vehiculos": {
+  "V1": "GM Cadillac Deville 1998 oro",
+  "V2": "BMW 528i 2000 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Chevy antes del impacto?\",\n  \"respuesta\": \"El Chevy Cadillac Deville 1998 oro no respetó la señal restrictiva de Alto, además realizó una maniobra que le llevó al punto de impacto con el BMW 528i 2000 blanco.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"senalizacion_preferencia\",\n      \"valor\": \"señal restrictiva de Alto\",\n      \"evidencia\": \"El Chevy Cadillac Deville 1998 oro no respetó la señal restrictiva de Alto\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"no respeta la señal restrictiva de Alto\",\n      \"evidencia\": \"El Chevy Cadillac Deville 1998 oro no respetó la señal restrictiva de Alto\"\n    }\n  ]\n}"
+}

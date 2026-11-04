@@ -1,0 +1,128 @@
+{
+ "id": "audi_21298088_529991",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Audi A-4 2001 negro"
+ },
+ "form": {
+  "posicion_final_V1": "impactado contra un árbol"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "VENIA sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "de Sur a Norte"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "cambio de trayectoria"
+  },
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "árbol"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo “A” cambia su trayectoria y se proyecta contra un árbol"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Km. 35+000 de la carretera libre Cuernavaca-Cuautla"
+  },
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "desprendimiento de corteza en el árbol y pequeñas esquirlas de pintura color negro incrustadas en la corteza del árbol"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfáltico en buenas condiciones"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "start": 0,
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías contarme brevemente cómo el conductor del Audi A-4 2001 negro describió el suceso?",
+   "respuesta": "VENIA sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol",
+   "valor": "VENIA sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿En qué dirección y carril circulaba el Audi A-4 2001 negro antes del accidente?",
+   "respuesta": "de Sur a Norte",
+   "valor": "de Sur a Norte"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el Audi A-4 2001 negro antes de impactarse?",
+   "respuesta": "creo que cambio de trayectoria",
+   "valor": "cambio de trayectoria"
+  },
+  {
+   "tema": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "pregunta": "¿Qué tipo de objeto impactó el Audi A-4 2001 negro?",
+   "respuesta": "árbol",
+   "valor": "árbol"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál fue la causa de la pérdida de control del Audi A-4 2001 negro?",
+   "respuesta": "desconozco",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías detallar la secuencia de eventos que ocurrieron durante el accidente?",
+   "respuesta": "el vehículo “A” cambia su trayectoria y se proyecta contra un árbol",
+   "valor": "el vehículo “A” cambia su trayectoria y se proyecta contra un árbol"
+  }
+ ]
+}

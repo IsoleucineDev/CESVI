@@ -1,0 +1,159 @@
+{
+ "id": "17472622_e635f1",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Jeep Grand Cherokee 1998 blanco",
+  "V2": "Nissan Sentra 2008 gris"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías contarnos cómo el conductor del Jeep Grand Cherokee describió el incidente?",
+   "respuesta": "El conductor del vehículo Grand Cherokee viene circulando por la carretera Yecapixtla-Agua Hedionda en dirección Sur a Norte y al llegar al cruce con el Libramiento Yecapixtla-Tetela se adelanta un poco para ver si puede pasar, al percatarse de que viene otro vehículo en dirección Oriente a Poniente, pone en marcha hacia atrás su vehículo sin percatarse que el vehículo Sentra se encuentra detrás de el, generándole los supuestos daños que se presentan.",
+   "valor": "El conductor del vehículo Grand Cherokee viene circulando por la carretera Yecapixtla-Agua Hedionda en dirección Sur a Norte y al llegar al cruce con el Libramiento Yecapixtla-Tetela se adelanta un poco para ver si puede pasar, al percatarse de que viene otro vehículo en dirección Oriente a Poniente, pone en marcha hacia atrás su vehículo sin percatarse que el vehículo Sentra se encuentra detrás de el, generándole los supuestos daños que se presentan."
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y la declaración del conductor del Sentra, ¿cómo fue?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Podrías describirnos la superficie de rodamiento?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿En qué dirección y carril iba el Jeep Grand Cherokee?",
+   "respuesta": "El conductor del vehículo Grand Cherokee venía circulando en dirección Sur a Norte",
+   "valor": "Sur a Norte"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el Nissan Sentra, ¿en qué dirección y carril circulaba?",
+   "respuesta": "El conductor del Sentra venía circulando en dirección Oriente a Poniente",
+   "valor": "Oriente a Poniente"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Jeep Grand Cherokee antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y la velocidad del Sentra?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el conductor del Jeep antes del accidente?",
+   "respuesta": "El conductor del vehículo Grand Cherokee realizó un avance para ver si podía pasar antes de realizar la maniobra en reversa",
+   "valor": "Avance para ver si puede pasar"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y el Sentra, qué maniobra realizó?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "pregunta": "¿Qué tipo de maniobra en reversa realizó el conductor del Jeep?",
+   "respuesta": "El conductor del vehículo Grand Cherokee realizó una maniobra en reversa sin percatarse que el vehículo Sentra se encuentra detrás de el",
+   "valor": "Maniobra en reversa sin percatarse que el vehículo Sentra se encuentra detrás de el"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue la secuencia de los eventos que llevaron al accidente?",
+   "respuesta": "El vehículo V1 realiza maniobra en reversa y colisiona con el vehículo V2 que se encuentra detrás",
+   "valor": "El vehículo V1 realiza maniobra en reversa y colisiona con el vehículo V2 que se encuentra detrás"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde ocurrió el impacto en la carretera?",
+   "respuesta": "El accidente ocurrió en el cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela",
+   "valor": "En el cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "creo que el vehículo V1 presenta intercambio de pintura color blanco en la parte frontal derecha; el vehículo V2 no presenta intercambio de pintura",
+   "valor": "El vehículo V1 presenta intercambio de pintura color blanco en la parte frontal derecha; el vehículo V2 no presenta intercambio de pintura"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Jeep?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en el Sentra?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Cuáles son los daños en el Jeep?",
+   "respuesta": "El vehículo Grand Cherokee presenta daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia",
+   "valor": "Daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Y en el Sentra?",
+   "respuesta": "El vehículo Sentra presenta daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento",
+   "valor": "Daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "pregunta": "¿Dónde quedó detenido el Jeep?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "pregunta": "Y el Sentra, ¿dónde quedó?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

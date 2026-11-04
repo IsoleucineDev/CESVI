@@ -1,0 +1,21 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_previa_V2",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "se frena"
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 25,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2004 azul",
+  "V2": "Chrysler 300C 2005 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V2 antes del impacto?\",\n  \"respuesta\": \"SE FRENÓ. ADemás, la longitud de las huellas de frenado era de 25 METROS.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"se frena\",\n      \"evidencia\": \"SE FRENÓ\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"25\",\n      \"evidencia\": \"de 25 METROS\"\n    }\n  ]\n}"
+}

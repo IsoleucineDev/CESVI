@@ -1,0 +1,27 @@
+{
+ "motivo": "evidencia no literal en maniobra_previa_V2",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "marcha"
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Eco sport 2005 rojo",
+  "V2": "Kenworth Volteo T 300 2008 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V2 antes del impacto?\",\n  \"respuesta\": \"DE DÍA CON BUENA VISIBILIDAD. LUEGO, MARCHA. Y, 90.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de dia con buena visibilidad\",\n      \"evidencia\": \"DE DÍA CON BUENA VISIBILIDAD\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"marcha\",\n      \"evidencia\": \"MARCHA\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"90\"\n    }\n  ]\n}"
+}

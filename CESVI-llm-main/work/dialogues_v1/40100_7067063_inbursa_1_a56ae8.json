@@ -1,0 +1,159 @@
+{
+ "id": "40100_7067063_inbursa_1_a56ae8",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Ford Fiesta modelo 2003, color blanco, placas 147 VXG",
+  "V2": "Ford Pick Up modelo 2008, color negro, placas 824 UFF"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías resumirme la declaración del conductor de la Ford Fiesta, blanco, sobre lo que ocurrió?",
+   "respuesta": "El conductor declaró que no vio el semáforo y pasó el alto cuando se encontraba circulando por la Avenida Rosal.",
+   "valor": "El conductor de la Fiesta declaró que no vio el semáforo y pasó el alto cuando se encontraba circulando por la Avenida Rosal."
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y la declaración del conductor de la Pick Up, ¿la tienes?",
+   "respuesta": "No especificado en el dictamen.",
+   "valor": "No especificado en el dictamen."
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "Seca",
+   "valor": "Seca"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación había en el momento del accidente?",
+   "respuesta": "Día",
+   "valor": "Día"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Podrías decirme en qué dirección y carril circulaba la Fiesta?",
+   "respuesta": "Creo que iba de Norte a Sur",
+   "valor": "Norte a Sur"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y la Pick Up, ¿en qué dirección y carril circulaba?",
+   "respuesta": "Poniente a Oriente",
+   "valor": "Poniente a Oriente"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Podrías estimar la velocidad de la Fiesta antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y la velocidad de la Pick Up antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba la Fiesta antes del impacto?",
+   "respuesta": "Creo que más o menos circulando",
+   "valor": "Circulando"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "Y la Pick Up, ¿qué maniobra realizaba?",
+   "respuesta": "La Pick Up más o menos circulaba",
+   "valor": "Circulando"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuál era la distancia aproximada entre los vehículos antes del impacto?",
+   "respuesta": "Creo que más o menos 6 mts",
+   "valor": "6 mts"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describirme la secuencia de los eventos, es decir, el orden y tipo de los impactos?",
+   "respuesta": "Primer contacto entre el vehículo V1 y V2",
+   "valor": "Primer contacto entre el vehículo V1 y V2"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "Creo que más o menos Avenida Alta Tensión y Avenida Rosal",
+   "valor": "Avenida Alta Tensión y Avenida Rosal"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Huellas de impacto, intercambio de pintura",
+   "valor": "Huellas de impacto, intercambio de pintura"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuánta longitud tenían las huellas de frenado?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en la Fiesta?",
+   "respuesta": "No especificado en el dictamen",
+   "valor": "No especificado en el dictamen"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "Y en la Pick Up, ¿cuáles se activaron?",
+   "respuesta": "No especificado en el dictamen",
+   "valor": "No especificado en el dictamen"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Cuáles fueron los daños de la Fiesta?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "Y los daños de la Pick Up?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Posición final de V1: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Cuál fue la posición final de la Fiesta?",
+   "respuesta": "Desplazamiento hacia adelante",
+   "valor": "Desplazamiento hacia adelante"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Posición final de V2: ubicación, rumbo y tipo de barrido",
+   "pregunta": "Y la posición final de la Pick Up?",
+   "respuesta": "Desplazamiento hacia adelante",
+   "valor": "Desplazamiento hacia adelante"
+  }
+ ]
+}

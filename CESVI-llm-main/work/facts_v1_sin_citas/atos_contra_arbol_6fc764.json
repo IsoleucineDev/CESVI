@@ -1,0 +1,21 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "HYUNDAI ATOS 2009 ROJO 398-WKH"
+ },
+ "valores": {
+  "superficie": "asfalto",
+  "iluminacion": "día",
+  "sentido_carril_V1": "Este a Oeste",
+  "velocidad_V1_kmh": "40",
+  "maniobra_previa_V1": "cambio de carril",
+  "causa_perdida_control": "corte de circulación",
+  "punto_impacto_via": "camellón central",
+  "altura_marca_objeto_cm": "80",
+  "evidencias_sitio": "no se encontraron huellas de frenado ni intercambio de pintura",
+  "danos_V1": "hundimiento frontal (0.80m), daño radiador (0.50m), daño sistema de enfriamiento",
+  "posicion_final_V1": "en el camellón central"
+ },
+ "id": "atos_contra_arbol_6fc764",
+ "split": "train"
+}

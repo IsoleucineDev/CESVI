@@ -1,0 +1,27 @@
+{
+ "motivo": "valor no concuerda con su evidencia en huellas_frenado_m",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "giro"
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 15,
+   "sintetico": true
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner Palett 2009 rojo",
+  "V2": "Nissan Tsuru 2010 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de Freightliner antes del impacto?\",\n  \"respuesta\": \"El Freightliner realizó un giro antes del impacto. Además, no se observaron huellas de frenado en la escena. Luego, la iluminación era de día con buena visibilidad.\",\n  \"extracciones\": [\n    {\"tema\": \"maniobra_previa_V1\", \"valor\": \"giro\", \"evidencia\": \"el Freightliner realizó un giro antes del impacto\"},\n    {\"tema\": \"huellas_frenado_m\", \"valor\": 15, \"evidencia\": \"no se observaron huellas de frenado en la escena\"},\n    {\"tema\": \"iluminacion\", \"valor\": \"de día con buena visibilidad\", \"evidencia\": \"la iluminación era de día con buena visibilidad\"}\n  ]\n}"
+}

@@ -1,0 +1,28 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "JEEP LIBERTY 2006 GRIS YCP-6387",
+  "V2": "GMC ACADIA 2008 BLANCO YEZ-1296"
+ },
+ "valores": {
+  "declaracion_V1": "Circulaba en dirección Sur sobre la avenida de las Torres y realizó una maniobra de viraje hacia su izquierda rodeando la guarnición que protege la torre de alta tensión.",
+  "declaracion_V2": null,
+  "superficie": "asfalto",
+  "iluminacion": "noche con alumbrado público",
+  "sentido_carril_V1": "Sur",
+  "sentido_carril_V2": "Norte",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "viraje",
+  "maniobra_previa_V2": null,
+  "senalizacion_preferencia": "señal de prohibida la vuelta",
+  "punto_impacto_via": "costado derecho V1 y costado izquierdo V2",
+  "angulo_impacto": "oblicuo",
+  "evidencias_sitio": "huellas de frenado y marcas de impacto",
+  "huellas_frenado_m": null,
+  "airbags_V1": "ninguno",
+  "airbags_V2": "del conductor y las laterales de cortina"
+ },
+ "id": "10_siniestro_14270185_021d9f",
+ "split": "train"
+}

@@ -1,0 +1,111 @@
+{
+ "id": "2_dictamen_no_siniestro_16582_4_7f9bcf",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "HONDA ACCORD 1999 VIOLETA 163-MEH"
+ },
+ "form": {
+  "posicion_final_V1": "fuera de la vía en la banqueta"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías contarme cómo el conductor del Honda Accord 1999 describió el incidente?",
+   "respuesta": "El conductor mencionó que circulaba por Revolución casi esquina Bayoneta cuando un peatón se atravesó en su camino. Giró el volante hacia la derecha para evitarlo, lo que lo llevó a impactarse en la banqueta. Un Optra lo rozó en la parte trasera izquierda y luego lo ayudó a salir del vehículo.",
+   "valor": "Circulaba por Revolución casi esquina Bayoneta y un peatón se atraviesa, gire el volante a la derecha, me impacte en la banqueta por no arrollar a la señora, un Optra me rozo la parte de atrás izquierda es el quien me ayuda a salir del vehículo luego se fue."
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Qué condiciones presentaba la superficie de rodamiento en el momento del accidente?",
+   "respuesta": "La superficie era asfalto.",
+   "valor": "asfalto"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo estaban las condiciones de iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "Era de día.",
+   "valor": "día"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación y carril por el que iba el Honda Accord 1999?",
+   "respuesta": "El Honda Accord circulaba hacia el Norte.",
+   "valor": "Norte"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Podrías estimar la velocidad del Honda Accord antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el Honda Accord antes del impacto?",
+   "respuesta": "El Honda Accord realizó un giro.",
+   "valor": "giro"
+  },
+  {
+   "tema": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "pregunta": "¿Qué tipo de objeto impactó el Honda Accord y cuál es su altura?",
+   "respuesta": "El objeto impactado fue una guarnición con caseta telefónica y poste.",
+   "valor": "guarnición con caseta telefónica y poste"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál crees que fue la causa de la pérdida de control del Honda Accord?",
+   "respuesta": "Creo que la pérdida de control fue más o menos por esquivar a un peatón.",
+   "valor": "esquivar peatón"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describir la secuencia de los impactos?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "El punto de impacto se ubicó en la banqueta esquina Revolución y Bayoneta.",
+   "valor": "banqueta esquina Revolución y Bayoneta"
+  },
+  {
+   "tema": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "pregunta": "¿Cuál es la altura de las marcas del impacto en el objeto fijo?",
+   "respuesta": "Las marcas del impacto en el objeto fijo tienen una altura de aproximadamente 34 cm.",
+   "valor": "34"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "En el sitio del accidente se observaron huellas de frenado y un intercambio de pintura amarilla en el tapón delantero derecho del Honda Accord.",
+   "valor": "huellas de frenado, intercambio de pintura amarilla en tapón delantera derecha"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Honda Accord?",
+   "respuesta": "Creo que los airbags del Honda Accord estuvieron más o menos activados.",
+   "valor": "activados"
+  }
+ ]
+}

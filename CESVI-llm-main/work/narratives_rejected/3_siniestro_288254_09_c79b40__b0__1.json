@@ -1,0 +1,22 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Mercedes tuvo una deformación en el costado derecho a 55 cm de altu'",
+ "principal": {
+  "id": "danos_V1",
+  "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "deformación en el costado derecho a 55 cm de altura",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "deformación en el costado derecho a 55 cm de altura",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz Autobús 2001 blanco con franjas rojas y azul marino",
+  "V2": "Chevrolet Van Ambulancia 2004 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños de V1 y en qué zona y altura?\",\n  \"respuesta\": \"El Mercedes tuvo una deformación en el costado derecho a 55 cm de altura además el Chevy también presentó daños similares\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V1\",\n      \"valor\": \"deformacion_costado_derecho_55\",\n      \"evidencia\": \"deformación en el costado derecho a 55 cm de altura\"\n    },\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"deformacion_costado_derecho_55\",\n      \"evidencia\": \"deformación en el costado derecho a 55 cm de altura\"\n    }\n  ]\n}"
+}

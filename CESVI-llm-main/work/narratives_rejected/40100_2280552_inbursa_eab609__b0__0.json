@@ -1,0 +1,14 @@
+{
+ "motivo": "oración con contenido no extraído: 'En el momento del accidente, no había ninguna señalización de preferen'",
+ "principal": {
+  "id": "senalizacion_preferencia",
+  "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+  "valor": "sin señalización en el cruce",
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Dodge Attitude 2006 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la señalización de preferencia en el cruce donde ocurrió la colisión?\",\n  \"respuesta\": \"En el momento del accidente, no había ninguna señalización de preferencia en el cruce, lo que significa que no había semáforos ni señales de alto o ceda el paso que indicaran quién tenía preferencia de paso.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"senalizacion_preferencia\",\n      \"valor\": \"sin señalización\",\n      \"evidencia\": \"no había ninguna señalización de preferencia en el cruce\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en secuencia_eventos",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "sin frenado"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V1 colisionó en la parte posterior del vehículo V2, proyectándolo"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura color rojo en el vehículo V1, pintura color arena y rosa en el vehículo V2"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mitsubishi Lancer 2006 plata",
+  "V2": "Nissan Tsuru 2004 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Lancer antes del impacto?\",\n  \"respuesta\": \"El vehículo Mitsubishi Lancer 2006, de color plata, no realizó ninguna maniobra de frenado antes del impacto, además, el Lancer colisionó en la parte posterior del Nissan Tsuru 2004, de color rojo, y luego se observó pintura color rojo en el vehículo Lancer, pintura color arena y rosa en el vehículo Tsuru.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"sin frenado\",\n      \"evidencia\": \"El vehículo Mitsubishi Lancer 2006, de color plata, no realizó ninguna maniobra de frenado antes del impacto\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El vehículo V1 colisionó en la parte posterior del vehículo V2, proyectándolo\",\n      \"evidencia\": \"El Lancer colisionó en la parte posterior del Nissan Tsuru 2004, de color rojo\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"pintura color rojo en el vehículo V1, pintura color arena y rosa en el vehículo V2\",\n      \"evidencia\": \"se observó pintura color rojo en el vehículo Lancer, pintura color arena y rosa en el vehículo Tsuru\"\n    }\n  ]\n}"
+}

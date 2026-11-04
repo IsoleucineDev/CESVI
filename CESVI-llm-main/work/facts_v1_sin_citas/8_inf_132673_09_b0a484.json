@@ -1,0 +1,25 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volvo Tractocamión Madrina 2001 blanco 141-EE8 con semirremolque tipo madrina",
+  "V2": "Kenworth Tractocamión 2009 blanco 304-AE2 con full de carretera porta contenedores"
+ },
+ "valores": {
+  "declaracion_V1": "Conductor siente un fuerte impacto y observa un contenedor en llamas.",
+  "declaracion_V2": "No especificado en el informe.",
+  "superficie": "Carretera asfaltada",
+  "iluminacion": "Noche",
+  "sentido_carril_V1": "Carril derecho sentido Oriente a Poniente",
+  "sentido_carril_V2": "Carril derecho sentido Oriente a Poniente",
+  "velocidad_V1_kmh": "No especificado",
+  "velocidad_V2_kmh": "No especificado",
+  "maniobra_previa_V1": "Circulación normal",
+  "maniobra_previa_V2": "Circulación normal",
+  "distancia_previa": "No especificada",
+  "secuencia_eventos": "Kenworth impacta por detrás al Volvo",
+  "punto_impacto_via": "Carril derecho",
+  "evidencias_sitio": "Huellas de frenado no mencionadas, restos de incendio"
+ },
+ "id": "8_inf_132673_09_b0a484",
+ "split": "train"
+}

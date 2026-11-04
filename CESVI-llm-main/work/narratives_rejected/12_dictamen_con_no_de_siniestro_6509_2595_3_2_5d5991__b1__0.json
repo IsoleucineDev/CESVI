@@ -1,0 +1,19 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "TRANSITABA DE LA CARRETERA TEJUPILCO A TOLUCA cuando pasando temascaltepec estaba un arbol tirado en la carretera perdiendo la estabilidad el auto el cual se pego en la cuneta y dio 3 vueltas quedando bastante averiado"
+ },
+ "otros": [
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "exceso de velocidad"
+  }
+ ],
+ "vehiculos": {
+  "V1": "General Motors Corsa 2004 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Chevy sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor del Chevy declaró que transitaba de la carretera Tejupilco a Toluca cuando pasando Temascaltepec encontró un árbol tirado en la carretera, lo que le causó la pérdida de estabilidad del auto. Además, el vehículo se impactó contra la cuneta y dio varias vueltas quedando bastante averiado.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"transitaba de la carretera Tejupilco a Toluca cuando pasando temascaltepec estaba un arbol tirado en la carretera perdiendo la estabilidad el auto el cual se pego en la cuneta y dio 3 vueltas quedando bastante averiado\",\n      \"evidencia\": \"El conductor del Chevy declaró que transitaba de la carretera Tejupilco a Toluca cuando pasando Temascaltepec encontró un árbol tirado en la carretera, lo que le causó la pérdida de estabilidad del auto. Además, el vehículo se impactó contra la cuneta y dio varias vueltas quedando bastante averiado.\"\n    },\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"exceso de velocidad\",\n      \"evidencia\": \"lo que le causó la pérdida de estabilidad del auto.\"\n    }\n  ]\n}"
+}

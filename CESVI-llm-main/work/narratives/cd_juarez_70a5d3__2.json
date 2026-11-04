@@ -1,0 +1,115 @@
+{
+ "id": "cd_juarez_70a5d3",
+ "split": "train",
+ "modalidad": "colision_frontal",
+ "vehiculos": {
+  "V1": "Plymouth Freeze 1996 blanco",
+  "V2": "Ford Escort 1998 rojo"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE POR EL CARRIL DERECHO CUANDO DE REPENTE SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO IMPACTANDO MI VEHÍCULO POR ENFRENTE"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Pte a Ote"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "Ote a Pte"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "ninguno"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "V2 invadiendo carril de V1 y chocando frontalmente"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Fuente de Dalila"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "ninguna"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "ambas bolsas de aire"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "ambas bolsas de aire"
+  }
+ ],
+ "g": 0,
+ "asked": "declaracion_V1",
+ "pregunta": "¿Cuál es la declaración del conductor del Plymouth Freeze 1996 blanco sobre cómo ocurrió el hecho?",
+ "respuesta": "El conductor del Plymouth Freeze 1996 blanco declaró que circulaba por la calle Fuente de Dalila de poniente a oriente por el carril derecho cuando de repente salió un vehículo invadiendo su carril por sentido contrario, impactándolo frontalmente. Además, en el Ford Escort 1998 rojo, ambas bolsas de aire se activaron.",
+ "gold": {
+  "declaracion_V1": {
+   "valor": "circulaba por la calle Fuente de Dalila de poniente a oriente por el carril derecho cuando de repente salió un vehículo invadiendo su carril por sentido contrario, impactándolo frontalmente",
+   "evidencia": "El conductor del Plymouth Freeze 1996 blanco declaró que circulaba por la calle Fuente de Dalila de poniente a oriente por el carril derecho cuando de repente salió un vehículo invadiendo su carril por sentido contrario, impactándolo frontalmente"
+  },
+  "airbags_V2": {
+   "valor": "ambas",
+   "evidencia": "ambas bolsas de aire se activaron"
+  }
+ }
+}

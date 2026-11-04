@@ -1,0 +1,50 @@
+{
+ "id": "224121_navistar_hilux_3f7230",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Navistar Autobús 2009 amarillo",
+  "V2": "Toyota Hilux 2009 gris plata"
+ },
+ "valores": {
+  "declaracion_V1": "El conductor del vehículo marca Navistar, tipo Autobús, modelo 2009, color amarillo, placas de circulación 200347-B, viene circulando en sentido N a S en el carril del extremo derecho de la Avenida Maestros Campechanos, justo al cruce con la calle Servidor Agrario, da vuelta a la izquierda en el retorno, momentos antes el conductor del vehículo marca Toyota, tipo Hilux, modelo 2009, color gris plata, con placas de circulación CN-41970, viene circulando por la misma avenida pero en el carril del extremo izquierdo, el cual se impacta contra la parte posterior del faldón izquierdo del vehículo tipo autobús.",
+  "declaracion_V2": null,
+  "superficie": "pavimento es estado aceptable para la circulación",
+  "iluminacion": null,
+  "sentido_carril_V1": "Norte a Sur en el carril del extremo derecho",
+  "sentido_carril_V2": "Norte a Sur en el carril del extremo izquierdo",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "da vuelta a la izquierda en el retorno",
+  "maniobra_previa_V2": "circulando",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "el vehículo V2 impacta contra la parte posterior del faldón izquierdo del vehículo V1",
+  "punto_impacto_via": null,
+  "angulo_impacto": null,
+  "evidencias_sitio": "intercambio de pintura color gris y desprendimientos de pintura color amarillo",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "El conductor del vehículo marca Navistar, tipo Autobús, modelo 2009, color amarillo, placas de circulación 200347-B, viene circulando en sentido N a S en el carril del extremo derecho de la Avenida Maestros Campechanos, justo al cruce con la calle Servidor Agrario, da vuelta a la izquierda en el retorno, momentos antes el conductor del vehículo marca Toyota, tipo Hilux, modelo 2009, color gris plata, con placas de circulación CN-41970, viene circulando por la misma avenida pero en el carril del extremo izquierdo, el cual se impacta contra la parte posterior del faldón izquierdo del vehículo tipo autobús.",
+  "superficie": "La avenida Maestros Campechanos se define como una vía de corte recto con dos arroyos vehiculares, cada uno con dos carriles de circulación sin línea de división, con pavimento es estado aceptable para la circulación;",
+  "sentido_carril_V1": "El conductor del vehículo marca Navistar, tipo Autobús, modelo 2009, color amarillo, placas de circulación 200347-B, viene circulando en sentido N a S en el carril del extremo derecho de la Avenida Maestros Campechanos",
+  "sentido_carril_V2": "el conductor del vehículo marca Toyota, tipo Hilux, modelo 2009, color gris plata, con placas de circulación CN-41970, viene circulando por la misma avenida pero en el carril del extremo izquierdo",
+  "maniobra_previa_V1": "da vuelta a la izquierda en el retorno",
+  "maniobra_previa_V2": "el conductor del vehículo marca Toyota, tipo Hilux, modelo 2009, color gris plata, con placas de circulación CN-41970, viene circulando por la misma avenida pero en el carril del extremo izquierdo",
+  "secuencia_eventos": "el cual se impacta contra la parte posterior del faldón izquierdo del vehículo tipo autobús.",
+  "evidencias_sitio": "se observan también intercambios de lo que parece ser plástico color negro y tierra a una altura de 1.10m sobre el cofre acentuados en el lado derecho; la parrilla, unidad de luz derecha e izquierda se encuentran desprendidas y fuera de su lugar; la fascia se presenta con daños tipo ruptura en su parte centran, desprendida y fuera de su lugar;"
+ },
+ "descartados": {
+  "iluminacion": "día",
+  "senalizacion_preferencia": "el vehículo V2 no tenía preferencia de paso",
+  "punto_impacto_via": "carril del extremo derecho de la Avenida Maestros Campechanos",
+  "posicion_final_V1": "ubicación desconocida",
+  "posicion_final_V2": "ubicación desconocida"
+ }
+}

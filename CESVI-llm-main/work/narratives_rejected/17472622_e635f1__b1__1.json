@@ -1,0 +1,26 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "danos_V1",
+  "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "Daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia"
+ },
+ "otros": [
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "Daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jeep Grand Cherokee 1998 blanco",
+  "V2": "Nissan Sentra 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"Describe los daños del Jeep Grand Cherokee 1998 blanco.\",\n  \"respuesta\": \"El Jeep Grand Cherokee 1998 blanco presenta daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia. Además, la Nissan Sentra 2008 gris tiene daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento. Luego, se observa una huella de frenado con una longitud de 8 metros.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V1\",\n      \"valor\": \"hundimiento de muy baja magnitud que va de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia\",\n      \"evidencia\": \"daños tipo hundimiento de muy baja magnitud que van de atrás hacia adelante con pérdida de pintura a la altura de los topes de fascia\"\n    },\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento\",\n      \"evidencia\": \"daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"8\",\n      \"evidencia\": \"una longitud de 8 metros\"\n    }\n  ]\n}"
+}

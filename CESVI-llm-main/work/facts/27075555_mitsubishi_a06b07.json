@@ -1,0 +1,38 @@
+{
+ "id": "27075555_mitsubishi_a06b07",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2006 negro"
+ },
+ "valores": {
+  "declaracion_V1": "VENIA CIRCULANDO X TERRACERIA ENTRE BENITO JUAREZ Y PESCADOR SE DERRAPO CAMIONETA Y LA GRAVA EN EXCESO SACANDOME DEL CAMINO A 50 METROS",
+  "superficie": "terracería con tierra suelta de color rojo",
+  "iluminacion": null,
+  "sentido_carril_V1": "circulando por la terracería",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "se despista hacia el lado derecho de la terracería",
+  "secuencia_eventos": "El vehículo circulaba por la terracería, pierde el control y se despista hacia el lado derecho, internándose entre la vegetación",
+  "punto_impacto_via": "terracería entre Benito Juárez y Pescador",
+  "causa_perdida_control": "derrape",
+  "evidencias_sitio": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "internado entre la vegetación, compuesto por arbustos de baja altura",
+  "vueltas_volcadura": null,
+  "huellas_frenado_m": null,
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "VENIA CIRCULANDO X TERRACERIA ENTRE BENITO JUAREZ Y PESCADOR SE DERRAPO CAMIONETA Y LA GRAVA EN EXCESO SACANDOME DEL CAMINO A 50 METROS",
+  "superficie": "El camino de terracería se encuentra en una línea recta a desnivel del terreno natural, con tierra suelta de color rojo",
+  "sentido_carril_V1": "VENIA CIRCULANDO X TERRACERIA ENTRE BENITO JUAREZ Y PESCADOR SE DERRAPO CAMIONETA Y LA GRAVA EN EXCESO SACANDOME DEL CAMINO A 50 METROS",
+  "maniobra_previa_V1": "Momento en que el conductor del vehículo en estudio, pierde el control y se despista hacia el lado derecho de la terracería",
+  "secuencia_eventos": "Dinámica 1.- Posición inicial del vehículo en estudio: circula por una terracería. Dinámica 2.- Momento en que el conductor del vehículo en estudio, pierde el control y se despista hacia el lado derecho de la terracería. Dinámica 3.- Posición final del vehículo en estudio, se interna entre la vegetación, compuesta por arbustos de baja altura.",
+  "punto_impacto_via": "El Sitio que se declara como lugar de los hechos se ubica en terracería entre Benito Juárez y Pescador, en el Municipio de Pajapan, en el Estado de Veracruz.",
+  "causa_perdida_control": "VENIA CIRCULANDO X TERRACERIA ENTRE BENITO JUAREZ Y PESCADOR SE DERRAPO CAMIONETA Y LA GRAVA EN EXCESO SACANDOME DEL CAMINO A 50 METROS",
+  "posicion_final_V1": "Posición final del vehículo en estudio, se interna entre la vegetación, compuesta por arbustos de baja altura."
+ },
+ "descartados": {
+  "evidencias_sitio": "huellas de alambre de púas en el vehículo"
+ }
+}

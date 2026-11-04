@@ -1,0 +1,19 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "de Sur a Norte"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Av. Revolución y calle Bayoneta"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Honda Accord 1999 violeta"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Honda Accord 1999 violeta?\",\n  \"respuesta\": \"EL HONDA ACCORD 1999 VIOLETA CIRCULABA DE SUR A NORTE. ADYACENTEMENTE, OCURRIÓ EL IMPACTO EN AV. REVOLUCIÓN Y CALLE BAYONETA.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"de Sur a Norte\",\n      \"evidencia\": \"EL HONDA ACCORD 1999 VIOLETA CIRCULABA DE SUR A NORTE\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"Av. Revolución y calle Bayoneta\",\n      \"evidencia\": \"OCURRIÓ EL IMPACTO EN AV. REVOLUCIÓN Y CALLE BAYONETA\"\n    }\n  ]\n}"
+}

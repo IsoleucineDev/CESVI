@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en senalizacion_preferencia",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "detenido"
+ },
+ "otros": [
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "semáforo"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "después de impactar con V2, gira hacia su derecha e impacta con el vehículo C"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "restos de caucho negro en V1 y restos de pintura negra en V2"
+  }
+ ],
+ "vehiculos": {
+  "V1": "BMW 325IA 2008 blanco",
+  "V2": "BMW 550I 2004 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V2 antes del impacto?\",\n  \"respuesta\": \"El BMW 550I 2004 azul estaba detenido antes del impacto. Además, después de impactar con V2, el BMW 325IA 2008 blanco gira hacia su derecha e impacta con el vehículo C. Luego, se observan restos de caucho negro en el BMW 325IA 2008 blanco y restos de pintura negra en el BMW 550I 2004 azul.\",\n  \"extracciones\": [\n    {\"tema\": \"maniobra_previa_V2\", \"valor\": \"detenido\", \"evidencia\": \"El BMW 550I 2004 azul estaba detenido antes del impacto.\"},\n    {\"tema\": \"senalizacion_preferencia\", \"valor\": \"semáforo\", \"evidencia\": \"\"},\n    {\"tema\": \"posicion_final_V1\", \"valor\": \"después de impactar con V2, gira hacia su derecha e impacta con el vehículo C\", \"evidencia\": \"después de impactar con V2, gira hacia su derecha e impacta con el vehículo C\"},\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"restos de caucho negro en V1 y restos de pintura negra en V2\", \"evidencia\": \"se observan restos de caucho negro en el BMW 325IA 2008 blanco y restos de pintura negra en el BMW 550I 2004 azul\"}\n  ]\n}"
+}

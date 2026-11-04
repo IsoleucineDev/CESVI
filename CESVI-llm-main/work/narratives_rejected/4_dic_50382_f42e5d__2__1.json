@@ -1,0 +1,30 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "Circulaba por la calle de Camelia y al querer cruzar el eje salio una camioneta y no alcanza a detenerse y me impacte con ella, la camioneta con la que me impacte viene por el eje Guerrero"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "cruzando el eje"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "el vehículo V1 presenta restos de pintura color azul y el vehículo V2 no presenta impregnación de pintura color arena"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "del lado del conductor y del acompañante"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan X Trail 2004 arena",
+  "V2": "Jeep Liberty 2002 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor de Nissan X Trail 2004 arena sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"Cruzaba el eje Guerrero cuando salió el Nissan X Trail 2004 arena y no pude detenerme a tiempo, impactándome con él. Además, las bolsas de aire del lado del conductor y del acompañante se activaron luego del impacto.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"cruzando el eje\",\n      \"evidencia\": \"Cruzaba el eje Guerrero cuando salió el Nissan X Trail 2004 arena\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"del lado del conductor y del acompañante\",\n      \"evidencia\": \"las bolsas de aire del lado del conductor y del acompañante se activaron luego del impacto\"\n    },\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"Circulaba por la calle de Camelia y al querer cruzar el eje salio una camioneta y no alcanza a detenerse y me impacte con ella, la camioneta con la que me impacte viene por el eje Guerrero\",\n      \"evidencia\": \"Cruzaba el eje Guerrero cuando salió el Nissan X Trail 2004 arena y no pude detenerme a tiempo, impactándome con él\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"el vehículo V1 presenta restos de pintura color azul y el vehículo V2 no presenta impregnación de pintura color arena\",\n      \"evidencia\": \"el Nissan X Trail 2004 arena presenta restos de pintura color azul y el vehículo V2 no presenta impregnación de pintura color arena\"\n    }\n  ]\n}"
+}

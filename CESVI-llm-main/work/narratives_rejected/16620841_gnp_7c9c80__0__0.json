@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en evidencias_sitio",
+ "principal": {
+  "id": "posicion_final_V1",
+  "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+  "valor": "El vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra [...]"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Astra 2002 gris",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde quedó detenido el Chevy Astra tras el evento?\",\n  \"respuesta\": \"El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"huellas de frenado, restos, intercambio de pintura, marcas\",\n      \"evidencia\": \"El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra [...]\"},\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"cuneta, montículo de tierra y piedras\",\n      \"evidencia\": \"finalmente impacta contra un montículo de tierra y piedras\"\n    }\n  ]\n}"
+}

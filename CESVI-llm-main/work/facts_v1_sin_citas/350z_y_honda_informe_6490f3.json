@@ -1,0 +1,20 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan 350Z 2004 Plata",
+  "V2": "Honda Accord 2006 Dorado"
+ },
+ "valores": {
+  "declaracion_V1": "ESTANDO EN LA LATERAL DE VIADUCTO SALE EL SIGAY UN VEHICULO ME IMPACTA TENIENDO LA LUZ ROJA",
+  "senalizacion_preferencia": "semaforizado",
+  "punto_impacto_via": "lateral de Viaducto, carril derecho",
+  "angulo_impacto": "oblicuo",
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura dorada-plata",
+  "posicion_final_V1": "contra guarnición derecha de la lateral de Viaducto",
+  "posicion_final_V2": "sin mención explícita",
+  "airbags_V1": "cortina y lateral del lado derecho",
+  "airbags_V2": "sin mención explícita"
+ },
+ "id": "350z_y_honda_informe_6490f3",
+ "split": "valid"
+}

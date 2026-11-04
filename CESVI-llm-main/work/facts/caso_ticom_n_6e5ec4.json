@@ -1,0 +1,48 @@
+{
+ "id": "caso_ticom_n_6e5ec4",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Toyota Camry 2002 gris plata",
+  "V2": "Saab 9-3 2004 gris Oxford"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "circulación de noreste a suroeste",
+  "sentido_carril_V2": "circulación de suroeste a noreste",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "desacoplamiento de la fascia",
+  "maniobra_previa_V2": "desacoplamiento del costado",
+  "distancia_previa": null,
+  "secuencia_eventos": "V2 impacta por detrás a V1",
+  "punto_impacto_via": "avenida Ticomán sin referencia",
+  "evidencias_sitio": "restos de pintura color verde en el Saab",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "detenido con el vehículo V2",
+  "posicion_final_V2": "detenido con el vehículo V1",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "sentido_carril_V1": "El flujo de la circulación se dirige de Noroeste a Sureste y viceversa",
+  "sentido_carril_V2": "El flujo de la circulación se dirige de Noroeste a Sureste y viceversa",
+  "maniobra_previa_V1": "La parte frontal del vehículo en cuestión presenta daños generados por impacto contra cuerpo duro en la parte media con características de hundimiento sobre el cofre de adelante hacía atrás demás de que encuentra desacoplado",
+  "maniobra_previa_V2": "El lado derecho presenta daños solamente en la parte trasera, en donde se puede apreciar el desacoplamiento del costado",
+  "secuencia_eventos": "Se considera un impacto tipo alcance",
+  "punto_impacto_via": "El lugar de los hechos se registra sobre la Avenida Ticomán sin referencia",
+  "evidencias_sitio": "del lado izquierdo de la fascia posterior se aprecian restos de pintura color verde que definen la forma de letras y números",
+  "posicion_final_V1": "Se muestra el punto de impacto entre los vehículos involucrados",
+  "posicion_final_V2": "Se muestra el punto de impacto entre los vehículos involucrados"
+ },
+ "descartados": {
+  "superficie": "asfalto seco",
+  "iluminacion": "noche",
+  "airbags_V1": "activados"
+ }
+}

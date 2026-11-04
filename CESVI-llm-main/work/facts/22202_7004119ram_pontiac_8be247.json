@@ -1,0 +1,45 @@
+{
+ "id": "22202_7004119ram_pontiac_8be247",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Dodge RAM 1500 1996 negro",
+  "V2": "Pontiac Gran AM 1998 rojo"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "secuencia_eventos": null,
+  "punto_impacto_via": null,
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {},
+ "descartados": {
+  "declaracion_V2": "“Hiba en la calle Santa Ana y me pase en reversa cuando el vehiculo marca Nissan Micra que iba circulando en dirección y no me checo de reversa y me impacte con la parte trasera del vehiculo.”",
+  "sentido_carril_V1": "hacia atrás",
+  "sentido_carril_V2": "circulando en dirección",
+  "maniobra_previa_V1": "en reversa",
+  "maniobra_previa_V2": "circulando",
+  "secuencia_eventos": "V2 impacta por detrás a V1",
+  "punto_impacto_via": "parte trasera de V1",
+  "evidencias_sitio": "V2 presenta pintura color negro sobre la superficie delantero del cofre; V1 presenta pintura color rojo sobre la defensa trasera",
+  "posicion_final_V1": "posición final no especificada",
+  "posicion_final_V2": "posición final no especificada"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Renault Clío gris 2006 con placas 111 UFG",
+  "V2": "Ford Ikon rojo 2005 con placas LZB 3974"
+ },
+ "valores": {
+  "declaracion_V1": "Al señor se le alcanza y golpea por detrás y se golpea a su cajuela e manera que queda afectado su vehículo y el cofre mío, esto fue a una velocidad mia de 60 km/hr cuando el señor transitaba a 20 km/hr.",
+  "declaracion_V2": "Venia circulando y sin tener precaución choque a un ford con por la parte trasera alcanzandolo y dañando la cajuela del Sr. El golpe repercutió en el cofre y en la cajuela.",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": "60",
+  "velocidad_V2_kmh": "20",
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "Vehículo V2 golpea por detrás a V1",
+  "punto_impacto_via": null,
+  "evidencias_sitio": "Daños tipo hundimiento en la parte frontal de V1 y en la parte posterior de V2",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null
+ },
+ "id": "3_informe_atlas_9868_09_264c5e",
+ "split": "train"
+}

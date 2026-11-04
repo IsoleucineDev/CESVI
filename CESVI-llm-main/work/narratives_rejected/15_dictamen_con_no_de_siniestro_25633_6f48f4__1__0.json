@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en evidencias_sitio",
+ "principal": {
+  "id": "posicion_final_V1",
+  "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+  "valor": "impactado contra el muro de contención"
+ },
+ "otros": [
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "impactado contra el muro de contención"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "no se observan huellas de frenado, restos o intercambio de pintura"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Chasis Cabina 2009 blanco",
+  "V2": "Honda Acura 2006 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde quedó detenido el Nissan tras el evento?\",\n  \"respuesta\": \"El Nissan quedó detenido impactado contra el muro de contención, además el Honda también quedó impactado contra el muro de contención.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"no se observan huellas de frenado, restos o intercambio de pintura\",\n      \"evidencia\": \"no se observan huellas de frenado, restos o intercambio de pintura\"\n    },\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"impactado contra el muro de contención\",\n      \"evidencia\": \"el Nissan quedó detenido impactado contra el muro de contención\"\n    },\n    {\n      \"tema\": \"posicion_final_V2\",\n      \"valor\": \"impactado contra el muro de contención\",\n      \"evidencia\": \"el Honda también quedó impactado contra el muro de contención\"\n    }\n  ]\n}"
+}

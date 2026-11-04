@@ -1,0 +1,53 @@
+{
+ "id": "1_siniestro_231278_09_0570f6",
+ "split": "test",
+ "modalidad": "colision_frontal",
+ "vehiculos": {
+  "V1": "Plymouth Freeze 1996 blanco",
+  "V2": "Ford Escort 1998 rojo"
+ },
+ "valores": {
+  "declaracion_V1": "CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE POR EL CARRIL DERECHO CUANDO DE REPENTE SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO IMPACTANDO MI VEHÍCULO POR ENFRENTE",
+  "declaracion_V2": null,
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": "Poniente a Oriente",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "circulando",
+  "maniobra_previa_V2": "invadiendo carril",
+  "senalizacion_preferencia": "sin preferencia",
+  "secuencia_eventos": "vehículo V2 invadiendo carril de V1 y provocando impacto frontal",
+  "punto_impacto_via": "calle Fuente de Dalila",
+  "angulo_impacto": null,
+  "evidencias_sitio": "ninguna evidencia de intercambio de pintura",
+  "huellas_frenado_m": null,
+  "airbags_V1": "ambas bolsas de aire activadas",
+  "airbags_V2": "ambas bolsas de aire activadas",
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "\"CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE POR EL CARRIL DERECHO CUANDO DE REPENTE SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO IMPACTANDO MI VEHÍCULO POR ENFRENTE\"",
+  "superficie": "La calle Fuente de Dalila tiene un arroyo vehicular construido con material de asfalto",
+  "sentido_carril_V1": "El vehículo marca Plymouth (a) circula de Poniente a Oriente",
+  "maniobra_previa_V1": "CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE",
+  "maniobra_previa_V2": "SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO",
+  "senalizacion_preferencia": "carecer de señales horizontales o líneas divisorias sobre la carpeta asfáltica",
+  "secuencia_eventos": "SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO IMPACTANDO MI VEHÍCULO POR ENFRENTE",
+  "punto_impacto_via": "El lugar de los hechos se ubica en la calle de Fuente de Dalila",
+  "evidencias_sitio": "no existen indicios y/o restos de pintura color rojo que pueda establecer el principio de intercambio de materiales",
+  "airbags_V1": "activación de la bolsa de aire del conductor y del copiloto",
+  "airbags_V2": "activación de la bolsa de aire del conductor y del copiloto"
+ },
+ "descartados": {
+  "iluminacion": "noche",
+  "sentido_carril_V2": "Oeste a Este",
+  "angulo_impacto": "frontal",
+  "posicion_final_V1": "ubicación final no especificada",
+  "posicion_final_V2": "ubicación final no especificada"
+ }
+}

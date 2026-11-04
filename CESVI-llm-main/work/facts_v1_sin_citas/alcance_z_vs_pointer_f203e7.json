@@ -1,0 +1,30 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "NISSAN 350Z 2003 NEGRO 585-WJW",
+  "V2": "VOLKSWAGEN POINTER 2003 AZUL 983-SMY"
+ },
+ "valores": {
+  "superficie": "seca",
+  "iluminacion": "noche",
+  "sentido_carril_V1": "sur a norte",
+  "sentido_carril_V2": "sur a norte",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "frenado",
+  "maniobra_previa_V2": "reducción de velocidad",
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "vehículo V1 impacta el vehículo V2 en su parte posterior derecha",
+  "punto_impacto_via": "carril derecho",
+  "angulo_impacto": "excéntrico de izquierda a derecha",
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura",
+  "huellas_frenado_m": null,
+  "airbags_V1": "activados",
+  "airbags_V2": null,
+  "posicion_final_V1": "detenido",
+  "posicion_final_V2": "desplazado hacia atrás"
+ },
+ "id": "alcance_z_vs_pointer_f203e7",
+ "split": "train"
+}

@@ -1,0 +1,47 @@
+{
+ "id": "1_dictamen_957338_d94e7a",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Ford Fiesta 2001 negro",
+  "V2": "Vehículo desconocido"
+ },
+ "valores": {
+  "declaracion_V1": "Circulaba por calle 13 daba vuelta por la 22 y de repente me pega un carro blanco",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "calle 13, dirección Norte a Sur",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "giro",
+  "maniobra_previa_V2": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "El conductor del vehículo desconocido impacta con su parte frontal el lado derecho del vehículo marca FORD, tipo FIESTA",
+  "punto_impacto_via": "intersección de las calles 13 y 22",
+  "angulo_impacto": null,
+  "evidencias_sitio": "impregnación de pintura color blanco sobre todo el lado derecho del vehículo marca FORD, tipo FIESTA",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "proyectado contra la guarnición",
+  "posicion_final_V2": null,
+  "declaracion_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Circulaba por calle 13 daba vuelta por la 22 y de repente me pega un carro blanco",
+  "sentido_carril_V1": "circulaba por calle 13 daba vuelta por la 22",
+  "maniobra_previa_V1": "daba vuelta por la 22",
+  "secuencia_eventos": "El conductor del vehículo desconocido impacta con su parte frontal el lado derecho del vehículo marca FORD, tipo FIESTA",
+  "punto_impacto_via": "El hecho de tránsito que nos ocupa sucedió sobre la calle 22 en su intersección con la calle 13",
+  "evidencias_sitio": "se observa impregnación de pintura color blanco sobre todo el lado derecho del vehículo marca FORD, tipo FIESTA",
+  "posicion_final_V1": "el conductor del vehículo desconocido proyecta contra la guarnición al vehículo marca FORD, tipo FIESTA"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "noche",
+  "sentido_carril_V2": "calle 13, dirección Sur a Norte"
+ }
+}

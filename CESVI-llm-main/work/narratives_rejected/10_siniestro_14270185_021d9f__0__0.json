@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en senalizacion_preferencia",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "circulando en dirección Sur"
+ },
+ "otros": [
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "señal de tipo restrictiva ubicada en el carril Oeste la cual dice que esta prohibida la vuelta"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo tipo Acadia impacta al vehículo tipo Liberty en el costado derecho"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jeep Liberty 2006 gris",
+  "V2": "GMC Acadia 2008 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Jeep Liberty?\",\n  \"respuesta\": \"El vehículo tipo Liberty circulaba en dirección Sur además de que la señal de tipo restrictiva ubicada en el carril Oeste indica que está prohibida la vuelta, luego el vehículo tipo Acadia impacta al vehículo tipo Liberty en el costado derecho.\",\n  \"extracciones\": [\n    {\"tema\": \"senalizacion_preferencia\", \"valor\": \"señal restrictiva prohibiendo vuelta\", \"evidencia\": \"señal de tipo restrictiva ubicada en el carril Oeste la cual dice que esta prohibida la vuelta\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"Acadia impacta al Liberty en el costado derecho\", \"evidencia\": \"el vehículo tipo Acadia impacta al vehículo tipo Liberty en el costado derecho\"},\n    {\"tema\": \"sentido_carril_V1\", \"valor\": \"circulando en dirección Sur\", \"evidencia\": \"circulando en dirección Sur\"}\n  ]\n}"
+}

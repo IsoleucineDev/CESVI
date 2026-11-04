@@ -1,0 +1,50 @@
+{
+ "id": "3010_34570_4_gnp_quets_tiida_0a392b",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan Quest 2007 gris plata",
+  "V2": "Nissan Tiida 2007 rojo"
+ },
+ "valores": {
+  "declaracion_V1": "el conductor del vehículo A, viene circulando por la Av. Lindavista, en sentido de circulación de Sureste a Noroeste, se revienta el neumático delantero del lado izquierdo, perdiendo el control, proyectándose contra el vehículo B que se encuentra estacionado sobre la Av. Lindavista del lado del OXXO, con el frente en sentido Noroeste a Sureste, impactando el neumático delantero derecho del vehículo A contra el neumático delantero derecho del vehículo B",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Sureste a Noroeste",
+  "sentido_carril_V2": "Noroeste a Sureste",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "cambio de carril",
+  "maniobra_previa_V2": "estacionado",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "el vehículo V1 pierde el control y impacta el vehículo V2",
+  "punto_impacto_via": "Av. Lindavista casi esquina con la calle Cuzco",
+  "angulo_impacto": "oblicuo",
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "impactado contra el vehículo V2",
+  "posicion_final_V2": "impactado contra el vehículo V1",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "el conductor del vehículo A, viene circulando por la Av. Lindavista, en sentido de circulación de Sureste a Noroeste, se revienta el neumático delantero del lado izquierdo, perdiendo el control, proyectándose contra el vehículo B que se encuentra estacionado sobre la Av. Lindavista del lado del OXXO, con el frente en sentido Noroeste a Sureste, impactando el neumático delantero derecho del vehículo A contra el neumático delantero derecho del vehículo B",
+  "sentido_carril_V1": "el conductor del vehículo A, viene circulando por la Av. Lindavista, en sentido de circulación de Sureste a Noroeste",
+  "sentido_carril_V2": "el frente en sentido Noroeste a Sureste",
+  "maniobra_previa_V1": "el conductor del vehículo A, viene circulando por la Av. Lindavista, en sentido de circulación de Sureste a Noroeste, se revienta el neumático delantero del lado izquierdo, perdiendo el control, proyectándose contra el vehículo B que se encuentra estacionado sobre la Av. Lindavista del lado del OXXO",
+  "maniobra_previa_V2": "el vehículo B que se encuentra estacionado sobre la Av. Lindavista del lado del OXXO",
+  "secuencia_eventos": "el conductor del vehículo A, viene circulando por la Av. Lindavista, en sentido de circulación de Sureste a Noroeste, se revienta el neumático delantero del lado izquierdo, perdiendo el control, proyectándose contra el vehículo B que se encuentra estacionado sobre la Av. Lindavista del lado del OXXO",
+  "punto_impacto_via": "El sitio que se declara como lugar de los hechos se ubica sobre la Avenida Lindavista, casi esquina con la calle Cuzco",
+  "angulo_impacto": "un choque lateral oblicuo",
+  "posicion_final_V1": "el vehículo A se proyecta contra el vehículo B que se encuentra estacionado impactando la rueda delantera derecha del vehículo A contra la rueda derecha del vehículo B",
+  "posicion_final_V2": "el vehículo B que se encuentra estacionado sobre la Av. Lindavista del lado del OXXO"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día",
+  "evidencias_sitio": "intercambio de pintura color gris y hule color negro entre el vehículo V1 y el vehículo V2"
+ }
+}

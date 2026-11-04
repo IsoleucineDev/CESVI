@@ -1,0 +1,40 @@
+{
+ "id": "atlas_1882_12_nxpowerlite_v2_465362",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión 2008 blanco",
+  "V2": "Kenworth Tractocamión 1992 verde"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "estacionado",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "estacionado",
+  "tipo_objeto": "semirremolque Dorsey",
+  "causa_perdida_control": null,
+  "secuencia_eventos": "El vehículo marca Kenworth impactó la parte posterior del lado izquierdo del semirremolque del vehículo marca Freigthliner",
+  "punto_impacto_via": "acotamiento",
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "impregnaciones de pintura color verde en el semirremolque marca Dorsey",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "estacionado en el acotamiento",
+  "danos_V1": null
+ },
+ "citas": {
+  "sentido_carril_V1": "El vehículo marca Freigthliner, tipo Tractocamión acoplado al semirremolque marca Dorsey, circula en dirección a México D.F, el cual sería estacionado en el acotamiento.",
+  "maniobra_previa_V1": "El vehículo marca Freigthliner, tipo Tractocamión acoplado al semirremolque marca Dorsey, circula en dirección a México D.F, el cual sería estacionado en el acotamiento.",
+  "tipo_objeto": "El vehículo marca Kenworth, tipo Tracto camión, color verde, modelo 1992 con placas de circulación 395 DS 2; acoplado al vehículo marca Great Dane, tipo semirremolque, color blanco con placas de circulación 2 CZ 551",
+  "secuencia_eventos": "El lado derecho del vehículo marca Kenworth, tipo tracto camión, color verde, impactó la parte posterior del lado izquierdo del semirremolque del vehículo marca Freigthliner",
+  "punto_impacto_via": "El vehículo marca Freigthliner, tipo Tractocamión acoplado al semirremolque marca Dorsey, circula en dirección a México D.F, el cual sería estacionado en el acotamiento",
+  "evidencias_sitio": "El lado derecho del vehículo marca Kenworth, tipo tracto camión, color verde, impactó la parte posterior del lado izquierdo del semirremolque del vehículo marca Freigthliner debido a que existen impregnaciones de pintura color verde en el semirremolque marca Dorsey",
+  "posicion_final_V1": "El vehículo marca Freigthliner, tipo Tractocamión acoplado al semirremolque marca Dorsey, circula en dirección a México D.F, el cual sería estacionado en el acotamiento"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "noche"
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "id": "12_dictamen_con_no_de_siniestro_6509_2595_3_2_5d5991",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "General Motors Corsa 2004 azul LXH 9678"
+ },
+ "form": {
+  "posicion_final_V1": "lado derecho sobre la cuneta"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías resumirme la declaración del conductor de la General Motors Corsa 2004 azul LXH 9678 sobre cómo ocurrió el hecho?",
+   "respuesta": "Perdió el control al pasar un tronco de árbol en la carretera",
+   "valor": "perdió el control al pasar un tronco de árbol en la carretera"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Por cuál sentido de circulación y carril iba la General Motors Corsa 2004 azul LXH 9678?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál es tu estimación de la velocidad de la General Motors Corsa 2004 azul LXH 9678 antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba la General Motors Corsa 2004 azul LXH 9678 antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál crees que fue la causa de la pérdida de control de la General Motors Corsa 2004 azul LXH 9678?",
+   "respuesta": "Exceso de velocidad",
+   "valor": "exceso de velocidad"
+  },
+  {
+   "tema": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "pregunta": "¿Cuántas vueltas dio y en qué sentido volcó la General Motors Corsa 2004 azul LXH 9678?",
+   "respuesta": "Volcó aproximadamente 1/2 vuelta",
+   "valor": "1/2"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describirme la secuencia de los eventos que ocurrieron durante el accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde se encontraba el punto de impacto de la General Motors Corsa 2004 azul LXH 9678 en la vía?",
+   "respuesta": "El punto de impacto estaba en la cuneta",
+   "valor": "cuneta"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Creo que hay restos del vehículo en la cuneta",
+   "valor": "restos del vehículo en la cuneta"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado dejadas por la General Motors Corsa 2004 azul LXH 9678?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en la General Motors Corsa 2004 azul LXH 9678?",
+   "respuesta": "No se activaron bolsas de aire",
+   "valor": "sin activación"
+  }
+ ]
+}

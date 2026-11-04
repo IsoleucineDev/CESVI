@@ -1,0 +1,12 @@
+{
+ "id": "camparativa_de_da_os_ac33be",
+ "split": "train",
+ "modalidad": "otro",
+ "vehiculos": {
+  "V1": "Audi S8 2008 blanco",
+  "V2": "Audi Desconocido"
+ },
+ "valores": {},
+ "citas": {},
+ "descartados": {}
+}

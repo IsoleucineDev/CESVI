@@ -1,0 +1,14 @@
+{
+ "motivo": "oración con contenido no extraído: 'La velocidad estimada del Nissan Micra 2005 blanco antes del evento er'",
+ "principal": {
+  "id": "velocidad_V1_kmh",
+  "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+  "valor": 70,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Nissan Micra 2005 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada del Nissan Micra 2005 blanco antes del evento?\",\n  \"respuesta\": \"La velocidad estimada del Nissan Micra 2005 blanco antes del evento era de 70 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"70\",\n      \"evidencia\": \"70 km/h\"\n    }\n  ]\n}"
+}

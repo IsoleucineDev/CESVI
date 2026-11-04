@@ -1,0 +1,28 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Dodge RAM 1500 1996 NEGRO XN-55038",
+  "V2": "Pontiac GRAN AM 1998 ROJO YER-7387"
+ },
+ "valores": {
+  "sentido_carril_V1": "hacia atrás",
+  "sentido_carril_V2": "hacia adelante",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "en reversa",
+  "maniobra_previa_V2": "detenido",
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "vehículo V2 (Pontiac) estacionado, vehículo V1 (Dodge) impacta por detrás",
+  "punto_impacto_via": "parte frontal del vehículo V2, parte trasera del vehículo V1",
+  "evidencias_sitio": "huellas de frenado no presentes, intercambio de pintura",
+  "posicion_final_V1": "detenido en el lugar del impacto",
+  "posicion_final_V2": "detenido en el lugar del impacto",
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "declaracion_V1": "hice maniobra de reversa y no me di cuenta que había un vehículo estacionado",
+  "declaracion_V2": null
+ },
+ "id": "22202_7004119ram_pontiac_8be247",
+ "split": "train"
+}

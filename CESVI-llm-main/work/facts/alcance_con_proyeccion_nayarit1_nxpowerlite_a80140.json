@@ -1,0 +1,62 @@
+{
+ "id": "alcance_con_proyeccion_nayarit1_nxpowerlite_a80140",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Ford Estacas 1998 rojo",
+  "V2": "Nissan Estacas 1992 blanco",
+  "V3": "Nissan Tsuru 2012 amarillo"
+ },
+ "valores": {
+  "declaracion_V1": "CIRCULAVA DE OTE A PTE POR AVENIDA TECNOLOGICO Y A LA ALTURA DEL HOTEL NEKIE CHOQUE POR ALCANCE A UNA PICK UP NISSAN Y LA PICK UP A UN TAXI ROJO Y EL TAXI ROJO A UN TAXI BCO",
+  "superficie": "asfalto en buenas condiciones",
+  "iluminacion": null,
+  "sentido_carril_V1": "Oriente a Poniente",
+  "sentido_carril_V2": "Oriente a Poniente",
+  "sentido_carril_V3": "Oriente a Poniente",
+  "maniobra_previa_V1": "circulación",
+  "maniobra_previa_V2": "detenido",
+  "maniobra_previa_V3": "proyectado",
+  "distancia_previa": null,
+  "secuencia_eventos": "vehículo V1 impacta a V2 que impacta a V3 que impacta a V4",
+  "punto_impacto_via": "Avenida Tecnológico frente al hotel Nekie",
+  "evidencias_sitio": "Ford: impregnaciones de pintura color blanco y amarillo; Nissan Estacas: impregnaciones de pintura color blanco; Nissan Tsuru: impregnaciones de pintura color negro; Dodge Atos: impregnaciones de pintura color negro",
+  "danos_V1": "impregnaciones de pintura color blanco y amarillo en la defensa; impregnaciones de pintura color blanco en la adaptación del lado derecho",
+  "danos_V2": "hundimiento en la defensa, alama, bracks, parrilla, faros y cofre; parabrisas resquebrajado",
+  "danos_V3": "hundimiento en la fascia y moldura de faro derecho; placa de circulación hundida; hundimiento en la fascia trasera y tapa cajuela",
+  "posicion_final_V1": "detenido tras el impacto con V2",
+  "posicion_final_V2": "proyectado hacia V3",
+  "posicion_final_V3": "proyectado hacia V4",
+  "declaracion_V2": null,
+  "declaracion_V3": null,
+  "huellas_frenado_m": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "velocidad_V3_kmh": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "airbags_V3": null
+ },
+ "citas": {
+  "declaracion_V1": "CIRCULAVA DE OTE A PTE POR AVENIDA TECNOLOGICO Y A LA ALTURA DEL HOTEL NEKIE CHOQUE POR ALCANCE A UNA PICK UP NISSAN Y LA PICK UP A UN TAXI ROJO Y EL TAXI ROJO A UN TAXI BCO",
+  "superficie": "La superficie de rodamiento es de asfalto en buenas condiciones.",
+  "sentido_carril_V1": "CIRCULAVA DE OTE A PTE POR AVENIDA TECNOLOGICO Y A LA ALTURA DEL HOTEL NEKIE CHOQUE POR ALCANCE A UNA PICK UP NISSAN Y LA PICK UP A UN TAXI ROJO Y EL TAXI ROJO A UN TAXI BCO",
+  "sentido_carril_V2": "Los vehículos en estudio circulan por la Avenida Tecnológico en sentido de Oriente a Poniente.",
+  "sentido_carril_V3": "Los vehículos en estudio circulan por la Avenida Tecnológico en sentido de Oriente a Poniente.",
+  "maniobra_previa_V1": "CIRCULAVA DE OTE A PTE POR AVENIDA TECNOLOGICO Y A LA ALTURA DEL HOTEL NEKIE CHOQUE POR ALCANCE A UNA PICK UP NISSAN Y LA PICK UP A UN TAXI ROJO Y EL TAXI ROJO A UN TAXI BCO",
+  "maniobra_previa_V2": "Los vehículo que le preceden al vehículo “A” se detienen y el conductor del vehículo A impacta por Alcance al vehículo “B”.",
+  "maniobra_previa_V3": "Al recibir un alcance, el vehículo “B”, se proyecta impactando con su parte frontal, contra la parte posterior del vehículo “C”.",
+  "secuencia_eventos": "Al recibir un alcance, el vehículo “B”, se proyecta impactando con su parte frontal, contra la parte posterior del vehículo “C”. Al recibir un alcance el vehículo “C”, se proyecta impactando con su parte frontal, contra la parte posterior del vehículo “D”.",
+  "punto_impacto_via": "El punto marcado como lugar de los hechos se localiza frente al hotel Nekie en dirección de Oriente a Poniente.",
+  "evidencias_sitio": "La camioneta marca Ford presenta impregnaciones de pintura color amarillo, la cual no corresponde con la parte trasera del vehículo marca Nissan tipo estacas. La camioneta Nissan tipo Estacas no presenta impregnaciones de pintura o restos de materiales que señalen tubo algún contacto con la parte frontal de la camioneta marca Ford. La parte delantera del vehículo marca Nissan tipo Estacas no presenta impregnaciones de pintura o materiales que puedan determinar que hubo algún contacto con la parte posterior del vehículo tipo Tsuru. El vehículo marca Nissan, tipo Tsuru presenta impregnaciones de pintura color negro en la tapa cajuela con formas bien definidas las cuales no concuerdan con las de la camioneta marca Nissan tipo estacas. La parte posterior del vehículo tipo Atos presenta impregnaciones de pintura color negro con las mismas características del material de la fascia delantera del vehículo tipo Tsuru.",
+  "danos_V1": "En la parte frontal del vehículo marca Ford, tipo estacas no se observan daños de tipo hundimiento, solo se observan impregnaciones de pintura color blanco en el soporte lado izquierdo y lado derecho del tumba burros y pintura color amarillo en la defensa. En la parte posterior del vehículo marca Ford en la adaptación del lado derecho se observan impregnaciones de pintura color banco.",
+  "danos_V2": "En la parte frontal del vehículo marca Nissan  se observa un daño de gran magnitud de tipo hundimiento, generado por cuerpo duro en dirección de adelante hacia atrás, el cual afecta la defensa, el alama, bracks, la parrilla, el marco radiador, faro lado izquierdo, faro lado derecho y cofre. La defensa delantera presenta un daño de gran magnitud de tipo hundimiento en dirección de adelante hacia atrás, el cuarto derecho e izquierdo de la defensa se observan rotos y desacoplados de su posición original. La parrilla presenta un daño de tipo hundimiento en dirección de adelante hacia atrás por impacto contra cuerpo duro y se observa rota y desacoplada de su posición original. El faro derecho y faro izquierdo se observan rotos y desacoplados de su posición original. El cofre presenta un daño de tipo hundimiento con corrimiento en dirección de adelante hacia atrás por impacto contra cuerpo duro. El cofre presenta un hundimiento en la parte central frontal con una forma geométrica definida, el parabrisas se observa resquebrajado por impacto contra cuerpo duro.",
+  "danos_V3": "En la parte frontal del vehículo marca Nissan tipo Tsuru se observa un daño leve de tipo hundimiento en dirección de adelante hacia atrás el cual afecta la fascia, el faro lado derecho y moldura de faro derecho. La fascia delantera presenta un daño de tipo hundimiento en dirección de adelante hacia atrás por impacto contra cuerpo duro. El faro lado derecho se observa desacoplado de su posición original. La moldura de faro derecho presenta un daño de tipo hundimiento con dirección de adelante hacia atrás. La placa de circulación presenta un daño de tipo hundimiento en dirección de adelante hacia atrás. En la parte posterior del vehículo tipo Tsuru presenta un daño de mediana intensidad en dirección de atrás hacia adelante con corrimiento de materiales en la misma dirección el cual afecta la fascia, el alma de la fascia y tapa cajuela. La fascia trasera presenta un daño de tipo hundimiento en dirección de atrás hacia adelante así como daños de tipo tallon en dirección de atrás hacia adelante. La tapa cajuela presenta un corrimiento en dirección de atrás hacia adelante con impregnaciones de color negro y se observa marcado la forma del cuerpo que le genero los daños.",
+  "posicion_final_V1": "El vehículo “A” impacta por Alcance al vehículo “B”.",
+  "posicion_final_V2": "Al recibir un alcance, el vehículo “B”, se proyecta impactando con su parte frontal, contra la parte posterior del vehículo “C”.",
+  "posicion_final_V3": "Al recibir un alcance el vehículo “C”, se proyecta impactando con su parte frontal, contra la parte posterior del vehículo “D”."
+ },
+ "descartados": {
+  "iluminacion": "noche"
+ }
+}

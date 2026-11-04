@@ -1,0 +1,50 @@
+{
+ "id": "1_dictamen_siniestro_134979_2ac87b",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan Tsuru 2008 blanco y rojo",
+  "V2": "Ford Fiesta 2007 rojo"
+ },
+ "valores": {
+  "declaracion_V1": "Al tratar de incorporarme a la ruta de circulación no me percate que venia un vehículo impactándolo y provocando el accidente",
+  "declaracion_V2": null,
+  "superficie": "carretera Minatitlán-Coatzacoalcos con dos carriles de circulación",
+  "iluminacion": null,
+  "sentido_carril_V1": "incorporación a la carretera Minatitlán-Coatzacoalcos",
+  "sentido_carril_V2": "circulación por la carretera Minatitlán-Coatzacoalcos",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "incorporación",
+  "maniobra_previa_V2": "circulación",
+  "secuencia_eventos": "El vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos encontrándose en la incorporación al vehículo “B” colisionándose entre si",
+  "punto_impacto_via": null,
+  "angulo_impacto": null,
+  "evidencias_sitio": "pintura roja en el vértice izquierdo de la defensa del vehículo V1, sin impregnación de pintura roja en el vehículo V2",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "ubicación final del vehículo V1",
+  "posicion_final_V2": "ubicación final del vehículo V2",
+  "senalizacion_preferencia": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Al tratar de incorporarme a la ruta de circulación no me percate que venia un vehículo impactándolo y provocando el accidente",
+  "superficie": "La carretera Minatitlán-Coatzacoalcos cuenta con un arroyo vehicular con dos carriles de circulación los cuales dirigen en dirección Suroeste y Noreste, tiene una carpeta asfáltica en buenas condiciones con un ancho total de 8.10 metros",
+  "sentido_carril_V1": "El conductor del vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos",
+  "sentido_carril_V2": "El conductor del vehículo “B” circula  por la carretera Minatitlán-Coatzacoalcos",
+  "maniobra_previa_V1": "El conductor del vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos",
+  "maniobra_previa_V2": "El conductor del vehículo “B” circula  por la carretera Minatitlán-Coatzacoalcos",
+  "secuencia_eventos": "El conductor del vehículo “A” realiza la maniobra de incorporación sobre la carretera Minatitlán-Coatzacoalcos encontrándose en la incorporación al vehículo “B” colisionándose entre si",
+  "evidencias_sitio": "El vehículo tipo Tsuru si presenta restos de pintura color rojo en el vértice delantero izquierdo, sin embargo el vehículo tipo Fiesta no se observan impregnación de pintura color negro o color blanco pertenecientes al vehículo tipo Tsuru",
+  "posicion_final_V1": "Imagen 6- Se observan las posiciones finales de los vehículos involucrados.",
+  "posicion_final_V2": "Imagen 6- Se observan las posiciones finales de los vehículos involucrados."
+ },
+ "descartados": {
+  "iluminacion": "noches",
+  "punto_impacto_via": "punto de incorporación al carril de circulación",
+  "angulo_impacto": "angular"
+ }
+}

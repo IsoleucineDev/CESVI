@@ -1,0 +1,26 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_previa_V1",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "corte de circulación"
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con alumbrado público",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Hyundai Atos 2009 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Hyundai Atos rojo antes del impacto?\",\n  \"respuesta\": \"El Hyundai Atos rojo estaba frenando antes del impacto, además estaba de noche con alumbrado público, y luego se estimó que iba a unos 50 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"corte de circulación\",\n      \"evidencia\": \"estaba frenando antes del impacto\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de noche con alumbrado público\",\n      \"evidencia\": \"de noche con alumbrado público\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"50\",\n      \"evidencia\": \"unos 50 km/h\"\n    }\n  ]\n}"
+}

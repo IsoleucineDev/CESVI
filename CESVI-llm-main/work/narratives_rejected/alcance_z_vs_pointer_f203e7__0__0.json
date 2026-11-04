@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_previa_V2",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "proyección"
+ },
+ "otros": [
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activados"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volkswagen Pointer 2003 azul",
+  "V2": "Nissan 350Z 2003 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Nissan 350Z antes del impacto?\",\n  \"respuesta\": \"El Nissan frenó antes del impacto, además las bolsas de aire del Volkswagen Pointer se activaron.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"frenado\",\n      \"evidencia\": \"El Nissan frenó antes del impacto\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"activados\",\n      \"evidencia\": \"las bolsas de aire del Volkswagen Pointer se activaron\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,39 @@
+{
+ "id": "7611_004461_475686",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Ford Ecosport 2009 arena"
+ },
+ "valores": {
+  "declaracion_V1": "Declaración del asegurado, extraído de la declaración para la atención de daños de la compañía de seguros.",
+  "superficie": "concreto hidráulico",
+  "iluminacion": null,
+  "sentido_carril_V1": "Suroeste al Noreste",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "descender por la pendiente",
+  "tipo_objeto": "poste de concreto",
+  "causa_perdida_control": null,
+  "punto_impacto_via": "calle 13, casi esquina con AV. 15",
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "huellas de frenado, restos, intercambio de pintura, marcas",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "detenido en la banqueta de concreto contra esquina del poste",
+  "secuencia_eventos": null,
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "Declaración del asegurado, extraído de la declaración para la atención de daños de la compañía de seguros.",
+  "superficie": "dicha vía esta constituida de concreto hidráulico en buen estado para la circulación",
+  "sentido_carril_V1": "la calle 13 se define como una vía de corte recto con sentido de circulación que va del Suroeste al Noreste y viceversa",
+  "maniobra_previa_V1": "El vehículo A, comienza a descender por la pendiente hacia la Av. 15.",
+  "tipo_objeto": "justo en la esquina con la Avenida 15 del lado derecho se encuentra un poste de concreto.",
+  "punto_impacto_via": "El sitio que se declara como lugar de los hechos se ubica en la esquina de la calle 13 con Avenida 15",
+  "evidencias_sitio": "se aprecian daños tipo tallón característicos de una fricción con un superficie áspera, con un desprendimiento de pintura e intercambio de concreto en la parte frontal derecha",
+  "posicion_final_V1": "finalmente detiene su carrera en la banqueta de concreto contra esquina del poste donde se impacta por primera vez"
+ },
+ "descartados": {
+  "altura_marca_objeto_cm": "46-100"
+ }
+}

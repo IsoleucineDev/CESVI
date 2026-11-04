@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "venia de sur a norte cuando vi un accidente de un tráiler y me pare, reversie unos metros cuando llego la camioneta y me impacto"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "vehículo V2 impacta a V1 en maniobra en reversa"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "activado"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Silverado 2007 arena",
+  "V2": "Toyota Tacoma 1997 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Chevy sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor del Chevy Silverado 2007 arena declaró que venía de sur a norte cuando observó un accidente de un tráiler y decidió detenerse. Luego, en maniobra en reversa, fue impactado por la camioneta Toyota Tacoma 1997 blanco; además, las bolsas de aire de la Toyota Tacoma se activaron.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"venia de sur a norte cuando vi un accidente de un tráiler y me pare, reversie unos metros cuando llego la camioneta y me impacto\",\n      \"evidencia\": \"El conductor del Chevy Silverado 2007 arena declaró que venía de sur a norte cuando observó un accidente de un tráiler y decidió detenerse. Luego, en maniobra en reversa, fue impactado por la camioneta Toyota Tacoma 1997 blanco\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"vehículo V2 impacta a V1 en maniobra en reversa\",\n      \"evidencia\": \"Luego, en maniobra en reversa, fue impactado por la camioneta Toyota Tacoma 1997 blanco\"\n    },\n    {\n      \"tema\": \"airbags_V2\",\n      \"valor\": \"activado\",\n      \"evidencia\": \"las bolsas de aire de la Toyota Tacoma se activaron\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en superficie",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El vehículo V2 impacta en el costado derecho del vehículo V1"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "restos de pintura negra en el costado derecho del vehículo V1 y pintura blanca en el costado izquierdo del vehículo V2"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfaltado"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Renault Clio 2002 blanco",
+  "V2": "Renault Megane 2005 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrió durante la colisión?\",\n  \"respuesta\": \"el Megane negro impacta en el costado derecho del Clio blanco además luego observamos restos de pintura negra en el costado derecho del Clio y pintura blanca en el costado izquierdo del Megane además la superficie es asfaltada\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"el Megane negro impacta en el costado derecho del Clio blanco\",\n      \"evidencia\": \"el Megane negro impacta en el costado derecho del Clio blanco\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"restos de pintura negra en el costado derecho del Clio y pintura blanca en el costado izquierdo del Megane\",\n      \"evidencia\": \"restos de pintura negra en el costado derecho del Clio y pintura blanca en el costado izquierdo del Megane\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfaltado\",\n      \"evidencia\": \"asfaltado\"\n    }\n  ]\n}"
+}

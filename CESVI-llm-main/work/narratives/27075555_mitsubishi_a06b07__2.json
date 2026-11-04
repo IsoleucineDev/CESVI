@@ -1,0 +1,89 @@
+{
+ "id": "27075555_mitsubishi_a06b07",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2006 negro"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "VENIA CIRCULANDO X TERRACERIA ENTRE BENITO JUAREZ Y PESCADOR SE DERRAPO CAMIONETA Y LA GRAVA EN EXCESO SACANDOME DEL CAMINO A 50 METROS"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "circulando por la terracería"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "se despista hacia el lado derecho de la terracería"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "derrape"
+  },
+  {
+   "id": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo circulaba por la terracería, pierde el control y se despista hacia el lado derecho, internándose entre la vegetación"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "terracería entre Benito Juárez y Pescador"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "terracería con tierra suelta de color rojo"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 2,
+ "asked": "maniobra_previa_V1",
+ "pregunta": "¿Cuál fue la maniobra previa del Mitsubishi Outlander antes del impacto?",
+ "respuesta": "TERRACERÍA ENTRE BENITO JUÁREZ Y PESCADOR. SE DESPISTA HACIA EL LADO DERECHO DE LA TERRACERÍA.",
+ "gold": {
+  "punto_impacto_via": {
+   "valor": "terracería entre Benito Juárez y Pescador",
+   "evidencia": "TERRACERÍA ENTRE BENITO JUÁREZ Y PESCADOR"
+  },
+  "maniobra_previa_V1": {
+   "valor": "se despista hacia el lado derecho de la terracería",
+   "evidencia": "SE DESPISTA HACIA EL LADO DERECHO DE LA TERRACERÍA"
+  }
+ }
+}

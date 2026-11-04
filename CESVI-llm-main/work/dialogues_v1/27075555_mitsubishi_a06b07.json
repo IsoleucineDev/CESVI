@@ -1,0 +1,104 @@
+{
+ "id": "27075555_mitsubishi_a06b07",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2006 negro"
+ },
+ "form": {
+  "posicion_final_V1": "Internado entre la vegetación, compuesto por arbustos de baja altura"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías contarme cómo el conductor del Mitsubishi Outlander 2006 negro describió lo que sucedió?",
+   "respuesta": "Creo que venía circulando x terracería entre Benito Juárez y Pescador se derrapó camioneta y la grava en exceso sacándome del camino a 50 metros",
+   "valor": "Venía circulando x terracería entre Benito Juárez y Pescador se derrapó camioneta y la grava en exceso sacándome del camino a 50 metros"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cuál era la condición de la superficie de rodamiento en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación y visibilidad había en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿En qué sentido y carril circulaba el Mitsubishi Outlander 2006 negro?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Mitsubishi Outlander 2006 negro antes del accidente?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Mitsubishi Outlander 2006 negro antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál fue la causa de la pérdida de control del Mitsubishi Outlander 2006 negro?",
+   "respuesta": "Derrape",
+   "valor": "Derrape"
+  },
+  {
+   "tema": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "pregunta": "¿Cuántas vueltas dio el Mitsubishi Outlander 2006 negro y en qué sentido?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue el orden y tipo de los impactos en el accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Creo que había terracería con tierra suelta de color rojo y cerca con alambre de púas",
+   "valor": "Terracería con tierra suelta de color rojo, cerca con alambre de púas"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado, si las hay?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Mitsubishi Outlander 2006 negro?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

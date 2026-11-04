@@ -1,0 +1,118 @@
+{
+ "id": "17_siniestro_283290_09_1cc313",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Hyundai Semirremolque Caja Seca 2005 blanco"
+ },
+ "form": {
+  "posicion_final_V1": "subiendo la parte izquierda del eje posterior sobre la banqueta"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "retorno vehicular ubicado en la Av. Vallarta casi esquina con la calle Rafael Sanzio"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "id": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "impregnación de caucho sobre la guarnición del camellón central"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "start": 0,
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué nos dice el conductor del Hyundai Semirremolque Caja Seca sobre cómo ocurrió el accidente?",
+   "respuesta": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO",
+   "valor": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿En qué sentido y carril circulaba el Hyundai Semirremolque Caja Seca?",
+   "respuesta": "retorno vehicular ubicado en la Av. Vallarta casi esquina con la calle Rafael Sanzio",
+   "valor": "retorno vehicular ubicado en la Av. Vallarta casi esquina con la calle Rafael Sanzio"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Hyundai Semirremolque Caja Seca antes del impacto?",
+   "respuesta": "tomó el retorno en mención para continuar su circulación en dirección Este a Oeste",
+   "valor": "tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "tema": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "pregunta": "¿Cuál fue la dirección y tramo recorrido en reversa por el Hyundai Semirremolque Caja Seca, y qué visibilidad tenía el conductor?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue la secuencia de los impactos y en qué orden ocurrieron?",
+   "respuesta": "el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste",
+   "valor": "el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde en la vía ocurrió el impacto con el Hyundai Semirremolque Caja Seca?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en danos_V2",
+ "principal": {
+  "id": "danos_V2",
+  "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión Quinta Rueda 2001 blanco",
+  "V2": "Chevrolet Optra LS 2007 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños específicos en el Chevy Optra LS 2007 rojo?\",\n  \"respuesta\": \"En el Chevy Optra LS 2007 rojo, se observan daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; además, en la placa de circulación trasera hay daños tipo hundimiento en forma rectangular; luego, en la fascia se encuentra un daño tipo hundimiento generado de atrás hacia delante.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante\",\n      \"evidencia\": \"daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante\",\n      \"evidencia\": \"daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,30 @@
+{
+ "motivo": "valor no concuerda con su evidencia en punto_impacto_via",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "descendiendo del puente"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V1 impacta con su parte frontal la parte trasera del vehículo V2"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Circuito Interior, al bajar del puente de Calzada de los Gallos"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa del conductor y acompañante detonadas"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2004 azul",
+  "V2": "Chrysler 300C 2005 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Outlander antes del impacto?\",\n  \"respuesta\": \"El Outlander descendía del puente de Calzada de los Gallos. Además, el Outlander impacta con su parte frontal la parte trasera del Chrysler 300C. Luego, el choque ocurrió en el Circuito Interior al bajar del puente mencionado. Además, la bolsa del conductor y acompañante del Outlander se detonaron.\",\n  \"extracciones\": [\n    {\"tema\": \"maniobra_previa_V1\", \"valor\": \"descendiendo del puente\", \"evidencia\": \"El Outlander descendía del puente de Calzada de los Gallos\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"El Outlander impacta con su parte frontal la parte trasera del Chrysler 300C\", \"evidencia\": \"el Outlander impacta con su parte frontal la parte trasera del Chrysler 300C\"},\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"Circuito Interior, al bajar del puente de Calzada de los Gallos\", \"evidencia\": \"el choque ocurrió en el Circuito Interior al bajar del puente mencionado\"},\n    {\"tema\": \"airbags_V1\", \"valor\": \"bolsa del conductor y acompañante detonadas\", \"evidencia\": \"la bolsa del conductor y acompañante del Outlander se detonaron\"}\n  ]\n}"
+}

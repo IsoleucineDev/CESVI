@@ -1,0 +1,139 @@
+{
+ "id": "atlas_m0015552012_86a2a8",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión 2001 blanco",
+  "V2": "White Tractocamión 1989 rojo"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "sur a norte"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "norte a sur"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "salida de camino"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "frenado"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V2 (White) impactó el lado derecho del semirremolque de V1 (Freightliner), seccionándolo en dos partes."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "fuera del camino en dirección a Durango"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "fuera del camino en dirección a Chihuahua"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "huellas de frenado, huellas de derrape, intercambio de pintura (rojo en blanco y viceversa)"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 12
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 62.9
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 4,
+ "asked": "maniobra_previa_V1",
+ "pregunta": "¿Cuál fue la maniobra previa del Freightliner Tractocamión 2001 blanco antes del impacto?",
+ "respuesta": "EL FREIGHTLINER TRACTOCAMIÓN 2001 BLANCO REALIZÓ UNA SALIDA DE CAMINO ANTES DEL IMPACTO. ADemás, HUBO UNAS HUELLAS DE FRENADO DE 12 METROS DE LONGITUD. LUEGO, LA VELOCIDAD ESTIMADA DEL WHITE TRACTOCAMIÓN 1989 ROJO ANTES DEL EVENTO FUE DE 62.9 KM/H.",
+ "gold": {
+  "maniobra_previa_V1": {
+   "valor": "salida_de_camino",
+   "evidencia": "EL FREIGHTLINER TRACTOCAMIÓN 2001 BLANCO REALIZÓ UNA SALIDA DE CAMINO ANTES DEL IMPACTO"
+  },
+  "huellas_frenado_m": {
+   "valor": "12",
+   "evidencia": "HUBO UNAS HUELLAS DE FRENADO DE 12 METROS DE LONGITUD"
+  },
+  "velocidad_V2_kmh": {
+   "valor": "62.9",
+   "evidencia": "LA VELOCIDAD ESTIMADA DEL WHITE TRACTOCAMIÓN 1989 ROJO ANTES DEL EVENTO FUE DE 62.9 KM/H"
+  }
+ }
+}

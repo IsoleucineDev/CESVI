@@ -1,0 +1,166 @@
+{
+ "id": "2064970_inbursa_tijuana_1bf065",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Freightliner FLD 120 2002 blanco",
+  "V2": "Watson & Chalin Tanque 2002 blanco"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías contarme cómo el conductor de V1 describe lo que ocurrió?",
+   "respuesta": "El conductor menciona que el vehículo en cuestión transportaba gasolina al momento del siniestro y actualmente se encuentra en el predio donde sucede el hecho y está totalmente quemado",
+   "valor": "El vehículo en cuestión transportaba gasolina al momento del siniestro y actualmente se encuentra en el predio donde sucede el hecho y esta totalmente quemado"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué dice el conductor de V2 sobre lo que sucedió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Cuál es la condición de la superficie de rodamiento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación y visibilidad había en el momento del accidente?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Por cuál carril y sentido circulaba V1?",
+   "respuesta": "V1 circulaba por el carril derecho en dirección Sur a Norte",
+   "valor": "Sur a Norte"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y cuál era el carril y sentido de V2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada de V1 antes del accidente?",
+   "respuesta": "La velocidad de V1 era de unos 118 km/h",
+   "valor": 118.2
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué velocidad llevaba V2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba V1 antes del impacto?",
+   "respuesta": "V1 realizaba un cambio de carril",
+   "valor": "cambio de carril"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobra realizaba V2?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál crees que fue la causa del pérdida de control de V1?",
+   "respuesta": "La causa de la pérdida de control fue el exceso de velocidad",
+   "valor": "exceso de velocidad"
+  },
+  {
+   "tema": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "pregunta": "¿Cuántas vueltas dio V1 y en qué dirección?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál es la secuencia de los eventos según tu percepción?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde exactamente en la vía ocurrió el impacto?",
+   "respuesta": "El impacto ocurrió al salir de una curva en la carretera",
+   "valor": "al salir de la curva"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Encontré restos de reflejante impregnado en el lugar del accidente",
+   "valor": "restos de reflejante impregnado"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en V1?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en V2, cuáles se activaron?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Cuáles son los daños en V1?",
+   "respuesta": "V1 no presenta daños",
+   "valor": "ninguno"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Y qué daños presenta V2?",
+   "respuesta": "V2 presenta un hundimiento de afuera hacia adentro, doblez en la muela de apertura del gancho de arrastre",
+   "valor": "hundimiento de afuera hacia adentro, doblez en la muela de apertura del gancho de arrastre"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "pregunta": "¿Dónde quedó detenido V1 tras el accidente?",
+   "respuesta": "V1 quedó fuera de la vía",
+   "valor": "fuera de la vía"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "pregunta": "¿Y cuál fue la posición final de V2?",
+   "respuesta": "V2 quedó fuera de la vía",
+   "valor": "fuera de la vía"
+  }
+ ]
+}

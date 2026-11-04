@@ -1,0 +1,27 @@
+{
+ "motivo": "evidencia no literal en evidencias_sitio",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "El vehículo V1 presenta pintura gris en la parte frontal, el vehículo V2 no presenta pintura café en la parte posterior"
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con alumbrado público",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Renault Megane 2004 cafe",
+  "V2": "Ford Ecosport 2005 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son las evidencias en el sitio?\",\n  \"respuesta\": \"EL VEHÍCULO RENAULT MEGANE PRESENTA PINTURA GRIS EN LA PARTE FRONTAL. ADIÓNESEMOS QUE EL FORD ECOSPORT NO PRESENTA PINTURA CAFÉ EN LA PARTE POSTERIOR. LUEGO, OBSERVÉMONOS QUE LA LONGITUD DE LAS HUELLAS DE FRENADO ASCIENDE A 8 M. FINALMENTE, ES IMPORTANTE MENCIONAR QUE EL ACCIDENTE OCURRIÓ DE NOCHE CON ALUMBRADO PÚBLICO.\",\n  \"extracciones\": [\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"pintura_gris_en_frontal_y_no_pintura_cafe_en_posterior\", \"evidencia\": \"EL VEHÍCULO RENAULT MEGANE PRESENTE PINTURA GRIS EN LA PARTE FRONTAL. ADIÓNESEMOS QUE EL FORD ECOSPORT NO PRESENTE PINTURA CAFÉ EN LA PARTE POSTERIOR.\"},\n    {\"tema\": \"huellas_frenado_m\", \"valor\": \"8\", \"evidencia\": \"LA LONGITUD DE LAS HUELLAS DE FRENADO ASCIENDE A 8 M.\"},\n    {\"tema\": \"iluminacion\", \"valor\": \"de_noche_con_alumbrado_publico\", \"evidencia\": \"EL ACCIDENTE OCURRIÓ DE NOCHE CON ALUMBRADO PÚBLICO.\"}\n  ]\n}"
+}

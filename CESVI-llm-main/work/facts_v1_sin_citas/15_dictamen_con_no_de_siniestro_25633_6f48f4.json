@@ -1,0 +1,20 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "NISSAN CHASIS CABINA 2009 BLANCO PLACAS RV-44-808",
+  "V2": "HONDA ACURA 2006 BLANCO PLACAS DNZ-67-47"
+ },
+ "valores": {
+  "declaracion_V1": "VENIA YO CIRCULANDO DE OTE A PTE AL ALTURA DEL CINE XTREME PERO EN LA RETONDA QUE HAY PERDI EL CONTROL POR ESQUIVAR UN BACHE Y LE PEGUE A UNA CAMIONETA A UN COSTADO Y LO LANCE CONTRA EL MURO Y DESPUES LLAME A MI AJUSTADOR",
+  "sentido_carril_V1": "Circulación de Oeste a Este",
+  "sentido_carril_V2": "Circulación de Este a Oeste",
+  "senalizacion_preferencia": "Sin preferencia de paso",
+  "evidencias_sitio": "No se encontraron huellas de frenado ni restos de pintura en el sitio",
+  "secuencia_eventos": "Vehículo V1 golpeó la parte derecha del vehículo V2",
+  "punto_impacto_via": "Impacto en el carril derecho del vehículo V2",
+  "angulo_impacto": "Oblicuo",
+  "posicion_final_V2": "Vehículo V2 impactado contra el muro de contención"
+ },
+ "id": "15_dictamen_con_no_de_siniestro_25633_6f48f4",
+ "split": "train"
+}

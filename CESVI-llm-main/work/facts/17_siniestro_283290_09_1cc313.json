@@ -1,0 +1,35 @@
+{
+ "id": "17_siniestro_283290_09_1cc313",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Hyundai Semirremolque Caja Seca 2005 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "retorno vehicular ubicado en la Av. Vallarta casi esquina con la calle Rafael Sanzio",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "tomó el retorno en mención para continuar su circulación en dirección Este a Oeste",
+  "punto_impacto_via": null,
+  "secuencia_eventos": "el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste",
+  "posicion_final_V1": "subiendo la parte izquierda del eje posterior sobre la banqueta",
+  "evidencias_sitio": "impregnación de caucho sobre la guarnición del camellón central",
+  "airbags_V1": null,
+  "maniobra_reversa": null,
+  "huellas_frenado_m": null,
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "\"AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO\"",
+  "sentido_carril_V1": "El retorno vehicular donde se suscitó el hecho de tránsito en estudio muestra un ancho de 16.00 metros y cuenta con dos carriles de circulación los cuales son divididos por reductores de velocidad que demarcan la separación de los mismos, este retorno permite retomar el flujo vehicular en dirección Oeste a Este y Este a Oeste respectivamente sobre los carriles laterales de la Av. Vallarta",
+  "maniobra_previa_V1": "el conductor del vehículo tipo semirremolque caja seca en estudio tomó el retorno en mención para continuar su circulación en dirección Este a Oeste",
+  "secuencia_eventos": "el conductor del vehículo tipo semirremolque caja seca en estudio tomó el retorno en mención para continuar su circulación en dirección Este a Oeste",
+  "posicion_final_V1": "con daño en sus cargadores, parte media central",
+  "evidencias_sitio": "sobre la periferia del la curva perteneciente a la guarnición del camellón central del retorno vehicular ubicado en la Av. Vallarta, se observa impregnación de caucho mismo que fue adherido en el momento en el que los neumáticos posteriores izquierdos del semirremolque entraron en contacto directo contra el camellón"
+ },
+ "descartados": {
+  "punto_impacto_via": "sobre la banqueta con la guarnición del camellón central"
+ }
+}

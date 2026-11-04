@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'La fascia posterior del Kenworth Tractocamión 2009 blanco presenta una'",
+ "principal": {
+  "id": "danos_V2",
+  "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "ruptura de la fascia posterior",
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Volvo Tractocamión Madrina 2001 blanco",
+  "V2": "Kenworth Tractocamión 2009 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños de la fascia posterior del Kenworth Tractocamión 2009 blanco?\",\n  \"respuesta\": \"La fascia posterior del Kenworth Tractocamión 2009 blanco presenta una ruptura que indica una fuerza de impacto desde la dirección frontal.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"ruptura de la fascia posterior\",\n      \"evidencia\": \"La fascia posterior del Kenworth Tractocamión 2009 blanco presenta una ruptura\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,49 @@
+{
+ "id": "alcance_z_vs_pointer_f203e7",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volkswagen Pointer 2003 azul",
+  "V2": "Nissan 350Z 2003 negro"
+ },
+ "valores": {
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "circulación por sentido de Sur a Norte",
+  "sentido_carril_V2": "circulación por sentido de Sur a Norte",
+  "maniobra_previa_V1": "reducción de velocidad",
+  "maniobra_previa_V2": "proyección",
+  "distancia_previa": null,
+  "secuencia_eventos": "el vehículo V2 se proyecta contra el vehículo V1",
+  "punto_impacto_via": "Avenida Instituto Politécnico Nacional, entre Wilfrido Massieu y Lindavista",
+  "evidencias_sitio": "pintura azul en el cofre de V2, pintura negra en la tapa cajuela de V1",
+  "airbags_V1": "activados",
+  "airbags_V2": null,
+  "posicion_final_V1": "detenido tras el impacto",
+  "posicion_final_V2": "detenido tras el impacto",
+  "declaracion_V1": "al venir circulando sobre la avenida estaba lloviendo quise frenar en un tope y el coche se patino chocando contra un Pointer que se encontraba delante de mi",
+  "huellas_frenado_m": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "sentido_carril_V1": "Los vehículos en estudio circulan por la Avenida Instituto Politécnico Nacional en dirección de Sur a Norte",
+  "sentido_carril_V2": "Los vehículos en estudio circulan por la Avenida Instituto Politécnico Nacional en dirección de Sur a Norte",
+  "maniobra_previa_V1": "el vehículo “B” reduce su velocidad y el vehículo “A” se proyecta sobre él",
+  "maniobra_previa_V2": "el vehículo “A” se proyecta sobre él",
+  "secuencia_eventos": "el vehículo “A” se proyecta sobre él",
+  "punto_impacto_via": "El lugar de los hechos se localiza sobre la Avenida Instituto Politécnico Nacional, entre Wilfrido Massieu y Lindavista",
+  "evidencias_sitio": "el vehículo marca Nissan, tipo 350Z, modelo 2003, color negro con placas de circulación 585-WJW, presenta tallones, con impregnación de pintura color azul en el cofre, mientras que el vehículo marca Volkswagen, tipo Pointer modelo 2003, color azul y placas de circulación 983-SMY, presenta tallones y desprendimiento de pintura en el borde inferior de la tapa cajuela",
+  "airbags_V1": "En el habitáculo del vehículo en estudio se observan las bolsas de aire frontales activadas, tanto la del conductor como la del acompañante",
+  "posicion_final_V1": "el vehículo “B” reduce su velocidad y el vehículo “A” se proyecta sobre él",
+  "posicion_final_V2": "el vehículo “B” reduce su velocidad y el vehículo “A” se proyecta sobre él",
+  "declaracion_V1": "al venir circulando sobre la avenida estaba lloviendo quise frenar en un tope y el coche se patino chocando contra un Pointer que se encontraba delante de mi"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "noche"
+ }
+}

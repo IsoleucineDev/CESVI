@@ -1,0 +1,27 @@
+{
+ "motivo": "evidencia no literal en evidencias_sitio",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "El vehículo V1 presenta pintura gris en la parte frontal, el vehículo V2 no presenta pintura café en la parte posterior"
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con alumbrado público",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Renault Megane 2004 cafe",
+  "V2": "Ford Ecosport 2005 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son las evidencias en el sitio?\",\n  \"respuesta\": \"El vehículo Renault Megane 2004 cafe presenta pintura gris en la parte frontal, además, el vehículo Ford Ecosport 2005 gris no presenta pintura café en la parte posterior, y luego, se observaron huellas de frenado con una longitud de 8 metros, luego, la iluminación era de noche con alumbrado público.\",\n  \"extracciones\": [\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"pintura gris en la parte frontal del Renault Megane cafe y no presenta pintura café en la parte posterior del Ford Ecosport gris\", \"evidencia\": \"El vehículo Renault Megane 2004 cafe presenta pintura gris en la parte frontal, el vehículo Ford Ecosport 2005 gris no presenta pintura café en la parte posterior\"},\n    {\"tema\": \"huellas_frenado_m\", \"valor\": \"8\", \"evidencia\": \"se observaron huellas de frenado con una longitud de 8 metros\"},\n    {\"tema\": \"iluminacion\", \"valor\": \"de noche con alumbrado público\", \"evidencia\": \"la iluminación era de noche con alumbrado público\"}\n  ]\n}"
+}

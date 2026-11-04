@@ -1,0 +1,23 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Freightliner Palett 2009 rojo",
+  "V2": "Nissan Tsuru 2010 blanco"
+ },
+ "valores": {
+  "sentido_carril_V1": "giro de 180°",
+  "sentido_carril_V2": "circulación normal",
+  "declaracion_V1": "circulaba por la avenida y al tomar el carril de desaceleración para dar vuelta en U, se percató de que venían dos taxis a exceso de velocidad; uno pasó y el otro impactó con la parte trasera del camión",
+  "declaracion_V2": "null",
+  "secuencia_eventos": "vehículo V2 impacta en dirección diagonal de adelante hacia atrás sobre el costado posterior izquierdo de V1",
+  "punto_impacto_via": "carril de desaceleración",
+  "angulo_impacto": "diagonal",
+  "evidencias_sitio": "huellas de botellas y manchas hemáticas",
+  "danos_V1": "hundimiento en dirección izquierda a derecha en el costado posterior izquierdo con incrustación de cofre color blanco",
+  "danos_V2": "daño tipo corrimiento en dirección de adelante hacia atrás y de izquierda a derecha con incrustación de cofre color rojo",
+  "posicion_final_V1": "ubicación final desconocida",
+  "posicion_final_V2": "ubicación final desconocida"
+ },
+ "id": "35387_11_coca_vs_taxi_532b6e",
+ "split": "train"
+}

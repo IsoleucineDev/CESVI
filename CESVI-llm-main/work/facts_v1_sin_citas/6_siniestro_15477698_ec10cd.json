@@ -1,0 +1,19 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Volkswagen Passat gris modelo 2006"
+ },
+ "valores": {
+  "superficie": "Seca",
+  "iluminacion": "Día",
+  "causa_perdida_control": "Distracción",
+  "punto_impacto_via": "Carril derecho, impacto contra objeto fijo",
+  "altura_marca_objeto_cm": "45-73",
+  "evidencias_sitio": "No se observan huellas de frenado ni marcas en el sitio",
+  "huellas_frenado_m": null,
+  "danos_V1": "Hundimiento frontal derecho con desacoplamiento de la parrilla y faro derecho afectado",
+  "posicion_final_V1": "Vehículo detenido en sitio del impacto"
+ },
+ "id": "6_siniestro_15477698_ec10cd",
+ "split": "train"
+}

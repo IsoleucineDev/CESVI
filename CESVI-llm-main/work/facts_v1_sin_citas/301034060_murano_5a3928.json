@@ -1,0 +1,23 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "NISSAN MURANO 2004 NEGRO 257 WJX"
+ },
+ "valores": {
+  "superficie": "asfalto seco",
+  "iluminacion": "noche, sin luces",
+  "sentido_carril_V1": "Norte a Sur, carril central",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "sin especificar",
+  "senalizacion_preferencia": null,
+  "tipo_objeto": "muro de concreto trapezoidal, altura 80 cm",
+  "causa_perdida_control": "distracción al esquivar un vehículo detenido",
+  "punto_impacto_via": "carril central, Avenida Central",
+  "altura_marca_objeto_cm": "30-70",
+  "evidencias_sitio": "huellas de frenado no observadas, intercambio de pintura",
+  "airbags_V1": "bolsa de aire del conductor y del pasajero activadas",
+  "posicion_final_V1": "vehículo detenido contra el muro de contención"
+ },
+ "id": "301034060_murano_5a3928",
+ "split": "train"
+}

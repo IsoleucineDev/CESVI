@@ -1,0 +1,26 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO"
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 40,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Hyundai Semirremolque Caja Seca 2005 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Hyundai Semirremolque Caja Seca 2005 blanco sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO. ADÉMÁS, DE DÍA CON BUENA VISIBILIDAD. Y LUEGO, LA VELOCIDAD ESTIMADA ANTES DEL EVENTO ERA DE 40 KM/H.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"dando vuelta en un retorno sobre la Av. Vallarta se vencio la caja de enmedio\",\n      \"evidencia\": \"AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de dia con buena visibilidad\",\n      \"evidencia\": \"DE DÍA CON BUENA VISIBILIDAD\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"40\",\n      \"evidencia\": \"LA VELOCIDAD ESTIMADA ANTES DEL EVENTO ERA DE 40 KM/H\"\n    }\n  ]\n}"
+}

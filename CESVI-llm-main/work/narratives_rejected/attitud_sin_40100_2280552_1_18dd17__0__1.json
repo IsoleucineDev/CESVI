@@ -1,0 +1,19 @@
+{
+ "motivo": "oración con contenido no extraído: 'En el sitio del accidente había huellas de pintura en las puertas del '",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "lateral izquierdo"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "huellas de pintura en las puertas del lado izquierdo"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Dodge Attitud 2006 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles fueron las evidencias en el sitio del accidente?\",\n  \"respuesta\": \"En el sitio del accidente había huellas de pintura en las puertas del lado izquierdo además el impacto ocurrió en el lateral izquierdo\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"huellas de pintura en las puertas\",\n      \"evidencia\": \"huellas de pintura en las puertas del lado izquierdo\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"lateral izquierdo\",\n      \"evidencia\": \"el lateral izquierdo\"\n    }\n  ]\n}"
+}

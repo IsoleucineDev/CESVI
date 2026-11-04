@@ -1,0 +1,14 @@
+{
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2006 negro"
+ },
+ "valores": {
+  "causa_perdida_control": "Derrape",
+  "declaracion_V1": "Venía circulando x terracería entre Benito Juárez y Pescador se derrapó camioneta y la grava en exceso sacándome del camino a 50 metros",
+  "posicion_final_V1": "Internado entre la vegetación, compuesto por arbustos de baja altura",
+  "evidencias_sitio": "Terracería con tierra suelta de color rojo, cerca con alambre de púas"
+ },
+ "id": "27075555_mitsubishi_a06b07",
+ "split": "train"
+}

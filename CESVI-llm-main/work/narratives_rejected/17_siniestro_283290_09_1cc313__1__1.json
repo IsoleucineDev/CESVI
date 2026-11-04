@@ -1,0 +1,24 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_previa_V1",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "retorno vehicular ubicado en la Av. Vallarta casi esquina con la calle Rafael Sanzio"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "impregnación de caucho sobre la guarnición del camellón central"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Hyundai Semirremolque Caja Seca 2005 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es el sentido de circulación y carril por el que iba el Hyundai Semirremolque Caja Seca 2005 blanco?\",\n  \"respuesta\": \"El Hyundai Semirremolque Caja Seca 2005 blanco tomó el retorno vehicular ubicado en la Av. Vallarta casi esquina con la calle Rafael Sanzio para continuar su circulación en dirección Este a Oeste, además luego de tomar el retorno, no realizó ninguna maniobra previa antes del impacto, y además en el sitio se observó impregnación de caucho sobre la guarnición del camellón central.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"retorno vehicular ubicado en la Av. Vallarta casi esquina con la calle Rafael Sanzio\",\n      \"evidencia\": \"El Hyundai Semirremolque Caja Seca 2005 blanco tomó el retorno vehicular ubicado en la Av. Vallarta casi esquina con la calle Rafael Sanzio para continuar su circulación en dirección Este a Oeste\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"tomó el retorno en mención para continuar su circulación en dirección Este a Oeste\",\n      \"evidencia\": \"además luego de tomar el retorno, no realizó ninguna maniobra previa antes del impacto\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"impregnación de caucho sobre la guarnición del camellón central\",\n      \"evidencia\": \"en el sitio se observó impregnación de caucho sobre la guarnición del camellón central\"\n    }\n  ]\n}"
+}

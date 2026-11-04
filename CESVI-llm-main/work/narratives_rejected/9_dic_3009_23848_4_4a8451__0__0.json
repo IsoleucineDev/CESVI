@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en punto_impacto_via",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Sureste a Noroeste"
+ },
+ "otros": [
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "Sur a Norte"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Azucena esquina con Av. Reforma"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta pintura roja del V2 en el costado izquierdo frontal; el vehículo V2 no presenta pintura azul del V1."
+  }
+ ],
+ "vehiculos": {
+  "V1": "VW Jetta 2002 azul",
+  "V2": "GM Camaro 1995 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue el sentido de circulación y carril por el que iba el VW Jetta?\",\n  \"respuesta\": \"El VW Jetta circulaba en dirección Sureste a Noroeste. Además, el Chevy Camaro circulaba en dirección Sur a Norte.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"Sureste a Noroeste\",\n      \"evidencia\": \"Sureste a Noroeste\"\n    },\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"Sur a Norte\",\n      \"evidencia\": \"Sur a Norte\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"calle Azucena esquina con Av. Reforma\",\n      \"evidencia\": \"calle Azucena esquina con Av. Reforma\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"pintura roja del V2 en el costado izquierdo frontal; no presenta pintura azul del V1\",\n      \"evidencia\": \"El vehículo V1 presenta pintura roja del V2 en el costado izquierdo frontal; el vehículo V2 no presenta pintura azul del V1.\"\n    }\n  ]\n}"
+}

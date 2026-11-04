@@ -1,0 +1,21 @@
+{
+ "motivo": "valor no concuerda con su evidencia en danos_V1",
+ "principal": {
+  "id": "danos_V1",
+  "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "ruptura de la fascia posterior",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan X-Trail 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños del Nissan X-Trail 2008 gris?\",\n  \"respuesta\": \"El Nissan X-Trail 2008 gris iba a unos 90 km/h además luego se rompió la fascia posterior\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"iba a unos 90 km/h\"\n    },\n    {\n      \"tema\": \"danos_V1\",\n      \"valor\": \"ruptura_fascia_posterior\",\n      \"evidencia\": \"se rompió la fascia posterior\"\n    }\n  ]\n}"
+}

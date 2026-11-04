@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_previa_V1",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "parada"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "cruce con la carretera Monte Largo"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 43.3
+  }
+ ],
+ "vehiculos": {
+  "V1": "DINA Autobus 1992 blanco con franjas amarillas y negras",
+  "V2": "Chevrolet Malibu 2007 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del bus antes del impacto?\",\n  \"respuesta\": \"el bus estaba parado en el cruce con la carretera Monte Largo, además el Chevy venía a 43.3 km/h y luego no hubo maniobra previa del bus\",\n  \"extracciones\": [\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"cruce con la carretera Monte Largo\", \"evidencia\": \"el bus estaba parado en el cruce con la carretera Monte Largo\"},\n    {\"tema\": \"velocidad_V2_kmh\", \"valor\": \"43.3\", \"evidencia\": \"el Chevy venía a 43.3 km/h\"},\n    {\"tema\": \"maniobra_previa_V1\", \"valor\": \"parada\", \"evidencia\": \"no hubo maniobra previa del bus\"}\n  ]\n}"
+}

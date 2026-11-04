@@ -1,0 +1,143 @@
+{
+ "id": "chevy_m1763480_104c08",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Chevrolet Chevy C2 2011 dorado",
+  "V2": "Astra azul desconocido"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "sirculandosobre el eje 3 Norte meinpacta un automovil aztra azul pego en la vanqueta y acon secuencia del golpe ahiquedo mi unidad"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Poniente a Oriente"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "incorporación"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "semáforos"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo tipo Astra color azul impacta con su vértice delantero derecho al lado delantero izquierdo del vehículo marca tipo Chevy, modelo 2011, color dorado"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Calzada de las Armas, casi esquina con el Eje 3 Norte"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "proyectado hacia su costado derecho, impactando contra la guarnición"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "se da a la fuga"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura color azul en el vértice delantero izquierdo (conjunto de luces), así como daños tipo tallón con impregnación de pintura color blanco en la fascia"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto regular sin líneas divisorias entre carriles"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 2,
+ "asked": "sentido_carril_V1",
+ "pregunta": "¿Cuál era el sentido de circulación y el carril por el que iba el Chevy?",
+ "respuesta": "EL CHEVY CIRCULABA POR EL SENTIDO DE CIRCULACIÓN DE PONIENTE A ORIENTE. ADemás, HABÍA SEMÁFOROS EN LA INTERSECCIÓN. LUEGO, EL IMPACTO OCURRIÓ EN LA CALZADA DE LAS ARMAS, CASI ESQUINA CON EL EJE 3 NORTE. Y LA SUPERFICIE DE RODAMIENTO ERA ASFALTO REGULAR SIN LÍNEAS DIVISORIAS ENTRE CARRILES.",
+ "gold": {
+  "sentido_carril_V1": {
+   "valor": "Poniente a Oriente",
+   "evidencia": "EL CHEVY CIRCULABA POR EL SENTIDO DE CIRCULACIÓN DE PONIENTE A ORIENTE."
+  },
+  "senalizacion_preferencia": {
+   "valor": "semáforos",
+   "evidencia": "HABÍA SEMÁFOROS EN LA INTERSECCIÓN."
+  },
+  "punto_impacto_via": {
+   "valor": "Calzada de las Armas, casi esquina con el Eje 3 Norte",
+   "evidencia": "EL IMPACTO OCURRIÓ EN LA CALZADA DE LAS ARMAS, CASI ESQUINA CON EL EJE 3 NORTE."
+  },
+  "superficie": {
+   "valor": "asfalto regular sin líneas divisorias entre carriles",
+   "evidencia": "LA SUPERFICIE DE RODAMIENTO ERA ASFALTO REGULAR SIN LÍNEAS DIVISORIAS ENTRE CARRILES."
+  }
+ }
+}

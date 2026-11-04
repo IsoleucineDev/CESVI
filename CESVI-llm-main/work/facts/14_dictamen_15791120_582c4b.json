@@ -1,0 +1,47 @@
+{
+ "id": "14_dictamen_15791120_582c4b",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Jaguar S-Type 2005 negro",
+  "V2": "Mitsubishi Lancer 2006 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "viniendo de río churubusco por Francisco Javier mina a mitad de la calle con brúcelas, me impacto un Mitsubishi lancer blanco en mi costado derecho",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "circulando en la avenida Francisco Javier Mina",
+  "sentido_carril_V2": "circulando sobre la avenida Bruselas",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "ninguna",
+  "maniobra_previa_V2": "ninguna",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "el vehículo V2 impacta el costado derecho del vehículo V1",
+  "punto_impacto_via": "mitad de la calle con Brúcelas",
+  "angulo_impacto": null,
+  "evidencias_sitio": "pintura de color negro impregnada sobre la parte frontal media del cofre del vehículo V2",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "viniendo de río churubusco por Francisco Javier mina a mitad de la calle con brúcelas, me impacto un Mitsubishi lancer blanco en mi costado derecho",
+  "sentido_carril_V1": "Se observa el automóvil marca Jaguar color negro que esta circulando en la avenida Francisco Javier Mina",
+  "sentido_carril_V2": "el conductor del automóvil marca Mitsubishi color blanco que esta circulando sobre la avenida Bruselas",
+  "maniobra_previa_V1": "Se observa el automóvil marca Jaguar color negro que esta circulando en la avenida Francisco Javier Mina",
+  "maniobra_previa_V2": "el conductor del automóvil marca Mitsubishi color blanco que esta circulando sobre la avenida Bruselas",
+  "secuencia_eventos": "Se observa el automóvil marca Jaguar color negro que esta circulando en la avenida Francisco Javier Mina y en la esquina el conductor del automóvil marca Mitsubishi color blanco que esta circulando sobre la avenida Bruselas, es impactado en su lado derecho",
+  "punto_impacto_via": "viniendo de río churubusco por Francisco Javier mina a mitad de la calle con brúcelas, me impacto un Mitsubishi lancer blanco en mi costado derecho",
+  "evidencias_sitio": "Se observa el cofre pintura color negro en la parte frontal media"
+ },
+ "descartados": {
+  "posicion_final_V1": "ubicación final no especificada",
+  "posicion_final_V2": "ubicación final no especificada"
+ }
+}

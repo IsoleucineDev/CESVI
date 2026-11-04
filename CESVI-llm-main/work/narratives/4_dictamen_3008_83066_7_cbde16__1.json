@@ -1,0 +1,134 @@
+{
+ "id": "4_dictamen_3008_83066_7_cbde16",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chrysler Jeep 1994 negro",
+  "V2": "vehículo desconocido"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "venia circulando sobre la avenida aztecas aproximadamente como a las 23:30 hrs. del día viernes 7 de noviembre del presente año cuando impacte un vehículo en la parte posterior por lo que me di a la fuga ya que tenia aliento alcohólico y pensando que no procedía el siniestro por eso me día a la fuga. Desconozco datos y estado del vehículo que impacte"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "circulación de Nor-Este hacia Sur-Oeste"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V1 impacta con su parte frontal izquierda en la parte posterior del vehículo V2"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "avenida Aztecas"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto en buenas condiciones"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activada la bolsa de aire frontal del conductor"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 2,
+ "asked": "sentido_carril_V1",
+ "pregunta": "¿Cuál era el sentido de circulación y el carril por el que iba el Chrysler Jeep 1994 negro?",
+ "respuesta": "El Chrysler Jeep 1994 negro circulaba en el sentido de Nor-Este hacia Sur-Oeste. Además, la superficie de rodamiento era asfalto en buenas condiciones. Luego, el vehículo impacta con su parte frontal izquierda en la parte posterior del vehículo desconocido.",
+ "gold": {
+  "sentido_carril_V1": {
+   "valor": "Nor-Este hacia Sur-Oeste",
+   "evidencia": "El Chrysler Jeep 1994 negro circulaba en el sentido de Nor-Este hacia Sur-Oeste."
+  },
+  "superficie": {
+   "valor": "asfalto en buenas condiciones",
+   "evidencia": "la superficie de rodamiento era asfalto en buenas condiciones"
+  },
+  "secuencia_eventos": {
+   "valor": "El vehículo V1 impacta con su parte frontal izquierda en la parte posterior del vehículo V2",
+   "evidencia": "el vehículo impacta con su parte frontal izquierda en la parte posterior del vehículo desconocido"
+  }
+ }
+}

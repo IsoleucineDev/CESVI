@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en punto_impacto_via",
+ "principal": {
+  "id": "maniobra_reversa",
+  "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+  "valor": "el conductor de V1 realizó una maniobra en reversa en la que impactó al vehículo V2"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "en la calle Fuye y Hurrondas"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión Quinta Rueda 2001 blanco",
+  "V2": "Chevrolet Optra LS 2007 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra realizada por el conductor del Freightliner en el momento del impacto?\",\n  \"respuesta\": \"El conductor del Freightliner realizó una maniobra en reversa en la que impactó al vehículo Chevrolet. Además, la dirección y tramo recorrido en reversa, y visibilidad del conductor fueron los factores principales en este incidente.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_reversa\",\n      \"valor\": \"el conductor del Freightliner realizó una maniobra en reversa en la que impactó al vehículo Chevrolet\",\n      \"evidencia\": \"el conductor del Freightliner realizó una maniobra en reversa en la que impactó al vehículo Chevrolet\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"calle Fuye y Hurrondas\",\n      \"evidencia\": \"en la calle Fuye y Hurrondas\"\n    }\n  ]\n}"
+}

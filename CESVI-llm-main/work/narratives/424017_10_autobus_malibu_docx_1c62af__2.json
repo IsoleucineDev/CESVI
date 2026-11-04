@@ -1,0 +1,114 @@
+{
+ "id": "424017_10_autobus_malibu_docx_1c62af",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "DINA Autobus 1992 blanco con franjas amarillas y negras",
+  "V2": "Chevrolet Malibu 2007 negro"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo, mientras el vehículo tipo Malibu Negro que circula en sentido Norte a Sur, se acerca al cruce con la carretera a Ciudad Pemex. El conductor del vehículo tipo Autobús pasa el crucero y hace parada, mientras que el conductor del vehículo tipo Malibu, sigue avanzando. El conductor del vehículo tipo Autobús, al hacer “parada”, detiene por completo su unidad, mientras que el conductor del vehículo tipo Malibu continua avanzando e impacta su parte frontal derecha contra la parte posterior izquierda del vehículo tipo Autobús"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Oriente a Poniente"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "Norte a Sur"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "parada"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "avanzando"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo, mientras el vehículo tipo Malibu Negro que circula en sentido Norte a Sur, se acerca al cruce con la carretera a Ciudad Pemex [...]"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "cruce con la carretera Monte Largo"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "intercambios de pintura color negro en la placa de circulación justo a una altura de entre 0.66m a 0.78m en el vehículo tipo Autobús, y en la parte frontal del vehículo tipo Malibu a una altura de 0.70m a 0.80m se encuentran intercambios de pintura color blanco sobre el cofre"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 43.3
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 4,
+ "asked": "maniobra_previa_V1",
+ "pregunta": "¿Cuál fue la maniobra previa del bus antes del impacto?",
+ "respuesta": "El bus estaba parado en el cruce con la carretera Monte Largo, además la velocidad del Chevy era de 43.3 km/h.",
+ "gold": {
+  "punto_impacto_via": {
+   "valor": "cruce con la carretera Monte Largo",
+   "evidencia": "El bus estaba parado en el cruce con la carretera Monte Largo"
+  },
+  "velocidad_V2_kmh": {
+   "valor": "43.3",
+   "evidencia": "la velocidad del Chevy era de 43.3 km/h"
+  },
+  "maniobra_previa_V1": {
+   "valor": "parada",
+   "evidencia": "El bus estaba parado"
+  }
+ }
+}

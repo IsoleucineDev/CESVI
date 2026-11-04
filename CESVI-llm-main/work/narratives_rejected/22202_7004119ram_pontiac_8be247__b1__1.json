@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Pontiac Gran AM 1998 rojo circulaba a una velocidad estimada de 60 '",
+ "principal": {
+  "id": "velocidad_V2_kmh",
+  "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+  "valor": 60,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Dodge RAM 1500 1996 negro",
+  "V2": "Pontiac Gran AM 1998 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada del Pontiac Gran AM 1998 rojo antes del evento?\",\n  \"respuesta\": \"El Pontiac Gran AM 1998 rojo circulaba a una velocidad estimada de 60 km/h antes del evento.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"60\",\n      \"evidencia\": \"una velocidad estimada de 60 km/h\"\n    }\n  ]\n}"
+}

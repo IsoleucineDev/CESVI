@@ -1,0 +1,28 @@
+{
+ "motivo": "evidencia no literal en angulo_impacto",
+ "principal": {
+  "id": "angulo_impacto",
+  "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+  "valor": "perpendicular",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan 350Z 2004 plata",
+  "V2": "Honda Accord 2006 dorado"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue el ángulo aproximado entre los vehículos al momento del impacto?\",\n  \"respuesta\": \"El Nissan 350Z y el Honda Accord chocaron de manera perpendicular entre sí.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"angulo_impacto\",\n      \"valor\": \"perpendicular\",\n      \"evidencia\": \"perpendicular\"\n    },\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"80\",\n      \"evidencia\": \"el Honda Accord\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"50\",\n      \"evidencia\": \"el Nissan 350Z\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,25 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "en la esquina de Av. Nacional y Av. Chapultepec antes de llegar al tope de la Av. Chapultepec"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "huellas de frenado no observadas, restos de pintura color azul en el vehículo V2"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto en buenas condiciones de circulación"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford F350 1994 blanco y azul",
+  "V2": "Chevrolet Monza 2009 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo\",\n  \"respuesta\": \"El impacto ocurrió en la esquina de Av. Nacional y Av. Chapultepec antes de llegar al tope de la Av. Chapultepec, además, la superficie de rodamiento era asfalto en buenas condiciones de circulación, además, en el sitio se observaron restos de pintura color azul en el vehículo V2.\",\n  \"extracciones\": [\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"esquina de Av. Nacional y Av. Chapultepec antes de llegar al tope de la Av. Chapultepec\", \"evidencia\": \"El impacto ocurrió en la esquina de Av. Nacional y Av. Chapultepec antes de llegar al tope de la Av. Chapultepec\"},\n    {\"tema\": \"superficie\", \"valor\": \"asfalto en buenas condiciones de circulación\", \"evidencia\": \"la superficie de rodamiento era asfalto en buenas condiciones de circulación\"},\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"restos de pintura color azul\", \"evidencia\": \"se observaron restos de pintura color azul en el vehículo V2\"}\n  ]\n}"
+}

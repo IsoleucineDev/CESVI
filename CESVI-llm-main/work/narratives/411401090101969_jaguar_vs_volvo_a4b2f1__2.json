@@ -1,0 +1,114 @@
+{
+ "id": "411401090101969_jaguar_vs_volvo_a4b2f1",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Jaguar S Type 2004 blanco",
+  "V2": "Volvo S60 2001 gris"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "por teléfono Celular, chocar coche estacionado aprox. 60 Km/h pegue parte trasera proyectandolo"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Poniente a Oriente"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "estacionado"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "distraído con celular"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "estacionado"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo marca Jaguar impacta la parte frontal derecha contra la parte posterior izquierda del vehículo marca Volvo. El impacto proyecta al vehículo Volvo contra la vegetación."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle 18"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "impregnaciones de pintura color blanco en la parte posterior del vehículo marca Volvo"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 60
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activadas"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 8,
+ "asked": "punto_impacto_via",
+ "pregunta": "¿Dónde en la calle ocurrió el impacto?",
+ "respuesta": "El impacto ocurrió en la calle 18, además se encontraron impregnaciones de pintura color blanco en la parte posterior del vehículo marca Volvo, y las bolsas de aire del Jaguar S Type 2004 se activaron.",
+ "gold": {
+  "punto_impacto_via": {
+   "valor": "calle 18",
+   "evidencia": "El impacto ocurrió en la calle 18"
+  },
+  "evidencias_sitio": {
+   "valor": "impregnaciones de pintura color blanco en la parte posterior del vehículo marca Volvo",
+   "evidencia": "se encontraron impregnaciones de pintura color blanco en la parte posterior del vehículo marca Volvo"
+  },
+  "airbags_V1": {
+   "valor": "activadas",
+   "evidencia": "las bolsas de aire del Jaguar S Type 2004 se activaron"
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_previa_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "Circulava por la avenida tome el carril de desaceleracion al dar vuelta en U me percate por la ventanilla que venia dos taxis a exeso de velocidad atrás; uno de ello alcanso apasar y el otro se impacto con la parte tracera del camion"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "giro"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "detenido en el carril de desaceleración"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner Palett 2009 rojo",
+  "V2": "Nissan Tsuru 2010 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor de Freightliner sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"CIRCULABA POR LA AVEVNEA TOME EL CARRIL DE DESACELERACION AL DAR VUELTA EN U ME PERCATE POR LA VENTANILLA QUE VENIA DOS Taxis A EXESO DE VELOCIDAD ATRÁS; UNO DE ELLIO ALCANSO APASAR Y EL OTRO SE IMPACTO CON LA PARTE TRACERA DEL CAMION.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"giro\",\n      \"evidencia\": \"dar vuelta en U\"\n    },\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"carril de desaceleración\",\n      \"evidencia\": \"detenido en el carril de desaceleración\"\n    },\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"Freightliner circulaba por la avenida tomaba el carril de desaceleracion al dar vuelta en U me percate por la ventanilla que venia dos taxis a exeso de velocidad atrás; uno de ello alcanzo pasar y el otro se impacto con la parte tracera del camion\",\n      \"evidencia\": \"CIRCULABA POR LA AVEVNEA TOME EL CARRIL DE DESACELERACION AL DAR VUELTA EN U ME PERCATE POR LA VENTANILLA QUE VENIA DOS Taxis A EXESO DE VELOCIDAD ATRÁS; UNO DE ELLIO ALCANSO APASAR Y EL OTRO SE IMPACTO CON LA PARTE TRACERA DEL CAMION.\"\n    }\n  ]\n}"
+}

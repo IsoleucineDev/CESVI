@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Matiz realizó una maniobra de frenado antes del impacto, además se '",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "frenado"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura color rojo en el cofre del vehículo tipo Matiz, no existen evidencias de intercambio de pintura en el vehículo tipo Cavalier"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Pontiac Matiz 2006 blanco con rojo",
+  "V2": "Chevrolet Cavalier 1993 gris con azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Matiz antes del impacto?\",\n  \"respuesta\": \"El Matiz realizó una maniobra de frenado antes del impacto, además se observó pintura color rojo en el cofre del vehículo tipo Matiz, no existen evidencias de intercambio de pintura en el vehículo tipo Cavalier.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"frenado\",\n      \"evidencia\": \"El Matiz realizó una maniobra de frenado antes del impacto\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"pintura color rojo en el cofre del vehículo tipo Matiz\",\n      \"evidencia\": \"se observó pintura color rojo en el cofre del vehículo tipo Matiz\"\n    }\n  ]\n}"
+}

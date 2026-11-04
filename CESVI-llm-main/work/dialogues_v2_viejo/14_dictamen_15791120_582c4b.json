@@ -1,0 +1,138 @@
+{
+ "id": "14_dictamen_15791120_582c4b",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Jaguar S-Type 2005 negro",
+  "V2": "Mitsubishi Lancer 2006 blanco"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué nos dice el conductor del Jaguar S-Type negro sobre cómo ocurrió el accidente?",
+   "respuesta": "viniendo de río churubusco por Francisco Javier Mina a mitad de la calle con Brúcelas, me impacto un Mitsubishi lancer blanco en mi costado derecho",
+   "valor": "viniendo de río churubusco por Francisco Javier mina a mitad de la calle con brúcelas, me impacto un Mitsubishi lancer blanco en mi costado derecho"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y qué nos menciona el conductor del Mitsubishi Lancer blanco?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Podrías describirnos la superficie de rodamiento en donde ocurrió el accidente?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿En qué dirección y carril iba el Jaguar S-Type negro?",
+   "respuesta": "circulando en la avenida Francisco Javier Mina",
+   "valor": "circulando en la avenida Francisco Javier Mina"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y el Mitsubishi Lancer blanco, en qué dirección y carril circulaba?",
+   "respuesta": "creo que más o menos circulaba sobre la avenida Bruselas",
+   "valor": "circulando sobre la avenida Bruselas"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Jaguar S-Type negro antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué velocidad estimas que llevaba el Mitsubishi Lancer blanco?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Jaguar S-Type negro antes del impacto?",
+   "respuesta": "ninguna",
+   "valor": "ninguna"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y el Mitsubishi Lancer blanco, realizó alguna maniobra antes del choque?",
+   "respuesta": "ninguna",
+   "valor": "ninguna"
+  },
+  {
+   "tema": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "pregunta": "¿Había algún semáforo o señal de alto/ceda el paso que indicara quién tenía preferencia de paso?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describirnos el orden y tipo de los impactos?",
+   "respuesta": "el vehículo V2 impacta el costado derecho del vehículo V1",
+   "valor": "el vehículo V2 impacta el costado derecho del vehículo V1"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde en la calle ocurrió el impacto?",
+   "respuesta": "mitad de la calle con Brúcelas",
+   "valor": "mitad de la calle con Brúcelas"
+  },
+  {
+   "tema": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "pregunta": "¿Cuál es el ángulo aproximado entre los vehículos al momento del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "pintura de color negro impregnada sobre la parte frontal media del cofre del vehículo V2",
+   "valor": "pintura de color negro impregnada sobre la parte frontal media del cofre del vehículo V2"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Viste huellas de frenado en el lugar del accidente y cuánto medían?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Jaguar S-Type negro?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en el Mitsubishi Lancer blanco, cuáles bolsas de aire se activaron?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

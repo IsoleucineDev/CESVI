@@ -1,0 +1,135 @@
+{
+ "id": "bora_y_civic_5cb958",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Volkswagen Bora 2006 gris",
+  "V2": "Honda Civic 2007 vino"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "AL IR CIRCULANDO POR LA CALLE ROBLE HICE ALTO AL QUEDAR ATORADO POR EL ALTO DE LOS CARROS AL FRENTE Y ME IMPACTO UN VEHÍCULO POR EL LADO IZQUIERDO EL CUAL CIRCULABA POR LA CALLE NOGAL"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Norte a Sur"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "Oriente a Poniente"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "detenido"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "cambio de carril"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "señal de alto"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V2 circulaba por la calle Nogal en dirección Oriente a Poniente y el vehículo V1 circulaba por la calle Roble en dirección Norte a Sur. El vehículo V2 impacta al vehículo V1 por su lado izquierdo."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Roble y calle Nogal"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "perpendicular"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "El vehículo V1 quedó detenido en la calle Roble con dirección de Norte a Sur."
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "El vehículo V2 se proyectó e impactó contra una barda."
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta impregnación de pintura color vino en la parte frontal y el vehículo V2 presenta impregnación de pintura color gris en el lado derecho."
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activados (conductor y acompañante)"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "activados (conductor, acompañante y de cortina del lado derecho)"
+  }
+ ],
+ "g": 10,
+ "asked": "posicion_final_V1",
+ "pregunta": "¿Dónde quedó detenido el Volkswagen Bora tras el evento?",
+ "respuesta": "El Volkswagen Bora 2006 gris quedó detenido en la calle Roble con dirección de Norte a Sur. Además, el Honda Civic 2007 vino se proyectó e impactó contra una barda.",
+ "gold": {
+  "posicion_final_V2": {
+   "valor": "calle Roble con dirección de Norte a Sur",
+   "evidencia": "El Volkswagen Bora 2006 gris quedó detenido en la calle Roble con dirección de Norte a Sur"
+  },
+  "posicion_final_V1": {
+   "valor": "contra una barda",
+   "evidencia": "el Honda Civic 2007 vino se proyectó e impactó contra una barda"
+  }
+ }
+}

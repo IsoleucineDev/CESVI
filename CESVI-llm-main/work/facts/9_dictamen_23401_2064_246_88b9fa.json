@@ -1,0 +1,51 @@
+{
+ "id": "9_dictamen_23401_2064_246_88b9fa",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Ford Eco sport 2005 rojo",
+  "V2": "Kenworth Volteo T 300 2008 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "Benia en el tramo Jaltipa acayucan km 43 cuando de repente se me atraviesa un camión y lo esquibe y me encontre con la camioneta de frente y la impacte",
+  "declaracion_V2": null,
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": "Norte a Sur",
+  "sentido_carril_V2": "Oriente a Poniente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "marcha",
+  "maniobra_previa_V2": "marcha",
+  "senalizacion_preferencia": "el vehículo V2 tenía preferencia",
+  "secuencia_eventos": "El vehículo V2 impacta con su parte frontal del lado derecho contra el lado izquierdo delantero del vehículo V1",
+  "punto_impacto_via": "línea de división de carriles",
+  "angulo_impacto": null,
+  "evidencias_sitio": "huella de tipo hendidura con el rin delantero del lado izquierdo del vehículo tipo Eco-sport",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "termina en el carril en sentido de Poniente a Oriente",
+  "posicion_final_V2": "termina en el carril en sentido de Oriente a Poniente",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Benia en el tramo Jaltipa acayucan km 43 cuando de repente se me atraviesa un camión y lo esquibe y me encontre con la camioneta de frente y la impacte",
+  "superficie": "Restos de asfalto.",
+  "sentido_carril_V1": "El vehículo tipo Eco-sport circuló de Norte a Sur; es decir saliendo de la gasolinera",
+  "sentido_carril_V2": "El vehículo tipo volteo circuló de Oriente a Poniente",
+  "maniobra_previa_V1": "El vehículo tipo Eco-sport circuló de Norte a Sur; es decir saliendo de la gasolinera",
+  "maniobra_previa_V2": "El vehículo tipo volteo circuló de Oriente a Poniente",
+  "senalizacion_preferencia": "el conductor del vehículo tipo Eco-sport hizo caso omiso al artículo 93 del capitulo II del reglamento de tránsito en carreteras federales, en la que se establece la preferencia de paso para aquellos conductores vayan a entrar a una vía principal: deberán ceder el paso a los vehículos que circulen por la vía principal",
+  "secuencia_eventos": "el vehículo tipo volteo impacta con su parte frontal, del lado derecho, contra el lado izquierdo delantero del vehículo tipo Eco-sport de forma angulada",
+  "punto_impacto_via": "Se produce el impacto entre ambos vehículos en la línea de división de carriles",
+  "evidencias_sitio": "Se genera la huella tipo hendidura con el rin delantero del lado izquierdo del vehículo tipo Eco-sport en la superficie de rodamiento",
+  "posicion_final_V1": "El vehículo tipo Eco-sport, (ver punto cuatro) debió de haber cedido el paso al conductor del vehículo tipo Volteo",
+  "posicion_final_V2": "El vehículo tipo volteo, sigue su trayectoria de tal manera que termina en el carril en sentido de Poniente a Oriente"
+ },
+ "descartados": {
+  "iluminacion": "día",
+  "angulo_impacto": "de atrás hacia delante y de izquierda a derecha"
+ }
+}

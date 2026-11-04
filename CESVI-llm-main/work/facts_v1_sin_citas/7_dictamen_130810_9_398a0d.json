@@ -1,0 +1,28 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "MITSUBISHI OUTLANDER 2004 AZUL 407-UGP",
+  "V2": "CHRYSLER 300C 2005 NEGRO 443-WGK"
+ },
+ "valores": {
+  "declaracion_V1": "Circulaba sobre Circuito Interior cuando al bajar del puente de Calzada de los Gallos, se me frena un carro tipo Chrysler 300 y sin poder frenar le pego en la parte trasera.",
+  "superficie": "concreto hidráulico",
+  "iluminacion": "día",
+  "sentido_carril_V1": "Norte – Sur",
+  "sentido_carril_V2": "Norte – Sur",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "sin frenar",
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "punto_impacto_via": "carril central",
+  "angulo_impacto": "0",
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura",
+  "huellas_frenado_m": null,
+  "airbags_V1": "detonadas",
+  "airbags_V2": "detonadas"
+ },
+ "id": "7_dictamen_130810_9_398a0d",
+ "split": "train"
+}

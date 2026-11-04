@@ -1,0 +1,21 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "NISSAN X-TRAIL 2008 GRIS MDD 8663"
+ },
+ "valores": {
+  "declaracion_V1": "Le pegue a una camioneta por atrás, al revisar aparentemente no había un daño importante y el otro conductor no reclamo nada y nos retiramos a nuestro domicilio.",
+  "superficie": "asfalto sin baches, sin obstáculos, ni bordes",
+  "sentido_carril_V1": "de Sur a Norte",
+  "velocidad_V1_kmh": null,
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "impacto en la parte posterior de un vehículo desconocido",
+  "punto_impacto_via": "carril de sentido de Sur a Norte",
+  "evidencias_sitio": "ausencia de huellas de derrape y/o de frenado, huellas biológicas, ni huellas de vestigios o restos del vehículo",
+  "danos_V1": "hundimiento en la parte baja de la fascia, marco y base de radiador y el radiador; además, en la parte inferior frontal derecha de la fascia presenta un daño de tipo ruptura",
+  "posicion_final_V1": "ubicación desconocida, no se menciona barrido"
+ },
+ "id": "7_gnp_15902_5_mod_0204a6",
+ "split": "train"
+}

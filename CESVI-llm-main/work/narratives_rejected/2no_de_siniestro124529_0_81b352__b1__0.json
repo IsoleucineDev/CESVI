@@ -1,0 +1,29 @@
+{
+ "motivo": "valor no concuerda con su evidencia en huellas_frenado_m",
+ "principal": {
+  "id": "altura_marca_objeto_cm",
+  "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+  "valor": 30,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 12,
+   "sintetico": true
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "al amanecer con poca luz",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Mondeo 2003 negro",
+  "V2": "Dodge D-150 1978 amarillo con gris",
+  "V3": "Chevrolet Suburban 1994 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la altura de las marcas del impacto en el objeto fijo?\",\n  \"respuesta\": \"La altura de las marcas del impacto en el objeto fijo es de 30 cm, además la visibilidad era limitada al amanecer con poca luz, y no se observaron huellas de frenado en la escena.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"altura_marca_objeto_cm\",\n      \"valor\": \"30\",\n      \"evidencia\": \"La altura de las marcas del impacto en el objeto fijo es de 30 cm\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"al amanecer con poca luz\",\n      \"evidencia\": \"la visibilidad era limitada al amanecer con poca luz\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"0\",\n      \"evidencia\": \"no se observaron huellas de frenado en la escena\"\n    }\n  ]\n}"
+}

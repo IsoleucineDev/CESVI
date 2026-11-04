@@ -1,0 +1,33 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión Blanco",
+  "V2": "Dorsey Semirremolque Blanco",
+  "V3": "Kenworth Tractocamión Verde"
+ },
+ "valores": {
+  "superficie": "seca",
+  "iluminacion": "noche",
+  "sentido_carril_V1": "estacionado",
+  "sentido_carril_V2": "estacionado",
+  "sentido_carril_V3": "circulando",
+  "velocidad_V3_kmh": "68.62",
+  "maniobra_previa_V1": "estacionado",
+  "maniobra_previa_V2": "estacionado",
+  "maniobra_previa_V3": "circulando",
+  "senalizacion_preferencia": "sin preferencia",
+  "tipo_objeto": "semirremolque estacionado",
+  "causa_perdida_control": "impacto contra cuerpo fijo",
+  "punto_impacto_via": "lado derecho del semirremolque",
+  "altura_marca_objeto_cm": "250",
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura, marcas",
+  "airbags_V1": "sin",
+  "airbags_V2": "sin",
+  "airbags_V3": "sin",
+  "posicion_final_V1": "estacionado",
+  "posicion_final_V2": "estacionado",
+  "posicion_final_V3": "desplazado al acotamiento"
+ },
+ "id": "atlas_1882_12_nxpowerlite_v2_465362",
+ "split": "train"
+}

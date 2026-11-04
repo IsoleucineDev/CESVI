@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'Además, la dirección de la fuerza apunta hacia la parte trasera del ve'",
+ "principal": {
+  "id": "danos_V2",
+  "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "ruptura de la fascia posterior",
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Volvo Tractocamión Madrina 2001 blanco",
+  "V2": "Kenworth Tractocamión 2009 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños de V2 y cómo se manifiestan?\",\n  \"respuesta\": \"El Kenworth Tractocamión 2009 sufrió una ruptura de la fascia posterior. Además, la dirección de la fuerza apunta hacia la parte trasera del vehículo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"ruptura de la fascia posterior\",\n      \"evidencia\": \"El Kenworth Tractocamión 2009 sufrió una ruptura de la fascia posterior.\"\n    }\n  ]\n}"
+}

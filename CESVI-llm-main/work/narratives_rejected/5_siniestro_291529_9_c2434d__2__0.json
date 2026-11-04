@@ -1,0 +1,25 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El conductor del vehículo tipo Platina (a) circula de Poniente a Oriente a “velocidad constante”, sin guardar la distancia de seguimiento. Al momento de frenar su vehículo se desplaza, de tal manera que genera un alcance e impacta en la parte posterior del vehículo tipo Tsuru, que se encontraba en la vialidad."
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "autopista Peñon – Texcoco en el kilómetro 4"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "En la parte posterior del vehículo tipo Tsuru, en la tapa cajuela, muestra impregnación de pintura de color vino, mismo color que se encuentra en la carrocería del vehículo tipo Platina. Además, en la parte interna de la fascia de dicho vehículo se encontraron restos de esquirlas y de plástico de color rojo, pertenecientes a las cubiertas del faro posterior del lado izquierdo del vehículo tipo Tsuru."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Platina 2004 vino",
+  "V2": "Nissan Tsuru S/D arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrieron al momento del accidente?\",\n  \"respuesta\": \"El conductor del Platina circula de Poniente a Oriente a velocidad constante, sin guardar distancia de seguimiento. Luego, al momento de frenar, se desplaza y genera un alcance e impacta en la parte posterior del Tsuru que se encontraba en la vialidad. Además, el impacto ocurrió en la autopista Peñon – Texcoco en el kilómetro 4. Además, en la parte posterior del Tsuru, en la tapa cajuela, muestra impregnación de pintura de color vino, mismo color que se encuentra en la carrocería del Platina. Además, en la parte interna de la fascia de dicho vehículo se encontraron restos de esquirlas y de plástico de color rojo, pertenecientes a las cubiertas del faro posterior del lado izquierdo del Tsuru.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El conductor del Platina circula de Poniente a Oriente a velocidad constante, sin guardar distancia de seguimiento. Luego, al momento de frenar, se desplaza y genera un alcance e impacta en la parte posterior del Tsuru que se encontraba en la vialidad.\",\n      \"evidencia\": \"El conductor del Platina circula de Poniente a Oriente a velocidad constante, sin guardar distancia de seguimiento. Luego, al momento de frenar, se desplaza y genera un alcance e impacta en la parte posterior del Tsuru que se encontraba en la vialidad.\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"kilómetro 4\",\n      \"evidencia\": \"el kilómetro 4\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"impregnación de pintura de color vino en la tapa cajuela del Tsuru y restos de esquirlas y plástico de color rojo en la fascia del Tsuru\",\n      \"evidencia\": \"en la parte posterior del Tsuru, en la tapa cajuela, muestra impregnación de pintura de color vino, mismo color que se encuentra en la carrocería del Platina. Además, en la parte interna de la fascia de dicho vehículo se encontraron restos de esquirlas y de plástico de color rojo, pertenecientes a las cubiertas del faro posterior del lado izquierdo del Tsuru.\"\n    }\n  ]\n}"
+}

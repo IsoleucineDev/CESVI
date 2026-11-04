@@ -1,0 +1,21 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "CHRYSLER JEEP 1994 NEGRO PLACAS 167-WBX"
+ },
+ "valores": {
+  "superficie": "asfalto en buenas condiciones",
+  "iluminacion": "día",
+  "sentido_carril_V1": "Nor-Este hacia Sur-Oeste",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "circulación normal",
+  "distancia_previa": null,
+  "secuencia_eventos": "vehículo V1 impacta con su parte frontal izquierda en la parte posterior de otro vehículo desconocido",
+  "punto_impacto_via": "ubicación desconocida",
+  "evidencias_sitio": "huellas de frenado no presentes, intercambio de pintura",
+  "airbags_V1": "activada bolsa de aire frontal del conductor",
+  "posicion_final_V1": "desconocida"
+ },
+ "id": "4_dictamen_3008_83066_7_cbde16",
+ "split": "train"
+}

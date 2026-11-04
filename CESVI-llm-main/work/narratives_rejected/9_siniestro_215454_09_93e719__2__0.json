@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_reversa",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "maniobra en reversa"
+ },
+ "otros": [
+  {
+   "id": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "valor": "avance del autobús en su maniobra en reversa"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "autobús realizó maniobra en reversa y golpeó al vehículo tipo KA"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford KA 2005 rojo",
+  "V2": "Marcopolo Viaggio 1995 azul marino"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Marcopolo Viaggio antes del impacto?\",\n  \"respuesta\": \"El Marcopolo Viaggio realizó una maniobra en reversa y golpeó al vehículo tipo KA. Además, el autobús avanzó en su maniobra en reversa.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"maniobra en reversa\",\n      \"evidencia\": \"realizó una maniobra en reversa\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"autobús realizó maniobra en reversa y golpeó al vehículo tipo KA\",\n      \"evidencia\": \"el Marcopolo Viaggio realizó una maniobra en reversa y golpeó al vehículo tipo KA\"\n    },\n    {\n      \"tema\": \"maniobra_reversa\",\n      \"valor\": \"avance del autobús en su maniobra en reversa\",\n      \"evidencia\": \"el autobús avanzó en su maniobra en reversa\"\n    }\n  ]\n}"
+}

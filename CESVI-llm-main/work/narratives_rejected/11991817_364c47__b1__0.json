@@ -1,0 +1,13 @@
+{
+ "motivo": "oración con contenido no extraído: 'El conductor perdió el control del Nissan Micra 2005 blanco debido a u'",
+ "principal": {
+  "id": "causa_perdida_control",
+  "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+  "valor": "corte de circulación"
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Nissan Micra 2005 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la causa de la pérdida de control del Nissan Micra 2005 blanco?\",\n  \"respuesta\": \"El conductor perdió el control del Nissan Micra 2005 blanco debido a un corte de circulación.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"corte de circulación\",\n      \"evidencia\": \"un corte de circulación\"\n    }\n  ]\n}"
+}

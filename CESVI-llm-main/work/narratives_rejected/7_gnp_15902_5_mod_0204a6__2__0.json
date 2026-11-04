@@ -1,0 +1,29 @@
+{
+ "motivo": "valor no concuerda con su evidencia en secuencia_eventos",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "de Sur a Norte"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo marca Nissan, tipo X-trail (A), circula de Sur a Norte y genera un impacto en la parte posterior del vehículo B."
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "El vehículo tipo X-trail (A) impacta en la parte posterior del vehículo B."
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "Ausencia de daños en la parte posterior y sobre el lado izquierdo."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan X-Trail 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Nissan X-Trail?\",\n  \"respuesta\": \"El Nissan X-Trail circulaba de Sur a Norte y luego generó un impacto en la parte posterior del vehículo B.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"de Sur a Norte\",\n      \"evidencia\": \"El Nissan X-Trail circulaba de Sur a Norte\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El vehículo marca Nissan, tipo X-trail (A), circula de Sur a Norte y genera un impacto en la parte posterior del vehículo B.\",\n      \"evidencia\": \"luego generó un impacto en la parte posterior del vehículo B\"\n    },\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"El vehículo tipo X-trail (A) impacta en la parte posterior del vehículo B.\",\n      \"evidencia\": \"generó un impacto en la parte posterior del vehículo B\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"Ausencia de daños en la parte posterior y sobre el lado izquierdo.\",\n      \"evidencia\": \"Ausencia de daños en la parte posterior y sobre el lado izquierdo\"\n    }\n  ]\n}"
+}

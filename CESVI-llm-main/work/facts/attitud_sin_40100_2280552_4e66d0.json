@@ -1,0 +1,37 @@
+{
+ "id": "attitud_sin_40100_2280552_4e66d0",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Dodge Attitud 2006 azul"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "velocidad_V1_kmh": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "El vehículo tipo Attitud presentó daños tipo rayón en dirección de adelante hacia atrás en las puertas de lado izquierdo.",
+  "punto_impacto_via": null,
+  "evidencias_sitio": "daños tipo rayón en las puertas de lado izquierdo",
+  "danos_V1": "rayones en las puertas de lado izquierdo",
+  "posicion_final_V1": "lado izquierdo del vehículo",
+  "maniobra_previa_V1": null,
+  "angulo_impacto": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null
+ },
+ "citas": {
+  "secuencia_eventos": "Se considera que los daños tipo rayón en dirección de adelante hacia atrás que presentó en las puertas de lado izquierdo el vehículo tipo Atittud son de leve magnitud.",
+  "evidencias_sitio": "En el lateral izquierdo del vehículo tipo Attitud no se observan daños por impacto contra cuerpo duro ya que fue sometido a un proceso de reparación, siendo este lado el lugar donde se presentó el impacto lateral.",
+  "danos_V1": "En el lateral izquierdo del vehículo tipo Attitud no se observan daños por impacto contra cuerpo duro ya que fue sometido a un proceso de reparación, siendo este lado el lugar donde se presentó el impacto lateral.",
+  "posicion_final_V1": "En el lateral izquierdo del vehículo tipo Attitud no se observan daños por impacto contra cuerpo duro ya que fue sometido a un proceso de reparación, siendo este lado el lugar donde se presentó el impacto lateral."
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día",
+  "sentido_carril_V1": "circulación normal",
+  "punto_impacto_via": "lado izquierdo del vehículo"
+ }
+}

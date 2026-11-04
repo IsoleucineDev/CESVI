@@ -1,0 +1,30 @@
+{
+ "motivo": "valor no concuerda con su evidencia en maniobra_reversa",
+ "principal": {
+  "id": "maniobra_reversa",
+  "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+  "valor": "Maniobra en reversa sin percatarse que el vehículo Sentra se encuentra detrás de el"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "En el cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "Daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta intercambio de pintura color blanco en la parte frontal derecha; el vehículo V2 no presenta intercambio de pintura"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jeep Grand Cherokee 1998 blanco",
+  "V2": "Nissan Sentra 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Podrías explicar la maniobra de reversa que realizó el conductor del Jeep?\",\n  \"respuesta\": \"El conductor del Jeep realizó una maniobra en reversa sin darse cuenta que el Sentra estaba detrás de el. Además, en el cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela ocurrió el impacto. Luego, el Sentra presentó daños tipo tallón de adelante hacia atrás con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento. Y el Jeep presenta intercambio de pintura color blanco en la parte frontal derecha.\",\n  \"extracciones\": [\n    {\"tema\": \"maniobra_reversa\", \"valor\": \"maniobra en reversa sin percatarse que el vehículo Sentra se encuentra detrás de el\", \"evidencia\": \"El conductor del Jeep realizó una maniobra en reversa sin darse cuenta que el Sentra estaba detrás de el.\"},\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela\", \"evidencia\": \"en el cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela ocurrió el impacto\"},\n    {\"tema\": \"danos_V2\", \"valor\": \"tallón de adelante hacia atrás con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento\", \"evidencia\": \"el Sentra presentó daños tipo tallón de adelante hacia atrás con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento\"},\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"intercambio de pintura color blanco en la parte frontal derecha\", \"evidencia\": \"el Jeep presenta intercambio de pintura color blanco en la parte frontal derecha\"}\n  ]\n}"
+}

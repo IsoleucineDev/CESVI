@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en evidencias_sitio",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "sin frenado"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V1 colisionó en la parte posterior del vehículo V2, proyectándolo"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura color rojo en el vehículo V1, pintura color arena y rosa en el vehículo V2"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mitsubishi Lancer 2006 plata",
+  "V2": "Nissan Tsuru 2004 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Mitsubishi Lancer antes del impacto?\",\n  \"respuesta\": \"EL MITSUBISHI LANCER COLISIONÓ EN LA PARTE POSTERIOR DEL NISSAN TSURU, PROYECTÁNDOLO. SIN FRENADO.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El Mitsubishi Lancer colisionó en la parte posterior del Nissan Tsuru\",\n      \"evidencia\": \"EL MITSUBISHI LANCER COLISIONÓ EN LA PARTE POSTERIOR DEL NISSAN TSURU\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"sin frenado\",\n      \"evidencia\": \"SIN FRENADO\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"pintura color rojo en el vehículo V1\",\n      \"evidencia\": \"pintura color rojo en el vehículo V1\"\n    }\n  ]\n}"
+}

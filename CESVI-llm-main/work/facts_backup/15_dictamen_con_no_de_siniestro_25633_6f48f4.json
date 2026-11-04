@@ -1,0 +1,51 @@
+{
+ "id": "15_dictamen_con_no_de_siniestro_25633_6f48f4",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan Chasis Cabina 2009 blanco",
+  "V2": "Honda Acura 2006 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "VENIA YO CIRCULANDO DE OTE A PTE AL ALTURA DEL CINE XTREME PERO EN LA RETONDA QUE HAY PERDI EL CONTROL POR ESQUIVAR UN BACHE Y LE PEGUE A UNA CAMIONETA A UN COSTADO Y LO LANCE CONTRA EL MURO Y DESPUES LLAME A MI AJUSTADOR",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "de OTE a PTE",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "esquivar bache",
+  "maniobra_previa_V2": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "el vehículo A tipo Chasis Cabina esquivando el bache, golpeando el lado derecho del vehículo B",
+  "punto_impacto_via": "lado derecho del vehículo B",
+  "angulo_impacto": null,
+  "evidencias_sitio": "no se observan huellas de frenado, restos o intercambio de pintura",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "impactado contra el muro de contención",
+  "posicion_final_V2": "impactado contra el muro de contención",
+  "declaracion_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "VENIA YO CIRCULANDO DE OTE A PTE AL ALTURA DEL CINE XTREME PERO EN LA RETONDA QUE HAY PERDI EL CONTROL POR ESQUIVAR UN BACHE Y LE PEGUE A UNA CAMIONETA A UN COSTADO Y LO LANCE CONTRA EL MURO Y DESPUES LLAME A MI AJUSTADOR",
+  "sentido_carril_V1": "VENIA YO CIRCULANDO DE OTE A PTE AL ALTURA DEL CINE XTREME",
+  "maniobra_previa_V1": "PERDI EL CONTROL POR ESQUIVAR UN BACHE",
+  "secuencia_eventos": "el vehículo A tipo Chasis Cabina esquivando el bache, además se observa el vehículo A golpeando el lado derecho del vehículo B",
+  "punto_impacto_via": "el vehículo A tipo Chasis Cabina esquivando el bache, además se observa el vehículo A golpeando el lado derecho del vehículo B",
+  "evidencias_sitio": "no se encontraron huellas en la carpeta asfáltica y muro de contención que permitan establecer la ocurrencia del hecho de tránsito en su modalidad de embestida oblicua central",
+  "posicion_final_V1": "el vehículo A tipo Chasis Cabina y el vehículo B tipo Acura, el cual se observa que termina impactado contra el muro de contención",
+  "posicion_final_V2": "el vehículo A tipo Chasis Cabina y el vehículo B tipo Acura, el cual se observa que termina impactado contra el muro de contención"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "no especificado",
+  "sentido_carril_V2": "no especificado",
+  "senalizacion_preferencia": "no especificado",
+  "angulo_impacto": "oblicuo",
+  "airbags_V1": "ninguno"
+ }
+}

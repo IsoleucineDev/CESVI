@@ -1,0 +1,26 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "NISSAN PLATINA 2004 VINO LYL 6315",
+  "V2": "NISSAN TSURU S/D ARENA 193 SZA"
+ },
+ "valores": {
+  "superficie": "seca",
+  "iluminacion": "día",
+  "sentido_carril_V1": "Texcoco",
+  "sentido_carril_V2": "Texcoco",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "vehículo V1 impacta por detrás a vehículo V2",
+  "punto_impacto_via": "carril derecho",
+  "evidencias_sitio": "huellas de frenado, restos de faro rojo, esquirlas",
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "desplazado hacia adelante",
+  "posicion_final_V2": "desplazado hacia atrás"
+ },
+ "id": "5_siniestro_291529_9_c2434d",
+ "split": "train"
+}

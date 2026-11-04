@@ -1,0 +1,14 @@
+{
+ "motivo": "oración con contenido no extraído: 'Durante el incidente, la iluminación era de noche con lluvia y poca vi'",
+ "principal": {
+  "id": "iluminacion",
+  "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+  "valor": "de noche con lluvia y poca visibilidad",
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Nissan X-Trail 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles fueron las condiciones de iluminación y visibilidad durante el incidente con el Nissan X-Trail 2008 gris?\",\n  \"respuesta\": \"Durante el incidente, la iluminación era de noche con lluvia y poca visibilidad, lo que dificultaba la percepción de los elementos del entorno.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de noche con lluvia y poca visibilidad\",\n      \"evidencia\": \"la iluminación era de noche con lluvia y poca visibilidad\"\n    }\n  ]\n}"
+}

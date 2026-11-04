@@ -1,0 +1,89 @@
+{
+ "id": "audi_a1_381d98",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Audi A1 2011 azul"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "venia sobre periferico al querer salir para circuito azteca el coche se me patino y me subi a la banqueta"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "circulación hacia el circuito azteca"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "girando hacia la derecha"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "patinamiento del coche"
+  },
+  {
+   "id": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo se impacta contra la banqueta de la isleta de la avenida Estadio Azteca"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "en la isleta de la avenida Estadio Azteca"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "restos plásticos de la rejilla del faro de luz de lado izquierdo de color negro y partes plásticas de color azul"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto de color negro"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "sistema de bolsas de aire frontales se encuentra activado"
+  }
+ ],
+ "g": 3,
+ "asked": "causa_perdida_control",
+ "pregunta": "¿Cuál fue la causa de la pérdida de control del Audi A1 2011 azul?",
+ "respuesta": "El patinamiento del coche llevó a que perdiera el control, además ocurrió en la isleta de la avenida Estadio Azteca.",
+ "gold": {
+  "causa_perdida_control": {
+   "valor": "patinamiento",
+   "evidencia": "el patinamiento del coche llevó a que perdiera el control"
+  },
+  "punto_impacto_via": {
+   "valor": "isleta avenida Estadio Azteca",
+   "evidencia": "ocurrió en la isleta de la avenida Estadio Azteca"
+  }
+ }
+}

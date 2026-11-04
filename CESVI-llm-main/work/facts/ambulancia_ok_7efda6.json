@@ -1,0 +1,48 @@
+{
+ "id": "ambulancia_ok_7efda6",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Mercedes Benz Autobús 2001 blanco con franjas rojas y azul marino",
+  "V2": "Chevrolet Van Ambulancia 2004 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "Iba sobre periférico entre 20 de Noviembre y Nuño Del Mercado con dirección hacia la central cuando vi una ambulancia venia en el carril de en medio cuando me sale una persona y lo trato de esquivar y le pego a la Ambulancia y me doy a la fuga sobre Nuño Del Mercado y abandono la unidad en riveras del Atoya",
+  "declaracion_V2": null,
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": "circulación hacia la central",
+  "sentido_carril_V2": "circulación en el carril de en medio",
+  "secuencia_eventos": "el vehiculó tipo Autobús colisionó con el vehículo tipo ambulancia",
+  "punto_impacto_via": "avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado",
+  "evidencias_sitio": "restos de pintura negra en el costado delantero izquierdo de V1 y pintura blanca en el costado delantero derecho de V2",
+  "danos_V1": "parrilla con ruptura y desprendimiento de material en la defensa del lado izquierdo con dirección de arriba hacia abajo y de atrás hacia delante",
+  "danos_V2": "hundimiento con dirección de adelante hacia atrás en el costado delantero derecho a 48cm de altura",
+  "posicion_final_V1": "abandona la unidad en riveras del Atoya",
+  "posicion_final_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": null,
+  "senalizacion_preferencia": null,
+  "angulo_impacto": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "huellas_frenado_m": null
+ },
+ "citas": {
+  "declaracion_V1": "Iba sobre periférico entre 20 de Noviembre y Nuño Del Mercado con dirección hacia la central cuando vi una ambulancia venia en el carril de en medio cuando me sale una persona y lo trato de esquivar y le pego a la Ambulancia y me doy a la fuga sobre Nuño Del Mercado y abandono la unidad en riveras del Atoya",
+  "superficie": "La avenida periférico, cuenta con dos arroyos vehiculares asfaltados",
+  "sentido_carril_V1": "Iba sobre periférico entre 20 de Noviembre y Nuño Del Mercado con dirección hacia la central",
+  "sentido_carril_V2": "cuando vi una ambulancia venia en el carril de en medio",
+  "secuencia_eventos": "Al colisionar el vehiculó tipo Autobús con el vehículo tipo ambulancia",
+  "punto_impacto_via": "El lugar de los hechos de trancito en estudio se localiza en la Avenida Periférico entre las calles 20 de Noviembre y Nuño del mercado",
+  "evidencias_sitio": "el vehiculó tipo autobús muestra restos de material lo que al parecer es pintura negra a la altura de ángulo delantero izquierdo",
+  "danos_V1": "El vehículo marca Mercedes Benz, tipo Autobús, presenta sobre su parte frontal media una ruptura con desprendimiento de material en la parrilla",
+  "danos_V2": "En la zona del costado delantero derecho un daño tipo hundimiento con desprendimiento de material y con dirección de izquierda a derecha a una altura de 48cm. causado por impacto contra cuerpo duro",
+  "posicion_final_V1": "y me doy a la fuga sobre Nuño Del Mercado y abandono la unidad en riveras del Atoya"
+ },
+ "descartados": {
+  "iluminacion": "noche"
+ }
+}

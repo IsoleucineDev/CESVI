@@ -1,0 +1,20 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "el conductor del vehículo tipo Tsuru circulaba sobre la Av. 661 y cruzaba la calle 606; el conductor de la motocicleta circulaba sobre la calle 606; los vehículos impactaron en un ángulo perpendicular"
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "iluminación aceptable en la madrugada"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Tsuru 2000 rojo",
+  "V2": "Italika motocicleta 2006 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrió en el momento del accidente?\",\n  \"respuesta\": \"el conductor del tsuru circulaba sobre la av. 661 y cruzaba la calle 606; el conductor de la italika circulaba sobre la calle 606; los vehículos impactaron en un ángulo perpendicular además iluminación aceptable en la madrugada\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"el conductor del tsuru circulaba sobre la av. 661 y cruzaba la calle 606; el conductor de la italika circulaba sobre la calle 606; los vehículos impactaron en un ángulo perpendicular\",\n      \"evidencia\": \"el conductor del tsuru circulaba sobre la av. 661 y cruzaba la calle 606; el conductor de la italika circulaba sobre la calle 606; los vehículos impactaron en un ángulo perpendicular\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"aceptable\",\n      \"evidencia\": \"iluminación aceptable en la madrugada\"\n    }\n  ]\n}"
+}

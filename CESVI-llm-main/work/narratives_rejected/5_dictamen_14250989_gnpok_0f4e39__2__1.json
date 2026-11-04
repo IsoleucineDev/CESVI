@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en secuencia_eventos",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "circulaba sobre la calle 606"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el conductor del vehículo tipo Tsuru circulaba sobre la Av. 661 y cruzaba la calle 606; el conductor de la motocicleta circulaba sobre la calle 606; los vehículos impactaron en un ángulo perpendicular"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "iluminación aceptable en la madrugada"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Tsuru 2000 rojo",
+  "V2": "Italika motocicleta 2006 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la maniobra previa de la Italika motocicleta antes del impacto?\",\n  \"respuesta\": \"La Italika motocicleta circulaba sobre la calle 606 además la iluminación era aceptable en la madrugada luego el conductor del vehículo tipo Tsuru circulaba sobre la Av. 661 y cruzaba la calle 606\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"circulaba sobre la calle 606\",\n      \"evidencia\": \"La Italika motocicleta circulaba sobre la calle 606\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"iluminación aceptable en la madrugada\",\n      \"evidencia\": \"la iluminación era aceptable en la madrugada\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"el conductor del vehículo tipo Tsuru circulaba sobre la Av. 661 y cruzaba la calle 606; el conductor de la motocicleta circulaba sobre la calle 606; los vehículos impactaron en un ángulo perpendicular\",\n      \"evidencia\": \"el conductor del vehículo tipo Tsuru circulaba sobre la Av. 661 y cruzaba la calle 606 luego el conductor de la motocicleta circulaba sobre la calle 606 los vehículos impactaron en un ángulo perpendicular\"\n    }\n  ]\n}"
+}

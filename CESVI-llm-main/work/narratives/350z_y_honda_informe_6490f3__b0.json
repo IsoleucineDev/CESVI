@@ -1,0 +1,122 @@
+{
+ "id": "350z_y_honda_informe_6490f3",
+ "split": "valid",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan 350Z 2004 plata",
+  "V2": "Honda Accord 2006 dorado"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "ESTANDO EN LA LATERAL DE VIADUCTO SALE EL SIGAY UN VEHICULO ME IMPACTA TENIENDO LA LUZ ROJA"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Poniente a Oriente"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "Sur a Norte"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "semáforo en rojo para uno de los vehículos",
+   "sintetico": true
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V2 impacta con su ángulo delantero izquierdo al costado medio derecho del vehículo V1"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "lateral de Viaducto Miguel Alemán, esquina con Avenida Patriotismo"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "perpendicular",
+   "sintetico": true
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "vehículo V1 presenta pintura dorada del costado medio derecho; vehículo V2 presenta desprendimiento de pintura dorada en dirección de izquierda a derecha"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 25,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfáltico"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "al amanecer con poca luz",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "Activación de las bolsas de aire tipo cortina y lateral del lado derecho"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 7,
+ "asked": "secuencia_eventos",
+ "sintetico": true,
+ "pregunta": "¿Cuál fue la secuencia de eventos que llevó a la colisión entre el Nissan 350Z y el Honda Accord?",
+ "respuesta": "El Honda Accord impactó con su ángulo delantero izquierdo al costado medio derecho del Nissan 350Z, además, el ángulo entre los vehículos al momento del impacto fue perpendicular.",
+ "gold": {
+  "angulo_impacto": {
+   "valor": "perpendicular",
+   "evidencia": "el ángulo entre los vehículos al momento del impacto fue perpendicular"
+  },
+  "secuencia_eventos": {
+   "valor": "el Honda Accord impactó con su ángulo delantero izquierdo al costado medio derecho del Nissan 350Z",
+   "evidencia": "El Honda Accord impactó con su ángulo delantero izquierdo al costado medio derecho del Nissan 350Z"
+  }
+ }
+}

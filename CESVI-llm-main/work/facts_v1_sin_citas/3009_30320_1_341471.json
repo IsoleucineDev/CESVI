@@ -1,0 +1,27 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volkswagen Beetle 2005 gris",
+  "V2": "vehículo desconocido",
+  "V3": "camión tipo Tortón desconocido"
+ },
+ "valores": {
+  "superficie": "seca",
+  "iluminacion": "noche",
+  "sentido_carril_V1": "Suroeste a Noreste, carril central",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "circulación normal",
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "punto_impacto_via": "carril central al momento del impacto con V2, luego cambia a carril izquierdo",
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura",
+  "huellas_frenado_m": null,
+  "airbags_V1": "ninguno activado",
+  "danos_V1": "parrilla frontal desprendida lado izquierdo, faro de niebla roto, daños tipo hundimiento en facia delantera y cofre lado izquierdo, parabrisas roto con resquebrajadura, daños tipo hundimiento en toldo y montante de toldo",
+  "posicion_final_V1": "carril izquierdo, impactado por el camión tipo Tortón",
+  "declaracion_V1": "circulaba por carril central cuando fue impactado por un vehículo desconocido en el vértice trasero derecho, cambió al carril izquierdo sin percatarse de un camión tipo Tortón que venía circulando por ese carril",
+  "secuencia_eventos": "impacto en el vértice trasero derecho del Beetle por un vehículo desconocido, cambio de carril del Beetle al izquierdo, impacto frontal del Beetle contra el camión tipo Tortón"
+ },
+ "id": "3009_30320_1_341471",
+ "split": "train"
+}

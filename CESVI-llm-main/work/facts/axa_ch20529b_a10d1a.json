@@ -1,0 +1,46 @@
+{
+ "id": "axa_ch20529b_a10d1a",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chevrolet Malibu 2008 plata",
+  "V2": "Dodge Dakota 2008 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "Venía por la lateral del Periferico de la Juventud y habia trafico y me quería pasar de carril y no pude y cuno voltie para enfrente habia una camioneta blanca y no alcance a frenar y me estampe en la parte trasera de la camioneta",
+  "declaracion_V2": null,
+  "superficie": "concreto hidráulica en condiciones aceptables para la circulación",
+  "iluminacion": null,
+  "sentido_carril_V1": "lateral de la Avenida de la Juventud",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "tráfico y quería pasar de carril",
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "Vehículo V1 impacta en la parte trasera de V2",
+  "punto_impacto_via": "Avenida de la Juventud a la altura del residencial Francisco Villa",
+  "evidencias_sitio": "esquirlas y fragmentos de partes automotrices",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "detenido tras el impacto",
+  "posicion_final_V2": "detenido tras el impacto",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Venía por la lateral del Periferico de la Juventud y habia trafico y me quería pasar de carril y no pude y cuno voltie para enfrente habia una camioneta blanca y no alcance a frenar y me estampe en la parte trasera de la camioneta",
+  "superficie": "superficie de rodamiento es de concreto hidráulica en condiciones aceptables para la circulación",
+  "sentido_carril_V1": "Venía por la lateral del Periferico de la Juventud",
+  "maniobra_previa_V1": "habia trafico y me quería pasar de carril",
+  "secuencia_eventos": "me estampe en la parte trasera de la camioneta",
+  "punto_impacto_via": "El lugar de los hechos se localiza en la Avenida de la Juventud a la altura del residencial Francisco Villa",
+  "evidencias_sitio": "se localizaron esquirlas y fragmentos de partes automotrices",
+  "posicion_final_V1": "me estampe en la parte trasera de la camioneta",
+  "posicion_final_V2": "me estampe en la parte trasera de la camioneta"
+ },
+ "descartados": {
+  "iluminacion": "día"
+ }
+}

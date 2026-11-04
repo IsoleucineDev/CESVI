@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'TIPO DE OBJETO: Muro de contención de concreto.'",
+ "principal": {
+  "id": "tipo_objeto",
+  "desc": "Tipo de objeto impactado, su material y su altura",
+  "valor": "muro de contención de concreto"
+ },
+ "otros": [
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "hundimiento frontal de 40 cm de alto con dirección de adelante hacia atrás",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Murano 2004 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es el tipo de objeto impactado, su material y su altura?\",\n  \"respuesta\": \"TIPO DE OBJETO: Muro de contención de concreto. Además, DANOS DE V1: Hundimiento frontal de 40 cm de alto con dirección de adelante hacia atrás.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"tipo_objeto\",\n      \"valor\": \"muro de concreto\",\n      \"evidencia\": \"Muro de contención de concreto\"\n    },\n    {\n      \"tema\": \"danos_V1\",\n      \"valor\": \"hundimiento frontal 40\",\n      \"evidencia\": \"Hundimiento frontal de 40 cm de alto con dirección de adelante hacia atrás\"\n    }\n  ]\n}"
+}

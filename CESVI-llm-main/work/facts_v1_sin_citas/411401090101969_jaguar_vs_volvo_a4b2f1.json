@@ -1,0 +1,24 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "JAGUAR STYPE 2004 BLANCO",
+  "V2": "VOLVO S60 2001 GRIS"
+ },
+ "valores": {
+  "superficie": "asfalto seco",
+  "iluminacion": "noche",
+  "sentido_carril_V1": "Poniente a Oriente",
+  "sentido_carril_V2": "estacionado",
+  "velocidad_V1_kmh": "60",
+  "maniobra_previa_V1": "circulación",
+  "maniobra_previa_V2": "estacionado",
+  "distancia_previa": "no especificada",
+  "secuencia_eventos": "impacto frontal derecha Jaguar contra parte posterior izquierda Volvo",
+  "punto_impacto_via": "calle 18",
+  "evidencias_sitio": "impregnaciones de pintura blanca en Volvo",
+  "airbags_V1": "activados",
+  "airbags_V2": "no especificado"
+ },
+ "id": "411401090101969_jaguar_vs_volvo_a4b2f1",
+ "split": "train"
+}

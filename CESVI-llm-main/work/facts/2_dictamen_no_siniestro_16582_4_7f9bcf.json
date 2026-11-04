@@ -1,0 +1,40 @@
+{
+ "id": "2_dictamen_no_siniestro_16582_4_7f9bcf",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Honda Accord 1999 violeta"
+ },
+ "valores": {
+  "declaracion_V1": "Circulaba por Revolución casi esquina Bayoneta y un peatón se atraviesa, gire el volante a la derecha, me impacte en la banqueta por no arrollar a la señora, un Optra me rozo la parte de atrás izquierda es el quien me ayuda a salir del vehículo luego se fue",
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": "de Sur a Norte",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "evasión",
+  "causa_perdida_control": "evasión",
+  "punto_impacto_via": "Av. Revolución y calle Bayoneta",
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "intercambio de pintura color amarillo sobre el tapón",
+  "airbags_V1": "activadas",
+  "posicion_final_V1": "en la banqueta",
+  "tipo_objeto": null,
+  "secuencia_eventos": null,
+  "huellas_frenado_m": null,
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "Circulaba por Revolución casi esquina Bayoneta y un peatón se atraviesa, gire el volante a la derecha, me impacte en la banqueta por no arrollar a la señora, un Optra me rozo la parte de atrás izquierda es el quien me ayuda a salir del vehículo luego se fue",
+  "superficie": "la carpeta asfáltica es reciente",
+  "sentido_carril_V1": "el vehículo tipo Accord circulando de Sur a Norte, sobre la Av. Revolución",
+  "maniobra_previa_V1": "haciendo una maniobra de evasión para no arrollar a la supuesta persona",
+  "causa_perdida_control": "haciendo una maniobra de evasión para no arrollar a la supuesta persona",
+  "punto_impacto_via": "impactarse con la guarnición de la esquina Av. Revolución y Calle Bayoneta",
+  "evidencias_sitio": "el vehículo presenta un ligero intercambio de pintura color amarillo sobre el tapón",
+  "airbags_V1": "dentro del habitáculo puede observarse que tanto la bolsa de aire del conductor como la del copiloto se encuentran activadas",
+  "posicion_final_V1": "impactarse con la guarnición de la esquina Av. Revolución y Calle Bayoneta"
+ },
+ "descartados": {
+  "iluminacion": "no se menciona"
+ }
+}

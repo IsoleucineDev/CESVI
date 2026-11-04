@@ -1,0 +1,27 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "JAGUAR S-Type NEGRO 2005 458-TUN",
+  "V2": "MITSUBISHI Lancer BLANCO 2006 955-VEW"
+ },
+ "valores": {
+  "declaracion_V1": "viniendo de río churubusco por Francisco Javier mina a mitad de la calle con brúcelas, me impacto un Mitsubishi lancer blanco en mi costado derecho",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": "noche",
+  "sentido_carril_V1": "Francisco Javier Mina",
+  "sentido_carril_V2": "Bruselas",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": null,
+  "senalizacion_preferencia": null,
+  "punto_impacto_via": "calle Francisco Javier Mina y Bruselas",
+  "angulo_impacto": "perpendicular",
+  "evidencias_sitio": "daños de tipo hundimiento en el costado derecho del Jaguar y pintura negra en el costado izquierdo del Mitsubishi",
+  "airbags_V1": null,
+  "airbags_V2": null
+ },
+ "id": "14_dictamen_15791120_582c4b",
+ "split": "train"
+}

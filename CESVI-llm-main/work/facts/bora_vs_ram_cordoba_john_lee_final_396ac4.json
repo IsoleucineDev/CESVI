@@ -1,0 +1,51 @@
+{
+ "id": "bora_vs_ram_cordoba_john_lee_final_396ac4",
+ "split": "train",
+ "modalidad": "colision_frontal",
+ "vehiculos": {
+  "V1": "Volkswagen Bora 2010 negro",
+  "V2": "Chevrolet Silverado 2500 doble cabina 2002 rojo"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "declaracion_V2": null,
+  "superficie": "asfalto con muchas irregularidades",
+  "iluminacion": null,
+  "sentido_carril_V1": "sur",
+  "sentido_carril_V2": "norte",
+  "velocidad_V1_kmh": 61.75,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "circulación",
+  "maniobra_previa_V2": "circulación",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "el vehículo tipo Bora pierde el control, invadiendo el carril contrario, impactando frontalmente al vehículo tipo Silverado",
+  "punto_impacto_via": "curva izquierda",
+  "angulo_impacto": null,
+  "evidencias_sitio": "huellas de derrape en el Silverado, intercambio de pintura roja en el Bora",
+  "airbags_V1": "activadas",
+  "airbags_V2": "activadas",
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "huellas_frenado_m": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "superficie": "La carretera está construida con material asfáltico con muchas irregularidades",
+  "sentido_carril_V1": "el vehículo tipo Bora circula en dirección al Sur por la carretera Federal: Fortín – Huatusco",
+  "sentido_carril_V2": "el vehículo tipo Silverado circula en dirección al Norte, sobre la misma vialidad",
+  "velocidad_V1_kmh": "la velocidad a la que se impactó este vehículo en su modalidad de colisión frontal angular, contra el vehículo tipo Silverado 2500 doble cabina, es de 61.75 Km/h",
+  "maniobra_previa_V1": "el vehículo tipo Bora circula en dirección al Sur por la carretera Federal: Fortín – Huatusco",
+  "maniobra_previa_V2": "el vehículo tipo Silverado circula en dirección al Norte, sobre la misma vialidad",
+  "secuencia_eventos": "el conductor del vehículo antes mencionado pierde el control debido a la gravilla suelta e invade el carril contrario, por donde circula el vehículo tipo Silverado",
+  "punto_impacto_via": "Al aproximarse a una curva izquierda",
+  "evidencias_sitio": "huellas de derrape, pero no se observa desgaste por frenamiento",
+  "airbags_V1": "se observan activadas las bolsas de aire frontales, tanto la del conductor, como la del acompañante",
+  "airbags_V2": "se observan activadas las bolsas de aire, tanto la del conductor, como la del acompañante"
+ },
+ "descartados": {
+  "angulo_impacto": "90°",
+  "posicion_final_V1": "impactado frontalmente",
+  "posicion_final_V2": "impactado frontalmente"
+ }
+}

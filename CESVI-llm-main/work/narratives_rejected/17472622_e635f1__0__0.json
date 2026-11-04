@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en danos_V2",
+ "principal": {
+  "id": "maniobra_reversa",
+  "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+  "valor": "Maniobra en reversa sin percatarse que el vehículo Sentra se encuentra detrás de el"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "En el cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "Daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta intercambio de pintura color blanco en la parte frontal derecha; el vehículo V2 no presenta intercambio de pintura"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jeep Grand Cherokee 1998 blanco",
+  "V2": "Nissan Sentra 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la descripción de la maniobra de reversa que realizó el conductor del Jeep?\",\n  \"respuesta\": \"El conductor del Jeep Grand Cherokee realizó una maniobra de reversa sin percatarse que el vehículo Nissan Sentra se encontraba detrás de él. Además, en el cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela ocurrió el impacto.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_reversa\",\n      \"valor\": \"Maniobra en reversa sin percatarse que el vehículo Sentra se encuentra detrás de el\",\n      \"evidencia\": \"El conductor del Jeep Grand Cherokee realizó una maniobra de reversa sin percatarse que el vehículo Nissan Sentra se encontraba detrás de él\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela\",\n      \"evidencia\": \"en el cruce de la carretera Yecapixtla-Agua Hedionda con el Libramiento Yecapixtla-Tetela ocurrió el impacto\"\n    },\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"Daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento\",\n      \"evidencia\": \"Daños tipo tallón de adelante hacia atrás de magnitud media con intercambio de pintura color blanco en la parte frontal derecha; faro derecho desprendido; parrilla frontal desprendida; placa desprendida; salpicadera abombada; fascia desprendida de la sujeción con la salpicadera; cofre con daño tipo abombamiento\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"El vehículo V1 presenta intercambio de pintura color blanco en la parte frontal derecha; el vehículo V2 no presenta intercambio de pintura\",\n      \"evidencia\": \"El vehículo V1 presenta intercambio de pintura color blanco en la parte frontal derecha; el vehículo V2 no presenta intercambio de pintura\"\n    }\n  ]\n}"
+}

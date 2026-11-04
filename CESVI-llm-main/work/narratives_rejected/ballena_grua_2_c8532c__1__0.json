@@ -1,0 +1,20 @@
+{
+ "motivo": "la pregunta menciona al otro vehículo",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "estacionada en los carriles centrales"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "circular"
+  }
+ ],
+ "vehiculos": {
+  "V1": "International FAMSA 1964 azul",
+  "V2": "Liever GRUA 2010 gris amarillo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la maniobra previa de V1 antes del impacto?\",\n  \"respuesta\": \"CIRCULAR, además ESTACIONADA EN LOS CARRILES CENTRALES\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"circular\",\n      \"evidencia\": \"CIRCULAR\"\n    },\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"estacionada en los carriles centrales\",\n      \"evidencia\": \"ESTACIONADA EN LOS CARRILES CENTRALES\"\n    }\n  ]\n}"
+}

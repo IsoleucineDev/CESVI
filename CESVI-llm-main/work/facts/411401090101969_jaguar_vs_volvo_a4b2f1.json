@@ -1,0 +1,49 @@
+{
+ "id": "411401090101969_jaguar_vs_volvo_a4b2f1",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Jaguar S Type 2004 blanco",
+  "V2": "Volvo S60 2001 gris"
+ },
+ "valores": {
+  "declaracion_V1": "por teléfono Celular, chocar coche estacionado aprox. 60 Km/h pegue parte trasera proyectandolo",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Poniente a Oriente",
+  "sentido_carril_V2": "estacionado",
+  "velocidad_V1_kmh": 60,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "distraído con celular",
+  "maniobra_previa_V2": "estacionado",
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo marca Jaguar impacta la parte frontal derecha contra la parte posterior izquierda del vehículo marca Volvo. El impacto proyecta al vehículo Volvo contra la vegetación.",
+  "punto_impacto_via": "calle 18",
+  "evidencias_sitio": "impregnaciones de pintura color blanco en la parte posterior del vehículo marca Volvo",
+  "huellas_frenado_m": null,
+  "airbags_V1": "activadas",
+  "airbags_V2": null,
+  "posicion_final_V1": "detenido en la calle 18",
+  "posicion_final_V2": "proyectado contra la vegetación",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "El conductor del vehículo marca Jaguar, tipo S type, modelo 2004, color blanco, con placas de circulación YZP-24-97, redacta en la declaración de accidente, de la compañía de seguros lo siguiente: “… por teléfono Celular, chocar coche estacionado aprox. 60 Km/h pegue parte trasera proyectandolo”",
+  "sentido_carril_V1": "El vehículo marca Jaguar circula en dirección de Poniente a Oriente por la misma calle",
+  "sentido_carril_V2": "El vehículo marca Volvo se encuentra estacionado sobre la calle 18",
+  "velocidad_V1_kmh": "chocar coche estacionado aprox. 60 Km/h pegue parte trasera proyectandolo",
+  "maniobra_previa_V1": "El conductor del vehículo marca Jaguar, se distrae por su celular e impacta la parte frontal derecha de su vehículo contra la parte posterior izquierda del vehículo marca Volvo",
+  "maniobra_previa_V2": "El vehículo marca Volvo se encuentra estacionado sobre la calle 18",
+  "secuencia_eventos": "El conductor del vehículo marca Jaguar, se distrae por su celular e impacta la parte frontal derecha de su vehículo contra la parte posterior izquierda del vehículo marca Volvo. Debido al impacto recibido en su parte posterior, el vehículo marca Volvo es proyectado contra la vegetación.",
+  "punto_impacto_via": "El vehículo marca Volvo se encuentra estacionado sobre la calle 18",
+  "evidencias_sitio": "existen impregnaciones de pintura color blanco en la parte posterior del vehículo marca Volvo, misma que corresponde con el color del vehículo marca Jaguar",
+  "airbags_V1": "En el interior del vehículo en estudio, se muestra la activación de las bolsas de aire frontales, tanto la del conductor, así como la del acompañante",
+  "posicion_final_V1": "El vehículo marca Jaguar circula en dirección de Poniente a Oriente por la misma calle",
+  "posicion_final_V2": "el vehículo marca Volvo es proyectado contra la vegetación"
+ },
+ "descartados": {
+  "iluminacion": "noche"
+ }
+}

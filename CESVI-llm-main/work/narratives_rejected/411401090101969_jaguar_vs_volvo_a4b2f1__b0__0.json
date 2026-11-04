@@ -1,0 +1,26 @@
+{
+ "motivo": "evidencia no literal en velocidad_V1_kmh",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Poniente a Oriente"
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 60
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jaguar S Type 2004 blanco",
+  "V2": "Volvo S60 2001 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Jaguar S Type 2004 blanco antes del evento?\",\n  \"respuesta\": \"EL JAGUAR S TYPE 2004 BLANCO CIRCULABA EN SENTIDO PONIENTE A ORIENTE.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"Poniente a Oriente\",\n      \"evidencia\": \"EL JAGUAR S TYPE 2004 BLANCO CIRCULABA EN SENTIDO PONIENTE A ORIENTE\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"60\",\n      \"evidencia\": \"ADemás, LA VELOCIDAD ESTIMADA DE V1 ANTES DEL EVENTO ERA DE 60 KM/H.\"\n    },\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"LUEGO, LA VELOCIDAD ESTIMADA DE V2 ANTES DEL EVENTO ERA DE 90 KM/H.\"\n    }\n  ]\n}"
+}

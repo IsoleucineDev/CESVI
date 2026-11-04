@@ -1,0 +1,50 @@
+{
+ "id": "axa_m089660b_bueno_4d203d",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volvo Tractocamión 2008 azul con franjas de colores",
+  "V2": "Hyundai Semirremolque S/D blanco",
+  "V3": "Ford Expedition 2003 verde"
+ },
+ "valores": {
+  "declaracion_V1": "Circulaba sobre la avenida R. Dominguez y me detuve en el semáforo cuando sentí el impacto por la parte trasera del remolque",
+  "declaracion_V3": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "sentido_carril_V3": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "velocidad_V3_kmh": null,
+  "maniobra_previa_V1": "detenido",
+  "maniobra_previa_V2": null,
+  "maniobra_previa_V3": "descuidado",
+  "distancia_previa": null,
+  "secuencia_eventos": null,
+  "punto_impacto_via": null,
+  "evidencias_sitio": "El vehículo V3 presenta impregnación de pintura color verde en la parte posterior del vehículo V2",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "airbags_V3": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "posicion_final_V3": null,
+  "declaracion_V2": "Circulaba sobre la avenida Roblez Dominguez me descuide y le pegue por detrás al trailer",
+  "danos_V1": null,
+  "danos_V2": null,
+  "danos_V3": null
+ },
+ "citas": {
+  "declaracion_V1": "Circulaba sobre la avenida R. Dominguez y me detuve en el semáforo cuando sentí el impacto por la parte trasera del remolque",
+  "maniobra_previa_V1": "Circulaba sobre la avenida R. Dominguez y me detuve en el semáforo cuando sentí el impacto por la parte trasera del remolque",
+  "maniobra_previa_V3": "Circulaba sobre la avenida Roblez Dominguez me descuide y le pegue por detrás al trailer",
+  "evidencias_sitio": "El poste derecho presenta impregnación de pintura color verde",
+  "declaracion_V2": "“Circulaba sobre la avenida Roblez Dominguez me descuide y le pegue por detrás al trailer”"
+ },
+ "descartados": {
+  "secuencia_eventos": "El vehículo V3 impactó por detrás al vehículo V2"
+ }
+}

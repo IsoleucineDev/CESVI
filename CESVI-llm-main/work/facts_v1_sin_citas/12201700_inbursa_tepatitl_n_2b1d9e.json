@@ -1,0 +1,39 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Ford Lobo Pick Up 2006 vino",
+  "V2": "Volkswagen Pointer 2004 gris",
+  "V3": "Nissan Tsuru 2010 beige"
+ },
+ "valores": {
+  "superficie": "concreto e incrustaciones de piedras (empedrado)",
+  "sentido_carril_V1": "circulación en calle Diamante",
+  "sentido_carril_V2": "estacionado en calle Arroyo de Minas",
+  "sentido_carril_V3": "estacionado en calle Arroyo de Minas",
+  "velocidad_V1_kmh": "64",
+  "velocidad_V2_kmh": null,
+  "velocidad_V3_kmh": null,
+  "maniobra_previa_V1": "virar a su derecha",
+  "maniobra_previa_V2": "estacionado",
+  "maniobra_previa_V3": "estacionado",
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "V1 impacta a V2 que proyecta a V3",
+  "punto_impacto_via": "calle Diamante",
+  "angulo_impacto": null,
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "huellas de arrastre y esquirlas",
+  "huellas_frenado_m": null,
+  "airbags_V1": "activada bolsa de aire del acompañante",
+  "airbags_V2": null,
+  "airbags_V3": null,
+  "posicion_final_V1": "circulación en línea recta varios metros",
+  "posicion_final_V2": "sube a la banqueta",
+  "posicion_final_V3": "gira sobre su eje 180º",
+  "declaracion_V1": "intentó virar a su derecha, acelera y impacta a V2 que proyecta a V3",
+  "declaracion_V2": null,
+  "declaracion_V3": null
+ },
+ "id": "12201700_inbursa_tepatitl_n_2b1d9e",
+ "split": "train"
+}

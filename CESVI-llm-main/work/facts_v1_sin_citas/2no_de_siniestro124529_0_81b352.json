@@ -1,0 +1,21 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "FORD MONDEO 2003 NEGRO",
+  "V2": "DOGE D-150 1978 AMARILLO CON GRIS",
+  "V3": "CHEVROLET SUBURBAN 1994 NEGRO"
+ },
+ "valores": {
+  "sentido_carril_V1": "Sur a Norte",
+  "sentido_carril_V2": "Parado en el lado derecho",
+  "sentido_carril_V3": "Parado",
+  "senalizacion_preferencia": "Vehículo V1 pierde control y impacta a V2",
+  "secuencia_eventos": "V1 impacta a V2, luego a V3 y finalmente a V4",
+  "punto_impacto_via": "Avenida 8, carril derecho",
+  "angulo_impacto": "Oblicuo",
+  "evidencias_sitio": "Impregnaciones de pintura entre vehículos, huellas de frenado no observadas",
+  "declaracion_V1": "V1 circulaba de Sur a Norte y perdió control impactando a vehículos estacionados"
+ },
+ "id": "2no_de_siniestro124529_0_81b352",
+ "split": "train"
+}

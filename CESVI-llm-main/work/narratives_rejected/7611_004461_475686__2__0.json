@@ -1,0 +1,24 @@
+{
+ "motivo": "oración con contenido no extraído: 'La Ford Ecosport descendía por la pendiente, además chocó con un poste'",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "descender por la pendiente"
+ },
+ "otros": [
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "poste de concreto"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "concreto hidráulico"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Ecosport 2009 arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de la Ford Ecosport antes del impacto?\",\n  \"respuesta\": \"La Ford Ecosport descendía por la pendiente, además chocó con un poste de concreto, y luego se dio cuenta de que la superficie era concreto hidráulico.\",\n  \"extracciones\": [\n    {\"tema\": \"maniobra_previa_V1\", \"valor\": \"descender por la pendiente\", \"evidencia\": \"La Ford Ecosport descendía por la pendiente\"},\n    {\"tema\": \"tipo_objeto\", \"valor\": \"poste de concreto\", \"evidencia\": \"un poste de concreto\"},\n    {\"tema\": \"superficie\", \"valor\": \"concreto hidráulico\", \"evidencia\": \"era concreto hidráulico\"}\n  ]\n}"
+}

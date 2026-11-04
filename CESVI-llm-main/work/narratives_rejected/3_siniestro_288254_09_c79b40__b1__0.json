@@ -1,0 +1,21 @@
+{
+ "motivo": "evidencia no literal en danos_V2",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "esquivar"
+ },
+ "otros": [
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "deformación en el costado derecho a 55 cm de altura",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz Autobús 2001 blanco con franjas rojas y azul marino",
+  "V2": "Chevrolet Van Ambulancia 2004 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Mercedes Benz Autobús antes del impacto?\",\n  \"respuesta\": \"El Mercedes Benz Autobús realizó una maniobra para esquivar y luego impactó con el Chevy Van Ambulancia.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"esquivar\",\n      \"evidencia\": \"realizó una maniobra para esquivar\"\n    },\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"deformación en el costado derecho a 55\",\n      \"evidencia\": \"deformación en el costado derecho a 55 cm de altura\"\n    }\n  ]\n}"
+}

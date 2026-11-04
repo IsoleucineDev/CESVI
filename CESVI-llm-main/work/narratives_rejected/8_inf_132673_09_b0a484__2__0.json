@@ -1,0 +1,25 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "cambio de carril"
+ },
+ "otros": [
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "fuera de la carretera, justo en el Km. 21+000"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "volcado hacia el lado izquierdo, atravesado en la carretera"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volvo Tractocamión Madrina 2001 blanco",
+  "V2": "Kenworth Tractocamión 2009 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Volvo Tractocamión Madrina 2001 blanco antes del impacto?\",\n  \"respuesta\": \"El Volvo Tractocamión Madrina 2001 blanco realizó un cambio de carril antes del impacto. Además, luego del evento, el Kenworth Tractocamión 2009 blanco quedó volcado hacia el lado izquierdo, atravesado en la carretera. Luego del evento, el Volvo Tractocamión Madrina 2001 blanco quedó detenido fuera de la carretera, justo en el Km. 21+000.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"cambio de carril\",\n      \"evidencia\": \"El Volvo Tractocamión Madrina 2001 blanco realizó un cambio de carril antes del impacto.\"\n    },\n    {\n      \"tema\": \"posicion_final_V2\",\n      \"valor\": \"volcado hacia el lado izquierdo, atravesado en la carretera\",\n      \"evidencia\": \"el Kenworth Tractocamión 2009 blanco quedó volcado hacia el lado izquierdo, atravesado en la carretera\"\n    },\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"fuera de la carretera, justo en el Km. 21+000\",\n      \"evidencia\": \"el Volvo Tractocamión Madrina 2001 blanco quedó detenido fuera de la carretera, justo en el Km. 21+000\"\n    }\n  ]\n}"
+}

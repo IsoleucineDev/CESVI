@@ -1,0 +1,100 @@
+{
+ "id": "audi_21298088_529991",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Audi A-4 2001 negro"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "VENIA sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "de Sur a Norte"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "cambio de trayectoria"
+  },
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "árbol"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "exceso de velocidad en curva",
+   "sintetico": true
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo “A” cambia su trayectoria y se proyecta contra un árbol"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Km. 35+000 de la carretera libre Cuernavaca-Cuautla"
+  },
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": 30,
+   "sintetico": true
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "desprendimiento de corteza en el árbol y pequeñas esquirlas de pintura color negro incrustadas en la corteza del árbol"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 12,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfáltico en buenas condiciones"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "al amanecer con poca luz",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 0,
+ "asked": "declaracion_V1",
+ "sintetico": true,
+ "pregunta": "¿Cuál es la declaración del conductor del Audi A-4 2001 negro sobre cómo ocurrió el hecho?",
+ "respuesta": "Venía sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol. Además, exceso de velocidad en curva.",
+ "gold": {
+  "declaracion_V1": {
+   "valor": "Vire hacia la banqueta y pegue con un arbol",
+   "evidencia": "Venía sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol"
+  },
+  "causa_perdida_control": {
+   "valor": "exceso de velocidad",
+   "evidencia": "exceso de velocidad en curva"
+  }
+ }
+}

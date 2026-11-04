@@ -1,0 +1,136 @@
+{
+ "id": "2_dictamen_20872500_4a1b98",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión Quinta Rueda 2001 blanco",
+  "V2": "Chevrolet Optra LS 2007 rojo"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Llegue temprano para encerrar mi camión pero por andar a las carreras y porque tenia que lavarlo rápido no me fije que estaba el carro atrás de mi camión y le pegue en la parte trasera del coche y le pegue con el eje trasero del lado derecho"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "maniobra en reversa"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "valor": "el conductor de V1 realizó una maniobra en reversa en la que impactó al vehículo V2"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "en la calle Fuye y Hurrondas"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "deformación en el costado derecho a 55 cm de altura",
+   "sintetico": true
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 20,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "al amanecer con poca luz",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 60,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 0,
+ "asked": "declaracion_V1",
+ "sintetico": true,
+ "pregunta": "¿Cuál es la declaración del conductor de la Freightliner sobre cómo ocurrió el hecho?",
+ "respuesta": "Llegué temprano para encerrar mi camión pero por andar a las carreras y porque tenía que lavarlo rápido no me fijé que estaba el carro atrás de mi camión y le pegué en la parte trasera del coche y le pegué con el eje trasero del lado derecho. Además, el conductor de V1 realizó una maniobra en reversa en la que impactó al vehículo V2.",
+ "gold": {
+  "declaracion_V1": {
+   "valor": "Llegué temprano para encerrar mi camión pero por andar a las carreras y porque tenía que lavarlo rápido no me fijé que estaba el carro atrás de mi camión y le pegué en la parte trasera del coche y le pegué con el eje trasero del lado derecho",
+   "evidencia": "Llegué temprano para encerrar mi camión pero por andar a las carreras y porque tenía que lavarlo rápido no me fijé que estaba el carro atrás de mi camión y le pegué en la parte trasera del coche y le pegué con el eje trasero del lado derecho"
+  },
+  "maniobra_reversa": {
+   "valor": "realizó una maniobra en reversa en la que impactó al vehículo V2",
+   "evidencia": "el conductor de V1 realizó una maniobra en reversa en la que impactó al vehículo V2"
+  }
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "motivo": "valor no concuerda con su evidencia en danos_V2",
+ "principal": {
+  "id": "danos_V2",
+  "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "deformación en el costado derecho a 55 cm de altura",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche sin alumbrado",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 70,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Fiesta 2003 blanco",
+  "V2": "Ford Pick Up 2008 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños de V2: zonas, altura (cm) y dirección de la fuerza?\",\n  \"respuesta\": \"El Ford Pick Up 2008 negro presentó daños en el costado derecho a 55 cm de altura, además de que la velocidad estimada de este vehículo antes del evento fue de 70 km/h, y luego de noche sin alumbrado.\",\n  \"extracciones\": [\n    {\"tema\": \"danos_V2\", \"valor\": \"deformación en el costado derecho a 55 cm de altura\", \"evidencia\": \"El Ford Pick Up 2008 negro presentó daños en el costado derecho a 55 cm de altura\"},\n    {\"tema\": \"velocidad_V2_kmh\", \"valor\": \"70\", \"evidencia\": \"la velocidad estimada de este vehículo antes del evento fue de 70 km/h\"},\n    {\"tema\": \"iluminacion\", \"valor\": \"de noche sin alumbrado\", \"evidencia\": \"luego de noche sin alumbrado\"}\n  ]\n}"
+}

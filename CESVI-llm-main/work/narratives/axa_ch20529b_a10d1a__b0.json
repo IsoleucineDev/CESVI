@@ -1,0 +1,141 @@
+{
+ "id": "axa_ch20529b_a10d1a",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chevrolet Malibu 2008 plata",
+  "V2": "Dodge Dakota 2008 blanco"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Venía por la lateral del Periferico de la Juventud y habia trafico y me quería pasar de carril y no pude y cuno voltie para enfrente habia una camioneta blanca y no alcance a frenar y me estampe en la parte trasera de la camioneta"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "lateral de la Avenida de la Juventud"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "tráfico y quería pasar de carril"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "Vehículo V1 impacta en la parte trasera de V2"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Avenida de la Juventud a la altura del residencial Francisco Villa"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "detenido tras el impacto"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "detenido tras el impacto"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "hundimiento frontal de 40 cm de alto con dirección de adelante hacia atrás",
+   "sintetico": true
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "deformación en el costado derecho a 55 cm de altura",
+   "sintetico": true
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "esquirlas y fragmentos de partes automotrices"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "concreto hidráulica en condiciones aceptables para la circulación"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 11,
+ "asked": "danos_V1",
+ "sintetico": true,
+ "pregunta": "¿Cuáles son los daños en el Chevy?",
+ "respuesta": "HUNDIMIENTO frontal de 40 cm DE ALTO CON DIRECCIÓN DE ADELANTE HACIA ATRÁS. ADemás, HUELLAS DE FRENADO DE 8 m. LUEGO, DEFORMACIÓN EN EL COSTADO DERECHO A 55 cm DE ALTURA.",
+ "gold": {
+  "danos_V1": {
+   "valor": "hundimiento frontal de 40 cm de alto con dirección de adelante hacia atrás",
+   "evidencia": "HUNDIMIENTO frontal de 40 cm DE ALTO CON DIRECCIÓN DE ADELANTE HACIA ATRÁS"
+  },
+  "huellas_frenado_m": {
+   "valor": "8",
+   "evidencia": "HUELLAS DE FRENADO DE 8 m"
+  },
+  "danos_V2": {
+   "valor": "deformación en el costado derecho a 55 cm de altura",
+   "evidencia": "DEFORMACIÓN EN EL COSTADO DERECHO A 55 cm DE ALTURA"
+  }
+ }
+}

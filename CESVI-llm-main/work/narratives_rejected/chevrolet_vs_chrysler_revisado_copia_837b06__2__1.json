@@ -1,0 +1,25 @@
+{
+ "motivo": "oración con contenido no extraído: 'Además, se observaron huellas de pintura intercambiada en el sitio del'",
+ "principal": {
+  "id": "angulo_impacto",
+  "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+  "valor": "perpendicular"
+ },
+ "otros": [
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "desplazado hacia la derecha"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "huellas de pintura intercambiada"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Chevy 2006 blanco",
+  "V2": "Chrysler 300 M 2000 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue el ángulo aproximado entre los vehículos al momento del impacto?\",\n  \"respuesta\": \"El ángulo aproximado entre los vehículos al momento del impacto fue perpendicular. Además, se observaron huellas de pintura intercambiada en el sitio del accidente, lo que indica un contacto directo entre los vehículos. Luego, el Chevy quedó desplazado hacia la derecha.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"angulo_impacto\",\n      \"valor\": \"perpendicular\",\n      \"evidencia\": \"El ángulo aproximado entre los vehículos al momento del impacto fue perpendicular.\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"huellas de pintura intercambiada\",\n      \"evidencia\": \"se observaron huellas de pintura intercambiada en el sitio del accidente\"\n    },\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"desplazado hacia la derecha\",\n      \"evidencia\": \"el Chevy quedó desplazado hacia la derecha\"\n    }\n  ]\n}"
+}

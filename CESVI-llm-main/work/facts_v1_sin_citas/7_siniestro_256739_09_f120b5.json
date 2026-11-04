@@ -1,0 +1,16 @@
+{
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "General Motors MC-36 2003 rojo 980DM3",
+  "V2": "Ford F-350 2008 rojo JNB3277"
+ },
+ "valores": {
+  "declaracion_V1": "había mucho tráfico y se me paró un carro delante y entonces yo me eché de reversa lo más rápido que pude espejeando de mi lado pero no alcancé a ver por el lado derecho en una curva solo sentí el trancazo",
+  "sentido_carril_V1": "circulación Oeste a Sur en Minas Palacio",
+  "maniobra_reversa": "maniobra en reversa en dirección al Sur para incorporarse a la calle de Las Torres",
+  "punto_impacto_via": "vértice delantero izquierdo del V2",
+  "evidencias_sitio": "indicios de pintura color rojo encontrados en el vértice trasero derecho del V1"
+ },
+ "id": "7_siniestro_256739_09_f120b5",
+ "split": "train"
+}

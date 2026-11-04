@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Volkswagen Bora gris tiene una ruptura de la fascia posterior, adem'",
+ "principal": {
+  "id": "danos_V1",
+  "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "ruptura de la fascia posterior",
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Volkswagen Bora 2006 gris",
+  "V2": "Honda Civic 2007 vino"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños de la fascia posterior del Volkswagen Bora gris?\",\n  \"respuesta\": \"El Volkswagen Bora gris tiene una ruptura de la fascia posterior, además el daño indica la dirección de la fuerza y la altura en cm.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V1\",\n      \"valor\": \"ruptura de la fascia posterior\",\n      \"evidencia\": \"el Volkswagen Bora gris tiene una ruptura de la fascia posterior\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,131 @@
+{
+ "id": "291529_9_6d1ed1",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "NISSAN PLATINA 2004 VINO LYL 6315",
+  "V2": "NISSAN TSURU S/D ARENA 193 SZA"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Cuál es la versión del conductor de la Nissan Platina sobre cómo ocurrió el accidente?",
+   "respuesta": "El accidente fue en la vía Lago (autopista Méx - Texcoco) a unos 100 m de una obra de construcción a la altura de la desviación a Querétaro una grúa paro x completo el tránsito en la autopista sin poner señalamiento alguno esto lo realizaron al bajar un bado de un puente x lo que no pude frenar a tiempo ya que venia a una velocidad constante (autopista) impactando un vehículo JETTA",
+   "valor": "El accidente fue en la vía Lago (autopista Méx - Texcoco) a unos 100 m de una obra de construcción a la altura de la desviación a Querétaro una grúa paro x completo el tránsito en la autopista sin poner señalamiento alguno esto lo realizaron al bajar un bado de un puente x lo que no pude frenar a tiempo ya que venia a una velocidad constante (autopista) impactando un vehículo JETTA"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y qué dice el conductor de la Nissan Tsuru sobre lo que ocurrió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "Creo que estaba seca más o menos",
+   "valor": "seca"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación había en el momento del accidente?",
+   "respuesta": "Era de día",
+   "valor": "día"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Por qué carril y sentido circulaba la Nissan Platina?",
+   "respuesta": "Iba por el carril derecho hacia Texcoco (autopista Méx - Texcoco)",
+   "valor": "Texcoco"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y la Nissan Tsuru, por qué carril y sentido?",
+   "respuesta": "Iba por el carril derecho hacia Texcoco (autopista Méx - Texcoco)",
+   "valor": "Texcoco"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada de la Nissan Platina antes del accidente?",
+   "respuesta": "Creo que iba a una velocidad constante más o menos",
+   "valor": "constante"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué velocidad llevaba la Nissan Tsuru antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba la Nissan Platina antes del impacto?",
+   "respuesta": "Estaba realizando frenado",
+   "valor": "frenado"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobra realizaba la Nissan Tsuru antes del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuál era la distancia o el tiempo de separación entre los vehículos antes del evento?",
+   "respuesta": "Eran unos 100 m más o menos",
+   "valor": "100 m"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue el orden y tipo de los impactos?",
+   "respuesta": "El vértice frontal del lado derecho del vehículo tipo Platina hace contacto con la parte posterior del lado derecho y la parte frontal del lado izquierdo del vehículo tipo Platina hace contacto con la parte posterior de lado izquierdo",
+   "valor": "vértice frontal del lado derecho del vehículo tipo Platina hace contacto con la parte posterior del lado derecho y la parte frontal del lado izquierdo del vehículo tipo Platina hace contacto con la parte posterior de lado izquierdo"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "En la autopista Peñon – Texcoco en el kilómetro 4",
+   "valor": "autopista Peñon – Texcoco en el kilómetro 4"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Encontré restos de material con características de cubierta de faro de color rojo y esquirlas con características de medallón",
+   "valor": "restos de material con características de cubierta de faro de color rojo y esquirlas con características de medallón"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál era la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en la Nissan Platina?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en la Nissan Tsuru, cuáles bolsas de aire se activaron?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

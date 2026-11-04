@@ -1,0 +1,27 @@
+{
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Ford KA 2005 rojo",
+  "V2": "Marcopolo VIAGGIO 1995 azul marino"
+ },
+ "valores": {
+  "declaracion_V1": "No mencionado en el informe",
+  "declaracion_V2": "Estaba cargando díasel y al acabar me eché de reversa y no me percaté que estaba un coche atrás y le pegué en el cofre y parrilla y parte del motor",
+  "superficie": "No mencionado en el informe",
+  "iluminacion": "No mencionado en el informe",
+  "sentido_carril_V1": "No mencionado en el informe",
+  "sentido_carril_V2": "No mencionado en el informe",
+  "velocidad_V1_kmh": "No mencionado en el informe",
+  "velocidad_V2_kmh": "No mencionado en el informe",
+  "maniobra_previa_V1": "No mencionado en el informe",
+  "maniobra_previa_V2": "Maniobra en reversa",
+  "maniobra_reversa": "Avance en reversa",
+  "secuencia_eventos": "Autobús realiza maniobra en reversa y golpea al vehículo Ford",
+  "punto_impacto_via": "Calle Basilio Rojas esquina Eduardo Vasconcelos",
+  "evidencias_sitio": "Intersección con huellas de frenado y marcas de pintura",
+  "airbags_V1": "No mencionado en el informe",
+  "airbags_V2": "No mencionado en el informe"
+ },
+ "id": "9_siniestro_215454_09_93e719",
+ "split": "train"
+}

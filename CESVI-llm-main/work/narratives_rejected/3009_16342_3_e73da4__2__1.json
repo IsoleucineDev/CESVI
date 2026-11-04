@@ -1,0 +1,30 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Sur a Norte"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V2 impacta por el costado izquierdo al vehículo V1, lo que provoca que este pierda el control y se proyecte contra el camellón."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "carril lateral de la avenida Manuel Ávila Camacho"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "Daños tipo hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Dodge Neon 2003 negro",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Dodge Neon?\",\n  \"respuesta\": \"El Dodge Neon iba de sur a norte en el carril lateral de la avenida Manuel Ávila Camacho, además el vehículo V2 impacta por el costado izquierdo al vehículo V1, lo que provoca que este pierda el control y se proyecte contra el camellón, luego el punto de impacto fue en el carril lateral de la avenida Manuel Ávila Camacho, y los daños de V1 incluyen daños tipo hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central.\",\n  \"extracciones\": [\n    {\"tema\": \"sentido_carril_V1\", \"valor\": \"sur a norte\", \"evidencia\": \"El Dodge Neon iba de sur a norte en el carril lateral de la avenida Manuel Ávila Camacho\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"V2 impacta izquierda a V1\", \"evidencia\": \"el vehículo V2 impacta por el costado izquierdo al vehículo V1\"},\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"carril lateral de la avenida Manuel Ávila Camacho\", \"evidencia\": \"el carril lateral de la avenida Manuel Ávila Camacho\"},\n    {\"tema\": \"danos_V1\", \"valor\": \"hundimiento y tallón izquierdo, pérdida faro izquierdo y facia delantera izquierda, doblez en cofre central\", \"evidencia\": \"daños tipo hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central\"}\n  ]\n}"
+}

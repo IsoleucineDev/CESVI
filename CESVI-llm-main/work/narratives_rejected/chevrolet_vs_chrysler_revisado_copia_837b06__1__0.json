@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'En el lugar del accidente se observaron huellas de pintura intercambia'",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "huellas de pintura intercambiada"
+ },
+ "otros": [
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activados"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Chevy 2006 blanco",
+  "V2": "Chrysler 300 M 2000 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son las evidencias en el sitio del accidente?\",\n  \"respuesta\": \"En el lugar del accidente se observaron huellas de pintura intercambiada entre el Chevy y el Chrysler, además los airbags del Chevy estaban activados.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"huellas de pintura intercambiada\",\n      \"evidencia\": \"huellas de pintura intercambiada entre el Chevy y el Chrysler\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"activados\",\n      \"evidencia\": \"los airbags del Chevy estaban activados\"\n    }\n  ]\n}"
+}

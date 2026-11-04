@@ -1,0 +1,24 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "de Sur a Norte"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "cambio de trayectoria"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Km. 35+000 de la carretera libre Cuernavaca-Cuautla"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Audi A-4 2001 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Audi A-4 2001 negro antes del impacto?\",\n  \"respuesta\": \"El Audi A-4 iba de Sur a Norte en el carril izquierdo. Además, realizó un cambio de trayectoria antes del impacto. Luego, el punto de impacto ocurrió en el Km. 35+000 de la carretera libre Cuernavaca-Cuautla.\",\n  \"extracciones\": [\n    {\"tema\": \"sentido_carril_V1\", \"valor\": \"de Sur a Norte\", \"evidencia\": \"El Audi A-4 iba de Sur a Norte en el carril izquierdo.\"},\n    {\"tema\": \"maniobra_previa_V1\", \"valor\": \"cambio de trayectoria\", \"evidencia\": \"realizó un cambio de trayectoria antes del impacto\"},\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"Km. 35+000\", \"evidencia\": \"el Km. 35+000 de la carretera libre Cuernavaca-Cuautla\"}\n  ]\n}"
+}

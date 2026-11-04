@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en maniobra_previa_V1",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "circular"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo tipo Famsa con la ballena que transportaba impactó la cabina de la grúa estacionada en los carriles centrales del periférico"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "corrimiento de leves magnitudes en el brazo izquierdo y en los mecanismos de movimiento"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "huellas de impacto en la ballena y la grúa"
+  }
+ ],
+ "vehiculos": {
+  "V1": "International FAMSA 1964 azul",
+  "V2": "Liever GRUA 2010 gris amarillo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V1 antes del impacto?\",\n  \"respuesta\": \"En el sitio había huellas de impacto en la ballena y la grúa además, el vehículo tipo Famsa con la ballena que transportaba impactó la cabina de la grúa estacionada en los carriles centrales del periférico luego, corrimiento de leves magnitudes en el brazo izquierdo y en los mecanismos de movimiento y circular\",\n  \"extracciones\": [\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"huellas de impacto\", \"evidencia\": \"En el sitio había huellas de impacto en la ballena y la grúa\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"impacto en la cabina de la grúa estacionada\", \"evidencia\": \"el vehículo tipo Famsa con la ballena que transportaba impactó la cabina de la grúa estacionada en los carriles centrales del periférico\"},\n    {\"tema\": \"danos_V2\", \"valor\": \"corrimiento de leves magnitudes\", \"evidencia\": \"corrimiento de leves magnitudes en el brazo izquierdo y en los mecanismos de movimiento\"},\n    {\"tema\": \"maniobra_previa_V1\", \"valor\": \"circular\", \"evidencia\": \"circular\"}\n  ]\n}"
+}

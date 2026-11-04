@@ -1,0 +1,50 @@
+{
+ "id": "9_dic_3009_23848_4_4a8451",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "VW Jetta 2002 azul",
+  "V2": "GM Camaro 1995 rojo"
+ },
+ "valores": {
+  "declaracion_V1": "Saliendo de a calle Azucena para salir a Av. Reforma a un costado del reclusorio doy vuelta a la derecha y trato de frenar pero le pego a un Camaro rojo que vienen sobre la calle Reforma.",
+  "declaracion_V2": null,
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": "Sureste a Noroeste",
+  "sentido_carril_V2": "Sur a Norte",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "giro",
+  "maniobra_previa_V2": null,
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "El vehículo V1 impacta sobre el costado posterior derecho del vehículo V2.",
+  "punto_impacto_via": "calle Azucena esquina con Av. Reforma",
+  "angulo_impacto": null,
+  "evidencias_sitio": "El vehículo V1 presenta pintura roja del V2 en el costado izquierdo frontal; el vehículo V2 no presenta pintura azul del V1.",
+  "huellas_frenado_m": null,
+  "airbags_V1": "bolsa de aire del conductor y del copiloto",
+  "airbags_V2": null,
+  "posicion_final_V1": "El vehículo V1 quedó detenido en la calle Azucena después del impacto.",
+  "posicion_final_V2": "El vehículo V2 quedó detenido en la Av. Reforma después del impacto.",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Saliendo de a calle Azucena para salir a Av. Reforma a un costado del reclusorio doy vuelta a la derecha y trato de frenar pero le pego a un Camaro rojo que vienen sobre la calle Reforma.",
+  "superficie": "La calle de Azucena consta de un arroyo de circulación con dos carriles asfaltados lo cuales tienen una sentido de circulación de Sureste a Noroeste y viceversa",
+  "sentido_carril_V1": "El vehículo “A” circula por la calle Azucena en dirección Sureste a Noroeste",
+  "sentido_carril_V2": "este arroyo tienen un sentido de circulación de Sur a Norte",
+  "maniobra_previa_V1": "al llegar al cruce con la Av. Reforma, golpea sobre su costado posterior derecho al vehículo “B”",
+  "secuencia_eventos": "El vehículo “A” circula por la calle Azucena en dirección Sureste a Noroeste, al llegar al cruce con la Av. Reforma, golpea sobre su costado posterior derecho al vehículo “B”",
+  "punto_impacto_via": "El lugar de los hechos se ubica en el crucero de la calle Azucena esquina con Av. Reforma en la colonia Lomas de San Lorenzo en la delegación Iztapalapa",
+  "evidencias_sitio": "el daño tipo hundimiento en la parte frontal izquierda el vehículo tipo Jetta solo se observan desprendimiento de material, no se observan restos de pintura color rojo perteneciente al vehículo tipo Camaro; por otra parte, en el vehículo tipo Camaro se observa sobre su costado posterior derecho desprendimiento de pintura sobre el daño tipo hundimiento en dirección de derecha a izquierdo y en el daño tipo tallón en dirección de atrás hacia delante",
+  "airbags_V1": "Tanto la bolsa de aire del conductor como la del copiloto se encuentran activadas",
+  "posicion_final_V1": "El vehículo “A” circula por la calle Azucena en dirección Sureste a Noroeste, al llegar al cruce con la Av. Reforma, golpea sobre su costado posterior derecho al vehículo “B”",
+  "posicion_final_V2": "El vehículo “A” circula por la calle Azucena en dirección Sureste a Noroeste, al llegar al cruce con la Av. Reforma, golpea sobre su costado posterior derecho al vehículo “B”"
+ },
+ "descartados": {
+  "iluminacion": "noche",
+  "angulo_impacto": "perpendicular"
+ }
+}

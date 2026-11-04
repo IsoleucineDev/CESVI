@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en vueltas_volcadura",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "venia sobre periferico al querer salir para circuito azteca el coche se me patino y me subi a la banqueta"
+ },
+ "otros": [
+  {
+   "id": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "valor": "dos vueltas completas",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Audi A1 2011 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Audi A1 sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"venia sobre periferico al querer salir para circuito azteca el coche se me patino y me subi a la banqueta además dos vueltas completas\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"venia sobre periferico al querer salir para circuito azteca el coche se me patino y me subi a la banqueta\",\n      \"evidencia\": \"venia sobre periferico al querer salir para circuito azteca el coche se me patino y me subi a la banqueta\"\n    },\n    {\n      \"tema\": \"vueltas_volcadura\",\n      \"valor\": \"2\",\n      \"evidencia\": \"dos vueltas completas\"\n    }\n  ]\n}"
+}

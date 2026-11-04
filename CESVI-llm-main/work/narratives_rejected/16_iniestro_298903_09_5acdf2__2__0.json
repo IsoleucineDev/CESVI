@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en posicion_final_V1",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "reversa"
+ },
+ "otros": [
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "El vehículo A tipo T-800 con semirremolque tipo Jaula, después de terminada la maniobra de reversa"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo A tipo T-800 con semirremolque tipo Jaula presenta daños tipo tallón con dirección de arriba hacia abajo en parte del estribo a una altura de 1.06 metros con respecto al piso y en la parte inferior derecha de la defensa daños tipo tallón con dirección de izquierda a derecha a una altura de 0.76 metros con respecto al piso"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Kenworth T-800 2007 blanco",
+  "V2": "Nissan Estaquitas 2008 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa del Kenworth T-800 antes del impacto?\",\n  \"respuesta\": \"El Kenworth T-800 realizó una maniobra de reversa, además, después de terminada la maniobra de reversa, el vehículo quedó detenido en el lugar.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"reversa\",\n      \"evidencia\": \"El Kenworth T-800 realizó una maniobra de reversa\"\n    },\n    {\n      \"tema\": \"posicion_final_V1\",\n      \"valor\": \"El vehículo A tipo T-800 con semirremolque tipo Jaula, después de terminada la maniobra de reversa\",\n      \"evidencia\": \"el vehículo quedó detenido en el lugar\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"El vehículo A tipo T-800 con semirremolque tipo Jaula presenta daños tipo tallón con dirección de arriba hacia abajo en parte del estribo a una altura de 1.06 metros con respecto al piso y en la parte inferior derecha de la defensa daños tipo tallón con dirección de izquierda a derecha a una altura de 0.76 metros con respecto al piso\",\n      \"evidencia\": \"El vehículo A tipo T-800 con semirremolque tipo Jaula presenta daños tipo tallón con dirección de arriba hacia abajo en parte del estribo a una altura de 1.06 metros con respecto al piso y en la parte inferior derecha de la defensa daños tipo tallón con dirección de izquierda a derecha a una altura de 0.76 metros con respecto al piso\"\n    }\n  ]\n}"
+}

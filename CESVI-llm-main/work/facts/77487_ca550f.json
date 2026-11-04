@@ -1,0 +1,41 @@
+{
+ "id": "77487_ca550f",
+ "split": "test",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Mercedes Benz C-280 2007 blanco"
+ },
+ "valores": {
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Noreste - Suroeste",
+  "maniobra_previa_V1": "circulando",
+  "declaracion_V1": "CIRCULANDO PASE BACHE QUE NO VI POR AGUA DE LLUVIA.",
+  "altura_marca_objeto_cm": null,
+  "causa_perdida_control": "impacto contra cuerpo duro",
+  "punto_impacto_via": "arroyo vehicular ubicado en el lado Noroeste",
+  "evidencias_sitio": null,
+  "danos_V1": "rin frontal izquierdo deformado por contacto directo contra cuerpo duro",
+  "posicion_final_V1": "detenido en el lugar del impacto",
+  "tipo_objeto": null,
+  "secuencia_eventos": "Momento en el cual se genera el choque de fuerzas que da origen a la deformación de la ceja exterior del rin. Al continuar su movimiento lineal el vehículo en estudio, el neumático y rin entran en contacto directo contra el borde final del bache, lo cual origina un fuerte impacto en esta zona, ocasionando la deformación en la ceja del rin delantero izquierdo.",
+  "huellas_frenado_m": null,
+  "velocidad_V1_kmh": null,
+  "airbags_V1": null
+ },
+ "citas": {
+  "sentido_carril_V1": "el hecho de tránsito que nos ocupa se suscitó sobre el arroyo vehicular ubicado en el lado Noroeste y con sentido de circulación Noreste - Suroeste frente a las Instalaciones del Fondo de Cultura Económica",
+  "maniobra_previa_V1": "CIRCULANDO PASE BACHE QUE NO VI POR AGUA DE LLUVIA.",
+  "declaracion_V1": "CIRCULANDO PASE BACHE QUE NO VI POR AGUA DE LLUVIA.",
+  "causa_perdida_control": "se genera un impacto muy fuerte sobre el rin debido a que la cámara de caucho que cubre el rin se encuentra muy próxima a las cejas externas del rin",
+  "punto_impacto_via": "el hecho de tránsito que nos ocupa se suscitó sobre el arroyo vehicular ubicado en el lado Noroeste y con sentido de circulación Noreste - Suroeste frente a las Instalaciones del Fondo de Cultura Económica",
+  "danos_V1": "el rin frontal izquierdo perteneciente al vehículo en estudio, presenta un severo daño por deformación en la ceja exterior, el cual fue generado por un contacto directo contra cuerpo duro",
+  "posicion_final_V1": "el rin frontal izquierdo perteneciente al vehículo en estudio, presenta un severo daño por deformación en la ceja exterior, el cual fue generado por un contacto directo contra cuerpo duro",
+  "secuencia_eventos": "Momento en el cual se genera el choque de fuerzas que da origen a la deformación de la ceja exterior del rin. Al continuar su movimiento lineal el vehículo en estudio, el neumático y rin entran en contacto directo contra el borde final del bache, lo cual origina un fuerte impacto en esta zona, ocasionando la deformación en la ceja del rin delantero izquierdo."
+ },
+ "descartados": {
+  "superficie": "asfalto con zonas re-encarpetadas y desprendimiento de concreto",
+  "iluminacion": "noche",
+  "evidencias_sitio": "zonas re-encarpetadas y desprendimiento de concreto asfáltico"
+ }
+}

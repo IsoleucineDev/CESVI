@@ -1,0 +1,26 @@
+{
+ "motivo": "oración con contenido no extraído: 'El conductor del Mercedes Benz C-280 2007 blanco perdió el control del'",
+ "principal": {
+  "id": "causa_perdida_control",
+  "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+  "valor": "bache"
+ },
+ "otros": [
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": 45,
+   "sintetico": true
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz C-280 2007 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la causa de la pérdida de control del Mercedes Benz C-280 2007 blanco?\",\n  \"respuesta\": \"El conductor del Mercedes Benz C-280 2007 blanco perdió el control del vehículo debido a un bache, además, las marcas del impacto en el objeto fijo presentan una altura de 45 cm, y durante el incidente la iluminación era de día con buena visibilidad.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de dia con buena visibilidad\",\n      \"evidencia\": \"la iluminación era de día con buena visibilidad\"\n    },\n    {\n      \"tema\": \"altura_marca_objeto_cm\",\n      \"valor\": \"45\",\n      \"evidencia\": \"las marcas del impacto en el objeto fijo presentan una altura de 45 cm\"\n    },\n    {\n      \"tema\": \"causa_perdida_control\",\n      \"valor\": \"bache\",\n      \"evidencia\": \"debido a un bache\"\n    }\n  ]\n}"
+}

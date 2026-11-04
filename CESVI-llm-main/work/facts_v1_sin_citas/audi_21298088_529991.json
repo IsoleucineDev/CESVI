@@ -1,0 +1,23 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Audi A-4 2001 negro LXX-35-87"
+ },
+ "valores": {
+  "declaracion_V1": "VENIA sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol",
+  "superficie": "asfalto",
+  "iluminacion": "noche",
+  "sentido_carril_V1": "sur a norte",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "recta",
+  "tipo_objeto": "árbol",
+  "causa_perdida_control": "distracción",
+  "punto_impacto_via": "lado derecho de la carretera",
+  "altura_marca_objeto_cm": "40-50",
+  "evidencias_sitio": "huellas de corteza en árbol y esquirlas de pintura",
+  "danos_V1": "hundimiento frontal derecho y medio con desprendimiento de pintura",
+  "posicion_final_V1": "impactado contra árbol"
+ },
+ "id": "audi_21298088_529991",
+ "split": "train"
+}

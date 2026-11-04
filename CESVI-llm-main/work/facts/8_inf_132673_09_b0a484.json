@@ -1,0 +1,48 @@
+{
+ "id": "8_inf_132673_09_b0a484",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volvo Tractocamión Madrina 2001 blanco",
+  "V2": "Kenworth Tractocamión 2009 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "un fuerte impacto, al mirar por el espejo lateral, puede observa un contenedor en llamas que viene hacía el",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "carril derecho, sentido de Oriente a Poniente",
+  "sentido_carril_V2": "carril derecho",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "cambio de carril",
+  "maniobra_previa_V2": "sin frenar",
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo marca Kenworth, tipo Tractocamión, modelo 2009, color blanco, con placas de circulación 304-AE2, con full de carretera porta contenedores, impacta en la parte posterior izquierda del vehículo marca Volvo, tipo Tractocamión madrina. Como consecuencia del impacto, el vehículo marca Volvo, tipo Tractocamión madrina pierde el control y se sale del camino, mientras que el vehículo Kenworth, tipo Tractocamión y sus semirremolques se vuelcan hacia el lado izquierdo.",
+  "punto_impacto_via": "Km. 21+000 de la carretera México-Veracruz",
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "fuera de la carretera, justo en el Km. 21+000",
+  "posicion_final_V2": "volcado hacia el lado izquierdo, atravesado en la carretera",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Declaración del asegurado extraído de la “Declaración de Accidente” de la compañía de seguros.",
+  "sentido_carril_V1": "El conductor del vehículo marca Volvo, tipo Tractocamión madrina, modelo 2001, color blanco, placas de circulación 141-EE8 con semirremolque tipo madrina, viene circulando por el carril derecho de la carretera México-Veracruz en el tramo La Tinaja- Cuitlahuac, en dirección de Oriente a Poniente.",
+  "sentido_carril_V2": "el vehículo marca Kenworth, tipo Tractocamión, modelo 2009, color blanco, con placas de circulación 304-AE2, con full de carretera porta contenedores, también viene circulando por el carril derecho",
+  "maniobra_previa_V1": "El vehículo marca Volvo, tipo Tractocamión madrina, modelo 2001, color blanco, placas de circulación 141-EE8 con semirremolque tipo madrina, viene circulando por el carril derecho de la carretera México-Veracruz en el tramo La Tinaja- Cuitlahuac, cuando realiza un cambio de carril intempestivo",
+  "maniobra_previa_V2": "el vehículo marca Kenworth, tipo Tractocamión, modelo 2009, color blanco, con placas de circulación 304-AE2, con full de carretera porta contenedores, no guarda su distancia de seguridad",
+  "secuencia_eventos": "el vehículo marca Kenworth, tipo Tractocamión, modelo 2009, color blanco, con placas de circulación 304-AE2, con full de carretera porta contenedores, impacta en la parte posterior izquierda del vehículo marca Volvo, tipo Tractocamión madrina. Como producto de la colisión lateral el vehículo marca Volvo, tipo Tractocamión madrina pierde el control y se sale del camino, mientras que el vehículo Kenworth, tipo Tractocamión y sus semirremolques se vuelcan hacia el lado izquierdo",
+  "punto_impacto_via": "El conductor del vehículo marca Volvo, tipo Tractocamión madrina, modelo 2001, color blanco, placas de circulación 141-EE8 con semirremolque tipo madrina, viene circulando por el carril derecho de la carretera México-Veracruz en el tramo La Tinaja- Cuitlahuac, cuando realiza un cambio de carril intempestivo, originando la colisión lateral con el vehículo Kenworth, tipo Tractocamión, modelo 2009, color blanco, con placas de circulación 304-AE2, con full de carretera porta contenedores. Como producto de la colisión lateral el vehículo marca Volvo, tipo Tractocamión madrina pierde el control y se sale del camino, quedando finalmente fuera de la carretera quedando justo en el Km. 21+000.",
+  "posicion_final_V1": "El conductor del vehículo marca Volvo, tipo Tractocamión madrina, modelo 2001, color blanco, placas de circulación 141-EE8 con semirremolque tipo madrina, viene circulando por el carril derecho de la carretera México-Veracruz en el tramo La Tinaja- Cuitlahuac, cuando realiza un cambio de carril intempestivo, originando la colisión lateral con el vehículo Kenworth, tipo Tractocamión, modelo 2009, color blanco, con placas de circulación 304-AE2, con full de carretera porta contenedores. Como producto de la colisión lateral el vehículo marca Volvo, tipo Tractocamión madrina pierde el control y se sale del camino, quedando finalmente fuera de la carretera quedando justo en el Km. 21+000.",
+  "posicion_final_V2": "el vehículo marca Kenworth, tipo Tractocamión y sus semirremolques se vuelcan hacia el lado izquierdo"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "noche",
+  "evidencias_sitio": "huellas de frenado no observadas, intercambio de pintura no observado"
+ }
+}

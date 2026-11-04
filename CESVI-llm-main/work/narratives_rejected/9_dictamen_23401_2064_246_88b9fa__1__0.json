@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Kenworth realizaba un cambio de carril cuando ocurrió el impacto, a'",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "marcha"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "línea de división de carriles"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Eco sport 2005 rojo",
+  "V2": "Kenworth Volteo T 300 2008 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V2 antes del impacto?\",\n  \"respuesta\": \"El Kenworth realizaba un cambio de carril cuando ocurrió el impacto, además, esto sucedió en la línea de división de carriles.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"línea de división de carriles\",\n      \"evidencia\": \"en la línea de división de carriles\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"cambio de carril\",\n      \"evidencia\": \"el Kenworth realizaba un cambio de carril\"\n    }\n  ]\n}"
+}

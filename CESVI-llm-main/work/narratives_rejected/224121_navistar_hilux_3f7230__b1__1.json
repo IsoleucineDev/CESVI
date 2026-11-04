@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El accidente ocurrió de noche sin alumbrado adicional.'",
+ "principal": {
+  "id": "iluminacion",
+  "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+  "valor": "de noche sin alumbrado",
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Navistar Autobús 2009 amarillo",
+  "V2": "Toyota Hilux 2009 gris plata"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles fueron las condiciones de iluminación y visibilidad durante el accidente?\",\n  \"respuesta\": \"El accidente ocurrió de noche sin alumbrado adicional.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de noche sin alumbrado\",\n      \"evidencia\": \"de noche sin alumbrado\"\n    }\n  ]\n}"
+}

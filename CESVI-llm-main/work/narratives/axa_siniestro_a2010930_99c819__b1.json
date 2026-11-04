@@ -1,0 +1,118 @@
+{
+ "id": "axa_siniestro_a2010930_99c819",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chevrolet Silverado 2007 arena",
+  "V2": "Toyota Tacoma 1997 blanco"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "venia de sur a norte cuando vi un accidente de un tráiler y me pare, reversie unos metros cuando llego la camioneta y me impacto"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "sur a norte"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "maniobra en reversa"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": 15.89
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "vehículo V2 impacta a V1 en maniobra en reversa"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "carretera Internacional México-Nogales, km 47+800"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto con reciente mantenimiento"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 60,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 63.15
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "activado"
+  }
+ ],
+ "g": 6,
+ "asked": "distancia_previa",
+ "sintetico": true,
+ "pregunta": "¿Cuál es la distancia o tiempo de separación entre el Chevy y el Toyota antes de la frenada o evento?",
+ "respuesta": "La distancia o tiempo de separación entre el Chevy y el Toyota antes de la frenada o evento fue de 15.89. Además, las huellas de frenado midieron 8 metros. Luego, las bolsas de aire del Toyota se activaron.",
+ "gold": {
+  "distancia_previa": {
+   "valor": "15.89",
+   "evidencia": "La distancia o tiempo de separación entre el Chevy y el Toyota antes de la frenada o evento fue de 15.89"
+  },
+  "huellas_frenado_m": {
+   "valor": "8",
+   "evidencia": "las huellas de frenado midieron 8 metros"
+  },
+  "airbags_V2": {
+   "valor": "activado",
+   "evidencia": "las bolsas de aire del Toyota se activaron"
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "motivo": "evidencia no literal en velocidad_V1_kmh",
+ "principal": {
+  "id": "tipo_objeto",
+  "desc": "Tipo de objeto impactado, su material y su altura",
+  "valor": "semirremolque Dorsey"
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 40,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión 2008 blanco",
+  "V2": "Kenworth Tractocamión 1992 verde"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es el tipo de objeto impactado, su material y su altura?\",\n  \"respuesta\": \"El objeto impactado era un semirremolque Dorsey, de material metálico y con una altura considerable.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"40\",\n      \"evidencia\": \"40\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de día con buena visibilidad\",\n      \"evidencia\": \"de día con buena visibilidad\"\n    },\n    {\n      \"tema\": \"tipo_objeto\",\n      \"valor\": \"semirremolque Dorsey\",\n      \"evidencia\": \"un semirremolque Dorsey\"\n    }\n  ]\n}"
+}

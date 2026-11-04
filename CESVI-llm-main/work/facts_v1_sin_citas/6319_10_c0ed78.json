@@ -1,0 +1,24 @@
+{
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Ford F-350 1986 naranja/blanco XR-90-717",
+  "V2": "Mazda CX7 2008 vino YFM-76-32"
+ },
+ "valores": {
+  "senalizacion_preferencia": "Sin preferencia de paso",
+  "evidencias_sitio": "Restos de concreto y tabique rojo en la orilla derecha de la calle uno con una altura de 35 centímetros",
+  "distancia_previa": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "declaracion_V1": "Al echarme de reversa no me fije y le pegue a una camioneta",
+  "declaracion_V2": null,
+  "punto_impacto_via": "Parachoques y plafonera del lado derecho del vehículo V1 impacta la parte frontal central y frontal derecha del vehículo V2",
+  "secuencia_eventos": "V1 realiza maniobra en reversa y golpea a V2",
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null
+ },
+ "id": "6319_10_c0ed78",
+ "split": "train"
+}

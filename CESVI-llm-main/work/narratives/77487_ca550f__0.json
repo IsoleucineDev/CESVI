@@ -1,0 +1,104 @@
+{
+ "id": "77487_ca550f",
+ "split": "test",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Mercedes Benz C-280 2007 blanco"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "CIRCULANDO PASE BACHE QUE NO VI POR AGUA DE LLUVIA."
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Noreste - Suroeste"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "circulando"
+  },
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "impacto contra cuerpo duro"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "Momento en el cual se genera el choque de fuerzas que da origen a la deformación de la ceja exterior del rin. Al continuar su movimiento lineal el vehículo en estudio, el neumático y rin entran en contacto directo contra el borde final del bache, lo cual origina un fuerte impacto en esta zona, ocasionando la deformación en la ceja del rin delantero izquierdo."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "arroyo vehicular ubicado en el lado Noroeste"
+  },
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "detenido en el lugar del impacto"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "rin frontal izquierdo deformado por contacto directo contra cuerpo duro"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 8,
+ "asked": "posicion_final_V1",
+ "pregunta": "¿Dónde quedó detenido el Mercedes Benz C-280 2007 blanco tras el evento?",
+ "respuesta": "El Mercedes Benz C-280 2007 blanco quedó detenido en el lugar del impacto. Además, el rin frontal izquierdo del vehículo presentó deformación por contacto directo contra un cuerpo duro.",
+ "gold": {
+  "posicion_final_V1": {
+   "valor": "lugar del impacto",
+   "evidencia": "el Mercedes Benz C-280 2007 blanco quedó detenido en el lugar del impacto"
+  },
+  "danos_V1": {
+   "valor": "rin frontal izquierdo deformado",
+   "evidencia": "el rin frontal izquierdo del vehículo presentó deformación por contacto directo contra un cuerpo duro"
+  }
+ }
+}

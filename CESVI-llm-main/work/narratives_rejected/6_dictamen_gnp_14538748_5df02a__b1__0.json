@@ -1,0 +1,26 @@
+{
+ "motivo": "evidencia no literal en huellas_frenado_m",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "hiva circulando sobre la carretera cuando llegando al semáforo que estaba en luz ambar parpadeado, el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el"
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa de aire del conductor se encuentra activada"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volvo S-40 2002 arena",
+  "V2": "Volkswagen Passat 2000 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Volvo S-40 2002 arena sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor del Volvo S-40 2002 arena declaró que mientras circulaba sobre la carretera, al llegar al semáforo que estaba en luz ambar parpadeado, el automovil de adelante se freno de repente y él no alcanzó a frenar estrellándose contra él. Además, la bolsa de aire del conductor se encuentra activada.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"hiva circulando sobre la carretera cuando llegando al semáforo que estaba en luz ambar parpadeado, el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el\",\n      \"evidencia\": \"El conductor del Volvo S-40 2002 arena declaró que mientras circulaba sobre la carretera, al llegar al semáforo que estaba en luz ambar parpadeado, el automovil de adelante se freno de repente y él no alcanzó a frenar estrellándose contra él.\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"bolsa de aire del conductor se encuentra activada\",\n      \"evidencia\": \"la bolsa de aire del conductor se encuentra activada\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": 8,\n      \"evidencia\": \"8\"\n    }\n  ]\n}"
+}

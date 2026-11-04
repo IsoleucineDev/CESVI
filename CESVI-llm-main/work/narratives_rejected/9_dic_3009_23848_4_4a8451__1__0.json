@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en airbags_V1",
+ "principal": {
+  "id": "superficie",
+  "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+  "valor": "asfalto"
+ },
+ "otros": [
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa de aire del conductor y del copiloto"
+  }
+ ],
+ "vehiculos": {
+  "V1": "VW Jetta 2002 azul",
+  "V2": "GM Camaro 1995 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la condición de la superficie de rodamiento en el momento del accidente?\",\n  \"respuesta\": \"La superficie de rodamiento era de asfalto seco, sin baches ni grietas evidentes.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfalto seco\",\n      \"evidencia\": \"La superficie de rodamiento era de asfalto seco\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"bolsa de aire del conductor y del copiloto\",\n      \"evidencia\": \"además, las bolsas de aire del conductor y del copiloto se activaron\"\n    }\n  ]\n}"
+}

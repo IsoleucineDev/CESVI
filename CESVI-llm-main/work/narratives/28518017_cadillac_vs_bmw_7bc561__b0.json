@@ -1,0 +1,125 @@
+{
+ "id": "28518017_cadillac_vs_bmw_7bc561",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "GM Cadillac Deville 1998 oro",
+  "V2": "BMW 528i 2000 blanco"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Venía circulando de SUR A NORTE por Salinas Verona no vi el Alto e impacte el vehiculo BMW del lado del copiloto. Acepto mi Responsabilidad del Accidente"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "de SUR a NORTE"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "de PONIENTE a ORIENTE"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "no respeta la señal restrictiva de Alto"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "estática"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "señal restrictiva de Alto"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo marca Cadillac, no respeta la señal restrictiva de Alto y se proyecta sobre el vehículo BMW el cual se encuentra dentro del claro del crucero. El vehículo marca Cadillac, impacta con su parte frontal, el costado medio derecho del vehículo BMW."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "en la intersección de las calles Gregorio Salinas Varona y Santiago Roel"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "unos 30 grados",
+   "sintetico": true
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "impregnaciones de pintura color blanco en la fascia delantera del vehículo marca Cadillac, color oro"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "concreto hidráulico en condiciones aceptables y buena visibilidad"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa de aire del conductor activada"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "bolsa de aire del acompañante y la cortina lateral del mismo lado activadas"
+  }
+ ],
+ "g": 8,
+ "asked": "punto_impacto_via",
+ "sintetico": true,
+ "pregunta": "¿Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia)?",
+ "respuesta": "El impacto ocurrió en la intersección de las calles Gregorio Salinas Varona y Santiago Roel, además de día con buena visibilidad, y luego la velocidad estimada del Chevy antes del evento fue de 50 km/h.",
+ "gold": {
+  "punto_impacto_via": {
+   "valor": "interseccion_calles_Gregorio_Salinas_Varona_y_Santiago_Roel",
+   "evidencia": "El impacto ocurrió en la intersección de las calles Gregorio Salinas Varona y Santiago Roel"
+  },
+  "iluminacion": {
+   "valor": "de_dia_con_buena_visibilidad",
+   "evidencia": "de día con buena visibilidad"
+  },
+  "velocidad_V1_kmh": {
+   "valor": "50",
+   "evidencia": "la velocidad estimada del Chevy antes del evento fue de 50 km/h"
+  }
+ }
+}

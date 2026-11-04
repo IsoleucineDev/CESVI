@@ -1,0 +1,31 @@
+{
+ "motivo": "valor no concuerda con su evidencia en posicion_final_V2",
+ "principal": {
+  "id": "maniobra_previa_V3",
+  "desc": "Maniobra de V3 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "estacionado"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Arroyo de Minas"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "se sube a la banqueta"
+  },
+  {
+   "id": "posicion_final_V3",
+   "desc": "Dónde quedó detenido V3 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "gira sobre su eje 180º"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Lobo 2006 vino",
+  "V2": "Volkswagen Pointer 2004 gris",
+  "V3": "Nissan Tsuru 2010 beige"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de la Nissan Tsuru antes del impacto?\",\n  \"respuesta\": \"La Nissan Tsuru estaba estacionada en la calle Arroyo de Minas. Luego del impacto, la Nissan giró sobre su eje 180º, y el Volkswagen Pointer se subió a la banqueta.\",\n  \"extracciones\": [\n    {\"tema\": \"maniobra_previa_V3\", \"valor\": \"estacionado\", \"evidencia\": \"La Nissan Tsuru estaba estacionada en la calle Arroyo de Minas.\"},\n    {\"tema\": \"punto_impacto_via\", \"valor\": \"calle Arroyo de Minas\", \"evidencia\": \"La Nissan Tsuru estaba estacionada en la calle Arroyo de Minas.\"},\n    {\"tema\": \"posicion_final_V2\", \"valor\": \"se sube a la banqueta\", \"evidencia\": \"el Volkswagen Pointer se subió a la banqueta\"},\n    {\"tema\": \"posicion_final_V3\", \"valor\": \"gira sobre su eje 180º\", \"evidencia\": \"la Nissan giró sobre su eje 180º\"}\n  ]\n}"
+}

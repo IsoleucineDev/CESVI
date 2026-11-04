@@ -1,0 +1,11 @@
+{
+ "id": "5_dictamen_439764108_021846",
+ "split": "train",
+ "modalidad": "otro",
+ "vehiculos": {
+  "V1": "Ford Mondeo 2004 gris"
+ },
+ "valores": {},
+ "citas": {},
+ "descartados": {}
+}

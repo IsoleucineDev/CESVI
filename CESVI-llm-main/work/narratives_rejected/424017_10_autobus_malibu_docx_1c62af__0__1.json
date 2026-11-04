@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'Además, el conductor del vehículo tipo Autobús pasa el crucero y hace '",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo, mientras el vehículo tipo Malibu Negro que circula en sentido Norte a Sur, se acerca al cruce con la carretera a Ciudad Pemex. El conductor del vehículo tipo Autobús pasa el crucero y hace parada, mientras que el conductor del vehículo tipo Malibu, sigue avanzando. El conductor del vehículo tipo Autobús, al hacer “parada”, detiene por completo su unidad, mientras que el conductor del vehículo tipo Malibu continua avanzando e impacta su parte frontal derecha contra la parte posterior izquierda del vehículo tipo Autobús"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "parada"
+  }
+ ],
+ "vehiculos": {
+  "V1": "DINA Autobus 1992 blanco con franjas amarillas y negras",
+  "V2": "Chevrolet Malibu 2007 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del autobús sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo. Además, el conductor del vehículo tipo Autobús pasa el crucero y hace parada, mientras que el conductor del vehículo tipo Malibu, sigue avanzando.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo.\",\n      \"evidencia\": \"El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo.\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"parada\",\n      \"evidencia\": \"el conductor del vehículo tipo Autobús pasa el crucero y hace parada\"\n    }\n  ]\n}"
+}

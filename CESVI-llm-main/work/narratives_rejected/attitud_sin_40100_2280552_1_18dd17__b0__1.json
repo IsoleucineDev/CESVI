@@ -1,0 +1,14 @@
+{
+ "motivo": "oración con contenido no extraído: 'La velocidad estimada del Dodge Attitud 2006 azul antes del evento era'",
+ "principal": {
+  "id": "velocidad_V1_kmh",
+  "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+  "valor": 50,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Dodge Attitud 2006 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada del Dodge Attitud 2006 azul antes del evento?\",\n  \"respuesta\": \"La velocidad estimada del Dodge Attitud 2006 azul antes del evento era de 50 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"50\",\n      \"evidencia\": \"50 km/h\"\n    }\n  ]\n}"
+}

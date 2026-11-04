@@ -1,0 +1,19 @@
+{
+ "motivo": "valor no concuerda con su evidencia en evidencias_sitio",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "Ausencia de daños en la parte posterior y sobre el lado izquierdo."
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan X-Trail 2008 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son las evidencias en el sitio referentes al Nissan X-Trail gris?\",\n  \"respuesta\": \"En el sitio del accidente, no se observaron daños en la parte posterior y sobre el lado izquierdo del Nissan X-Trail gris. Además, la superficie de rodamiento era asfalto.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"Ausencia de daños\",\n      \"evidencia\": \"no se observaron daños en la parte posterior y sobre el lado izquierdo del Nissan X-Trail gris\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfalto\",\n      \"evidencia\": \"la superficie de rodamiento era asfalto\"\n    }\n  ]\n}"
+}

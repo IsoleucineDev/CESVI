@@ -1,0 +1,25 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Pontiac Matiz 2006 blanco con rojo",
+  "V2": "Chevrolet Cavalier 1993 gris con azul"
+ },
+ "valores": {
+  "superficie": "seca",
+  "iluminacion": "día",
+  "sentido_carril_V1": "Poniente a Oriente",
+  "sentido_carril_V2": "Poniente a Oriente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "frenado",
+  "maniobra_previa_V2": "circulación",
+  "distancia_previa": null,
+  "secuencia_eventos": "V2 frenó, V1 lo impactó por detrás",
+  "punto_impacto_via": "carril de circulación",
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura",
+  "airbags_V1": null,
+  "airbags_V2": null
+ },
+ "id": "0170597_matiz_vs_cavalier_743856",
+ "split": "train"
+}

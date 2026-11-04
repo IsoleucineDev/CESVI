@@ -1,0 +1,20 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "danos_V1",
+  "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "Daños tipo hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central."
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta intercambio de pintura color amarillo en la parte frontal y costado izquierdo."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Dodge Neon 2003 negro",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"Cuéntame sobre los daños del Dodge Neon 2003 negro.\",\n  \"respuesta\": \"El Dodge Neon tiene un hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; además, hay pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; luego, hay daños tipo doblez en el cofre central. Además, el vehículo presenta intercambio de pintura color amarillo en la parte frontal y costado izquierdo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V1\",\n      \"valor\": \"hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central\",\n      \"evidencia\": \"El Dodge Neon tiene un hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; además, hay pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; luego, hay daños tipo doblez en el cofre central.\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"intercambio de pintura color amarillo en la parte frontal y costado izquierdo\",\n      \"evidencia\": \"el vehículo presenta intercambio de pintura color amarillo en la parte frontal y costado izquierdo\"\n    }\n  ]\n}"
+}

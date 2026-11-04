@@ -1,0 +1,138 @@
+{
+ "id": "10_siniestro_14270185_021d9f",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "JEEP LIBERTY 2006 GRIS YCP-6387",
+  "V2": "GMC ACADIA 2008 BLANCO YEZ-1296"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías contarme cómo el conductor del JEEP LIBERTY describió el momento del accidente?",
+   "respuesta": "Mencionó que circulaba en dirección Sur sobre la avenida de las Torres y realizó una maniobra de viraje hacia su izquierda rodeando la guarnición que protege la torre de alta tensión.",
+   "valor": "Circulaba en dirección Sur sobre la avenida de las Torres y realizó una maniobra de viraje hacia su izquierda rodeando la guarnición que protege la torre de alta tensión."
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y el conductor del GMC ACADIA, ¿cómo describió lo que ocurrió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Podrías describir la condición de la superficie de rodamiento en el momento del accidente?",
+   "respuesta": "Creo que era asfalto, más o menos",
+   "valor": "asfalto"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo estaban las condiciones de iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "Era noche con alumbrado público, lo que proporcionaba una buena iluminación para los vehículos y la vía",
+   "valor": "noche con alumbrado público"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación y carril por el que iba el JEEP LIBERTY?",
+   "respuesta": "Iba en dirección Sur",
+   "valor": "Sur"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el GMC ACADIA, ¿por qué sentido y carril circulaba?",
+   "respuesta": "Creo que iba en dirección Norte",
+   "valor": "Norte"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Podrías estimar la velocidad del JEEP LIBERTY antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué tal para el GMC ACADIA?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el JEEP LIBERTY antes del impacto?",
+   "respuesta": "Realizó un viraje",
+   "valor": "viraje"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobra realizó el GMC ACADIA?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "pregunta": "¿Qué señal de tráfico estaba presente en el lugar del accidente?",
+   "respuesta": "Había una señal de prohibida la vuelta",
+   "valor": "señal de prohibida la vuelta"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describir la secuencia de eventos que ocurrieron antes y durante el impacto?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "El impacto ocurrió en el costado derecho del JEEP LIBERTY y el costado izquierdo del GMC ACADIA",
+   "valor": "costado derecho V1 y costado izquierdo V2"
+  },
+  {
+   "tema": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "pregunta": "¿Cuál fue el ángulo aproximado entre los vehículos al momento del impacto?",
+   "respuesta": "Creo que el ángulo era oblicuo",
+   "valor": "oblicuo"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el lugar del accidente?",
+   "respuesta": "Encontré huellas de frenado y marcas de impacto",
+   "valor": "huellas de frenado y marcas de impacto"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Podrías describir la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el JEEP LIBERTY?",
+   "respuesta": "Ninguna bolsa de aire se activó",
+   "valor": "ninguno"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en el GMC ACADIA?",
+   "respuesta": "Creo que se activaron las bolsas de aire del conductor y las laterales de cortina",
+   "valor": "del conductor y las laterales de cortina"
+  }
+ ]
+}

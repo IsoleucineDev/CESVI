@@ -1,0 +1,49 @@
+{
+ "id": "424017_10_autobus_malibu_docx_1c62af",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "DINA Autobus 1992 blanco con franjas amarillas y negras",
+  "V2": "Chevrolet Malibu 2007 negro"
+ },
+ "valores": {
+  "declaracion_V1": "El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo, mientras el vehículo tipo Malibu Negro que circula en sentido Norte a Sur, se acerca al cruce con la carretera a Ciudad Pemex. El conductor del vehículo tipo Autobús pasa el crucero y hace parada, mientras que el conductor del vehículo tipo Malibu, sigue avanzando. El conductor del vehículo tipo Autobús, al hacer “parada”, detiene por completo su unidad, mientras que el conductor del vehículo tipo Malibu continua avanzando e impacta su parte frontal derecha contra la parte posterior izquierda del vehículo tipo Autobús",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Oriente a Poniente",
+  "sentido_carril_V2": "Norte a Sur",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": 43.3,
+  "maniobra_previa_V1": "parada",
+  "maniobra_previa_V2": "avanzando",
+  "distancia_previa": null,
+  "secuencia_eventos": "El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo, mientras el vehículo tipo Malibu Negro que circula en sentido Norte a Sur, se acerca al cruce con la carretera a Ciudad Pemex [...]",
+  "punto_impacto_via": "cruce con la carretera Monte Largo",
+  "evidencias_sitio": "intercambios de pintura color negro en la placa de circulación justo a una altura de entre 0.66m a 0.78m en el vehículo tipo Autobús, y en la parte frontal del vehículo tipo Malibu a una altura de 0.70m a 0.80m se encuentran intercambios de pintura color blanco sobre el cofre",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "detenido en el lugar de los hechos",
+  "posicion_final_V2": "impactado contra la parte posterior del vehículo tipo Autobús",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo, mientras el vehículo tipo Malibu Negro que circula en sentido Norte a Sur, se acerca al cruce con la carretera a Ciudad Pemex. El conductor del vehículo tipo Autobús pasa el crucero y hace parada, mientras que el conductor del vehículo tipo Malibu, sigue avanzando. El conductor del vehículo tipo Autobús, al hacer “parada”, detiene por completo su unidad, mientras que el conductor del vehículo tipo Malibu continua avanzando e impacta su parte frontal derecha contra la parte posterior izquierda del vehículo tipo Autobús",
+  "sentido_carril_V1": "La carretera a Ciudad Pemex, se define como una vía de corte recto, que cuenta con dos carriles de circulación, uno en sentido de Oriente a Poniente y viceversa, divididos por una línea continua de color amarillo, cada carril mide 6.0m de ancho con buena visibilidad en ambos sentidos",
+  "sentido_carril_V2": "El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo, mientras el vehículo tipo Malibu Negro que circula en sentido Norte a Sur, se acerca al cruce con la carretera a Ciudad Pemex.",
+  "velocidad_V2_kmh": "V impacto = 43.26 Km/h.",
+  "maniobra_previa_V1": "El conductor del vehículo tipo Autobús pasa el crucero y hace parada, mientras que el conductor del vehículo tipo Malibu, sigue avanzando.",
+  "maniobra_previa_V2": "El conductor del vehículo tipo Malibu, sigue avanzando.",
+  "secuencia_eventos": "El conductor del vehículo tipo Autobús, modelo 1992, color blanco, viene circulando en sentido Oriente a Poniente por la carretera a Ciudad Pemex, pasa el crucero hacia Monte Largo, mientras el vehículo tipo Malibu Negro que circula en sentido Norte a Sur, se acerca al cruce con la carretera a Ciudad Pemex. El conductor del vehículo tipo Autobús pasa el crucero y hace parada, mientras que el conductor del vehículo tipo Malibu, sigue avanzando. El conductor del vehículo tipo Autobús, al hacer “parada”, detiene por completo su unidad, mientras que el conductor del vehículo tipo Malibu continua avanzando e impacta su parte frontal derecha contra la parte posterior izquierda del vehículo tipo Autobús",
+  "punto_impacto_via": "El sitio que se declara como lugar de los hechos, se ubica sobre la carretera a Ciudad Pemex en sentido de circulación de Oriente a Poniente, casi al cruce con la carretera Monte Largo, en el municipio de Macuspana, en el estado de Tabasco.",
+  "evidencias_sitio": "Al revisar daños en la parte posterior del vehículo tipo autobús se encuentran intercambios leves de pintura color negro en la placa de circulación justo a una altura de entre 0.66m a 0.78m, a su vez en la parte frontal del vehículo tipo Malibu  a una altura de 0.70m a 0.80m se encuentran intercambios de pintura color blanco sobre el cofre",
+  "posicion_final_V1": "El conductor del vehículo tipo Autobús, al hacer “parada”, detiene por completo su unidad, mientras que el conductor del vehículo tipo Malibu continua avanzando e impacta su parte frontal derecha contra la parte posterior izquierda del vehículo tipo Autobús",
+  "posicion_final_V2": "El conductor del vehículo tipo Autobús, al hacer “parada”, detiene por completo su unidad, mientras que el conductor del vehículo tipo Malibu continua avanzando e impacta su parte frontal derecha contra la parte posterior izquierda del vehículo tipo Autobús"
+ },
+ "descartados": {
+  "superficie": "asfalto, seca",
+  "iluminacion": "día"
+ }
+}

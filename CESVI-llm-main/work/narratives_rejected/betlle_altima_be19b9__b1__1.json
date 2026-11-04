@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'EL NISSAN ALTIMA NEGRO DEJO HUELLAS DE FRENADO CON UMA LONGITUD DE 15 '",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 15,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "VW Beetle 2002 gris",
+  "V2": "Nissan Altima 2006 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado del Nissan Altima negro?\",\n  \"respuesta\": \"EL NISSAN ALTIMA NEGRO DEJO HUELLAS DE FRENADO CON UMA LONGITUD DE 15 METROS.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"15\",\n      \"evidencia\": \"15 METROS\"\n    }\n  ]\n}"
+}

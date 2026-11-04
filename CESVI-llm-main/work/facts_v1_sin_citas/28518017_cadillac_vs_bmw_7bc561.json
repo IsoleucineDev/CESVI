@@ -1,0 +1,26 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "GM, tipo Cadillac Deville, modelo 1998, color oro",
+  "V2": "BMW, tipo 528i, modelo 2000, color blanco"
+ },
+ "valores": {
+  "sentido_carril_V1": "de SUR a NORTE por la calle Gregorio Salinas Varona",
+  "sentido_carril_V2": "de PONIENTE a ORIENTE por la calle Santiago Roel",
+  "senalizacion_preferencia": "señal restrictiva de Alto",
+  "secuencia_eventos": "el vehículo V1 impacta con su parte frontal el costado medio derecho del vehículo V2",
+  "punto_impacto_via": "en la intersección de las calles Gregorio Salinas Varona y Santiago Roel",
+  "angulo_impacto": "perpendicular",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "no respeta la señal restrictiva de Alto",
+  "maniobra_previa_V2": "estacionado o en posición estática",
+  "evidencias_sitio": "huellas de pintura intercambiada",
+  "airbags_V1": "bolsa de aire del conductor y del acompañante activadas",
+  "airbags_V2": "bolsa de aire del acompañante y la cortina lateral del mismo lado activadas",
+  "posicion_final_V1": "ubicación desconocida",
+  "posicion_final_V2": "ubicación desconocida"
+ },
+ "id": "28518017_cadillac_vs_bmw_7bc561",
+ "split": "train"
+}

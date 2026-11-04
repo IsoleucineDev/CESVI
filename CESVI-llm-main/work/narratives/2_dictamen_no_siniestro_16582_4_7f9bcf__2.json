@@ -1,0 +1,94 @@
+{
+ "id": "2_dictamen_no_siniestro_16582_4_7f9bcf",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Honda Accord 1999 violeta"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Circulaba por Revolución casi esquina Bayoneta y un peatón se atraviesa, gire el volante a la derecha, me impacte en la banqueta por no arrollar a la señora, un Optra me rozo la parte de atrás izquierda es el quien me ayuda a salir del vehículo luego se fue"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "de Sur a Norte"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "evasión"
+  },
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "evasión"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Av. Revolución y calle Bayoneta"
+  },
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "intercambio de pintura color amarillo sobre el tapón"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activadas"
+  }
+ ],
+ "g": 10,
+ "asked": "superficie",
+ "pregunta": "¿Cuál es la superficie de rodamiento en la zona donde ocurrió el incidente con el Honda Accord 1999 violeta?",
+ "respuesta": "La superficie de rodamiento era de asfalto y además las bolsas de aire del Honda Accord 1999 violeta se activaron.",
+ "gold": {
+  "superficie": {
+   "valor": "asfalto",
+   "evidencia": "La superficie de rodamiento era de asfalto"
+  },
+  "airbags_V1": {
+   "valor": "activadas",
+   "evidencia": "las bolsas de aire del Honda Accord 1999 violeta se activaron"
+  }
+ }
+}

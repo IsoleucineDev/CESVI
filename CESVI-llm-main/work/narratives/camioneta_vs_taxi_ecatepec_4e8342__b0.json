@@ -1,0 +1,111 @@
+{
+ "id": "camioneta_vs_taxi_ecatepec_4e8342",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Ford F350 1994 blanco y azul",
+  "V2": "Chevrolet Monza 2009 blanco"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Venia sobre la López Portillo para dar vuelta hacia la Chapultepec cuando di vuelta hacia la misma no vi al taxi que paro en frente de mi por que hay topes por eso a la mejor redujo la velocidad y lo golpee…"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Oeste a Este para dar vuelta hacia la derecha en la Av. Chapultepec"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "da vuelta hacia la derecha en la Av. Chapultepec"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo A da vuelta hacia la Av. Chapultepec y impacta al vehículo B que estaba parado enfrente del tope"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "en la esquina de Av. Nacional y Av. Chapultepec antes de llegar al tope de la Av. Chapultepec"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "huellas de frenado no observadas, restos de pintura color azul en el vehículo V2"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 25,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto en buenas condiciones de circulación"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche sin alumbrado",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 40,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 13,
+ "asked": "velocidad_V1_kmh",
+ "sintetico": true,
+ "pregunta": "¿Cuál era la velocidad estimada del Ford F350 antes del evento?",
+ "respuesta": "El Ford F350 iba a unos 40 km/h antes de que ocurriera el evento.",
+ "gold": {
+  "velocidad_V1_kmh": {
+   "valor": "40",
+   "evidencia": "El Ford F350 iba a unos 40 km/h antes de que ocurriera el evento."
+  }
+ }
+}

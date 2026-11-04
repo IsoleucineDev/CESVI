@@ -1,0 +1,46 @@
+{
+ "id": "6_dictamen_gnp_14538748_5df02a",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volvo S-40 2002 arena",
+  "V2": "Volkswagen Passat 2000 gris"
+ },
+ "valores": {
+  "declaracion_V1": "hiva circulando sobre la carretera cuando llegando al semáforo que estaba en luz ambar parpadeado, el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el",
+  "declaracion_V2": null,
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": null,
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el",
+  "punto_impacto_via": null,
+  "evidencias_sitio": "no se aprecian restos de pintura color gris que haya quedado del contacto que supuestamente se generó entre ambos vehículos",
+  "huellas_frenado_m": null,
+  "airbags_V1": "bolsa de aire del conductor se encuentra activada",
+  "airbags_V2": "bolsa de aire del copiloto no se ha activado pero la cubierta de su compartimiento se encuentra rota",
+  "posicion_final_V1": "el punto de impacto y posiciones finales de los vehículos involucrados antes de cruce con la calle Prolongación González",
+  "posicion_final_V2": "el punto de impacto y posiciones finales de los vehículos involucrados antes de cruce con la calle Prolongación González",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "hiva circulando sobre la carretera cuando llegando al semáforo que estaba en luz ambar parpadeado, el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el",
+  "superficie": "La carpeta asfáltica se encuentra en buen estado y la visibilidad es amplia en este punto",
+  "secuencia_eventos": "el automovil de adelante se freno de repente y yo no alcance a frenar estrellandome contra el",
+  "evidencias_sitio": "no se aprecian restos de pintura color gris que haya quedado del contacto que supuestamente se generó entre ambos vehículos",
+  "airbags_V1": "bolsa de aire del conductor se encuentra totalmente activada",
+  "airbags_V2": "bolsa de aire del copiloto no se ha activado pero la cubierta de su compartimiento se encuentra rota",
+  "posicion_final_V1": "el punto de impacto y posiciones finales de los vehículos involucrados antes de cruce con la calle Prolongación González",
+  "posicion_final_V2": "el punto de impacto y posiciones finales de los vehículos involucrados antes de cruce con la calle Prolongación González"
+ },
+ "descartados": {
+  "iluminacion": "noche",
+  "punto_impacto_via": "arroyo Norte de la carretera México-Texcoco"
+ }
+}

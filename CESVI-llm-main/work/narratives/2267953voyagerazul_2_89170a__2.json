@@ -1,0 +1,138 @@
+{
+ "id": "2267953voyagerazul_2_89170a",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chrysler Voyager LX 2005 azul",
+  "V2": "Nissan Altima 2000 arena"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "AL QUERER INCORPRARME A PERIFERICO Frena el maxima Freno yo se me barre el pedal del Freno y lo Impacto"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "circulando por el carril de alta en Avenida 1º de Mayo en dirección de Poniente a Oriente"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "circulando por el mismo carril enfrente del vehículo tipo Voyager(A) en dirección de Poniente a Oriente"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "frenado"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo tipo Voyager (A) frena, pero al conductor se le barre el pie del freno e impacta al vehículo tipo Altima (B)"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "en la Avenida 1º de Mayo antes de llegar a Periférico"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "desprendimiento de pintura en la fascia frontal del lado derecho del V1 y en la fascia posterior del lado izquierdo del V2"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "la del conductor, acompañante, y la bolsa de aire para las rodillas del conductor"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 7,
+ "asked": "secuencia_eventos",
+ "pregunta": "¿Cuál es la secuencia de eventos que ocurrieron durante la colisión?",
+ "respuesta": "el vehículo tipo Voyager (A) frena, pero al conductor se le barre el pie del freno e impacta al vehículo tipo Altima (B) además desprendimiento de pintura en la fascia frontal del lado derecho del V1 y en la fascia posterior del lado izquierdo del V2 además la del conductor, acompañante, y la bolsa de aire para las rodillas del conductor se activaron además malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico",
+ "gold": {
+  "secuencia_eventos": {
+   "valor": "el vehículo tipo Voyager (A) frena, pero al conductor se le barre el pie del freno e impacta al vehículo tipo Altima (B)",
+   "evidencia": "el vehículo tipo Voyager (A) frena, pero al conductor se le barre el pie del freno e impacta al vehículo tipo Altima (B)"
+  },
+  "evidencias_sitio": {
+   "valor": "desprendimiento de pintura en la fascia frontal del lado derecho del V1 y en la fascia posterior del lado izquierdo del V2",
+   "evidencia": "desprendimiento de pintura en la fascia frontal del lado derecho del V1 y en la fascia posterior del lado izquierdo del V2"
+  },
+  "airbags_V1": {
+   "valor": "la del conductor, acompañante, y la bolsa de aire para las rodillas del conductor",
+   "evidencia": "la del conductor, acompañante, y la bolsa de aire para las rodillas del conductor se activaron"
+  },
+  "superficie": {
+   "valor": "malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico",
+   "evidencia": "malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico"
+  }
+ }
+}

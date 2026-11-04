@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en secuencia_eventos",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "impacto lateral en el lado izquierdo del vehículo"
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Dodge Attitude 2006 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la secuencia de eventos en el accidente?\",\n  \"respuesta\": \"El impacto se produjo primero en el lado izquierdo del Dodge Attitude 2006 azul, seguido de impactos secundarios en otras partes del vehículo. Además, la velocidad estimada del Dodge Attitude 2006 antes del evento fue de 90 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"impacto lateral en el lado izquierdo del vehículo\",\n      \"evidencia\": \"El impacto se produjo primero en el lado izquierdo del Dodge Attitude 2006 azul\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"la velocidad estimada del Dodge Attitude 2006 antes del evento fue de 90 km/h\"\n    }\n  ]\n}"
+}

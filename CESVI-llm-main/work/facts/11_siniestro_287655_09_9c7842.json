@@ -1,0 +1,45 @@
+{
+ "id": "11_siniestro_287655_09_9c7842",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Land Rover LR2 HSE Premium 2008 negro",
+  "V2": "camión desconocido"
+ },
+ "valores": {
+  "declaracion_V1": "Circulava hacia el cerrillo, de pronto se atraviesa un perro disminuyo mi velocidad es cuando un camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "disminuyo mi velocidad",
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "el camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño",
+  "punto_impacto_via": null,
+  "evidencias_sitio": "restos de esquirlas de vidrio en el habitáculo",
+  "huellas_frenado_m": null,
+  "airbags_V1": "bolsas de aire tanto frontales como laterales activadas",
+  "posicion_final_V1": "lanzado fuera de la vialidad hacia una zanja de agua",
+  "posicion_final_V2": null,
+  "declaracion_V2": null,
+  "airbags_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Circulava hacia el cerrillo, de pronto se atraviesa un perro disminuyo mi velocidad es cuando un camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño",
+  "maniobra_previa_V1": "de pronto se atraviesa un perro disminuyo mi velocidad es cuando un camión de carga me impacto en la parte trasera de mi camioneta",
+  "secuencia_eventos": "un camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño",
+  "evidencias_sitio": "se observan restos en gran parte del piso del habitáculo de lo que al parecer son esquierlas de vidrio",
+  "airbags_V1": "se observan las bolsas de aire tanto frontales como laterales activadas",
+  "posicion_final_V1": "el vehículo A tipo LR2 HSE Premium es lanzado fuera de la vialidad hacia una zanja de agua"
+ },
+ "descartados": {
+  "superficie": "arroyo vehicular de corte recto con dos carriles de doble circulación",
+  "sentido_carril_V1": "Boulevard Aeropuerto a El Cerrillo",
+  "punto_impacto_via": "sobre la vialidad hacia el Cerrillo"
+ }
+}

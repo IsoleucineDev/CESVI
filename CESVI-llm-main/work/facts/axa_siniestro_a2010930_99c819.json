@@ -1,0 +1,50 @@
+{
+ "id": "axa_siniestro_a2010930_99c819",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chevrolet Silverado 2007 arena",
+  "V2": "Toyota Tacoma 1997 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "venia de sur a norte cuando vi un accidente de un tráiler y me pare, reversie unos metros cuando llego la camioneta y me impacto",
+  "declaracion_V2": null,
+  "superficie": "asfalto con reciente mantenimiento",
+  "iluminacion": null,
+  "sentido_carril_V1": "sur a norte",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": 63.15,
+  "maniobra_previa_V1": "maniobra en reversa",
+  "maniobra_previa_V2": null,
+  "distancia_previa": 15.89,
+  "secuencia_eventos": "vehículo V2 impacta a V1 en maniobra en reversa",
+  "punto_impacto_via": "carretera Internacional México-Nogales, km 47+800",
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": "activado",
+  "posicion_final_V1": "detenido con dirección de atrás hacia delante",
+  "posicion_final_V2": "detenido con dirección de atrás hacia delante",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "venia de sur a norte cuando vi un accidente de un tráiler y me pare, reversie unos metros cuando llego la camioneta y me impacto",
+  "superficie": "el arroyo vehicular con sentido de Sur a Norte con dirección hacia Navojoa, se observa con reciente mantenimiento sobre la carpeta asfáltica",
+  "sentido_carril_V1": "venia de sur a norte cuando vi un accidente de un tráiler y me pare, reversie unos metros cuando llego la camioneta y me impacto",
+  "velocidad_V2_kmh": "se considera que la velocidad para generar los daños observados el vehículo tipo Tacoma, fue a 63.15 km/h",
+  "maniobra_previa_V1": "el vehículo A comienza la maniobra en reversa",
+  "distancia_previa": "existe entre el inicio de los restos localizados y el final de estos una distancia de separación entre ellos de 15.89 metros",
+  "secuencia_eventos": "el vehículo A, impacta al vehículo B, en maniobra en reversa",
+  "punto_impacto_via": "el lugar de los hechos se localiza sobre carretera Internacional México-Nogales, en el kilometro 47+800 del tramo carretero Los Mochis – Navojoa",
+  "airbags_V2": "el airbag del conductor se observa activada",
+  "posicion_final_V1": "el vehículo tipo Silverado se observa con daños tipo hundimiento con dirección de atrás hacia delante",
+  "posicion_final_V2": "el vehículo tipo Tacoma, presenta en la parte posterior la falta de la placa de circulación"
+ },
+ "descartados": {
+  "iluminacion": "día",
+  "sentido_carril_V2": "sur a norte",
+  "evidencias_sitio": "huellas de frenado, restos de piezas de los vehículos bajo estudio"
+ }
+}

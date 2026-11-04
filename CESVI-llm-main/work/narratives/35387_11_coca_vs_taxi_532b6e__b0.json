@@ -1,0 +1,148 @@
+{
+ "id": "35387_11_coca_vs_taxi_532b6e",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Freightliner Palett 2009 rojo",
+  "V2": "Nissan Tsuru 2010 blanco"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Circulava por la avenida tome el carril de desaceleracion al dar vuelta en U me percate por la ventanilla que venia dos taxis a exeso de velocidad atrás; uno de ello alcanso apasar y el otro se impacto con la parte tracera del camion"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "giro"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "avance"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "giro"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "avance"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "sin señalización en el cruce",
+   "sintetico": true
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El conductor del vehículo marca Nissan, tipo Tsuru, al percatarse de la maniobra del vehículo marca Freightliner, tipo Palett, intenta esquivarlo por la parte posterior. Al tratar de evadir el conductor del vehículo marca Nissan, tipo Tsuru, al vehículo marca Freightliner, tipo Palett, impacta su parte frontal izquierda, sobre el costado posterior izquierdo, generando daños de gran magnitud"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Boulevard las Vigas, en la Colonia las Vigas, San Marcos, Estado de Guerrero"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "unos 45 grados",
+   "sintetico": true
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "detenido en el carril de desaceleración"
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "impactado en el costado posterior izquierdo del vehículo V1"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "tallones laterales izquierdos de adelante hacia atrás",
+   "sintetico": true
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "tallones laterales izquierdos de adelante hacia atrás",
+   "sintetico": true
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "huellas de frenado, restos de botellas y manchas hemáticas"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 15,
+   "sintetico": true
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de día con buena visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 70,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 6,
+ "asked": "senalizacion_preferencia",
+ "sintetico": true,
+ "pregunta": "¿Cuál era la señalización de preferencia en el cruce donde ocurrió la colisión?",
+ "respuesta": "El cruce no contaba con ninguna señalización específica que otorgara preferencia de paso a ninguno de los vehículos. Además, el Freightliner Palett 2009 rojo quedó detenido en el carril de desaceleración luego del evento. Luego, la iluminación era de día con buena visibilidad.",
+ "gold": {
+  "senalizacion_preferencia": {
+   "valor": "sin señalización",
+   "evidencia": "El cruce no contaba con ninguna señalización específica que otorgara preferencia de paso a ninguno de los vehículos."
+  },
+  "posicion_final_V1": {
+   "valor": "carril de desaceleracion",
+   "evidencia": "el Freightliner Palett 2009 rojo quedó detenido en el carril de desaceleración"
+  },
+  "iluminacion": {
+   "valor": "de dia buena visibilidad",
+   "evidencia": "la iluminación era de día con buena visibilidad"
+  }
+ }
+}

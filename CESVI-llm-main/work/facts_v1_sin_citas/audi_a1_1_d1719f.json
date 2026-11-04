@@ -1,0 +1,20 @@
+{
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "AUDI A1 2011 AZUL"
+ },
+ "valores": {
+  "declaracion_V1": "Venía sobre periférico al querer salir para circuito azteca el coche se me patinó y me subí a la banqueta.",
+  "superficie": "asfalto de color negro",
+  "iluminacion": "noche",
+  "sentido_carril_V1": "circulación de Norte a Sur",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "girando hacia la derecha",
+  "causa_perdida_control": "patinamiento",
+  "punto_impacto_via": "banqueta",
+  "evidencias_sitio": "restos plásticos de color negro y azul, tierra y pasto",
+  "airbags_V1": "sistema de bolsas de aire frontales activado"
+ },
+ "id": "audi_a1_1_d1719f",
+ "split": "test"
+}

@@ -1,0 +1,150 @@
+{
+ "id": "28518017_cadillac_vs_bmw_7bc561",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "GM Cadillac Deville 1998 oro",
+  "V2": "BMW 528i 2000 blanco"
+ },
+ "form": {
+  "posicion_final_V1": "detenido en el lugar del impacto",
+  "posicion_final_V2": "desplazado hacia el lado izquierdo"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Venía circulando de SUR A NORTE por Salinas Verona no vi el Alto e impacte el vehiculo BMW del lado del copiloto. Acepto mi Responsabilidad del Accidente"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "de SUR a NORTE"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "de PONIENTE a ORIENTE"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "no respeta la señal restrictiva de Alto"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "estática"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "señal restrictiva de Alto"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo marca Cadillac, no respeta la señal restrictiva de Alto y se proyecta sobre el vehículo BMW el cual se encuentra dentro del claro del crucero. El vehículo marca Cadillac, impacta con su parte frontal, el costado medio derecho del vehículo BMW."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "en la intersección de las calles Gregorio Salinas Varona y Santiago Roel"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "impregnaciones de pintura color blanco en la fascia delantera del vehículo marca Cadillac, color oro"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "concreto hidráulico en condiciones aceptables y buena visibilidad"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa de aire del conductor activada"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "bolsa de aire del acompañante y la cortina lateral del mismo lado activadas"
+  }
+ ],
+ "start": 0,
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías contarme brevemente cómo el conductor del Cadillac oro describió el accidente?",
+   "respuesta": "Dijo que venía de sur a norte y no vio el alto, impactando el BMW del lado del copiloto. Acepta su responsabilidad.",
+   "valor": "Venía circulando de SUR A NORTE por Salinas Verona no vi el Alto e impacte el vehiculo BMW del lado del copiloto. Acepto mi Responsabilidad del Accidente"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y cómo describió el conductor del BMW blanco lo que sucedió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación del Cadillac oro antes del accidente?",
+   "respuesta": "Creo que venía de sur a norte.",
+   "valor": "de SUR a NORTE"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y el BMW blanco, en qué dirección y carril circulaba?",
+   "respuesta": "De poniente a oriente.",
+   "valor": "de PONIENTE a ORIENTE"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el Cadillac oro antes del choque?",
+   "respuesta": "Creo que no respetó la señal de alto.",
+   "valor": "no respeta la señal restrictiva de Alto"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y el BMW blanco, qué maniobra realizaba antes del impacto?",
+   "respuesta": "Estaba estático.",
+   "valor": "estática"
+  }
+ ]
+}

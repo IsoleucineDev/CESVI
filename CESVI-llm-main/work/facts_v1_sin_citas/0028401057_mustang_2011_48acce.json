@@ -1,0 +1,19 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Ford Mustang 2011 blanco"
+ },
+ "valores": {
+  "sentido_carril_V1": "Sur a Norte, carril derecho",
+  "superficie": "mojado",
+  "velocidad_V1_kmh": null,
+  "causa_perdida_control": "derrape",
+  "tipo_objeto": "muro de contención de concreto con malla metálica",
+  "altura_marca_objeto_cm": "65",
+  "evidencias_sitio": "restos de partes plásticas de color negro y ámbar con logotipo de Ford, reflectores de color plata, hule protector de color negro",
+  "huellas_frenado_m": null,
+  "airbags_V1": "frontal y lateral del asiento del conductor activados"
+ },
+ "id": "0028401057_mustang_2011_48acce",
+ "split": "train"
+}

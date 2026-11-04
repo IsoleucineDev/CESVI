@@ -1,0 +1,47 @@
+{
+ "id": "2267953voyagerazul_2_89170a",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chrysler Voyager LX 2005 azul",
+  "V2": "Nissan Altima 2000 arena"
+ },
+ "valores": {
+  "declaracion_V1": "AL QUERER INCORPRARME A PERIFERICO Frena el maxima Freno yo se me barre el pedal del Freno y lo Impacto",
+  "declaracion_V2": null,
+  "superficie": "malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico",
+  "iluminacion": null,
+  "sentido_carril_V1": "circulando por el carril de alta en Avenida 1º de Mayo en dirección de Poniente a Oriente",
+  "sentido_carril_V2": "circulando por el mismo carril enfrente del vehículo tipo Voyager(A) en dirección de Poniente a Oriente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "frenado",
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "el vehículo tipo Voyager (A) frena, pero al conductor se le barre el pie del freno e impacta al vehículo tipo Altima (B)",
+  "punto_impacto_via": "en la Avenida 1º de Mayo antes de llegar a Periférico",
+  "evidencias_sitio": "desprendimiento de pintura en la fascia frontal del lado derecho del V1 y en la fascia posterior del lado izquierdo del V2",
+  "airbags_V1": "la del conductor, acompañante, y la bolsa de aire para las rodillas del conductor",
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "huellas_frenado_m": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "AL QUERER INCORPRARME A PERIFERICO Frena el maxima Freno yo se me barre el pedal del Freno y lo Impacto",
+  "superficie": "vialidad se encuentra en malas condiciones de circulación en donde se observan grietas y desprendimiento de material asfáltico",
+  "sentido_carril_V1": "El vehículo tipo Voyager LX (A) va circulando por el carril de alta en Avenida 1º de Mayo en dirección de Poniente a Oriente",
+  "sentido_carril_V2": "el vehículo tipo Altima (B) circula por la misma Avenida sobre el mismo carril enfrente del vehículo tipo Voyager(A)",
+  "maniobra_previa_V1": "el vehículo tipo Voyager (A) cuando frena, para no impactar al vehículo tipo Altima (B)",
+  "secuencia_eventos": "el vehículo tipo Voyager (A) cuando frena, para no impactar al vehículo tipo Altima (B), el vehículo (B) se iba a incorporar a Periférico",
+  "punto_impacto_via": "el lugar de los hechos se localiza en Avenida 1º de Mayo antes de llegar a Periférico en el Municipio de Naucalpan, Estado de México en dirección de Poniente a Oriente",
+  "evidencias_sitio": "el vehículo marca Chrysler, tipo Voyager LX, presenta en el cofre daño tipo hundimiento con dirección de arriba hacia abajo. En la fascia se observan daños tipo abombamiento en su lado derecho a una altura de 0.56m, además exhibe daño tipo doblez del porta placas a una altura de 0.51m y también desprendimiento de pintura de su lado izquierdo",
+  "airbags_V1": "El vehículo marca Chrysler tipo Voyager LX presenta en el habitáculo la activación de las bolsas de aire como son: la del conductor, acompañante, y la bolsa de aire para las rodillas del conductor"
+ },
+ "descartados": {
+  "posicion_final_V1": "desconocida",
+  "posicion_final_V2": "desconocida"
+ }
+}

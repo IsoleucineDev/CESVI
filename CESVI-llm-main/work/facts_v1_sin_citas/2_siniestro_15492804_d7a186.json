@@ -1,0 +1,26 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "HYUNDAI ATOS 2009 ROJO 398-WKH"
+ },
+ "valores": {
+  "declaracion_V1": "transitando por Darwin del lado derecho se me cierra otro vehículo el cual me hace perder el control del Atos y me subí a un camellón y me estrelle con un árbol",
+  "superficie": "asfalto",
+  "iluminacion": "día",
+  "sentido_carril_V1": "Este a Oeste",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "circulación normal",
+  "senalizacion_preferencia": null,
+  "tipo_objeto": "árbol",
+  "causa_perdida_control": "corte de circulación",
+  "punto_impacto_via": "camellón de Darwin",
+  "angulo_impacto": null,
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "sin huellas de frenado, sin intercambio de pintura",
+  "huellas_frenado_m": null,
+  "airbags_V1": "ninguno",
+  "posicion_final_V1": "en el camellón de Darwin"
+ },
+ "id": "2_siniestro_15492804_d7a186",
+ "split": "train"
+}

@@ -1,0 +1,26 @@
+{
+ "motivo": "evidencia no literal en airbags_V2",
+ "principal": {
+  "id": "velocidad_V2_kmh",
+  "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+  "valor": 70,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "ambas bolsas de aire"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "ambas bolsas de aire"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Plymouth Freeze 1996 blanco",
+  "V2": "Ford Escort 1998 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la velocidad estimada del Ford antes del evento?\",\n  \"respuesta\": \"El Ford iba a unos 70 km/h, además las ambas bolsas de aire se activaron en el Plymouth y también en el Ford.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"70\",\n      \"evidencia\": \"unos 70 km/h\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"ambas\",\n      \"evidencia\": \"las ambas bolsas de aire se activaron\"\n    },\n    {\n      \"tema\": \"airbags_V2\",\n      \"valor\": \"ambas\",\n      \"evidencia\": \"se activaron en el Ford\"\n    }\n  ]\n}"
+}

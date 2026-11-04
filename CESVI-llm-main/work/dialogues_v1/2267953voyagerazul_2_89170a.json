@@ -1,0 +1,159 @@
+{
+ "id": "2267953voyagerazul_2_89170a",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "CHRYSLER VOYAGER LX 2005 AZUL 835-SEJ",
+  "V2": "NISSAN ALTIMA 2000 ARENA 893-MJX"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías contarnos, de acuerdo a lo que declaró el conductor del Chrysler Voyager LX, cómo ocurrió el hecho?",
+   "respuesta": "El conductor mencionó que al querer incorporarse al Periférico, el pedal del freno se le fue hacia atrás y no pudo frenar a tiempo, lo que lo llevó a impactar al vehículo que venía enfrente.",
+   "valor": "AL QUERER INCORPRARME A PERIFERICO Frena el maxima Freno yo se me barre el pedal del Freno y lo Impacto"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y, ¿qué nos dice el conductor del Nissan Altimax 2000 acerca de lo que ocurrió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento en el momento del accidente?",
+   "respuesta": "Las condiciones de la superficie eran malas con grietas y desprendimiento de material asfáltico.",
+   "valor": "grietas y desprendimiento de material asfáltico"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Podrías describirnos las condiciones de iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "Las condiciones de iluminación y visibilidad no fueron específicadas en el informe.",
+   "valor": "no especificado"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el carril y dirección en la que circulaba el vehículo tipo Voyager?",
+   "respuesta": "El Voyager circulaba en el carril de alta dirección Oriente a Poniente en Avenida 1º de Mayo.",
+   "valor": "carril de alta en Avenida 1º de Mayo en dirección de Poniente a Oriente"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y, ¿cómo era la situación del Nissan Altimax?",
+   "respuesta": "Creo que el Nissan Altimax circulaba en el mismo carril pero en dirección contraria al Voyager.",
+   "valor": "mismo carril enfrente del vehículo tipo Voyager(A)"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Podrías estimar la velocidad a la que circulaba el Voyager antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "Y, ¿qué nos puedes decir acerca de la velocidad del Nissan Altimax?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Voyager antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "Y, ¿qué maniobra realizaba el Nissan Altimax?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuál era la distancia o tiempo de separación entre los vehículos antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describirnos la secuencia de los eventos que llevaron al accidente?",
+   "respuesta": "Creo que el Voyager intentaba incorporarse al carril de alta y al no poder frenar, impactó al Nissan Altimax que circulaba en el carril contrario.",
+   "valor": "vehículo V2 circulaba enfrente de V1 en el mismo carril, V1 intenta incorporarse a Periférico y lo impacta"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto exactamente en la vía?",
+   "respuesta": "El impacto ocurrió en el carril de alta de Avenida 1º de Mayo.",
+   "valor": "carril de alta en Avenida 1º de Mayo"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "En el sitio del accidente se observaron huellas de frenado no especificadas.",
+   "valor": "huellas de frenado no especificadas"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál era la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Voyager?",
+   "respuesta": "Las bolsas de aire del conductor, acompañante y las rodillas del conductor se activaron.",
+   "valor": "activación de las bolsas de aire del conductor, acompañante y las rodillas del conductor"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "Y, ¿qué nos puedes decir acerca de las bolsas de aire del Nissan Altimax?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Podrías describirnos los daños del Voyager?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "Y, ¿qué nos puedes decir acerca de los daños del Nissan Altimax?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Posición final de V1: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Podrías describirnos la posición final del Voyager después del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Posición final de V2: ubicación, rumbo y tipo de barrido",
+   "pregunta": "Y, ¿qué nos puedes decir acerca de la posición final del Nissan Altimax?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

@@ -1,0 +1,134 @@
+{
+ "id": "424017_10_autobus_malibu_docx_1c62af",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "DINA autobus 1992 blanco con franjas amarillas y negras 517-821-V",
+  "V2": "Chevrolet Malibu 2007 negro WPA-63-95"
+ },
+ "form": {
+  "posicion_final_V1": "estático",
+  "posicion_final_V2": "desplazado hacia adelante"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías contarme cómo el conductor del Dina autobus 1992 blanco con franjas amarillas y negras describió el evento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y, ¿cómo describió el hecho el conductor del Chevrolet Malibu 2007 negro WPA-63-95?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Qué condiciones encontraste en la superficie de rodamiento?",
+   "respuesta": "Creo que la superficie estaba seca más o menos",
+   "valor": "seca"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación y visibilidad había en el momento del accidente?",
+   "respuesta": "Creo que era de día más o menos",
+   "valor": "día"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación y carril por el que iba el Dina autobus?",
+   "respuesta": "El Dina iba de Poniente a Oriente",
+   "valor": "Poniente a Oriente"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y cuál era el carril y sentido de circulación del Chevrolet Malibu?",
+   "respuesta": "El Malibu iba hacia el Sur, más o menos",
+   "valor": "Norte a Sur"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad estimada del Dina antes del accidente?",
+   "respuesta": "El Dina estaba detenido",
+   "valor": "0"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué velocidad estimaste para el Chevrolet Malibu antes del accidente?",
+   "respuesta": "Creo que el Malibu iba a unos 43 km/h más o menos",
+   "valor": "43.26"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el Dina antes del impacto?",
+   "respuesta": "El Dina paró de pronto",
+   "valor": "parada de pronto"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobra realizó el Chevrolet Malibu antes del impacto?",
+   "respuesta": "Creo que el Malibu seguía avanzando más o menos",
+   "valor": "avance"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Podrías detallar la distancia o el tiempo de separación entre los vehículos antes del evento?",
+   "respuesta": "La distancia entre los vehículos no se especificó con precisión técnica, pero se estima que estaban relativamente cerca",
+   "valor": "no especificada"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describir la secuencia de los impactos?",
+   "respuesta": "El Malibu impactó primero la parte trasera izquierda del Dina, seguido de posibles impactos secundarios",
+   "valor": "V2 impacta la parte posterior izquierda de V1"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "Creo que el impacto ocurrió en el carril de Oriente a Poniente más o menos",
+   "valor": "carril de Oriente a Poniente"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Encontré huellas de pintura intercambiada en el lugar del accidente",
+   "valor": "huellas de pintura intercambiada"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuánta longitud de huellas de frenado encontraste?",
+   "respuesta": "No se especificaron huellas de frenado en el sitio",
+   "valor": "no especificadas"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Dina?",
+   "respuesta": "Las bolsas de aire del Dina no se activaron en el accidente",
+   "valor": "no activados"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y qué tal con el Chevrolet Malibu?",
+   "respuesta": "Las bolsas de aire del Malibu tampoco se activaron en el accidente",
+   "valor": "no activados"
+  }
+ ]
+}

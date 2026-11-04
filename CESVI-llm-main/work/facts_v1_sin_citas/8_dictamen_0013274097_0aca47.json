@@ -1,0 +1,26 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "RENAULT MEGANE 2004 CAFE 410-TAX",
+  "V2": "FORD ECOSPORT 2005 GRIS HKB-8791"
+ },
+ "valores": {
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "circulación hacia Cuernavaca",
+  "sentido_carril_V2": "circulación hacia Cuernavaca",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "circulando",
+  "maniobra_previa_V2": "circulando",
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura, marcas",
+  "secuencia_eventos": "vehículo V2 (Ford Ecosport) impacta a vehículo V1 (Renault Megane) por detrás",
+  "punto_impacto_via": "en el carril de circulación hacia Cuernavaca",
+  "airbags_V1": "activada la bolsa de aire del lado del conductor",
+  "airbags_V2": null
+ },
+ "id": "8_dictamen_0013274097_0aca47",
+ "split": "valid"
+}

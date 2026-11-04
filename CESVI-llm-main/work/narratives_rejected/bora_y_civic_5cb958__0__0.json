@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en sentido_carril_V2",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "Oriente a Poniente"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta impregnación de pintura color vino en la parte frontal y el vehículo V2 presenta impregnación de pintura color gris en el lado derecho."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volkswagen Bora 2006 gris",
+  "V2": "Honda Civic 2007 vino"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Honda Civic vino?\",\n  \"respuesta\": \"El vehículo Honda Civic vino presentaba impregnación de pintura color gris en el lado derecho además iba circulando por el carril Oriente a Poniente\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"impregnación de pintura color gris en el lado derecho\",\n      \"evidencia\": \"El vehículo Honda Civic vino presentaba impregnación de pintura color gris en el lado derecho\"\n    },\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"Oriente a Poniente\",\n      \"evidencia\": \"ibas circulando por el carril Oriente a Poniente\"\n    }\n  ]\n}"
+}

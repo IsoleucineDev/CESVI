@@ -1,0 +1,27 @@
+{
+ "motivo": "valor no concuerda con su evidencia en airbags_V1",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 25,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 60,
+   "sintetico": true
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa del conductor y acompañante detonadas"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2004 azul",
+  "V2": "Chrysler 300C 2005 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado del Mitsubishi Outlander azul, si las hay?\",\n  \"respuesta\": \"El Mitsubishi Outlander azul dejó una huella de frenado de 25 metros, además las bolsas de aire del conductor y acompañante se activaron, y antes del evento el vehículo circulaba a una velocidad estimada de 60 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"60\",\n      \"evidencia\": \"antes del evento el vehículo circulaba a una velocidad estimada de 60 km/h\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"bolsa del conductor y acompañante detonadas\",\n      \"evidencia\": \"las bolsas de aire del conductor y acompañante se activaron\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"25\",\n      \"evidencia\": \"el Mitsubishi Outlander azul dejó una huella de frenado de 25 metros\"\n    }\n  ]\n}"
+}

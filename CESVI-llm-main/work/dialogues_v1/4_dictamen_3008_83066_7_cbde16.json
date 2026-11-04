@@ -1,0 +1,109 @@
+{
+ "id": "4_dictamen_3008_83066_7_cbde16",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "CHRYSLER JEEP 1994 NEGRO PLACAS 167-WBX"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Podrías resumirme la declaración del conductor de la Jeep respecto a lo que ocurrió en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento en el lugar del accidente?",
+   "respuesta": "La superficie era asfalto en buenas condiciones, sin irregularidades significativas.",
+   "valor": "asfalto en buenas condiciones"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación había en el momento del accidente?",
+   "respuesta": "Era de día, con buena visibilidad y sin condiciones de lluvia o niebla.",
+   "valor": "día"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Podrías describirme en qué sentido y carril circulaba la Jeep?",
+   "respuesta": "La Jeep circulaba en el carril derecho, siguiendo el sentido de tráfico de Nor-Este hacia Sur-Oeste.",
+   "valor": "Nor-Este hacia Sur-Oeste"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada de la Jeep antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba la Jeep antes del impacto?",
+   "respuesta": "La Jeep circulaba en línea recta sin realizar ninguna maniobra especial.",
+   "valor": "circulación normal"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuánta distancia aproximada había entre la Jeep y el vehículo con el que chocó?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describirme la secuencia de los impactos en el accidente?",
+   "respuesta": "Creo que el primer impacto fue la parte frontal izquierda de la Jeep chocando con la parte trasera de otro vehículo desconocido.",
+   "valor": "vehículo V1 impacta con su parte frontal izquierda en la parte posterior de otro vehículo desconocido"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde exactamente ocurrió el impacto en la vía?",
+   "respuesta": "La ubicación exacta del punto de impacto es desconocida.",
+   "valor": "ubicación desconocida"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué tipo de evidencias encontraste en el lugar del accidente?",
+   "respuesta": "No había huellas de frenado presentes, pero sí se observó un intercambio de pintura entre los vehículos involucrados.",
+   "valor": "huellas de frenado no presentes, intercambio de pintura"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál era la longitud de las huellas de frenado dejadas por la Jeep?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles de las bolsas de aire de la Jeep se activaron?",
+   "respuesta": "Sólo se activó la bolsa de aire frontal del conductor.",
+   "valor": "activada bolsa de aire frontal del conductor"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Podrías describirme los daños sufridos por la Jeep?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Posición final de V1: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Cuál fue la posición final de la Jeep después del accidente?",
+   "respuesta": "Creo que la Jeep quedó más o menos en el mismo carril donde ocurrió el impacto, sin realizar un barrido significativo.",
+   "valor": "desconocida"
+  }
+ ]
+}

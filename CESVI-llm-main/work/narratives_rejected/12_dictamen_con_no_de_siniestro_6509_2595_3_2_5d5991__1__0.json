@@ -1,0 +1,24 @@
+{
+ "motivo": "oración con contenido no extraído: 'El vehículo A tipo corsa, circulaba en sentido de Toluca a Tejupilco, '",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Toluca a Tejupilco"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "exceso de velocidad"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo A tipo corsa, circulaba en sentido de Toluca a Tejupilco a exceso de velocidad, antes de llegar al lugar de los hechos le precede una sección de curva doble, tal y como se muestra a continuación: Sección de curvas en forma de “S” [...]"
+  }
+ ],
+ "vehiculos": {
+  "V1": "General Motors Corsa 2004 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Chevy antes de la volcadura?\",\n  \"respuesta\": \"El vehículo A tipo corsa, circulaba en sentido de Toluca a Tejupilco, y antes de llegar al lugar de los hechos le precede una sección de curva doble, tal y como se muestra a continuación: Sección de curvas en forma de “S” además, el Chevy circulaba a exceso de velocidad.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"Toluca a Tejupilco\",\n      \"evidencia\": \"El vehículo A tipo corsa, circulaba en sentido de Toluca a Tejupilco\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"exceso de velocidad\",\n      \"evidencia\": \"el Chevy circulaba a exceso de velocidad\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"Sección de curvas en forma de “S”\",\n      \"evidencia\": \"Sección de curvas en forma de “S”\"\n    }\n  ]\n}"
+}

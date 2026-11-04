@@ -1,0 +1,26 @@
+{
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "HONDA ACCORD 1999 VIOLETA 163-MEH"
+ },
+ "valores": {
+  "declaracion_V1": "Circulaba por Revolución casi esquina Bayoneta y un peatón se atraviesa, gire el volante a la derecha, me impacte en la banqueta por no arrollar a la señora, un Optra me rozo la parte de atrás izquierda es el quien me ayuda a salir del vehículo luego se fue.",
+  "superficie": "asfalto",
+  "iluminacion": "día",
+  "sentido_carril_V1": "Norte",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "giro",
+  "senalizacion_preferencia": null,
+  "tipo_objeto": "guarnición con caseta telefónica y poste",
+  "causa_perdida_control": "esquivar peatón",
+  "punto_impacto_via": "banqueta esquina Revolución y Bayoneta",
+  "angulo_impacto": null,
+  "altura_marca_objeto_cm": "34",
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura amarilla en tapón delantera derecha",
+  "huellas_frenado_m": null,
+  "airbags_V1": "activados",
+  "posicion_final_V1": "fuera de la vía en la banqueta"
+ },
+ "id": "2_dictamen_no_siniestro_16582_4_7f9bcf",
+ "split": "train"
+}

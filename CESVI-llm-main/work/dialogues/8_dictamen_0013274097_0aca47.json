@@ -1,0 +1,145 @@
+{
+ "id": "8_dictamen_0013274097_0aca47",
+ "split": "valid",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Renault Megane 2004 cafe",
+  "V2": "Ford Ecosport 2005 gris"
+ },
+ "form": {
+  "posicion_final_V1": "Detenido en la carretera federal Cuernavaca-Distrito Federal en el kilómetro 45 con dirección a Cuernavaca",
+  "posicion_final_V2": "Proyectado hacia un vehículo desconocido"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "Venia circulando sobre la carretera Mex-Cuernavaca cuando de repente se detienen los vehículos de adelante no alcanzando a frenar pegándole al coche de adelante aventándolo contra otro, el cuál se va del lugar inmediatamente"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "sur"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "sur"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "frenado"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "detenido"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V1 colisionó en la parte posterior al vehículo V2, provocando una proyección de V2 que impactó a un vehículo desconocido"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "carretera federal Cuernavaca-Distrito Federal en el kilómetro 45 con dirección a Cuernavaca"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta pintura gris en la parte frontal, el vehículo V2 no presenta pintura café en la parte posterior"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "activado"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "start": 4,
+ "turns": [
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Cuál fue la maniobra que realizó el Renault Megane 2004 antes del impacto?",
+   "respuesta": "El Renault Megane realizó una maniobra de frenado antes del impacto, intentando evitar el choque con el vehículo de adelante.",
+   "valor": "frenado"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizó el Ford Ecosport 2005 antes del impacto?",
+   "respuesta": "Creo que el Ford Ecosport estaba detenido antes del impacto.",
+   "valor": "detenido"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuál era la distancia o el tiempo de separación entre los dos vehículos antes del evento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue la secuencia de los impactos en este accidente?",
+   "respuesta": "El Renault Megane impactó primero al Ford Ecosport, lo que provocó que este último fuera proyectado hacia otro vehículo.",
+   "valor": "El vehículo V1 colisionó en la parte posterior al vehículo V2, provocando una proyección de V2 que impactó a un vehículo desconocido"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde ocurrió el impacto en la carretera?",
+   "respuesta": "El accidente ocurrió en la carretera federal Cuernavaca-Distrito Federal, aproximadamente en el km 45 con dirección a Cuernavaca.",
+   "valor": "carretera federal Cuernavaca-Distrito Federal en el kilómetro 45 con dirección a Cuernavaca"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Creo que el Renault Megane tiene pintura gris en la parte frontal, mientras que el Ford Ecosport no tiene pintura café en la parte trasera.",
+   "valor": "El vehículo V1 presenta pintura gris en la parte frontal, el vehículo V2 no presenta pintura café en la parte posterior"
+  }
+ ]
+}

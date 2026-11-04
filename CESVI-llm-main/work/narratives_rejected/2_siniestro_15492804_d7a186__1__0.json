@@ -1,0 +1,24 @@
+{
+ "motivo": "valor no concuerda con su evidencia en evidencias_sitio",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "corte de circulación -> pérdida de control -> impacto contra árbol"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "camellón de la calle de Darwin"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "no se encontraron indicios de pintura entre el árbol y el vehículo marca Hyundai tipo Atos"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Hyundai Atos 2009 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrió con el Hyundai Atos rojo?\",\n  \"respuesta\": \"El Hyundai Atos rojo perdió el control al circular por el camellón de la calle Darwin, luego impactó contra un árbol, sin evidencias de intercambio de pintura entre ambos.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"corte de circulación -> pérdida de control -> impacto contra árbol\",\n      \"evidencia\": \"El Hyundai Atos rojo perdió el control al circular por el camellón de la calle Darwin, luego impactó contra un árbol\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"camellón de la calle Darwin\",\n      \"evidencia\": \"circular por el camellón de la calle Darwin\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"no se encontraron indicios de pintura entre el árbol y el vehículo marca Hyundai tipo Atos\",\n      \"evidencia\": \"sin evidencias de intercambio de pintura entre ambos\"\n    }\n  ]\n}"
+}

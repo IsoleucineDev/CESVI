@@ -1,0 +1,51 @@
+{
+ "id": "atlas_m0015552012_86a2a8",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión 2001 blanco",
+  "V2": "White Tractocamión 1989 rojo"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "sur a norte",
+  "sentido_carril_V2": "norte a sur",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": 62.9,
+  "maniobra_previa_V1": "salida de camino",
+  "maniobra_previa_V2": "frenado",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "El vehículo V2 (White) impactó el lado derecho del semirremolque de V1 (Freightliner), seccionándolo en dos partes.",
+  "punto_impacto_via": null,
+  "angulo_impacto": null,
+  "evidencias_sitio": "huellas de frenado, huellas de derrape, intercambio de pintura (rojo en blanco y viceversa)",
+  "huellas_frenado_m": 12,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "fuera del camino en dirección a Durango",
+  "posicion_final_V2": "fuera del camino en dirección a Chihuahua",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "sentido_carril_V1": "En dirección de Sur a Norte (Durango – Chihuahua)",
+  "sentido_carril_V2": "En dirección de Chihuahua a Durango",
+  "velocidad_V2_kmh": "la velocidad de la configuración T3S2, vehículo marca White, tipo tracto camión, acoplado al semirremolque marca Great Dane, al momento de circular por el corredor 3, a la altura del kilómetro 098+100 del camino: (49) Gómez Palacio – Jiménez, tramo; Bermejillo – limite de estado de Durango – Chihuahua, en el estado de Durango, fue de al menos de 62.92 km/hr.",
+  "maniobra_previa_V1": "El conductor del vehículo marca White observa que el vehículo marca Freigthliner es incorporado a la vía, después de una salida",
+  "maniobra_previa_V2": "El conductor del vehículo marca White observa que el vehículo marca Freigthliner es incorporado a la vía, después de una salida y aplica los frenos.",
+  "secuencia_eventos": "El lado derecho del vehículo marca White, tipo tracto camión, color rojo, impactó el lado derecho del semirremolque marca Great Dane, acoplado al tracto camión marca Freightliner, que circulaba de Chihuahua a Durango, de tal manera que lo secciono en dos partes.",
+  "evidencias_sitio": "se observan huellas de frenado con un longitud de 12 metros y al finaliza ésta se observan huellas producidas por cuerpo duro. También en el lugar de los hechos se observan, en ambos costados, restos de fibra de vidrio de color rojo, pertenecientes al vehículo marca White, así como restos del semirremolque a una distancia de 10 metros a la redonda.",
+  "huellas_frenado_m": "se observan huellas de frenado con un longitud de 12 metros",
+  "posicion_final_V1": "el semirremolque marca Great Dane, remolcado por el vehículo marca Freightliner, fue seccionado y lanzado en dirección a Durango",
+  "posicion_final_V2": "el vehículo marca White, tipo tracto camión, color rojo, modelo 1989 con placas de circulación 839 EH 2 transitaba con carga, con los pesos permitidos por NOM 12 de la SCT"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día",
+  "punto_impacto_via": "carril izquierdo",
+  "angulo_impacto": "oblicuo"
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Chevrolet Malibu 2007 negro dejó huellas de frenado que midieron 12'",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 12,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "DINA Autobus 1992 blanco con franjas amarillas y negras",
+  "V2": "Chevrolet Malibu 2007 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado del Chevy?\",\n  \"respuesta\": \"El Chevrolet Malibu 2007 negro dejó huellas de frenado que midieron 12 metros.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"12\",\n      \"evidencia\": \"12 metros\"\n    }\n  ]\n}"
+}

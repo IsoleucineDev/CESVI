@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en senalizacion_preferencia",
+ "principal": {
+  "id": "senalizacion_preferencia",
+  "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+  "valor": "señal de tipo restrictiva ubicada en el carril Oeste la cual dice que esta prohibida la vuelta"
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "no se observan intercambios de pintura"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "activadas las bolsas de aire la del conductor y las laterales de cortina"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jeep Liberty 2006 gris",
+  "V2": "GMC Acadia 2008 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la señalización de preferencia en el lugar del accidente?\",\n  \"respuesta\": \"NO SE OBSERVAN INTERCAMBIOS DE PINTURA, ADIEMÁS SE ACTIVARON LAS BOLSAS DE AIRE LA DEL CONDUCTOR Y LAS LATERALES DE CORTINA, Y LUEGO SE OBSERVA QUE ESTA PROHIBIDA LA VUELTA SEGÚN LA SEÑAL DE TIPO RESTRICTIVA UBICADA EN EL CARRIL OESTE.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"no se observan intercambios de pintura\",\n      \"evidencia\": \"NO SE OBSERVAN INTERCAMBIOS DE PINTURA\"\n    },\n    {\n      \"tema\": \"airbags_V2\",\n      \"valor\": \"activadas las bolsas de aire la del conductor y las laterales de cortina\",\n      \"evidencia\": \"SE ACTIVARON LAS BOLSAS DE AIRE LA DEL CONDUCTOR Y LAS LATERALES DE CORTINA\"\n    },\n    {\n      \"tema\": \"senalizacion_preferencia\",\n      \"valor\": \"señal de tipo restrictiva ubicada en el carril Oeste la cual dice que esta prohibida la vuelta\",\n      \"evidencia\": \"ESTA PROHIBIDA LA VUELTA SEGÚN LA SEÑAL DE TIPO RESTRICTIVA UBICADA EN EL CARRIL OESTE\"\n    }\n  ]\n}"
+}

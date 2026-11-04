@@ -1,0 +1,104 @@
+{
+ "id": "301034060_murano_5a3928",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Nissan Murano 2004 negro"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "al venir circulando por la Avenida Central en los carriles de alta velocidad a la altura de un tienda fester se encontraba un vehículo detenido sin luces en el carril pegado al muro de contención y que el al percatarse de esto vira hacia la derecha pero la camioneta se le hizo muy feo y al tratar de controlarla viro de nueva cuenta a la izquierda, pero perdió el control impactándose de frente con el muro de contención que divide la vialidad con el metro de la línea B"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Norte a Sur"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "giro"
+  },
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "muro de contención de concreto"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "distracción"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo gira hacia la derecha y luego hacia la izquierda, perdiendo el control y impactándose de frente con el muro de contención"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "carriles centrales de Avenida Central"
+  },
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": "30-70"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "impactado contra el muro de contención"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "impregnación de pintura color blanco en el muro de contención"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "bolsa de aire del conductor y del pasajero"
+  }
+ ],
+ "g": 6,
+ "asked": "punto_impacto_via",
+ "pregunta": "¿Dónde quedó detenido el Nissan Murano 2004 negro tras el evento?",
+ "respuesta": "El Nissan quedó impactado contra el muro de contención, además el impacto ocurrió en los carriles centrales de Avenida Central.",
+ "gold": {
+  "posicion_final_V1": {
+   "valor": "impactado contra el muro de contencion",
+   "evidencia": "El Nissan quedó impactado contra el muro de contencion"
+  },
+  "punto_impacto_via": {
+   "valor": "carriles centrales de Avenida Central",
+   "evidencia": "el impacto ocurrió en los carriles centrales de Avenida Central"
+  }
+ }
+}

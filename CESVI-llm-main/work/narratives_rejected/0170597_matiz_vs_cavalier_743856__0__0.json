@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en punto_impacto_via",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Boulevard Independencia en dirección de Poniente a Oriente"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "circulación"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Boulevard Independencia esquina con Calzada Abastos"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura color rojo en el cofre del vehículo tipo Matiz, no existen evidencias de intercambio de pintura en el vehículo tipo Cavalier"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Pontiac Matiz 2006 blanco con rojo",
+  "V2": "Chevrolet Cavalier 1993 gris con azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Matiz?\",\n  \"respuesta\": \"El Matiz circulaba por el boulevard Independencia en dirección de poniente a oriente, además, el Chevrolet Cavalier se encontraba en circulación antes del impacto.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"boulevard Independencia en dirección de poniente a oriente\",\n      \"evidencia\": \"El Matiz circulaba por el boulevard Independencia en dirección de poniente a oriente\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"circulación\",\n      \"evidencia\": \"el Chevrolet Cavalier se encontraba en circulación antes del impacto\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"Boulevard Independencia esquina con Calzada Abastos\",\n      \"evidencia\": \"Boulevard Independencia esquina con Calzada Abastos\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"pintura color rojo en el cofre del vehículo tipo Matiz\",\n      \"evidencia\": \"pintura color rojo en el cofre del vehículo tipo Matiz\"\n    }\n  ]\n}"
+}

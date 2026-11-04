@@ -1,0 +1,48 @@
+{
+ "id": "7_siniestro_256739_09_f120b5",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "General Motors MC-36 2003 rojo",
+  "V2": "Ford F-350 2008 rojo"
+ },
+ "valores": {
+  "declaracion_V1": "había mucho trafico y se me paro un carro delante y entonces yo me eche de reversa lo mas rápido que pude espejeando de mi lado pero no alcance a ver por el lado derecho en una curva solo sentí el trancazo",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "reversa",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "reversa",
+  "maniobra_previa_V2": null,
+  "secuencia_eventos": "el vehículo V1 realiza una maniobra en reversa y colisiona con el vehículo V2",
+  "punto_impacto_via": null,
+  "evidencias_sitio": "pintura color rojo en el vértice trasero derecho del vehículo V1",
+  "danos_V1": "indicios de pintura color rojo en el vértice trasero derecho",
+  "danos_V2": "daños tipo ruptura en la parrilla del lado izquierdo, defensa desplazada de izquierda a derecha",
+  "posicion_final_V1": "detenido tras el impacto",
+  "posicion_final_V2": "detenido tras el impacto",
+  "maniobra_reversa": "el vehículo V1 realiza una maniobra en reversa",
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "huellas_frenado_m": null
+ },
+ "citas": {
+  "declaracion_V1": "había mucho trafico y se me paro un carro delante y entonces yo me eche de reversa lo mas rápido que pude espejeando de mi lado pero no alcance a ver por el lado derecho en una curva solo sentí el trancazo",
+  "sentido_carril_V1": "el conductor del vehículo “A” realiza la maniobra de viraje en dirección al Sur para incorporarse a la calle de Las Torres cuando de pronto se encuentra un vehículo “C” que viene en sentido hacia el Norte de frente al vehículo “A” y este comienza a realizar una maniobra en reversa",
+  "maniobra_previa_V1": "el conductor del vehículo “A” realiza la maniobra de viraje en dirección al Sur para incorporarse a la calle de Las Torres cuando de pronto se encuentra un vehículo “C” que viene en sentido hacia el Norte de frente al vehículo “A” y este comienza a realizar una maniobra en reversa",
+  "secuencia_eventos": "el conductor del vehículo “A” realiza la maniobra de viraje en dirección al Sur para incorporarse a la calle de Las Torres cuando de pronto se encuentra un vehículo “C” que viene en sentido hacia el Norte de frente al vehículo “A” y este comienza a realizar una maniobra en reversa",
+  "evidencias_sitio": "se observan indicios de pintura color rojo, en el vértice trasero derecho",
+  "danos_V1": "se observan indicios de pintura color rojo, en el vértice trasero derecho",
+  "danos_V2": "se aprecian daños tipo ruptura generados por impacto contra cuerpo duro con dirección de adelante hacia atrás dañando la parrilla del lado izquierdo, asimismo, se observa que la defensa se encuentra desplazada de izquierda a derecha y sujeta por medio de un lazo",
+  "posicion_final_V1": "el vehículo “A” realiza la maniobra de viraje en dirección al Sur para incorporarse a la calle de Las Torres cuando de pronto se encuentra un vehículo “C” que viene en sentido hacia el Norte de frente al vehículo “A” y este comienza a realizar una maniobra en reversa",
+  "posicion_final_V2": "el vehículo “A” realiza la maniobra de viraje en dirección al Sur para incorporarse a la calle de Las Torres cuando de pronto se encuentra un vehículo “C” que viene en sentido hacia el Norte de frente al vehículo “A” y este comienza a realizar una maniobra en reversa",
+  "maniobra_reversa": "el conductor del vehículo “A” realiza la maniobra de viraje en dirección al Sur para incorporarse a la calle de Las Torres cuando de pronto se encuentra un vehículo “C” que viene en sentido hacia el Norte de frente al vehículo “A” y este comienza a realizar una maniobra en reversa"
+ },
+ "descartados": {
+  "iluminacion": "21:20 horas",
+  "punto_impacto_via": "calle Minas Palacio"
+ }
+}

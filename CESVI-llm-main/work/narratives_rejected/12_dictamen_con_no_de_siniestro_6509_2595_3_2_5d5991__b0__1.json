@@ -1,0 +1,21 @@
+{
+ "motivo": "evidencia no literal en velocidad_V1_kmh",
+ "principal": {
+  "id": "iluminacion",
+  "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+  "valor": "al amanecer con poca luz",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "General Motors Corsa 2004 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles fueron las condiciones de iluminación y visibilidad durante el evento?\",\n  \"respuesta\": \"El evento ocurrió al amanecer con poca luz, lo que afectó la visibilidad del Chevy.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"amanecer con poca luz\",\n      \"evidencia\": \"amanecer con poca luz\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"90\"\n    }\n  ]\n}"
+}

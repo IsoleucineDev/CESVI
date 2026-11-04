@@ -1,0 +1,133 @@
+{
+ "id": "11_siniestro_287655_09_9c7842",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Land Rover LR2 HSE Premium 2008 negro",
+  "V2": "camión desconocido"
+ },
+ "form": {
+  "posicion_final_V1": "lanzado fuera de la vialidad hacia una zanja de agua"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías contarme brevemente cómo el conductor del Land Rover LR2 HSE Premium 2008 negro describió lo que ocurrió?",
+   "respuesta": "Circulava hacia el cerrillo, de pronto se atraviesa un perro disminuyo mi velocidad es cuando un camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño",
+   "valor": "Circulava hacia el cerrillo, de pronto se atraviesa un perro disminuyo mi velocidad es cuando un camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y qué nos dice el conductor del camión sobre lo que ocurrió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Qué tipo de superficie tenía el rodamiento y cómo estaba?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Qué carril y sentido de circulación tenía el Land Rover LR2 HSE Premium 2008 negro?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y el camión desconocido, en qué carril circulaba y en qué sentido?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Podrías estimar la velocidad del Land Rover LR2 HSE Premium 2008 negro antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Y qué velocidad llevaba aproximadamente el camión desconocido?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Land Rover LR2 HSE Premium 2008 negro antes del impacto?",
+   "respuesta": "disminuyo mi velocidad",
+   "valor": "disminuyo mi velocidad"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobra realizaba el camión desconocido antes del impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuál era la distancia o el tiempo de separación entre ambos vehículos antes del evento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías describir brevemente la secuencia de los impactos?",
+   "respuesta": "el camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño",
+   "valor": "el camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿Dónde exactamente en la vía ocurrió el impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "restos de esquirlas de vidrio en el habitáculo",
+   "valor": "restos de esquirlas de vidrio en el habitáculo"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado, si las hay?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Land Rover LR2 HSE Premium 2008 negro?",
+   "respuesta": "bolsas de aire tanto frontales como laterales activadas",
+   "valor": "bolsas de aire tanto frontales como laterales activadas"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Y en el camión desconocido, cuáles bolsas de aire se activaron?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

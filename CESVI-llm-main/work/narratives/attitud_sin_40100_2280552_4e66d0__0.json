@@ -1,0 +1,89 @@
+{
+ "id": "attitud_sin_40100_2280552_4e66d0",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Dodge Attitud 2006 azul"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo tipo Attitud presentó daños tipo rayón en dirección de adelante hacia atrás en las puertas de lado izquierdo."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "daños tipo rayón en las puertas de lado izquierdo"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 4,
+ "asked": "secuencia_eventos",
+ "pregunta": "¿Cuál es la secuencia de eventos que ocurrió en la colisión?",
+ "respuesta": "El vehículo tipo Attitud presentó daños tipo rayón en dirección de adelante hacia atrás en las puertas de lado izquierdo. Además, en el sitio del accidente se observaron evidencias de intercambio de pintura en las puertas de lado izquierdo.",
+ "gold": {
+  "secuencia_eventos": {
+   "valor": "daños tipo rayón en dirección de adelante hacia atrás",
+   "evidencia": "El vehículo tipo Attitud presentó daños tipo rayón en dirección de adelante hacia atrás en las puertas de lado izquierdo."
+  },
+  "evidencias_sitio": {
+   "valor": "intercambio de pintura",
+   "evidencia": "en el sitio del accidente se observaron evidencias de intercambio de pintura en las puertas de lado izquierdo"
+  }
+ }
+}

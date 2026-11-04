@@ -1,0 +1,28 @@
+{
+ "motivo": "valor no concuerda con su evidencia en huellas_frenado_m",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 12,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con lluvia y poca visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Pontiac Matiz 2006 blanco con rojo",
+  "V2": "Chevrolet Cavalier 1993 gris con azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado del Pontiac Matiz 2006 blanco con rojo?\",\n  \"respuesta\": \"Las huellas de frenado del Matiz midieron 12m, además la velocidad del Chevy Cavalier antes del evento era de 50km/h, y luego estaba de noche con lluvia y poca visibilidad.\",\n  \"extracciones\": [\n    {\"tema\": \"huellas_frenado_m\", \"valor\": \"12\", \"evidencia\": \"Las huellas de frenado del Matiz midieron 12m\"},\n    {\"tema\": \"velocidad_V2_kmh\", \"valor\": \"50\", \"evidencia\": \"la velocidad del Chevy Cavalier antes del evento era de 50km/h\"},\n    {\"tema\": \"iluminacion\", \"valor\": \"de noche con lluvia y poca visibilidad\", \"evidencia\": \"estaba de noche con lluvia y poca visibilidad\"}\n  ]\n}"
+}

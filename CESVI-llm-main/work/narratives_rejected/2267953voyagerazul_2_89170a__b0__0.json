@@ -1,0 +1,28 @@
+{
+ "motivo": "valor no concuerda con su evidencia en danos_V1",
+ "principal": {
+  "id": "danos_V1",
+  "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "deformación en el costado derecho a 55 cm de altura",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "hundimiento frontal de 40 cm de alto con dirección de adelante hacia atrás",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 40,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chrysler Voyager LX 2005 azul",
+  "V2": "Nissan Altima 2000 arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños del Chrysler Voyager LX 2005 azul y en qué zona y dirección ocurrieron?\",\n  \"respuesta\": \"El Chrysler Voyager LX 2005 azul presentó una deformación en el costado derecho a 55 cm de altura además de que el Nissan Altima 2000 arena mostró un hundimiento frontal de 40 cm de alto con dirección de adelante hacia atrás y se estima que viajaba a una velocidad de 40 km/h.\",\n  \"extracciones\": [\n    {\"tema\": \"danos_V1\", \"valor\": \"deformacion_costado_derecho_55cm\", \"evidencia\": \"deformación en el costado derecho a 55 cm de altura\"},\n    {\"tema\": \"danos_V2\", \"valor\": \"hundimiento_frontal_40cm_adelante_atras\", \"evidencia\": \"hundimiento frontal de 40 cm de alto con dirección de adelante hacia atrás\"},\n    {\"tema\": \"velocidad_V2_kmh\", \"valor\": \"40\", \"evidencia\": \"velocidad de 40 km/h\"}\n  ]\n}"
+}

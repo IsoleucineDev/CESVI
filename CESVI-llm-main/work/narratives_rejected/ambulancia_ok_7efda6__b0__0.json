@@ -1,0 +1,28 @@
+{
+ "motivo": "evidencia no literal en velocidad_V2_kmh",
+ "principal": {
+  "id": "iluminacion",
+  "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+  "valor": "al amanecer con poca luz",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 70,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz Autobús 2001 blanco con franjas rojas y azul marino",
+  "V2": "Chevrolet Van Ambulancia 2004 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles fueron las condiciones de iluminación en el momento del accidente?\",\n  \"respuesta\": \"El accidente ocurrió al amanecer con poca luz, lo que afectó la visibilidad de los conductores. Además, la velocidad estimada del Mercedes Benz Autobús era de 70 km/h y la del Chevrolet Van Ambulancia era de 50 km/h.\",\n  \"extracciones\": [\n    {\"tema\": \"iluminacion\", \"valor\": \"amanecer con poca luz\", \"evidencia\": \"El accidente ocurrió al amanecer con poca luz\"},\n    {\"tema\": \"velocidad_V1_kmh\", \"valor\": \"70\", \"evidencia\": \"la velocidad estimada del Mercedes Benz Autobús era de 70 km/h\"},\n    {\"tema\": \"velocidad_V2_kmh\", \"valor\": \"50\", \"evidencia\": \"la velocidad del Chevrolet Van Ambulancia era de 50 km/h\"}\n  ]\n}"
+}

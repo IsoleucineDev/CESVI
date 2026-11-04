@@ -1,0 +1,49 @@
+{
+ "id": "7_dictamen_130810_9_398a0d",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2004 azul",
+  "V2": "Chrysler 300C 2005 negro"
+ },
+ "valores": {
+  "declaracion_V1": "Circulaba sobre Circuito Interior cuando al bajar del puente de Calzada de los Gallos, se me frena un carro tipo Chrysler 300 y sin poder frenar le pego en la parte trasera.",
+  "declaracion_V2": null,
+  "superficie": "concreto hidráulico",
+  "iluminacion": null,
+  "sentido_carril_V1": "Norte - Sur",
+  "sentido_carril_V2": "Norte - Sur",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "descendiendo del puente",
+  "maniobra_previa_V2": "se frena",
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo V1 impacta con su parte frontal la parte trasera del vehículo V2",
+  "punto_impacto_via": "Circuito Interior, al bajar del puente de Calzada de los Gallos",
+  "evidencias_sitio": "El vehículo V1 presenta pintura negra del V2, el V2 no presenta pintura azul del V1",
+  "huellas_frenado_m": null,
+  "airbags_V1": "bolsa del conductor y acompañante detonadas",
+  "airbags_V2": null,
+  "posicion_final_V1": "detenido detrás del vehículo V2",
+  "posicion_final_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Circulaba sobre Circuito Interior cuando al bajar del puente de Calzada de los Gallos, se me frena un carro tipo Chrysler 300 y sin poder frenar le pego en la parte trasera.",
+  "superficie": "El tipo de carpeta es de concreto hidráulico.",
+  "sentido_carril_V1": "El hecho de tránsito que nos ocupa sucedió en los carriles del arroyo de circulación que corre con dirección Norte – Sur, al bajar el puente que cruza la Calzada de los Gallos.",
+  "sentido_carril_V2": "El hecho de tránsito que nos ocupa sucedió en los carriles del arroyo de circulación que corre con dirección Norte – Sur, al bajar el puente que cruza la Calzada de los Gallos.",
+  "maniobra_previa_V1": "El hecho de tránsito que nos ocupa sucedió en los carriles del arroyo de circulación que corre con dirección Norte – Sur, al bajar el puente que cruza la Calzada de los Gallos.",
+  "maniobra_previa_V2": "El conductor del vehículo marca Chrysler, tipo 300C, modelo, 2005, color negro y placas de circulación 443-WGK, se frena.",
+  "secuencia_eventos": "El vehículo A) impacta con su parte frontal la parte posterior del vehículo B)",
+  "punto_impacto_via": "El hecho de tránsito que nos ocupa sucedió en los carriles del arroyo de circulación que corre con dirección Norte – Sur, al bajar el puente que cruza la Calzada de los Gallos.",
+  "evidencias_sitio": "no existe impregnación de pintura color negro sobre la parte frontal del vehículo marca Mitsubishi, tipo Outlander; del mismo modo, no existe impregnación de pintura color azul sobre la parte posterior del vehículo marca Chrysler, tipo 300C.",
+  "airbags_V1": "En el habitáculo del vehículo en estudio se observa la bolsa de aire del conductor como la del acompañante, se observan detonadas.",
+  "posicion_final_V1": "El vehículo A) impacta con su parte frontal la parte posterior del vehículo B)"
+ },
+ "descartados": {
+  "iluminacion": "día",
+  "posicion_final_V2": "detenido en el lugar del impacto"
+ }
+}

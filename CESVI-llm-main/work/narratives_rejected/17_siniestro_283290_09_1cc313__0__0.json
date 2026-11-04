@@ -1,0 +1,24 @@
+{
+ "motivo": "evidencia no literal en secuencia_eventos",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "impregnación de caucho sobre la guarnición del camellón central"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Hyundai Semirremolque Caja Seca 2005 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de la Hyundai Semirremolque Caja Seca 2005 antes del incidente?\",\n  \"respuesta\": \"La Hyundai Semirremolque Caja Seca 2005 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste, además, el vehículo impactó otros objetos en el sitio.\",\n  \"extracciones\": [\n    {\"tema\": \"maniobra_previa_V1\", \"valor\": \"tomó el retorno para continuar su circulación en dirección Este a Oeste\", \"evidencia\": \"tomó el retorno en mención para continuar su circulación en dirección Este a Oeste\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"primer contacto e impactos secundarios\", \"evidencia\": \"el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste\"},\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"impregnación de caucho sobre la guarnición del camellón central\", \"evidencia\": \"impregnación de caucho sobre la guarnición del camellón central\"}\n  ]\n}"
+}

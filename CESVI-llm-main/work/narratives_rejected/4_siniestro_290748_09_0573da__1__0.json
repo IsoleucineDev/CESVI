@@ -1,0 +1,20 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "vehículo V1 presenta restos de la primera capa de pintura (barniz transparente) en dirección de atrás hacia adelante sobre el vértice trasero izquierdo a una altura de un rango entre 0.45 y 0.86 metros; vehículo V2 presenta restos de la primera capa de pintura (barniz transparente), sobre la parte inferior media del costado izquierdo abarcando una superficie entre 0.44 y 0.99 metros"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfaltado en buenas condiciones"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Altima 2004 plata",
+  "V2": "GMC Envoy 2006 plata"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son las evidencias de intercambio de pintura en el sitio del accidente?\",\n  \"respuesta\": \"el Nissan Altima presenta restos de la primera capa de pintura (barniz transparente) en dirección de atrás hacia adelante sobre el vértice trasero izquierdo a una altura de un rango entre 0.45 y 0.86 metros; además, el GMC Envoy presenta restos de la primera capa de pintura (barniz transparente), sobre la parte inferior media del costado izquierdo abarcando una superficie entre 0.44 y 0.99 metros; además, la superficie de rodamiento es asfaltado en buenas condiciones.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"restos de la primera capa de pintura (barniz transparente) en dirección de atrás hacia adelante sobre el vértice trasero izquierdo a una altura de un rango entre 0.45 y 0.86 metros; restos de la primera capa de pintura (barniz transparente), sobre la parte inferior media del costado izquierdo abarcando una superficie entre 0.44 y 0.99 metros\",\n      \"evidencia\": \"el Nissan Altima presenta restos de la primera capa de pintura (barniz transparente) en dirección de atrás hacia adelante sobre el vértice trasero izquierdo a una altura de un rango entre 0.45 y 0.86 metros; además, el GMC Envoy presenta restos de la primera capa de pintura (barniz transparente), sobre la parte inferior media del costado izquierdo abarcando una superficie entre 0.44 y 0.99 metros\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfaltado en buenas condiciones\",\n      \"evidencia\": \"la superficie de rodamiento es asfaltado en buenas condiciones\"\n    }\n  ]\n}"
+}

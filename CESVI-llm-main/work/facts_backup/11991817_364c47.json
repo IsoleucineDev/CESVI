@@ -1,0 +1,40 @@
+{
+ "id": "11991817_364c47",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Nissan Micra 2005 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "Un coche me envistió, forzándome a dar un volantazo pegando con el muro de contención.",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "circulación en dirección Sur – Norte",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": null,
+  "tipo_objeto": null,
+  "causa_perdida_control": "corte de circulación",
+  "secuencia_eventos": "el vehículo “A” choque contra el muro de contención lateral derecho",
+  "punto_impacto_via": "vértice delantero derecho de la fascia frontal",
+  "altura_marca_objeto_cm": "0.30 metros",
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "impacto contra el muro de contención",
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "Un coche me envistió, forzándome a dar un volantazo pegando con el muro de contención.",
+  "sentido_carril_V1": "circulación en dirección Sur – Norte",
+  "causa_perdida_control": "corte de circulación",
+  "secuencia_eventos": "el vehículo “A” choque contra el muro de contención lateral derecho",
+  "punto_impacto_via": "vértice delantero derecho de la fascia frontal",
+  "altura_marca_objeto_cm": "0.30 metros",
+  "posicion_final_V1": "impacto contra el muro de contención"
+ },
+ "descartados": {
+  "maniobra_previa_V1": "realiza una maniobra evasiva sobre su costado derecho",
+  "tipo_objeto": "camellón con muro de contención de concreto",
+  "evidencias_sitio": "pintura amarilla en el vehículo y en el muro de contención"
+ }
+}

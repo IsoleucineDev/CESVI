@@ -1,0 +1,21 @@
+{
+ "motivo": "oración con contenido no extraído: 'El ángulo aproximado entre el Ford Eco sport y el Kenworth Volteo T 30'",
+ "principal": {
+  "id": "angulo_impacto",
+  "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+  "valor": "aproximadamente 90 grados",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "termina en el carril en sentido de Oriente a Poniente"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Eco sport 2005 rojo",
+  "V2": "Kenworth Volteo T 300 2008 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue el ángulo aproximado entre los vehículos al momento del impacto?\",\n  \"respuesta\": \"El ángulo aproximado entre el Ford Eco sport y el Kenworth Volteo T 300 al momento del impacto fue de aproximadamente 90 grados, además, el Kenworth Volteo T 300 terminó en el carril en sentido de Oriente a Poniente.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"angulo_impacto\",\n      \"valor\": \"90\",\n      \"evidencia\": \"aproximadamente 90 grados\"\n    },\n    {\n      \"tema\": \"posicion_final_V2\",\n      \"valor\": \"carril en sentido de Oriente a Poniente\",\n      \"evidencia\": \"terminó en el carril en sentido de Oriente a Poniente\"\n    }\n  ]\n}"
+}

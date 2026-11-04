@@ -1,0 +1,19 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "calle 13, casi esquina con AV. 15"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "concreto hidráulico"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Ecosport 2009 arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde en la calle ocurrió el impacto del Ford Ecosport 2009 arena?\",\n  \"respuesta\": \"El impacto del Ford Ecosport 2009 arena ocurrió en la calle 13, casi esquina con AV. 15, además la superficie de rodamiento era concreto hidráulico.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"concreto hidráulico\",\n      \"evidencia\": \"la superficie de rodamiento era concreto hidráulico\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"calle 13, casi esquina con AV. 15\",\n      \"evidencia\": \"el impacto del Ford Ecosport 2009 arena ocurrió en la calle 13, casi esquina con AV. 15\"\n    }\n  ]\n}"
+}

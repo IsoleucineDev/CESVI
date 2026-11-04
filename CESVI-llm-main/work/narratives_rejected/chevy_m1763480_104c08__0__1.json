@@ -1,0 +1,20 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "sirculandosobre el eje 3 Norte meinpacta un automovil aztra azul pego en la vanqueta y acon secuencia del golpe ahiquedo mi unidad"
+ },
+ "otros": [
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto regular sin líneas divisorias entre carriles"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Chevy C2 2011 dorado",
+  "V2": "Astra azul desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Chevy sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor del Chevy declaró que circulaba sobre el eje 3 Norte cuando fue impactado por un automóvil Astra azul que se desvió hacia la vereda, lo que llevó a que su unidad quedara detenida en el lugar.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"circulandosobre el eje 3 Norte meinpacta un automovil aztra azul pego en la vanqueta y acon secuencia del golpe ahiquedo mi unidad\",\n      \"evidencia\": \"El conductor del Chevy declaró que circulaba sobre el eje 3 Norte cuando fue impactado por un automóvil Astra azul que se desvió hacia la vereda, lo que llevó a que su unidad quedara detenida en el lugar.\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfalto regular sin líneas divisorias entre carriles\",\n      \"evidencia\": \"asfalto regular sin líneas divisorias entre carriles\"\n    }\n  ]\n}"
+}

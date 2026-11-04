@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "venia de sur a norte cuando vi un accidente de un tráiler y me pare, reversie unos metros cuando llego la camioneta y me impacto"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "vehículo V2 impacta a V1 en maniobra en reversa"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "activado"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Silverado 2007 arena",
+  "V2": "Toyota Tacoma 1997 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"Cuál es la declaración del conductor del Chevy sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"decia que venia de sur a norte cuando vi un accidente de un tráiler y me pare, reversie unos metros cuando llego la camioneta y me impacto. Además, vehiculo V2 impacta a V1 en maniobra en reversa. Luego, airbags de V2 activado.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"paro y reversa impactado\",\n      \"evidencia\": \"decia que venia de sur a norte cuando vi un accidente de un tráiler y me pare, reversie unos metros cuando llego la camioneta y me impacto\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"V2 impacta a V1\",\n      \"evidencia\": \"vehiculo V2 impacta a V1 en maniobra en reversa\"\n    },\n    {\n      \"tema\": \"airbags_V2\",\n      \"valor\": \"activado\",\n      \"evidencia\": \"airbags de V2 activado\"\n    }\n  ]\n}"
+}

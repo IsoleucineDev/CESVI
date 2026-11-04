@@ -1,0 +1,124 @@
+{
+ "id": "12_dictamen_con_no_de_siniestro_6509_2595_3_2_5d5991",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "General Motors Corsa 2004 azul"
+ },
+ "form": {
+  "posicion_final_V1": "sobre la cuneta",
+  "danos_V1": "En la parte frontal del vehículo tipo corsa presenta daños tipo tallón en el poste superior derecho con dirección de abajo hacia arriba en forma diagonal; también se observan daños tipo tallón en el poste superior izquierdo con dirección de abajo hacia arriba en forma diagonal; se observa inexistencia de parabrisas, en el cofre se observa un daño tipo tallón en su parte superior derecha con desprendimiento de material"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "TRANSITABA DE LA CARRETERA TEJUPILCO A TOLUCA cuando pasando temascaltepec estaba un arbol tirado en la carretera perdiendo la estabilidad el auto el cual se pego en la cuneta y dio 3 vueltas quedando bastante averiado"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Toluca a Tejupilco"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "exceso de velocidad"
+  },
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "exceso de velocidad"
+  },
+  {
+   "id": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "valor": "1/2"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo A tipo corsa, circulaba en sentido de Toluca a Tejupilco a exceso de velocidad, antes de llegar al lugar de los hechos le precede una sección de curva doble, tal y como se muestra a continuación: Sección de curvas en forma de “S” [...]"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "start": 7,
+ "turns": [
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Viste alguna evidencia en el sitio como huellas de frenado o marcas de impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuántos metros aproximadamente cubrían las huellas de frenado del Corsa azul?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Qué tipo de superficie tenías en cuenta al revisar el sitio del accidente?",
+   "respuesta": "desconozco",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Podrías describir las condiciones de iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "no se tiene ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál es tu estimación de la velocidad a la que iba el Corsa azul antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Corsa azul durante el accidente?",
+   "respuesta": "no hay ese dato",
+   "valor": "__saltado__"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "id": "7_gnp_15902_5_mod_0204a6",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Nissan X-Trail 2008 gris"
+ },
+ "valores": {
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": "de Sur a Norte",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo marca Nissan, tipo X-trail (A), circula de Sur a Norte y genera un impacto en la parte posterior del vehículo B.",
+  "punto_impacto_via": "sobre la avenida Gustavo Baz casi esquina con la calle Lázaro Cárdenas",
+  "evidencias_sitio": "Ausencia de daños en la parte posterior y sobre el lado izquierdo.",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "El vehículo tipo X-trail (A) impacta en la parte posterior del vehículo B.",
+  "declaracion_V1": "Le pegue a una camioneta por atrás, al revisar aparentemente no había un daño importante y el otro conductor no reclamo nada y nos retiramos a nuestro domicilio.",
+  "danos_V1": null
+ },
+ "citas": {
+  "superficie": "La superficie de rodamiento de la avenida es de asfalto y se encuentra sin baches, sin obstáculos, ni bordes.",
+  "sentido_carril_V1": "El vehículo marca Nissan, tipo X-trail,  modelo 2008, color  gris con placas de circulación MDD-8663, circula de Sur a Norte.",
+  "secuencia_eventos": "La letra “A”, representa al vehículo tipo X-trail, la letra “B”, representa a un vehículo de cuyas características se desconocen",
+  "punto_impacto_via": "El lugar de los hechos se ubica de Sur a Norte sobre la avenida Gustavo Baz casi esquina con la calle Lázaro Cárdenas",
+  "evidencias_sitio": "Ausencia de daños en la parte posterior y sobre el lado izquierdo.",
+  "posicion_final_V1": "Muestra la posición final del vehículo (A) X-Trail, el cual genera un impacto en la parte posterior del vehículo “B”",
+  "declaracion_V1": "El asegurado redacta en la declaración de accidente: “Le pegue a una camioneta por atrás, al revisar aparentemente no había un daño importante y el otro conductor no reclamo nada y nos retiramos a nuestro domicilio.”"
+ },
+ "descartados": {
+  "iluminacion": "día"
+ }
+}

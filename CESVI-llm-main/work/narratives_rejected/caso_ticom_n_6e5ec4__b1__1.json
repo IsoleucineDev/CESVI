@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'Luego, no se observaron cambios significativos en la velocidad del veh'",
+ "principal": {
+  "id": "velocidad_V2_kmh",
+  "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+  "valor": 80,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Toyota Camry 2002 gris plata",
+  "V2": "Saab 9-3 2004 gris Oxford"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada del Saab 9-3 antes del evento?\",\n  \"respuesta\": \"El Saab 9-3 2004 gris Oxford, antes del evento, circulaba a una velocidad estimada de 80 km/h. Luego, no se observaron cambios significativos en la velocidad del vehículo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"80\",\n      \"evidencia\": \"antes del evento, circulaba a una velocidad estimada de 80 km/h\"\n    }\n  ]\n}"
+}

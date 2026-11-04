@@ -1,0 +1,51 @@
+{
+ "id": "2064970_inbursa_tijuana_1bf065",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Freightliner FLD 120 2002 blanco",
+  "V2": "Watson & Chalin Tanque 2002 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "El vehículo en cuestión transportaba gasolina al momento del siniestro y actualmente se encuentra en el predio donde sucede el hecho y esta totalmente quemado",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Sur a Norte",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": "118.2",
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "cambio de carril",
+  "maniobra_previa_V2": null,
+  "causa_perdida_control": "exceso de velocidad",
+  "vueltas_volcadura": null,
+  "punto_impacto_via": "al salir de la curva",
+  "evidencias_sitio": "restos de reflejante impregnado",
+  "danos_V1": "ninguno",
+  "danos_V2": "hundimiento de afuera hacia adentro, doblez en la muela de apertura del gancho de arrastre",
+  "posicion_final_V1": "fuera de la vía",
+  "posicion_final_V2": "fuera de la vía",
+  "secuencia_eventos": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "El vehículo en cuestión transportaba gasolina al momento del siniestro y actualmente se encuentra en el predio donde sucede el hecho y esta totalmente quemado",
+  "sentido_carril_V1": "circulación de Sur a Norte",
+  "velocidad_V1_kmh": "circulando a una velocidad mayor a 118.2 Km/h",
+  "maniobra_previa_V1": "el vehículo salga de la curva",
+  "causa_perdida_control": "circulaba a una velocidad mayor a los 118 Km/h",
+  "punto_impacto_via": "al salir de la curva que antecede al tramo recto de la carretera",
+  "evidencias_sitio": "restos de reflejante impregnado",
+  "danos_V1": "La parte frontal no presenta daños a simple vista como consecuencia del siniestro en estudio",
+  "danos_V2": "el gancho de arrastre presenta daños tipo doblez de izquierda a derecha de magnitud fuerte en la “muela” de apertura del gancho de arrastre",
+  "posicion_final_V1": "el sitio marcado como lugar de los hechos se observan daños en el pavimento tipo tallón con pérdida de material y restos de reflejante impregnado",
+  "posicion_final_V2": "el sitio marcado como lugar de los hechos se observan daños en el pavimento tipo tallón con pérdida de material y restos de reflejante impregnado"
+ },
+ "descartados": {
+  "superficie": "asfalto seco",
+  "iluminacion": "día",
+  "vueltas_volcadura": "tonel"
+ }
+}

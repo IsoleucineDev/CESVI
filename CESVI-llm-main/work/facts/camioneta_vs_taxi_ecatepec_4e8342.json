@@ -1,0 +1,47 @@
+{
+ "id": "camioneta_vs_taxi_ecatepec_4e8342",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Ford F350 1994 blanco y azul",
+  "V2": "Chevrolet Monza 2009 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "Venia sobre la López Portillo para dar vuelta hacia la Chapultepec cuando di vuelta hacia la misma no vi al taxi que paro en frente de mi por que hay topes por eso a la mejor redujo la velocidad y lo golpee…",
+  "declaracion_V2": null,
+  "superficie": "asfalto en buenas condiciones de circulación",
+  "iluminacion": null,
+  "sentido_carril_V1": "Oeste a Este para dar vuelta hacia la derecha en la Av. Chapultepec",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "da vuelta hacia la derecha en la Av. Chapultepec",
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo A da vuelta hacia la Av. Chapultepec y impacta al vehículo B que estaba parado enfrente del tope",
+  "punto_impacto_via": "en la esquina de Av. Nacional y Av. Chapultepec antes de llegar al tope de la Av. Chapultepec",
+  "evidencias_sitio": "huellas de frenado no observadas, restos de pintura color azul en el vehículo V2",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": null,
+  "posicion_final_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Venia sobre la López Portillo para dar vuelta hacia la Chapultepec cuando di vuelta hacia la misma no vi al taxi que paro en frente de mi por que hay topes por eso a la mejor redujo la velocidad y lo golpee…",
+  "superficie": "La Vía López Portillo consta de cuatro carriles asfaltados en buenas condiciones de circulación las cuales cubre un ancho total de 14 metros y tienen un sentido de circulación de Este a Oeste",
+  "sentido_carril_V1": "El vehículo A circula sobre la vía López Portillo en dirección de Oeste a Este para dar vuelta hacia la derecha en la Av. Chapultepec",
+  "maniobra_previa_V1": "El vehículo A circula sobre la vía López Portillo en dirección de Oeste a Este para dar vuelta hacia la derecha en la Av. Chapultepec",
+  "secuencia_eventos": "El vehículo A circula sobre la vía López Portillo en dirección de Oeste a Este para dar vuelta hacia la derecha en la Av. Chapultepec, dio la vuelta y no vio al taxi que paro enfrente de este, debido a que había un tope",
+  "punto_impacto_via": "El hecho de tránsito se suscita a la altura de la esquina de Av. Nacional y Av. Chapultepec antes de llegar al tope de la Av. Chapultepec",
+  "evidencias_sitio": "El medallón no se encuentra en su posición original, solo se encuentran esquirlas en el contorno del mismo, el conjunto de luces de ambos lados se encuentra rotos y la fascia trasera se encuentra desprendida de sus extremos"
+ },
+ "descartados": {
+  "sentido_carril_V2": "parado enfrente del tope",
+  "maniobra_previa_V2": "parado",
+  "posicion_final_V1": "detenido tras el impacto",
+  "posicion_final_V2": "detenido tras el impacto"
+ }
+}

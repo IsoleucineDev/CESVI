@@ -1,0 +1,16 @@
+{
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Kenworth T-800 2007 blanco 827-EF9 con semirremolque Barrera Jaula blanco 896-WH-7",
+  "V2": "Nissan Estaquitas 2008 rojo SHZ-8745"
+ },
+ "valores": {
+  "maniobra_reversa": "Maniobra de reversa en un estacionamiento",
+  "declaracion_V1": "Acercando maniobra de reversa no vi la camioneta estacionada pegándole en el frente",
+  "posicion_final_V1": "Posición final del vehículo A tipo T-800 con semirremolque tipo Jaula",
+  "posicion_final_V2": "Posición final del vehículo B tipo Estaquitas",
+  "evidencias_sitio": "No existen huellas de frenado ni evidencias de intercambio de pintura"
+ },
+ "id": "16_iniestro_298903_09_5acdf2",
+ "split": "train"
+}

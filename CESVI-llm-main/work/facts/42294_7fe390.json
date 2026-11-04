@@ -1,0 +1,38 @@
+{
+ "id": "42294_7fe390",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Mercedes Benz C-280 2007 blanco"
+ },
+ "valores": {
+  "superficie": "asfalto con baches",
+  "iluminacion": null,
+  "tipo_objeto": "bache",
+  "causa_perdida_control": "bache",
+  "secuencia_eventos": "El vehículo circulaba y cayó sobre un bache, lo que generó la ruptura del rin",
+  "punto_impacto_via": null,
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "vehículo detenido en el lugar del impacto",
+  "declaracion_V1": "NI VI UN BACHE Y SENTÍ UN RUIDO MUY FUERTE DÁNDOME CUENTA QUE SE PONCHO LA LLANTA Y SE ROMPIÓ EL RIN",
+  "sentido_carril_V1": null,
+  "maniobra_previa_V1": null,
+  "velocidad_V1_kmh": null,
+  "danos_V1": null
+ },
+ "citas": {
+  "superficie": "la carpeta asfáltica presenta una gran cantidad de zonas re-encarpetadas y baches",
+  "tipo_objeto": "se observan dos reductores de velocidad (topes) a los cuales les antepone una rejilla metálica que cubre el sistema de drenaje",
+  "causa_perdida_control": "sentí un ruido muy fuerte dándome cuenta que se poncho la llanta y se rompió el rin",
+  "secuencia_eventos": "al caer el conjunto rin – neumático sobre un bache se genera un impacto muy fuerte sobre el rin",
+  "posicion_final_V1": "el vehículo en estudio, presenta un severo daño de tipo ruptura",
+  "declaracion_V1": "NI VI UN BACHE Y SENTÍ UN RUIDO MUY FUERTE DÁNDOME CUENTA QUE SE PONCHO LA LLANTA Y SE ROMPIÓ EL RIN"
+ },
+ "descartados": {
+  "punto_impacto_via": "incorporación Picacho - Ajusco",
+  "evidencias_sitio": "huellas de frenado no observadas, restos de pintura no observados"
+ }
+}

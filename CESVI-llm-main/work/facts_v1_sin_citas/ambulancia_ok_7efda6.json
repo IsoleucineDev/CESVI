@@ -1,0 +1,17 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Mercedes Benz Autobús 2001 blanco con franjas rojas y azul marino, placas 354-297-S",
+  "V2": "Chevrolet Van Ambulancia 2004 blanco, placas OAX-045"
+ },
+ "valores": {
+  "sentido_carril_V1": "sur a norte",
+  "sentido_carril_V2": "carril de en medio",
+  "secuencia_eventos": "V1 impacta lateralmente a V2",
+  "punto_impacto_via": "avenida Periférico entre 20 de Noviembre y Nuño del Mercado",
+  "angulo_impacto": "lateral",
+  "evidencias_sitio": "huellas de pintura intercambiada"
+ },
+ "id": "ambulancia_ok_7efda6",
+ "split": "train"
+}

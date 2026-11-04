@@ -1,0 +1,21 @@
+{
+ "motivo": "evidencia no literal en huellas_frenado_m",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "reversa"
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 12,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Edge 2009 gris",
+  "V2": "Ford F-350 desconocido desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Ford F-350?\",\n  \"respuesta\": \"El Ford F-350 estaba realizando una maniobra de reversa en el carril contrario. Además, las huellas de frenado midieron 12 metros.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"reversa\",\n      \"evidencia\": \"realizando una maniobra de reversa en el carril contrario\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"12\",\n      \"evidencia\": \"medieron 12 metros\"\n    }\n  ]\n}"
+}

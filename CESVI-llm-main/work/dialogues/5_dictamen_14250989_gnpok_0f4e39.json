@@ -1,0 +1,152 @@
+{
+ "id": "5_dictamen_14250989_gnpok_0f4e39",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Nissan Tsuru 2000 rojo",
+  "V2": "Italika motocicleta 2006 negro"
+ },
+ "form": {
+  "posicion_final_V1": "detenido en el lugar del impacto",
+  "posicion_final_V2": "caída y arrastre sobre el lado izquierdo",
+  "danos_V1": "daños por impacto contra cuerpo ubicados sobre el vértice izquierdo, desprendimiento de pintura color rojo y material plástico, orificio en la fascia",
+  "danos_V2": "rótula del carenado rota, rin delantero deformado con dirección al centro de la circunferencia, depósito de combustible con daños tipo hundimiento, faros traseros rotos, rueda trasera desalineada"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "CIRCULANDO SOBRE LA AVENIDA 661 CRUZABA LA 606 Y POR LA HORA ME PASE EL CRUCE NO VI UNA MOTO QUE IBA PASANDO NO VI LA LUZ EN ROJO Y LE DI UN LLEGUE CON EL AUTO FRENE INMEDIATO PERO COMO IBA EN MOTO SE DESCONTROLO Y CAYO"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "circulaba sobre la Av. 661 con rumbo al Noroeste"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "circulaba con rumbo al Noreste"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "circulaba sobre la calle 606"
+  },
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el conductor del vehículo tipo Tsuru circulaba sobre la Av. 661 y cruzaba la calle 606; el conductor de la motocicleta circulaba sobre la calle 606; los vehículos impactaron en un ángulo perpendicular"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "huellas por cuerpo duro tipo restregón sobre la carpeta asfáltica y restos plásticos de color rojo al parecer provenientes del conjunto de luces posterior de la unidad tipo motocicleta"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfalto normal y se encuentra en buen estado"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "iluminación aceptable en la madrugada"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "start": 0,
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías resumirme la versión del conductor del Nissan Tsuru sobre cómo ocurrió el accidente?",
+   "respuesta": "CIRCULANDO SOBRE LA AVENIDA 661 CRUZABA LA 606 Y POR LA HORA ME PASE EL CRUCE NO VI UNA MOTO QUE IBA PASANDO NO VI LA LUZ EN ROJO Y LE DI UN LLEGUE CON EL AUTO FRENE INMEDIATO PERO COMO IBA EN MOTO SE DESCONTROLO Y CAYO",
+   "valor": "CIRCULANDO SOBRE LA AVENIDA 661 CRUZABA LA 606 Y POR LA HORA ME PASE EL CRUCE NO VI UNA MOTO QUE IBA PASANDO NO VI LA LUZ EN ROJO Y LE DI UN LLEGUE CON EL AUTO FRENE INMEDIATO PERO COMO IBA EN MOTO SE DESCONTROLO Y CAYO"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Y tienes alguna información del conductor de la Italika sobre lo que ocurrió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Podrías decirme en qué dirección y carril circulaba el Nissan Tsuru?",
+   "respuesta": "circulaba sobre la Av. 661 con rumbo al Noroeste",
+   "valor": "circulaba sobre la Av. 661 con rumbo al Noroeste"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Y en qué dirección y carril iba circulando la Italika?",
+   "respuesta": "circulaba con rumbo al Noreste",
+   "valor": "circulaba con rumbo al Noreste"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobras realizó el Nissan Tsuru antes del impacto?",
+   "respuesta": "desconozco",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Y qué maniobras realizó la Italika antes del impacto?",
+   "respuesta": "creo que circulaba sobre la calle 606",
+   "valor": "circulaba sobre la calle 606"
+  }
+ ]
+}

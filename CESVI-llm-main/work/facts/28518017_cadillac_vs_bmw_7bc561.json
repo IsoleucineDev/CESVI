@@ -1,0 +1,52 @@
+{
+ "id": "28518017_cadillac_vs_bmw_7bc561",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "GM Cadillac Deville 1998 oro",
+  "V2": "BMW 528i 2000 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "Venía circulando de SUR A NORTE por Salinas Verona no vi el Alto e impacte el vehiculo BMW del lado del copiloto. Acepto mi Responsabilidad del Accidente",
+  "declaracion_V2": null,
+  "superficie": "concreto hidráulico en condiciones aceptables y buena visibilidad",
+  "iluminacion": null,
+  "sentido_carril_V1": "de SUR a NORTE",
+  "sentido_carril_V2": "de PONIENTE a ORIENTE",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "no respeta la señal restrictiva de Alto",
+  "maniobra_previa_V2": "estática",
+  "senalizacion_preferencia": "señal restrictiva de Alto",
+  "secuencia_eventos": "El vehículo marca Cadillac, no respeta la señal restrictiva de Alto y se proyecta sobre el vehículo BMW el cual se encuentra dentro del claro del crucero. El vehículo marca Cadillac, impacta con su parte frontal, el costado medio derecho del vehículo BMW.",
+  "punto_impacto_via": "en la intersección de las calles Gregorio Salinas Varona y Santiago Roel",
+  "angulo_impacto": null,
+  "evidencias_sitio": "impregnaciones de pintura color blanco en la fascia delantera del vehículo marca Cadillac, color oro",
+  "airbags_V1": "bolsa de aire del conductor activada",
+  "airbags_V2": "bolsa de aire del acompañante y la cortina lateral del mismo lado activadas",
+  "posicion_final_V1": "detenido en el lugar del impacto",
+  "posicion_final_V2": "desplazado hacia el lado izquierdo",
+  "huellas_frenado_m": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Venía circulando de SUR A NORTE por Salinas Verona no vi el Alto e impacte el vehiculo BMW del lado del copiloto. Acepto mi Responsabilidad del Accidente",
+  "superficie": "La calle Gregorio Salinas Varona tiene un sentido de Sur a Norte y viceversa, con un carril por sentido, con guarniciones de 2.00 metros y un arroyo vehicular de 9.00 metros, construido con concreto hidráulico en condiciones aceptables y buena visibilidad.",
+  "sentido_carril_V1": "El vehículo marca Cadillac, circula en dirección de Sur a Norte por la calle Gregorio Salinas",
+  "sentido_carril_V2": "el vehículo marca BMW, circula de Poniente a Oriente por la calle Santiago Roel",
+  "maniobra_previa_V1": "El vehículo marca Cadillac, no respeta la señal restrictiva de Alto y se proyecta sobre el vehículo BMW el cual se encuentra dentro del claro del crucero",
+  "maniobra_previa_V2": "el vehículo marca BMW, tipo 528i, modelo 2000, color blanco, se encontraba en una posición estática al momento de ser impactado por el del vehículo marca GM",
+  "senalizacion_preferencia": "El vehículo marca Cadillac, no respeta la señal restrictiva de Alto y se proyecta sobre el vehículo BMW el cual se encuentra dentro del claro del crucero",
+  "secuencia_eventos": "El vehículo marca Cadillac, no respeta la señal restrictiva de Alto y se proyecta sobre el vehículo BMW el cual se encuentra dentro del claro del crucero. El vehículo marca Cadillac, impacta con su parte frontal, el costado medio derecho del vehículo BMW.",
+  "punto_impacto_via": "El lugar de los hechos se ubica en la intersección de las calles Gregorio Salinas Varona y Santiago Roel, colonia Burócratas del Estado, en Monterrey, Nuevo León.",
+  "evidencias_sitio": "sólo la parte inferior de la fascia del vehículo marca Cadillac, presenta ligeras impregnaciones de color blanco",
+  "airbags_V1": "En la parte frontal del habitáculo, se observa la bolsa de aire del conductor activada",
+  "airbags_V2": "En el interior del habitáculo se observa la activación de la bolsa de aire, del acompañante, la cortina lateral del mismo lado",
+  "posicion_final_V1": "El vehículo marca Cadillac, impacta con su parte frontal, el costado medio derecho del vehículo BMW.",
+  "posicion_final_V2": "el vehículo marca BMW, tipo 528i, modelo 2000, color blanco, se encontraba en una posición estática al momento de ser impactado por el del vehículo marca GM"
+ },
+ "descartados": {
+  "angulo_impacto": "de adelante hacia atrás para V1 y de derecha a izquierda para V2"
+ }
+}

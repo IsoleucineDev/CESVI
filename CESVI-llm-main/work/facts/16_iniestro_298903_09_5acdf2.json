@@ -1,0 +1,43 @@
+{
+ "id": "16_iniestro_298903_09_5acdf2",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Kenworth T-800 2007 blanco",
+  "V2": "Nissan Estaquitas 2008 rojo"
+ },
+ "valores": {
+  "declaracion_V1": "ACIENDO MANEOBRA DE REVERZA NO VI LA CAMIONETA ESTACIONADA PEGANDOLE EN EL FRENTE",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "reversa",
+  "maniobra_previa_V2": null,
+  "maniobra_reversa": null,
+  "secuencia_eventos": null,
+  "punto_impacto_via": null,
+  "evidencias_sitio": "El vehículo A tipo T-800 con semirremolque tipo Jaula presenta daños tipo tallón con dirección de arriba hacia abajo en parte del estribo a una altura de 1.06 metros con respecto al piso y en la parte inferior derecha de la defensa daños tipo tallón con dirección de izquierda a derecha a una altura de 0.76 metros con respecto al piso",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "El vehículo A tipo T-800 con semirremolque tipo Jaula, después de terminada la maniobra de reversa",
+  "posicion_final_V2": "El vehículo tipo Chasis cabina, después de terminada la maniobra de reversa",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "ACIENDO MANEOBRA DE REVERZA NO VI LA CAMIONETA ESTACIONADA PEGANDOLE EN EL FRENTE",
+  "maniobra_previa_V1": "ACIENDO MANEOBRA DE REVERZA NO VI LA CAMIONETA ESTACIONADA PEGANDOLE EN EL FRENTE",
+  "evidencias_sitio": "El vehículo A tipo T-800 con semirremolque tipo Jaula presenta daños tipo tallón con dirección de arriba hacia abajo en parte del estribo a una altura de 1.06 metros con respecto al piso y en la parte inferior derecha de la defensa daños tipo tallón con dirección de izquierda a derecha a una altura de 0.76 metros con respecto al piso",
+  "posicion_final_V1": "El vehículo A tipo T-800 con semirremolque tipo Jaula, después de terminada la maniobra de reversa",
+  "posicion_final_V2": "El vehículo tipo Chasis cabina, después de terminada la maniobra de reversa"
+ },
+ "descartados": {
+  "maniobra_reversa": "El vehículo A tipo T-800 con semirremolque tipo Jaula, realiza maniobra en reversa",
+  "secuencia_eventos": "El vehículo A tipo T-800 con semirremolque tipo Jaula realiza maniobra en reversa y colisiona con el vehículo B tipo Estaquitas"
+ }
+}

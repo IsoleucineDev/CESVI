@@ -1,0 +1,21 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "Venia circulando sobre la carretera Mex-Cuernavaca cuando de repente se detienen los vehículos de adelante no alcanzando a frenar pegándole al coche de adelante aventándolo contra otro, el cuál se va del lugar inmediatamente"
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con alumbrado público",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Renault Megane 2004 cafe",
+  "V2": "Ford Ecosport 2005 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"Cuéntame la declaración del conductor del Renault Megane sobre cómo ocurrió el hecho.\",\n  \"respuesta\": \"El conductor del Renault Megane 2004 cafe declaró que venía circulando sobre la carretera Mex-Cuernavaca cuando de repente se detienen los vehículos de adelante no alcanzando a frenar pegándole al coche de adelante; además, el cuál se va del lugar inmediatamente. Además, la situación ocurrió de noche con alumbrado público.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"venia circulando sobre la carretera Mex-Cuernavaca cuando de repente se detienen los vehículos de adelante no alcanzando a frenar pegándole al coche de adelante; el cuál se va del lugar inmediatamente\",\n      \"evidencia\": \"El conductor del Renault Megane 2004 cafe declaró que venía circulando sobre la carretera Mex-Cuernavaca cuando de repente se detienen los vehículos de adelante no alcanzando a frenar pegándole al coche de adelante; además, el cuál se va del lugar inmediatamente.\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de noche con alumbrado público\",\n      \"evidencia\": \"la situación ocurrió de noche con alumbrado público.\"\n    }\n  ]\n}"
+}

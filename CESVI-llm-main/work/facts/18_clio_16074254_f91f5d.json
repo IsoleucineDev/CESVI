@@ -1,0 +1,50 @@
+{
+ "id": "18_clio_16074254_f91f5d",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Renault Clio 2002 blanco",
+  "V2": "Renault Megane 2005 negro"
+ },
+ "valores": {
+  "superficie": "asfaltado",
+  "iluminacion": null,
+  "sentido_carril_V1": "circulaba sobre la carretera federal Chinconcuac-Texcoco",
+  "sentido_carril_V2": "circulaba de Chinconcuac a Texcoco",
+  "maniobra_previa_V1": "giro a la izquierda",
+  "maniobra_previa_V2": null,
+  "secuencia_eventos": "El vehículo V2 impacta en el costado derecho del vehículo V1",
+  "punto_impacto_via": null,
+  "angulo_impacto": null,
+  "evidencias_sitio": "restos de pintura negra en el costado derecho del vehículo V1 y pintura blanca en el costado izquierdo del vehículo V2",
+  "declaracion_V1": "El asegurado refiere que circulaba sobre la carretera federal Chinconcuac-Texcoco y dio vuelta a la izquierda en dirección a Papalotla cuando la impacto en el costado derecho un vehículo que circulaba de Chinconcuac a Texcoco",
+  "declaracion_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "senalizacion_preferencia": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "ubicación: costado derecho impactado; rumbo: no especificado; tipo de barrido: no especificado",
+  "posicion_final_V2": "ubicación: costado izquierdo impactado; rumbo: no especificado; tipo de barrido: no especificado",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "superficie": "Se puede observar la Avenida Juárez la cual cuenta con un arroyo vehicular asfaltado con un ancho de 9.10m",
+  "sentido_carril_V1": "El asegurado refiere que circulaba sobre la carretera federal Chinconcuac-Texcoco y dio vuelta a la izquierda en dirección a Papalotla cuando la impacto en el costado derecho un vehículo que circulaba de Chinconcuac a Texcoco",
+  "sentido_carril_V2": "El asegurado refiere que circulaba sobre la carretera federal Chinconcuac-Texcoco y dio vuelta a la izquierda en dirección a Papalotla cuando la impacto en el costado derecho un vehículo que circulaba de Chinconcuac a Texcoco",
+  "maniobra_previa_V1": "El asegurado refiere que circulaba sobre la carretera federal Chinconcuac-Texcoco y dio vuelta a la izquierda en dirección a Papalotla cuando la impacto en el costado derecho un vehículo que circulaba de Chinconcuac a Texcoco",
+  "secuencia_eventos": "El asegurado refiere que circulaba sobre la carretera federal Chinconcuac-Texcoco y dio vuelta a la izquierda en dirección a Papalotla cuando la impacto en el costado derecho un vehículo que circulaba de Chinconcuac a Texcoco",
+  "evidencias_sitio": "Se puede observar restos de lo que al parecer es pintura negra a una altura de 42cm en la misma, se puede observar a la altura del poste central el desacoplamiento de ambos lienzos de puertas causado por el impacto con un cuerpo duro",
+  "declaracion_V1": "El asegurado refiere que circulaba sobre la carretera federal Chinconcuac-Texcoco y dio vuelta a la izquierda en dirección a Papalotla cuando la impacto en el costado derecho un vehículo que circulaba de Chinconcuac a Texcoco",
+  "posicion_final_V1": "Se puede observar el costado del vehículo tipo Clio, sin daños a simple vista, como muestra la imagen.",
+  "posicion_final_V2": "Se puede observar el costado del vehículo tipo Megane el cual no presenta daños a simple vista como lo muestra la siguiente imagen:"
+ },
+ "descartados": {
+  "iluminacion": "noche",
+  "maniobra_previa_V2": "ninguno",
+  "angulo_impacto": "de izquierda a derecha",
+  "punto_impacto_via": "costado derecho del vehículo V1"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "motivo": "evidencia no literal en sentido_carril_V2",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "estacionado"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "distraído con celular"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jaguar S Type 2004 blanco",
+  "V2": "Volvo S60 2001 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la maniobra previa del Jaguar antes del impacto?\",\n  \"respuesta\": \"EL JAGUAR S TYPE 2004 BLANCO ESTABA DISTRAÍDO CON CELULAR.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"distraído con celular\",\n      \"evidencia\": \"EL JAGUAR S TYPE 2004 BLANCO ESTABA DISTRAÍDO CON CELULAR\"\n    },\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"estacionado\",\n      \"evidencia\": \"EL VOLVO S60 2001 GRIS ESTABA ESTACIONADO\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'El Pailemex Tanque se encontraba circulando a una velocidad estimada d'",
+ "principal": {
+  "id": "velocidad_V2_kmh",
+  "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+  "valor": 90,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Kenworth T-600 2008 blanco",
+  "V2": "Pailemex Tanque -"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada del Pailemex Tanque antes del evento?\",\n  \"respuesta\": \"El Pailemex Tanque se encontraba circulando a una velocidad estimada de 90 km/h antes de la volcadura.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"una velocidad estimada de 90 km/h\"\n    }\n  ]\n}"
+}

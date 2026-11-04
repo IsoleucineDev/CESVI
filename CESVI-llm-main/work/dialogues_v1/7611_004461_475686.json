@@ -1,0 +1,123 @@
+{
+ "id": "7611_004461_475686",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Ford Ecosport 2009 arena"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Podrías resumirme la declaración del conductor del Ford Ecosport sobre lo que ocurrió?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cuál era la condición de la superficie de rodamiento?",
+   "respuesta": "La superficie era concreto hidráulico.",
+   "valor": "concreto hidráulico"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo era la iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "Era de día.",
+   "valor": "día"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿En qué sentido y carril circulaba el Ford Ecosport?",
+   "respuesta": "El Ford Ecosport circulaba descendiendo por la pendiente de calle 13.",
+   "valor": "descendiendo por pendiente de calle 13"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Ford Ecosport antes del accidente?",
+   "respuesta": "La velocidad del Ford Ecosport antes del accidente es desconocida.",
+   "valor": "desconocida"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Ford Ecosport antes del impacto?",
+   "respuesta": "El Ford Ecosport descendía.",
+   "valor": "descendiendo"
+  },
+  {
+   "tema": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "pregunta": "¿Qué tipo de objeto impactó el Ford Ecosport?",
+   "respuesta": "El objeto impactado era un poste de concreto.",
+   "valor": "poste de concreto"
+  },
+  {
+   "tema": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "pregunta": "¿Cuál fue la causa de la pérdida de control del Ford Ecosport?",
+   "respuesta": "La pendiente de la calle 13 provocó que el Ford Ecosport perdiera control debido a la inclinación de la vía.",
+   "valor": "pendiente de calle"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Qué sucedió primero y qué impactos secundarios ocurrieron?",
+   "respuesta": "El Ford Ecosport impactó primero la parte posterior derecha del poste y luego giró unos 135 grados para finalmente impactar frontalmente.",
+   "valor": "impacto posterior derecha, giro de 135º y impacto frontal"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "Creo que el impacto ocurrió en el vértice posterior derecho contra el poste.",
+   "valor": "vértice posterior derecho contra poste"
+  },
+  {
+   "tema": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "pregunta": "¿Cuál es la altura de las marcas del impacto en el poste?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Creo que hubo huellas de impacto en concreto y un intercambio de pintura.",
+   "valor": "huellas de impacto en concreto, intercambio de pintura"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Ford Ecosport?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Qué daños presentó el Ford Ecosport?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Posición final de V1: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Cuál fue la posición final del Ford Ecosport?",
+   "respuesta": "El Ford Ecosport quedó detenido contra el poste en la banqueta.",
+   "valor": "detenido contra poste en banqueta"
+  }
+ ]
+}

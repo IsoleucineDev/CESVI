@@ -1,0 +1,38 @@
+{
+ "id": "audi_21298088_529991",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Audi A-4 2001 negro"
+ },
+ "valores": {
+  "declaracion_V1": "VENIA sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol",
+  "superficie": "asfáltico en buenas condiciones",
+  "iluminacion": null,
+  "sentido_carril_V1": "de Sur a Norte",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "cambio de trayectoria",
+  "tipo_objeto": "árbol",
+  "causa_perdida_control": null,
+  "secuencia_eventos": "el vehículo “A” cambia su trayectoria y se proyecta contra un árbol",
+  "punto_impacto_via": "Km. 35+000 de la carretera libre Cuernavaca-Cuautla",
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "desprendimiento de corteza en el árbol y pequeñas esquirlas de pintura color negro incrustadas en la corteza del árbol",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "impactado contra un árbol",
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "VENIA sobre la carretera y una camioneta se dio vuelta en U y por no pegarle vire hacia la banqueta y pegue con un arbol",
+  "superficie": "construido con material asfáltico en buenas condiciones",
+  "sentido_carril_V1": "el vehículo “A” circula de Sur a Norte",
+  "maniobra_previa_V1": "el vehículo “A” por evitar impactarse contra el vehículo “B”, cambia su trayectoria",
+  "tipo_objeto": "se impacta contra un árbol",
+  "secuencia_eventos": "el vehículo “A” por evitar impactarse contra el vehículo “B”, cambia su trayectoria, pierde el contacto con la carpeta asfáltica y se proyecta contra un árbol",
+  "punto_impacto_via": "Km. 35+000 de la carretera libre Cuernavaca-Cuautla, tramo Cocoyc, en el Estado de Morelos",
+  "evidencias_sitio": "existe desprendimiento de corteza en el árbol contra el cual se impactó en vehículo en estudio, existen además pequeñas esquirlas de pintura color negro incrustadas en la corteza del árbol en cuestión",
+  "posicion_final_V1": "el vehículo “A” se impacta contra un árbol que se encuentra a una distancia de 2.40 metros de la carpeta asfáltica"
+ },
+ "descartados": {}
+}

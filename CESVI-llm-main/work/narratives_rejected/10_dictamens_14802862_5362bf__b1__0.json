@@ -1,0 +1,21 @@
+{
+ "motivo": "evidencia no literal en sentido_carril_V1",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Norte - Sur"
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 15,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "GM Chevy 2006 negro",
+  "V2": "Pontiac G5 2008 rojo Victoria"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Chevy?\",\n  \"respuesta\": \"El Chevy frenó por unos 15 metros antes del impacto, además iba circulando en dirección Norte-Sur.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"15\",\n      \"evidencia\": \"El Chevy frenó por unos 15 metros antes del impacto\"\n    },\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"Norte - Sur\",\n      \"evidencia\": \"ibas circulando en dirección Norte-Sur\"\n    }\n  ]\n}"
+}

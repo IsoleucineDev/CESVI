@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'La velocidad del Pontiac G5 rojo antes del evento era estimada en 90 k'",
+ "principal": {
+  "id": "velocidad_V2_kmh",
+  "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+  "valor": 90,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "GM Chevy 2006 negro",
+  "V2": "Pontiac G5 2008 rojo Victoria"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada del Pontiac G5 rojo antes del evento?\",\n  \"respuesta\": \"La velocidad del Pontiac G5 rojo antes del evento era estimada en 90 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"90 km/h\"\n    }\n  ]\n}"
+}

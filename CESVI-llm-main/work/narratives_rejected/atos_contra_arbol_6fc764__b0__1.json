@@ -1,0 +1,26 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "transitando por Darwin del lado derecho se me cierra otro vehículo el cual me hace perder el control del Atos y me subí a un camellón y me estrelle con un árbol"
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "al amanecer con poca luz",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 80,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Hyundai Atos 2009 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Hyundai Atos 2009 rojo sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"TRANSITANDO POR DARWIN DEL LADO DERECHO SE ME CIERRA OTRO VEHÍCULO EL CUAL ME HACE PERDER EL CONTROL DEL ATOS Y ME SUBÍ A UN CAMELLÓN Y ME ESTRELLÉ CON UN ÁRBOL. ADEMÁS, AL AMANECER CON POCA LUZ. Y LUEGO, VELOCIDAD ESTIMADA DE 80 KM/H ANTES DEL EVENTO.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"perdió el control del Atos y se subió a un camellón y se estrelló con un árbol\",\n      \"evidencia\": \"TRANSITANDO POR DARWIN DEL LADO DERECHO SE ME CIERRA OTRO VEHÍCULO EL CUAL ME HACE PERDER EL CONTROL DEL ATOS Y ME SUBÍ A UN CAMELLÓN Y ME ESTRELLÉ CON UN ÁRBOL\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"amanecer con poca luz\",\n      \"evidencia\": \"AL AMANECER CON POCA LUZ\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"80\",\n      \"evidencia\": \"VELOCIDAD ESTIMADA DE 80 KM/H ANTES DEL EVENTO\"\n    }\n  ]\n}"
+}

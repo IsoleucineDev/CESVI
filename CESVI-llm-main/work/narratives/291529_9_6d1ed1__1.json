@@ -1,0 +1,118 @@
+{
+ "id": "291529_9_6d1ed1",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Nissan Platina 2004 vino",
+  "V2": "Nissan Tsuru S/D arena"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "El accidente fue en la vía Lago (autopista Méx – Texcoco) a unos 100 m de una obra de construcción a la altura de la desviación a Querétaro una grúa paro x completo el tránsito en la autopista sin poner señalamiento alguno esto lo realizaron al bajar un bado de un puente x lo que no pude frenar a tiempo ya que venia a una velocidad constante (autopista) impactando un vehículo... jetta"
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Poniente a Oriente"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "frenado"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo tipo Platina (a) circula de Poniente a Oriente a “velocidad constante”, sin guardar la distancia de seguimiento. Al momento de frenar su vehículo se desplaza, de tal manera que genera un alcance e impacta en la parte posterior del vehículo tipo Tsuru (b), que se encontraba en la vialidad."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "autopista Peñon – Texcoco en el kilómetro 4"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo tipo Tsuru muestra una impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera. La fascia del vehículo tipo Tsuru muestra ranuras en forma horizontal a lo largo de la misma con un ancho de 3.5 centímetros [...]"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 2,
+ "asked": "sentido_carril_V1",
+ "pregunta": "¿Cuál era el sentido de circulación y carril por el que iba el Nissan Platina 2004 vino?",
+ "respuesta": "El Nissan Platina 2004 vino circulaba en el sentido Poniente a Oriente en la autopista Peñon – Texcoco en el kilómetro 4, además mostró una maniobra de frenado antes del impacto, y en el sitio del accidente se observó una impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera del Nissan Tsuru S/D arena.",
+ "gold": {
+  "punto_impacto_via": {
+   "valor": "autopista Peñon – Texcoco en el kilómetro 4",
+   "evidencia": "en la autopista Peñon – Texcoco en el kilómetro 4"
+  },
+  "evidencias_sitio": {
+   "valor": "impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera",
+   "evidencia": "una impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera del Nissan Tsuru S/D arena"
+  },
+  "maniobra_previa_V1": {
+   "valor": "frenado",
+   "evidencia": "mostró una maniobra de frenado antes del impacto"
+  },
+  "sentido_carril_V1": {
+   "valor": "Poniente a Oriente",
+   "evidencia": "circulaba en el sentido Poniente a Oriente"
+  }
+ }
+}

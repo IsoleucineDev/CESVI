@@ -1,0 +1,27 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "MITSUBISHI LANCER 2006 PLATA",
+  "V2": "NISSAN TSURU 2004 ROJO"
+ },
+ "valores": {
+  "superficie": "seca",
+  "iluminacion": "día",
+  "sentido_carril_V1": "Sur a Norte",
+  "sentido_carril_V2": "estacionado",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "circulación",
+  "maniobra_previa_V2": "estacionado",
+  "distancia_previa": null,
+  "senalizacion_preferencia": null,
+  "evidencias_sitio": "huellas de frenado, intercambio de pintura",
+  "huellas_frenado_m": null,
+  "airbags_V1": "ninguno",
+  "airbags_V2": "ninguno",
+  "posicion_final_V1": "mismo lugar",
+  "posicion_final_V2": "mismo lugar"
+ },
+ "id": "3_dictamen_3480_928be7",
+ "split": "train"
+}

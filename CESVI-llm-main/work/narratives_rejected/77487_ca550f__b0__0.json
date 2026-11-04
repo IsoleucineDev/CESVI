@@ -1,0 +1,20 @@
+{
+ "motivo": "oración con contenido no extraído: 'Además, las marcas del impacto en el objeto fijo miden 30 cm.'",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "CIRCULANDO PASE BACHE QUE NO VI POR AGUA DE LLUVIA."
+ },
+ "otros": [
+  {
+   "id": "altura_marca_objeto_cm",
+   "desc": "Altura (cm) de las marcas del impacto en el objeto fijo",
+   "valor": 30,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mercedes Benz C-280 2007 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Mercedes Benz C-280 2007 blanco sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"CIRCULANDO PASE BACHE QUE NO VI POR AGUA DE LLUVIA. Además, las marcas del impacto en el objeto fijo miden 30 cm.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"CIRCULANDO PASE BACHE QUE NO VI POR AGUA DE LLUVIA\",\n      \"evidencia\": \"CIRCULANDO PASE BACHE QUE NO VI POR AGUA DE LLUVIA\"\n    },\n    {\n      \"tema\": \"altura_marca_objeto_cm\",\n      \"valor\": \"30\",\n      \"evidencia\": \"30 cm\"\n    }\n  ]\n}"
+}

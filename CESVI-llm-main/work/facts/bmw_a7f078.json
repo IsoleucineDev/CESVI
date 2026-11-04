@@ -1,0 +1,34 @@
+{
+ "id": "bmw_a7f078",
+ "split": "test",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "BMW 120i 2006 negro"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": null,
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo presenta daños en la parte frontal que no tienen relación con el alcance",
+  "punto_impacto_via": null,
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "El vehículo se encuentra reparado de la parte posterior",
+  "danos_V1": null
+ },
+ "citas": {
+  "secuencia_eventos": "Los daños existentes en la parte frontal no tienen relación alguna con el impacto tipo alcance sufrido por esta unidad anteriormente",
+  "posicion_final_V1": "posterior, actualmente el vehículo marca BMW se encuentra reparado de la parte posterior"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "punto_impacto_via": "No se especifica",
+  "evidencias_sitio": "No se mencionan evidencias específicas en el sitio",
+  "airbags_V1": "No se mencionan"
+ }
+}

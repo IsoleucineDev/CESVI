@@ -1,0 +1,27 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El vehículo tipo Platina (a) circula de Poniente a Oriente a “velocidad constante”, sin guardar la distancia de seguimiento. Al momento de frenar su vehículo se desplaza, de tal manera que genera un alcance e impacta en la parte posterior del vehículo tipo Tsuru (b), que se encontraba en la vialidad."
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 25,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 60,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Platina 2004 vino",
+  "V2": "Nissan Tsuru S/D arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrió durante el incidente?\",\n  \"respuesta\": \"El vehículo tipo Platina (a) circulaba de Poniente a Oriente a velocidad constante, sin guardar la distancia de seguimiento. Luego, al momento de frenar, el vehículo se desplazó y generó un alcance impactando en la parte posterior del vehículo tipo Tsuru (b), que se encontraba en la vialidad. Además, la longitud de las huellas de frenado del vehículo tipo Platina fue de 25 metros. Y la velocidad estimada del vehículo tipo Platina antes del evento fue de 60 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El vehículo tipo Platina (a) circulaba de Poniente a Oriente a velocidad constante, sin guardar la distancia de seguimiento. Luego, al momento de frenar, el vehículo se desplazó y generó un alcance impactando en la parte posterior del vehículo tipo Tsuru (b), que se encontraba en la vialidad.\",\n      \"evidencia\": \"El vehículo tipo Platina (a) circulaba de Poniente a Oriente a velocidad constante, sin guardar la distancia de seguimiento. Luego, al momento de frenar, el vehículo se desplazó y generó un alcance impactando en la parte posterior del vehículo tipo Tsuru (b), que se encontraba en la vialidad.\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"25\",\n      \"evidencia\": \"la longitud de las huellas de frenado del vehículo tipo Platina fue de 25 metros\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"60\",\n      \"evidencia\": \"la velocidad estimada del vehículo tipo Platina antes del evento fue de 60 km/h\"\n    }\n  ]\n}"
+}

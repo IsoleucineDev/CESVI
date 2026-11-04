@@ -1,0 +1,47 @@
+{
+ "id": "291529_9_6d1ed1",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Nissan Platina 2004 vino",
+  "V2": "Nissan Tsuru S/D arena"
+ },
+ "valores": {
+  "declaracion_V1": "El accidente fue en la vía Lago (autopista Méx – Texcoco) a unos 100 m de una obra de construcción a la altura de la desviación a Querétaro una grúa paro x completo el tránsito en la autopista sin poner señalamiento alguno esto lo realizaron al bajar un bado de un puente x lo que no pude frenar a tiempo ya que venia a una velocidad constante (autopista) impactando un vehículo... jetta",
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Poniente a Oriente",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "frenado",
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo tipo Platina (a) circula de Poniente a Oriente a “velocidad constante”, sin guardar la distancia de seguimiento. Al momento de frenar su vehículo se desplaza, de tal manera que genera un alcance e impacta en la parte posterior del vehículo tipo Tsuru (b), que se encontraba en la vialidad.",
+  "punto_impacto_via": "autopista Peñon – Texcoco en el kilómetro 4",
+  "evidencias_sitio": "El vehículo tipo Tsuru muestra una impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera. La fascia del vehículo tipo Tsuru muestra ranuras en forma horizontal a lo largo de la misma con un ancho de 3.5 centímetros [...]",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "Detenido en la vialidad después del impacto",
+  "posicion_final_V2": "Detenido en la vialidad después del impacto",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "El accidente fue en la vía Lago (autopista Méx – Texcoco) a unos 100 m de una obra de construcción a la altura de la desviación a Querétaro una grúa paro x completo el tránsito en la autopista sin poner señalamiento alguno esto lo realizaron al bajar un bado de un puente x lo que no pude frenar a tiempo ya que venia a una velocidad constante (autopista) impactando un vehículo... jetta",
+  "sentido_carril_V1": "El vehículo tipo Platina (a) circula de Poniente a Oriente a “velocidad constante”, sin guardar la distancia de seguimiento.",
+  "maniobra_previa_V1": "El conductor del vehículo tipo Platina (a) circula en dirección a Texcoco y aplica los frenos.",
+  "secuencia_eventos": "El vehículo tipo Platina (a) circula de Poniente a Oriente a “velocidad constante”, sin guardar la distancia de seguimiento. Al momento de frenar su vehículo se desplaza, de tal manera que genera un alcance e impacta en la parte posterior del vehículo tipo Tsuru (b), que se encontraba en la vialidad.",
+  "punto_impacto_via": "El lugar de los hechos se ubica en el kilomentro 4 de la Autopista Peñon – Texcoco en dirección de la Ciudad de México a Texcoco.",
+  "evidencias_sitio": "El vehículo tipo Tsuru muestra una impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera. La fascia del vehículo tipo Tsuru muestra ranuras en forma horizontal a lo largo de la misma con un ancho de 3.5 centímetros. La fascia frontal del vehículo tipo Platina, muestra daños de tipo hundimiento de leve intensidad en forma horizontal con las características de las ranuras de la fascia posterior del vehículo tipo Tsuru.",
+  "posicion_final_V1": "Después del impacto se producen los daños de tipo hundimiento en la parte posterior del vehículo tipo Tsuru (b), mientras que los daños del vehículo tipo Platina se localizan en la parte interna de la fascia y en su soporte: así como de los mayores indicios.",
+  "posicion_final_V2": "Después del impacto se producen los daños de tipo hundimiento en la parte posterior del vehículo tipo Tsuru (b), mientras que los daños del vehículo tipo Platina se localizan en la parte interna de la fascia y en su soporte: así como de los mayores indicios."
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día",
+  "sentido_carril_V2": "Poniente a Oriente"
+ }
+}

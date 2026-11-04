@@ -1,0 +1,22 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Navistar Autobús 2009 amarillo",
+  "V2": "Toyota Hilux 2009 gris plata"
+ },
+ "valores": {
+  "sentido_carril_V1": "Norte a Sur, carril derecho",
+  "sentido_carril_V2": "Norte a Sur, carril izquierdo",
+  "declaracion_V1": "Vehículo A (Navistar) circulaba N a S en el carril derecho y realizó un corte de circulación al vehículo B (Toyota Hilux) para tomar el retorno",
+  "declaracion_V2": "No especificado",
+  "senalizacion_preferencia": "Sin preferencia de paso declarada",
+  "punto_impacto_via": "Impacto en el faldón izquierdo del autobús y parte frontal de la Hilux",
+  "angulo_impacto": "Lateral-angulada",
+  "evidencias_sitio": "Falta de evidencias en el sitio",
+  "airbags_V1": "No especificado",
+  "airbags_V2": "No especificado",
+  "secuencia_eventos": "Colisión lateral-angulada entre el faldón izquierdo del autobús y la parte frontal de la Hilux"
+ },
+ "id": "224121_navistar_hilux_3f7230",
+ "split": "train"
+}

@@ -1,0 +1,27 @@
+{
+ "motivo": "evidencia no literal en evidencias_sitio",
+ "principal": {
+  "id": "evidencias_sitio",
+  "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+  "valor": "El vehículo tipo Tsuru muestra una impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera. La fascia del vehículo tipo Tsuru muestra ranuras en forma horizontal a lo largo de la misma con un ancho de 3.5 centímetros [...]"
+ },
+ "otros": [
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 25,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 70,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Nissan Platina 2004 vino",
+  "V2": "Nissan Tsuru S/D arena"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son las evidencias en el sitio?\",\n  \"respuesta\": \"El vehículo tipo Tsuru muestra una impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera. Además, la fascia del vehículo tipo Tsuru muestra ranuras en forma horizontal a lo largo de la misma con un ancho de 3.5 centímetros.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera. La fascia del vehículo tipo Tsuru muestra ranuras en forma horizontal a lo largo de la misma con un ancho de 3.5 centímetros\",\n      \"evidencia\": \"El vehículo tipo Tsuru muestra una impregnación de pintura color vino en el lado izquierdo de la placa de circulación trasera. La fascia del vehículo tipo Tsuru muestra ranuras en forma horizontal a lo largo de la misma con un ancho de 3.5 centímetros\"\n    },\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"25\",\n      \"evidencia\": \"luego\"\n    },\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"70\",\n      \"evidencia\": \"luego\"\n    }\n  ]\n}"
+}

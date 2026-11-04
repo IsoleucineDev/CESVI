@@ -1,0 +1,27 @@
+{
+ "motivo": "valor no concuerda con su evidencia en angulo_impacto",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El vehículo V1 impacta sobre el costado posterior derecho del vehículo V2."
+ },
+ "otros": [
+  {
+   "id": "angulo_impacto",
+   "desc": "Ángulo aproximado entre los vehículos al momento del impacto",
+   "valor": "aproximadamente 90 grados",
+   "sintetico": true
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con alumbrado público",
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "VW Jetta 2002 azul",
+  "V2": "GM Camaro 1995 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la secuencia de eventos que ocurrieron durante el accidente?\",\n  \"respuesta\": \"El VW Jetta 2002 azul impactó sobre el costado posterior derecho del GM Camaro 1995 rojo, además de noche con alumbrado público.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"impacto costado posterior derecho\",\n      \"evidencia\": \"El VW Jetta 2002 azul impactó sobre el costado posterior derecho del GM Camaro 1995 rojo\"\n    },\n    {\n      \"tema\": \"angulo_impacto\",\n      \"valor\": \"90\",\n      \"evidencia\": \"impacto sobre el costado posterior derecho\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de noche con alumbrado público\",\n      \"evidencia\": \"de noche con alumbrado público\"\n    }\n  ]\n}"
+}

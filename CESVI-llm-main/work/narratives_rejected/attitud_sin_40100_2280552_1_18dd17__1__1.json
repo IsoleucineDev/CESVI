@@ -1,0 +1,24 @@
+{
+ "motivo": "oración con contenido no extraído: 'En el sitio del accidente, se observaron huellas de pintura en las pue'",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El vehículo tipo Attitud sufrió un impacto lateral izquierdo"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "lateral izquierdo"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "huellas de pintura en las puertas del lado izquierdo"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Dodge Attitud 2006 azul"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrió en la colisión?\",\n  \"respuesta\": \"En el sitio del accidente, se observaron huellas de pintura en las puertas del lado izquierdo del Dodge Attitud. Además, el Dodge Attitud sufrió un impacto lateral izquierdo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"huellas de pintura\",\n      \"evidencia\": \"huellas de pintura en las puertas del lado izquierdo\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"impacto lateral izquierdo\",\n      \"evidencia\": \"sufrió un impacto lateral izquierdo\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"lateral izquierdo\",\n      \"evidencia\": \"lateral izquierdo\"\n    }\n  ]\n}"
+}

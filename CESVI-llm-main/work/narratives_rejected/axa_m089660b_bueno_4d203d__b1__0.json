@@ -1,0 +1,16 @@
+{
+ "motivo": "oración con contenido no extraído: 'La velocidad del Ford verde antes del evento era de unos 70 km/h.'",
+ "principal": {
+  "id": "velocidad_V3_kmh",
+  "desc": "Velocidad estimada de V3 antes del evento (km/h)",
+  "valor": 70,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Volvo Tractocamión 2008 azul con franjas de colores",
+  "V2": "Hyundai Semirremolque S/D blanco",
+  "V3": "Ford Expedition 2003 verde"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era la velocidad estimada de V3 antes del evento?\",\n  \"respuesta\": \"La velocidad del Ford verde antes del evento era de unos 70 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V3_kmh\",\n      \"valor\": \"70\",\n      \"evidencia\": \"unos 70 km/h\"\n    }\n  ]\n}"
+}

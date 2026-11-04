@@ -1,0 +1,27 @@
+{
+ "motivo": "evidencia no literal en velocidad_V1_kmh",
+ "principal": {
+  "id": "posicion_final_V2",
+  "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+  "valor": "El vehículo tipo Chasis cabina, después de terminada la maniobra de reversa"
+ },
+ "otros": [
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 70,
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": 70,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Kenworth T-800 2007 blanco",
+  "V2": "Nissan Estaquitas 2008 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Dónde quedó detenido el Nissan después de terminada la maniobra de reversa?\",\n  \"respuesta\": \"EL vehículo tipo Chasis cabina, después de terminada la maniobra de reversa, QUEDÓ DETENIDO EN LA ORILLA DE LA CALLE, A LA IZQUIERDA DE LA VIA, EN LA DIRECCIÓN OPUESTA A LA CUAL SE ENCONTRABA ANTES DE LA MANIOBRA.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"posicion_final_V2\",\n      \"valor\": \"orilla de la calle, izquierda de la via, dirección opuesta\",\n      \"evidencia\": \"QUEDÓ DETENIDO EN LA ORILLA DE LA CALLE, A LA IZQUIERDA DE LA VIA, EN LA DIRECCIÓN OPUESTA A LA CUAL SE ENCONTRABA ANTES DE LA MANIOBRA\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"70\",\n      \"evidencia\": \"NO MENCIONADO\"\n    },\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"70\",\n      \"evidencia\": \"NO MENCIONADO\"\n    }\n  ]\n}"
+}

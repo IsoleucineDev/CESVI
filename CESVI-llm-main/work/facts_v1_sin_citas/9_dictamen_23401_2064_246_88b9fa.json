@@ -1,0 +1,18 @@
+{
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Kenworth Volteo T 300 2008 blanco XK 22506",
+  "V2": "Ford Eco Sport 2005 rojo YET 8014"
+ },
+ "valores": {
+  "sentido_carril_V1": "de Oriente a Poniente",
+  "sentido_carril_V2": "de Norte a Sur",
+  "senalizacion_preferencia": "el vehículo V2 debió ceder el paso al vehículo V1",
+  "secuencia_eventos": "el vehículo V2 impacta el lado izquierdo delantero del vehículo V1",
+  "punto_impacto_via": "línea de división de carriles",
+  "angulo_impacto": "oblicuo",
+  "evidencias_sitio": "huella tipo hendidura con restos de asfalto"
+ },
+ "id": "9_dictamen_23401_2064_246_88b9fa",
+ "split": "train"
+}

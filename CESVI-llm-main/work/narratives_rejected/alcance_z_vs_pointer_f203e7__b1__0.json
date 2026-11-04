@@ -1,0 +1,27 @@
+{
+ "motivo": "valor no concuerda con su evidencia en evidencias_sitio",
+ "principal": {
+  "id": "danos_V2",
+  "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+  "valor": "ruptura de la fascia posterior",
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura azul en el cofre de V2, pintura negra en la tapa cajuela de V1"
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": 8,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volkswagen Pointer 2003 azul",
+  "V2": "Nissan 350Z 2003 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuáles son los daños de V2: zonas, altura (cm) y dirección de la fuerza?\",\n  \"respuesta\": \"El Nissan 350Z 2003 negro presentó una ruptura de la fascia posterior. Además, se encontró pintura azul en el cofre del Nissan 350Z, indicando un intercambio de pintura con el Volkswagen Pointer 2003 azul. Luego, se observaron huellas de frenado de 8 metros en el sitio del accidente.\",\n  \"extracciones\": [\n    {\"tema\": \"danos_V2\", \"valor\": \"ruptura de la fascia posterior\", \"evidencia\": \"El Nissan 350Z 2003 negro presentó una ruptura de la fascia posterior.\"},\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"pintura azul en el cofre de V2, pintura negra en la tapa cajuela de V1\", \"evidencia\": \"se encontró pintura azul en el cofre del Nissan 350Z, indicando un intercambio de pintura con el Volkswagen Pointer 2003 azul\"},\n    {\"tema\": \"huellas_frenado_m\", \"valor\": 8, \"evidencia\": \"se observaron huellas de frenado de 8 metros en el sitio del accidente\"}\n  ]\n}"
+}

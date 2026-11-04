@@ -1,0 +1,26 @@
+{
+ "motivo": "evidencia no literal en sentido_carril_V2",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "estacionado"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Arroyo de Minas"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "material tipo concreto e incrustaciones de piedras (empedrado)"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Lobo 2006 vino",
+  "V2": "Volkswagen Pointer 2004 gris",
+  "V3": "Nissan Tsuru 2010 beige"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Pointer?\",\n  \"respuesta\": \"El Pointer 2004 gris estaba estacionado en la calle Arroyo de Minas, además, la superficie de rodamiento era de material tipo concreto e incrustaciones de piedras (empedrado).\",\n  \"extracciones\": [\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"calle Arroyo de Minas\",\n      \"evidencia\": \"El Pointer 2004 gris estaba estacionado en la calle Arroyo de Minas\"\n    },\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"estacionado\",\n      \"evidencia\": \"estacionado\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"material tipo concreto e incrustaciones de piedras (empedrado)\",\n      \"evidencia\": \"la superficie de rodamiento era de material tipo concreto e incrustaciones de piedras (empedrado)\"\n    }\n  ]\n}"
+}

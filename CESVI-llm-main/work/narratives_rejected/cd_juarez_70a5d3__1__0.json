@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en sentido_carril_V1",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Pte a Ote"
+ },
+ "otros": [
+  {
+   "id": "senalizacion_preferencia",
+   "desc": "Semáforo, señal de alto/ceda el paso o quién tenía preferencia de paso",
+   "valor": "ninguno"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "V2 invadiendo carril de V1 y chocando frontalmente"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "calle Fuente de Dalila"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Plymouth Freeze 1996 blanco",
+  "V2": "Ford Escort 1998 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y el carril por el que iba el Plymouth?\",\n  \"respuesta\": \"No había ninguna señal de preferencia en la zona del accidente además el Ford invadió el carril del Plymouth y chocaron frontalmente luego el impacto ocurrió en la calle Fuente de Dalila.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"senalizacion_preferencia\",\n      \"valor\": \"ninguno\",\n      \"evidencia\": \"No había ninguna señal de preferencia en la zona del accidente\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"V2 invadiendo carril de V1 y chocando frontalmente\",\n      \"evidencia\": \"el Ford invadió el carril del Plymouth y chocaron frontalmente\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"calle Fuente de Dalila\",\n      \"evidencia\": \"el impacto ocurrió en la calle Fuente de Dalila\"\n    },\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"Pte a Ote\",\n      \"evidencia\": \"el sentido de circulación y el carril por el que iba el Plymouth\"\n    }\n  ]\n}"
+}

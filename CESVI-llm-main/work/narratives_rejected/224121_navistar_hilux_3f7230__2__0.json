@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en sentido_carril_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "El conductor del vehículo marca Navistar, tipo Autobús, modelo 2009, color amarillo, placas de circulación 200347-B, viene circulando en sentido N a S en el carril del extremo derecho de la Avenida Maestros Campechanos, justo al cruce con la calle Servidor Agrario, da vuelta a la izquierda en el retorno, momentos antes el conductor del vehículo marca Toyota, tipo Hilux, modelo 2009, color gris plata, con placas de circulación CN-41970, viene circulando por la misma avenida pero en el carril del extremo izquierdo, el cual se impacta contra la parte posterior del faldón izquierdo del vehículo tipo autobús."
+ },
+ "otros": [
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Norte a Sur en el carril del extremo derecho"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "pavimento es estado aceptable para la circulación"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Navistar Autobús 2009 amarillo",
+  "V2": "Toyota Hilux 2009 gris plata"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Navistar Autobús sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El conductor del Navistar Autobús declaró que venía circulando en sentido N a S en el carril del extremo derecho de la Avenida Maestros Campechanos, justo al cruce con la calle Servidor Agrario, da vuelta a la izquierda en el retorno, momentos antes el conductor del vehículo marca Toyota Hilux viene circulando por la misma avenida pero en el carril del extremo izquierdo, el cual se impacta contra la parte posterior del faldón izquierdo del vehículo tipo autobús. Además, la superficie de rodamiento es pavimento en estado aceptable para la circulación y el Navistar Autobús venía en el carril del extremo derecho.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"El conductor del Navistar Autobús declaró que venía circulando en sentido N a S en el carril del extremo derecho de la Avenida Maestros Campechanos, justo al cruce con la calle Servidor Agrario, da vuelta a la izquierda en el retorno, momentos antes el conductor del vehículo marca Toyota Hilux viene circulando por la misma avenida pero en el carril del extremo izquierdo, el cual se impacta contra la parte posterior del faldón izquierdo del vehículo tipo autobús.\",\n      \"evidencia\": \"El conductor del Navistar Autobús declaró que venía circulando en sentido N a S en el carril del extremo derecho de la Avenida Maestros Campechanos, justo al cruce con la calle Servidor Agrario, da vuelta a la izquierda en el retorno, momentos antes el conductor del vehículo marca Toyota Hilux viene circulando por la misma avenida pero en el carril del extremo izquierdo, el cual se impacta contra la parte posterior del faldón izquierdo del vehículo tipo autobús.\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"pavimento en estado aceptable para la circulación\",\n      \"evidencia\": \"la superficie de rodamiento es pavimento en estado aceptable para la circulación\"\n    },\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"Norte a Sur en el carril del extremo derecho\",\n      \"evidencia\": \"el Navistar Autobús venía en el carril del extremo derecho\"\n    }\n  ]\n}"
+}

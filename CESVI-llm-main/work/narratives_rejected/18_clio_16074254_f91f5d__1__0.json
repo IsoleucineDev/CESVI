@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en evidencias_sitio",
+ "principal": {
+  "id": "maniobra_previa_V1",
+  "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "giro a la izquierda"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V2 impacta en el costado derecho del vehículo V1"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "restos de pintura negra en el costado derecho del vehículo V1 y pintura blanca en el costado izquierdo del vehículo V2"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfaltado"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Renault Clio 2002 blanco",
+  "V2": "Renault Megane 2005 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V1 antes del impacto?\",\n  \"respuesta\": \"El Renault Clio realizó un giro a la izquierda antes del impacto, además el vehículo Megane negro impactó en el costado derecho del Clio blanco luego de que este girara.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"giro a la izquierda\",\n      \"evidencia\": \"El Renault Clio realizó un giro a la izquierda antes del impacto\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El vehículo V2 impacta en el costado derecho del vehículo V1\",\n      \"evidencia\": \"el vehículo Megane negro impactó en el costado derecho del Clio blanco\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"restos de pintura negra en el costado derecho del vehículo V1 y pintura blanca en el costado izquierdo del vehículo V2\",\n      \"evidencia\": \"restos de pintura negra en el costado derecho del Clio blanco y pintura blanca en el costado izquierdo del Megane negro\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfaltado\",\n      \"evidencia\": \"asfaltado\"\n    }\n  ]\n}"
+}

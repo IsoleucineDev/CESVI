@@ -1,0 +1,19 @@
+{
+ "motivo": "valor no concuerda con su evidencia en airbags_V1",
+ "principal": {
+  "id": "superficie",
+  "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+  "valor": "pavimento mojado"
+ },
+ "otros": [
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "frontal y lateral del asiento del conductor"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Mustang 2011 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la condición de la superficie de rodamiento en el momento del incidente?\",\n  \"respuesta\": \"La superficie de rodamiento era pavimento mojado, lo que afectó el desempeño del Ford Mustang 2011 blanco. Además, las condiciones de humedad en el pavimento también influyeron en la activación de los airbags del vehículo.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"pavimento mojado\",\n      \"evidencia\": \"La superficie de rodamiento era pavimento mojado\"\n    },\n    {\n      \"tema\": \"airbags_V1\",\n      \"valor\": \"frontal y lateral del asiento del conductor\",\n      \"evidencia\": \"las condiciones de humedad en el pavimento también influyeron en la activación de los airbags del vehículo\"\n    }\n  ]\n}"
+}

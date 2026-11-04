@@ -1,0 +1,50 @@
+{
+ "id": "chevrolet_vs_chrysler_revisado_copia_837b06",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Chevrolet Chevy 2006 blanco",
+  "V2": "Chrysler 300 M 2000 negro"
+ },
+ "valores": {
+  "declaracion_V1": "El vehículo “A” circulaba por la calle Sahuayo en dirección de Norponiente a suroriente, cuando el vehículo “B” lo impacta en su parte delantera derecha.",
+  "declaracion_V2": null,
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": "suroriente",
+  "sentido_carril_V2": "norponiente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "circulación",
+  "maniobra_previa_V2": "impacto",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "Vehículo B impacta en parte delantera derecha de Vehículo A",
+  "punto_impacto_via": "avenida Plomeros y calle Sahuayo",
+  "angulo_impacto": "perpendicular",
+  "evidencias_sitio": "huellas de pintura intercambiada",
+  "huellas_frenado_m": null,
+  "airbags_V1": "activados",
+  "airbags_V2": "activados",
+  "posicion_final_V1": "desplazado hacia la derecha",
+  "posicion_final_V2": "desplazado hacia la izquierda",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Para fines de estudio se genera la siguiente dinámica de colisión con base a la declaración del conductor del vehículo marca Chevrolet",
+  "superficie": "La Avenida Plomeros es una vía vehicular de material tipo asfalto",
+  "sentido_carril_V1": "El vehículo “A” circulaba por la calle Sahuayo en dirección de Norponiente a suroriente",
+  "sentido_carril_V2": "el vehículo “B” lo impacta en su parte delantera derecha",
+  "maniobra_previa_V1": "El vehículo “A” circulaba por la calle Sahuayo en dirección de Norponiente a suroriente",
+  "maniobra_previa_V2": "el vehículo “B” lo impacta en su parte delantera derecha",
+  "secuencia_eventos": "el vehículo “B” lo impacta en su parte delantera derecha",
+  "punto_impacto_via": "El lugar de los hechos se ubica en la en avenida Plomeros y calle Sahuayo",
+  "angulo_impacto": "las trayectorias de los vehículos suelen ser perpendiculares entre si",
+  "evidencias_sitio": "Presenta también la parrilla desacoplada e incompleta, la unidad de luz de lado derecha quebrada y fuera de su posición original, cofre con desacoplamiento por impacto en lado derecho",
+  "airbags_V1": "Dentro del habitáculo del vehículo tipo 300M presentan bolsas de aire delanteras activadas",
+  "airbags_V2": "Dentro del habitáculo del vehículo tipo 300M presentan bolsas de aire delanteras activadas",
+  "posicion_final_V1": "Imagen 4.- En esta imagen se puede observar la posición final del vehículo A y del vehículo B.",
+  "posicion_final_V2": "Imagen 4.- En esta imagen se puede observar la posición final del vehículo A y del vehículo B."
+ },
+ "descartados": {}
+}

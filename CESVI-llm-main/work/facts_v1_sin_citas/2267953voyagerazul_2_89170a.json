@@ -1,0 +1,24 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "CHRYSLER VOYAGER LX 2005 AZUL 835-SEJ",
+  "V2": "NISSAN ALTIMA 2000 ARENA 893-MJX"
+ },
+ "valores": {
+  "declaracion_V1": "AL QUERER INCORPRARME A PERIFERICO Frena el maxima Freno yo se me barre el pedal del Freno y lo Impacto",
+  "superficie": "grietas y desprendimiento de material asfáltico",
+  "iluminacion": "no especificado",
+  "sentido_carril_V1": "carril de alta en Avenida 1º de Mayo en dirección de Poniente a Oriente",
+  "sentido_carril_V2": "mismo carril enfrente del vehículo tipo Voyager(A)",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "vehículo V2 circulaba enfrente de V1 en el mismo carril, V1 intenta incorporarse a Periférico y lo impacta",
+  "punto_impacto_via": "carril de alta en Avenida 1º de Mayo",
+  "evidencias_sitio": "huellas de frenado no especificadas",
+  "airbags_V1": "activación de las bolsas de aire del conductor, acompañante y las rodillas del conductor",
+  "airbags_V2": null
+ },
+ "id": "2267953voyagerazul_2_89170a",
+ "split": "train"
+}

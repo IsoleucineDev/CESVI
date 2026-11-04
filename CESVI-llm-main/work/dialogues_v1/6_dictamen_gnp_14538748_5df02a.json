@@ -1,0 +1,131 @@
+{
+ "id": "6_dictamen_gnp_14538748_5df02a",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Volvo S-40 2002 ARENA LTY-25-15",
+  "V2": "Volkswagen Passat 2000 GRIS 811-SDU"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué nos dice el conductor del Volvo S-40 sobre cómo ocurrió el accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "Y el conductor del Volkswagen Passat, ¿nos puede dar un resumen de lo que ocurrió según él?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cómo estaban las condiciones de la superficie de rodamiento?",
+   "respuesta": "La superficie era asfáltica en buen estado.",
+   "valor": "asfáltica en buen estado"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Qué condiciones de iluminación había en el momento del accidente?",
+   "respuesta": "La iluminación era nocturna con el alumbrado de los semáforos.",
+   "valor": "noche con semáforos"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación y el carril por el que iba el Volvo S-40?",
+   "respuesta": "El Volvo S-40 circulaba hacia el Oeste, aproximadamente en el carril derecho.",
+   "valor": "circulación hacia el Oeste"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "Y el Volkswagen Passat, ¿en qué sentido y carril circulaba?",
+   "respuesta": "El Passat circulaba hacia el Oeste.",
+   "valor": "circulación hacia el Oeste"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Podrías estimar la velocidad del Volvo S-40 antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "Y la velocidad del Volkswagen Passat antes del accidente?",
+   "respuesta": "saltar, no tengo ese dato",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Volvo S-40 antes del impacto?",
+   "respuesta": "Creo que el Volvo S-40 estaba circulando sin realizar ninguna maniobra especial.",
+   "valor": "circulando"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "Y el Volkswagen Passat, ¿qué maniobra realizaba?",
+   "respuesta": "El Passat estaba frenando.",
+   "valor": "frenado"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuánta distancia o tiempo había entre los vehículos antes del evento?",
+   "respuesta": "No se especificó claramente la distancia o el tiempo entre los vehículos antes del evento.",
+   "valor": "no especificada"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Podrías detallarnos la secuencia de los eventos que ocurrieron?",
+   "respuesta": "El Passat frenó para evitar el impacto, pero el Volvo S-40 no logró evitarlo y lo impactó.",
+   "valor": "V2 frenó, V1 no alcanzó a frenar y lo impactó"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el impacto en la vía?",
+   "respuesta": "Creo que el impacto ocurrió cerca del arroyo Norte, más o menos cerca del crucero con la calle Prolongación González.",
+   "valor": "arroyo Norte, cerca del crucero con la calle Prolongación González"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Encontramos huellas de frenado del Passat, pero no se evidenció un intercambio de pintura entre los vehículos.",
+   "valor": "huellas de frenado, intercambio de pintura no evidente"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál era la longitud de las huellas de frenado del Volkswagen Passat?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Volvo S-40?",
+   "respuesta": "Creo que se activó el airbag del conductor, pero no el del acompañante.",
+   "valor": "activado conductor, no activado acompañante"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "Y en el Volkswagen Passat, ¿se activaron las bolsas de aire?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

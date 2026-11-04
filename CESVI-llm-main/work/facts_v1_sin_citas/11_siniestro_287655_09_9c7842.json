@@ -1,0 +1,21 @@
+{
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "LAND ROVER LR2 HSE PREMIUM 2008 NEGRO UPG-44-88"
+ },
+ "valores": {
+  "declaracion_V1": "Circulava hacia el cerrillo, de pronto se atraviesa un perro disminuyo mi velocidad es cuando un camión de carga me impacto en la parte trasera de mi camioneta perdiendo el control y callendo a un caño",
+  "superficie": "seca",
+  "iluminacion": "noche",
+  "sentido_carril_V1": "Boulevard Aeropuerto a El Cerrillo",
+  "velocidad_V1_kmh": "25",
+  "maniobra_previa_V1": "frenado",
+  "distancia_previa": "no especificada",
+  "secuencia_eventos": "alcance en la parte trasera del Land Rover seguido de salida de la vialidad y caida en una zanja",
+  "punto_impacto_via": "carril derecho Boulevard Aeropuerto a El Cerrillo",
+  "evidencias_sitio": "huellas de frenado, restos de lodo y esquirlas de vidrio en el habitáculo",
+  "airbags_V1": "bolsas de aire frontales y laterales activadas"
+ },
+ "id": "11_siniestro_287655_09_9c7842",
+ "split": "train"
+}

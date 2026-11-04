@@ -1,0 +1,130 @@
+{
+ "id": "3009_16342_3_e73da4",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Dodge Neon 2003 negro",
+  "V2": "Desconocido"
+ },
+ "plan": [
+  {
+   "id": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "El conductor del vehículo Dodge Neon viene circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en sentido de circulación de Sur a Norte aproximadamente a las 6:30 de la mañana, cuando un vehículo desconocido golpea por el costado izquierdo lo que provoca que pierda el control de su vehículo y se proyecte contra la “división entre carriles centrales y lateral” (camellón), supuestamente provocando los daños que presenta."
+  },
+  {
+   "id": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "Sur a Norte"
+  },
+  {
+   "id": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "circulación"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V2 impacta por el costado izquierdo al vehículo V1, lo que provoca que este pierda el control y se proyecte contra el camellón."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "carril lateral de la avenida Manuel Ávila Camacho"
+  },
+  {
+   "id": "posicion_final_V1",
+   "desc": "Dónde quedó detenido V1 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "Sobre el camellón que divide los carriles centrales de los laterales."
+  },
+  {
+   "id": "posicion_final_V2",
+   "desc": "Dónde quedó detenido V2 tras el evento (lugar, carril/orilla/objeto, orientación y barrido). NO describas el impacto",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "Daños tipo hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central."
+  },
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V1 presenta intercambio de pintura color amarillo en la parte frontal y costado izquierdo."
+  },
+  {
+   "id": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "valor": "__saltado__"
+  },
+  {
+   "id": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "valor": "__saltado__"
+  }
+ ],
+ "g": 7,
+ "asked": "secuencia_eventos",
+ "pregunta": "¿Cuál es la secuencia de eventos que ocurrieron en el accidente?",
+ "respuesta": "El vehículo V2 impacta por el costado izquierdo al vehículo V1, lo que provoca que este pierda el control y se proyecte contra el camellón. Además, el vehículo V1 presenta intercambio de pintura color amarillo en la parte frontal y costado izquierdo.",
+ "gold": {
+  "secuencia_eventos": {
+   "valor": "V2 impacta costado izquierdo V1, pierde control y se proyecta contra camellón",
+   "evidencia": "El vehículo V2 impacta por el costado izquierdo al vehículo V1, lo que provoca que este pierda el control y se proyecte contra el camellón."
+  },
+  "evidencias_sitio": {
+   "valor": "intercambio de pintura color amarillo en la parte frontal y costado izquierdo",
+   "evidencia": "el vehículo V1 presenta intercambio de pintura color amarillo en la parte frontal y costado izquierdo"
+  }
+ }
+}

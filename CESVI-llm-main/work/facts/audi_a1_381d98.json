@@ -1,0 +1,38 @@
+{
+ "id": "audi_a1_381d98",
+ "split": "train",
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Audi A1 2011 azul"
+ },
+ "valores": {
+  "declaracion_V1": "venia sobre periferico al querer salir para circuito azteca el coche se me patino y me subi a la banqueta",
+  "superficie": "asfalto de color negro",
+  "iluminacion": null,
+  "sentido_carril_V1": "circulación hacia el circuito azteca",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "girando hacia la derecha",
+  "causa_perdida_control": "patinamiento del coche",
+  "vueltas_volcadura": null,
+  "secuencia_eventos": "El vehículo se impacta contra la banqueta de la isleta de la avenida Estadio Azteca",
+  "punto_impacto_via": "en la isleta de la avenida Estadio Azteca",
+  "evidencias_sitio": "restos plásticos de la rejilla del faro de luz de lado izquierdo de color negro y partes plásticas de color azul",
+  "huellas_frenado_m": null,
+  "airbags_V1": "sistema de bolsas de aire frontales se encuentra activado",
+  "posicion_final_V1": "detenido en la isleta de la avenida Estadio Azteca",
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "venia sobre periferico al querer salir para circuito azteca el coche se me patino y me subi a la banqueta",
+  "superficie": "la avenida Estadio Azteca consta de un arroyo vehicular con dos carriles de circulación construidos de asfalto de color negro",
+  "sentido_carril_V1": "El conductor del vehículo circula sobre periférico para incorporarse a la avenida Estadio Azteca girando hacia la derecha",
+  "maniobra_previa_V1": "El conductor del vehículo circula sobre periférico para incorporarse a la avenida Estadio Azteca girando hacia la derecha",
+  "causa_perdida_control": "el coche se me patino y me subi a la banqueta",
+  "secuencia_eventos": "El vehículo tipo Audi A1 se impacta contra la banqueta de la isleta de la avenida Estadio Azteca",
+  "punto_impacto_via": "Se muestra como el vehículo tipo Audi A1 se impacta contra la banqueta de la isleta de la avenida Estadio Azteca",
+  "evidencias_sitio": "se encontraron restos plásticos de la rejilla del faro de luz de lado izquierdo de color negro y su vez partes plásticas de color azul las cuales asemejan a la fascia del vehículo tipo Audi A1",
+  "airbags_V1": "el sistema de bolsas de aire frontales se encuentra activado",
+  "posicion_final_V1": "Se muestra como el vehículo tipo Audi A1 queda detenido en la isleta de la avenida Estadio Azteca"
+ },
+ "descartados": {}
+}

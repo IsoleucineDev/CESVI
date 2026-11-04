@@ -1,0 +1,46 @@
+{
+ "id": "3009_16342_3_e73da4",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Dodge Neon 2003 negro",
+  "V2": "Desconocido"
+ },
+ "valores": {
+  "declaracion_V1": "El conductor del vehículo Dodge Neon viene circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en sentido de circulación de Sur a Norte aproximadamente a las 6:30 de la mañana, cuando un vehículo desconocido golpea por el costado izquierdo lo que provoca que pierda el control de su vehículo y se proyecte contra la “división entre carriles centrales y lateral” (camellón), supuestamente provocando los daños que presenta.",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Sur a Norte",
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo V2 impacta por el costado izquierdo al vehículo V1, lo que provoca que este pierda el control y se proyecte contra el camellón.",
+  "punto_impacto_via": "carril lateral de la avenida Manuel Ávila Camacho",
+  "evidencias_sitio": "El vehículo V1 presenta intercambio de pintura color amarillo en la parte frontal y costado izquierdo.",
+  "danos_V1": "Daños tipo hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central.",
+  "posicion_final_V1": "Sobre el camellón que divide los carriles centrales de los laterales.",
+  "declaracion_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "circulación",
+  "maniobra_previa_V2": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V2": null,
+  "sentido_carril_V2": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "El conductor del vehículo Dodge Neon viene circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en sentido de circulación de Sur a Norte aproximadamente a las 6:30 de la mañana, cuando un vehículo desconocido golpea por el costado izquierdo lo que provoca que pierda el control de su vehículo y se proyecte contra la “división entre carriles centrales y lateral” (camellón), supuestamente provocando los daños que presenta.",
+  "sentido_carril_V1": "El conductor del vehículo Dodge Neon viene circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en sentido de circulación de Sur a Norte aproximadamente a las 6:30 de la mañana",
+  "secuencia_eventos": "El conductor del vehículo Dodge Neon viene circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en sentido de circulación de Sur a Norte aproximadamente a las 6:30 de la mañana, cuando un vehículo desconocido golpea por el costado izquierdo lo que provoca que pierda el control de su vehículo y se proyecte contra la “división entre carriles centrales y lateral” (camellón), supuestamente provocando los daños que presenta.",
+  "punto_impacto_via": "El conductor del vehículo Dodge Neon viene circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en sentido de circulación de Sur a Norte aproximadamente a las 6:30 de la mañana, cuando un vehículo desconocido golpea por el costado izquierdo lo que provoca que pierda el control de su vehículo y se proyecte contra la “división entre carriles centrales y lateral” (camellón), supuestamente provocando los daños que presenta.",
+  "evidencias_sitio": "El vehículo bajo estudio también presenta daños tipo tallón de magnitud fuerte que van de adelante hacia atrás con signos de desbaste, a grado tal, que se formaron orificios por la pérdida de metal en las puertas delantera y trasera izquierda justo a la altura del poste central; se presenta además daños tipo hundimiento de izquierda a derecha en ambas puertas de magnitud media.",
+  "danos_V1": "El costado izquierdo presenta daños tipo hundimiento por cuerpo duro que va de izquierda a derecha de magnitud fuerte en el costado izquierdo de la facia delantera con intercambio de pintura color amarillo y con el cuarto de facia roto y fuera de su lugar (1); daños tipo hundimiento de izquierda a derecha en la salpicadera delantera izquierda consecuencia de un impacto contra cuerpo duro con pérdida de pintura y rastros leves de oxidación (2); Daño fuerte en el rin delantero izquierdo con pérdida de pintura y embellecedor roto en su totalidad; daños tipo corrimiento de adelante hacia atrás de magnitud fuerte en la parte posterior de la salpicadera delantera izquierda con pérdida de pintura con visibles signos de oxidación (3); daños tipo tallón de magnitud fuerte que va de adelante hacia atrás en la puerta delantera izquierda con pérdida de pintura y signos de fricción fuerte contra un cuerpo duro lo que origina pequeños orificios por la pérdida de material metálico de la puerta, con visibles signos de oxidación (4); daños tipo hundimiento de izquierda a derecha de magnitud fuerte en todo el lienzo de puerta delantera izquierda (5); a su vez tiene la ventanilla de puerta delante izquierda rota y el espejo lateral izquierdo también roto y fuera de su lugar.",
+  "posicion_final_V1": "El vehículo marca Dodge, tipo Neon, modelo 2003, color negro, se detiene sobre el camellón.",
+  "maniobra_previa_V1": "El conductor del vehículo Dodge Neon viene circulando por los carriles laterales de la Av. Manuel Ávila Camacho, en sentido de circulación de Sur a Norte aproximadamente a las 6:30 de la mañana"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día"
+ }
+}

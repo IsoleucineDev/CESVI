@@ -1,0 +1,25 @@
+{
+ "motivo": "evidencia no literal en punto_impacto_via",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras, por la altura de la banqueta de mampostería también debe impactar contra esta, el vehículo desconocido sigue su camino sin detenerse, dándose a la fuga."
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "El impacto sucede con mas intensidad del lado izquierdo de la parte posterior"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Chevrolet Astra 2002 gris",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Chevy Astra sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El Chevy Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo. Además, posterior al impacto el Chevy Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras, el vehículo desconocido sigue su camino sin detenerse, dándose a la fuga.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"El Chevy Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo\",\n      \"evidencia\": \"El Chevy Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"El impacto sucede con mas intensidad del lado izquierdo de la parte posterior\",\n      \"evidencia\": \"El impacto sucede con mas intensidad del lado izquierdo de la parte posterior\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"El Chevy Astra viene circulando por el carril del extremo izquierdo\",\n      \"evidencia\": \"El Chevy Astra viene circulando por el carril del extremo izquierdo\"\n    }\n  ]\n}"
+}

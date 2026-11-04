@@ -1,0 +1,44 @@
+{
+ "id": "16620841_gnp_7c9c80",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Chevrolet Astra 2002 gris",
+  "V2": "Desconocido"
+ },
+ "valores": {
+  "declaracion_V1": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras, por la altura de la banqueta de mampostería también debe impactar contra esta, el vehículo desconocido sigue su camino sin detenerse, dándose a la fuga.",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo",
+  "sentido_carril_V2": null,
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo",
+  "maniobra_previa_V2": null,
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra [...]",
+  "punto_impacto_via": "El impacto sucede con mas intensidad del lado izquierdo de la parte posterior",
+  "evidencias_sitio": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra [...]",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "El vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras",
+  "posicion_final_V2": null,
+  "declaracion_V2": null,
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras, por la altura de la banqueta de mampostería también debe impactar contra esta, el vehículo desconocido sigue su camino sin detenerse, dándose a la fuga.",
+  "sentido_carril_V1": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo",
+  "maniobra_previa_V1": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo",
+  "secuencia_eventos": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras, por la altura de la banqueta de mampostería también debe impactar contra esta, el vehículo desconocido sigue su camino sin detenerse, dándose a la fuga.",
+  "punto_impacto_via": "El impacto sucede con mas intensidad del lado izquierdo de la parte posterior",
+  "evidencias_sitio": "El vehículo marca Chevrolet, tipo Astra viene circulando por el carril del extremo izquierdo, cuando es impactado en la parte posterior por un vehículo desconocido, con mayor intensidad del lado izquierdo, posterior al impacto el vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras, por la altura de la banqueta de mampostería también debe impactar contra esta, el vehículo desconocido sigue su camino sin detenerse, dándose a la fuga.",
+  "posicion_final_V1": "El vehículo Astra gira 90º y continua avanzando hasta salir de la carpeta asfáltica, toma la cuneta y finalmente impacta contra un montículo de tierra y piedras"
+ },
+ "descartados": {
+  "airbags_V1": "Los dos pretensores de los cinturones de seguridad delanteros se encuentran activados"
+ }
+}

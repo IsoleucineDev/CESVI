@@ -1,0 +1,48 @@
+{
+ "id": "0170597_matiz_vs_cavalier_743856",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Pontiac Matiz 2006 blanco con rojo",
+  "V2": "Chevrolet Cavalier 1993 gris con azul"
+ },
+ "valores": {
+  "declaracion_V1": "TRANSITABA POR EL BOULEVARD INDEPENDENCIA CUANDO UN AUTOMOVIL SE FRENO DELANTE DE MI A CAUSA DEL SEMAFORO, YO NO ALCANCE A FRENAR Y ES CUANDO LO IMPACTO POR LA PARTE TRASERA",
+  "declaracion_V2": null,
+  "superficie": "buenas condiciones",
+  "iluminacion": null,
+  "sentido_carril_V1": "Boulevard Independencia en dirección de Poniente a Oriente",
+  "sentido_carril_V2": "Boulevard Independencia en dirección de Poniente a Oriente",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "frenado",
+  "maniobra_previa_V2": "circulación",
+  "distancia_previa": null,
+  "secuencia_eventos": "el vehículo tipo Cavalier circula en dirección de Poniente a Oriente, el vehículo tipo Matiz se encuentra en la misma dirección pero se proyecta hacia él, el vehículo tipo Cavalier acciona los frenos intempestivamente y el vehículo tipo Matiz impacta con su parte frontal la parte posterior del vehículo tipo Cavalier",
+  "punto_impacto_via": "Boulevard Independencia esquina con Calzada Abastos",
+  "evidencias_sitio": "pintura color rojo en el cofre del vehículo tipo Matiz, no existen evidencias de intercambio de pintura en el vehículo tipo Cavalier",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "se proyecta hacia el vehículo tipo Cavalier",
+  "posicion_final_V2": "se desplaza hacia adelante",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "TRANSITABA POR EL BOULEVARD INDEPENDENCIA CUANDO UN AUTOMOVIL SE FRENO DELANTE DE MI A CAUSA DEL SEMAFORO, YO NO ALCANCE A FRENAR Y ES CUANDO LO IMPACTO POR LA PARTE TRASERA",
+  "superficie": "la circulación del Boulevard Independencia se encuentra regulado por semáforos, con un estado de la superficie en buenas condiciones",
+  "sentido_carril_V1": "el vehículo tipo Cavalier, circula sobre el Boulevard Independencia en dirección de Poniente a Oriente, precedido por el vehículo tipo Matiz",
+  "sentido_carril_V2": "el vehículo tipo Cavalier, circula sobre el Boulevard Independencia en dirección de Poniente a Oriente, precedido por el vehículo tipo Matiz",
+  "maniobra_previa_V1": "el conductor del vehículo tipo Cavalier acciona los frenos intempestivamente",
+  "maniobra_previa_V2": "el vehículo tipo Matiz se proyecta hacia él",
+  "secuencia_eventos": "el vehículo tipo Cavalier, circula sobre el Boulevard Independencia en dirección de Poniente a Oriente, precedido por el vehículo tipo Matiz; el vehículo tipo Matiz se proyecta hacia él; presuntamente el vehículo tipo Matiz impacta con su parte frontal la parte posterior del vehículo tipo Cavalier",
+  "punto_impacto_via": "el lugar de los hechos se ubica en Boulevard Independencia, esquina con Calzada Abastos",
+  "evidencias_sitio": "existe pintura color rojo en el cofre del vehículo marca Pontiac, tipo Matiz, mientras que en la parte posterior del vehículo marca Chevrolet, tipo Cavalier, no existen elementos que nos indiquen un contacto el vehículo marca Pontiac, tipo Matiz",
+  "posicion_final_V1": "el vehículo tipo Matiz se proyecta hacia él",
+  "posicion_final_V2": "la sección trasera del vehículo que colisiona sigue desplazándose hacia adelante"
+ },
+ "descartados": {
+  "iluminacion": "día"
+ }
+}

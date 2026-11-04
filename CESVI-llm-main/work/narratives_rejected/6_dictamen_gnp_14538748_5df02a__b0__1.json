@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'La velocidad estimada del Volvo S-40 antes del evento era de unos 80 k'",
+ "principal": {
+  "id": "velocidad_V1_kmh",
+  "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+  "valor": 80,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Volvo S-40 2002 arena",
+  "V2": "Volkswagen Passat 2000 gris"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la velocidad estimada de V1 antes del evento?\",\n  \"respuesta\": \"La velocidad estimada del Volvo S-40 antes del evento era de unos 80 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"80\",\n      \"evidencia\": \"unos 80 km/h\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en sentido_carril_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "Circulaba por calle 13 daba vuelta por la 22 y de repente me pega un carro blanco"
+ },
+ "otros": [
+  {
+   "id": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "valor": "calle 13, dirección Norte a Sur"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El conductor del vehículo desconocido impacta con su parte frontal el lado derecho del vehículo marca FORD, tipo FIESTA"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Fiesta 2001 negro",
+  "V2": "Vehículo desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Ford Fiesta sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"CIRCULABA POR CALLE 13 DANDO VUELTA POR LA 22 Y DE REPENTE ME PEGA UN CARRO BLANCO\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"calle 13, dirección Norte a Sur\",\n      \"evidencia\": \"CIRCULABA POR CALLE 13\"\n    },\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"Circulaba por calle 13 daba vuelta por la 22 y de repente me pega un carro blanco\",\n      \"evidencia\": \"CIRCULABA POR CALLE 13 DANDO VUELTA POR LA 22 Y DE REPENTE ME PEGA UN CARRO BLANCO\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El conductor del vehículo desconocido impacta con su parte frontal el lado derecho del vehículo marca FORD, tipo FIESTA\",\n      \"evidencia\": \"DE REPENTE ME PEGA UN CARRO BLANCO\"\n    }\n  ]\n}"
+}

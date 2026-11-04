@@ -1,0 +1,15 @@
+{
+ "motivo": "oración con contenido no extraído: 'La velocidad estimada de V2 antes del evento era de 90 km/h.'",
+ "principal": {
+  "id": "velocidad_V2_kmh",
+  "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+  "valor": 90,
+  "sintetico": true
+ },
+ "otros": [],
+ "vehiculos": {
+  "V1": "Ford Fiesta 2001 negro",
+  "V2": "Vehículo desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la velocidad estimada de V2 antes del evento?\",\n  \"respuesta\": \"La velocidad estimada de V2 antes del evento era de 90 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"velocidad_V2_kmh\",\n      \"valor\": \"90\",\n      \"evidencia\": \"90 km/h\"\n    }\n  ]\n}"
+}

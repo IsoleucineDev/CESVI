@@ -1,0 +1,97 @@
+{
+ "id": "17_siniestro_283290_09_1cc313",
+ "split": "train",
+ "modalidad": "reversa",
+ "vehiculos": {
+  "V1": "Hyundai Semirremolque Caja Seca 2005 blanco"
+ },
+ "form": {
+  "posicion_final_V1": "subiendo la parte izquierda del eje posterior sobre la banqueta"
+ },
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Cuál fue la declaración del conductor del Hyundai Semirremolque Caja Seca 2005 sobre cómo ocurrió el hecho?",
+   "respuesta": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO",
+   "valor": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "pregunta": "¿Cuál era la condición de la superficie de rodamiento en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cómo estaban las condiciones de iluminación y visibilidad en el lugar del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿En qué sentido y carril circulaba el Hyundai Semirremolque Caja Seca 2005 antes del accidente?",
+   "respuesta": "El Hyundai Semirremolque Caja Seca 2005 circulaba en dirección Este a Oeste por la Av. Vallarta, ubicado en el retorno vehicular casi esquina con la calle Rafael Sanzio",
+   "valor": "retorno vehicular ubicado en la Av. Vallarta casi esquina con la calle Rafael Sanzio"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad aproximada del Hyundai Semirremolque Caja Seca 2005 antes del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Qué maniobra realizaba el Hyundai Semirremolque Caja Seca 2005 antes de entrar en el retorno?",
+   "respuesta": "tomó el retorno en mención para continuar su circulación en dirección Este a Oeste",
+   "valor": "tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "tema": "maniobra_reversa",
+   "desc": "Dirección y tramo recorrido en reversa, y visibilidad del conductor",
+   "pregunta": "¿Cuál fue la dirección y tramo recorrido en reversa por el Hyundai Semirremolque Caja Seca 2005 y qué visibilidad tenía el conductor?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue la secuencia de los impactos en este accidente?",
+   "respuesta": "el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste",
+   "valor": "el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "pregunta": "¿En qué punto de la vía ocurrió el impacto?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "impregnación de caucho sobre la guarnición del camellón central",
+   "valor": "impregnación de caucho sobre la guarnición del camellón central"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado del Hyundai Semirremolque Caja Seca 2005?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles bolsas de aire se activaron en el Hyundai Semirremolque Caja Seca 2005?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  }
+ ]
+}

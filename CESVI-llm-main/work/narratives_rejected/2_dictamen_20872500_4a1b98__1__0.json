@@ -1,0 +1,20 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "punto_impacto_via",
+  "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+  "valor": "en la calle Fuye y Hurrondas"
+ },
+ "otros": [
+  {
+   "id": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Freightliner Tractocamión Quinta Rueda 2001 blanco",
+  "V2": "Chevrolet Optra LS 2007 rojo"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es el punto de impacto en la vía?\",\n  \"respuesta\": \"DAÑOS DE V2: daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante. ADYACENTE A ESTO, EN LA CALLE Fuye y Hurrondas.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"danos_V2\",\n      \"valor\": \"hundimiento tapa cajuela lado derecho e izquierdo con desprendimiento de pintura; hundimiento debajo de la placa de circulación trasera en forma rectangular; hundimiento en la fascia generado de atrás hacia delante\",\n      \"evidencia\": \"DAÑOS DE V2: daños tipo hundimiento en la tapa cajuela del lado derecho e izquierdo con desprendimiento de pintura; daños tipo hundimiento debajo de la placa de circulación trasera en forma rectangular; daño tipo hundimiento en la fascia generado de atrás hacia delante\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"calle Fuye y Hurrondas\",\n      \"evidencia\": \"EN LA CALLE Fuye y Hurrondas\"\n    }\n  ]\n}"
+}

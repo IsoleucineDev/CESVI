@@ -1,0 +1,25 @@
+{
+ "motivo": "valor no concuerda con su evidencia en sentido_carril_V2",
+ "principal": {
+  "id": "sentido_carril_V2",
+  "desc": "Sentido de circulación y carril por el que iba V2",
+  "valor": "circulación de suroeste a noreste"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "desacoplamiento de la fascia"
+  },
+  {
+   "id": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "desacoplamiento del costado"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Toyota Camry 2002 gris plata",
+  "V2": "Saab 9-3 2004 gris Oxford"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Saab?\",\n  \"respuesta\": \"EL SAAB CIRCULABA DE SUROESTE A NORDESTRE EN EL CARRIL DE SU DERECHA.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V2\",\n      \"valor\": \"circulación de suroeste a noreste\",\n      \"evidencia\": \"EL SAAB CIRCULABA DE SUROESTE A NORDESTRE EN EL CARRIL DE SU DERECHA.\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"desacoplamiento de la fascia\",\n      \"evidencia\": \"ADemás, EL TOYOTA REALIZABA UN DESACOPLAMIENTO DE LA FASCIA.\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"desacoplamiento del costado\",\n      \"evidencia\": \"LUEGO, EL SAAB REALIZABA UN DESACOPLAMIENTO DEL COSTADO.\"\n    }\n  ]\n}"
+}

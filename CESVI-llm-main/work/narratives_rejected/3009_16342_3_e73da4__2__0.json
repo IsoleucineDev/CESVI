@@ -1,0 +1,30 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Sur a Norte"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "El vehículo V2 impacta por el costado izquierdo al vehículo V1, lo que provoca que este pierda el control y se proyecte contra el camellón."
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "carril lateral de la avenida Manuel Ávila Camacho"
+  },
+  {
+   "id": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "valor": "Daños tipo hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Dodge Neon 2003 negro",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Dodge Neon 2003 negro?\",\n  \"respuesta\": \"El Dodge Neon 2003 negro circulaba en sentido Sur a Norte, además, el vehículo impacta por el costado izquierdo al vehículo V1, lo que provoca que este pierda el control y se proyecte contra el camellón, luego el punto de impacto ocurrió en el carril lateral de la avenida Manuel Ávila Camacho, y finalmente, el vehículo presentó daños tipo hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"sentido_carril_V1\",\n      \"valor\": \"Sur a Norte\",\n      \"evidencia\": \"El Dodge Neon 2003 negro circulaba en sentido Sur a Norte\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El vehículo V2 impacta por el costado izquierdo al vehículo V1, lo que provoca que este pierda el control y se proyecte contra el camellón\",\n      \"evidencia\": \"el vehículo impacta por el costado izquierdo al vehículo V1, lo que provoca que este pierda el control y se proyecte contra el camellón\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"carril lateral de la avenida Manuel Ávila Camacho\",\n      \"evidencia\": \"el punto de impacto ocurrió en el carril lateral de la avenida Manuel Ávila Camacho\"\n    },\n    {\n      \"tema\": \"danos_V1\",\n      \"valor\": \"Daños tipo hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central\",\n      \"evidencia\": \"el vehículo presentó daños tipo hundimiento y tallón en el costado izquierdo con pérdida de pintura y signos de fricción contra un cuerpo duro; pérdida de faro izquierdo y desprendimiento de facia delantera izquierda; daños tipo doblez en el cofre central\"\n    }\n  ]\n}"
+}

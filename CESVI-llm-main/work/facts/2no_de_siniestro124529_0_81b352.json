@@ -1,0 +1,43 @@
+{
+ "id": "2no_de_siniestro124529_0_81b352",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Ford Mondeo 2003 negro",
+  "V2": "Dodge D-150 1978 amarillo con gris",
+  "V3": "Chevrolet Suburban 1994 negro"
+ },
+ "valores": {
+  "declaracion_V1": "El conductor del vehículo tipo Mondeo circulaba de Sur a Norte sobre la Avenida 8, el cual pierde el control impactando al vehículo marca Doge tipo D-150 el cual se encontraba parado sobre el lado derecho de la Avenida 8, el vehículo tipo Mondeo sale volando e impacta al vehículo tipo Suburban que también se encontraba detenido así mismo pasa el vehículo tipo Tsuru y lo impacta sobre el lado derecho.",
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "Sur a Norte",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "pierde el control",
+  "tipo_objeto": "vehículo tipo D-150",
+  "causa_perdida_control": "pierde el control",
+  "secuencia_eventos": "El vehículo tipo Mondeo pierde el control y impacta al vehículo tipo D-150, luego impacta al vehículo tipo Suburban y finalmente impacta al vehículo tipo Tsuru.",
+  "punto_impacto_via": "Avenida 8 frente a la calle 2-A",
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": null,
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "posicion_final_V1": "Impacta al vehículo tipo Suburban y finalmente impacta al vehículo tipo Tsuru.",
+  "danos_V1": null
+ },
+ "citas": {
+  "declaracion_V1": "El conductor del vehículo tipo Mondeo circulaba de Sur a Norte sobre la Avenida 8, el cual pierde el control impactando al vehículo marca Doge tipo D-150 el cual se encontraba parado sobre el lado derecho de la Avenida 8, el vehículo tipo Mondeo sale volando e impacta al vehículo tipo Suburban que también se encontraba detenido así mismo pasa el vehículo tipo Tsuru y lo impacta sobre el lado derecho.",
+  "sentido_carril_V1": "El conductor del vehículo tipo Mondeo circulaba de Sur a Norte sobre la Avenida 8",
+  "maniobra_previa_V1": "el cual pierde el control impactando al vehículo marca Doge tipo D-150",
+  "tipo_objeto": "el cual pierde el control impactando al vehículo marca Doge tipo D-150",
+  "causa_perdida_control": "el cual pierde el control impactando al vehículo marca Doge tipo D-150",
+  "secuencia_eventos": "el cual pierde el control impactando al vehículo marca Doge tipo D-150 el cual se encontraba parado sobre el lado derecho de la Avenida 8, el vehículo tipo Mondeo sale volando e impacta al vehículo tipo Suburban que también se encontraba detenido así mismo pasa el vehículo tipo Tsuru y lo impacta sobre el lado derecho.",
+  "punto_impacto_via": "en la Avenida 8 frente a la calle 2-A",
+  "posicion_final_V1": "el cual pierde el control impactando al vehículo marca Doge tipo D-150 el cual se encontraba parado sobre el lado derecho de la Avenida 8, el vehículo tipo Mondeo sale volando e impacta al vehículo tipo Suburban que también se encontraba detenido así mismo pasa el vehículo tipo Tsuru y lo impacta sobre el lado derecho."
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día",
+  "evidencias_sitio": "impregnación de pintura de color rojo y blanco en dirección de adelante hacia atrás en el parabrisas del vehículo V1, impregnación de pintura de color gris en la salpicadera del vehículo V1 y impregnación de polvo de concreto en las partes traseras del vehículo V1."
+ }
+}

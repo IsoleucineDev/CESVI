@@ -1,0 +1,42 @@
+{
+ "id": "0028401057_mustang_2011_48acce",
+ "split": "train",
+ "modalidad": "objeto_fijo",
+ "vehiculos": {
+  "V1": "Ford Mustang 2011 blanco"
+ },
+ "valores": {
+  "superficie": "pavimento mojado",
+  "iluminacion": null,
+  "sentido_carril_V1": "sur a norte en carril derecho",
+  "velocidad_V1_kmh": null,
+  "maniobra_previa_V1": "aceleración",
+  "tipo_objeto": "muro de concreto con malla metálica",
+  "causa_perdida_control": "derrape",
+  "secuencia_eventos": "impacto frontal contra el muro de contención, seguido de impacto posterior derecho",
+  "punto_impacto_via": null,
+  "altura_marca_objeto_cm": "65",
+  "evidencias_sitio": "restos de partes plásticas de diferentes características y colores, las cuales destacan partes plásticas de color negro, con el logotipo de Ford, partes de color ámbar con forma trapezoidal, reflectores de color plata y un hule protector de color negro con forma circular",
+  "huellas_frenado_m": null,
+  "airbags_V1": "frontal y lateral del asiento del conductor",
+  "posicion_final_V1": "impactado contra el muro de contención",
+  "declaracion_V1": "circulaba de sur a norte por la carretera en mencion sobre el carril derecho con pavimento mojado y al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contencion con el vértice delantero y posteriormente con el costado derecho por el efecto de proyeccion",
+  "danos_V1": null
+ },
+ "citas": {
+  "superficie": "circulaba de sur a norte por la carretera en mencion sobre el carril derecho con pavimento mojado",
+  "sentido_carril_V1": "circulaba de sur a norte por la carretera en mencion sobre el carril derecho",
+  "maniobra_previa_V1": "al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contención",
+  "tipo_objeto": "se observan daños tipo tallón y desprendimiento de concreto, los cuales se encuentran a una altura de 65 centímetros sobre el nivel del piso y con intercambio de pintura blanca en las inmediaciones del muro",
+  "causa_perdida_control": "al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contención",
+  "secuencia_eventos": "impacta con el muro de contención central comenzando un giro. impacta nuevamente en el vértice posterior derecho después de haber girado",
+  "altura_marca_objeto_cm": "se observan daños tipo tallón y desprendimiento de concreto, los cuales se encuentran a una altura de 65 centímetros sobre el nivel del piso",
+  "evidencias_sitio": "las siguientes fotografías muestran lo antes descrito",
+  "airbags_V1": "la bolsa de aire, frontal, de la posición del conductor y lateral del asiento del mismo, se encuentran activadas",
+  "posicion_final_V1": "impacta con el muro de contención central comenzando un giro",
+  "declaracion_V1": "circulaba de sur a norte por la carretera en mencion sobre el carril derecho con pavimento mojado y al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contencion con el vértice delantero y posteriormente con el costado derecho por el efecto de proyeccion"
+ },
+ "descartados": {
+  "punto_impacto_via": "vértice delantero derecho"
+ }
+}

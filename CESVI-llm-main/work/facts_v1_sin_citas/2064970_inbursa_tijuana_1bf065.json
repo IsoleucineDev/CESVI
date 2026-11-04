@@ -1,0 +1,28 @@
+{
+ "modalidad": "volcadura",
+ "vehiculos": {
+  "V1": "Freightliner, tipo Tractocamión FLD 120 modelo 2002, color blanco, placas de circulación 863-DU-1",
+  "V2": "Watson & Chalin, tipo Tanque, color blanco, placas de circulación 038-WA-2",
+  "V3": "Watson & Chalin, tipo Tanque, color blanco, placas de circulación 039-WA-2"
+ },
+ "valores": {
+  "causa_perdida_control": "Derrape",
+  "senalizacion_preferencia": "Sin preferencia",
+  "velocidad_V1_kmh": "118.2",
+  "velocidad_V2_kmh": null,
+  "velocidad_V3_kmh": null,
+  "posicion_final_V1": "Volcado en tonel",
+  "posicion_final_V2": "Detenido",
+  "posicion_final_V3": "Detenido",
+  "punto_impacto_via": "Justo al salir de la curva",
+  "angulo_impacto": "Sin especificar",
+  "altura_marca_objeto_cm": null,
+  "evidencias_sitio": "Daños en el pavimento tipo tallón con pérdida de material y restos de reflejante impregnado",
+  "huellas_frenado_m": null,
+  "airbags_V1": "Sin especificar",
+  "airbags_V2": "Sin especificar",
+  "airbags_V3": "Sin especificar"
+ },
+ "id": "2064970_inbursa_tijuana_1bf065",
+ "split": "train"
+}

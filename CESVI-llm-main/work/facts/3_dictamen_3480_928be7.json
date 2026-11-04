@@ -1,0 +1,47 @@
+{
+ "id": "3_dictamen_3480_928be7",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Mitsubishi Lancer 2006 plata",
+  "V2": "Nissan Tsuru 2004 rojo"
+ },
+ "valores": {
+  "declaracion_V1": null,
+  "declaracion_V2": null,
+  "superficie": null,
+  "iluminacion": null,
+  "sentido_carril_V1": "de Sur a Norte",
+  "sentido_carril_V2": "estacionado",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "sin frenado",
+  "maniobra_previa_V2": "estacionado",
+  "distancia_previa": null,
+  "secuencia_eventos": "El vehículo V1 colisionó en la parte posterior del vehículo V2, proyectándolo",
+  "punto_impacto_via": "Boulevard Rabon Grande",
+  "evidencias_sitio": "pintura color rojo en el vehículo V1, pintura color arena y rosa en el vehículo V2",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "en la vialidad Boulevard Rabon Grande",
+  "posicion_final_V2": "en la calle Ciruelos",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "sentido_carril_V1": "el ancho de esta vialidad en el tramo del lugar de los hechos es de 9.8 mts",
+  "sentido_carril_V2": "el vehículo tipo Tsuru se encontraba estacionado",
+  "maniobra_previa_V1": "el vehículo tipo Lancer viajaba en la vialidad Boulevard Rabon Grande con dirección de Sur a Norte",
+  "maniobra_previa_V2": "el vehículo tipo Tsuru se encontraba estacionado",
+  "secuencia_eventos": "Imagen 2. Se muestra el momento en el cual el vehículo tipo Lancer colisiona en la parte posterior al vehículo tipo Tsuru. Imagen 3. Se muestra el momento en el cual el vehículo tipo Lancer proyecta al vehículo tipo Tsuru",
+  "punto_impacto_via": "el lugar de los hechos ubicado en el Boulevard Rabon Grande es un arroyo vehicular con un sentido de circulación con dirección de Sur a Norte",
+  "evidencias_sitio": "el vehiculo tipo Lancer se observa impregnación de pintura en la parte frontal de color rojo, color negro y color gris, mientras que en el vehiculo tipo Tsuru, se observa impregnación de pintura color arena y color rosa",
+  "posicion_final_V1": "Imagen 4. Se muestra la posición final de los vehículos momentos después de la colisión posterior (alcance)",
+  "posicion_final_V2": "Imagen 4. Se muestra la posición final de los vehículos momentos después de la colisión posterior (alcance)"
+ },
+ "descartados": {
+  "superficie": "asfalto",
+  "iluminacion": "día"
+ }
+}

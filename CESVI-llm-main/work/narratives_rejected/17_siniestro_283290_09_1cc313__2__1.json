@@ -1,0 +1,29 @@
+{
+ "motivo": "evidencia no literal en secuencia_eventos",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "impregnación de caucho sobre la guarnición del camellón central"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Hyundai Semirremolque Caja Seca 2005 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor de la Hyundai Semirremolque Caja Seca sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"impregnación de caucho sobre la guarnición del camellón central además tomó el retorno en mención para continuar su circulación en dirección Este a Oeste además AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO\",\n  \"extracciones\": [\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"impregnacion_caucho_guarnicion_camellon_central\", \"evidencia\": \"impregnación de caucho sobre la guarnición del camellón central\"},\n    {\"tema\": \"maniobra_previa_V1\", \"valor\": \"tomar_retorno_continuar_circulacion_direccion_Este_a_Oeste\", \"evidencia\": \"tomó el retorno en mención para continuar su circulación en dirección Este a Oeste\"},\n    {\"tema\": \"declaracion_V1\", \"valor\": \"vencio_caja_medio_dando_vuelta_retorno_av_vallarta\", \"evidencia\": \"AL ESTAR DANDO VUELTA EN UN RETORNO SOBRE LA AV. VALLARTA SE VENCIO LA CAJA DE ENMEDIO\"},\n    {\"tema\": \"secuencia_eventos\", \"valor\": \"semirremolque_caja_seca_2005_blanco_placas_703_YD8\", \"evidencia\": \"el vehículo marca HYUNDAI, tipo semirremolque caja seca, modelo 2005, color blanco con placas de circulación 703 YD8 tomó el retorno en mención para continuar su circulación en dirección Este a Oeste\"}\n  ]\n}"
+}

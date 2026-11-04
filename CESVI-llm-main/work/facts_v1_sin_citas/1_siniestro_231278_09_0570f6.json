@@ -1,0 +1,22 @@
+{
+ "modalidad": "colision_frontal",
+ "vehiculos": {
+  "V1": "Plymouth Freeze 1996 blanco EBS-5479",
+  "V2": "Ford Escort 1998 rojo EDH-1872"
+ },
+ "valores": {
+  "declaracion_V1": "CIRCULANDO X LA CALLE FUENTE DE DALILA DE PTE A OTE POR EL CARRIL DERECHO CUANDO DE REPENTE SALIO UN VEHÍCULO INVADIENDO MI CARRIL POR SENTIDO CONTRARIO IMPACTANDO MI VEHÍCULO POR ENFRENTE",
+  "sentido_carril_V1": "Pte a ote, carril derecho",
+  "sentido_carril_V2": "Ote a pte, carril derecho",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "senalizacion_preferencia": "Sin señales de preferencia",
+  "punto_impacto_via": "Calle Fuente de Dalila, carril derecho",
+  "angulo_impacto": "Frontal",
+  "evidencias_sitio": "Sin huellas de frenado, sin intercambio de pintura",
+  "airbags_V1": "Dos bolsas de aire activadas",
+  "airbags_V2": "Dos bolsas de aire activadas"
+ },
+ "id": "1_siniestro_231278_09_0570f6",
+ "split": "test"
+}

@@ -1,0 +1,28 @@
+{
+ "motivo": "valor no concuerda con su evidencia en iluminacion",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 8,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con lluvia y poca visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 90,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford KA 2005 rojo",
+  "V2": "Marcopolo Viaggio 1995 azul marino"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado del Ford KA rojo?\",\n  \"respuesta\": \"La iluminación era escasa debido a la noche y la lluvia, además, el Ford KA rojo dejó una huella de frenado de 8 metros.\",\n  \"extracciones\": [\n    {\"tema\": \"iluminacion\", \"valor\": \"de noche con lluvia y poca visibilidad\", \"evidencia\": \"La iluminación era escasa debido a la noche y la lluvia\"},\n    {\"tema\": \"huellas_frenado_m\", \"valor\": \"8\", \"evidencia\": \"una huella de frenado de 8 metros\"},\n    {\"tema\": \"velocidad_V1_kmh\", \"valor\": \"90\", \"evidencia\": \"sin evidencia en la respuesta proporcionada\"}\n  ]\n}"
+}

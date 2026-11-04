@@ -1,0 +1,30 @@
+{
+ "motivo": "valor no concuerda con su evidencia en vueltas_volcadura",
+ "principal": {
+  "id": "sentido_carril_V1",
+  "desc": "Sentido de circulación y carril por el que iba V1",
+  "valor": "Poniente - Oriente"
+ },
+ "otros": [
+  {
+   "id": "causa_perdida_control",
+   "desc": "Causa de la pérdida de control (derrape, reventón, esquivar, distracción, etc.)",
+   "valor": "velocidad excesiva"
+  },
+  {
+   "id": "vueltas_volcadura",
+   "desc": "Número de vueltas y sentido de la volcadura",
+   "valor": "1/1 a la derecha"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "Daños en el asfalto y huellas de frenado."
+  }
+ ],
+ "vehiculos": {
+  "V1": "Kenworth T-600 2008 blanco",
+  "V2": "Pailemex Tanque -"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál era el sentido de circulación y carril por el que iba el Kenworth T-600?\",\n  \"respuesta\": \"El Kenworth T-600 circulaba en el sentido Poniente - Oriente, y luego perdió el control debido a la velocidad excesiva, lo que le hizo volcarse una vez a la derecha.\",\n  \"extracciones\": [\n    {\"tema\": \"sentido_carril_V1\", \"valor\": \"Poniente - Oriente\", \"evidencia\": \"el Kenworth T-600 circulaba en el sentido Poniente - Oriente\"},\n    {\"tema\": \"causa_perdida_control\", \"valor\": \"velocidad excesiva\", \"evidencia\": \"perdió el control debido a la velocidad excesiva\"},\n    {\"tema\": \"vueltas_volcadura\", \"valor\": \"1/1 a la derecha\", \"evidencia\": \"volcarse una vez a la derecha\"},\n    {\"tema\": \"evidencias_sitio\", \"valor\": \"Daños en el asfalto y huellas de frenado\", \"evidencia\": \"Daños en el asfalto y huellas de frenado\"}\n  ]\n}"
+}

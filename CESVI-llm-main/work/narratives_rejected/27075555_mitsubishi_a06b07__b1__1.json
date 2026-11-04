@@ -1,0 +1,27 @@
+{
+ "motivo": "valor no concuerda con su evidencia en huellas_frenado_m",
+ "principal": {
+  "id": "huellas_frenado_m",
+  "desc": "Longitud (m) de las huellas de frenado, si las hay",
+  "valor": 8,
+  "sintetico": true
+ },
+ "otros": [
+  {
+   "id": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "valor": "de noche con lluvia y poca visibilidad",
+   "sintetico": true
+  },
+  {
+   "id": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "valor": 50,
+   "sintetico": true
+  }
+ ],
+ "vehiculos": {
+  "V1": "Mitsubishi Outlander 2006 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la longitud de las huellas de frenado del Mitsubishi Outlander 2006 negro?\",\n  \"respuesta\": \"El Mitsubishi Outlander 2006 negro no dejó huellas de frenado antes de volcarse, además la iluminación y visibilidad eran de noche con lluvia y poca visibilidad, y luego la velocidad estimada del vehículo antes del evento fue de 50 km/h.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"huellas_frenado_m\",\n      \"valor\": \"0\",\n      \"evidencia\": \"El Mitsubishi Outlander 2006 negro no dejó huellas de frenado antes de volcarse\"\n    },\n    {\n      \"tema\": \"iluminacion\",\n      \"valor\": \"de noche con lluvia y poca visibilidad\",\n      \"evidencia\": \"la iluminación y visibilidad eran de noche con lluvia y poca visibilidad\"\n    },\n    {\n      \"tema\": \"velocidad_V1_kmh\",\n      \"valor\": \"50\",\n      \"evidencia\": \"la velocidad estimada del vehículo antes del evento fue de 50 km/h\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,26 @@
+{
+ "motivo": "valor no concuerda con su evidencia en declaracion_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "Circulaba sobre la avenida R. Dominguez y me detuve en el semáforo cuando sentí el impacto por la parte trasera del remolque"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V3",
+   "desc": "Maniobra de V3 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "descuidado"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "El vehículo V3 presenta impregnación de pintura color verde en la parte posterior del vehículo V2"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volvo Tractocamión 2008 azul con franjas de colores",
+  "V2": "Hyundai Semirremolque S/D blanco",
+  "V3": "Ford Expedition 2003 verde"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor del Volvo Tractocamión sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"El vehículo V3 presenta impregnación de pintura color verde en la parte posterior del vehículo V2. Además, declaro que circulaba sobre la avenida R. Dominguez y me detuve en el semáforo cuando sentí el impacto por la parte trasera del remolque. Luego, el Ford Expedition 2003 verde estaba descuidado.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"impregnacion_pintura_verde\",\n      \"evidencia\": \"El vehículo V3 presenta impregnación de pintura color verde en la parte posterior del vehículo V2\"\n    },\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"detenido_semaforo_impacto_trasero\",\n      \"evidencia\": \"circulaba sobre la avenida R. Dominguez y me detuve en el semáforo cuando sentí el impacto por la parte trasera del remolque\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V3\",\n      \"valor\": \"descuidado\",\n      \"evidencia\": \"el Ford Expedition 2003 verde estaba descuidado\"\n    }\n  ]\n}"
+}

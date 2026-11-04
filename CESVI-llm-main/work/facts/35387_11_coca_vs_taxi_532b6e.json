@@ -1,0 +1,50 @@
+{
+ "id": "35387_11_coca_vs_taxi_532b6e",
+ "split": "train",
+ "modalidad": "colision_lateral_angular",
+ "vehiculos": {
+  "V1": "Freightliner Palett 2009 rojo",
+  "V2": "Nissan Tsuru 2010 blanco"
+ },
+ "valores": {
+  "declaracion_V1": "Circulava por la avenida tome el carril de desaceleracion al dar vuelta en U me percate por la ventanilla que venia dos taxis a exeso de velocidad atrás; uno de ello alcanso apasar y el otro se impacto con la parte tracera del camion",
+  "declaracion_V2": null,
+  "superficie": "asfalto",
+  "iluminacion": null,
+  "sentido_carril_V1": "giro",
+  "sentido_carril_V2": "avance",
+  "velocidad_V1_kmh": null,
+  "velocidad_V2_kmh": null,
+  "maniobra_previa_V1": "giro",
+  "maniobra_previa_V2": "avance",
+  "senalizacion_preferencia": null,
+  "secuencia_eventos": "El conductor del vehículo marca Nissan, tipo Tsuru, al percatarse de la maniobra del vehículo marca Freightliner, tipo Palett, intenta esquivarlo por la parte posterior. Al tratar de evadir el conductor del vehículo marca Nissan, tipo Tsuru, al vehículo marca Freightliner, tipo Palett, impacta su parte frontal izquierda, sobre el costado posterior izquierdo, generando daños de gran magnitud",
+  "punto_impacto_via": "Boulevard las Vigas, en la Colonia las Vigas, San Marcos, Estado de Guerrero",
+  "angulo_impacto": null,
+  "evidencias_sitio": "huellas de frenado, restos de botellas y manchas hemáticas",
+  "huellas_frenado_m": null,
+  "airbags_V1": null,
+  "airbags_V2": null,
+  "posicion_final_V1": "detenido en el carril de desaceleración",
+  "posicion_final_V2": "impactado en el costado posterior izquierdo del vehículo V1",
+  "danos_V1": null,
+  "danos_V2": null
+ },
+ "citas": {
+  "declaracion_V1": "Circulava por la avenida tome el carril de desaceleracion al dar vuelta en U me percate por la ventanilla que venia dos taxis a exeso de velocidad atrás; uno de ello alcanso apasar y el otro se impacto con la parte tracera del camion",
+  "superficie": "El Boulevard las Vigas se compone de dos carriles por sentido separados por un camellón central, con un arroyo vehicular construido con material asfáltico, en pendiente descendente de 6°, en dirección de Norte a Sur, en condiciones aceptables y zona de columpios",
+  "sentido_carril_V1": "El conductor del vehículo marca Freightliner, tipo Palett, redacta en la declaración de accidente, de la compañía de seguros lo siguiente: “Circulava por la avenida tome el carril de desaceleracion al dar vuelta en U me percate por la ventanilla que venia dos taxis a exeso de velocidad atrás; uno de ello alcanso apasar y el otro se impacto con la parte tracera del camion”",
+  "sentido_carril_V2": "El conductor del vehículo marca Nissan, tipo Tsuru, al percatarse de la maniobra del vehículo marca Freightliner, tipo Palett, intenta esquivarlo por la parte posterior",
+  "maniobra_previa_V1": "El conductor del vehículo marca Freightliner, tipo Palett, redacta en la declaración de accidente, de la compañía de seguros lo siguiente: “Circulava por la avenida tome el carril de desaceleracion al dar vuelta en U me percate por la ventanilla que venia dos taxis a exeso de velocidad atrás; uno de ello alcanso apasar y el otro se impacto con la parte tracera del camion”",
+  "maniobra_previa_V2": "El conductor del vehículo marca Nissan, tipo Tsuru, al percatarse de la maniobra del vehículo marca Freightliner, tipo Palett, intenta esquivarlo por la parte posterior",
+  "secuencia_eventos": "Al tratar de evadir el conductor del vehículo marca Nissan, tipo Tsuru, al vehículo marca Freightliner, tipo Palett, impacta su parte frontal izquierda, sobre el costado posterior izquierdo, generando daños de gran magnitud",
+  "punto_impacto_via": "El lugar de los hechos se ubica en el Boulevard las Vigas, en la Colonia las Vigas, San Marcos, Estado de Guerrero",
+  "evidencias_sitio": "En esta zona existen restos de botellas que transportaba el vehículo marca Freightliner, tipo Palett, encontrándose también manchas hemáticas sobre el pavimento",
+  "posicion_final_V1": "El conductor del vehículo marca Freightliner, tipo Palett y en la observación de los daños se establece la siguiente hipótesis de colisión: Imagen 7.- Al llegar a un retorno, el vehículo marca Freightliner, tipo Palett, realiza un giro de 180°, para dar vuelta en “U”, en ese momento aparece un vehículo marca Nissan, tipo Tsuru, sobre la misma vía.",
+  "posicion_final_V2": "El conductor del vehículo marca Nissan, tipo Tsuru, al percatarse de la maniobra del vehículo marca Freightliner, tipo Palett, intenta esquivarlo por la parte posterior. Al tratar de evadir el conductor del vehículo marca Nissan, tipo Tsuru, al vehículo marca Freightliner, tipo Palett, impacta su parte frontal izquierda, sobre el costado posterior izquierdo, generando daños de gran magnitud"
+ },
+ "descartados": {
+  "iluminacion": "día",
+  "angulo_impacto": "diagonal"
+ }
+}

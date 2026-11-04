@@ -1,0 +1,24 @@
+{
+ "motivo": "evidencia no literal en maniobra_previa_V1",
+ "principal": {
+  "id": "declaracion_V1",
+  "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+  "valor": "circulaba de sur a norte por la carretera en mencion sobre el carril derecho con pavimento mojado y al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contencion con el vértice delantero y posteriormente con el costado derecho por el efecto de proyeccion"
+ },
+ "otros": [
+  {
+   "id": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "valor": "aceleración"
+  },
+  {
+   "id": "tipo_objeto",
+   "desc": "Tipo de objeto impactado, su material y su altura",
+   "valor": "muro de concreto con malla metálica"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Ford Mustang 2011 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la declaración del conductor de la Ford Mustang 2011 sobre cómo ocurrió el hecho?\",\n  \"respuesta\": \"circulaba de sur a norte por la carretera en mencion sobre el carril derecho con pavimento mojado y al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contencion con el vértice delantero y posteriormente con el costado derecho por el efecto de proyeccion, además aceleración, además muro de concreto con malla metálica\",\n  \"extracciones\": [\n    {\n      \"tema\": \"declaracion_V1\",\n      \"valor\": \"circulaba de sur a norte por la carretera en mencion sobre el carril derecho con pavimento mojado y al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contencion con el vértice delantero y posteriormente con el costado derecho por el efecto de proyeccion\",\n      \"evidencia\": \"circulaba de sur a norte por la carretera en mencion sobre el carril derecho con pavimento mojado y al acelerar el vehiculo mas se me derrapo dando un jiro asia la izquierda estrellandome contra el muro de contencion con el vértice delantero y posteriormente con el costado derecho por el efecto de proyeccion\"\n    },\n    {\n      \"tema\": \"maniobra_previa_V1\",\n      \"valor\": \"aceleración\",\n      \"evidencia\": \"aceleración\"\n    },\n    {\n      \"tema\": \"tipo_objeto\",\n      \"valor\": \"muro de concreto con malla metálica\",\n      \"evidencia\": \"muro de concreto con malla metálica\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,20 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "El vehículo desconocido impacta en el vértice trasero derecho del Volkswagen Beetle, provocando que se cambie al carril izquierdo. Luego, el Volkswagen Beetle impacta en la parte posterior del camión tipo Torton."
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "carril central de la Avenida Oceanía"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Volkswagen Beetle 2005 gris",
+  "V2": "Desconocido"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que ocurrieron durante la colisión?\",\n  \"respuesta\": \"El impacto sucedió en el carril central de la Avenida Oceanía. Luego, el vehículo desconocido impacta en el vértice trasero derecho del Volkswagen Beetle, provocando que se cambie al carril izquierdo. Luego, el Volkswagen Beetle impacta en la parte posterior del camión tipo Torton.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"carril central de la Avenida Oceanía\",\n      \"evidencia\": \"El impacto sucedió en el carril central de la Avenida Oceanía\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"El vehículo desconocido impacta en el vértice trasero derecho del Volkswagen Beetle, provocando que se cambie al carril izquierdo. Luego, el Volkswagen Beetle impacta en la parte posterior del camión tipo Torton\",\n      \"evidencia\": \"El impacto sucedió en el carril central de la Avenida Oceanía. Luego, el vehículo desconocido impacta en el vértice trasero derecho del Volkswagen Beetle, provocando que se cambie al carril izquierdo. Luego, el Volkswagen Beetle impacta en la parte posterior del camión tipo Torton\"\n    }\n  ]\n}"
+}

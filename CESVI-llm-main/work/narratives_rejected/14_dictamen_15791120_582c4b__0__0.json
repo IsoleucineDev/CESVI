@@ -1,0 +1,30 @@
+{
+ "motivo": "evidencia no literal en secuencia_eventos",
+ "principal": {
+  "id": "maniobra_previa_V2",
+  "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+  "valor": "ninguna"
+ },
+ "otros": [
+  {
+   "id": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "valor": "el vehículo V2 impacta el costado derecho del vehículo V1"
+  },
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "mitad de la calle con Brúcelas"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "pintura de color negro impregnada sobre la parte frontal media del cofre del vehículo V2"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Jaguar S-Type 2005 negro",
+  "V2": "Mitsubishi Lancer 2006 blanco"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál fue la maniobra previa de V2 antes del impacto?\",\n  \"respuesta\": \"EL VEHÍCULO MITSUBISHI LANCER 2006 BLANCO NO REALIZÓ NINGUNA MANIOBRA ANTES DEL IMPACTO.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"maniobra_previa_V2\",\n      \"valor\": \"ninguna\",\n      \"evidencia\": \"NO REALIZÓ NINGUNA MANIOBRA ANTES DEL IMPACTO\"\n    },\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"el vehículo V2 impacta el costado derecho del vehículo V1\",\n      \"evidencia\": \"EL VEHÍCULO MITSUBISHI LANCER 2006 BLANCO IMPACTA EL COSTADO DERECHO DEL VEHÍCULO JAGUAR S-TYPE 2005 NEGRO\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"mitad de la calle con Brúcelas\",\n      \"evidencia\": \"MITAD DE LA CALLE CON BRÚCELAS\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"pintura de color negro impregnada sobre la parte frontal media del cofre del vehículo V2\",\n      \"evidencia\": \"PINTURA DE COLOR NEGRO IMPRIMPENADA SOBRE LA PARTE FRONTAL MEDIA DEL COFRE DEL VEHÍCULO MITSUBISHI LANCER 2006 BLANCO\"\n    }\n  ]\n}"
+}

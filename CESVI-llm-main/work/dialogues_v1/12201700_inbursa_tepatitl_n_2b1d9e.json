@@ -1,0 +1,209 @@
+{
+ "id": "12201700_inbursa_tepatitl_n_2b1d9e",
+ "split": "train",
+ "modalidad": "alcance",
+ "vehiculos": {
+  "V1": "Ford Lobo Pick Up 2006 vino",
+  "V2": "Volkswagen Pointer 2004 gris",
+  "V3": "Nissan Tsuru 2010 beige"
+ },
+ "form": {},
+ "turns": [
+  {
+   "tema": "declaracion_V1",
+   "desc": "Declaración del conductor de V1 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué declaró el conductor del Ford Lobo Pick Up sobre cómo ocurrió el hecho?",
+   "respuesta": "Intentó virar a su derecha, acelera y impacta a V2 que proyecta a V3",
+   "valor": "intentó virar a su derecha, acelera y impacta a V2 que proyecta a V3"
+  },
+  {
+   "tema": "declaracion_V2",
+   "desc": "Declaración del conductor de V2 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué declaró el conductor del Volkswagen Pointer sobre cómo ocurrió el hecho?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "declaracion_V3",
+   "desc": "Declaración del conductor de V3 sobre cómo ocurrió el hecho (resumen)",
+   "pregunta": "¿Qué declaró el conductor del Nissan Tsuru sobre cómo ocurrió el hecho?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "superficie",
+   "desc": "Condición de la superficie de rodamiento (seca, mojada, grava, etc.)",
+   "pregunta": "¿Cuál es la condición de la superficie de rodamiento?",
+   "respuesta": "Creo que es concreto e incrustaciones de piedras (empedrado)",
+   "valor": "concreto e incrustaciones de piedras (empedrado)"
+  },
+  {
+   "tema": "iluminacion",
+   "desc": "Iluminación y visibilidad (día/noche, alumbrado, lluvia, niebla)",
+   "pregunta": "¿Cuál es la iluminación y visibilidad en el momento del accidente?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "sentido_carril_V1",
+   "desc": "Sentido de circulación y carril por el que iba V1",
+   "pregunta": "¿Cuál era el sentido de circulación y carril por el que iba el Ford Lobo Pick Up?",
+   "respuesta": "El Ford Lobo Pick Up circulaba en dirección a calle Diamante",
+   "valor": "circulación en calle Diamante"
+  },
+  {
+   "tema": "sentido_carril_V2",
+   "desc": "Sentido de circulación y carril por el que iba V2",
+   "pregunta": "¿Cuál era el sentido de circulación y carril por el que iba el Volkswagen Pointer?",
+   "respuesta": "El Pointer estaba estacionado en calle Arroyo de Minas",
+   "valor": "estacionado en calle Arroyo de Minas"
+  },
+  {
+   "tema": "sentido_carril_V3",
+   "desc": "Sentido de circulación y carril por el que iba V3",
+   "pregunta": "¿Cuál era el sentido de circulación y carril por el que iba el Nissan Tsuru?",
+   "respuesta": "El Nissan Tsuru estaba estacionado en calle Arroyo de Minas",
+   "valor": "estacionado en calle Arroyo de Minas"
+  },
+  {
+   "tema": "velocidad_V1_kmh",
+   "desc": "Velocidad estimada de V1 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad estimada del Ford Lobo Pick Up antes del evento?",
+   "respuesta": "64 km/h",
+   "valor": "64"
+  },
+  {
+   "tema": "velocidad_V2_kmh",
+   "desc": "Velocidad estimada de V2 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad estimada del Volkswagen Pointer antes del evento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "velocidad_V3_kmh",
+   "desc": "Velocidad estimada de V3 antes del evento (km/h)",
+   "pregunta": "¿Cuál era la velocidad estimada del Nissan Tsuru antes del evento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "maniobra_previa_V1",
+   "desc": "Maniobra de V1 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Cuál era la maniobra del Ford Lobo Pick Up antes del impacto?",
+   "respuesta": "Virar a su derecha",
+   "valor": "virar a su derecha"
+  },
+  {
+   "tema": "maniobra_previa_V2",
+   "desc": "Maniobra de V2 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Cuál era la maniobra del Volkswagen Pointer antes del impacto?",
+   "respuesta": "Estacionado",
+   "valor": "estacionado"
+  },
+  {
+   "tema": "maniobra_previa_V3",
+   "desc": "Maniobra de V3 antes del impacto (frenado, aceleración, giro, cambio de carril, detenido)",
+   "pregunta": "¿Cuál era la maniobra del Nissan Tsuru antes del impacto?",
+   "respuesta": "El Tsuru estaba estacionado",
+   "valor": "estacionado"
+  },
+  {
+   "tema": "distancia_previa",
+   "desc": "Distancia o tiempo de separación entre los vehículos antes de la frenada/evento",
+   "pregunta": "¿Cuál era la distancia o tiempo de separación entre los vehículos antes de la frenada/evento?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "secuencia_eventos",
+   "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+   "pregunta": "¿Cuál fue el orden y tipo de los impactos?",
+   "respuesta": "V1 impacta a V2 que proyecta a V3",
+   "valor": "V1 impacta a V2 que proyecta a V3"
+  },
+  {
+   "tema": "punto_impacto_via",
+   "desc": "Ubicación del punto de impacto en la vía (carril, distancia a una referencia)",
+   "pregunta": "¿Dónde ocurrió el punto de impacto en la vía?",
+   "respuesta": "El impacto ocurrió en la calle Diamante",
+   "valor": "calle Diamante"
+  },
+  {
+   "tema": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "pregunta": "¿Qué evidencias encontraste en el sitio del accidente?",
+   "respuesta": "Creo que hay huellas de arrastre y esquirlas",
+   "valor": "huellas de arrastre y esquirlas"
+  },
+  {
+   "tema": "huellas_frenado_m",
+   "desc": "Longitud (m) de las huellas de frenado, si las hay",
+   "pregunta": "¿Cuál es la longitud de las huellas de frenado?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V1",
+   "desc": "Bolsas de aire de V1: cuáles se activaron",
+   "pregunta": "¿Cuáles se activaron en el Ford Lobo Pick Up?",
+   "respuesta": "Activada bolsa de aire del acompañante",
+   "valor": "activada bolsa de aire del acompañante"
+  },
+  {
+   "tema": "airbags_V2",
+   "desc": "Bolsas de aire de V2: cuáles se activaron",
+   "pregunta": "¿Cuáles se activaron en el Volkswagen Pointer?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "airbags_V3",
+   "desc": "Bolsas de aire de V3: cuáles se activaron",
+   "pregunta": "¿Cuáles se activaron en el Nissan Tsuru?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V1",
+   "desc": "Daños de V1: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Cuáles son los daños del Ford Lobo Pick Up?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V2",
+   "desc": "Daños de V2: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Cuáles son los daños del Volkswagen Pointer?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "danos_V3",
+   "desc": "Daños de V3: zonas, altura (cm) y dirección de la fuerza",
+   "pregunta": "¿Cuáles son los daños del Nissan Tsuru?",
+   "respuesta": "saltar",
+   "valor": "__saltado__"
+  },
+  {
+   "tema": "posicion_final_V1",
+   "desc": "Posición final de V1: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Cuál es la posición final del Ford Lobo Pick Up?",
+   "respuesta": "Creo que circulaba en línea recta varios metros",
+   "valor": "circulación en línea recta varios metros"
+  },
+  {
+   "tema": "posicion_final_V2",
+   "desc": "Posición final de V2: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Cuál es la posición final del Volkswagen Pointer?",
+   "respuesta": "Más o menos, sube a la banqueta",
+   "valor": "sube a la banqueta"
+  },
+  {
+   "tema": "posicion_final_V3",
+   "desc": "Posición final de V3: ubicación, rumbo y tipo de barrido",
+   "pregunta": "¿Cuál es la posición final del Nissan Tsuru?",
+   "respuesta": "Creo que gira sobre su eje 180º",
+   "valor": "gira sobre su eje 180º"
+  }
+ ]
+}

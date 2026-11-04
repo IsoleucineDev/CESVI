@@ -1,0 +1,29 @@
+{
+ "motivo": "una evidencia abarca más de una oración",
+ "principal": {
+  "id": "secuencia_eventos",
+  "desc": "Orden y tipo de los impactos (primer contacto e impactos secundarios)",
+  "valor": "el vehículo “A” cambia su trayectoria y se proyecta contra un árbol"
+ },
+ "otros": [
+  {
+   "id": "punto_impacto_via",
+   "desc": "Dónde en la VÍA ocurrió el impacto (calle o tramo, carril, referencia o distancia). NO la zona dañada del vehículo",
+   "valor": "Km. 35+000 de la carretera libre Cuernavaca-Cuautla"
+  },
+  {
+   "id": "evidencias_sitio",
+   "desc": "Evidencias en el sitio (huellas de frenado, restos, intercambio de pintura, marcas)",
+   "valor": "desprendimiento de corteza en el árbol y pequeñas esquirlas de pintura color negro incrustadas en la corteza del árbol"
+  },
+  {
+   "id": "superficie",
+   "desc": "Superficie de rodamiento: tipo y condición (asfalto, concreto, terracería; seca, mojada, con baches o grietas, etc.)",
+   "valor": "asfáltico en buenas condiciones"
+  }
+ ],
+ "vehiculos": {
+  "V1": "Audi A-4 2001 negro"
+ },
+ "salida_cruda": "{\n  \"pregunta\": \"¿Cuál es la secuencia de eventos que llevó a que el Audi A-4 2001 negro cambiara su trayectoria y se proyectara contra un árbol?\",\n  \"respuesta\": \"EL vehículo “Audi A-4 2001 negro” cambia SU trayectoria Y SE proyecta CONTRA un árbol. ADemás, ESTO ocurrió EN el km. 35+000 DE la carretera libre Cuernavaca-Cuautla. LUEGO, SE observaron desprendimientos DE corteza EN el árbol Y PEQUEÑAS esquirlas DE pintura COLOR negro INCrustadas EN la corteza del árbol. LA superficie DE rodamiento ERA asfáltico EN BUENAS condiciones.\",\n  \"extracciones\": [\n    {\n      \"tema\": \"secuencia_eventos\",\n      \"valor\": \"el vehículo cambia su trayectoria y se proyecta contra un árbol\",\n      \"evidencia\": \"EL vehículo “Audi A-4 2001 negro” cambia SU trayectoria Y SE proyecta CONTRA un árbol.\"\n    },\n    {\n      \"tema\": \"punto_impacto_via\",\n      \"valor\": \"km. 35+000 de la carretera libre Cuernavaca-Cuautla\",\n      \"evidencia\": \"ESTO ocurrió EN el km. 35+000 DE la carretera libre Cuernavaca-Cuautla.\"\n    },\n    {\n      \"tema\": \"evidencias_sitio\",\n      \"valor\": \"desprendimiento de corteza en el árbol y pequeñas esquirlas de pintura color negro incrustadas en la corteza del árbol\",\n      \"evidencia\": \"SE observaron desprendimientos DE corteza EN el árbol Y PEQUEÑAS esquirlas DE pintura COLOR negro INCrustadas EN la corteza del árbol.\"\n    },\n    {\n      \"tema\": \"superficie\",\n      \"valor\": \"asfáltico en buenas condiciones\",\n      \"evidencia\": \"LA superficie DE rodamiento ERA asfáltico EN BUENAS condiciones.\"\n    }\n  ]\n}"
+}
