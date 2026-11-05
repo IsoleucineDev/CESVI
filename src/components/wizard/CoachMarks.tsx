@@ -6,22 +6,22 @@ const COACH_STORAGE_KEY = "cesvi_coachmarks_dismissed"
 
 const COACH_CONTENT: Record<WizardStep, { title: string; desc: string; targetPosition: string }> = {
   inicio: {
-    title: "1. Buscador de Ubicación",
+    title: "01 Inicio · Buscador de Ubicación",
     desc: "Ingresa la calle o cruce del siniestro y presiona Enter para centrar el mapa.",
     targetPosition: "top-left",
   },
   aproximacion: {
-    title: "2. Herramienta de Vehículos",
+    title: "02 Aproximación · Vehículos y Trayectorias",
     desc: "Selecciona el tipo de vehículo y toca el mapa para colocarlo en su aproximación previa.",
     targetPosition: "top-tools",
   },
   impacto: {
-    title: "3. Punto de Impacto",
-    desc: "Toca el mapa para fijar el punto de colisión. El marcador rojo de pulso es arrastrable.",
-    targetPosition: "center-map",
+    title: "03 Impacto · Punto de Impacto",
+    desc: "Toca el mapa para fijar el punto de colisión. El marcador de pulso es arrastrable.",
+    targetPosition: "top-tools",
   },
   posicion_final: {
-    title: "4. Finalizar Expediente",
+    title: "04 Posición Final · Reposo y Exportación",
     desc: "Arrastra los vehículos a su posición de reposo final y haz clic en Finalizar para exportar.",
     targetPosition: "assistant-footer",
   },
@@ -42,11 +42,27 @@ export default function CoachMarks({ currentStep }: CoachMarksProps) {
     }
   })
 
+  // Sincronizar desde localStorage cada vez que cambia currentStep
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    try {
+      const raw = localStorage.getItem(COACH_STORAGE_KEY)
+      if (raw) {
+        const parsed = JSON.parse(raw)
+        if (Array.isArray(parsed)) {
+          setDismissedSteps(parsed)
+        }
+      }
+    } catch {
+      // ignore
+    }
+  }, [currentStep])
+
   const isDismissed = dismissedSteps.includes(currentStep)
   const info = COACH_CONTENT[currentStep]
 
   const dismiss = () => {
-    const updated = [...dismissedSteps, currentStep]
+    const updated = Array.from(new Set([...dismissedSteps, currentStep]))
     setDismissedSteps(updated)
     try {
       localStorage.setItem(COACH_STORAGE_KEY, JSON.stringify(updated))

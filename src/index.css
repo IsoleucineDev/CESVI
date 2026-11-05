@@ -3068,9 +3068,8 @@ kbd {
 }
 
 .coach-center-map {
-  top: 45%;
-  left: 35%;
-  transform: translate(-50%, -50%);
+  top: 140px;
+  left: 20px;
 }
 
 .coach-assistant-footer {
@@ -3149,5 +3148,12 @@ kbd {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+  .coach-mark-banner {
+    animation: none !important;
+  }
+  .coach-pulse {
+    animation: none !important;
+    display: none !important;
   }
 }
