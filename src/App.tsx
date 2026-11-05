@@ -19,7 +19,7 @@ import { useTimelinePlayback } from "./hooks/useTimelinePlayback"
 
 import { api, type CaseContext, type Scene } from "./lib/api"
 import { DEFAULT_ANCHOR, loadSavedCase } from "./lib/migration.ts"
-import type { GeoPosition } from "./lib/geo.ts"
+import { toOffsetM, type GeoPosition } from "./lib/geo.ts"
 import { useWizard } from "./hooks/useWizard"
 import WizardController from "./components/wizard/WizardController"
 import CoachMarks from "./components/wizard/CoachMarks"
@@ -317,6 +317,68 @@ export default function App() {
     [wizard, timeline],
   )
 
+  const handleMapClick = useCallback(
+    (pos: GeoPosition) => {
+      // Flujo Escena 02: Posicionamiento y trayectoria de vehículos
+      if (wizard.wizardState.step === "aproximacion") {
+        if (wizard.scene02Substep === "place") {
+          const currentId = wizard.currentVehicleId
+          const draft = wizard.vehicleDraft
+          const rotation =
+            draft.direction === "N"
+              ? 0
+              : draft.direction === "NE"
+                ? 45
+                : draft.direction === "E"
+                  ? 90
+                  : draft.direction === "SE"
+                    ? 135
+                    : draft.direction === "S"
+                      ? 180
+                      : draft.direction === "SO"
+                        ? 225
+                        : draft.direction === "O"
+                          ? 270
+                          : 315
+          scenario.moveVehicle(currentId, pos)
+          scenario.upsertVehicle(currentId, {
+            type: draft.type ?? "Automóvil",
+            model: draft.model,
+            direction: draft.direction ?? "NE",
+            speed: draft.speed ?? 45,
+            rotation,
+          })
+          setFeedback(`${currentId} posicionado en el mapa`)
+          wizard.setScene02Substep("trajectory")
+          return
+        }
+
+        if (wizard.scene02Substep === "trajectory" && isDrawingTrajectory) {
+          const currentId = wizard.currentVehicleId
+          const v = scenario.mapVehicles[currentId]
+          const currentTrajectory = v?.trajectoryPoints ?? []
+          const offsetPt = toOffsetM(anchor, pos)
+          scenario.upsertVehicle(currentId, {
+            trajectoryPoints: [
+              ...currentTrajectory,
+              { x: offsetPt.x, y: offsetPt.y, lat: pos.lat, lng: pos.lng },
+            ],
+          })
+          setFeedback(`Punto de trayectoria marcado para ${currentId}`)
+          return
+        }
+      }
+
+      // Flujo Escena 03: Posicionamiento de impacto
+      if (wizard.wizardState.step === "impacto" && wizard.scene03Substep === "place_impact") {
+        scenario.moveImpact(pos)
+        setFeedback("Punto de impacto reubicado")
+        return
+      }
+    },
+    [wizard, scenario, anchor, isDrawingTrajectory],
+  )
+
   const handleSelectLocationSuggestion = (suggestion: LocationSuggestion) => {
     const lat = parseFloat(suggestion.lat)
     const lon = parseFloat(suggestion.lon)
@@ -454,6 +516,7 @@ export default function App() {
               onScaleDropped={scenario.scaleDropped}
               onScaleVehicle={scenario.scaleVehicle}
               onMoveAnchor={handleMoveAnchor}
+              onMapClick={handleMapClick}
               inspectorOpen={!isInicio && inspectorOpen}
               onCloseInspector={() => setInspectorOpen(false)}
               onOpenInspector={() => setInspectorOpen(true)}

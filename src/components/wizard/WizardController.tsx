@@ -166,8 +166,18 @@ export default function WizardController({
           onSaveVehicle={handleSaveVehicle}
           onAddNextVehicle={handleAddNextVehicle}
           onFinishVehicles={handleFinishVehicles}
-          onStartTrajectoryMode={() => setIsDrawingTrajectory(!isDrawingTrajectory)}
-          onSkipTrajectory={() => wizard.setScene02Substep("ask_another")}
+          onStartTrajectoryMode={() => {
+            if (isDrawingTrajectory) {
+              handleSaveVehicle()
+              setIsDrawingTrajectory(false)
+            } else {
+              setIsDrawingTrajectory(true)
+            }
+          }}
+          onSkipTrajectory={() => {
+            handleSaveVehicle()
+            setIsDrawingTrajectory(false)
+          }}
           onDeleteVehicle={handleDeleteVehicle}
           isPlacingOnMap={isPlacingOnMap}
           isDrawingTrajectory={isDrawingTrajectory}

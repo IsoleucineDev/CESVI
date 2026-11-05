@@ -253,6 +253,13 @@ export default function StepAproximacion({
           <div className="wizard-chips-row" style={{ marginTop: 8 }}>
             <button
               type="button"
+              className="wizard-chip primary"
+              onClick={() => onSetSubstep("trajectory")}
+            >
+              ✓ Confirmar posición · Continuar
+            </button>
+            <button
+              type="button"
               className="wizard-chip text-only"
               onClick={() => onSetSubstep("speed")}
             >
@@ -270,7 +277,7 @@ export default function StepAproximacion({
               🛣️ <b>Dibuja de dónde venía {currentVehicleId}.</b>
             </p>
             <small>
-              Haz clic en el mapa para marcar puntos de su trayectoria previa al choque. Doble clic para terminar.
+              Haz clic en el mapa para marcar puntos de su trayectoria previa al choque.
             </small>
           </div>
           <div className="wizard-chips-row" style={{ marginTop: 10 }}>
@@ -279,7 +286,7 @@ export default function StepAproximacion({
               className="wizard-chip primary"
               onClick={onStartTrajectoryMode}
             >
-              {isDrawingTrajectory ? "✓ Terminar trazado" : "✏️ Dibujar trayectoria"}
+              {isDrawingTrajectory ? "✓ Terminar trazado" : "✏️ Dibujar trayectoria en mapa"}
             </button>
             <button
               type="button"
@@ -287,6 +294,13 @@ export default function StepAproximacion({
               onClick={onSkipTrajectory}
             >
               Omitir trayectoria
+            </button>
+            <button
+              type="button"
+              className="wizard-chip text-only"
+              onClick={() => onSetSubstep("place")}
+            >
+              Atrás
             </button>
           </div>
         </div>

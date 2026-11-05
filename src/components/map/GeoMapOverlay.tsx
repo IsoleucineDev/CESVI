@@ -35,6 +35,7 @@ export default function GeoMapOverlay({
   onScaleDropped,
   onScaleVehicle,
   onMoveAnchor,
+  onMapClick,
 }: {
   mode: "location" | "scenario"
   mapCenter: [number, number]
@@ -56,6 +57,7 @@ export default function GeoMapOverlay({
   onScaleDropped: (id: string, scale: number) => void
   onScaleVehicle: (id: string, scale: number) => void
   onMoveAnchor?: (position: GeoPosition) => void
+  onMapClick?: (position: GeoPosition) => void
 }) {
   const map = useMap()
   const [, redraw] = useState(0)
@@ -65,6 +67,12 @@ export default function GeoMapOverlay({
     move: () => redraw((v) => v + 1),
     zoom: () => redraw((v) => v + 1),
     viewreset: () => redraw((v) => v + 1),
+    click: (e) => {
+      if (dragRef.current) return
+      if (onMapClick) {
+        onMapClick({ lat: e.latlng.lat, lng: e.latlng.lng })
+      }
+    },
   })
 
   useEffect(() => {
@@ -234,6 +242,34 @@ export default function GeoMapOverlay({
           </div>
         )
       })()}
+
+      {/* Trayectorias previas de aproximación */}
+      {Object.keys(mapVehicles).map((id) => {
+        const vehicle = mapVehicles[id]
+        if (!vehicle?.trajectoryPoints || vehicle.trajectoryPoints.length === 0) return null
+        const vehiclePt = map.latLngToContainerPoint(vehicle)
+        const pts = vehicle.trajectoryPoints.map((p) => map.latLngToContainerPoint(p))
+        const allPts = [...pts, vehiclePt]
+        const pathData = allPts.reduce((acc, p, i) => `${acc} ${i === 0 ? "M" : "L"} ${p.x} ${p.y}`, "")
+        return (
+          <svg
+            key={`traj-${id}`}
+            style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 400 }}
+          >
+            <path
+              d={pathData}
+              fill="none"
+              stroke="var(--accent, #0084ad)"
+              strokeWidth="2.5"
+              strokeDasharray="6 4"
+              opacity="0.85"
+            />
+            {pts.map((p, idx) => (
+              <circle key={idx} cx={p.x} cy={p.y} r="3.5" fill="var(--accent, #0084ad)" />
+            ))}
+          </svg>
+        )
+      })}
 
       {Object.keys(mapVehicles).map((id) => {
         const vehicle = mapVehicles[id]
