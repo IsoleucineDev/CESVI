@@ -227,14 +227,46 @@ export default function App() {
   }
 
   const handleExportReport = () => {
+    const vehicleEntries = Object.entries(scenario.mapVehicles).map(
+      ([id, v]) =>
+        `   - ${id}: ${v.type || "Vehículo"} | Modelo: ${v.model || "No especificado"} | Vel: ${v.speed ?? 0} km/h | Rumbo: ${v.direction || `${v.rotation}°`} | Zona impacto: ${v.impactZone || "N/A"}`,
+    )
+
     const report = [
-      "CESVI · Reconstrucción vial",
-      "Expediente: EXP-0248",
-      `Ubicación: ${locationQuery} (${anchor.lat.toFixed(5)}, ${anchor.lng.toFixed(5)})`,
-      `Escenas: ${timeline.frames.length}`,
-      `Elementos colocados: ${scenario.droppedItems.length}`,
-      ...scenario.droppedItems.map((item) => `- ${item.label} (${item.kind})`),
+      "==================================================",
+      "CESVI · INFORME PERICIAL DE RECONSTRUCCIÓN VIAL",
+      "==================================================",
+      `Expediente: EXP-0248`,
+      `Fecha de emisión: ${new Date().toLocaleString()}`,
+      `Estado del peritaje: ${wizard.wizardState.isComplete ? "100% COMPLETADO" : `${wizard.progress}% EN CURSO`}`,
+      "",
+      `1. UBICACIÓN DEL SINIESTRO:`,
+      `   Dirección: ${locationQuery}`,
+      `   Coordenadas geográficas: (${anchor.lat.toFixed(6)}, ${anchor.lng.toFixed(6)})`,
+      "",
+      `2. VEHÍCULOS INVOLUCRADOS (${Object.keys(scenario.mapVehicles).length}):`,
+      ...vehicleEntries,
+      "",
+      `3. DINÁMICA DE IMPACTO:`,
+      `   Coordenadas de impacto: (${scenario.impactPosition.lat.toFixed(6)}, ${scenario.impactPosition.lng.toFixed(6)})`,
+      `   Tiempo estimado de impacto: ${wizard.impactTime || "00:03.38"}`,
+      `   Vehículos colisionantes: ${(wizard.impactVehicles || []).join(", ") || "V1, V2"}`,
+      "",
+      `4. EVIDENCIA E INDICIOS PERICIALES (${scenario.evidencePositions.length}):`,
+      ...scenario.evidencePositions.map((e) => `   - Indicio ${e.label}: (${e.lat.toFixed(6)}, ${e.lng.toFixed(6)})`),
+      ...(scenario.droppedItems.length > 0
+        ? [
+            "",
+            `5. OBJETOS Y SEÑALIZACIÓN EN VÍA (${scenario.droppedItems.length}):`,
+            ...scenario.droppedItems.map((item) => `   - ${item.label} (${item.kind})`),
+          ]
+        : []),
+      "",
+      "==================================================",
+      "Dictamen emitido por CESVI Sistema Pericial Interactivo",
+      "==================================================",
     ].join("\n")
+
     const url = URL.createObjectURL(
       new Blob([report], { type: "text/plain;charset=utf-8" }),
     )
@@ -243,7 +275,7 @@ export default function App() {
     link.download = "EXP-0248-informe.txt"
     link.click()
     URL.revokeObjectURL(url)
-    setFeedback("Informe exportado")
+    setFeedback("Informe pericial EXP-0248 exportado con éxito")
   }
 
   const handleCreateNewCase = () => {

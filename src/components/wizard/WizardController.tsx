@@ -210,6 +210,11 @@ export default function WizardController({
       {wizardState.step === "posicion_final" && (
         <StepPosicionFinal
           vehicles={scenario.mapVehicles}
+          selectedVehicleId={scenario.selectedVehicleId}
+          onSelectVehicle={(id) => {
+            scenario.setSelectedVehicleId(id)
+            scenario.setSelectedDroppedId(null)
+          }}
           isComplete={wizardState.isComplete}
           onFinalize={handleFinalize}
           onExportReport={onExportReport}

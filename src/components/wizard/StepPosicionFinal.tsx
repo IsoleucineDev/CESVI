@@ -4,6 +4,8 @@ import type { GeoVehicle } from "../../types/scenario"
 
 type StepPosicionFinalProps = {
   vehicles: Record<string, GeoVehicle>
+  selectedVehicleId?: string
+  onSelectVehicle?: (id: string) => void
   isComplete: boolean
   onFinalize: () => void
   onExportReport: () => void
@@ -11,6 +13,8 @@ type StepPosicionFinalProps = {
 
 export default function StepPosicionFinal({
   vehicles,
+  selectedVehicleId,
+  onSelectVehicle,
   isComplete,
   onFinalize,
   onExportReport,
@@ -33,12 +37,17 @@ export default function StepPosicionFinal({
 
       <div className="wizard-substep">
         <div className="wizard-vehicle-summary-list">
-          <small>Vehículos a posicionar:</small>
+          <small>Vehículos a posicionar (toca uno para seleccionarlo en el mapa):</small>
           <div className="wizard-chips-row compact">
             {vehicleList.map((id) => (
-              <span className="wizard-data-chip" key={id}>
+              <button
+                type="button"
+                className={`wizard-chip ${selectedVehicleId === id ? "primary active" : ""}`}
+                key={id}
+                onClick={() => onSelectVehicle?.(id)}
+              >
                 🚗 {id}: {vehicles[id].type || "Vehículo"} ({vehicles[id].rotation}°)
-              </span>
+              </button>
             ))}
           </div>
         </div>
