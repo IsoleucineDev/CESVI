@@ -21,6 +21,7 @@ logs/
 /.plugins/
 /.opencode-skills/
 
+<<<<<<< HEAD
 
 server/.env
 server/node_modules
@@ -36,3 +37,12 @@ uploads/
 __pycache__/
 *.pyc
 .pytest_cache/
+=======
+# Chatbot local (Ollama)
+# El modelo pesa varios GB y no debe subirse a Git.
+*.gguf
+chatbot-service/sessions.json
+chatbot-service/*.tmp
+__pycache__/
+*.pyc
+>>>>>>> 3b98e6c (feat: conectar CESVI con el modelo de Ollama mediante chatbot-service)
