@@ -34,6 +34,7 @@ export default function GeoMapOverlay({
   onRotateVehicle,
   onScaleDropped,
   onScaleVehicle,
+  onMoveAnchor,
 }: {
   mode: "location" | "scenario"
   mapCenter: [number, number]
@@ -54,6 +55,7 @@ export default function GeoMapOverlay({
   onRotateVehicle: (id: string, rotation: number) => void
   onScaleDropped: (id: string, scale: number) => void
   onScaleVehicle: (id: string, scale: number) => void
+  onMoveAnchor?: (position: GeoPosition) => void
 }) {
   const map = useMap()
   const [, redraw] = useState(0)
@@ -118,6 +120,8 @@ export default function GeoMapOverlay({
           onMoveImpact(pos)
         } else if (type === "evidence") {
           onMoveEvidence(id, pos)
+        } else if (type === "anchor" && onMoveAnchor) {
+          onMoveAnchor(pos)
         }
       } else if (dragMode === "rotate") {
         const dx = pointerX - centerPoint.x
@@ -154,7 +158,7 @@ export default function GeoMapOverlay({
       window.removeEventListener("pointermove", handlePointerMove)
       window.removeEventListener("pointerup", handlePointerUp)
     }
-  }, [map, onMoveDropped, onMoveEvidence, onMoveImpact, onMoveVehicle, onRotateDropped, onRotateVehicle, onScaleDropped, onScaleVehicle])
+  }, [map, onMoveAnchor, onMoveDropped, onMoveEvidence, onMoveImpact, onMoveVehicle, onRotateDropped, onRotateVehicle, onScaleDropped, onScaleVehicle])
 
   const beginDrag = (
     event: React.PointerEvent,
@@ -174,7 +178,9 @@ export default function GeoMapOverlay({
     let startScale = 1
     let startRotation = 0
 
-    if (type === "vehicle") {
+    if (type === "anchor") {
+      centerLatLng = { lat: mapCenter[0], lng: mapCenter[1] }
+    } else if (type === "vehicle") {
       const v = mapVehicles[id as "V1" | "V2"]
       centerLatLng = { lat: v.lat, lng: v.lng }
       startScale = v.scale ?? 1
@@ -218,7 +224,12 @@ export default function GeoMapOverlay({
       {mode === "location" && (() => {
         const pin = map.latLngToContainerPoint({ lat: mapCenter[0], lng: mapCenter[1] })
         return (
-          <div className="geo-location-pin" style={{ left: pin.x, top: pin.y }}>
+          <div
+            className="geo-location-pin"
+            style={{ left: pin.x, top: pin.y, cursor: onMoveAnchor ? "grab" : "default" }}
+            onPointerDown={onMoveAnchor ? (event) => beginDrag(event, "anchor", "anchor", "move") : undefined}
+            title="Pin de ubicación · Arrastra para ajustar ubicación exacta"
+          >
             <span />
           </div>
         )

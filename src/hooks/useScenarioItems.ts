@@ -108,6 +108,7 @@ export function useScenarioItems(
       initialLoaded.current = true
       return
     }
+    const existing = loadSavedCase(caseId)
     saveCase(
       {
         version: 2,
@@ -117,6 +118,9 @@ export function useScenarioItems(
         impact: relativeImpact,
         evidence: relativeEvidence,
         droppedItems: relativeDropped,
+        wizard: existing?.wizard,
+        impactVehicles: existing?.impactVehicles,
+        impactTime: existing?.impactTime,
         savedAt: new Date().toISOString(),
       },
       caseId,

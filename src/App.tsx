@@ -20,6 +20,10 @@ import { useTimelinePlayback } from "./hooks/useTimelinePlayback"
 import { api, type CaseContext, type Scene } from "./lib/api"
 import { DEFAULT_ANCHOR, loadSavedCase } from "./lib/migration.ts"
 import type { GeoPosition } from "./lib/geo.ts"
+import { useWizard } from "./hooks/useWizard"
+import WizardController from "./components/wizard/WizardController"
+import CoachMarks from "./components/wizard/CoachMarks"
+import { indexToStep, STEP_LABELS } from "./lib/wizardMachine"
 import {
   type DroppedItem,
   type LocationSuggestion,
@@ -62,6 +66,12 @@ export default function App() {
   // Modelo relativo de elementos vinculado al ancla única
   const scenario = useScenarioItems(anchor, locationQuery)
 
+  // Flujo guiado por pasos (Wizard pericial)
+  const wizard = useWizard(anchor, locationQuery)
+  const isInicio = wizard.wizardState.step === "inicio"
+  const [isPlacingOnMap, setIsPlacingOnMap] = useState(false)
+  const [isDrawingTrajectory, setIsDrawingTrajectory] = useState(false)
+
   const handleDeleteSelected = useCallback(() => {
     if (scenario.selectedDroppedId) {
       scenario.setDroppedItems((current) => {
@@ -75,6 +85,13 @@ export default function App() {
   }, [scenario])
 
   const timeline = useTimelinePlayback({ onDeleteSelected: handleDeleteSelected })
+
+  // Sincronizar frame de timeline con el paso del wizard
+  useEffect(() => {
+    if (timeline.selectedFrame !== wizard.activeSceneIndex) {
+      timeline.setSelectedFrame(wizard.activeSceneIndex)
+    }
+  }, [wizard.activeSceneIndex, timeline])
 
   const activeTools = ribbonGroups[ribbon] || ribbonGroups.Mapeo
   const mapViewMode = timeline.selectedFrame === 0 ? "location" : "scenario"
@@ -263,10 +280,41 @@ export default function App() {
       timeline.setPlaying(false)
       timeline.setSelectedFrame(0)
 
+      // Si está en escena 01, solicitar confirmación de la nueva dirección
+      if (wizard.wizardState.step === "inicio") {
+        wizard.setScene01Substep("confirm_address")
+      }
+
       // Toast requerido
       setFeedback(`Escena reubicada: ${displayName} (${lat.toFixed(5)}, ${lng.toFixed(5)})`)
     },
-    [mapInstance, mapViewZoom, scenario, setLocationQuery, timeline],
+    [mapInstance, mapViewZoom, scenario, setLocationQuery, timeline, wizard],
+  )
+
+  const handleMoveAnchor = useCallback(
+    (pos: GeoPosition) => {
+      setAnchor(pos)
+      setMapCenter([pos.lat, pos.lng])
+      if (wizard.wizardState.step === "inicio") {
+        wizard.setScene01Substep("confirm_address")
+      }
+    },
+    [wizard],
+  )
+
+  const handleSelectFrame = useCallback(
+    (frameIndex: number) => {
+      const targetStep = indexToStep(frameIndex)
+      if (wizard.wizardState.unlockedSteps.includes(targetStep)) {
+        wizard.goToStep(targetStep)
+        timeline.setSelectedFrame(frameIndex)
+      } else {
+        setFeedback(
+          `Paso "${STEP_LABELS[targetStep]}" aún bloqueado. Completa el paso actual primero.`,
+        )
+      }
+    },
+    [wizard, timeline],
   )
 
   const handleSelectLocationSuggestion = (suggestion: LocationSuggestion) => {
@@ -281,7 +329,7 @@ export default function App() {
   }
 
   return (
-    <main className="app-shell" aria-busy={dataLoading}>
+    <main className={`app-shell ${isInicio ? "is-wizard-inicio" : ""}`} aria-busy={dataLoading}>
       <ErrorBoundary fallbackTitle="Error en la barra de navegación">
         <TopBar
           onOpenDashboard={() => setShowDashboard(true)}
@@ -291,6 +339,7 @@ export default function App() {
           onUndo={handleUndo}
           onRedo={handleRedo}
           onExportReport={handleExportReport}
+          exportDisabled={!wizard.wizardState.isComplete}
         >
           {openMenu && (
             <CatalogMenu
@@ -302,60 +351,64 @@ export default function App() {
         </TopBar>
       </ErrorBoundary>
 
-      <ErrorBoundary fallbackTitle="Error en la barra de herramientas">
-        <RibbonBar
-          ribbon={ribbon}
-          activeTools={activeTools}
-          selectedTool={selectedTool}
-          onSelectTool={(tool) => {
-            setSelectedTool(tool)
-            setFeedback(`${tool} activado`)
-          }}
-          locationQuery={locationQuery}
-          onChangeLocationQuery={setLocationQuery}
-          locationSuggestions={locationSuggestions}
-          locationSearchLoading={locationSearchLoading}
-          onSelectLocationSuggestion={handleSelectLocationSuggestion}
-          mapTheme={mapTheme}
-          onToggleMapTheme={() => {
-            const next = mapTheme === "base" ? "technical" : "base"
-            setMapTheme(next)
-            setFeedback(next === "base" ? "Mapa base activado" : "Mapa técnico activado")
-          }}
-          onAdjustScene={() => {
-            if (mapInstance) {
-              mapInstance.setView(mapViewCenter, mapViewZoom)
-              setCurrentZoom(mapViewZoom)
-            }
-            setMapMode("select")
-            setFeedback("Escena ajustada al viewport")
-          }}
-          onSearchEnter={async (val) => {
-            const first = locationSuggestions[0]
-            if (first) {
-              handleSelectLocationSuggestion(first)
-              return
-            }
-            const found = await searchAddress(val)
-            if (found) {
-              handleSelectLocationSuggestion(found)
-            } else {
-              setFeedback(`No se encontró la ubicación: "${val}". Verifique la dirección.`)
-            }
-          }}
-        />
-      </ErrorBoundary>
+      {!isInicio && (
+        <ErrorBoundary fallbackTitle="Error en la barra de herramientas">
+          <RibbonBar
+            ribbon={ribbon}
+            activeTools={activeTools}
+            selectedTool={selectedTool}
+            onSelectTool={(tool) => {
+              setSelectedTool(tool)
+              setFeedback(`${tool} activado`)
+            }}
+            locationQuery={locationQuery}
+            onChangeLocationQuery={setLocationQuery}
+            locationSuggestions={locationSuggestions}
+            locationSearchLoading={locationSearchLoading}
+            onSelectLocationSuggestion={handleSelectLocationSuggestion}
+            mapTheme={mapTheme}
+            onToggleMapTheme={() => {
+              const next = mapTheme === "base" ? "technical" : "base"
+              setMapTheme(next)
+              setFeedback(next === "base" ? "Mapa base activado" : "Mapa técnico activado")
+            }}
+            onAdjustScene={() => {
+              if (mapInstance) {
+                mapInstance.setView(mapViewCenter, mapViewZoom)
+                setCurrentZoom(mapViewZoom)
+              }
+              setMapMode("select")
+              setFeedback("Escena ajustada al viewport")
+            }}
+            onSearchEnter={async (val) => {
+              const first = locationSuggestions[0]
+              if (first) {
+                handleSelectLocationSuggestion(first)
+                return
+              }
+              const found = await searchAddress(val)
+              if (found) {
+                handleSelectLocationSuggestion(found)
+              } else {
+                setFeedback(`No se encontró la ubicación: "${val}". Verifique la dirección.`)
+              }
+            }}
+          />
+        </ErrorBoundary>
+      )}
 
       <div className="workspace">
-        <section className="editor-pane">
-          <ErrorBoundary fallbackTitle="Error en las pestañas de escena">
-            <SceneTabs
-              frames={timeline.frames}
-              selectedFrame={timeline.selectedFrame}
-              onSelectFrame={timeline.setSelectedFrame}
-              onAddFrame={timeline.addFrame}
-            />
-          </ErrorBoundary>
+        <section className={`editor-pane ${isInicio ? "is-wizard-inicio" : ""}`}>
+          {!isInicio && (
+            <ErrorBoundary fallbackTitle="Error en las pestañas de escena">
+              <SceneTabs
+                frames={timeline.frames}
+                selectedFrame={timeline.selectedFrame}
+                onSelectFrame={handleSelectFrame}
+                onAddFrame={timeline.addFrame}
+              />
+            </ErrorBoundary>
+          )}
 
           <ErrorBoundary fallbackTitle="Error en el mapa interactivo">
             <MapCanvas
@@ -365,7 +418,7 @@ export default function App() {
                 if (m === "select" || m === "pan") mapInstance?.dragging.enable()
               }}
               mapTheme={mapTheme}
-              mapViewMode={mapViewMode}
+              mapViewMode={isInicio ? "location" : mapViewMode}
               mapViewCenter={mapViewCenter}
               mapViewZoom={mapViewZoom}
               mapCenter={mapCenter}
@@ -400,32 +453,66 @@ export default function App() {
               onRotateVehicle={scenario.rotateVehicle}
               onScaleDropped={scenario.scaleDropped}
               onScaleVehicle={scenario.scaleVehicle}
-              inspectorOpen={inspectorOpen}
+              onMoveAnchor={handleMoveAnchor}
+              inspectorOpen={!isInicio && inspectorOpen}
               onCloseInspector={() => setInspectorOpen(false)}
               onOpenInspector={() => setInspectorOpen(true)}
             />
           </ErrorBoundary>
 
-          <ErrorBoundary fallbackTitle="Error en la línea de tiempo">
-            <Timeline
-              framesCount={timeline.frames.length}
-              selectedFrame={timeline.selectedFrame}
-              playing={timeline.playing}
-              onTogglePlay={timeline.togglePlay}
-              onPrevFrame={timeline.prevFrame}
-              onNextFrame={timeline.nextFrame}
-            />
-          </ErrorBoundary>
+          {!isInicio && (
+            <ErrorBoundary fallbackTitle="Error en la línea de tiempo">
+              <Timeline
+                framesCount={timeline.frames.length}
+                selectedFrame={timeline.selectedFrame}
+                playing={timeline.playing}
+                onTogglePlay={timeline.togglePlay}
+                onPrevFrame={timeline.prevFrame}
+                onNextFrame={timeline.nextFrame}
+              />
+            </ErrorBoundary>
+          )}
         </section>
 
         <ErrorBoundary fallbackTitle="Error en el asistente pericial">
           <AssistantPanel
             context={assistantContext}
+            wizard={wizard}
+            wizardContent={
+              <WizardController
+                wizard={wizard}
+                scenario={scenario}
+                anchor={anchor}
+                locationQuery={locationQuery}
+                onSearchEnter={async (val) => {
+                  const first = locationSuggestions[0]
+                  if (first) {
+                    handleSelectLocationSuggestion(first)
+                    return
+                  }
+                  const found = await searchAddress(val)
+                  if (found) {
+                    handleSelectLocationSuggestion(found)
+                  } else {
+                    setFeedback(`No se encontró la ubicación: "${val}". Verifique la dirección.`)
+                  }
+                }}
+                isSearching={locationSearchLoading}
+                onExportReport={handleExportReport}
+                onSetFeedback={setFeedback}
+                isPlacingOnMap={isPlacingOnMap}
+                setIsPlacingOnMap={setIsPlacingOnMap}
+                isDrawingTrajectory={isDrawingTrajectory}
+                setIsDrawingTrajectory={setIsDrawingTrajectory}
+              />
+            }
             onShowProperties={() => setInspectorOpen(true)}
             onAttachFile={(name) => setFeedback(`${name} adjuntado al expediente`)}
           />
         </ErrorBoundary>
       </div>
+
+      <CoachMarks currentStep={wizard.wizardState.step} />
 
       <DebugPanel
         anchor={anchor}

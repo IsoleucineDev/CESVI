@@ -41,6 +41,7 @@ type MapCanvasProps = {
   onRotateVehicle: (id: string, rotation: number) => void
   onScaleDropped: (id: string, scale: number) => void
   onScaleVehicle: (id: string, scale: number) => void
+  onMoveAnchor?: (position: GeoPosition) => void
   inspectorOpen: boolean
   onCloseInspector: () => void
   onOpenInspector: () => void
@@ -75,6 +76,7 @@ export default function MapCanvas({
   onRotateVehicle,
   onScaleDropped,
   onScaleVehicle,
+  onMoveAnchor,
   inspectorOpen,
   onCloseInspector,
   onOpenInspector,
@@ -119,6 +121,7 @@ export default function MapCanvas({
           onRotateVehicle={onRotateVehicle}
           onScaleDropped={onScaleDropped}
           onScaleVehicle={onScaleVehicle}
+          onMoveAnchor={onMoveAnchor}
         />
       </MapContainer>
 

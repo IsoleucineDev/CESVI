@@ -10,6 +10,7 @@ type TopBarProps = {
   onUndo: () => void
   onRedo: () => void
   onExportReport: () => void
+  exportDisabled?: boolean
   children?: ReactNode
 }
 
@@ -21,6 +22,7 @@ export default function TopBar({
   onUndo,
   onRedo,
   onExportReport,
+  exportDisabled = false,
   children,
 }: TopBarProps) {
   return (
@@ -89,7 +91,12 @@ export default function TopBar({
           <Icon name="redo" />
         </Button>
         <span className="divider" />
-        <Button className="share-button" onClick={onExportReport}>
+        <Button
+          className={`share-button ${exportDisabled ? "disabled" : ""}`}
+          disabled={exportDisabled}
+          onClick={onExportReport}
+          title={exportDisabled ? "Completa el peritaje (100%) para exportar el informe" : "Exportar informe pericial"}
+        >
           <Icon name="download" />
           Exportar informe
         </Button>

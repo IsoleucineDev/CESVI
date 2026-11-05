@@ -44,7 +44,7 @@ export type DroppedItem = {
 }
 
 export type DragState = {
-  type: "vehicle" | "dropped" | "impact" | "evidence"
+  type: "vehicle" | "dropped" | "impact" | "evidence" | "anchor"
   id: string
   mode: "move" | "rotate" | "scale"
   pointerOffset: { x: number; y: number }

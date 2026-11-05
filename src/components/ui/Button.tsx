@@ -12,6 +12,7 @@ export default function Button({
   onPointerDown,
   style,
   title,
+  type = "button",
 }: {
   ariaControls?: string
   ariaExpanded?: boolean
@@ -24,6 +25,7 @@ export default function Button({
   onPointerDown?: (event: PointerEvent<HTMLButtonElement>) => void
   style?: CSSProperties
   title?: string
+  type?: "button" | "submit" | "reset"
 }) {
   return (
     <button
@@ -37,7 +39,7 @@ export default function Button({
       onPointerDown={onPointerDown}
       style={style}
       title={title}
-      type="button"
+      type={type}
     >
       {children}
     </button>
