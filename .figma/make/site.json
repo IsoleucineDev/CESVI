@@ -1,5 +1,6 @@
 {
-  "description": "This interactive web application allows users to recreate accident scenarios using a customizable map, facilitating detailed analysis and reporting for accident investigators.",
+  "title": "CESVI · Reconstrucción vial",
+  "description": "Aplicación pericial interactiva para la reconstrucción de hechos de tránsito terrestre y peritaje vial.",
   "robots": {
     "index": false
   },

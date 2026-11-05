@@ -167,3 +167,14 @@ Las pruebas de la entrevista (`backend/tests/test_interview.py`) validan:
 - Determinismo de selección de preguntas según prioridad.
 - Extracción offline segura ante saltos de preguntas.
 - Transiciones de estado hasta la finalización de la entrevista.
+
+---
+
+## 5. Créditos y Atribuciones
+
+Este proyecto utiliza componentes y datos de cartografía libre:
+
+- **Datos cartográficos:** &copy; [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors.
+- **Geocodificación y búsqueda de direcciones:** [Nominatim](https://nominatim.openstreetmap.org/) bajo licencia ODbL (Open Database License).
+- **Lienzo cartográfico:** [Leaflet](https://leafletjs.com/) y [React-Leaflet](https://react-leaflet.js.org/).
+

@@ -94,11 +94,11 @@ export default function MapCanvas({
         center={DEFAULT_MAP_CENTER}
         zoom={15}
         zoomControl={false}
-        attributionControl
+        attributionControl={true}
       >
         <ZoomControl position="bottomright" />
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <MapViewport center={mapViewCenter} zoom={mapViewZoom} />

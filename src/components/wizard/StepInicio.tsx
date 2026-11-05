@@ -99,6 +99,21 @@ export default function StepInicio({
               {isSearching ? "Buscando..." : "Buscar"}
             </Button>
           </form>
+          <div
+            className="osm-attribution-note"
+            style={{ fontSize: "10px", color: "var(--muted)", marginTop: "8px" }}
+          >
+            Búsqueda de direcciones vía Nominatim · &copy;{" "}
+            <a
+              href="https://www.openstreetmap.org/copyright"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#38bdf8", textDecoration: "underline" }}
+            >
+              OpenStreetMap
+            </a>{" "}
+            contributors
+          </div>
         </div>
       )}
 

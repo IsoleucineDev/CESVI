@@ -24,6 +24,7 @@ import { useWizard } from "./hooks/useWizard"
 import WizardController from "./components/wizard/WizardController"
 import CoachMarks from "./components/wizard/CoachMarks"
 import { indexToStep, STEP_LABELS, type WizardStep } from "./lib/wizardMachine"
+import { exportUnityJson } from "./lib/exportUnity"
 import {
   type DroppedItem,
   type LocationSuggestion,
@@ -264,6 +265,7 @@ export default function App() {
       "",
       "==================================================",
       "Dictamen emitido por CESVI Sistema Pericial Interactivo",
+      "© OpenStreetMap contributors (https://www.openstreetmap.org/copyright)",
       "==================================================",
     ].join("\n")
 
@@ -275,6 +277,17 @@ export default function App() {
     link.download = "EXP-0248-informe.txt"
     link.click()
     URL.revokeObjectURL(url)
+
+    exportUnityJson({
+      caseId: "EXP-0248",
+      anchor,
+      locationQuery,
+      vehicles: scenario.mapVehicles,
+      impact: scenario.impactPosition,
+      evidence: scenario.evidencePositions,
+      droppedItems: scenario.droppedItems,
+    })
+
     setFeedback("Informe pericial EXP-0248 exportado con éxito")
   }
 

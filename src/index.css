@@ -1033,7 +1033,19 @@ kbd {
 }
 
 .leaflet-map .leaflet-control-attribution {
-  font-size: 9px;
+  font-size: 10px;
+  background: rgba(15, 23, 42, 0.88);
+  color: #94a3b8;
+  padding: 2px 8px;
+  border-top-left-radius: 4px;
+  border-left: 1px solid rgba(56, 189, 248, 0.3);
+  border-top: 1px solid rgba(56, 189, 248, 0.3);
+  z-index: 1000;
+}
+
+.leaflet-map .leaflet-control-attribution a {
+  color: #38bdf8;
+  text-decoration: underline;
 }
 
 

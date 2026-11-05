@@ -83,7 +83,18 @@ export default function RibbonBar({
             ))}
           </div>
         )}
-        <span className="maps-note">Datos cartográficos · © OpenStreetMap</span>
+        <span className="maps-note">
+          Datos cartográficos y búsqueda · &copy;{" "}
+          <a
+            href="https://www.openstreetmap.org/copyright"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "inherit", textDecoration: "underline" }}
+          >
+            OpenStreetMap
+          </a>{" "}
+          contributors
+        </span>
       </div>
 
       <div className="ribbon-separator" />
