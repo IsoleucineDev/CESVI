@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "format": "oxfmt",
     "typecheck": "tsc --noEmit",
-    "test": "node --test src/lib/geo.test.ts"
+    "test": "node --test src/lib/geo.test.ts src/lib/wizardMachine.test.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
