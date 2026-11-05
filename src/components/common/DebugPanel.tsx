@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { distanceMeters, type GeoPosition } from "../../lib/geo"
+import { STEP_LABELS, WIZARD_STEPS, type WizardStep } from "../../lib/wizardMachine"
 
 export type TestLocation = {
   name: string
@@ -29,20 +30,24 @@ type DebugPanelProps = {
   anchor: GeoPosition
   activeSceneIndex: number
   activeSceneName: string
+  currentStep?: WizardStep
   v1: GeoPosition & { rotation: number }
   v2: GeoPosition & { rotation: number }
   evidence: Array<{ label: string; lat: number; lng: number }>
   onRelocate: (name: string, coords: GeoPosition) => void
+  onJumpToStep?: (step: WizardStep) => void
 }
 
 export default function DebugPanel({
   anchor,
   activeSceneIndex,
   activeSceneName,
+  currentStep,
   v1,
   v2,
   evidence,
   onRelocate,
+  onJumpToStep,
 }: DebugPanelProps) {
   const isDebug =
     typeof window !== "undefined" &&
@@ -179,6 +184,47 @@ export default function DebugPanel({
         >
           📍 Probar reubicación ({nextLocation.name.split(",")[0]})
         </button>
+      </div>
+
+      <div style={{ marginTop: 8, paddingTop: 6, borderTop: "1px solid rgba(255,255,255,0.12)" }}>
+        <div style={{ color: "#94a3b8", marginBottom: 5, fontSize: 10, fontWeight: 600 }}>
+          SALTAR A PASO (DEBUG):
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 4 }}>
+          {WIZARD_STEPS.map((step, idx) => {
+            const stepNumber = String(idx + 1).padStart(2, "0")
+            const isCurrent = currentStep ? currentStep === step : activeSceneIndex === idx
+            return (
+              <button
+                key={step}
+                type="button"
+                onClick={() => onJumpToStep?.(step)}
+                title={`Saltar a ${STEP_LABELS[step]}`}
+                style={{
+                  background: isCurrent ? "#0284c7" : "rgba(255, 255, 255, 0.08)",
+                  color: isCurrent ? "#ffffff" : "#cbd5e1",
+                  border: isCurrent
+                    ? "1px solid #38bdf8"
+                    : "1px solid rgba(255, 255, 255, 0.16)",
+                  borderRadius: 4,
+                  padding: "5px 6px",
+                  fontSize: 10,
+                  fontWeight: isCurrent ? 700 : 500,
+                  cursor: "pointer",
+                  textAlign: "center",
+                  transition: "all 0.15s ease",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 4,
+                }}
+              >
+                {isCurrent && <span style={{ fontSize: 8 }}>●</span>}
+                Saltar a paso {stepNumber}
+              </button>
+            )
+          })}
+        </div>
       </div>
     </aside>
   )

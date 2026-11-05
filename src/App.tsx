@@ -23,7 +23,7 @@ import { toOffsetM, type GeoPosition } from "./lib/geo.ts"
 import { useWizard } from "./hooks/useWizard"
 import WizardController from "./components/wizard/WizardController"
 import CoachMarks from "./components/wizard/CoachMarks"
-import { indexToStep, STEP_LABELS } from "./lib/wizardMachine"
+import { indexToStep, STEP_LABELS, type WizardStep } from "./lib/wizardMachine"
 import {
   type DroppedItem,
   type LocationSuggestion,
@@ -349,6 +349,14 @@ export default function App() {
     [wizard, timeline],
   )
 
+  const handleDebugJump = useCallback(
+    (step: WizardStep) => {
+      wizard.jumpToStep(step)
+      setFeedback(`[DEBUG] Saltando a ${STEP_LABELS[step]}`)
+    },
+    [wizard],
+  )
+
   const handleMapClick = useCallback(
     (pos: GeoPosition) => {
       // Flujo Escena 02: Posicionamiento y trayectoria de vehículos
@@ -628,10 +636,12 @@ export default function App() {
         anchor={anchor}
         activeSceneIndex={timeline.selectedFrame}
         activeSceneName={timeline.frames[timeline.selectedFrame]}
+        currentStep={wizard.wizardState.step}
         v1={scenario.mapVehicles.V1}
         v2={scenario.mapVehicles.V2}
         evidence={scenario.evidencePositions}
         onRelocate={handleRelocate}
+        onJumpToStep={handleDebugJump}
       />
 
       {showDashboard && (
