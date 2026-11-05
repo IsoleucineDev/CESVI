@@ -243,7 +243,9 @@ export default function GeoMapOverlay({
         )
       })()}
 
-      {/* Trayectorias previas de aproximación */}
+      {mode === "scenario" && (
+        <>
+          {/* Trayectorias previas de aproximación */}
       {Object.keys(mapVehicles).map((id) => {
         const vehicle = mapVehicles[id]
         if (!vehicle?.trajectoryPoints || vehicle.trajectoryPoints.length === 0) return null
@@ -485,6 +487,8 @@ export default function GeoMapOverlay({
           </Fragment>
         )
       })}
+        </>
+      )}
     </div>
   )
 }

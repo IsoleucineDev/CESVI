@@ -227,6 +227,14 @@ export function useScenarioItems(
     )
   }, [anchor])
 
+  const addEvidenceMarker = useCallback((label?: string, pos?: GeoPosition) => {
+    const nextLabel = label || `E${relativeEvidence.length + 1}`
+    const defaultOffset = { x: 5 * (relativeEvidence.length + 1), y: -5 * (relativeEvidence.length + 1) }
+    const offset = pos ? toOffsetM(anchor, pos) : defaultOffset
+    setRelativeEvidence((current) => [...current, { label: nextLabel, x: offset.x, y: offset.y }])
+    return { label: nextLabel, ...toLatLng(anchor, offset) }
+  }, [anchor, relativeEvidence.length])
+
   const rotateDropped = (id: string, rotation: number) => {
     setRelativeDropped((current) =>
       current.map((item) => (item.id === id ? { ...item, rotation } : item)),
@@ -377,6 +385,7 @@ export function useScenarioItems(
     removeVehicle,
     moveImpact,
     moveEvidence,
+    addEvidenceMarker,
     rotateDropped,
     rotateVehicle,
     scaleDropped,

@@ -19,6 +19,7 @@ type WizardControllerProps = {
   setIsPlacingOnMap: (val: boolean) => void
   isDrawingTrajectory: boolean
   setIsDrawingTrajectory: (val: boolean) => void
+  onToggleMeasure?: () => void
 }
 
 export default function WizardController({
@@ -34,6 +35,7 @@ export default function WizardController({
   setIsPlacingOnMap,
   isDrawingTrajectory,
   setIsDrawingTrajectory,
+  onToggleMeasure,
 }: WizardControllerProps) {
   const { wizardState, advanceStep, goToStep } = wizard
 
@@ -122,8 +124,8 @@ export default function WizardController({
   }
 
   const handleAddEvidence = () => {
-    scenario.addCatalogItem("Evidencia pericial", "object")
-    onSetFeedback("Evidencia agregada · Arrastra para ubicarla en el mapa")
+    const ev = scenario.addEvidenceMarker()
+    onSetFeedback(`Evidencia ${ev.label} agregada al mapa · Arrastra para ubicarla`)
   }
 
   const handleAddSignal = () => {
@@ -132,6 +134,7 @@ export default function WizardController({
   }
 
   const handleStartMeasure = () => {
+    if (onToggleMeasure) onToggleMeasure()
     onSetFeedback("Herramienta de medición activada · Haz clic en el mapa")
   }
 

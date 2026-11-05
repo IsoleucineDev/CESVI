@@ -369,11 +369,23 @@ export default function App() {
         }
       }
 
-      // Flujo Escena 03: Posicionamiento de impacto
-      if (wizard.wizardState.step === "impacto" && wizard.scene03Substep === "place_impact") {
-        scenario.moveImpact(pos)
-        setFeedback("Punto de impacto reubicado")
-        return
+      // Flujo Escena 03: Posicionamiento de impacto y elementos periciales
+      if (wizard.wizardState.step === "impacto") {
+        if (wizard.scene03Substep === "place_impact") {
+          scenario.moveImpact(pos)
+          setFeedback(`Punto de impacto fijado en (${pos.lat.toFixed(5)}, ${pos.lng.toFixed(5)})`)
+          return
+        }
+        if (wizard.scene03Substep === "add_evidence") {
+          const ev = scenario.addEvidenceMarker(undefined, pos)
+          setFeedback(`Evidencia ${ev.label} fijada en el mapa`)
+          return
+        }
+        if (wizard.scene03Substep === "add_signal") {
+          scenario.addItem({ kind: "object", label: "Señal vial" }, pos)
+          setFeedback("Señalización colocada en el mapa")
+          return
+        }
       }
     },
     [wizard, scenario, anchor, isDrawingTrajectory],
@@ -567,6 +579,9 @@ export default function App() {
                 setIsPlacingOnMap={setIsPlacingOnMap}
                 isDrawingTrajectory={isDrawingTrajectory}
                 setIsDrawingTrajectory={setIsDrawingTrajectory}
+                onToggleMeasure={() =>
+                  setMapMode((m) => (m === "measure" ? "select" : "measure"))
+                }
               />
             }
             onShowProperties={() => setInspectorOpen(true)}
