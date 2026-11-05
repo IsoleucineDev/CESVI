@@ -6,7 +6,7 @@
 import re
 import unicodedata
 
-from schema import SALTADO
+from .schema import SALTADO
 
 NO_INFO = re.compile(
     r"^\W*(null|none|nulo|n/?a|n/?d|no aplica|no disponible|desconocid[oa]|se desconoce|sin (dato|informaci)|"

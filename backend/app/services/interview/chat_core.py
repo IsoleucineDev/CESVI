@@ -2,8 +2,8 @@
 El modelo PROPONE los datos (de todos los temas pendientes que mencione la respuesta) y el código VERIFICA."""
 import re
 
-from facts_utils import extract_literal_number, verify_extractions
-from schema import SALTADO, SYSTEM_E2, build_e2_user, parse_json_loose
+from .facts_utils import extract_literal_number, verify_extractions
+from .schema import SALTADO, SYSTEM_E2, build_e2_user, parse_json_loose
 
 # "No hay dato" con otras palabras. OJO: "no hay señales" o "no se observan huellas" SÍ son respuestas válidas.
 NO_DATA = re.compile(
