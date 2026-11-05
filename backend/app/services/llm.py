@@ -366,6 +366,91 @@ class LLMClient:
             time.sleep(0.015)
 
 
+    def extract_interview_data(
+        self, system: str, user: str, max_tokens: int = 500, db: Optional[Session] = None
+    ) -> str:
+        """Extrae datos de la respuesta del perito utilizando Groq o Gemini configurados."""
+        if not settings.GROQ_API_KEY and not settings.GEMINI_API_KEY:
+            return "{}"
+
+        start_time = time.time()
+        call_messages = [
+            {"role": "system", "content": f"{system}\nResponder únicamente con un objeto JSON válido."},
+            {"role": "user", "content": user},
+        ]
+
+        if settings.GROQ_API_KEY:
+            groq_candidates = [settings.GROQ_MODEL, "openai/gpt-oss-120b", "qwen/qwen3.8-27b", "llama-3.3-70b-versatile"]
+            for mod in groq_candidates:
+                if not mod:
+                    continue
+                try:
+                    url = "https://api.groq.com/openai/v1/chat/completions"
+                    headers = {
+                        "Authorization": f"Bearer {settings.GROQ_API_KEY}",
+                        "Content-Type": "application/json",
+                    }
+                    payload = {
+                        "model": mod,
+                        "messages": call_messages,
+                        "temperature": 0.0,
+                        "max_tokens": max_tokens,
+                        "response_format": {"type": "json_object"},
+                    }
+                    resp = self.http_client.post(url, headers=headers, json=payload, timeout=20.0)
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        content = data["choices"][0]["message"]["content"]
+                        usage = data.get("usage", {})
+                        t_in = usage.get("prompt_tokens", len((system + user).split()))
+                        t_out = usage.get("completion_tokens", len(content.split()))
+                        latency_ms = int((time.time() - start_time) * 1000)
+                        if db:
+                            self._log_call("groq", mod, t_in, t_out, latency_ms, db)
+                        return content
+                except Exception:
+                    continue
+
+        if settings.GEMINI_API_KEY:
+            gemini_candidates = [settings.GEMINI_MODEL, "gemini-1.5-flash", "gemini-flash-latest"]
+            for mod in gemini_candidates:
+                if not mod:
+                    continue
+                try:
+                    clean_mod = mod if mod.startswith("models/") else f"models/{mod}"
+                    url = f"https://generativelanguage.googleapis.com/v1beta/{clean_mod}:generateContent?key={settings.GEMINI_API_KEY}"
+                    payload = {
+                        "contents": [
+                            {"role": "user", "parts": [{"text": user}]}
+                        ],
+                        "systemInstruction": {
+                            "parts": [{"text": f"{system}\nResponder únicamente con un objeto JSON válido."}]
+                        },
+                        "generationConfig": {
+                            "temperature": 0.0,
+                            "maxOutputTokens": max_tokens,
+                            "responseMimeType": "application/json",
+                        },
+                    }
+                    resp = self.http_client.post(url, json=payload, timeout=20.0)
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        candidates = data.get("candidates", [])
+                        if candidates:
+                            content = candidates[0]["content"]["parts"][0]["text"]
+                            meta = data.get("usageMetadata", {})
+                            t_in = meta.get("promptTokenCount", len((system + user).split()))
+                            t_out = meta.get("candidatesTokenCount", len(content.split()))
+                            latency_ms = int((time.time() - start_time) * 1000)
+                            if db:
+                                self._log_call("gemini", mod, t_in, t_out, latency_ms, db)
+                            return content
+                except Exception:
+                    continue
+
+        return "{}"
+
+
 llm_client = LLMClient()
 
 

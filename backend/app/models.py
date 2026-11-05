@@ -77,3 +77,21 @@ class Extraction(Base):
     data = Column(Text, nullable=False)
     created_at = Column(DateTime, default=utc_now, nullable=False)
 
+
+class Interview(Base):
+    __tablename__ = "interviews"
+
+    case_id = Column(String(64), ForeignKey("cases.id", ondelete="CASCADE"), primary_key=True)
+    modalidad = Column(String(64), nullable=True)
+    vehiculos = Column(Text, default="{}", nullable=False)
+    form = Column(Text, default="{}", nullable=False)
+    estado = Column(Text, default="{}", nullable=False)
+    last_q = Column(Text, nullable=True)
+    last_a = Column(Text, nullable=True)
+    done = Column(Integer, default=0, nullable=False)
+    tema = Column(String(64), nullable=True)
+    pregunta = Column(Text, nullable=True)
+    created_at = Column(DateTime, default=utc_now, nullable=False)
+    updated_at = Column(DateTime, default=utc_now, onupdate=utc_now, nullable=False)
+
+    case = relationship("Case")

@@ -13,7 +13,7 @@ from app.exceptions import (
     validation_exception_handler,
     unhandled_exception_handler,
 )
-from app.routers import cases, documents, assistant
+from app.routers import cases, documents, assistant, interview
 
 
 @asynccontextmanager
@@ -55,6 +55,8 @@ def health_check():
 v1_router.include_router(cases.router)
 v1_router.include_router(documents.router)
 v1_router.include_router(assistant.router)
+v1_router.include_router(interview.router)
 
 app.include_router(v1_router)
 app.include_router(assistant.router)
+app.include_router(interview.router)

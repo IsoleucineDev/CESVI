@@ -1,45 +1,81 @@
 """Motor de la entrevista al perito (chat que ayuda a generar el reporte).
 
-El CÓDIGO (chat_core + schema + facts_utils, de la compañera) lleva el checklist y verifica;
-el MODELO (Qwen2.5-3B + adapter LoRA, servido con mlx_lm.server) redacta preguntas y propone datos.
+El CÓDIGO (chat_core + schema + facts_utils) lleva el checklist y verifica;
+la selección y redacción de preguntas es DETERMINISTA (plantillas por vehículo);
+y la extracción de datos se delega a los proveedores Gemini/Groq configurados en llm_client.
 Todo el estado vive en la tabla `interviews`, así sobrevive a reinicios del backend.
 """
 import json
+import re
 from typing import Any, Dict, Optional
 
-import httpx
 from sqlalchemy.orm import Session
 
-from app.config import settings
 from app.exceptions import AppException
 from app.models import Case, Interview
+from app.services.llm import llm_client
 
 from .chat_core import process_answer
-from .schema import FIN_TEXT, MODALIDADES, SYSTEM_Q, build_q_user, parse_q, topics_for
+from .schema import FIN_TEXT, MODALIDADES, topics_for
+
+# ------------------------------------------------------------------ Plantillas deterministas
+QUESTION_TEMPLATES: Dict[str, str] = {
+    # --- Generales ---
+    "declaracion_{V}": "¿Cuál es la declaración del conductor de {vehículo} sobre cómo ocurrió el hecho?",
+    "superficie": "¿Cuál es el tipo y condición de la superficie de rodamiento (ej. asfalto seco, concreto mojado)?",
+    "iluminacion": "¿Cuáles eran las condiciones de iluminación y visibilidad al momento del hecho (día, noche, alumbrado, lluvia, niebla)?",
+    "sentido_carril_{V}": "¿En qué sentido de circulación y por cuál carril transitaba {vehículo}?",
+    "velocidad_{V}_kmh": "¿Cuál es la velocidad estimada de {vehículo} antes del evento (en km/h)?",
+    "maniobra_previa_{V}": "¿Qué maniobra realizó {vehículo} antes del impacto (ej. frenado, giro, cambio de carril, detenido)?",
+
+    # --- Específicos por modalidad ---
+    "distancia_previa": "¿Cuál era la distancia o tiempo de separación entre los vehículos antes de la frenada o evento?",
+    "senalizacion_preferencia": "¿Qué señalización vial existía en el lugar (semáforo, señal de alto, ceda el paso) o quién tenía preferencia de paso?",
+    "tipo_objeto": "¿Qué tipo de objeto fue impactado, de qué material es y cuál es su altura aproximada?",
+    "causa_perdida_control": "¿Cuál fue la causa de la pérdida de control (derrape, reventón, esquivar, distracción)?",
+    "maniobra_reversa": "¿Cuál fue la dirección y tramo recorrido en maniobra de reversa, y qué visibilidad tenía el conductor?",
+    "vueltas_volcadura": "¿Cuántas vueltas dio el vehículo y en qué sentido ocurrió la volcadura?",
+
+    # --- Hechos e impacto ---
+    "secuencia_eventos": "¿Cuál fue la secuencia y orden de los impactos (primer contacto e impactos secundarios)?",
+    "punto_impacto_via": "¿En qué punto exacto de la vía ocurrió el impacto (calle, carril, intersección o referencia)?",
+    "angulo_impacto": "¿Cuál fue el ángulo aproximado entre los vehículos al momento del impacto?",
+    "altura_marca_objeto_cm": "¿Cuál es la altura (en cm) de las marcas del impacto en el objeto fijo?",
+    "evidencias_sitio": "¿Qué evidencias o indicios se encontraron en el sitio (restos, fragmentos, marcas, pintura)?",
+    "huellas_frenado_m": "¿Cuál es la longitud (en metros) de las huellas de frenado o derrape, si existen?",
+    "airbags_{V}": "¿Qué bolsas de aire de {vehículo} se activaron tras la colisión?",
+
+    # --- Datos de formulario / croquis ---
+    "danos_{V}": "¿Qué zonas de daños presenta {vehículo}, cuál fue la dirección de la fuerza de impacto y su magnitud?",
+    "posicion_final_{V}": "¿Dónde y en qué orientación quedó la posición final de detención de {vehículo}?",
+}
 
 
-def run_llm(system: str, user: str, max_tokens: int = 200) -> str:
-    """Llama a un servidor compatible con OpenAI (mlx_lm.server, Ollama...). Temperatura 0 = igual que en las pruebas."""
-    try:
-        r = httpx.post(
-            f"{settings.INTERVIEW_BASE_URL.rstrip('/')}/chat/completions",
-            json={
-                "model": settings.INTERVIEW_MODEL,
-                "max_tokens": max_tokens,
-                "temperature": 0.0,
-                "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
-            },
-            headers={"Authorization": f"Bearer {settings.INTERVIEW_API_KEY}"},
-            timeout=settings.INTERVIEW_TIMEOUT,
-        )
-        r.raise_for_status()
-        return r.json()["choices"][0]["message"]["content"]
-    except (httpx.HTTPError, KeyError, IndexError, ValueError):
-        raise AppException(
-            status_code=503,
-            code="INTERVIEW_LLM_UNAVAILABLE",
-            message="El modelo de la entrevista no responde. Verifica que el servidor del modelo esté encendido.",
-        )
+def build_question_for_topic(topic: Dict[str, Any], vehiculos: Dict[str, Any]) -> str:
+    """Genera la pregunta de forma determinista a partir del tema y las plantillas."""
+    topic_id = topic["id"]
+    topic_desc = topic.get("desc", topic_id)
+    base_id = topic.get("base") or re.sub(r"V[1-3]", "{V}", topic_id)
+
+    # Identificar vehículo si el tema es por vehículo
+    m = re.search(r"_(V[1-3])(?:_|$)", topic_id)
+    vid = m.group(1) if m else "V1"
+    vname = vehiculos.get(vid)
+    veh_label = f"{vid} ({vname})" if vname and vname != vid else (vname or f"vehículo {vid}")
+
+    template = QUESTION_TEMPLATES.get(base_id)
+    if template:
+        return template.replace("{vehículo}", veh_label).replace("{V}", vid)
+    return f"¿Podrías indicar la información correspondiente a {topic_desc}?"
+
+
+def run_extraction(system: str, user: str, max_tokens: int = 500, db: Optional[Session] = None) -> str:
+    """Delega la extracción al cliente Gemini/Groq configurado en llm.py."""
+    return llm_client.extract_interview_data(system=system, user=user, max_tokens=max_tokens, db=db)
+
+
+# Alias por compatibilidad
+run_llm = run_extraction
 
 
 def _j(s: Optional[str]) -> Dict[str, Any]:
@@ -57,17 +93,14 @@ def _pending(iv: Interview):
 
 
 def _ask_next(iv: Interview):
-    """Decide la siguiente pregunta (o marca el fin) y la deja guardada en `iv`."""
+    """Decide la siguiente pregunta de forma determinista usando el orden de temas y plantillas."""
     topics, pend = _pending(iv)
     if not pend:
         iv.done, iv.tema, iv.pregunta = True, None, FIN_TEXT
     else:
-        last = (iv.last_q, iv.last_a) if iv.last_q is not None else None
-        raw = run_llm(SYSTEM_Q, build_q_user(iv.modalidad, _j(iv.vehiculos), _j(iv.form),
-                                             _j(iv.estado), pend, last))
-        tema, pregunta = parse_q(raw)
-        if tema not in {t["id"] for t in pend}:  # el código manda: si el modelo se sale de la lista, se corrige
-            tema = pend[0]["id"]
+        next_topic = pend[0]
+        tema = next_topic["id"]
+        pregunta = build_question_for_topic(next_topic, _j(iv.vehiculos))
         iv.done, iv.tema, iv.pregunta = False, tema, pregunta
     return topics, pend
 
@@ -123,11 +156,15 @@ def answer_interview(db: Session, case_id: str, respuesta: str):
 
     estado = _j(iv.estado)
     _, pend = _pending(iv)
-    msgs = process_answer(estado, iv.tema, iv.pregunta, resp, pend, iv.modalidad, _j(iv.vehiculos), run_llm)
+
+    def extract_fn(system: str, user: str, max_tokens: int = 500) -> str:
+        return run_extraction(system, user, max_tokens=max_tokens, db=db)
+
+    msgs = process_answer(estado, iv.tema, iv.pregunta, resp, pend, iv.modalidad, _j(iv.vehiculos), extract_fn)
     iv.estado = _dump(estado)
     iv.last_q, iv.last_a = iv.pregunta, resp
     topics, pend = _ask_next(iv)
-    db.commit()  # si el modelo falla antes de este punto no se guarda nada y el perito puede reintentar
+    db.commit()
     return _public(iv, topics, pend, msgs)
 
 

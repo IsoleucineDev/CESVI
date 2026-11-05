@@ -1,124 +1,169 @@
 # CESVI — Sistema de Reconstrucción Pericial y Simulación Vial
 
-Plataforma universitaria para el peritaje y reconstrucción de hechos de tránsito terrestre. Integra captura geo-referenciada de escena sobre mapa a escala real, extracción pericial asistida por inteligencia artificial desde dictámenes en PDF y un motor físico cinemático determinista para la validación de hipótesis de colisión.
+Plataforma integral para el peritaje y reconstrucción de hechos de tránsito terrestre. Combina un frontend modular interactivo con captura cartográfica geo-referenciada, un motor de entrevista pericial determinista y un servicio de extracción estructurada asistida por Inteligencia Artificial (Groq / Google Gemini).
 
 ---
 
-## 1. Arquitectura y Puertos de Desarrollo
+## 1. Arquitectura del Proyecto
 
-| Componente | Directorio | Tecnología | Puerto Local Predeterminado |
-|---|---|---|---|
-| **Frontend** | `src/` | React 19, Vite, Tailwind CSS 4, TypeScript | `http://localhost:8443` |
-| **Backend Principal** | `backend/` | FastAPI, SQLAlchemy, PyMuPDF, Python 3.13 | `http://localhost:8000` |
-| **Backend Legacy (Node)** | `server/` | Express (vigente de forma temporal para portar lógica en Fase 1) | `http://localhost:3001` |
+El sistema está diseñado bajo una arquitectura desacoplada y modular:
+
+```
+CESVI/
+├── src/                                  # Frontend modular en React 19 + Vite + TypeScript
+│   ├── App.tsx                           # Contenedor orquestador de alto nivel
+│   ├── components/
+│   │   ├── assistant/                    # Chatbot y panel de asistencia pericial
+│   │   ├── catalog/                      # Catálogo desplegable de objetos, indicios y vehículos
+│   │   ├── common/                       # Aislamiento de fallas (ErrorBoundary)
+│   │   ├── dashboard/                    # Centro de expedientes y métricas
+│   │   ├── layout/                       # Barra superior y navegación de la app
+│   │   ├── map/                          # Lienzo de Leaflet, capas de vehículos e inspector
+│   │   ├── ribbon/                       # Cinta de herramientas y búsqueda de ubicaciones
+│   │   ├── timeline/                     # Pestañas de escenas y barra de reproducción
+│   │   └── ui/                           # Componentes visuales base (Button, Icon, VehicleSprite)
+│   ├── hooks/                            # Hooks desacoplados (useLocationSearch, useScenarioItems, ...)
+│   ├── lib/                              # Clientes API y utilidades
+│   └── types/                            # Contratos y tipos TypeScript (api.ts, scenario.ts)
+│
+├── backend/                              # Backend en FastAPI + SQLAlchemy + SQLite
+│   ├── app/
+│   │   ├── config.py                     # Configuración y variables de entorno Pydantic
+│   │   ├── database.py                   # Conexión SQLAlchemy y sesiones SQLite
+│   │   ├── models.py                     # Modelos ORM (Case, Document, Interview, Extraction...)
+│   │   ├── routers/                      # Rutas REST (/assistant, /cases, /documents, /interview)
+│   │   └── services/
+│   │       ├── llm.py                    # Cliente LLM con soporte Groq y respaldo Gemini
+│   │       └── interview/                # Motor de la entrevista pericial
+│   │           ├── engine.py             # Generación determinista de preguntas + delegación de extracción
+│   │           ├── schema.py             # Catálogo de temas y modalidades de impacto (intacto)
+│   │           ├── chat_core.py          # Lógica de verificación y actualización de hechos (intacto)
+│   │           └── facts_utils.py        # Normalización y contrastación de citas y unidades
+│   └── tests/                            # Pruebas unitarias sin red (pytest)
+```
+
+### Principios de Arquitectura
+
+1. **Frontend Modular y Resiliente:**
+   - `src/App.tsx` actúa únicamente como orquestador de estado de alto nivel.
+   - Cada sección funcional (`TopBar`, `RibbonBar`, `MapCanvas`, `Timeline`, `AssistantPanel`, `Dashboard`) está encapsulada en un `ErrorBoundary`, impidiendo que un error visual o de renderizado en un módulo rompa el resto de la aplicación.
+   - La lógica reactiva compleja vive en hooks dedicados (`useLocationSearch`, `useScenarioItems`, `useTimelinePlayback`, `useAssistantChat`).
+
+2. **Backend Determinista y Seguro:**
+   - **Preguntas Deterministas:** `engine.py` utiliza plantillas de preguntas parametrizadas por vehículo (ej. `"¿Qué maniobra realizó {vehículo} antes del impacto?"`) y el orden canónico de prioridades, eliminando la necesidad de un modelo local para decidir qué preguntar.
+   - **Extracción Delegada a la Nube:** La extracción de respuestas complejas se delega a `llm_client` en `backend/app/services/llm.py`, utilizando Groq como proveedor principal y Gemini como respaldo.
+   - **Seguridad de Credenciales:** Las API keys (`GROQ_API_KEY`, `GEMINI_API_KEY`) residen exclusivamente del lado servidor en `backend/.env`.
+   - **Persistencia Confiable:** Todo el progreso de la entrevista se almacena en la tabla relacional `interviews` asociada al expediente (`case_id`).
 
 ---
 
 ## 2. Requisitos Previos
 
 - **Node.js**: v20 o superior.
-- **pnpm**: v10 o superior (gestor de paquetes oficial del frontend).
-- **Python**: v3.12 o v3.13 con `pip` y `venv`.
+- **pnpm**: v10 o superior.
+- **Python**: v3.12 o v3.13 con `pip` y soporte de `venv`.
 
 ---
 
-## 3. Puesta en Marcha Local
+## 3. Manual de Instrucciones y Uso para Desarrolladores
 
-### 3.1 Frontend (React + Vite)
+### 3.1 Configuración de Variables de Entorno
 
-Desde la raíz del repositorio:
+#### Backend (`backend/.env`):
+Crea el archivo `backend/.env` (puedes tomar como base `backend/.env.example` si existe) con la configuración deseada:
 
-```bash
-# Instalar dependencias
-pnpm install
-
-# Iniciar servidor de desarrollo (por defecto en http://localhost:8443)
-pnpm dev
-
-# Verificación de tipos estáticos
-pnpm typecheck
-
-# Compilar para producción
-pnpm build
-```
-
-### 3.2 Backend (FastAPI)
-
-Desde el directorio `backend/`:
-
-```bash
-cd backend
-
-# Crear y activar entorno virtual
-python3 -m venv .venv
-source .venv/bin/activate       # En Linux/macOS
-# .venv\Scripts\activate        # En Windows PowerShell
-
-# Instalar dependencias
-pip install -r requirements.txt
-
-# Configurar variables de entorno
-cp .env.example .env            # O editar backend/.env con las claves correspondientes
-
-# Iniciar servidor FastAPI
-uvicorn app.main:app --reload --port 8000
-```
-
-#### Variables de entorno en `backend/.env`
 ```env
-GEMINI_API_KEY=tu_clave_de_gemini
-GROQ_API_KEY=tu_clave_de_groq
+# Proveedores de IA (solo en servidor)
+GROQ_API_KEY=tu_clave_de_groq_aqui
+GROQ_MODEL=llama-3.3-70b-versatile
+
+GEMINI_API_KEY=tu_clave_de_gemini_aqui
+GEMINI_MODEL=gemini-1.5-flash
+
+# Base de datos y servidor
 DATABASE_URL=sqlite:///./cesvi.db
-ALLOWED_ORIGINS=http://localhost:8443,http://localhost:5173
+ALLOWED_ORIGINS=http://localhost:5173,http://localhost:8443,http://localhost:3000
 PORT=8000
 ```
 
+> **Nota:** Puedes configurar ambas claves, solo una de ellas, o ninguna en modo pruebas offline (el motor utilizará guardas y fallbacks seguros si no hay red o credenciales).
+
+#### Frontend (`.env` o `.env.local` en la raíz):
+```env
+VITE_API_URL=http://localhost:8000
+VITE_CASE_ID=EXP-0248
+```
+
 ---
 
-## 4. Ejecución de Pruebas y Verificaciones
+### 3.2 Puesta en Marcha del Backend (FastAPI)
 
-### Verificación del Frontend
+1. Ingresar a la carpeta `backend`:
+   ```bash
+   cd backend
+   ```
+
+2. Crear y activar el entorno virtual:
+   - **En Windows (PowerShell):**
+     ```powershell
+     python -m venv .venv
+     .venv\Scripts\Activate.ps1
+     ```
+   - **En Linux / macOS:**
+     ```bash
+     python3 -m venv .venv
+     source .venv/bin/activate
+     ```
+
+3. Instalar dependencias:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Iniciar el servidor de desarrollo:
+   ```bash
+   uvicorn app.main:app --reload --port 8000
+   ```
+   El backend estará disponible en `http://localhost:8000` (con documentación interactiva Swagger en `http://localhost:8000/docs`).
+
+---
+
+### 3.3 Puesta en Marcha del Frontend (React + Vite)
+
+Desde la raíz del repositorio:
+
+1. Instalar dependencias:
+   ```bash
+   pnpm install
+   ```
+
+2. Iniciar el servidor de desarrollo Vite:
+   ```bash
+   pnpm dev
+   ```
+   La aplicación se abrirá en `http://localhost:5173` o el puerto configurado.
+
+---
+
+## 4. Validación y Ejecución de Pruebas
+
+### 4.1 Verificación Estática del Frontend
 ```bash
-# Comprobación de tipos con el compilador de TypeScript
+# Verificación de tipos estáticos TypeScript
 pnpm typecheck
 
-# Verificación de empaquetado de producción
+# Compilación de producción
 pnpm build
 ```
 
-### Verificación del Backend
+### 4.2 Pruebas Unitarias del Backend (sin red)
 Con el entorno virtual activado en `backend/`:
 ```bash
 cd backend
-python -m pytest -q
+pytest -v
 ```
-
----
-
-## 5. Estándares y Documentos de Referencia
-
-- **[AGENTS.md](AGENTS.md):** Reglas de oro del proyecto, convenciones de commits y directrices de desarrollo.
-- **[DECISIONES.md](DECISIONES.md):** Decisiones de arquitectura técnica, unidades SI obligatorias ($m, s, m/s$), marco de coordenadas métrico local (ENU vs WGS84) y rol delimitado del LLM.
-- **[docs/TICKET-AUDITORIA-CESVI.md](docs/TICKET-AUDITORIA-CESVI.md):** Hoja de ruta maestra, matriz de riesgos y checklist de fases.
-# CESVI
-
-## Variables de entorno
-
-En Vercel configura estas variables en **Project Settings > Environment Variables**:
-
-```env
-VITE_API_BASE_URL=/api
-VITE_CASE_ID=EXP-0248
-GEMINI_API_KEY=...
-GEMINI_MODEL=gemini-flash-latest
-GROQ_API_KEY=...
-GROQ_MODEL=openai/gpt-oss-120b
-FRONT_ORIGIN=https://tu-proyecto.vercel.app
-```
-
-`VITE_*` se incorporan al frontend durante el build. Las claves `GEMINI_API_KEY`
-y `GROQ_API_KEY` solo se leen en el servidor; no las pongas con el prefijo `VITE_`.
-Puedes usar uno o ambos proveedores de IA.
-
-Vercel publica `api/[...path].js` como función serverless y conserva el contrato
-`/api` que usa el frontend.
+Las pruebas de la entrevista (`backend/tests/test_interview.py`) validan:
+- Generación correcta de plantillas por vehículo.
+- Determinismo de selección de preguntas según prioridad.
+- Extracción offline segura ante saltos de preguntas.
+- Transiciones de estado hasta la finalización de la entrevista.
