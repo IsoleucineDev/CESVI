@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react"
+import { useCallback, useMemo, useRef, useState } from "react"
 import { sendToAssistant } from "../lib/assistantApi"
 
 export type ChatItem = {
@@ -27,12 +27,44 @@ export function useAssistantChat(context?: Record<string, unknown>) {
   const [isTyping, setIsTyping] = useState(false)
   const [chatText, setChatText] = useState("")
   const [quickReplies, setQuickReplies] = useState<string[]>([])
-  const [selectedElement] = useState<SelectedElementFields>({
-    vehicle: "Sin selección",
-    speed: "—",
-    trajectory: "—",
-    confidence: "—",
-  })
+
+  const selectedVehicleId = context?.selectedVehicleId as string | undefined
+  const selectedDroppedId = context?.selectedDroppedId as string | undefined
+
+  const selectedElement: SelectedElementFields = useMemo(() => {
+    if (selectedVehicleId === "V1") {
+      return {
+        vehicle: "Vehículo 1 (Nissan Versa)",
+        speed: "42 km/h",
+        trajectory: "Noreste (38°)",
+        confidence: "Alta (94%)",
+      }
+    }
+    if (selectedVehicleId === "V2") {
+      return {
+        vehicle: "Vehículo 2",
+        speed: "35 km/h",
+        trajectory: "Suroeste (-61°)",
+        confidence: "Media (82%)",
+      }
+    }
+    if (selectedDroppedId) {
+      const items = (context?.droppedItems as any[]) || []
+      const found = items.find((i) => i.id === selectedDroppedId)
+      return {
+        vehicle: found?.label ?? "Elemento seleccionado",
+        speed: "0 km/h",
+        trajectory: `${found?.rotation ?? 0}°`,
+        confidence: "Confirmada",
+      }
+    }
+    return {
+      vehicle: "Sin selección",
+      speed: "—",
+      trajectory: "—",
+      confidence: "—",
+    }
+  }, [selectedVehicleId, selectedDroppedId, context?.droppedItems])
 
   // Siempre usamos el contexto MÁS reciente al enviar, no uno viejo capturado por React
   const contextRef = useRef(context)

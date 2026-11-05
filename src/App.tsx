@@ -11,15 +11,16 @@ import RibbonBar from "./components/ribbon/RibbonBar"
 import SceneTabs from "./components/timeline/SceneTabs"
 import Timeline from "./components/timeline/Timeline"
 import MapCanvas from "./components/map/MapCanvas"
+import DebugPanel from "./components/common/DebugPanel"
 
 import { useLocationSearch } from "./hooks/useLocationSearch"
 import { useScenarioItems } from "./hooks/useScenarioItems"
 import { useTimelinePlayback } from "./hooks/useTimelinePlayback"
 
 import { api, type CaseContext, type Scene } from "./lib/api"
+import { DEFAULT_ANCHOR, loadSavedCase } from "./lib/migration.ts"
+import type { GeoPosition } from "./lib/geo.ts"
 import {
-  DEFAULT_MAP_CENTER,
-  IMPACT_POSITION,
   type DroppedItem,
   type LocationSuggestion,
   type MenuKey,
@@ -36,9 +37,13 @@ export default function App() {
   const [mapTheme, setMapTheme] = useState<"base" | "technical">("base")
   const [feedback, setFeedback] = useState("")
 
+  // Estado único y fuente única de verdad para la ubicación geográfica
+  const savedCase = typeof window !== "undefined" ? loadSavedCase() : null
+  const [anchor, setAnchor] = useState<GeoPosition>(() => savedCase?.anchor ?? DEFAULT_ANCHOR)
+  const [mapCenter, setMapCenter] = useState<[number, number]>(() => [anchor.lat, anchor.lng])
+
   const [mapInstance, setMapInstance] = useState<LeafletMap | null>(null)
   const [currentZoom, setCurrentZoom] = useState(19)
-  const [mapCenter, setMapCenter] = useState<[number, number]>(DEFAULT_MAP_CENTER)
 
   const [caseContext, setCaseContext] = useState<CaseContext | null>(null)
   const [, setSceneRecords] = useState<Scene[]>([])
@@ -51,9 +56,11 @@ export default function App() {
     locationSuggestions,
     setLocationSuggestions,
     locationSearchLoading,
-  } = useLocationSearch("Av. Paseo de la Reforma 222")
+    searchAddress,
+  } = useLocationSearch(savedCase?.locationQuery ?? "Plaza de la Constitución, Zócalo CDMX")
 
-  const scenario = useScenarioItems()
+  // Modelo relativo de elementos vinculado al ancla única
+  const scenario = useScenarioItems(anchor, locationQuery)
 
   const handleDeleteSelected = useCallback(() => {
     if (scenario.selectedDroppedId) {
@@ -71,9 +78,17 @@ export default function App() {
 
   const activeTools = ribbonGroups[ribbon] || ribbonGroups.Mapeo
   const mapViewMode = timeline.selectedFrame === 0 ? "location" : "scenario"
-  const mapViewCenter: [number, number] =
-    mapViewMode === "location" ? mapCenter : [IMPACT_POSITION.lat, IMPACT_POSITION.lng]
-  const mapViewZoom = mapViewMode === "location" ? 15 : 19
+  // Única fuente de verdad: ninguna escena tiene center propio
+  const mapViewCenter: [number, number] = [anchor.lat, anchor.lng]
+  const mapViewZoom = mapViewMode === "location" ? 16 : 19
+
+  // Cambio de pestaña: invalidar tamaño y setView con el ancla actual
+  useEffect(() => {
+    if (!mapInstance) return
+    mapInstance.invalidateSize()
+    mapInstance.setView([anchor.lat, anchor.lng], mapViewZoom)
+    setCurrentZoom(mapViewZoom)
+  }, [timeline.selectedFrame, mapInstance, anchor, mapViewZoom])
 
   const assistantContext = useMemo(
     () => ({
@@ -83,6 +98,9 @@ export default function App() {
       selectedFrame: timeline.selectedFrame,
       droppedItems: scenario.droppedItems,
       vehicles: scenario.mapVehicles,
+      selectedVehicleId: scenario.selectedVehicleId,
+      selectedDroppedId: scenario.selectedDroppedId,
+      anchor,
     }),
     [
       caseContext,
@@ -91,6 +109,9 @@ export default function App() {
       selectedTool,
       scenario.droppedItems,
       scenario.mapVehicles,
+      scenario.selectedVehicleId,
+      scenario.selectedDroppedId,
+      anchor,
     ],
   )
 
@@ -122,7 +143,7 @@ export default function App() {
   // Auto-cierre de feedback
   useEffect(() => {
     if (!feedback) return
-    const timer = window.setTimeout(() => setFeedback(""), 2200)
+    const timer = window.setTimeout(() => setFeedback(""), 3500)
     return () => window.clearTimeout(timer)
   }, [feedback])
 
@@ -163,7 +184,9 @@ export default function App() {
       return
     }
 
-    const center = mapInstance ? mapInstance.getCenter() : { lat: DEFAULT_MAP_CENTER[0], lng: DEFAULT_MAP_CENTER[1] }
+    const center = mapInstance
+      ? mapInstance.getCenter()
+      : { lat: anchor.lat, lng: anchor.lng }
     scenario.addCatalogItem(item, kind, center)
     setFeedback(`${item} agregado al mapa · Arrastra para moverlo`)
   }
@@ -190,6 +213,7 @@ export default function App() {
     const report = [
       "CESVI · Reconstrucción vial",
       "Expediente: EXP-0248",
+      `Ubicación: ${locationQuery} (${anchor.lat.toFixed(5)}, ${anchor.lng.toFixed(5)})`,
       `Escenas: ${timeline.frames.length}`,
       `Elementos colocados: ${scenario.droppedItems.length}`,
       ...scenario.droppedItems.map((item) => `- ${item.label} (${item.kind})`),
@@ -213,9 +237,46 @@ export default function App() {
     setFeedback("Nuevo expediente preparado")
   }
 
+  // Flujo maestro de reubicación
+  const handleRelocate = useCallback(
+    (displayName: string, coords: GeoPosition) => {
+      const lat = typeof coords.lat === "number" ? coords.lat : parseFloat(coords.lat as any)
+      const lng = typeof coords.lng === "number" ? coords.lng : parseFloat(coords.lng as any)
+
+      if (isNaN(lat) || isNaN(lng) || !isFinite(lat) || !isFinite(lng)) {
+        setFeedback("Error: Coordenadas geográficas no válidas")
+        return
+      }
+
+      const newAnchor: GeoPosition = { lat, lng }
+      setLocationQuery(displayName)
+      setAnchor(newAnchor)
+      setMapCenter([lat, lng])
+
+      if (mapInstance) {
+        mapInstance.flyTo([lat, lng], mapViewZoom, { duration: 0.8 })
+      }
+
+      // Reiniciar selección del panel derecho a "Sin selección" y timeline a 0
+      scenario.setSelectedVehicleId("")
+      scenario.setSelectedDroppedId(null)
+      timeline.setPlaying(false)
+      timeline.setSelectedFrame(0)
+
+      // Toast requerido
+      setFeedback(`Escena reubicada: ${displayName} (${lat.toFixed(5)}, ${lng.toFixed(5)})`)
+    },
+    [mapInstance, mapViewZoom, scenario, setLocationQuery, timeline],
+  )
+
   const handleSelectLocationSuggestion = (suggestion: LocationSuggestion) => {
-    setLocationQuery(suggestion.display_name)
-    setMapCenter([Number(suggestion.lat), Number(suggestion.lon)])
+    const lat = parseFloat(suggestion.lat)
+    const lon = parseFloat(suggestion.lon)
+    if (isNaN(lat) || isNaN(lon)) {
+      setFeedback("Error al procesar coordenadas de la sugerencia seleccionada")
+      return
+    }
+    handleRelocate(suggestion.display_name, { lat, lng: lon })
     setLocationSuggestions([])
   }
 
@@ -269,12 +330,17 @@ export default function App() {
             setMapMode("select")
             setFeedback("Escena ajustada al viewport")
           }}
-          onSearchEnter={(val) => {
+          onSearchEnter={async (val) => {
             const first = locationSuggestions[0]
             if (first) {
               handleSelectLocationSuggestion(first)
+              return
+            }
+            const found = await searchAddress(val)
+            if (found) {
+              handleSelectLocationSuggestion(found)
             } else {
-              setFeedback(`Ubicación buscada: ${val}`)
+              setFeedback(`No se encontró la ubicación: "${val}". Verifique la dirección.`)
             }
           }}
         />
@@ -360,6 +426,16 @@ export default function App() {
           />
         </ErrorBoundary>
       </div>
+
+      <DebugPanel
+        anchor={anchor}
+        activeSceneIndex={timeline.selectedFrame}
+        activeSceneName={timeline.frames[timeline.selectedFrame]}
+        v1={scenario.mapVehicles.V1}
+        v2={scenario.mapVehicles.V2}
+        evidence={scenario.evidencePositions}
+        onRelocate={handleRelocate}
+      />
 
       {showDashboard && (
         <div

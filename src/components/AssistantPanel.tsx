@@ -180,7 +180,7 @@ export default function AssistantPanel({
             return next
           })
         },
-
+        [],
         true,
       )
 

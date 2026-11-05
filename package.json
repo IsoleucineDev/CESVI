@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "format": "oxfmt",
     "typecheck": "tsc --noEmit",
-    "test": "echo \"No test suite specified yet\" && exit 0"
+    "test": "node --test src/lib/geo.test.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",

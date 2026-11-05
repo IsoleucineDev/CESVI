@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import type { LocationSuggestion } from "../types/scenario"
 
 export function useLocationSearch(initialQuery = "Av. Paseo de la Reforma 222") {
@@ -54,11 +54,53 @@ export function useLocationSearch(initialQuery = "Av. Paseo de la Reforma 222") 
     }
   }, [locationQuery])
 
+  /**
+   * Geocodifica una dirección inmediatamente (ej. al presionar Enter).
+   * Retorna null si falla o no encuentra resultados, permitiendo a la UI
+   * rechazar el cambio de ancla sin alterar el mapa.
+   */
+  const searchAddress = useCallback(
+    async (queryOverride?: string): Promise<LocationSuggestion | null> => {
+      const q = (queryOverride ?? locationQuery).trim()
+      if (q.length < 2) return null
+
+      setLocationSearchLoading(true)
+      try {
+        const params = new URLSearchParams({
+          q,
+          format: "jsonv2",
+          addressdetails: "1",
+          limit: "5",
+          "accept-language": "es",
+        })
+        const response = await fetch(
+          `https://nominatim.openstreetmap.org/search?${params.toString()}`,
+          {
+            headers: { Accept: "application/json" },
+          },
+        )
+        if (!response.ok) return null
+        const results = (await response.json()) as LocationSuggestion[]
+        if (Array.isArray(results) && results.length > 0) {
+          setLocationSuggestions(results)
+          return results[0]
+        }
+        return null
+      } catch {
+        return null
+      } finally {
+        setLocationSearchLoading(false)
+      }
+    },
+    [locationQuery],
+  )
+
   return {
     locationQuery,
     setLocationQuery,
     locationSuggestions,
     setLocationSuggestions,
     locationSearchLoading,
+    searchAddress,
   }
 }

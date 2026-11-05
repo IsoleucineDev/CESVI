@@ -213,19 +213,17 @@ export default function GeoMapOverlay({
     }
   }
 
-  if (mode === "location") {
-    const pin = map.latLngToContainerPoint({ lat: mapCenter[0], lng: mapCenter[1] })
-    return (
-      <div className="geo-overlay-layer" aria-label="Ubicación seleccionada">
-        <div className="geo-location-pin" style={{ left: pin.x, top: pin.y }}>
-          <span />
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="geo-overlay-layer" aria-label="Elementos geográficos del mapa">
+      {mode === "location" && (() => {
+        const pin = map.latLngToContainerPoint({ lat: mapCenter[0], lng: mapCenter[1] })
+        return (
+          <div className="geo-location-pin" style={{ left: pin.x, top: pin.y }}>
+            <span />
+          </div>
+        )
+      })()}
+
       {(["V1", "V2"] as const).map((id) => {
         const vehicle = mapVehicles[id]
         const pt = map.latLngToContainerPoint(vehicle)

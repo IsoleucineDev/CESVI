@@ -46,7 +46,35 @@ export type DragState = {
 
 export type MenuKey = "Objetos" | "Indicios" | "Vehículos"
 
+export type OffsetM = { x: number; y: number }
+
+export type RelativeVehicle = {
+  rotation: number
+  scale?: number
+  x: number
+  y: number
+}
+
+export type RelativeEvidence = {
+  label: string
+  x: number
+  y: number
+}
+
 export const DEFAULT_MAP_CENTER: [number, number] = [19.4326, -99.1332]
+export const DEFAULT_VEHICLE_OFFSETS: Record<"V1" | "V2", RelativeVehicle> = {
+  V1: { x: -36.757, y: 38.962, rotation: 38, scale: 1 },
+  V2: { x: 36.757, y: -27.83, rotation: -61, scale: 1 },
+}
+export const DEFAULT_IMPACT_OFFSET: OffsetM = {
+  x: 12.602,
+  y: 2.226,
+}
+export const DEFAULT_EVIDENCE_OFFSETS: RelativeEvidence[] = [
+  { label: "E1", x: -26.255, y: 72.358 },
+  { label: "E2", x: 57.761, y: -57.886 },
+]
+
 export const DEFAULT_VEHICLE_POSITIONS = {
   V1: { lat: 19.43295, lng: -99.13355, rotation: 38 },
   V2: { lat: 19.43235, lng: -99.13285, rotation: -61 },
