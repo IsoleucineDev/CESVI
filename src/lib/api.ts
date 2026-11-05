@@ -25,14 +25,14 @@ const API_BASE_URL = (
 const CASE_ID = import.meta.env.VITE_CASE_ID || "EXP-0248";
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
+  // Spread `init` first so its `headers` cannot overwrite the merged headers below.
   const response = await fetch(`${API_BASE_URL}${path}`, {
-    credentials: "include",
+    ...init,
     headers: {
       Accept: "application/json",
       ...(init?.body ? { "Content-Type": "application/json" } : {}),
       ...init?.headers,
     },
-    ...init,
   });
 
   if (!response.ok) {
@@ -234,5 +234,70 @@ export const api = {
   deleteScene: (sceneId: string) =>
     request<void>(`/scenes/${encodeURIComponent(sceneId)}`, { method: "DELETE" }),
 
+<<<<<<< HEAD
   sendAssistantMessage,
+=======
+  sendAssistantMessage: async (
+    message: string,
+    context: Record<string, unknown>,
+    onToken: (token: string) => void,
+  ) => {
+    const response = await fetch(`${API_BASE_URL}/ai/chat`, {
+      method: "POST",
+      headers: {
+        Accept: "text/event-stream, application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ caseId: CASE_ID, message, context, stream: true }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`AI request failed with status ${response.status}`);
+    }
+
+    const contentType = response.headers.get("content-type") || "";
+    if (!response.body || !contentType.includes("text/event-stream")) {
+      const payload = (await response.json()) as { answer?: string; message?: string };
+      const answer = payload.answer || payload.message || "";
+      if (answer) onToken(answer);
+      return answer;
+    }
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    let answer = "";
+
+    const consumeEvent = (event: string) => {
+      const data = event
+        .split("\n")
+        .filter((line) => line.startsWith("data:"))
+        .map((line) => line.slice(5).trim())
+        .join("");
+      if (!data || data === "[DONE]") return;
+      try {
+        const parsed = JSON.parse(data) as { token?: string; answer?: string; content?: string };
+        const token = parsed.token || parsed.content || parsed.answer || "";
+        answer += token;
+        if (token) onToken(token);
+      } catch {
+        answer += data;
+        onToken(data);
+      }
+    };
+
+    while (true) {
+      const { done, value } = await reader.read();
+      buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
+      const events = buffer.split("\n\n");
+      buffer = events.pop() || "";
+
+      events.forEach(consumeEvent);
+      if (done) break;
+    }
+    consumeEvent(buffer);
+
+    return answer;
+  },
+>>>>>>> 9b2c29a (fix: corregir 21 bugs de CESVI y guia de integracion del chatbot)
 };

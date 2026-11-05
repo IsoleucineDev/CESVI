@@ -1,6 +1,11 @@
 {
   "title": "CESVI · Reconstrucción vial",
+<<<<<<< HEAD
   "description": "Aplicación pericial interactiva para la reconstrucción de hechos de tránsito terrestre y peritaje vial.",
+=======
+  "language": "es",
+  "description": "This interactive web application allows users to recreate accident scenarios using a customizable map, facilitating detailed analysis and reporting for accident investigators.",
+>>>>>>> 9b2c29a (fix: corregir 21 bugs de CESVI y guia de integracion del chatbot)
   "robots": {
     "index": false
   },
