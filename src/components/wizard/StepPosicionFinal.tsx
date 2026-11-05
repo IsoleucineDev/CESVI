@@ -9,6 +9,7 @@ type StepPosicionFinalProps = {
   isComplete: boolean
   onFinalize: () => void
   onExportReport: () => void
+  onExportUnity?: () => void
 }
 
 export default function StepPosicionFinal({
@@ -18,6 +19,7 @@ export default function StepPosicionFinal({
   isComplete,
   onFinalize,
   onExportReport,
+  onExportUnity,
 }: StepPosicionFinalProps) {
   const vehicleList = Object.keys(vehicles)
 
@@ -68,10 +70,18 @@ export default function StepPosicionFinal({
                 <b>¡Expediente completado al 100%!</b>
               </div>
               <p>Todos los pasos periciales han sido registrados con éxito.</p>
-              <Button className="share-button highlight" onClick={onExportReport}>
-                <Icon name="download" />
-                Descargar informe pericial
-              </Button>
+              <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "10px" }}>
+                <Button className="share-button highlight" onClick={onExportReport}>
+                  <Icon name="download" />
+                  Descargar informe pericial (PDF)
+                </Button>
+                {onExportUnity && (
+                  <Button className="share-button" onClick={onExportUnity}>
+                    <Icon name="download" />
+                    Exportar JSON Unity
+                  </Button>
+                )}
+              </div>
             </div>
           )}
         </div>

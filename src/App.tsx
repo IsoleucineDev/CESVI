@@ -25,6 +25,7 @@ import WizardController from "./components/wizard/WizardController"
 import CoachMarks from "./components/wizard/CoachMarks"
 import { indexToStep, STEP_LABELS, type WizardStep } from "./lib/wizardMachine"
 import { exportUnityJson } from "./lib/exportUnity"
+import { buildReportPdf } from "./lib/exportPdf.ts"
 import {
   type DroppedItem,
   type LocationSuggestion,
@@ -228,56 +229,23 @@ export default function App() {
   }
 
   const handleExportReport = () => {
-    const vehicleEntries = Object.entries(scenario.mapVehicles).map(
-      ([id, v]) =>
-        `   - ${id}: ${v.type || "Vehículo"} | Modelo: ${v.model || "No especificado"} | Vel: ${v.speed ?? 0} km/h | Rumbo: ${v.direction || `${v.rotation}°`} | Zona impacto: ${v.impactZone || "N/A"}`,
-    )
+    buildReportPdf({
+      caseId: "EXP-0248",
+      anchor,
+      locationQuery,
+      vehicles: scenario.mapVehicles,
+      impactPosition: scenario.impactPosition,
+      impactVehicles: wizard.impactVehicles,
+      impactTime: wizard.impactTime,
+      impactZones: wizard.impactZones,
+      evidencePositions: scenario.evidencePositions,
+      droppedItems: scenario.droppedItems,
+      wizardState: wizard.wizardState,
+    })
+    setFeedback("Informe pericial EXP-0248 (PDF) descargado con éxito")
+  }
 
-    const report = [
-      "==================================================",
-      "CESVI · INFORME PERICIAL DE RECONSTRUCCIÓN VIAL",
-      "==================================================",
-      `Expediente: EXP-0248`,
-      `Fecha de emisión: ${new Date().toLocaleString()}`,
-      `Estado del peritaje: ${wizard.wizardState.isComplete ? "100% COMPLETADO" : `${wizard.progress}% EN CURSO`}`,
-      "",
-      `1. UBICACIÓN DEL SINIESTRO:`,
-      `   Dirección: ${locationQuery}`,
-      `   Coordenadas geográficas: (${anchor.lat.toFixed(6)}, ${anchor.lng.toFixed(6)})`,
-      "",
-      `2. VEHÍCULOS INVOLUCRADOS (${Object.keys(scenario.mapVehicles).length}):`,
-      ...vehicleEntries,
-      "",
-      `3. DINÁMICA DE IMPACTO:`,
-      `   Coordenadas de impacto: (${scenario.impactPosition.lat.toFixed(6)}, ${scenario.impactPosition.lng.toFixed(6)})`,
-      `   Tiempo estimado de impacto: ${wizard.impactTime || "00:03.38"}`,
-      `   Vehículos colisionantes: ${(wizard.impactVehicles || []).join(", ") || "V1, V2"}`,
-      "",
-      `4. EVIDENCIA E INDICIOS PERICIALES (${scenario.evidencePositions.length}):`,
-      ...scenario.evidencePositions.map((e) => `   - Indicio ${e.label}: (${e.lat.toFixed(6)}, ${e.lng.toFixed(6)})`),
-      ...(scenario.droppedItems.length > 0
-        ? [
-            "",
-            `5. OBJETOS Y SEÑALIZACIÓN EN VÍA (${scenario.droppedItems.length}):`,
-            ...scenario.droppedItems.map((item) => `   - ${item.label} (${item.kind})`),
-          ]
-        : []),
-      "",
-      "==================================================",
-      "Dictamen emitido por CESVI Sistema Pericial Interactivo",
-      "© OpenStreetMap contributors (https://www.openstreetmap.org/copyright)",
-      "==================================================",
-    ].join("\n")
-
-    const url = URL.createObjectURL(
-      new Blob([report], { type: "text/plain;charset=utf-8" }),
-    )
-    const link = document.createElement("a")
-    link.href = url
-    link.download = "EXP-0248-informe.txt"
-    link.click()
-    URL.revokeObjectURL(url)
-
+  const handleExportUnity = () => {
     exportUnityJson({
       caseId: "EXP-0248",
       anchor,
@@ -287,8 +255,7 @@ export default function App() {
       evidence: scenario.evidencePositions,
       droppedItems: scenario.droppedItems,
     })
-
-    setFeedback("Informe pericial EXP-0248 exportado con éxito")
+    setFeedback("Modelo de exportación EXP-0248 para Unity descargado con éxito")
   }
 
   const handleCreateNewCase = () => {
@@ -466,6 +433,7 @@ export default function App() {
           onUndo={handleUndo}
           onRedo={handleRedo}
           onExportReport={handleExportReport}
+          onExportUnity={handleExportUnity}
           exportDisabled={!wizard.wizardState.isComplete}
         >
           {openMenu && (
@@ -627,6 +595,7 @@ export default function App() {
                 }}
                 isSearching={locationSearchLoading}
                 onExportReport={handleExportReport}
+                onExportUnity={handleExportUnity}
                 onSetFeedback={setFeedback}
                 isPlacingOnMap={isPlacingOnMap}
                 setIsPlacingOnMap={setIsPlacingOnMap}

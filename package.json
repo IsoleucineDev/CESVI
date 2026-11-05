@@ -10,11 +10,13 @@
     "preview": "vite preview",
     "format": "oxfmt",
     "typecheck": "tsc --noEmit",
-    "test": "node --test src/lib/geo.test.ts src/lib/wizardMachine.test.ts"
+    "test": "node --test src/lib/geo.test.ts src/lib/wizardMachine.test.ts src/lib/exportPdf.test.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.9",
     "leaflet": "^1.9.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

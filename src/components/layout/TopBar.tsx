@@ -10,6 +10,7 @@ type TopBarProps = {
   onUndo: () => void
   onRedo: () => void
   onExportReport: () => void
+  onExportUnity?: () => void
   exportDisabled?: boolean
   children?: ReactNode
 }
@@ -22,6 +23,7 @@ export default function TopBar({
   onUndo,
   onRedo,
   onExportReport,
+  onExportUnity,
   exportDisabled = false,
   children,
 }: TopBarProps) {
@@ -95,11 +97,22 @@ export default function TopBar({
           className={`share-button ${exportDisabled ? "disabled" : ""}`}
           disabled={exportDisabled}
           onClick={onExportReport}
-          title={exportDisabled ? "Completa el peritaje (100%) para exportar el informe" : "Exportar informe pericial"}
+          title={exportDisabled ? "Completa el peritaje (100%) para exportar el informe" : "Exportar informe pericial en PDF"}
         >
           <Icon name="download" />
           Exportar informe
         </Button>
+        {onExportUnity && (
+          <Button
+            className={`share-button ${exportDisabled ? "disabled" : ""}`}
+            disabled={exportDisabled}
+            onClick={onExportUnity}
+            title={exportDisabled ? "Completa el peritaje (100%) para exportar el modelo Unity" : "Exportar modelo Unity JSON"}
+          >
+            <Icon name="download" />
+            JSON Unity
+          </Button>
+        )}
         <div className="avatar">LM</div>
       </div>
       {children}

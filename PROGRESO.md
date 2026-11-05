@@ -1,28 +1,52 @@
 # Progreso de Implementación - CESVI
 
 ## Estado General
-- **Punto actual**: Título CESVI en pestaña y atribución OpenStreetMap (Completado)
+- **Punto actual**: Informe pericial en PDF y base para asistente IA (Completado)
 - **Rama**: `temporal`
 - **Commits recientes**:
   1. `e971115 feat(wizard): coach marks por escena`
   2. `86e2af2 feat(wizard): DebugPanel con saltar a paso X`
   3. `8e75c68 docs: CAMBIOS.md con arquitectura y diagrama`
   4. `2de672f docs(progress): registrar PROGRESO.md de Fase E`
-  5. Siguiente commit: `fix(ui): título CESVI en pestaña y atribución OpenStreetMap`
+  5. `c6dcd2c fix(ui): título CESVI en pestaña y atribución OpenStreetMap`
+  6. Siguiente commit: `feat(export): informe pericial en PDF y base para asistente IA`
 
 ---
 
-## Tarea: Título CESVI en pestaña y atribución OpenStreetMap
+## Tarea 1: Visibilidad de RibbonBar, SceneTabs y Atribución
 - [x] **Completado**:
-  - `index.html`: `<title>CESVI · Reconstrucción vial</title>` y meta tags.
-  - `.figma/make/site.json` y `vite.config.ts`: título `"CESVI · Reconstrucción vial"`.
-  - Favicon: archivo `public/favicon.svg` con pictograma vehicular y franja roja CESVI.
-  - `MapCanvas.tsx`: `attributionControl={true}` explícito y `attribution` con enlaces a `https://www.openstreetmap.org/copyright` con `target="_blank" rel="noopener noreferrer"`.
-  - `src/index.css`: estilo legible y con `z-index: 1000` para `.leaflet-control-attribution`.
-  - `RibbonBar.tsx` y `StepInicio.tsx`: notas de atribución a OpenStreetMap y Nominatim con enlaces en la interfaz.
-  - `src/lib/exportUnity.ts`: creación del módulo de exportación Unity con el campo requerido `"fuente_cartografica": "© OpenStreetMap contributors (https://www.openstreetmap.org/copyright)"` en `metadata`.
-  - `src/App.tsx`: inclusión de la línea de atribución cartográfica al pie del informe `.txt` y llamada a `exportUnityJson`.
-  - `README.md`: sección `## 5. Créditos y Atribuciones` documentando OpenStreetMap, Nominatim y Leaflet.
-- **Decisiones tomadas**:
-  - No se modificaron `geo.ts`, `migration.ts`, `wizardMachine.ts` ni el núcleo del wizard.
-  - El nombre de paquete `"name": "figma-make-app"` en `package.json` se mantuvo intacto ya que no es visible en la UI.
+  - `RibbonBar` (Mapa base, Trazado vial, Trayectoria, Medición, Señalización) y `SceneTabs` permanecen visibles en escenas 02, 03 y 04 (`!isInicio`), ocultándose únicamente en la escena 01.
+  - Enlace oficial configurado en `RibbonBar.tsx`:
+    `<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">&copy; OpenStreetMap</a>`
+
+---
+
+## Tarea 2: Informe Pericial en PDF (`src/lib/exportPdf.ts`)
+- [x] **Completado**:
+  - Instalación de `jspdf` y `jspdf-autotable`.
+  - Implementación de `buildReportPdf(caso)` en `src/lib/exportPdf.ts` que genera y descarga `EXP-0248-informe.pdf`.
+  - Encabezado institucional con membrete CESVI México, expediente EXP-0248 y fecha de emisión.
+  - Ubicación del hecho con dirección, coordenadas WGS84, municipio y estado.
+  - Croquis planimétrico y cinemático vectorial propio dibujado a escala con posiciones iniciales, trayectorias, punto de colisión, posiciones de reposo final, evidencias y rosa de los vientos (sin capturar Leaflet).
+  - Tabla de vehículos con tipo, marca/modelo, rumbo, velocidad en km/h y m/s, posiciones inicial y final.
+  - Dinámica de colisión con tiempo referencial, vehículos involucrados y zonas de daño.
+  - Inventario de indicios físicos y señalización vial.
+  - Notas periciales distinguiendo datos capturados vs datos estimados.
+  - Pie de página en todas las hojas con atribución OpenStreetMap y numeración `Página X de Y`.
+  - Manejo de "No registrado" para campos sin información y soporte de acentos/ñ en español.
+  - Botón "Exportar informe" en `TopBar.tsx` y `StepPosicionFinal.tsx` condicionado a `isComplete: true`.
+  - Botón independiente para exportar modelo `EXP-0248-unity.json` preservado.
+
+---
+
+## Tarea 3: Base para Asistente IA (`src/lib/assistantProvider.ts`)
+- [x] **Completado**:
+  - Definición de la interfaz `AssistantProvider` con método `suggest(context: AssistantContext): Promise<string>`.
+  - Implementación determinista por defecto `GuidedAssistantProvider` ("guiada") sin llamadas a red/IA externa.
+
+---
+
+## Pruebas y Validación
+- [x] **Completado**:
+  - `src/lib/exportPdf.test.ts` añadido a `package.json` y ejecutado con `node --test`.
+  - Validación completa con `pnpm typecheck && pnpm test && pnpm build`.

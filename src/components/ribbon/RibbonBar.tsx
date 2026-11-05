@@ -84,16 +84,15 @@ export default function RibbonBar({
           </div>
         )}
         <span className="maps-note">
-          Datos cartográficos y búsqueda · &copy;{" "}
+          Datos cartográficos ·{" "}
           <a
             href="https://www.openstreetmap.org/copyright"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "inherit", textDecoration: "underline" }}
           >
-            OpenStreetMap
-          </a>{" "}
-          contributors
+            &copy; OpenStreetMap
+          </a>
         </span>
       </div>
 

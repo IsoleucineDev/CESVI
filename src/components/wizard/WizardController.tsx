@@ -14,6 +14,7 @@ type WizardControllerProps = {
   onSearchEnter: (query: string) => void
   isSearching: boolean
   onExportReport: () => void
+  onExportUnity?: () => void
   onSetFeedback: (msg: string) => void
   isPlacingOnMap: boolean
   setIsPlacingOnMap: (val: boolean) => void
@@ -30,6 +31,7 @@ export default function WizardController({
   onSearchEnter,
   isSearching,
   onExportReport,
+  onExportUnity,
   onSetFeedback,
   isPlacingOnMap,
   setIsPlacingOnMap,
@@ -218,6 +220,7 @@ export default function WizardController({
           isComplete={wizardState.isComplete}
           onFinalize={handleFinalize}
           onExportReport={onExportReport}
+          onExportUnity={onExportUnity}
         />
       )}
     </div>
