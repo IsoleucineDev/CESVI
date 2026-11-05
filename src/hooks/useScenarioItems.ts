@@ -26,7 +26,7 @@ export function useScenarioItems(
   const initialLoaded = useRef(false)
 
   // Estados relativos al ancla (en metros ENU)
-  const [relativeVehicles, setRelativeVehicles] = useState<Record<"V1" | "V2", RelativeVehicle>>(() => {
+  const [relativeVehicles, setRelativeVehicles] = useState<Record<string, RelativeVehicle>>(() => {
     const saved = typeof window !== "undefined" ? loadSavedCase(caseId) : null
     return saved?.vehicles ?? JSON.parse(JSON.stringify(DEFAULT_VEHICLE_OFFSETS))
   })
@@ -51,18 +51,33 @@ export function useScenarioItems(
   const [lastRemovedItem, setLastRemovedItem] = useState<RelativeItem | null>(null)
 
   // Coordenadas calculadas WGS84 para Leaflet basadas en el anchor actual
-  const mapVehicles = useMemo<Record<"V1" | "V2", GeoVehicle>>(() => ({
-    V1: {
-      ...toLatLng(anchor, relativeVehicles.V1),
-      rotation: relativeVehicles.V1.rotation,
-      scale: relativeVehicles.V1.scale ?? 1,
-    },
-    V2: {
-      ...toLatLng(anchor, relativeVehicles.V2),
-      rotation: relativeVehicles.V2.rotation,
-      scale: relativeVehicles.V2.scale ?? 1,
-    },
-  }), [anchor, relativeVehicles])
+  const mapVehicles = useMemo<Record<string, GeoVehicle>>(() => {
+    const result: Record<string, GeoVehicle> = {}
+    for (const [id, v] of Object.entries(relativeVehicles)) {
+      const latLng = toLatLng(anchor, v)
+      result[id] = {
+        ...latLng,
+        rotation: v.rotation,
+        scale: v.scale ?? 1,
+        type: v.type ?? "car",
+        model: v.model,
+        direction: v.direction,
+        speed: v.speed,
+        trajectoryPoints: v.trajectoryPoints?.map((pt) => ({
+          ...pt,
+          ...toLatLng(anchor, pt),
+        })),
+        postImpactOffset: v.postImpactOffset
+          ? {
+              ...v.postImpactOffset,
+              ...toLatLng(anchor, v.postImpactOffset),
+            }
+          : undefined,
+        impactZone: v.impactZone,
+      }
+    }
+    return result
+  }, [anchor, relativeVehicles])
 
   const impactPosition = useMemo<GeoPosition>(
     () => toLatLng(anchor, relativeImpact),
@@ -166,13 +181,35 @@ export function useScenarioItems(
     )
   }, [anchor])
 
-  const moveVehicle = useCallback((id: "V1" | "V2", position: GeoPosition) => {
+  const moveVehicle = useCallback((id: string, position: GeoPosition) => {
     const offset = toOffsetM(anchor, position)
     setRelativeVehicles((current) => ({
       ...current,
-      [id]: { ...current[id], x: offset.x, y: offset.y },
+      [id]: {
+        ...(current[id] ?? { rotation: 0, scale: 1 }),
+        x: offset.x,
+        y: offset.y,
+      },
     }))
   }, [anchor])
+
+  const upsertVehicle = useCallback((id: string, partial: Partial<RelativeVehicle>) => {
+    setRelativeVehicles((current) => ({
+      ...current,
+      [id]: {
+        ...(current[id] ?? { x: 0, y: 0, rotation: 0, scale: 1 }),
+        ...partial,
+      },
+    }))
+  }, [])
+
+  const removeVehicle = useCallback((id: string) => {
+    setRelativeVehicles((current) => {
+      const next = { ...current }
+      delete next[id]
+      return next
+    })
+  }, [])
 
   const moveImpact = useCallback((position: GeoPosition) => {
     const offset = toOffsetM(anchor, position)
@@ -192,10 +229,13 @@ export function useScenarioItems(
     )
   }
 
-  const rotateVehicle = (id: "V1" | "V2", rotation: number) => {
+  const rotateVehicle = (id: string, rotation: number) => {
     setRelativeVehicles((current) => ({
       ...current,
-      [id]: { ...current[id], rotation },
+      [id]: {
+        ...(current[id] ?? { x: 0, y: 0, scale: 1 }),
+        rotation,
+      },
     }))
   }
 
@@ -205,10 +245,13 @@ export function useScenarioItems(
     )
   }
 
-  const scaleVehicle = (id: "V1" | "V2", scale: number) => {
+  const scaleVehicle = (id: string, scale: number) => {
     setRelativeVehicles((current) => ({
       ...current,
-      [id]: { ...current[id], scale },
+      [id]: {
+        ...(current[id] ?? { x: 0, y: 0, rotation: 0 }),
+        scale,
+      },
     }))
   }
 
@@ -326,6 +369,8 @@ export function useScenarioItems(
     addCatalogItem,
     moveDropped,
     moveVehicle,
+    upsertVehicle,
+    removeVehicle,
     moveImpact,
     moveEvidence,
     rotateDropped,

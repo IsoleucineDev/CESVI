@@ -1,5 +1,8 @@
 import L, { type LatLngExpression, type Map as LeafletMap } from "leaflet"
 import type { IconName } from "../components/ui/Icon"
+import type { WizardState, WizardStep } from "../lib/wizardMachine"
+
+export type { WizardState, WizardStep }
 
 export type LocationSuggestion = {
   display_name: string
@@ -12,6 +15,13 @@ export type GeoPosition = { lat: number; lng: number }
 export type GeoVehicle = GeoPosition & {
   rotation: number
   scale?: number
+  type?: string
+  model?: string
+  direction?: string
+  speed?: number
+  trajectoryPoints?: Array<{ x: number; y: number; lat: number; lng: number }>
+  postImpactOffset?: { x: number; y: number; lat: number; lng: number; rotation: number }
+  impactZone?: string
 }
 
 export type VehicleVariant =
@@ -53,6 +63,13 @@ export type RelativeVehicle = {
   scale?: number
   x: number
   y: number
+  type?: string
+  model?: string
+  direction?: string
+  speed?: number
+  trajectoryPoints?: Array<{ x: number; y: number }>
+  postImpactOffset?: { x: number; y: number; rotation: number }
+  impactZone?: string
 }
 
 export type RelativeEvidence = {
@@ -62,9 +79,9 @@ export type RelativeEvidence = {
 }
 
 export const DEFAULT_MAP_CENTER: [number, number] = [19.4326, -99.1332]
-export const DEFAULT_VEHICLE_OFFSETS: Record<"V1" | "V2", RelativeVehicle> = {
-  V1: { x: -36.757, y: 38.962, rotation: 38, scale: 1 },
-  V2: { x: 36.757, y: -27.83, rotation: -61, scale: 1 },
+export const DEFAULT_VEHICLE_OFFSETS: Record<string, RelativeVehicle> = {
+  V1: { x: -36.757, y: 38.962, rotation: 38, scale: 1, type: "car", model: "Nissan Versa 2021", speed: 42, direction: "NE" },
+  V2: { x: 36.757, y: -27.83, rotation: -61, scale: 1, type: "car", speed: 35, direction: "SO" },
 }
 export const DEFAULT_IMPACT_OFFSET: OffsetM = {
   x: 12.602,

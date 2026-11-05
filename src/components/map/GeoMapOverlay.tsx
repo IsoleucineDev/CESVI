@@ -38,22 +38,22 @@ export default function GeoMapOverlay({
   mode: "location" | "scenario"
   mapCenter: [number, number]
   droppedItems: DroppedItem[]
-  mapVehicles: Record<"V1" | "V2", GeoVehicle>
+  mapVehicles: Record<string, GeoVehicle>
   impactPosition: GeoPosition
   evidencePositions: { lat: number; lng: number; label: string }[]
   selectedDroppedId: string | null
   selectedVehicleId: string
   onDropItem: (item: Pick<DroppedItem, "kind" | "label">, position: GeoPosition) => void
   onSelectDropped: (id: string) => void
-  onSelectVehicle: (id: "V1" | "V2") => void
+  onSelectVehicle: (id: string) => void
   onMoveDropped: (id: string, position: GeoPosition) => void
-  onMoveVehicle: (id: "V1" | "V2", position: GeoPosition) => void
+  onMoveVehicle: (id: string, position: GeoPosition) => void
   onMoveImpact: (position: GeoPosition) => void
   onMoveEvidence: (label: string, position: GeoPosition) => void
   onRotateDropped: (id: string, rotation: number) => void
-  onRotateVehicle: (id: "V1" | "V2", rotation: number) => void
+  onRotateVehicle: (id: string, rotation: number) => void
   onScaleDropped: (id: string, scale: number) => void
-  onScaleVehicle: (id: "V1" | "V2", scale: number) => void
+  onScaleVehicle: (id: string, scale: number) => void
 }) {
   const map = useMap()
   const [, redraw] = useState(0)
@@ -224,8 +224,9 @@ export default function GeoMapOverlay({
         )
       })()}
 
-      {(["V1", "V2"] as const).map((id) => {
+      {Object.keys(mapVehicles).map((id) => {
         const vehicle = mapVehicles[id]
+        if (!vehicle) return null
         const pt = map.latLngToContainerPoint(vehicle)
         const ppm = getPixelsPerMeter(map, vehicle)
         const { lengthMeters, widthMeters } = getVehicleDimensions("car", vehicle.scale || 1)

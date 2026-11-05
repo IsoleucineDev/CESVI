@@ -25,22 +25,22 @@ type MapCanvasProps = {
   currentZoom: number
   onZoomChange: (zoom: number) => void
   droppedItems: DroppedItem[]
-  mapVehicles: Record<"V1" | "V2", GeoVehicle>
+  mapVehicles: Record<string, GeoVehicle>
   impactPosition: GeoPosition
   evidencePositions: { lat: number; lng: number; label: string }[]
   selectedDroppedId: string | null
   selectedVehicleId: string
   onDropItem: (item: Pick<DroppedItem, "kind" | "label">, position: GeoPosition) => void
   onSelectDropped: (id: string) => void
-  onSelectVehicle: (id: "V1" | "V2") => void
+  onSelectVehicle: (id: string) => void
   onMoveDropped: (id: string, position: GeoPosition) => void
-  onMoveVehicle: (id: "V1" | "V2", position: GeoPosition) => void
+  onMoveVehicle: (id: string, position: GeoPosition) => void
   onMoveImpact: (position: GeoPosition) => void
   onMoveEvidence: (label: string, position: GeoPosition) => void
   onRotateDropped: (id: string, rotation: number) => void
-  onRotateVehicle: (id: "V1" | "V2", rotation: number) => void
+  onRotateVehicle: (id: string, rotation: number) => void
   onScaleDropped: (id: string, scale: number) => void
-  onScaleVehicle: (id: "V1" | "V2", scale: number) => void
+  onScaleVehicle: (id: string, scale: number) => void
   inspectorOpen: boolean
   onCloseInspector: () => void
   onOpenInspector: () => void

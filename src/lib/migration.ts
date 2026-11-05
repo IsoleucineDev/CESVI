@@ -8,6 +8,11 @@ import {
   type GeoPosition,
   type OffsetM,
 } from "./geo.ts"
+import {
+  INITIAL_WIZARD_STATE,
+  sanitizeWizardState,
+  type WizardState,
+} from "./wizardMachine.ts"
 
 export type RelativeItem = {
   id: string
@@ -24,6 +29,13 @@ export type RelativeVehicle = {
   scale?: number
   x: number
   y: number
+  type?: string
+  model?: string
+  direction?: string
+  speed?: number
+  trajectoryPoints?: Array<{ x: number; y: number }>
+  postImpactOffset?: { x: number; y: number; rotation: number }
+  impactZone?: string
 }
 
 export type RelativeEvidence = {
@@ -36,10 +48,13 @@ export type ExpedienteState = {
   version: 2
   anchor: GeoPosition
   locationQuery: string
-  vehicles: Record<"V1" | "V2", RelativeVehicle>
+  vehicles: Record<string, RelativeVehicle>
   impact: OffsetM
   evidence: RelativeEvidence[]
   droppedItems: RelativeItem[]
+  wizard?: WizardState
+  impactVehicles?: string[]
+  impactTime?: string
   savedAt: string
 }
 
@@ -52,9 +67,9 @@ export const DEFAULT_ANCHOR: GeoPosition = {
 }
 
 // Offsets estándar calculados a partir de las coordenadas históricas del Zócalo
-export const DEFAULT_RELATIVE_VEHICLES: Record<"V1" | "V2", RelativeVehicle> = {
-  V1: { x: -36.757, y: 38.962, rotation: 38, scale: 1 },
-  V2: { x: 36.757, y: -27.83, rotation: -61, scale: 1 },
+export const DEFAULT_RELATIVE_VEHICLES: Record<string, RelativeVehicle> = {
+  V1: { x: -36.757, y: 38.962, rotation: 38, scale: 1, type: "car", model: "Nissan Versa 2021", speed: 42, direction: "NE" },
+  V2: { x: 36.757, y: -27.83, rotation: -61, scale: 1, type: "car", speed: 35, direction: "SO" },
 }
 
 export const DEFAULT_RELATIVE_IMPACT: OffsetM = {
@@ -99,31 +114,48 @@ export function migrateLegacyCase(
   }
 
   // Migrar vehículos
-  const vehicles: Record<"V1" | "V2", RelativeVehicle> = {
-    V1: { ...DEFAULT_RELATIVE_VEHICLES.V1 },
-    V2: { ...DEFAULT_RELATIVE_VEHICLES.V2 },
-  }
-
+  const vehicles: Record<string, RelativeVehicle> = {}
   const rawVehicles = raw.vehicles || raw.mapVehicles
+
   if (rawVehicles && typeof rawVehicles === "object") {
-    for (const key of ["V1", "V2"] as const) {
+    const keys = Object.keys(rawVehicles)
+    for (const key of keys) {
       const v = rawVehicles[key]
       if (v) {
         let x = v.x
         let y = v.y
-        if ((typeof x !== "number" || typeof y !== "number") && typeof v.lat === "number" && typeof v.lng === "number") {
+        if (
+          (typeof x !== "number" || typeof y !== "number") &&
+          typeof v.lat === "number" &&
+          typeof v.lng === "number"
+        ) {
           const offset = toOffsetM(anchor, { lat: v.lat, lng: v.lng })
           x = offset.x
           y = offset.y
         }
+        const defaultV = DEFAULT_RELATIVE_VEHICLES[key]
         vehicles[key] = {
-          x: typeof x === "number" && !isNaN(x) ? x : DEFAULT_RELATIVE_VEHICLES[key].x,
-          y: typeof y === "number" && !isNaN(y) ? y : DEFAULT_RELATIVE_VEHICLES[key].y,
-          rotation: typeof v.rotation === "number" ? v.rotation : DEFAULT_RELATIVE_VEHICLES[key].rotation,
+          x: typeof x === "number" && !isNaN(x) ? x : (defaultV?.x ?? 0),
+          y: typeof y === "number" && !isNaN(y) ? y : (defaultV?.y ?? 0),
+          rotation:
+            typeof v.rotation === "number" ? v.rotation : (defaultV?.rotation ?? 0),
           scale: typeof v.scale === "number" ? v.scale : 1,
+          type: v.type ?? defaultV?.type ?? "car",
+          model: v.model ?? defaultV?.model,
+          direction: v.direction ?? defaultV?.direction,
+          speed: typeof v.speed === "number" ? v.speed : defaultV?.speed,
+          trajectoryPoints: Array.isArray(v.trajectoryPoints) ? v.trajectoryPoints : undefined,
+          postImpactOffset: v.postImpactOffset ?? undefined,
+          impactZone: v.impactZone ?? undefined,
         }
       }
     }
+  }
+
+  // Si no hay vehículos en absoluto, inicializar con los defaults (V1 y V2)
+  if (Object.keys(vehicles).length === 0) {
+    vehicles.V1 = { ...DEFAULT_RELATIVE_VEHICLES.V1 }
+    vehicles.V2 = { ...DEFAULT_RELATIVE_VEHICLES.V2 }
   }
 
   // Migrar impacto
@@ -185,6 +217,19 @@ export function migrateLegacyCase(
     })
   }
 
+  const wizard = sanitizeWizardState(
+    raw.wizard ?? {
+      step: raw.step,
+      unlockedSteps: raw.unlockedSteps,
+      completedSteps: raw.completedSteps,
+      isComplete: raw.isComplete,
+    },
+  )
+  const impactVehicles = Array.isArray(raw.impactVehicles)
+    ? raw.impactVehicles
+    : ["V1", "V2"]
+  const impactTime = typeof raw.impactTime === "string" ? raw.impactTime : "00:03.38"
+
   return {
     version: 2,
     anchor,
@@ -193,6 +238,9 @@ export function migrateLegacyCase(
     impact,
     evidence,
     droppedItems,
+    wizard,
+    impactVehicles,
+    impactTime,
     savedAt: new Date().toISOString(),
   }
 }
